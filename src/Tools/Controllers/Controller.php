@@ -4,16 +4,16 @@
 namespace App\Modules\Tools\Controllers;
 
 
-use AktionDigital\App;
-use AktionDigital\Events\EventsContainer;
-use AktionDigital\IO\FileSystem\File;
-use AktionDigital\Utils\Cache\Bundle;
-use AktionDigital\Utils\Debug;
-use AktionDigital\Utils\ExtendedObject;
-use AktionDigital\Web\RequestCollection;
-use AktionDigital\Web\Controller as WebController;
-use AktionDigital\Web\Templates\PhpTemplate;
-use AktionDigital\Web\View;
+use Colibri\App;
+use Colibri\Events\EventsContainer;
+use Colibri\IO\FileSystem\File;
+use Colibri\Utils\Cache\Bundle;
+use Colibri\Utils\Debug;
+use Colibri\Utils\ExtendedObject;
+use Colibri\Web\RequestCollection;
+use Colibri\Web\Controller as WebController;
+use Colibri\Web\Templates\PhpTemplate;
+use Colibri\Web\View;
 use ScssPhp\ScssPhp\Compiler;
 use ScssPhp\ScssPhp\OutputStyle;
 
@@ -30,7 +30,7 @@ class Controller extends WebController
     public function Index(RequestCollection $get, RequestCollection $post, mixed $payload = null)
     {
 
-        $module = App::$moduleManager-><modulename>;
+        $module = App::$moduleManager->tools;
 
         // создаем обьект View
         $view = View::Create();
@@ -105,7 +105,7 @@ class Controller extends WebController
                     $componentName = $matches[1];
                 }
                 $compiledContent = str_replace('\'', '\\\'', str_replace("\n", "", str_replace("\r", "", $args->content)));
-                $args->content = 'AktionDigital.UI.AddTemplate(\'' . $componentName . '\', \'' . $compiledContent . '\');' . "\n";
+                $args->content = 'Colibri.UI.AddTemplate(\'' . $componentName . '\', \'' . $compiledContent . '\');' . "\n";
             }
         });
 
