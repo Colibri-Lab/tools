@@ -43,7 +43,25 @@ class Installer
             print_r('Файл конфигурации найден, пропускаем настройку'."\n");
             return;
         }
-        copy($configPath, $configTargetPath);
+        if($mode === 'local') {
+            symlink($configPath, $configTargetPath);
+        }
+        else {
+            copy($configPath, $configTargetPath);
+        }
+
+        $configPath = $path.'/src/Tools/config-template/tools-storages.yaml';
+        $configTargetPath = $configDir.'tools-storages.yaml';
+        if(file_exists($configTargetPath)) {
+            print_r('Файл конфигурации найден, пропускаем настройку'."\n");
+            return;
+        }
+        if($mode === 'local') {
+            symlink($configPath, $configTargetPath);
+        }
+        else {
+            copy($configPath, $configTargetPath);
+        }
 
         // нужно прописать в модули
         $modulesTargetPath = $configDir.'modules.yaml';
@@ -64,9 +82,14 @@ class Installer
         $scriptsPath = $path.'/src/Tools/bin/';
         $binDir = './bin/';
 
-        copy($scriptsPath.'tools-migrate.sh', $binDir.'tools-migrate.sh');
-        copy($scriptsPath.'tools-models-generate.sh', $binDir.'tools-models-generate.sh');
-
+        if($mode === 'local') {
+            symlink($scriptsPath.'tools-migrate.sh', $binDir.'tools-migrate.sh');
+            symlink($scriptsPath.'tools-models-generate.sh', $binDir.'tools-models-generate.sh');
+        }
+        else {
+            copy($scriptsPath.'tools-migrate.sh', $binDir.'tools-migrate.sh');
+            copy($scriptsPath.'tools-models-generate.sh', $binDir.'tools-models-generate.sh');
+        }
         print_r('Установка завершена'."\n");
 
     }

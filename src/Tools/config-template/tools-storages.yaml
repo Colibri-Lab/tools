@@ -1,0 +1,55 @@
+---
+settings:
+  access-point: tools
+  module: Tools
+  models:
+    row: Models\Setting
+    table: Models\Settings
+  desc: Настройки
+  fields:
+    name:
+      type: varchar
+      length: 255
+      class: string
+      component: Text
+      desc: Наименование настройки
+      note: Введите название настройки, которое будете использовать в дальнейшем. Латинские буквы, подчеркивание.
+      attrs:
+        width: 100%
+    type:
+      type: varchar
+      length: 255
+      class: string
+      desc: Тип настройки
+      note: Выберите тип настройки
+      required: true
+      readonly: false
+      component: Select
+      selector:
+        value: value
+        title: title
+      attrs:
+        width: 100%
+    desc:
+      type: varchar
+      length: 1024
+      class: TextArea
+      desc: Описание настройки
+      note: Опишите настройку, для чего она нужна, где используется
+      component: TextArea
+      required: false
+      reqdonly: true
+      attrs:
+        width: 100%
+    value:
+      type: varchar
+      length: 1024
+      component: TextArea
+      class: string
+      required: false
+      readonly: false
+      desc: Значение
+      note: Введите значение настройки
+      attrs:
+        width: 100%
+...
