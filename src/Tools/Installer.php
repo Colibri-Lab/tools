@@ -5,6 +5,31 @@ namespace App\Modules\Tools;
 
 class Installer
 {
+    private static function _copyOrSymlink($mode, $pathFrom, $pathTo, $fileFrom, $fileTo): void 
+    {
+        print_r('Копируем '.$mode.' '.$pathFrom.' '.$pathTo.' '.$fileFrom.' '.$fileTo."\n");
+        if(!file_exists($pathFrom.$fileFrom)) {
+            print_r('Файл '.$pathFrom.$fileFrom.' не существует'."\n");
+            return;
+        }
+
+        if(file_exists($pathTo.$fileTo)) {
+            print_r('Файл '.$pathTo.$fileTo.' существует'."\n");
+            return;
+        }
+
+        if($mode === 'local') {
+            shell_exec('ln -s '.realpath($pathFrom.$fileFrom).' '.$pathTo.($fileTo != $fileFrom ? $fileTo : ''));
+        }
+        else {
+            shell_exec('cp -R '.realpath($pathFrom.$fileFrom).' '.$pathTo.$fileTo);
+        }
+
+        // если это исполняемый скрипт
+        if(strstr($pathTo.$fileTo, '/bin/') !== false) {
+            chmod($pathTo.$fileTo, 0777);
+        }
+    }
 
     /**
      *
@@ -34,34 +59,21 @@ class Installer
         $installedPackage = $operation->getPackage();
         $targetDir = $installedPackage->getName();
         $path = $vendorDir.$targetDir;
-
+        $configPath = $path.'/src/Tools/config-template/';
+        
         // копируем конфиг
         print_r('Копируем файл конфигурации'."\n");
-        $configPath = $path.'/src/Tools/config-template/module-'.$mode.'.yaml';
-        $configTargetPath = $configDir.'tools.yaml';
-        if(file_exists($configTargetPath)) {
+        if(file_exists($configDir.'tools.yaml')) {
             print_r('Файл конфигурации найден, пропускаем настройку'."\n");
             return;
         }
-        if($mode === 'local') {
-            symlink($configPath, $configTargetPath);
-        }
-        else {
-            copy($configPath, $configTargetPath);
-        }
+        self::_copyOrSymlink($mode, $configPath, $configDir, 'module-'.$mode.'.yaml', 'tools.yaml');
 
-        $configPath = $path.'/src/Tools/config-template/tools-storages.yaml';
-        $configTargetPath = $configDir.'tools-storages.yaml';
-        if(file_exists($configTargetPath)) {
+        if(file_exists($configDir.'tools-storages.yaml')) {
             print_r('Файл конфигурации найден, пропускаем настройку'."\n");
             return;
         }
-        if($mode === 'local') {
-            symlink($configPath, $configTargetPath);
-        }
-        else {
-            copy($configPath, $configTargetPath);
-        }
+        self::_copyOrSymlink($mode, $configPath, $configDir, 'tools-storages.yaml', 'tools-storages.yaml');
 
         // нужно прописать в модули
         $modulesTargetPath = $configDir.'modules.yaml';
@@ -82,14 +94,8 @@ class Installer
         $scriptsPath = $path.'/src/Tools/bin/';
         $binDir = './bin/';
 
-        if($mode === 'local') {
-            symlink($scriptsPath.'tools-migrate.sh', $binDir.'tools-migrate.sh');
-            symlink($scriptsPath.'tools-models-generate.sh', $binDir.'tools-models-generate.sh');
-        }
-        else {
-            copy($scriptsPath.'tools-migrate.sh', $binDir.'tools-migrate.sh');
-            copy($scriptsPath.'tools-models-generate.sh', $binDir.'tools-models-generate.sh');
-        }
+        self::_copyOrSymlink($mode, $scriptsPath, $binDir, 'tools-migrate.sh', 'tools-migrate.sh');
+        self::_copyOrSymlink($mode, $scriptsPath, $binDir, 'tools-models-generate.sh', 'tools-models-generate.sh');
         print_r('Установка завершена'."\n");
 
     }

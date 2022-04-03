@@ -1,3 +1,13 @@
+smtp:
+  enabled: true
+  host: "smtp.yandex.ru"
+  port: 465
+  secure: 'ssl'
+  user: 'connect@buhsoft.ru'
+  password: 'KtUdNYHkjkt56pA'
+  from: 'connect@buhsoft.ru'
+  fromname: 'БухСофт'
+  
 databases:
 
   access-points: 

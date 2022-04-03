@@ -17,14 +17,23 @@ settings:
       attrs:
         width: 100%
     type:
-      type: varchar
-      length: 255
-      class: string
+      type: enum
+      class: ValueField
       desc: Тип настройки
       note: Выберите тип настройки
       required: true
       readonly: false
       component: Select
+      default: "'string'"
+      values: 
+        - value: integer
+          title: Целое число
+        - value: double
+          title: Число с плавающей запятой
+        - value: string
+          title: Строка
+        - value: blob
+          title: Блоб
       selector:
         value: value
         title: title
@@ -33,10 +42,10 @@ settings:
     desc:
       type: varchar
       length: 1024
-      class: TextArea
+      class: string
+      component: TextArea
       desc: Описание настройки
       note: Опишите настройку, для чего она нужна, где используется
-      component: TextArea
       required: false
       reqdonly: true
       attrs:
@@ -52,4 +61,68 @@ settings:
       note: Введите значение настройки
       attrs:
         width: 100%
+  indices:
+    settings_name_idx:
+      fields: ['name']
+      type: UNIQUE
+      method: BTREE    
+
+notices:
+  access-point: tools
+  module: Tools
+  models:
+    row: Models\Notice
+    table: Models\Notices
+  desc: Шаблоны писем
+  fields:
+    name:
+      type: varchar
+      length: 255
+      class: string
+      component: Text
+      desc: Наименование шаблона
+      note: Введите название шаблона, которое будете использовать в дальнейшем. Латинские буквы, подчеркивание.
+      attrs:
+        width: 100%
+    subject:
+      type: varchar
+      length: 255
+      class: string
+      desc: Тема письма
+      note: Введите тему письма
+      required: true
+      readonly: false
+      component: Select
+      selector:
+        value: value
+        title: title
+      attrs:
+        width: 100%
+    body:
+      type: varchar
+      length: 1024
+      class: string
+      component: TextArea
+      desc: Тело письма
+      note: Введите тело письма
+      required: false
+      reqdonly: true
+      attrs:
+        width: 100%
+    value:
+      type: varchar
+      length: 1024
+      component: TextArea
+      class: string
+      required: false
+      readonly: false
+      desc: Значение
+      note: Введите значение настройки
+      attrs:
+        width: 100%
+  indices:
+    notices_name_idx:
+      fields: ['name']
+      type: UNIQUE
+      method: BTREE    
 ...
