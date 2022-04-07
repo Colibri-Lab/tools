@@ -6,6 +6,9 @@ settings:
     row: Models\Setting
     table: Models\Settings
   desc: Настройки
+  params:
+    visible: false
+    maybepublished: false
   fields:
     name:
       type: varchar
@@ -24,16 +27,32 @@ settings:
       required: true
       readonly: false
       component: Select
-      default: "'string'"
+      default: "'text'"
       values: 
         - value: integer
           title: Целое число
+          icon: App.Modules.Tools.Icons.ContextMenuIntegerIcon
         - value: double
           title: Число с плавающей запятой
-        - value: string
-          title: Строка
-        - value: blob
-          title: Блоб
+          icon: App.Modules.Tools.Icons.ContextMenuDoubleIcon
+        - value: text
+          title: Текст
+          icon: App.Modules.Tools.Icons.ContextMenuTextIcon
+        - value: textarea
+          title: Большой текст
+          icon: App.Modules.Tools.Icons.ContextMenuTextAreaIcon
+        - value: html
+          title: Редактор HTML
+          icon: App.Modules.Tools.Icons.ContextMenuHtmlIcon
+        - value: htmlcode
+          title: Kod HTML
+          icon: App.Modules.Tools.Icons.ContextMenuHtmlCodeIcon
+        - value: file
+          title: Файл
+          icon: App.Modules.Tools.Icons.ContextMenuFileIcon
+        - value: files
+          title: Файлы
+          icon: App.Modules.Tools.Icons.ContextMenuFilesIcon
       selector:
         value: value
         title: title
@@ -74,6 +93,9 @@ notices:
     row: Models\Notice
     table: Models\Notices
   desc: Шаблоны писем
+  params:
+    visible: false
+    maybepublished: false
   fields:
     name:
       type: varchar

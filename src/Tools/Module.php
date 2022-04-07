@@ -93,6 +93,11 @@ class Module extends BaseModule
         $permissions['tools.backup.restore'] = 'Восстановление из точки';
         $permissions['tools.execute'] = 'Выполнение скриптов';
 
+        $permissions['tools.settings'] = 'Настройки сайта';
+        $permissions['tools.settings.add'] = 'Добавить настройку';
+        $permissions['tools.settings.edit'] = 'Редактировать настройку';
+        $permissions['tools.settings.remove'] = 'Удалить настройку';
+
         return $permissions;
     }
 
