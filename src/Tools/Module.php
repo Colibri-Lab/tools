@@ -51,7 +51,7 @@ class Module extends BaseModule
             Item::Create('struct', 'Структура', '', 'green', false, '')
                 ->Add([
                     Item::Create('sites', 'Сайты и разделы', '', '', false, '')->Add(
-                        Item::Create('settings', 'Настройки', 'Настройки сайта<br />Здесь можно отредактировать некоторые настройки, предварительно созданные менеджером в менеджере настроек', '', true, 'Tools.RouteTo("/settings/settings/")')
+                        Item::Create('settings', 'Настройки', 'Настройки сайта<br />Здесь можно отредактировать некоторые настройки, предварительно созданные менеджером в менеджере настроек', '', true, 'Tools.RouteTo("/settings/data/")')
                     ),
                     Item::Create('files', 'Файлы', '', '', false, '')
                         ->Add([

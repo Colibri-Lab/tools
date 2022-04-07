@@ -31,28 +31,28 @@ settings:
       values: 
         - value: integer
           title: Целое число
-          icon: App.Modules.Tools.Icons.ContextMenuIntegerIcon
+          icon: Colibri.UI.FieldIcons['Number']
         - value: double
           title: Число с плавающей запятой
-          icon: App.Modules.Tools.Icons.ContextMenuDoubleIcon
+          icon: Colibri.UI.FieldIcons['Number']
         - value: text
           title: Текст
-          icon: App.Modules.Tools.Icons.ContextMenuTextIcon
+          icon: Colibri.UI.FieldIcons['Text']
         - value: textarea
           title: Большой текст
-          icon: App.Modules.Tools.Icons.ContextMenuTextAreaIcon
+          icon: Colibri.UI.FieldIcons['TextArea']
         - value: html
           title: Редактор HTML
-          icon: App.Modules.Tools.Icons.ContextMenuHtmlIcon
+          icon: Colibri.UI.FieldIcons['App.Modules.Manage.UI.TinyMCETextArea']
         - value: htmlcode
           title: Kod HTML
-          icon: App.Modules.Tools.Icons.ContextMenuHtmlCodeIcon
+          icon: Colibri.UI.FieldIcons['App.Modules.Manage.UI.TinyMCETextArea']
         - value: file
           title: Файл
-          icon: App.Modules.Tools.Icons.ContextMenuFileIcon
+          icon: Colibri.UI.FieldIcons['File']
         - value: files
           title: Файлы
-          icon: App.Modules.Tools.Icons.ContextMenuFilesIcon
+          icon: Colibri.UI.FieldIcons['Files']
       selector:
         value: value
         title: title

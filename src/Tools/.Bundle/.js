@@ -20,10 +20,10 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
                 route: '/tools/settings/manager/'
             },
             settings_editor: {
-                className: 'App.Modules.Tools.SettingsEditorPage', 
+                className: 'App.Modules.Tools.SettingsDataPage', 
                 title: 'Настройки',
                 color: 'blue',
-                route: '/tools/settings/settings/'
+                route: '/tools/settings/data/'
             }
             
         }

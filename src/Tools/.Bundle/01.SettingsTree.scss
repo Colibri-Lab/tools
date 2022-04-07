@@ -1,9 +1,4 @@
 .app-settings-tree-component {
 
-    :not([data-object-name="root"]) {
-        >div>.icon>svg {
-            filter: invert(1);
-        }     
-    }
 
 }
