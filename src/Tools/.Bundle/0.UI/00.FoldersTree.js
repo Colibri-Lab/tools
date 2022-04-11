@@ -48,7 +48,7 @@ App.Modules.Tools.UI.FoldersTree = class extends Colibri.UI.Tree {
 
     _removeUnexistent() {
         this.allNodes.forEach((node) => {
-            if(node.tag === null) {
+            if(node.tag?.path === '') {
                 return true;
             }
             if(this._foldersList.indexOf(node.tag) === -1) {
@@ -72,7 +72,7 @@ App.Modules.Tools.UI.FoldersTree = class extends Colibri.UI.Tree {
         newNode.text = 'Ресурсы';
         newNode.isLeaf = false;
         newNode.icon = App.Modules.Tools.Icons.FolderIcon;
-        newNode.tag = null;
+        newNode.tag = {path: '', name: ''};
 
         this._renderLevel(newNode, '');
         newNode.Expand();

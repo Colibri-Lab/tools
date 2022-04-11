@@ -37,7 +37,7 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         this._store = App.Store.AddChild('app.tools', {});
         this._store.AddPathLoader('tools.settings', () => this.Settings(true));
         this._store.AddPathLoader('tools.folders', () => this.Folders('', true));
-        this._store.AddPathLoader('tools.files', () => this.Files('', true));
+        this._store.AddPathLoader('tools.files', () => this.Files('', '', true));
 
         console.log('Initializing module Tools');
 
@@ -199,8 +199,8 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
 
-    Files(path = '', returnPromise = false) {
-        const promise = this.Call('FileManager', 'Files', {path: path})
+    Files(path = '', searchTerm = '', returnPromise = false) {
+        const promise = this.Call('FileManager', 'Files', {path: path, term: searchTerm})
         if(returnPromise) {
             return promise;
         }
@@ -226,6 +226,47 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         this.Call('FileManager', 'RenameFolder', {pathFrom: pathFrom, pathTo: pathTo})
             .then((response) => {
                 this._store.Set('tools.folders', response.result);
+            }).catch((response) => {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            });
+    }
+
+    RemoveFolder(path) {
+        this.Call('FileManager', 'RemoveFolder', {path: path})
+            .then((response) => {
+                this._store.Set('tools.folders', response.result);
+            }).catch((response) => {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            });
+    }
+
+    RenameFile(path, nameFrom, nameTo) {
+        this.Call('FileManager', 'RenameFile', {path: path, nameFrom: nameFrom, nameTo: nameTo})
+            .then((response) => {
+                this._store.Set('tools.files', response.result);
+            }).catch((response) => {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            });
+    }
+
+    RemoveFile(path) {
+        this.Call('FileManager', 'RemoveFile', {path: path})
+            .then((response) => {
+                this._store.Set('tools.files', response.result);
+            }).catch((response) => {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            });
+    }
+
+    UploadFiles(path, files) {
+        this.Call('FileManager', 'UploadFiles', {path: path, files: files})
+            .then((response) => {
+                let files = this._store.Query('tools.files');
+                if(!Array.isArray(files)) {
+                    files = [];
+                }
+                files = files.concat(response.result);
+                this._store.Set('tools.files', files);
             }).catch((response) => {
                 App.Notices.Add(new Colibri.UI.Notice(response.result));
             });

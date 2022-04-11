@@ -37,4 +37,10 @@
         }
 
     }
+
+    &.-readonly { 
+        [data-object-name="files-pane"] {
+            grid-template-rows: 40px 50px calc(100% - 90px);
+        }
+    }
 }
