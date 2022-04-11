@@ -1,0 +1,1 @@
+App.Modules.Tools.UI = class {}

@@ -24,10 +24,8 @@ settings:
       class: ValueField
       desc: Тип настройки
       note: Выберите тип настройки
-      required: true
-      readonly: false
       component: Select
-      default: "'text'"
+      default: text
       values: 
         - value: integer
           title: Целое число
@@ -58,6 +56,9 @@ settings:
         title: title
       attrs:
         width: 100%
+      params:
+        required: true
+        readonly: false
     desc:
       type: varchar
       length: 1024
@@ -74,8 +75,9 @@ settings:
       length: 1024
       component: TextArea
       class: string
-      required: false
-      readonly: false
+      params:
+        required: false
+        readonly: false
       desc: Значение
       note: Введите значение настройки
       attrs:
@@ -110,11 +112,12 @@ notices:
       type: varchar
       length: 255
       class: string
+      component: Select
       desc: Тема письма
       note: Введите тему письма
-      required: true
-      readonly: false
-      component: Select
+      params:
+        required: true
+        readonly: false
       selector:
         value: value
         title: title
@@ -136,10 +139,11 @@ notices:
       length: 1024
       component: TextArea
       class: string
-      required: false
-      readonly: false
       desc: Значение
       note: Введите значение настройки
+      params:
+        required: false
+        readonly: false
       attrs:
         width: 100%
   indices:
