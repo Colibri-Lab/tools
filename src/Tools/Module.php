@@ -60,11 +60,6 @@ class Module extends BaseModule
                         ])
                 ],
             ),
-            Item::Create('more', 'ЕЩЕ', '', 'blue', false, '')->Add(
-                Item::Create('tools', 'Инструменты', '', '', false, '')
-                    ->Add(Item::Create('backup', 'Слепки системы', 'Создайте точку восстановления на случай критических ситуаций. В дальнейшем можно будет вернуть данные из полученного файла', '', false, 'Tools.RouteTo("/backup/")'))
-                    ->Add(Item::Create('execute', 'Выполнить', 'Выполнить код (PHP). Внимание! Код исполняется в окружении всего проекта, возможны необратимые повреждения!', '', false, 'Tools.RouteTo("/execute/")')),
-            ),
             Item::Create('dev', 'Разработка', '', 'orange', false, '')->Add([
                 Item::Create('settings', 'Настройки', '', '', false, '')
                     ->Add([
@@ -72,6 +67,11 @@ class Module extends BaseModule
                         Item::Create('manager', 'Настройки сайта', 'Менеджер настроек. Можно создать настройку, которую в дальнейшем использовать при разработке или выводе информации на проекте', '', false, 'Tools.RouteTo("/settings/manager/")'),
                         Item::Create('notices', 'Шаблоны сообщений', 'Создайте шаблоны сообщений для общения с пользователем посредством электронной почты', '', false, 'Tools.RouteTo("/settings/notices/")'),
                     ]),
+            ]),
+            Item::Create('more', 'ЕЩЕ', '', 'blue', false, '')->Add([
+                Item::Create('tools', 'Инструменты', '', '', false, '')
+                    ->Add(Item::Create('backup', 'Слепки системы', 'Создайте точку восстановления на случай критических ситуаций. В дальнейшем можно будет вернуть данные из полученного файла', '', false, 'Tools.RouteTo("/backup/")'))
+                    ->Add(Item::Create('execute', 'Выполнить', 'Выполнить код (PHP). Внимание! Код исполняется в окружении всего проекта, возможны необратимые повреждения!', '', false, 'Tools.RouteTo("/execute/")')),
                 Item::Create('view', 'Внешний вид', '', '', false, '')
                     ->Add([
                         Item::Create('themes', 'Темы сайта', 'Настройте внешний вид сайта. Можно создать новую тему, или отредактировать существующую', '', false, 'Tools.RouteTo("/themes/site/")'),
@@ -97,6 +97,11 @@ class Module extends BaseModule
         $permissions['tools.settings.add'] = 'Добавить настройку';
         $permissions['tools.settings.edit'] = 'Редактировать настройку';
         $permissions['tools.settings.remove'] = 'Удалить настройку';
+
+        $permissions['tools.notices'] = 'Шаблоны сообщений';
+        $permissions['tools.notices.add'] = 'Добавить сообщение';
+        $permissions['tools.notices.edit'] = 'Редактировать сообщение';
+        $permissions['tools.notices.remove'] = 'Удалить сообщение';
 
         return $permissions;
     }

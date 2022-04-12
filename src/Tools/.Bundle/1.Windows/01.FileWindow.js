@@ -15,6 +15,14 @@ App.Modules.Tools.Windows.FileWindow = class extends Colibri.UI.Window {
         
     }
 
+    set multiple(value) {
+        this._manager.multiple = value;
+    }
+
+    get multiple() {
+        return this._manager.multiple;
+    }
+
     __selectionChangedOnManager(event, args) {
         this._save.enabled = !!this._manager.selected || this._manager.checked.length > 0;
     }
@@ -28,34 +36,18 @@ App.Modules.Tools.Windows.FileWindow = class extends Colibri.UI.Window {
         return new Promise((resolve, reject) => {
             App.Loading.Hide();
 
-            // const promiseDataBinding = dataBinding && typeof dataBinding === 'string' ? App.Store.AsyncQuery(dataBinding) : new Promise((rs, rj) => rs(dataBinding));
-            // const promiseFieldsBinding = fieldBinding && typeof fieldBinding === 'string' ? App.Store.AsyncQuery(fieldBinding) : new Promise((rs, rj) => rs(fieldBinding));
+            this._save.ClearHandlers();
+            this._save.AddHandler('Clicked', () => {
+                resolve(this._manager.files);
+                this.Hide();
+            });
 
-            // Promise.all([promiseFieldsBinding, promiseDataBinding])
-            //     .then((response) => {
+            this._cancel.ClearHandlers();
+            this._cancel.AddHandler('Clicked', () => {
+                reject();
+                this.Hide();
+            });
         
-            //         const storage = response[0];
-            //         const value = response[1];
-        
-            //         this._form.fields = this._performChanges(storage).fields;
-            //         this._form.value = value;
-                    
-            //         App.Loading.Hide();
-
-            //         this._save.ClearHandlers();
-            //         this._save.AddHandler('Clicked', () => {
-            //             resolve(this._form.value);
-            //             this.Hide();
-            //         });
-
-            //         this._cancel.ClearHandlers();
-            //         this._cancel.AddHandler('Clicked', () => {
-            //             reject();
-            //             this.Hide();
-            //         });
-        
-            //     });
-    
         });
 
     }

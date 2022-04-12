@@ -116,7 +116,7 @@ notices:
       desc: Тема письма
       note: Введите тему письма
       params:
-        required: true
+        required: false
         readonly: false
       selector:
         value: value
@@ -132,18 +132,6 @@ notices:
       note: Введите тело письма
       required: false
       reqdonly: true
-      attrs:
-        width: 100%
-    value:
-      type: varchar
-      length: 1024
-      component: TextArea
-      class: string
-      desc: Значение
-      note: Введите значение настройки
-      params:
-        required: false
-        readonly: false
       attrs:
         width: 100%
   indices:

@@ -42,6 +42,8 @@
             display: grid;
             grid-template-rows: 80px calc(100% - 80px);
             height: 100%;
+            padding-right: 20px;
+            overflow: auto;
         }
     }
     

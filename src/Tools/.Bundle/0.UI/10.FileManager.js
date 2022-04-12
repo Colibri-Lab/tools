@@ -6,7 +6,8 @@ App.Modules.Tools.UI.FileManager = class extends Colibri.UI.Component {
         this.AddClass('app-file-manager-component');
 
         this._drop = new Colibri.UI.FileDropManager(this.container);
-        this._drop.allowSize = 20971520;
+        // this._drop.allowSize = 20971520;
+        //  allowSize="20971520"
 
         this._folders = this.Children('split/folders-pane/folders');
         this._searchInput = this.Children('split/files-pane/search-pane/search-input');
@@ -193,12 +194,28 @@ App.Modules.Tools.UI.FileManager = class extends Colibri.UI.Component {
         }
     } 
 
+    get editable() {
+        const buttonsPane = this.Children('split/files-pane/buttons-pane');
+        return buttonsPane.shown;
+    }
+
     get selected() {
         return this._files.selected;
     }
 
     get checked() {
         return this._files.checked;
+    }
+
+    get files() {
+        const files = [];
+        if(this._files.selected) {
+            files.push(this._files.selected.value);
+        }
+        for(const file of this._files.checked) {
+            files.push(file.value);
+        }
+        return files;
     }
 
 
@@ -267,6 +284,10 @@ App.Modules.Tools.UI.FileManager = class extends Colibri.UI.Component {
     }
 
     __editDataButtonClicked(event, args) {
+
+        if(!this.editable) {
+            return;
+        }
         
         const selection = this._folders.selected;
         let item = this._files.selected;
@@ -291,7 +312,7 @@ App.Modules.Tools.UI.FileManager = class extends Colibri.UI.Component {
         }, 'Сохранить').then((data) => {
             Tools.RenameFile(selection.tag.path, item.value.name, data.name);
             item.Dispose();
-        });
+        }).catch(e => console.log(e));
 
     }
 
@@ -315,7 +336,7 @@ App.Modules.Tools.UI.FileManager = class extends Colibri.UI.Component {
             for(const file of this._files.checked) {
                 file.Dispose();
             }
-        });
+        }).catch(e => console.log(e));
 
     }
 

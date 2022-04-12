@@ -30,6 +30,12 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
                 title: 'Файлы на сервере',
                 color: 'blue',
                 route: '/tools/files/disk/'
+            },
+            settings_notices: {
+                className: 'App.Modules.Tools.NoticesPage', 
+                title: 'Шаблоны сообщений',
+                color: 'blue',
+                route: '/tools/settings/notices/'
             }
             
         }
@@ -38,6 +44,7 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         this._store.AddPathLoader('tools.settings', () => this.Settings(true));
         this._store.AddPathLoader('tools.folders', () => this.Folders('', true));
         this._store.AddPathLoader('tools.files', () => this.Files('', '', true));
+        this._store.AddPathLoader('tools.notices', () => this.Notices(true));
 
         console.log('Initializing module Tools');
 
@@ -48,6 +55,26 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
 
         Object.forEach(this._pageMap, (name, info) => {
             App.Router.AddRoutePattern(info.route, info.handle ?? ((url, options) => this.ShowPage(name)));
+        });
+
+        this.AddHandler('CallProgress', (event, args) => {
+            if(args.request === 'UploadFiles') {
+                if(args.event.type === 'loadstart') {
+                    App.Loader.opacity = 0.5;
+                    App.Loader.icon = false;
+                    App.Loader.progress = 0;
+                    App.Loader.Show();
+                }
+                else if(args.event.type === 'progress') {
+                    App.Loader.progress = args.event.loaded * 100 / args.event.total;
+                }
+                else if(args.event.type === 'loadend') {
+                    App.Loader.Hide();
+                    App.Loader.progress = 100;
+                    App.Loader.icon = true;
+                    App.Loader.opacity = 1;
+                }    
+            }
         });
 
     }
@@ -259,7 +286,7 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
     }
 
     UploadFiles(path, files) {
-        this.Call('FileManager', 'UploadFiles', {path: path, files: files})
+        this.Call('FileManager', 'UploadFiles', {path: path, files: files}, {}, true, 'UploadFiles')
             .then((response) => {
                 let files = this._store.Query('tools.files');
                 if(!Array.isArray(files)) {
@@ -268,6 +295,68 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
                 files = files.concat(response.result);
                 this._store.Set('tools.files', files);
             }).catch((response) => {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            });
+    }
+
+    Notices(returnPromise = false) {
+        const promise = this.Call('Notices', 'List')
+        if(returnPromise) {
+            return promise;
+        }
+        promise.then((response) => {
+            this._store.Set('tools.notices', response.result);
+        }).catch((response) => {
+            App.Notices.Add(new Colibri.UI.Notice(response.result));
+        });
+    }
+
+    CreateNotice(notice) {
+        this.Call('Notices', 'Create', notice)
+            .then((response) => {
+                this._store.Set('tools.notices', response.result);
+            }).catch((response) => {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            });
+    }
+
+    
+    DeleteNotice(noticeId) {
+        this.Call('Notices', 'Delete', {notice: noticeId})
+            .then((response) => {
+                let notices = this._store.Query('tools.notices');
+                if(!notices || !Array.isArray(notices)) {
+                    notices = [];
+                }
+                let newNotices = [];
+                notices.forEach((s) => {
+                    if(s.id !== noticeId) {
+                        newNotices.push(s);
+                    }
+                });
+                this._store.Set('tools.notices', newNotices);
+            })
+            .catch((response) => {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            });
+    }
+
+    SaveNotice(notice) {
+        this.Call('Notices', 'Save', notice)
+            .then((response) => {
+                let notices = this._store.Query('tools.notices');
+                if(!notices || !Array.isArray(notices)) {
+                    notices = [];
+                }
+                if(notice?.id) {
+                    notices = notices.map((s) => s.id == response.result.id ? response.result : s);
+                }
+                else {
+                    notices.push(response.result);
+                }
+                this._store.Set('tools.notices', notices);
+            })
+            .catch((response) => {
                 App.Notices.Add(new Colibri.UI.Notice(response.result));
             });
     }
