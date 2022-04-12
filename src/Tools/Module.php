@@ -63,7 +63,6 @@ class Module extends BaseModule
             Item::Create('dev', 'Разработка', '', 'orange', false, '')->Add([
                 Item::Create('settings', 'Настройки', '', '', false, '')
                     ->Add([
-                        Item::Create('remote', 'Удаленное файловое хранилище', 'Настройки удаленного хранилища файлов. Адрес и тип подключения', '', false, 'Tools.RouteTo("/settings/remote/")'),
                         Item::Create('manager', 'Настройки сайта', 'Менеджер настроек. Можно создать настройку, которую в дальнейшем использовать при разработке или выводе информации на проекте', '', false, 'Tools.RouteTo("/settings/manager/")'),
                         Item::Create('notices', 'Шаблоны сообщений', 'Создайте шаблоны сообщений для общения с пользователем посредством электронной почты', '', false, 'Tools.RouteTo("/settings/notices/")'),
                     ]),
