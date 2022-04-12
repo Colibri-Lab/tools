@@ -5,6 +5,9 @@ App.Modules.Tools.UI.FileManager = class extends Colibri.UI.Component {
         super(name, container, Colibri.UI.Templates['App.Modules.Tools.UI.FileManager']);
         this.AddClass('app-file-manager-component');
 
+        this._drop = new Colibri.UI.FileDropManager(this.container);
+        this._drop.allowSize = 20971520;
+
         this._folders = this.Children('split/folders-pane/folders');
         this._searchInput = this.Children('split/files-pane/search-pane/search-input');
         this._files = this.Children('split/files-pane/files');
@@ -29,6 +32,8 @@ App.Modules.Tools.UI.FileManager = class extends Colibri.UI.Component {
         this._deleteFile.AddHandler('Clicked', (event, args) => this.__deleteDataButtonClicked(event, args));
 
         this._searchInput.AddHandler(['Filled', 'Cleared'], (event, args) => this.__searchInputFilled(event, args));
+
+        this._drop.AddHandler('FileDropped', (event, args) => this.__dropContainerFileDropped(event, args));
 
     }
     
@@ -327,6 +332,27 @@ App.Modules.Tools.UI.FileManager = class extends Colibri.UI.Component {
         }
 
         Tools.Files(folder.path, this._searchInput.value);
+
+    }
+
+    __dropContainerFileDropped(event, args) {
+        const selected = this._folders.selected;
+        if(!selected) {
+            return;
+        }
+        const folder = selected.tag;
+        if(!folder) {
+            return ;
+        }
+
+        if(args.errors.length > 0) {
+            for(const error of args.errors) {
+                App.Notices.Add(new Colibri.UI.Notice(error.error));
+            }
+        }
+        if(args.success.length > 0) {
+            Tools.UploadFiles(folder.path, args.success);
+        }
 
     }
 

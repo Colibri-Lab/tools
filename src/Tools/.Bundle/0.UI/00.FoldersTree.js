@@ -63,6 +63,7 @@ App.Modules.Tools.UI.FoldersTree = class extends Colibri.UI.Tree {
             data = Object.values(data);
         }
 
+        const selected = this.selected;
         this._foldersList = data;
 
         let newNode = this.FindNode('root');
@@ -78,6 +79,9 @@ App.Modules.Tools.UI.FoldersTree = class extends Colibri.UI.Tree {
         newNode.Expand();
 
         this._removeUnexistent();
+        if(!selected) {
+            this.selected = newNode;
+        }
 
     }
 
