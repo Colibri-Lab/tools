@@ -46,12 +46,8 @@ App.Modules.Tools.UI.FileManager = class extends Colibri.UI.Component {
         let contextmenu = [];
         
         const itemData = args.item?.tag;
-        if(!itemData || !itemData.path) {
-            contextmenu.push({name: 'new-folder', title: 'Новый раздел', icon: Colibri.UI.ContextMenuAddIcon});
-
-            this._folders.contextmenu = contextmenu;
-            this._folders.ShowContextMenu(args.isContextMenuEvent ? 'right bottom' : 'left top', '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);
-
+        if(!itemData) {
+            return;
         }
         else {
             contextmenu.push({name: 'new-folder', title: 'Новый раздел', icon: Colibri.UI.ContextMenuAddIcon});

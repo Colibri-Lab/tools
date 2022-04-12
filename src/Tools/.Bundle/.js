@@ -12,45 +12,7 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
     InitializeModule() {
 
         this._pages = {};
-        this._pageMap = {
-            settings_manager: {
-                className: 'App.Modules.Tools.SettingsManagerPage', 
-                title: 'Менеджер настроек',
-                color: 'blue',
-                route: '/tools/settings/manager/'
-            },
-            settings_editor: {
-                className: 'App.Modules.Tools.SettingsDataPage', 
-                title: 'Настройки',
-                color: 'blue',
-                route: '/tools/settings/data/'
-            },
-            settings_files: {
-                className: 'App.Modules.Tools.FilesPage', 
-                title: 'Файлы на сервере',
-                color: 'blue',
-                route: '/tools/files/disk/'
-            },
-            settings_files_remote: {
-                className: 'App.Modules.Tools.RemoteFilesSettingsPage', 
-                title: 'Удаленное файловое хранилище',
-                color: 'blue',
-                route: '/tools/settings/remote/'
-            },
-            settings_notices: {
-                className: 'App.Modules.Tools.NoticesPage', 
-                title: 'Шаблоны сообщений',
-                color: 'blue',
-                route: '/tools/settings/notices/'
-            },
-            settings_files_remote_settings: {
-                className: 'App.Modules.Tools.RemoteFilesSettingsPage', 
-                title: 'Удаленное файловое хранилище',
-                color: 'blue',
-                route: '/tools/settings/remote/'
-            }
-            
-        }
+        
 
         this._store = App.Store.AddChild('app.tools', {});
         this._store.AddPathLoader('tools.settings', () => this.Settings(true));
@@ -65,10 +27,6 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         App.AddHandler('ApplicationReady', (event, args) => {
             this.Render(document.body);
 
-        });
-
-        Object.forEach(this._pageMap, (name, info) => {
-            App.Router.AddRoutePattern(info.route, info.handle ?? ((url, options) => this.ShowPage(name)));
         });
 
         this.AddHandler('CallProgress', (event, args) => {
@@ -108,72 +66,11 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
     RegisterEventHandlers() {
         console.log('Registering event handlers for Tools');
 
-        this.AddHandler('RoutedToModule', (event, args) => {
-            
-        });
 
     }
     
     get Store() {
         return this._store;
-    }
-
-    ShowPage(name) {
-        Colibri.Common.Wait(() => Security.Store.Query('security.user').id).then(() => {
-            if(Security.IsCommandAllowed('Tools.' + name)) {
-        
-                const pageInfo = this._pageMap[name];
-                const componentClass = pageInfo.className;
-                const title = pageInfo.title;
-                const route = pageInfo.route;
-
-                const componentObject = eval(componentClass);
-                if(!componentObject) {
-                    return;
-                }
-
-                let container = null;
-                if(!this._pages[componentClass]) {
-
-                    container = MainFrame.AddTab(componentClass, title, 'orange', true, name + '-container', () => {
-                        this.RemovePage(name);
-                    }, route);    
-
-                    if(!this._pages[componentClass]) {
-                        this._pages[componentClass] = new componentObject(name, container);
-                    }
-                    if(!this._pages[componentClass].isConnected) {
-                        this._pages[componentClass].ConnectTo(container);
-                    }
-                    this._pages[componentClass].Show();
-
-                }
-                else if(MainFrame) {
-                    MainFrame.SelectTab(this._pages[componentClass].parent);
-                }
-
-            }
-            else {
-                App.Notices && App.Notices.Add({
-                    severity: 'error',
-                    title: 'Действие запрещено',
-                    timeout: 5000
-                });
-            }
-        });
-
-
-    }
-
-    RemovePage(name) {
-        const pageInfo = this._pageMap[name];
-        const componentClass = pageInfo.className;
-
-        if(this._pages[componentClass]) {
-            this._pages[componentClass].Dispose();
-            this._pages[componentClass].parent.Dispose();
-            this._pages[componentClass] = null;
-        }
     }
 
     Settings(returnPromise = false) {
@@ -290,6 +187,9 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         this.Call('FileManager', 'CreateFolder', {path: path})
             .then((response) => {
                 let folders = this._store.Query('tools.folders');
+                if(!Array.isArray(folders)) {
+                    folders = [];
+                }
                 folders.push(response.result);
                 this._store.Set('tools.folders', folders);
             }).catch((response) => {
@@ -466,6 +366,13 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
 }
 
 App.Modules.Tools.Icons = {};
+App.Modules.Tools.Icons.SettingsIcon =              '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 3L24 8.5V19.5L14 25L4 19.5V8.5L14 3ZM14 5.311L6.10526 9.653V18.347L14 22.689L21.8947 18.347V9.653L14 5.311ZM14 18C12.8833 18 11.8123 17.5786 11.0227 16.8284C10.2331 16.0783 9.78947 15.0609 9.78947 14C9.78947 12.9391 10.2331 11.9217 11.0227 11.1716C11.8123 10.4214 12.8833 10 14 10C15.1167 10 16.1877 10.4214 16.9773 11.1716C17.7669 11.9217 18.2105 12.9391 18.2105 14C18.2105 15.0609 17.7669 16.0783 16.9773 16.8284C16.1877 17.5786 15.1167 18 14 18ZM14 16C14.5584 16 15.0938 15.7893 15.4886 15.4142C15.8835 15.0391 16.1053 14.5304 16.1053 14C16.1053 13.4696 15.8835 12.9609 15.4886 12.5858C15.0938 12.2107 14.5584 12 14 12C13.4416 12 12.9062 12.2107 12.5114 12.5858C12.1165 12.9609 11.8947 13.4696 11.8947 14C11.8947 14.5304 12.1165 15.0391 12.5114 15.4142C12.9062 15.7893 13.4416 16 14 16Z" fill="#2E3A59"/></svg>';
+App.Modules.Tools.Icons.FilesIcon =                 '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 5H7C5.897 5 5 5.897 5 7V21C5 22.103 5.897 23 7 23H21C22.103 23 23 22.103 23 21V7C23 5.897 22.103 5 21 5ZM7 21V7H21L21.002 21H7Z" fill="#2E3A59"/><path d="M12 16L11 15L8 19H20L15 12L12 16Z" fill="#2E3A59"/><path d="M10.5 13C11.3284 13 12 12.3284 12 11.5C12 10.6716 11.3284 10 10.5 10C9.67157 10 9 10.6716 9 11.5C9 12.3284 9.67157 13 10.5 13Z" fill="#2E3A59"/></svg>';
+App.Modules.Tools.Icons.NoticesIcon =               '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 8C4 6.89543 4.89543 6 6 6H22C23.1046 6 24 6.89543 24 8V20C24 21.1046 23.1046 22 22 22H6C4.89543 22 4 21.1046 4 20V8ZM22 9.8685V20H6V9.86851L14 15.2018L22 9.8685ZM21.1972 8H6.80279L14 12.7981L21.1972 8Z" fill="#2E3A59"/></svg>';
+App.Modules.Tools.Icons.ThemesIcon =                '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.065 4C19.5542 4.035 24 8.5025 24 14C24 19.5192 19.5192 24 14 24C8.48083 24 4 19.5192 4 14C7.23917 14.9058 10.1567 12.0058 9 9C12.3358 9.58917 14.655 6.73167 14.065 4ZM15.25 18.1667C15.94 18.1667 16.5 18.7267 16.5 19.4167C16.5 20.1067 15.94 20.6667 15.25 20.6667C14.56 20.6667 14 20.1067 14 19.4167C14 18.7267 14.56 18.1667 15.25 18.1667ZM9.5525 15.6667C10.4725 15.6667 11.2192 16.4133 11.2192 17.3333C11.2192 18.2533 10.4725 19 9.5525 19C8.6325 19 7.88583 18.2533 7.88583 17.3333C7.88583 16.4133 8.6325 15.6667 9.5525 15.6667ZM19 13.1667C19.92 13.1667 20.6667 13.9133 20.6667 14.8333C20.6667 15.7533 19.92 16.5 19 16.5C18.08 16.5 17.3333 15.7533 17.3333 14.8333C17.3333 13.9133 18.08 13.1667 19 13.1667ZM14 12.3333C14.46 12.3333 14.8333 12.7067 14.8333 13.1667C14.8333 13.6267 14.46 14 14 14C13.54 14 13.1667 13.6267 13.1667 13.1667C13.1667 12.7067 13.54 12.3333 14 12.3333ZM6.5 9.83333C6.96 9.83333 7.33333 10.2067 7.33333 10.6667C7.33333 11.1267 6.96 11.5 6.5 11.5C6.04 11.5 5.66667 11.1267 5.66667 10.6667C5.66667 10.2067 6.04 9.83333 6.5 9.83333ZM17.75 8.16667C18.44 8.16667 19 8.72667 19 9.41667C19 10.1067 18.44 10.6667 17.75 10.6667C17.06 10.6667 16.5 10.1067 16.5 9.41667C16.5 8.72667 17.06 8.16667 17.75 8.16667ZM5.25 6.5C5.94 6.5 6.5 7.06 6.5 7.75C6.5 8.44 5.94 9 5.25 9C4.56 9 4 8.44 4 7.75C4 7.06 4.56 6.5 5.25 6.5ZM10.25 4.83333C10.94 4.83333 11.5 5.39333 11.5 6.08333C11.5 6.77333 10.94 7.33333 10.25 7.33333C9.56 7.33333 9 6.77333 9 6.08333C9 5.39333 9.56 4.83333 10.25 4.83333ZM7.33333 4C7.79333 4 8.16667 4.37333 8.16667 4.83333C8.16667 5.29333 7.79333 5.66667 7.33333 5.66667C6.87333 5.66667 6.5 5.29333 6.5 4.83333C6.5 4.37333 6.87333 4 7.33333 4Z" fill="#2E3A59"/></svg>';
+App.Modules.Tools.Icons.ExecuteIcon =               '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 5H6C4.897 5 4 5.897 4 7V21C4 22.103 4.897 23 6 23H22C23.103 23 24 22.103 24 21V7C24 5.897 23.103 5 22 5ZM6 21V9H22L22.002 21H6Z" fill="#2E3A59"/><path d="M11.293 11.293L7.586 15L11.293 18.707L12.707 17.293L10.414 15L12.707 12.707L11.293 11.293ZM16.707 11.293L15.293 12.707L17.586 15L15.293 17.293L16.707 18.707L20.414 15L16.707 11.293Z" fill="#2E3A59"/></svg>';
+App.Modules.Tools.Icons.BackupIcon =                '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.99 18.74L6.62 13.01L5 14.27L14 21.27L23 14.27L21.37 13L13.99 18.74Z" fill="#2E3A59"/><path d="M13.99 23.01L6.62 17.28L5 18.54L14 25.54L23 18.54L21.37 17.27L13.99 23.01Z" fill="#2E3A59"/><path d="M14 17L21.36 11.27L23 10L14 3L5 10L6.63 11.27L14 17Z" fill="#2E3A59"/></svg>';
+
 App.Modules.Tools.Icons.SettingsRootIcon =          '<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256"><path id="folders" fill="#ff9c00" d="M61,64H168.629c0.221,0,1.656-11,7.371-11h48c8.046,0,9,11,9,11l-2,14s-19.785,99.622-24,120H48c-3.62-15.63-16.985-67.57-26-105H181c4.976,21.1,19,77,19,77s9.863-92,9.385-92H61V64Z"/></svg>';
 
 App.Modules.Tools.Icons.ContextMenuIntegerIcon =    '<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.78907 6.00294H19.1918C19.8201 6.00294 20.4065 5.95282 20.7303 6.26662C21.0562 6.58234 20.9916 7.27532 20.9916 7.94177V15.1542C20.9916 15.6321 21.0466 16.2327 20.8755 16.5347C20.7607 16.7374 20.5471 16.9156 20.3094 16.9845C19.2015 16.9896 18.0936 16.9948 16.9856 17H5.38864C4.16472 16.9949 2.94067 16.9897 1.7165 16.9845C1.43774 16.9034 1.19593 16.6794 1.09238 16.4106C0.92679 15.9806 1.03433 14.5486 1.03433 13.9444V8.68628C1.03433 7.87838 0.888008 6.66037 1.29559 6.26662C1.43709 6.12992 1.60053 6.0991 1.78907 6.00294ZM2.86314 7.5V15.5H19.1628V7.5H2.86314Z" fill="white"/><path d="M10.4104 13.9001H8V13.4101H8.89641V10.1928H8V9.75435C8.33865 9.75435 8.58765 9.70815 8.74701 9.61573C8.90859 9.52117 8.99934 9.34386 9.01926 9.08382H9.53386V13.4101H10.4104V13.9001Z" fill="white"/><path d="M14.3745 13.9001H11.3234V13.2263C11.5425 13.0243 11.7494 12.8309 11.9442 12.646C12.139 12.4612 12.3293 12.2689 12.5153 12.069C12.8915 11.6671 13.1483 11.3458 13.2855 11.1051C13.4228 10.8622 13.4914 10.6119 13.4914 10.354C13.4914 10.2207 13.4692 10.1036 13.425 10.0026C13.3829 9.90157 13.3243 9.81775 13.249 9.75113C13.1715 9.68665 13.0819 9.6383 12.9801 9.60606C12.8783 9.57382 12.7665 9.5577 12.6448 9.5577C12.5274 9.5577 12.4079 9.57275 12.2862 9.60284C12.1667 9.63078 12.0516 9.66624 11.9409 9.70922C11.8479 9.74576 11.7583 9.78981 11.672 9.84139C11.5857 9.89297 11.5159 9.93703 11.4628 9.97357H11.4263V9.29014C11.5635 9.22351 11.7539 9.15904 11.9973 9.09671C12.243 9.03224 12.4754 9 12.6946 9C13.1549 9 13.5157 9.11928 13.7769 9.35783C14.0381 9.59424 14.1687 9.91554 14.1687 10.3217C14.1687 10.5087 14.1454 10.6817 14.0989 10.8407C14.0547 10.9998 13.9927 11.147 13.913 11.2824C13.8311 11.4221 13.7326 11.5607 13.6175 11.6983C13.5024 11.8358 13.3807 11.9712 13.2523 12.1044C13.0443 12.3237 12.8119 12.5515 12.5551 12.7879C12.3006 13.0243 12.0969 13.2113 11.9442 13.3488H14.3745V13.9001Z" fill="white"/><path d="M16.3699 9.5577C16.2503 9.5577 16.1308 9.57167 16.0113 9.59961C15.8918 9.62755 15.7745 9.66409 15.6594 9.70922C15.5531 9.7522 15.4602 9.79734 15.3805 9.84462C15.303 9.8919 15.2333 9.93596 15.1713 9.97679H15.1315V9.29658C15.2753 9.22136 15.4701 9.15366 15.7158 9.09349C15.9637 9.03116 16.1994 9 16.423 9C16.6465 9 16.8413 9.02257 17.0073 9.0677C17.1755 9.11068 17.3271 9.17838 17.4622 9.27079C17.6082 9.37395 17.7178 9.4986 17.7908 9.64475C17.8661 9.79089 17.9037 9.96175 17.9037 10.1573C17.9037 10.4217 17.8141 10.6538 17.6348 10.8536C17.4555 11.0535 17.2408 11.1803 16.9907 11.234V11.2792C17.0947 11.2985 17.2054 11.3318 17.3227 11.3791C17.4422 11.4264 17.5529 11.4962 17.6547 11.5887C17.7565 11.6811 17.8395 11.8003 17.9037 11.9465C17.9679 12.0905 18 12.2667 18 12.4752C18 12.6922 17.9613 12.8921 17.8838 13.0748C17.8085 13.2553 17.7012 13.4154 17.5618 13.5551C17.4179 13.7013 17.2441 13.8119 17.0405 13.8872C16.8369 13.9624 16.6056 14 16.3466 14C16.0987 14 15.853 13.971 15.6096 13.913C15.3661 13.8549 15.1614 13.7851 14.9954 13.7034V13.0232H15.0418C15.1813 13.1221 15.3683 13.2166 15.6029 13.3069C15.8375 13.3972 16.0722 13.4423 16.3068 13.4423C16.4418 13.4423 16.5768 13.4219 16.7118 13.381C16.849 13.3381 16.963 13.2693 17.0538 13.1747C17.1423 13.0802 17.2098 12.9759 17.2563 12.862C17.3028 12.7481 17.326 12.6041 17.326 12.43C17.326 12.256 17.2995 12.113 17.2463 12.0013C17.1954 11.8895 17.1235 11.8014 17.0305 11.7369C16.9376 11.6725 16.8269 11.6284 16.6985 11.6048C16.5724 11.579 16.4351 11.5661 16.2869 11.5661H16.0046V11.0309H16.2238C16.5226 11.0309 16.7649 10.9622 16.9509 10.8246C17.139 10.6871 17.2331 10.4872 17.2331 10.225C17.2331 10.1047 17.2087 10.0015 17.16 9.91554C17.1113 9.82742 17.0494 9.75758 16.9741 9.706C16.89 9.65012 16.797 9.61143 16.6952 9.58994C16.5934 9.56845 16.4849 9.5577 16.3699 9.5577Z" fill="white"/></svg>';
