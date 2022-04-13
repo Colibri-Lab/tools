@@ -17,7 +17,9 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
         this._notices.AddHandler('NodeEditCompleted', (event, args) => this.__noticesNodeEditCompleted(event, args));
 
         this._save.AddHandler('Clicked', (event, args) => this.__saveClicked(event, args));
+        
     }
+
 
     __noticesSelectionChanged(event, args) {
 
@@ -32,8 +34,6 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
         if(notice?.new) {
             return false;
         }
-
-
 
         this._title.value = notice.name + ' (' + (notice.subject ? notice.subject : 'Без темы') + ')';
         this._form.fields = {

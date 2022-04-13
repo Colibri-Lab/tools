@@ -2,6 +2,8 @@ App.Modules.Tools.NoticesTree = class extends Colibri.UI.Tree {
     
     constructor(name, container) {
         super(name, container);
+
+        this.RegisterEvent('NodesLoaded', false, 'Когда все узлы загружены');
     }
 
 
@@ -19,7 +21,7 @@ App.Modules.Tools.NoticesTree = class extends Colibri.UI.Tree {
             this.nodes.Clear();
         }
         let found = [];
-        data.forEach((notice) => {
+        for(const notice of data) {
 
             let newNode = this.FindNode('notice' + notice.id);
             if(!newNode) {
@@ -32,10 +34,13 @@ App.Modules.Tools.NoticesTree = class extends Colibri.UI.Tree {
 
             found.push('notice' + notice.id);
 
-            this._removeUnexistent(found);
 
 
-        });
+        }
+
+        this._removeUnexistent(found);
+
+        this.Dispatch('NodesLoaded');
 
     }
 
