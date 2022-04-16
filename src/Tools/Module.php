@@ -52,7 +52,7 @@ class Module extends BaseModule
                 ->Add([
                     Item::Create('settings', 'Настройки', 'Настройки сайта<br />Здесь можно отредактировать некоторые настройки, предварительно созданные менеджером в менеджере настроек', 'App.Modules.Tools.Icons.SettingsIcon', 'App.Modules.Tools.SettingsDataPage'),
                     Item::Create('disk', 'Файлы на диске', 'Файлы находящиеся на текущем сервере, на локальной машине. Можно добавить или удалить ненужные файлы. Внимание! При удалении файлов, нужно учесть, что некоторые строки в хранилищах могут ссылаться на них', 'App.Modules.Tools.Icons.FilesIcon', 'App.Modules.Tools.FilesPage'), 
-                    Item::Create('remote', 'Хранилище медиа', 'Удаленная библиотека файлов. Можно добавить корзины(bucket) и/или очистить их при необходимости', 'App.Modules.Tools.Icons.FilesIcon', 'App.Modules.Tools.RemoteFilesSettingsPage')
+                    Item::Create('remote', 'Хранилище медиа', 'Удаленная библиотека файлов. Можно добавить корзины(bucket) и/или очистить их при необходимости', 'App.Modules.Tools.Icons.RemoteFilesIcon', 'App.Modules.Tools.RemoteFilesSettingsPage')
                 ]),
             Item::Create('dev', 'Разработка', '', 'App.Modules.MainFrame.Icons.DevIcon', '')->Add([
                 Item::Create('manager', 'Настройки сайта', 'Менеджер настроек. Можно создать настройку, которую в дальнейшем использовать при разработке или выводе информации на проекте', 'App.Modules.Tools.Icons.SettingsIcon', 'App.Modules.Tools.SettingsManagerPage'),
