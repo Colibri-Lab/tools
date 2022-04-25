@@ -24,24 +24,33 @@ use Colibri\Data\Storages\Fields\ValueField;
  */
 class Setting extends BaseModelDataRow {
 
-    const TypeDouble = 'double';
-    const TypeString = 'string';
     const TypeInteger = 'integer';
-    const TypeBlob = 'blob';
+
+    const TypeDouble = 'double';
+    const TypeText = 'text';
+    const TypeTextArea = 'textarea';
+    const TypeHtml = 'html';
+    const TypeCode = 'htmlcode';
+    const TypeFile = 'file';
+    const TypeFiles = 'files';
 
     public function getPropertyValue(): mixed
     {
-        $value = $this->_data['value'];
+        $value = $this->_data['settings_value'];
         switch($this->type) {
-            case Setting::TypeBlob:
-            case Setting::TypeString:
+            default:
+            case Setting::TypeFile:
+            case Setting::TypeFiles:
+            case Setting::TypeText:
+            case Setting::TypeHtml:
+            case Setting::TypeCode:
+            case Setting::TypeTextArea:
                 return $value;
             case Setting::TypeInteger:
                 return (int)$value;
             case Setting::TypeDouble:
                 return (float)$value;
         }
-        return null;
     }
 
 }
