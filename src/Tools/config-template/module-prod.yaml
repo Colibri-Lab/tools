@@ -1,0 +1,41 @@
+smtp:
+  enabled: true
+  host: "smtp.yandex.ru"
+  port: 465
+  secure: 'ssl'
+  user: 'connect@buhsoft.ru'
+  password: 'KtUdNYHkjkt56pA'
+  from: 'connect@buhsoft.ru'
+  fromname: 'БухСофт'
+  
+databases:
+
+  access-points: 
+
+    drivers:
+      mysql:
+        connection: Colibri\Data\MySql\Connection
+        command: Colibri\Data\MySql\Command
+        reader: Colibri\Data\MySql\DataReader
+        querybuilder: Colibri\Data\MySql\QueryBuilder
+
+    connections:
+      tools:
+        # драйвер, который существует в секции access-points.drivers
+        type: mysql
+        # адрес подключения
+        host: localhost
+        # порт подключения
+        port: 3306
+        # пользователь
+        user: web
+        # пароль
+        password: vault(vault.repeatme.online:828fff9ce3d3b45e6042529a1de75107:prod_db_password)
+
+    points:
+      tools: 
+        connection: tools
+        database: gate
+
+  storages: include(tools-storages.yaml)
+      
