@@ -35,19 +35,19 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
             return false;
         }
 
-        this._title.value = notice.name + ' (' + (notice.subject ? notice.subject : 'Без темы') + ')';
+        this._title.value = notice.name + ' (' + (notice.subject ? notice.subject : '#{tools-notices-fields-nodesc;Без темы}') + ')';
         this._form.fields = {
             name: {
                 type: 'varchar',
                 component: 'Text',
-                desc: 'Наименование',
-                note: 'Введите наименование темы. Латинские буквы без спец-символов'
+                desc: '#{tools-notices-fields-desc;Наименование}',
+                note: '#{tools-notices-fields-desc-note;Введите наименование темы. Латинские буквы без спец-символов}'
             },
             subject: {
                 type: 'varchar',
                 component: 'Text',
-                desc: 'Тема письма',
-                note: 'Введите тему письма'
+                desc: '#{tools-notices-fields-subject;Тема письма}',
+                note: '#{tools-notices-fields-subject-note;Введите тему письма}'
             },
             body: {
                 type: 'varchar',
@@ -55,8 +55,8 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
                 params: {
                     visual: true
                 },
-                desc: 'Тело письма',
-                note: 'Введите тело письма. Допускаются вставки вида [[name]] в качестве переменных шаблона'
+                desc: '#{tools-notices-fields-body;Тело письма}',
+                note: '#{tools-notices-fields-body-note;Введите тело письма. Допускаются вставки вида [[name]] в качестве переменных шаблона}'
             }
         }
         
@@ -88,14 +88,14 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
 
         const itemData = args.item?.tag;
         if(!itemData) {
-            contextmenu.push({name: 'new-notice', title: 'Создать шаблон', icon: Colibri.UI.ContextMenuAddIcon});
+            contextmenu.push({name: 'new-notice', title: '#{tools-notices-contextmenu-newnotice;Создать шаблон}', icon: Colibri.UI.ContextMenuAddIcon});
             this._notices.contextmenu = contextmenu;
             this._notices.ShowContextMenu(args.isContextMenuEvent ? 'right bottom' : 'left top', '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);
         }
         else {
-            contextmenu.push({name: 'remove-notice', title: 'Удалить шаблон', icon: Colibri.UI.ContextMenuRemoveIcon});
+            contextmenu.push({name: 'remove-notice', title: '#{tools-notices-contextmenu-deletenotice;Удалить шаблон}', icon: Colibri.UI.ContextMenuRemoveIcon});
             args.item.contextmenu = contextmenu;
-            args.item.ShowContextMenu(args.isContextMenuEvent ? 'right bottom' : 'left bottom', '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);
+            args.item.ShowContextMenu(args.isContextMenuEvent ? [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.RB] : [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.LB], '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);
         }
 
     }

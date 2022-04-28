@@ -24,7 +24,7 @@ App.Modules.Tools.SettingsTree = class extends Colibri.UI.Tree {
         if(!rootNode) {
             rootNode = this.nodes.Add('root');
         }
-        rootNode.text = 'Настройки сайта';
+        rootNode.text = '#{tools-settings-tree-root;Настройки сайта}';
         rootNode.isLeaf = false;
         rootNode.icon = App.Modules.Tools.Icons.SettingsRootIcon;
         rootNode.tag = null;

@@ -85,13 +85,13 @@ App.Modules.Tools.SettingsDataPage = class extends Colibri.UI.Component
             
         }
 
-        this._title.value = setting.name + ' (' + (setting.desc ? setting.desc : 'Без описания') + ')';
+        this._title.value = setting.name + ' (' + (setting.desc ? setting.desc : '#{tools-settingsdata-title-nodesc;Без описания}') + ')';
         this._form.fields = {
             value: {
                 type: 'varchar',
                 component: component,
                 params: params,
-                desc: 'Значение'
+                desc: '#{tools-settingsdata-value-title;Значение}'
             }
         }
         

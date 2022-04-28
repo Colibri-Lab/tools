@@ -32,9 +32,9 @@ App.Modules.Tools.SettingsManagerPage = class extends Colibri.UI.Component
         }
         else {
             let contextmenu = [];
-            contextmenu.push({name: 'remove-setting', title: 'Удалить настройку', icon: Colibri.UI.ContextMenuRemoveIcon});
+            contextmenu.push({name: 'remove-setting', title: '#{tools-settings-contextmenu-delete;Удалить настройку}', icon: Colibri.UI.ContextMenuRemoveIcon});
             args.item.contextmenu = contextmenu;
-            args.item.ShowContextMenu(args.isContextMenuEvent ? 'right bottom' : 'left bottom', '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);
+            args.item.ShowContextMenu(args.isContextMenuEvent ? [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.RB] : [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.LB], '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);
         }
 
         
@@ -170,13 +170,13 @@ App.Modules.Tools.SettingsManagerPage = class extends Colibri.UI.Component
                 type: 'varchar',
                 component: 'Text',
                 default: '',
-                desc: 'Описание настройки'
+                desc: '#{tools-settings-description-title;Описание настройки}'
             },
             value: {
                 type: 'varchar',
                 component: component,
                 params: params,
-                desc: 'Значение'
+                desc: '#{tools-settings-value-title;Значение}'
             }
         }
 
