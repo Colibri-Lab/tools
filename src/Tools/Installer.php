@@ -87,7 +87,7 @@ class Installer
   - name: Tools
     entry: \Tools\Module
     enabled: true
-    desc: Утилиты
+    desc: Инструменты
     visible: true
     for:
       - manage
