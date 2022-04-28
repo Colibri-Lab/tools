@@ -87,6 +87,10 @@ class Installer
   - name: Tools
     entry: \Tools\Module
     enabled: true
+    desc: Утилиты
+    visible: true
+    for:
+      - manage
     config: include(/config/tools.yaml)';
         file_put_contents($modulesTargetPath, $modulesConfigContent);
 
