@@ -42,7 +42,7 @@ class Installer
             'desc' => 'Инструменты',
             'enabled' => true,
             'visible' => false,
-            'for' => ['manage'],
+            'for' => [],
             'config' => 'include(/config/tools.yaml)'
         ];
 
