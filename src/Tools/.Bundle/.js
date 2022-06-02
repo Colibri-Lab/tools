@@ -10,6 +10,7 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
     
 
     InitializeModule() {
+        super.InitializeModule();
 
         this._pages = {};
         
