@@ -88,9 +88,9 @@ class Settings extends BaseModelDataTable {
      * @param int $pagesize размер страницы
      * @return Settings 
      */
-    static function LoadAll(int $page = -1, int $pagesize = 20) : Settings
+    static function LoadAll(int $page = -1, int $pagesize = 20, bool $calculateAffected = false) : Settings
     {
-        return self::LoadByFilter($page, $pagesize, null, null);
+        return self::LoadByFilter($page, $pagesize, null, null, [], false);
     }
 
     /**
@@ -100,7 +100,7 @@ class Settings extends BaseModelDataTable {
      */
     static function LoadById(int $id) : Setting|null 
     {
-        $table = self::LoadByFilter(1, 1, '{id}=[[id:integer]]', null, ['id' => $id]);
+        $table = self::LoadByFilter(1, 1, '{id}=[[id:integer]]', null, ['id' => $id], false);
         return $table->Count() > 0 ? $table->First() : null;
     }
 
@@ -111,7 +111,7 @@ class Settings extends BaseModelDataTable {
      */
     static function LoadByName(string $name) : Setting|null 
     {
-        $table = self::LoadByFilter(1, 1, '{name}=[[name:integer]]', null, ['name' => $name]);
+        $table = self::LoadByFilter(1, 1, '{name}=[[name:integer]]', null, ['name' => $name], false);
         return $table->Count() > 0 ? $table->First() : null;
     }
 
@@ -126,7 +126,7 @@ class Settings extends BaseModelDataTable {
         if($name) {
             $setting->name = $name;
         }
-        if($type && in_array($type, [Setting::TypeBlob, Setting::TypeDouble, Setting::TypeInteger, Setting::TypeString])) {
+        if($type) {
             $setting->type = $type;
         }
         if($value) {

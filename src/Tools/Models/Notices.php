@@ -69,9 +69,9 @@ class Notices extends BaseModelDataTable {
      * @param int $pagesize размер страницы
      * @return Notices 
      */
-    static function LoadAll(int $page = -1, int $pagesize = 20) : Notices
+    static function LoadAll(int $page = -1, int $pagesize = 20, bool $calculateAffected = false) : Notices
     {
-        return self::LoadByFilter($page, $pagesize, null, null);
+        return self::LoadByFilter($page, $pagesize, null, null, [], $calculateAffected);
     }
 
     /**
@@ -81,7 +81,7 @@ class Notices extends BaseModelDataTable {
      */
     static function LoadById(int $id) : Notice|null 
     {
-        $table = self::LoadByFilter(1, 1, '{id}=[[id:integer]]', null, ['id' => $id]);
+        $table = self::LoadByFilter(1, 1, '{id}=[[id:integer]]', null, ['id' => $id], false);
         return $table->Count() > 0 ? $table->First() : null;
     }
 
@@ -92,7 +92,7 @@ class Notices extends BaseModelDataTable {
      */
     static function LoadByName(string $name) : Notice|null 
     {
-        $table = self::LoadByFilter(1, 1, '{name}=[[name:integer]]', null, ['name' => $name]);
+        $table = self::LoadByFilter(1, 1, '{name}=[[name:integer]]', null, ['name' => $name], false);
         return $table->Count() > 0 ? $table->First() : null;
     }
 
@@ -102,7 +102,7 @@ class Notices extends BaseModelDataTable {
      */
     static function LoadEmpty() : Notice
     {
-        $reports = self::LoadByFilter(-1, 20, 'false');
+        $reports = self::LoadByFilter(-1, 20, 'false', null, [], false);
         return $reports->CreateEmptyRow();
     }
 
