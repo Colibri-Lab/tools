@@ -70,9 +70,7 @@ class Settings extends BaseModelDataTable {
     {
         $storage = Storages::Create()->Load('settings');
         $additionalParams = ['page' => $page, 'pagesize' => $pagesize, 'params' => $params];
-        if(!$calculateAffected) {
-            $additionalParams['type'] = DataAccessPoint::QueryTypeBigData;
-        }
+        $additionalParams['type'] = $calculateAffected ? DataAccessPoint::QueryTypeReader : DataAccessPoint::QueryTypeBigData;
         return self::LoadByQuery(
             $storage,
             'select * from ' . $storage->name . 
