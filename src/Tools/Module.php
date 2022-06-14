@@ -48,20 +48,20 @@ class Module extends BaseModule
     public function GetTopmostMenu(): Item|array|null {
 
         return [
-            Item::Create('struct', 'Структура', '', 'App.Modules.MainFrame.Icons.StructureIcon', '')
+            Item::Create('struct', '#{mainframe-menu-struct;Структура}', '', 'App.Modules.MainFrame.Icons.StructureIcon', '')
                 ->Add([
-                    Item::Create('settings', 'Настройки', 'Настройки сайта<br />Здесь можно отредактировать некоторые настройки, предварительно созданные менеджером в менеджере настроек', 'App.Modules.Tools.Icons.SettingsIcon', 'App.Modules.Tools.SettingsDataPage'),
-                    Item::Create('disk', 'Файлы на диске', 'Файлы находящиеся на текущем сервере, на локальной машине. Можно добавить или удалить ненужные файлы. Внимание! При удалении файлов, нужно учесть, что некоторые строки в хранилищах могут ссылаться на них', 'App.Modules.Tools.Icons.FilesIcon', 'App.Modules.Tools.FilesPage'), 
-                    Item::Create('remote', 'Хранилище медиа', 'Удаленная библиотека файлов. Можно добавить корзины(bucket) и/или очистить их при необходимости', 'App.Modules.Tools.Icons.RemoteFilesIcon', 'App.Modules.Tools.RemoteFilesSettingsPage')
+                    Item::Create('settings', '#{tools-menu-settings-data;Настройки}', '#{tools-menu-settings-data-desc;Настройки сайта<br />Здесь можно отредактировать некоторые настройки, предварительно созданные менеджером в менеджере настроек}', 'App.Modules.Tools.Icons.SettingsIcon', 'App.Modules.Tools.SettingsDataPage'),
+                    Item::Create('disk', '#{tools-menu-filesondisk;Файлы на диске}', '#{tools-menu-filesondisk-desc;Файлы находящиеся на текущем сервере, на локальной машине. Можно добавить или удалить ненужные файлы. Внимание! При удалении файлов, нужно учесть, что некоторые строки в хранилищах могут ссылаться на них}', 'App.Modules.Tools.Icons.FilesIcon', 'App.Modules.Tools.FilesPage'), 
+                    Item::Create('remote', '#{tools-menu-filesremote;Хранилище медиа}', '#{tools-menu-filesremote-desc;Удаленная библиотека файлов. Можно добавить корзины(bucket) и/или очистить их при необходимости}', 'App.Modules.Tools.Icons.RemoteFilesIcon', 'App.Modules.Tools.RemoteFilesSettingsPage')
                 ]),
-            Item::Create('dev', 'Разработка', '', 'App.Modules.MainFrame.Icons.DevIcon', '')->Add([
-                Item::Create('manager', 'Настройки сайта', 'Менеджер настроек. Можно создать настройку, которую в дальнейшем использовать при разработке или выводе информации на проекте', 'App.Modules.Tools.Icons.SettingsIcon', 'App.Modules.Tools.SettingsManagerPage'),
-                Item::Create('notices', 'Шаблоны сообщений', 'Создайте шаблоны сообщений для общения с пользователем посредством электронной почты', 'App.Modules.Tools.Icons.NoticesIcon', 'App.Modules.Tools.NoticesPage'),
+            Item::Create('dev', '#{mainframe-menu-dev;Разработка}', '', 'App.Modules.MainFrame.Icons.DevIcon', '')->Add([
+                Item::Create('manager', '#{tools-menu-settings;Настройки сайта}', '#{tools-menu-settings-desc;Менеджер настроек. Можно создать настройку, которую в дальнейшем использовать при разработке или выводе информации на проекте}', 'App.Modules.Tools.Icons.SettingsIcon', 'App.Modules.Tools.SettingsManagerPage'),
+                Item::Create('notices', '#{tools-menu-notices;Шаблоны сообщений}', '#{tools-menu-notices-desc;Создайте шаблоны сообщений для общения с пользователем посредством электронной почты}', 'App.Modules.Tools.Icons.NoticesIcon', 'App.Modules.Tools.NoticesPage'),
             ]),
-            Item::Create('more', 'Инструменты', '', 'App.Modules.MainFrame.Icons.MoreIcon', '')->Add([
-                Item::Create('backup', 'Слепки системы', 'Создайте точку восстановления на случай критических ситуаций. В дальнейшем можно будет вернуть данные из полученного файла', 'App.Modules.Tools.Icons.BackupIcon', 'App.Modules.Tools.BackupPage'),
-                Item::Create('execute', 'Выполнить', 'Выполнить код (PHP). Внимание! Код исполняется в окружении всего проекта, возможны необратимые повреждения!', 'App.Modules.Tools.Icons.ExecuteIcon', 'App.Modules.Tools.ExecutePHPPage'),
-                Item::Create('themes', 'Темы сайта', 'Настройте внешний вид сайта. Можно создать новую тему, или отредактировать существующую', 'App.Modules.Tools.Icons.ThemesIcon', 'App.Modules.Tools.ThemesPage'),
+            Item::Create('more', '#{mainframe-menu-more;Инструменты}', '', 'App.Modules.MainFrame.Icons.MoreIcon', '')->Add([
+                Item::Create('backup', '#{tools-menu-backups;Слепки системы}', '#{tools-menu-backups-desc;Создайте точку восстановления на случай критических ситуаций. В дальнейшем можно будет вернуть данные из полученного файла}', 'App.Modules.Tools.Icons.BackupIcon', 'App.Modules.Tools.BackupPage'),
+                Item::Create('execute', '#{tools-menu-execute;Выполнить}', '#{tools-menu-execute-desc;Выполнить код (PHP). Внимание! Код исполняется в окружении всего проекта, возможны необратимые повреждения!}', 'App.Modules.Tools.Icons.ExecuteIcon', 'App.Modules.Tools.ExecutePHPPage'),
+                Item::Create('themes', '#{tools-menu-themes;Темы сайта}', '#{tools-menu-themes-desc;Настройте внешний вид сайта. Можно создать новую тему, или отредактировать существующую}', 'App.Modules.Tools.Icons.ThemesIcon', 'App.Modules.Tools.ThemesPage'),
             ])
         ];
 

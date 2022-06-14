@@ -1,0 +1,189 @@
+---
+tools-settings-tree-root:
+  ru: Настройки сайта
+  en: Site Settings
+  hy: Կայքի կարգավորումները
+tools-settings-settings-title:
+  ru: Настройки
+  en: Settings
+  hy: Կարգավորումներ
+tools-settings-data-title:
+  ru: Редактор
+  en: Editor
+  hy: Խմբագիր
+tools-settings-buttons-save:
+  ru: Сохранить
+  en: Save
+  hy: Պահպանել
+tools-settings-contextmenu-delete:
+  ru: Удалить настройку
+  en: Delete a setting
+  hy: Ջնջել կարգավորումը
+tools-settings-description-title:
+  ru: Описание настройки
+  en: Description of the setting
+  hy: Customization Նկարագրություն
+tools-settings-value-title:
+  ru: Значение
+  en: Meaning
+  hy: Արժեք
+tools-settingsdata-settings-title:
+  ru: Настройки
+  en: Settings
+  hy: Կարգավորումներ
+tools-settingsdata-data-title:
+  ru: Редактор
+  en: Editor
+  hy: Խմբագիր
+tools-settingsdata-buttons-save:
+  ru: Сохранить
+  en: Save
+  hy: Պահպանել
+tools-settingsdata-title-nodesc:
+  ru: Без описания
+  en: Without description
+  hy: Առանց նկարագրության
+tools-settingsdata-value-title:
+  ru: Значение
+  en: Meaning
+  hy: Արժեք
+tools-notices-notices-title:
+  ru: Сообщения
+  en: Messages
+  hy: Գրառումներ
+tools-notices-date-title:
+  ru: Редактор
+  en: Editor
+  hy: Խմբագիր
+tools-notices-buttons-save:
+  ru: Сохранить
+  en: Save
+  hy: Պահպանել
+tools-notices-fields-nodesc:
+  ru: Без темы
+  en: Without a topic
+  hy: Առանց թեմայի
+tools-notices-fields-desc:
+  ru: Наименование
+  en: Name
+  hy: Անվանում
+tools-notices-fields-desc-note:
+  ru: Введите наименование темы. Латинские буквы без спец-символов
+  en: Enter the name of the topic. Latin letters without special characters
+  hy: 'Մուտքագրեք թեմայի անվանումը: Լատինական տառեր առանց հատուկ նիշերի'
+tools-notices-fields-subject:
+  ru: Тема письма
+  en: Subject of the letter
+  hy: Նամակի թեման
+tools-notices-fields-subject-note:
+  ru: Введите тему письма
+  en: Enter the subject of the email
+  hy: Մուտքագրեք նամակի թեման
+tools-notices-fields-body:
+  ru: Тело письма
+  en: The body of the letter
+  hy: Նամակի մարմինը
+tools-notices-fields-body-note:
+  ru: Введите тело письма. Допускаются вставки вида [[name]] в качестве переменных
+    шаблона
+  en: Enter the body of the email. Inserts of the form [[name]] as template variables
+    are allowed
+  hy: 'Մուտքագրեք նամակի մարմինը: Թույլատրվում է տեղադրել տեսակի [[name]] որպես Կաղապար
+    փոփոխականների'
+tools-notices-contextmenu-newnotice:
+  ru: Создать шаблон
+  en: Create a template
+  hy: Ստեղծել ձեւանմուշ
+tools-notices-contextmenu-deletenotice:
+  ru: Удалить шаблон
+  en: Delete a template
+  hy: Հեռացնել Կաղապար
+tools-menu-settings-data:
+  hy: Կարգավորումներ
+  ru: Настройки
+  en: Settings
+tools-menu-settings-data-desc:
+  hy: Կայքի կարգավորումները < br />Այստեղ կարող եք խմբագրել որոշ կարգավորումներ, որոնք
+    նախապես ստեղծվել են մենեջերի կողմից կարգավորումների մենեջերում
+  ru: Настройки сайта<br />Здесь можно отредактировать некоторые настройки, предварительно
+    созданные менеджером в менеджере настроек
+  en: Site Settings<br />Here you can edit some settings previously created by the
+    manager in the settings manager
+tools-menu-filesondisk:
+  hy: Ֆայլեր սկավառակի վրա
+  ru: Файлы на диске
+  en: Files on disk
+tools-menu-filesondisk-desc:
+  hy: 'Ֆայլերը գտնվում են ընթացիկ սերվերի վրա, տեղական մեքենայի վրա: Դուք կարող եք
+    ավելացնել կամ ջնջել անցանկալի ֆայլեր. Ուշադրություն! Երբ դուք հեռացնել ֆայլերը,
+    դուք պետք է հաշվի առնել, որ որոշ տողերի պահեստներում կարող է հղում նրանց'
+  ru: Файлы находящиеся на текущем сервере, на локальной машине. Можно добавить или
+    удалить ненужные файлы. Внимание! При удалении файлов, нужно учесть, что некоторые
+    строки в хранилищах могут ссылаться на них
+  en: Files located on the current server, on the local machine. You can add or delete
+    unnecessary files. Attention! When deleting files, you need to take into account
+    that some lines in the repositories may refer to them
+tools-menu-filesremote:
+  hy: Մեդիա շտեմարան
+  ru: Хранилище медиа
+  en: Media Storage
+tools-menu-filesremote-desc:
+  hy: Հեռավոր ֆայլի գրադարան. Դուք կարող եք ավելացնել զամբյուղներ (bucket) եւ/կամ
+    մաքրել դրանք անհրաժեշտության դեպքում
+  ru: Удаленная библиотека файлов. Можно добавить корзины(bucket) и/или очистить их
+    при необходимости
+  en: Remote file library. You can add buckets and/or empty them if necessary
+tools-menu-settings:
+  hy: Կայքի կարգավորումները
+  ru: Настройки сайта
+  en: Site Settings
+tools-menu-settings-desc:
+  hy: Կարգավորումների մենեջեր. Դուք կարող եք ստեղծել մի կարգավորում, որը հետագայում
+    օգտագործվում է նախագծման կամ դուրսբերման տեղեկատվության վրա նախագծի
+  ru: Менеджер настроек. Можно создать настройку, которую в дальнейшем использовать
+    при разработке или выводе информации на проекте
+  en: Settings manager. You can create a setting that can be used later in the development
+    or output of information on the project
+tools-menu-notices:
+  hy: Հաղորդագրությունների կաղապարներ
+  ru: Шаблоны сообщений
+  en: Message Templates
+tools-menu-notices-desc:
+  hy: Ստեղծել հաղորդագրությունների կաղապարներ, էլեկտրոնային փոստի միջոցով օգտագործողի
+    հետ հաղորդակցվելու համար
+  ru: Создайте шаблоны сообщений для общения с пользователем посредством электронной
+    почты
+  en: Create message templates for communicating with the user via email
+tools-menu-backups:
+  hy: Կույր համակարգ
+  ru: Слепки системы
+  en: Casts of the system
+tools-menu-backups-desc:
+  hy: 'Ստեղծեք վերականգնման կետ կրիտիկական իրավիճակների դեպքում: Հետագայում հնարավոր
+    կլինի տվյալները վերադարձնել ստացված ֆայլից'
+  ru: Создайте точку восстановления на случай критических ситуаций. В дальнейшем можно
+    будет вернуть данные из полученного файла
+  en: Create a recovery point in case of critical situations. In the future, it will
+    be possible to return data from the received file
+tools-menu-execute:
+  hy: Կատարել
+  ru: Выполнить
+  en: To perform
+tools-menu-execute-desc:
+  hy: Կատարել կոդը (PHP). Ուշադրություն! Կոդը կատարվում է շրջապատված է ամբողջ նախագծի,
+    հնարավոր անդառնալի վնաս.
+  ru: Выполнить код (PHP). Внимание! Код исполняется в окружении всего проекта, возможны
+    необратимые повреждения!
+  en: Execute the code (PHP). Attention! The code is executed in the environment of
+    the entire project, irreversible damage is possible!
+tools-menu-themes:
+  hy: Կայքի թեմաներ
+  ru: Темы сайта
+  en: Site Themes
+tools-menu-themes-desc:
+  hy: Կարգավորել տեսքը կայքում. Դուք կարող եք ստեղծել նոր թեմա, կամ խմբագրել գոյություն
+    ունեցող
+  ru: Настройте внешний вид сайта. Можно создать новую тему, или отредактировать существующую
+  en: Customize the appearance of the site. You can create a new theme, or edit an
+    existing one
+...
