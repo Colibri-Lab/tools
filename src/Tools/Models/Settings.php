@@ -66,7 +66,7 @@ class Settings extends BaseModelDataTable {
      * @param array $params параметры к запросу
      * @return Settings
      */
-    static function LoadByFilter(int $page = -1, int $pagesize = 20, string $filter = null, string $order = null, array $params = [], bool $calculateAffected = true) : Settings
+    static function LoadByFilter(int $page = -1, int $pagesize = 20, string $filter = null, string $order = null, array $params = [], bool $calculateAffected = true) : ?Settings
     {
         $storage = Storages::Create()->Load('settings');
         $additionalParams = ['page' => $page, 'pagesize' => $pagesize, 'params' => $params];
@@ -86,7 +86,7 @@ class Settings extends BaseModelDataTable {
      * @param int $pagesize размер страницы
      * @return Settings 
      */
-    static function LoadAll(int $page = -1, int $pagesize = 20, bool $calculateAffected = false) : Settings
+    static function LoadAll(int $page = -1, int $pagesize = 20, bool $calculateAffected = false) : ?Settings
     {
         return self::LoadByFilter($page, $pagesize, null, null, [], false);
     }

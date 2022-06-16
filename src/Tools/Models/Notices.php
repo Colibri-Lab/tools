@@ -47,7 +47,7 @@ class Notices extends BaseModelDataTable {
      * @param array $params параметры к запросу
      * @return Notices
      */
-    static function LoadByFilter(int $page = -1, int $pagesize = 20, string $filter = null, string $order = null, array $params = [], bool $calculateAffected = true) : Notices
+    static function LoadByFilter(int $page = -1, int $pagesize = 20, string $filter = null, string $order = null, array $params = [], bool $calculateAffected = true) : ?Notices
     {
         $storage = Storages::Create()->Load('notices');
         $additionalParams = ['page' => $page, 'pagesize' => $pagesize, 'params' => $params];
@@ -67,7 +67,7 @@ class Notices extends BaseModelDataTable {
      * @param int $pagesize размер страницы
      * @return Notices 
      */
-    static function LoadAll(int $page = -1, int $pagesize = 20, bool $calculateAffected = false) : Notices
+    static function LoadAll(int $page = -1, int $pagesize = 20, bool $calculateAffected = false) : ?Notices
     {
         return self::LoadByFilter($page, $pagesize, null, null, [], $calculateAffected);
     }
