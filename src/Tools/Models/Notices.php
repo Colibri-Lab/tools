@@ -80,7 +80,7 @@ class Notices extends BaseModelDataTable {
     static function LoadById(int $id) : Notice|null 
     {
         $table = self::LoadByFilter(1, 1, '{id}=[[id:integer]]', null, ['id' => $id], false);
-        return $table->Count() > 0 ? $table->First() : null;
+        return $table && $table->Count() > 0 ? $table->First() : null;
     }
 
     /**
@@ -91,7 +91,7 @@ class Notices extends BaseModelDataTable {
     static function LoadByName(string $name) : Notice|null 
     {
         $table = self::LoadByFilter(1, 1, '{name}=[[name:integer]]', null, ['name' => $name], false);
-        return $table->Count() > 0 ? $table->First() : null;
+        return $table && $table->Count() > 0 ? $table->First() : null;
     }
 
     /**
@@ -100,8 +100,8 @@ class Notices extends BaseModelDataTable {
      */
     static function LoadEmpty() : Notice
     {
-        $reports = self::LoadByFilter(-1, 20, 'false', null, [], false);
-        return $reports->CreateEmptyRow();
+        $table = self::LoadByFilter(-1, 20, 'false', null, [], false);
+        return $table->CreateEmptyRow();
     }
 
     static function Send(string $recipient, Notice $notice): bool

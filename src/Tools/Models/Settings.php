@@ -99,7 +99,7 @@ class Settings extends BaseModelDataTable {
     static function LoadById(int $id) : Setting|null 
     {
         $table = self::LoadByFilter(1, 1, '{id}=[[id:integer]]', null, ['id' => $id], false);
-        return $table->Count() > 0 ? $table->First() : null;
+        return $table && $table->Count() > 0 ? $table->First() : null;
     }
 
     /**
@@ -110,7 +110,7 @@ class Settings extends BaseModelDataTable {
     static function LoadByName(string $name) : Setting|null 
     {
         $table = self::LoadByFilter(1, 1, '{name}=[[name:integer]]', null, ['name' => $name], false);
-        return $table->Count() > 0 ? $table->First() : null;
+        return $table && $table->Count() > 0 ? $table->First() : null;
     }
 
     /**
