@@ -186,4 +186,25 @@ tools-menu-themes-desc:
   ru: Настройте внешний вид сайта. Можно создать новую тему, или отредактировать существующую
   en: Customize the appearance of the site. You can create a new theme, or edit an
     existing one
+tools-backup-create:
+  ru: Создать слепок
+tools-backup-create-info:
+  ru: Нажмите на кнопку «создать слепок» и дождитесь окончания процесса. После завершения
+    в списке слепкой внизу этой страницы появится новый пункт отмеченный датой
+tools-backups-dataempty:
+  ru: Слепки не найдены
+tools-backups-points-name:
+  ru: Наименование
+tools-backups-points-created:
+  ru: Создана
+tools-backups-points-size:
+  ru: Размер файла
+tools-backups-create-title:
+  ru: Создание слепка системы
+tools-backups-points-title:
+  ru: Список созданных слепков/заданий
+tools-backups-points-status:
+  ru: Статус
+tools-backup-create-schedule:
+  ru: Создать/Изменить задание
 ...

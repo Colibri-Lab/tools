@@ -1,0 +1,24 @@
+.app-backup-page-component {
+
+    &.app-component-shown {
+        display: grid;
+    }
+    grid-template-rows: 150px calc(100% - 150px);
+
+    [data-object-name="info"] {
+        &.app-component-shown {
+            display: block;
+        }
+        font-size: 12px;
+        padding: 20px 0px 10px;
+    }
+
+    [data-object-name="progress"] {
+        margin: 10px 0px;
+    }
+
+    [data-object-name="create-schedule"] {
+        margin-left: 20px;
+    }
+
+}
