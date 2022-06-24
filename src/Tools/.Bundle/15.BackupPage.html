@@ -9,16 +9,25 @@
     </Pane>
     <Pane name="bottom" shown="true">
         <H2 shown="true">#{tools-backups-points-title;Список созданных слепков}</H2>
-        <Grid name="backups" shown="true" selectionMode="fullrow" showCheckboxes="true" hasContextMenu="true" emptyMessage="#{tools-backups-dataempty;Слепки не найдены}">
+        <App.Modules.Tools.BackupsGrid name="backups" shown="true" selectionMode="fullrow" showCheckboxes="true" hasContextMenu="true" binding="app.tools.backups" emptyMessage="#{tools-backups-dataempty;Слепки не найдены}">
             <component-header>
                 <component-columns>
-                    <Grid.Column name="status" shown="true" value="#{tools-backups-points-status;Статус}" width="15%" resizable="true" />
+                    <Grid.Column name="status" shown="true" value="#{tools-backups-points-status;Статус}" width="15%" resizable="true" viewer="Colibri.UI.SelectViewer" />
                     <Grid.Column name="name" shown="true" value="#{tools-backups-points-name;Наименование}" width="55%" resizable="true" />
-                    <Grid.Column name="datecreated" shown="true" value="#{tools-backups-points-created;Создана}" width="15%" resizable="true" viewer="Colibri.UI.DateTimeViewer" />
-                    <Grid.Column name="size" shown="true" value="#{tools-backups-points-size;Размер файла}" width="15%" resizable="false" viewer="Colibri.UI.FileSizeViewer" />
+                    <Grid.Column name="cron" shown="true" value="#{tools-backups-points-cron;Планировщик}" width="15%" resizable="true">
+                        <params>
+                            {
+                                render: (cell, row) => {
+                                    const cron = cell.value;
+                                    return cron.minute.title + ' ' + cron.hour.title + ' ' + cron.day.title + ' ' + cron.month.title + ' ' + cron.dayofweek.title;
+                                }
+                            }
+                        </params>
+                    </Grid.Column>
+                    <Grid.Column name="file" shown="true" value="#{tools-backups-points-size;Размер файла}" width="15%" resizable="false" />
                 </component-columns>
             </component-header>
-        </Grid>
+        </App.Modules.Tools.BackupsGrid>
     </Pane>
 
 

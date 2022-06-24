@@ -16,7 +16,8 @@ settings:
       class: string
       component: Text
       desc: Наименование настройки
-      note: Введите название настройки, которое будете использовать в дальнейшем. Латинские буквы, подчеркивание.
+      note: Введите название настройки, которое будете использовать в дальнейшем.
+        Латинские буквы, подчеркивание.
       attrs:
         width: 100%
     type:
@@ -26,31 +27,31 @@ settings:
       note: Выберите тип настройки
       component: Select
       default: text
-      values: 
-        - value: integer
-          title: Целое число
-          icon: Colibri.UI.FieldIcons['Number']
-        - value: double
-          title: Число с плавающей запятой
-          icon: Colibri.UI.FieldIcons['Number']
-        - value: text
-          title: Текст
-          icon: Colibri.UI.FieldIcons['Text']
-        - value: textarea
-          title: Большой текст
-          icon: Colibri.UI.FieldIcons['TextArea']
-        - value: html
-          title: Редактор HTML
-          icon: Colibri.UI.FieldIcons['App.Modules.Manage.UI.TinyMCETextArea']
-        - value: htmlcode
-          title: Kod HTML
-          icon: Colibri.UI.FieldIcons['App.Modules.Manage.UI.TinyMCETextArea']
-        - value: file
-          title: Файл
-          icon: Colibri.UI.FieldIcons['File']
-        - value: files
-          title: Файлы
-          icon: Colibri.UI.FieldIcons['Files']
+      values:
+      - value: integer
+        title: Целое число
+        icon: Colibri.UI.FieldIcons['Number']
+      - value: double
+        title: Число с плавающей запятой
+        icon: Colibri.UI.FieldIcons['Number']
+      - value: text
+        title: Текст
+        icon: Colibri.UI.FieldIcons['Text']
+      - value: textarea
+        title: Большой текст
+        icon: Colibri.UI.FieldIcons['TextArea']
+      - value: html
+        title: Редактор HTML
+        icon: Colibri.UI.FieldIcons['App.Modules.Manage.UI.TinyMCETextArea']
+      - value: htmlcode
+        title: Kod HTML
+        icon: Colibri.UI.FieldIcons['App.Modules.Manage.UI.TinyMCETextArea']
+      - value: file
+        title: Файл
+        icon: Colibri.UI.FieldIcons['File']
+      - value: files
+        title: Файлы
+        icon: Colibri.UI.FieldIcons['Files']
       selector:
         value: value
         title: title
@@ -84,10 +85,10 @@ settings:
         width: 100%
   indices:
     settings_name_idx:
-      fields: ['name']
+      fields:
+      - name
       type: UNIQUE
-      method: BTREE    
-
+      method: BTREE
 notices:
   access-point: tools
   module: Tools
@@ -105,7 +106,8 @@ notices:
       class: string
       component: Text
       desc: Наименование шаблона
-      note: Введите название шаблона, которое будете использовать в дальнейшем. Латинские буквы, подчеркивание.
+      note: Введите название шаблона, которое будете использовать в дальнейшем. Латинские
+        буквы, подчеркивание.
       attrs:
         width: 100%
     subject:
@@ -136,7 +138,497 @@ notices:
         width: 100%
   indices:
     notices_name_idx:
-      fields: ['name']
+      fields:
+      - name
       type: UNIQUE
-      method: BTREE    
+      method: BTREE
+backups:
+  desc: '#{tools-storages-backups-desc;Точки восстановления}'
+  access-point: tools
+  models:
+    table: Models\Backups
+    row: Models\Backup
+  params:
+    visible: false
+    maybepublished: false
+  module: Tools
+  fields:
+    status:
+      group: window
+      desc: '#{tools-storages-backups-fields-status-desc;Статус}'
+      type: varchar
+      length: "255"
+      component: Select
+      class: ValueField
+      attrs: []
+      params:
+        required: false
+        enabled: true
+        readonly: true
+        visual: false
+        code: ""
+        list: true
+        greed: ""
+        vertical: false
+        viewer: Colibri.UI.SelectViewer
+        mask: ""
+      values:
+      - value: created
+        title: '#{tools-storages-backups-fields-status-values-created;Создано/Не выполнялось}'
+      - value: complete
+        title: '#{tools-storages-backups-fields-status-values-complete;Выполнилось}'
+      - value: working
+        title: '#{tools-storages-backups-fields-status-values-working;Выполняется}'
+      - value: error
+        title: '#{tools-storages-backups-fields-status-values-error;Ошибка}'
+      default: created
+    name:
+      group: window
+      desc: '#{tools-storages-backups-fields-name-desc;Наименование}'
+      note: '#{tools-storages-backups-fields-name-note;Введите название задание на
+        создание точки восстановления}'
+      type: varchar
+      length: "255"
+      component: Text
+      class: string
+      attrs: []
+      params:
+        required: false
+        enabled: true
+        readonly: false
+        visual: false
+        code: ""
+        list: true
+        greed: ""
+        vertical: false
+        viewer: ~
+        mask: ""
+    cron:
+      group: window
+      desc: '#{tools-storages-backups-fields-cron-desc;Запись в CRON}'
+      note: '#{tools-storages-backups-fields-cron-note;Введите запись, которую нужно
+        будет внести в CRON}'
+      type: json
+      component: Object
+      class: ObjectField
+      default: json_object()
+      attrs: []
+      params:
+        required: false
+        enabled: true
+        readonly: true
+        visual: false
+        code: ""
+        list: true
+        greed: ""
+        vertical: false
+        viewer: Colibri.UI.ObjectViewer
+        mask: ""
+      fields:
+        minute:
+          desc: '#{tools-storages-backups-fields-cron-minute-desc;Минута}'
+          note: '#{tools-storages-backups-fields-cron-minute-note;Выберите минуту}'
+          type: varchar
+          length: "2"
+          component: Select
+          class: ValueField
+          attrs: []
+          params:
+            required: false
+            enabled: true
+            readonly: true
+            visual: false
+            code: ""
+            list: false
+            greed: ""
+            vertical: false
+            viewer: ~
+            mask: ""
+          values:
+          - value: "00"
+            title: "00"
+          - value: "01"
+            title: "01"
+          - value: "02"
+            title: "02"
+          - value: "03"
+            title: "03"
+          - value: "04"
+            title: "04"
+          - value: "05"
+            title: "05"
+          - value: "06"
+            title: "06"
+          - value: "07"
+            title: "07"
+          - value: 08
+            title: 08
+          - value: 09
+            title: 09
+          - value: "10"
+            title: "10"
+          - value: "11"
+            title: "11"
+          - value: "12"
+            title: "12"
+          - value: "13"
+            title: "13"
+          - value: "14"
+            title: "14"
+          - value: "15"
+            title: "15"
+          - value: "16"
+            title: "16"
+          - value: "17"
+            title: "17"
+          - value: "18"
+            title: "18"
+          - value: "19"
+            title: "19"
+          - value: "20"
+            title: "20"
+          - value: "21"
+            title: "21"
+          - value: "22"
+            title: "22"
+          - value: "23"
+            title: "23"
+          - value: "24"
+            title: "24"
+          - value: "25"
+            title: "25"
+          - value: "26"
+            title: "26"
+          - value: "27"
+            title: "27"
+          - value: "28"
+            title: "28"
+          - value: "29"
+            title: "29"
+          - value: "30"
+            title: "30"
+          - value: "31"
+            title: "31"
+          - value: "32"
+            title: "32"
+          - value: "33"
+            title: "33"
+          - value: "34"
+            title: "34"
+          - value: "35"
+            title: "35"
+          - value: "36"
+            title: "36"
+          - value: "37"
+            title: "37"
+          - value: "38"
+            title: "38"
+          - value: "39"
+            title: "39"
+          - value: "40"
+            title: "40"
+          - value: "41"
+            title: "41"
+          - value: "42"
+            title: "42"
+          - value: "43"
+            title: "43"
+          - value: "44"
+            title: "44"
+          - value: "45"
+            title: "45"
+          - value: "46"
+            title: "46"
+          - value: "47"
+            title: "47"
+          - value: "48"
+            title: "48"
+          - value: "49"
+            title: "49"
+          - value: "50"
+            title: "50"
+          - value: "51"
+            title: "51"
+          - value: "52"
+            title: "52"
+          - value: "53"
+            title: "53"
+          - value: "54"
+            title: "54"
+          - value: "55"
+            title: "55"
+          - value: "56"
+            title: "56"
+          - value: "57"
+            title: "57"
+          - value: "58"
+            title: "58"
+          - value: "59"
+            title: "59"
+          default: "00"
+        hour:
+          desc: '#{tools-storages-backups-fields-cron-hour-desc;Час}'
+          note: '#{tools-storages-backups-fields-cron-hour-note;Выберите час}'
+          type: varchar
+          length: "2"
+          component: Select
+          class: ValueField
+          attrs: []
+          params:
+            required: false
+            enabled: true
+            readonly: true
+            visual: false
+            code: ""
+            list: false
+            greed: ""
+            vertical: false
+            viewer: ~
+            mask: ""
+          values:
+          - value: "00"
+            title: "00"
+          - value: "01"
+            title: "01"
+          - value: "02"
+            title: "02"
+          - value: "03"
+            title: "03"
+          - value: "04"
+            title: "04"
+          - value: "05"
+            title: "05"
+          - value: "06"
+            title: "06"
+          - value: "07"
+            title: "07"
+          - value: 08
+            title: 08
+          - value: 09
+            title: 09
+          - value: "10"
+            title: "10"
+          - value: "11"
+            title: "11"
+          - value: "12"
+            title: "12"
+          - value: "13"
+            title: "13"
+          - value: "14"
+            title: "14"
+          - value: "15"
+            title: "15"
+          - value: "16"
+            title: "16"
+          - value: "17"
+            title: "17"
+          - value: "18"
+            title: "18"
+          - value: "19"
+            title: "19"
+          - value: "20"
+            title: "20"
+          - value: "21"
+            title: "21"
+          - value: "22"
+            title: "22"
+          - value: "23"
+            title: "23"
+          default: "00"
+        day:
+          desc: '#{tools-storages-backups-fields-cron-day-desc;День}'
+          note: '#{tools-storages-backups-fields-cron-day-note;Выберите день}'
+          type: varchar
+          length: "2"
+          component: Select
+          class: ValueField
+          attrs: []
+          params:
+            required: false
+            enabled: true
+            readonly: true
+            visual: false
+            code: ""
+            list: false
+            greed: ""
+            vertical: false
+            viewer: ~
+            mask: ""
+          values:
+          - value: '*'
+            title: '*'
+          - value: "00"
+            title: "00"
+          - value: "01"
+            title: "01"
+          - value: "02"
+            title: "02"
+          - value: "03"
+            title: "03"
+          - value: "04"
+            title: "04"
+          - value: "05"
+            title: "05"
+          - value: "06"
+            title: "06"
+          - value: "07"
+            title: "07"
+          - value: 08
+            title: 08
+          - value: 09
+            title: 09
+          - value: "10"
+            title: "10"
+          - value: "11"
+            title: "11"
+          - value: "12"
+            title: "12"
+          - value: "13"
+            title: "13"
+          - value: "14"
+            title: "14"
+          - value: "15"
+            title: "15"
+          - value: "16"
+            title: "16"
+          - value: "17"
+            title: "17"
+          - value: "18"
+            title: "18"
+          - value: "19"
+            title: "19"
+          - value: "20"
+            title: "20"
+          - value: "21"
+            title: "21"
+          - value: "22"
+            title: "22"
+          - value: "23"
+            title: "23"
+          - value: "24"
+            title: "24"
+          - value: "25"
+            title: "25"
+          - value: "26"
+            title: "26"
+          - value: "27"
+            title: "27"
+          - value: "28"
+            title: "28"
+          - value: "29"
+            title: "29"
+          - value: "30"
+            title: "30"
+          - value: "31"
+            title: "31"
+          default: '*'
+        month:
+          desc: '#{tools-storages-backups-fields-cron-month-desc;Месяц}'
+          note: '#{tools-storages-backups-fields-cron-month-note;Выберите месяц}'
+          type: varchar
+          length: "2"
+          component: Select
+          class: ValueField
+          attrs: []
+          params:
+            required: false
+            enabled: true
+            readonly: true
+            visual: false
+            code: ""
+            list: false
+            greed: ""
+            vertical: false
+            viewer: ~
+            mask: ""
+          values:
+          - value: '*'
+            title: '*'
+          - value: "00"
+            title: "00"
+          - value: "01"
+            title: "01"
+          - value: "02"
+            title: "02"
+          - value: "03"
+            title: "03"
+          - value: "04"
+            title: "04"
+          - value: "05"
+            title: "05"
+          - value: "06"
+            title: "06"
+          - value: "07"
+            title: "07"
+          - value: 08
+            title: 08
+          - value: 09
+            title: 09
+          - value: "10"
+            title: "10"
+          - value: "11"
+            title: "11"
+          - value: "12"
+            title: "12"
+          default: '*'
+        dayofweek:
+          desc: '#{tools-storages-backups-fields-cron-dayofweek-desc;День недели}'
+          note: '#{tools-storages-backups-fields-cron-dayofweek-note;Выберите день
+            недели}'
+          type: varchar
+          length: "1"
+          component: Select
+          class: ValueField
+          attrs: []
+          params:
+            required: false
+            enabled: true
+            readonly: true
+            visual: false
+            code: ""
+            list: false
+            greed: ""
+            vertical: false
+            viewer: ~
+            mask: ""
+          values:
+          - value: '*'
+            title: '*'
+          - value: "0"
+            title: '#{tools-storages-backups-fields-cron-dayofweek-values-0;Воскресенье}'
+          - value: "1"
+            title: '#{tools-storages-backups-fields-cron-dayofweek-values-1;Понедельник}'
+          - value: "2"
+            title: '#{tools-storages-backups-fields-cron-dayofweek-values-2;Вторник}'
+          - value: "3"
+            title: '#{tools-storages-backups-fields-cron-dayofweek-values-3;Среда}'
+          - value: "4"
+            title: '#{tools-storages-backups-fields-cron-dayofweek-values-4;Четверг}'
+          - value: "5"
+            title: '#{tools-storages-backups-fields-cron-dayofweek-values-5;Пятница}'
+          - value: "6"
+            title: '#{tools-storages-backups-fields-cron-dayofweek-values-6;Суббота}'
+          default: '*'
+    file:
+      group: window
+      desc: '#{tools-storages-backups-fields-file-desc;Шаблон названия файла}'
+      note: '#{tools-storages-backups-fields-file-note;Введите шаблон названия файла,например
+        backup_[[date]]_[[index]].backup}'
+      type: varchar
+      length: "255"
+      component: Text
+      class: string
+      attrs: []
+      params:
+        required: false
+        enabled: true
+        readonly: false
+        visual: false
+        code: ""
+        list: true
+        greed: ""
+        vertical: false
+        viewer: ~
+        mask: ""
+      default: backup_[[date]]_[[index]].backup
 ...

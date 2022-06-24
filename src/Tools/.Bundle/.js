@@ -18,6 +18,7 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         this._store = App.Store.AddChild('app.tools', {});
         this._store.AddPathLoader('tools.settings', () => this.Settings(true));
         this._store.AddPathLoader('tools.notices', () => this.Notices(true));
+        this._store.AddPathLoader('tools.backups', () => this.Backups(true));
 
         console.log('Initializing module Tools');
 
@@ -186,6 +187,57 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
             });
     }
     
+    Backups(returnPromise = false) {
+        const promise = this.Call('Backup', 'List')
+        if(returnPromise) {
+            return promise;
+        }
+        promise.then((response) => {
+            this._store.Set('tools.backups', response.result);
+        }).catch((response) => {
+            App.Notices.Add(new Colibri.UI.Notice(response.result));
+        });
+    }
+
+    SaveBackup(backupData) {
+        this.Call('Backup', 'Save', backupData)
+            .then((response) => {
+                let backups = this._store.Query('tools.backups');
+                if(!backups || !Array.isArray(backups)) {
+                    backups = [];
+                }
+                if(backupData?.id) {
+                    backups = backups.map((s) => s.id == response.result.id ? response.result : s);
+                }
+                else {
+                    backups.push(response.result);
+                }
+                this._store.Set('tools.backups', backups);
+            })
+            .catch((response) => {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            });
+    }
+
+    DeleteBackup(backupId) {
+        this.Call('Backup', 'Delete', {backup: backupId})
+            .then((response) => {
+                let backups = this._store.Query('tools.backups');
+                if(!backups || !Array.isArray(backups)) {
+                    backups = [];
+                }
+                let newBackups = [];
+                backups.forEach((s) => {
+                    if(s.id !== backupId) {
+                        newBackups.push(s);
+                    }
+                });
+                this._store.Set('tools.backups', newBackups);
+            })
+            .catch((response) => {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            });
+    }
 
 }
 

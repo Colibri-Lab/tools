@@ -1,7 +1,7 @@
 ---
 tools-settings-tree-root:
   ru: Настройки сайта
-  en: Site Settings
+  en: Site settings
   hy: Կայքի կարգավորումները
 tools-settings-settings-title:
   ru: Настройки
@@ -188,23 +188,146 @@ tools-menu-themes-desc:
     existing one
 tools-backup-create:
   ru: Создать слепок
+  en: Create an impression
+  hy: Ստեղծել կույր
 tools-backup-create-info:
   ru: Нажмите на кнопку «создать слепок» и дождитесь окончания процесса. После завершения
     в списке слепкой внизу этой страницы появится новый пункт отмеченный датой
+  en: Click on the "create a cast" button and wait for the process to finish. After
+    completion, a new item marked with a date will appear in the list with a cast
+    at the bottom of this page
+  hy: 'Սեղմիր "Ստեղծել կույր" կոճակը եւ սպասեք գործընթացի ավարտին: Ցուցակի ավարտից
+    հետո այս էջի ներքեւի մասում կույրով կհայտնվի նոր կետ, որը նշված է ամսաթվով'
 tools-backups-dataempty:
   ru: Слепки не найдены
+  en: No casts found
+  hy: Կույր չի գտնվել
 tools-backups-points-name:
   ru: Наименование
+  en: Name
+  hy: Անունը
 tools-backups-points-created:
   ru: Создана
+  en: Created
+  hy: Ստեղծվել է
 tools-backups-points-size:
   ru: Размер файла
+  en: File Size
+  hy: Ֆայլի չափը
 tools-backups-create-title:
   ru: Создание слепка системы
+  en: Creating an impression of the system
+  hy: Ստեղծելով համակարգի փորձը
 tools-backups-points-title:
   ru: Список созданных слепков/заданий
+  en: List of created casts/tasks
+  hy: Ստեղծված կաղապարների/խնդիրների ցանկ
 tools-backups-points-status:
   ru: Статус
+  en: Status
+  hy: Կարգավիճակ
 tools-backup-create-schedule:
   ru: Создать/Изменить задание
+  en: To create/Edit a task
+  hy: Ստեղծել / փոխել խնդիրը
+tools-storages-backups-desc:
+  ru: Точки восстановления
+  en: Recovery Points
+  hy: Վերականգնման կետերը
+tools-storages-backups-fields-name-desc:
+  ru: Наименование
+  en: Name
+  hy: Անվանում
+tools-storages-backups-fields-name-note:
+  ru: Введите название задание на создание точки восстановления
+  en: Enter the name of the task to create a recovery point
+  hy: Մուտքագրեք կոչում խնդիրն է ստեղծել վերականգնման կետ
+tools-storages-backups-fields-cron-desc:
+  ru: Запись в CRON
+  en: Writing to CRON
+  hy: Գրառումը CRON-ում
+tools-storages-backups-fields-cron-note:
+  ru: Введите запись, которую нужно будет внести в CRON
+  en: Enter the entry that you will need to make in CRON
+  hy: Մուտքագրեք գրառումը, որը պետք է կատարվի CRON-ում
+tools-storages-backups-fields-cron-minute-desc:
+  ru: Минута
+  en: Minute
+  hy: Րոպե
+tools-storages-backups-fields-cron-minute-note:
+  ru: Выберите минуту
+  en: Choose a minute
+  hy: Ընտրեք րոպե
+tools-storages-backups-fields-cron-hour-desc:
+  ru: Час
+  en: Hour
+  hy: Ժամ
+tools-storages-backups-fields-cron-hour-note:
+  ru: Выберите час
+  en: Choose an hour
+  hy: Ընտրեք ժամ
+tools-storages-backups-fields-cron-day-desc:
+  ru: День
+  en: Day
+  hy: Օր
+tools-storages-backups-fields-cron-day-note:
+  ru: Выберите день
+  en: Choose a day
+  hy: Ընտրեք օրը
+tools-storages-backups-fields-cron-month-desc:
+  ru: Месяц
+  en: Month
+  hy: Ամիս
+tools-storages-backups-fields-cron-month-note:
+  ru: Выберите месяц
+  en: Choose a month
+  hy: Ընտրել ամիս
+tools-storages-backups-fields-cron-dayofweek-desc:
+  ru: День недели
+  en: Day of the week
+  hy: Շաբաթվա օր
+tools-storages-backups-fields-cron-dayofweek-note:
+  ru: Выберите день недели
+  en: Choose a day of the week
+  hy: Ընտրեք օրը շաբաթվա
+tools-storages-backups-fields-file-desc:
+  ru: Шаблон названия файла
+tools-storages-backups-fields-file-note:
+  ru: Введите шаблон названия файла, например backup_{date}_{index}.backup
+  en: ""
+  hy: ""
+tools-backups-windowtitle-editbackup:
+  ru: Редактировать задание
+tools-backups-windowtitle-newbackup:
+  ru: Новое задание
+tools-backups-points-cron:
+  ru: Планировщик
+tools-backups-contextmenu-edit:
+  ru: Редактировать
+tools-backups-contextmenu-delete:
+  ru: Удалить
+tools-storages-backups-fields-status-desc:
+  ru: Статус
+tools-storages-backups-fields-status-values-created:
+  ru: Создано/Не выполнялось
+tools-storages-backups-fields-status-values-complete:
+  ru: Выполнилось
+tools-storages-backups-fields-status-values-working:
+  ru: Выполняется
+tools-storages-backups-fields-status-values-error:
+  ru: Ошибка
+tools-storages-backups-fields-cron-dayofweek-values-0:
+  ru: Воскресенье
+tools-storages-backups-fields-cron-dayofweek-values-1:
+  ru: Понедельник
+tools-storages-backups-fields-cron-dayofweek-values-2:
+  ru: Вторник
+tools-storages-backups-fields-cron-dayofweek-values-3:
+  ru: Среда
+tools-storages-backups-fields-cron-dayofweek-values-4:
+  ru: Четверг
+tools-storages-backups-fields-cron-dayofweek-values-5:
+  ru: Пятница
+tools-storages-backups-fields-cron-dayofweek-values-6:
+  ru: Суббота
 ...
