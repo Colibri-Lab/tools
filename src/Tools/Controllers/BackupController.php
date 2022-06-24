@@ -79,21 +79,24 @@ class BackupController extends WebController
             $backup = Backups::LoadEmpty();
         }
 
-        $type = $post->type;
-        if(is_array($type) || is_object($type)) {
-            $type = (object)$type;
-            $type = $type->value;
-        }
-
         $backup->name = $post->name;
         $backup->cron = $post->cron;
         $backup->file = $post->file;
         $backup->status = $post->status;
+        $backup->running = $post->running;
         if(!$backup->Save()) {
             return $this->Finish(400, 'Bad request');
         }
 
-        return $this->Finish(200, 'ok', $backup->ToArray(true));
+        $backupArray = $backup->ToArray(true);
+        if(App::$moduleManager->lang) {
+            $backupArray = App::$moduleManager->lang->ParseArray($backupArray);
+        }
+        else {
+            $backupArray = NoLangHelper::ParseArray($backupArray);
+        }
+
+        return $this->Finish(200, 'ok', $backupArray);
 
 
     }

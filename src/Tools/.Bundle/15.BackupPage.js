@@ -10,6 +10,7 @@ App.Modules.Tools.BackupPage = class extends Colibri.UI.Component
         this._backups = this.Children('bottom/backups');
 
         this._create.AddHandler('Clicked', (event, args) => this.__createButtonClicked(event, args));
+        this._backups.AddHandler('DoubleClicked', (event, args) => this.__doubleClickedOnData(event, args));
         this._backups.AddHandler('ContextMenuIconClicked', (event, args) => this.__renderDataContextMenu(event, args));
         this._backups.AddHandler('ContextMenuItemClicked', (event, args) => this.__clickOnDataContextMenu(event, args));  
     }
@@ -52,8 +53,15 @@ App.Modules.Tools.BackupPage = class extends Colibri.UI.Component
             this._showCreateEditWindow(item.value);
         }
         else if(menuData.name == 'remove-backup') {
-            this._deleteData.Dispatch('Clicked');
+            App.Confirm.Show('#{tools-backups-deletedata1;Удаление точки восстановления}', '#{tools-backups-deletedata1message;Вы уверены, что хотите удалить выбранную строку?}', '#{app-confirm-buttons-delete;Удалить!}').then(() => {
+                Tools.DeleteBackup(item.value.id);
+            });
         }
+    }
+
+    __doubleClickedOnData(event, args) {
+        const data = this._backups.selected?.value;
+        this._showCreateEditWindow(data);
     }
 
 } 

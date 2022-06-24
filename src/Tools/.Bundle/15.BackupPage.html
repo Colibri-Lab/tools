@@ -9,10 +9,11 @@
     </Pane>
     <Pane name="bottom" shown="true">
         <H2 shown="true">#{tools-backups-points-title;Список созданных слепков}</H2>
-        <App.Modules.Tools.BackupsGrid name="backups" shown="true" selectionMode="fullrow" showCheckboxes="true" hasContextMenu="true" binding="app.tools.backups" emptyMessage="#{tools-backups-dataempty;Слепки не найдены}">
+        <App.Modules.Tools.BackupsGrid name="backups" shown="true" selectionMode="fullrow" hasContextMenu="true" binding="app.tools.backups" emptyMessage="#{tools-backups-dataempty;Слепки не найдены}">
             <component-header>
                 <component-columns>
                     <Grid.Column name="status" shown="true" value="#{tools-backups-points-status;Статус}" width="15%" resizable="true" viewer="Colibri.UI.SelectViewer" />
+                    <Grid.Column name="running" shown="true" value="#{tools-backups-points-running;Работает}" width="10%" resizable="true" viewer="Colibri.UI.CheckboxViewer" />
                     <Grid.Column name="name" shown="true" value="#{tools-backups-points-name;Наименование}" width="55%" resizable="true" />
                     <Grid.Column name="cron" shown="true" value="#{tools-backups-points-cron;Планировщик}" width="15%" resizable="true">
                         <params>

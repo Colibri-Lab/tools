@@ -173,15 +173,31 @@ backups:
         viewer: Colibri.UI.SelectViewer
         mask: ""
       values:
-      - value: created
-        title: '#{tools-storages-backups-fields-status-values-created;Создано/Не выполнялось}'
-      - value: complete
-        title: '#{tools-storages-backups-fields-status-values-complete;Выполнилось}'
-      - value: working
-        title: '#{tools-storages-backups-fields-status-values-working;Выполняется}'
-      - value: error
-        title: '#{tools-storages-backups-fields-status-values-error;Ошибка}'
-      default: created
+      - value: paused
+        title: '#{tools-storages-backups-fields-status-values-paused;Остановлено}'
+      - value: started
+        title: '#{tools-storages-backups-fields-status-values-started;Включено}'
+      default: paused
+    running:
+      group: window
+      desc: '#{tools-storages-backups-fields-running-desc;Запущено}'
+      type: tinyint
+      length: 1
+      component: Checkbox
+      class: bool
+      attrs: []
+      params:
+        required: false
+        enabled: true
+        readonly: false
+        visual: false
+        code: ""
+        list: true
+        greed: ""
+        vertical: false
+        viewer: Colibri.UI.BoolViewer
+        mask: ""
+      default: "0"
     name:
       group: window
       desc: '#{tools-storages-backups-fields-name-desc;Наименование}'
