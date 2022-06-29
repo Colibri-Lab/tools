@@ -292,54 +292,113 @@ tools-storages-backups-fields-cron-dayofweek-note:
   hy: Ընտրեք օրը շաբաթվա
 tools-storages-backups-fields-file-desc:
   ru: Шаблон названия файла
+  en: File name template
+  hy: Ֆայլի անվանումը Կաղապար
 tools-storages-backups-fields-file-note:
   ru: Введите шаблон названия файла, например backup_{date}_{index}.backup
-  en: ""
-  hy: ""
+  en: Enter a template for the file name, for example backup_{date}_{index}.backup
+  hy: Մուտքագրեք ֆայլի անունը Կաղապար, օրինակ backup_ {date}_{index}.backup
 tools-backups-windowtitle-editbackup:
   ru: Редактировать задание
+  en: Edit a task
+  hy: Խմբագրել առաջադրանքը
 tools-backups-windowtitle-newbackup:
   ru: Новое задание
+  en: New task
+  hy: Նոր առաջադրանք
 tools-backups-points-cron:
   ru: Планировщик
+  en: Scheduler
+  hy: Պլանավորող
 tools-backups-contextmenu-edit:
   ru: Редактировать
+  en: Edit
+  hy: Խմբագրել
 tools-backups-contextmenu-delete:
   ru: Удалить
+  en: Remove
+  hy: Ջնջել
 tools-storages-backups-fields-status-desc:
   ru: Статус
+  en: Status
+  hy: Կարգավիճակ
 tools-storages-backups-fields-status-values-created:
   ru: Создано/Не выполнялось
+  en: Created/Was not executed
+  hy: Ստեղծվել/չի կատարվել
 tools-storages-backups-fields-status-values-complete:
   ru: Выполнилось
+  en: Completed
+  hy: Կատարվել է
 tools-storages-backups-fields-status-values-working:
   ru: Выполняется
+  en: In progress
+  hy: Կատարվում է
 tools-storages-backups-fields-status-values-error:
   ru: Ошибка
+  en: Mistake
+  hy: Սխալ
 tools-storages-backups-fields-cron-dayofweek-values-0:
   ru: Воскресенье
+  en: Sunday
+  hy: Կիրակի
 tools-storages-backups-fields-cron-dayofweek-values-1:
   ru: Понедельник
+  en: Monday
+  hy: Երկուշաբթի
 tools-storages-backups-fields-cron-dayofweek-values-2:
   ru: Вторник
+  en: Tuesday
+  hy: Երեքշաբթի
 tools-storages-backups-fields-cron-dayofweek-values-3:
   ru: Среда
+  en: Wednesday
+  hy: Չորեքշաբթի
 tools-storages-backups-fields-cron-dayofweek-values-4:
   ru: Четверг
+  en: Thursday
+  hy: Հինգշաբթի
 tools-storages-backups-fields-cron-dayofweek-values-5:
   ru: Пятница
+  en: Friday
+  hy: Ուրբաթ
 tools-storages-backups-fields-cron-dayofweek-values-6:
   ru: Суббота
+  en: Saturday
+  hy: Շաբաթ
 tools-backups-deletedata1:
   ru: Удаление точки восстановления
+  en: Deleting a Restore Point
+  hy: Ջնջեք վերականգնման կետը
 tools-backups-deletedata1message:
   ru: Вы уверены, что хотите удалить выбранную строку?
+  en: Are you sure you want to delete the selected row?
+  hy: 'Վստահ եք, որ ցանկանում եք ջնջել ընտրված գիծը:'
 tools-backups-points-running:
   ru: Работает
+  en: Works
+  hy: Աշխատում է
 tools-storages-backups-fields-status-values-paused:
   ru: Остановлено
+  en: Stopped
+  hy: Դադարեցված է
 tools-storages-backups-fields-status-values-started:
   ru: Включено
+  en: Enabled
+  hy: Ներառված
 tools-storages-backups-fields-running-desc:
   ru: Запущено
+  en: Launched
+  hy: Մեկնարկել է
+tools-execute-run-title:
+  ru: Запуск скрипта
+tools-execute-run:
+  ru: Запустить скрипт
+tools-execute-script-title:
+  ru: Скрипт к исполнению
+tools-execute-create-info:
+  ru: Внимание! Скрипт исполняется в окружении всего проекта, возможны необратимые
+    последствия, пожалуйста, будьте осторожны
+tools-execute-run-success:
+  ru: Скрипт запущен успешно
 ...

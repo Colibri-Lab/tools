@@ -1,0 +1,46 @@
+.app-execute-page-component {
+
+    &.app-component-shown {
+        display: grid;
+    }
+    grid-template-rows: 150px calc(100% - 150px);
+
+    [data-object-name="info"] {
+        &.app-component-shown {
+            display: block;
+        }
+        font-size: 12px;
+        padding: 20px 0px 10px;
+    }
+
+    [data-object-name="progress"] {
+        margin: 10px 0px;
+    }
+
+    [data-object-name="split"] {
+        width: 100%;
+        height: 100%;
+        .app-component-split-left {
+            flex: 0 0 50%;
+        }
+        .app-component-split-right {
+            padding-left: 20px;
+        }
+        [data-object-name="form"] {
+            height: 100%;
+
+        }
+    }
+
+    [data-object-name="script"] {
+        height: 100%;
+        [data-object-name="script-content"] {
+            height: 100%;
+            [data-object-name="script-container"] {
+                height: 100%;
+
+            }
+        }
+    }
+
+}
