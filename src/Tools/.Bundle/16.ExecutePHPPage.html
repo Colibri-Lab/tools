@@ -3,9 +3,12 @@
 
     <Pane name="top" shown="true">
         <H1 shown="true">#{tools-execute-run-title;Запуск скрипта}</H1>
-        <SuccessButton name="run" shown="true" value="#{tools-execute-run;Запустить скрипт}" />
+        <FlexBox name="flex" shown="true">
+            <SuccessButton name="run" shown="true" value="#{tools-execute-run;Запустить скрипт}" />
+            <SuccessButton name="kill" shown="true" value="#{tools-execute-kill;Остановить исполнение}" enabled="false" />
+            <Loading name="running" shown="false" />
+        </FlexBox>
         <TextSpan shown="true" name="info">#{tools-execute-create-info;Внимание! Скрипт исполняется в окружении всего проекта, возможны необратимые последствия, пожалуйста, будьте осторожны}</TextSpan>
-        <ProgressBar name="progress" shown="true" />
     </Pane>
     <Pane name="bottom" shown="true">
         <H2 shown="true">#{tools-execute-script-title;Скрипт к исполнению}</H2>
@@ -13,7 +16,7 @@
             <Forms.Form shown="true" name="form"  />
             <List shown="true" name="results">
                 <List.Group name="group" shown="true" />
-            </List>                
+            </List>                 
         </Split>
     </Pane>
     

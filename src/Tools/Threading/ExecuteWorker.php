@@ -8,7 +8,7 @@ use CometApiClient\Client;
 use Colibri\App;
 use Throwable;
 
-class Worker extends BaseWorker
+class ExecuteWorker extends BaseWorker
 {
     public function Run(): void
     {

@@ -3,7 +3,21 @@
     &.app-component-shown {
         display: grid;
     }
-    grid-template-rows: 150px calc(100% - 150px);
+    grid-template-rows: 120px calc(100% - 120px);
+
+    [data-object-name="running"] {
+        margin-left: 20px;
+        position: static;
+        width: auto;
+        height: auto;
+        background: transparent;
+        svg {
+            animation: 2s linear 0s infinite normal rotateInfiniteAnimation;
+            path {
+                stroke: rgba(0,0,0,.5);
+            }
+        }
+    }
 
     [data-object-name="info"] {
         &.app-component-shown {
@@ -11,10 +25,14 @@
         }
         font-size: 12px;
         padding: 20px 0px 10px;
-    }
+        
+    } 
 
-    [data-object-name="progress"] {
-        margin: 10px 0px;
+    [data-object-name="flex"] {
+        button {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 
     [data-object-name="split"] {
@@ -34,13 +52,11 @@
 
     [data-object-name="script"] {
         height: 100%;
-        [data-object-name="script-content"] {
-            height: 100%;
-            [data-object-name="script-container"] {
-                height: 100%;
+        
+    }
 
-            }
-        }
+    [data-object-name="kill"] {
+        margin-left: 20px;
     }
 
 }

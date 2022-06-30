@@ -15,6 +15,10 @@ use Colibri\Modules\Module as BaseModule;
 use Colibri\Utils\Debug;
 use App\Modules\Tools\Controllers\Controller;
 use Colibri\Utils\Menu\Item;
+use Colibri\Utils\Logs\Logger;
+use App\Modules\Tools\Models\Notices;
+use App\Modules\Tools\Models\Settings;
+use App\Modules\Tools\Models\Backups;
 
 /**
  * Описание модуля
@@ -89,6 +93,27 @@ class Module extends BaseModule
         $permissions['tools.notices.remove'] = 'Удалить сообщение';
 
         return $permissions;
+    }
+
+    public function Backup(Logger $logger, string $path) {
+        // Do nothing   
+        
+        $logger->debug('Exporting data...');
+
+        $modulePath = $path . 'modules/Tools/';
+
+        $logger->debug('Exporting Notices...');
+        $table = Notices::LoadAll();
+        $table->ExportJson($modulePath . 'notices.json');
+
+        $logger->debug('Exporting Settings...');
+        $table = Settings::LoadAll();
+        $table->ExportJson($modulePath . 'settings.json');
+
+        $logger->debug('Exporting Backups...');
+        $table = Backups::LoadAll();
+        $table->ExportJson($modulePath . 'backups.json');
+
     }
 
 }

@@ -19,8 +19,9 @@ App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component
             'Debug'
         ];
 
-        this._button = this.Children('top/run');
-        this._progress = this.Children('top/progress');
+        this._button = this.Children('top/flex/run');
+        this._kill = this.Children('top/flex/kill');
+        this._running = this.Children('top/flex/running');
 
         this._results = this.Children('bottom/split/results');
         this._results.__renderItemContent = (itemData, item) => {
@@ -40,6 +41,7 @@ App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component
         };
 
         this._button.AddHandler('Clicked', (event, args) => this.__runClicked(event, args));
+        this._kill.AddHandler('Clicked', (event, args) => this.__killClicked(event, args));
 
         App.Comet.AddHandler('EventReceived', (event, args) => this._cometEventReceived(event, args));
 
@@ -47,12 +49,18 @@ App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component
 
     _disableControls() {
         this._button.enabled = false;
+        this._kill.enabled = true;
         this._form.enabled = false;
+        this.tab.closable = false;
+        this._running.shown = true;
     }
     
     _enableControls() {
         this._button.enabled = true;
+        this._kill.enabled = false;
         this._form.enabled = true;
+        this.tab.closable = true;
+        this._running.shown = false;
     }
 
     __runClicked(event, args) {
@@ -63,7 +71,6 @@ App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component
             this._resultsGroup.Clear();
             this._runningScriptPid = response.result.pid;
             this._runningChannel = response.result.key;
-            this._progress.Start(300, 1.2);
 
             this._disableControls();
 
@@ -71,6 +78,19 @@ App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component
             App.Notices.Add(new Colibri.UI.Notice(response.result));
         });
 
+    }
+
+    __killClicked(event, args) {
+        Tools.Call('Execute', 'Kill', {pid: this._runningScriptPid}).then((response) => {
+            App.Notices.Add(new Colibri.UI.Notice('#{tools-execute-killed-success;Скрипт остановлен успешно}', Colibri.UI.Notice.Success));
+
+            this._enableControls();
+            this._runningScriptPid = null;
+            this._runningChannel = null;
+
+        }).catch(response => {
+            App.Notices.Add(new Colibri.UI.Notice(response.result));
+        });
     }
 
     _cometEventReceived(event, args) {
@@ -82,7 +102,6 @@ App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component
                 this._enableControls();
                 this._runningScriptPid = null;
                 this._runningChannel = null;
-                this._progress.Stop();
             }
 
         }

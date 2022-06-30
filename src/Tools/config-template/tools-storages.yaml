@@ -183,7 +183,7 @@ backups:
       desc: '#{tools-storages-backups-fields-running-desc;Запущено}'
       type: tinyint
       length: 1
-      component: Checkbox
+      component: Hidden
       class: bool
       attrs: []
       params:

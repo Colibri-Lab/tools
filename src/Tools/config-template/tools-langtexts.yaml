@@ -168,7 +168,7 @@ tools-menu-backups-desc:
 tools-menu-execute:
   hy: Կատարել
   ru: Выполнить
-  en: To perform
+  en: Execute
 tools-menu-execute-desc:
   hy: Կատարել կոդը (PHP). Ուշադրություն! Կոդը կատարվում է շրջապատված է ամբողջ նախագծի,
     հնարավոր անդառնալի վնաս.
@@ -200,8 +200,8 @@ tools-backup-create-info:
     հետո այս էջի ներքեւի մասում կույրով կհայտնվի նոր կետ, որը նշված է ամսաթվով'
 tools-backups-dataempty:
   ru: Слепки не найдены
-  en: No casts found
-  hy: Կույր չի գտնվել
+  en: No restore points found
+  hy: Վերականգնման կետեր չեն գտնվել
 tools-backups-points-name:
   ru: Наименование
   en: Name
@@ -392,13 +392,38 @@ tools-storages-backups-fields-running-desc:
   hy: Մեկնարկել է
 tools-execute-run-title:
   ru: Запуск скрипта
+  en: Running the script
+  hy: Սցենարի մեկնարկը
 tools-execute-run:
   ru: Запустить скрипт
+  en: Run the script
+  hy: Գործարկել սցենար
 tools-execute-script-title:
   ru: Скрипт к исполнению
+  en: Script to execute
+  hy: Կատարման սցենար
 tools-execute-create-info:
-  ru: Внимание! Скрипт исполняется в окружении всего проекта, возможны необратимые
-    последствия, пожалуйста, будьте осторожны
+  ru: "Внимание! Скрипт исполняется в окружении всего проекта, возможны необратимые
+    последствия, пожалуйста, будьте осторожны. \nДля вывода информации используйте
+    Logger $logger, например: $logger->debug('Тестовое сообщение');"
+  en: "Attention! The script is executed in the environment of the entire project,
+    irreversible consequences are possible, please be careful \nUse Logger $logger
+    for sending information to client, for example: $logger->debug('Test message');"
+  hy: "Ուշադրություն! Script կատարվում շրջապատված է ամբողջ ծրագրի, հնարավոր անդառնալի
+    հետեւանքներ, խնդրում ենք զգույշ լինել: \nՕգտագօրծեք Logger $logger էկրանին ինֆօրմացյա
+    ցույց տալու համար, օրինակ: $logger->debug('Տեստաին նամակ');"
 tools-execute-run-success:
   ru: Скрипт запущен успешно
+  en: The script was launched successfully
+  hy: Սցենարը հաջողությամբ գործարկվեց
+tools-execute-kill:
+  ru: Остановить исполнение
+  en: Stop execution
+  hy: Դադարեցնել կատարումը
+tools-execute-killed-success:
+  ru: Скрипт остановлен успешно
+  en: Execution is stopped successfuly
+  hy: Կատարումը կանգնացվաց է
+tools-backups-points-file:
+  ru: Шаблон названия файла
 ...

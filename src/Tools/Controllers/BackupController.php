@@ -9,6 +9,8 @@ use App\Modules\Tools\Models\Settings;
 use App\Modules\Tools\Models\Backups;
 use Colibri\App;
 use Colibri\Common\NoLangHelper;
+use App\Modules\Tools\Cron\Manager;
+use App\Modules\Tools\Models\Backup;
 
 class BackupController extends WebController
 {
@@ -87,7 +89,7 @@ class BackupController extends WebController
         if(!$backup->Save()) {
             return $this->Finish(400, 'Bad request');
         }
-
+        
         $backupArray = $backup->ToArray(true);
         if(App::$moduleManager->lang) {
             $backupArray = App::$moduleManager->lang->ParseArray($backupArray);
