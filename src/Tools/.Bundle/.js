@@ -24,7 +24,7 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
 
         App.AddHandler('ApplicationReady', (event, args) => {
             this.Render(document.body);
-
+            App.Comet.AddHandler('EventReceived', (event, args) => this._cometEventReceived(event, args));
         });
 
         this.AddHandler('CallProgress', (event, args) => {
@@ -46,6 +46,8 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
                 }    
             }
         });
+
+        
 
     }
 
@@ -237,6 +239,17 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
             .catch((response) => {
                 App.Notices.Add(new Colibri.UI.Notice(response.result));
             });
+    }
+
+    
+    _cometEventReceived(event, args) {
+        if(args.event.action.substring(0, 7) == 'backup-') {
+            if(!this._backuplog) {
+                this._backuplog = new App.Modules.Tools.UI.BackupLog('backuplog', document.body);
+            }
+            this._backuplog.shown = true;
+            this._backuplog.Add(args.event.message);
+        }
     }
 
 }

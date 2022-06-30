@@ -50,7 +50,7 @@ class Backup extends BaseModelDataRow {
 		$currentUser = SecurityModule::$instance->current;
         $userGUID = $currentUser ? md5($currentUser->id) : null;
 
-		$worker = new BackupWorker();
+		$worker = new BackupWorker(0, 0, 'backup-'.$this->id);
 		$process = new Process($worker);
 		$process->params = ['backup' => $this->id, 'user' => $userGUID];
 		return $process->command;
