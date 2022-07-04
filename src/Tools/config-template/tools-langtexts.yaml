@@ -426,93 +426,183 @@ tools-execute-killed-success:
   hy: Կատարումը կանգնացվաց է
 tools-backups-points-file:
   ru: Шаблон названия файла
+  en: File name template
+  hy: Ֆայլի անվանումը Կաղապար
 tools-thtmes-themes-title:
   ru: Сообщения
+  en: Messages
+  hy: Գրառումներ
 tools-themes-vars-title:
   ru: Переменные
+  en: Variables
+  hy: Փոփոխականներ
 tools-themes-vars-search-placeholder:
   ru: Поиск
+  en: Search
+  hy: '"ՍԻՍ" ՍՊԸ'
 tools-themes-varsempty:
   ru: Переменных не найдено
+  en: No variables found
+  hy: Փոփոխականներ չեն գտնվել
 tools-themes-vars-grid-name:
   ru: Переменная
+  en: Variable
+  hy: Փոփոխական
 tools-themes-vars-grid-value:
   ru: Значение
+  en: Meaning
+  hy: Արժեք
 tools-themes-vars-buttons-adddata:
   ru: Добавить
+  en: Add
+  hy: Ավելացնել
 tools-themes-vars-buttons-editdata:
   ru: Редактировать
+  en: Edit
+  hy: Խմբագրել
 tools-themes-vars-buttons-deletedata:
   ru: Удалить
+  en: Remove
+  hy: Ջնջել
 tools-themes-mixins-title:
   ru: Mixin-ы
+  en: Mixins
+  hy: Mixin-ներ
 tools-themes-mixins-search-placeholder:
   ru: Поиск
+  en: Search
+  hy: '"ՍԻՍ" ՍՊԸ'
 tools-themes-mixinsempty:
   ru: Mixin-ов не найдено
+  en: Mixins not found
+  hy: Mixin-ներ չեն գտնվել
 tools-themes-mixins-grid-name:
   ru: Переменная
+  en: Variable
+  hy: Փոփոխական
 tools-themes-mixins-grid-value:
   ru: Значение
+  en: Meaning
+  hy: Արժեք
 tools-themes-mixins-buttons-adddata:
   ru: Добавить
+  en: Add
+  hy: Ավելացնել
 tools-themes-mixins-buttons-editdata:
   ru: Редактировать
+  en: Edit
+  hy: Խմբագրել
 tools-themes-mixins-buttons-deletedata:
   ru: Удалить
+  en: Remove
+  hy: Ջնջել
 tools-storages-themes-desc:
   ru: Темы
+  en: Themes
+  hy: Թեմաներ
 tools-storages-themes-fields-name-desc:
   ru: Наименование
+  en: Name
+  hy: Անվանում
 tools-storages-themes-fields-domain-desc:
   ru: Ключ домена
+  en: Domain Key
+  hy: Դոմեյն բանալին
 tools-storages-themes-fields-domain-note:
   ru: Выберите ключ домена
+  en: Select the domain key
+  hy: Ընտրեք դոմեյն բանալին
 tools-storages-themes-fields-vars-desc:
   ru: Переменные
+  en: Variables
+  hy: Փոփոխականներ
 tools-storages-themes-fields-vars-name-desc:
   ru: Название переменной
+  en: Variable name
+  hy: Փոփոխական անունը
 tools-storages-themes-fields-vars-type-desc:
   ru: Тип переменной
+  en: Type of variable
+  hy: Փոփոխական տեսակը
 tools-storages-themes-fields-vars-type-values-color:
   ru: Цвет
+  en: Colour
+  hy: Գույն
 tools-storages-themes-fields-vars-type-values-font-face:
   ru: Название шрифта
+  en: Font name
+  hy: Տառատեսակի անվանումը
 tools-storages-themes-fields-vars-type-values-size:
   ru: Размер
+  en: Size
+  hy: Չափ
 tools-storages-themes-fields-vars-type-values-image:
   ru: Изoбражение
+  en: Image
+  hy: Նկար
 tools-storages-themes-fields-vars-type-values-border:
   ru: Рамка
+  en: Frame
+  hy: Շրջանակ
 tools-storages-themes-fields-vars-type-values-shadow:
   ru: Тень
+  en: Shadow
+  hy: Ստվեր
 tools-storages-themes-fields-vars-value-desc:
   ru: Значение
+  en: Meaning
+  hy: Արժեք
 tools-storages-themes-fields-mixins-desc:
   ru: Mixin-ы
+  en: Mixins
+  hy: Mixin-ներ
 tools-storages-themes-fields-mixins-name-desc:
   ru: Наименование
+  en: Name
+  hy: Անվանում
 tools-storages-themes-fields-mixins-params-desc:
   ru: Параметры
+  en: Parameters
+  hy: Պարամետրեր
 tools-storages-themes-fields-mixins-params-name-desc:
   ru: Название параметра
+  en: Name of the parameter
+  hy: Պարամետր անունը
 tools-storages-themes-fields-mixins-value-desc:
   ru: Тело
+  en: Body
+  hy: Մարմին
 tools-themes-contextmenu-newtheme:
   ru: Создать тему
+  en: Create a theme
+  hy: Ստեղծել թեման
 tools-themes-contextmenu-deletenotice:
   ru: Удалить шаблон
+  en: Delete a template
+  hy: Հեռացնել Կաղապար
 tools-themes-contextmenu-deletetheme:
   ru: Удалить тему
+  en: Delete a topic
+  hy: Հեռացնել թեման
 tools-themes-contextmenu-edittheme:
   ru: Редактировать тему
+  en: Edit a topic
+  hy: Խմբագրել թեման
 tools-themes-deletetheme:
   ru: Удаление темы
+  en: Deleting a topic
+  hy: Թեմայի հեռացում
 tools-themes-deletethememessage:
   ru: Вы уверены, что хотите удалить тему? На сайтах привязанных к этой теме могут
     возникнуть артефакты
+  en: Are you sure you want to delete the theme? Artifacts may occur on sites linked
+    to this topic
+  hy: 'Համոզված եք, որ ցանկանում եք ջնջել թեման: Այս թեմային առնչվող կայքերում կարող
+    են առաջանալ արտեֆակտներ'
 tools-storages-themes-fields-vars-type-values-font-family:
   ru: Название шрифта
+  en: Font name
+  hy: Տառատեսակի անվանումը
 tools-themes-windowtitle-addvartitle:
   ru: Добавить переменную
 tools-themes-deletevar:
