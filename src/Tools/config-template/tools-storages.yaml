@@ -654,8 +654,8 @@ themes:
     table: Models\Themes
     row: Models\Theme
   params:
-    visible: true
-    maybepublished: true
+    visible: false
+    maybepublished: false
   module: Tools
   fields:
     name:
@@ -698,6 +698,26 @@ themes:
         mask: ""
       lookup:
         binding: app.sites.domainkeys
+    current:
+      group: window
+      desc: '#{tools-storages-themes-fields-current-desc;Текущая}'
+      note: '#{tools-storages-themes-fields-current-note;Укажите да, если тема должна быть текущей для домена}'
+      type: tinyint
+      length: "1"
+      component: Checkbox
+      class: bool
+      attrs: []
+      params:
+        required: false
+        enabled: true
+        readonly: true
+        visual: false
+        code: ""
+        list: true
+        greed: ""
+        vertical: false
+        viewer: ~
+        mask: ""
     vars:
       group: window
       desc: '#{tools-storages-themes-fields-vars-desc;Переменные}'

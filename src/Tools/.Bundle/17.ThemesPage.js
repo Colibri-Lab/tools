@@ -117,6 +117,11 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
             contextmenu.push({name: 'remove-theme', title: '#{tools-themes-contextmenu-deletetheme;Удалить тему}', icon: Colibri.UI.ContextMenuRemoveIcon});
         }
 
+        if(itemData.data.current == 0) {
+            contextmenu.push({name: 'separator'});
+            contextmenu.push({name: 'set-current', title: '#{tools-themes-contextmenu-setcurrent;Установить как текущую}', icon: Colibri.UI.SelectCheckIcon});
+        }
+
         args.item.contextmenu = contextmenu;
         args.item.ShowContextMenu(args.isContextMenuEvent ? [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.RB] : [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.LB], '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);
 
@@ -144,6 +149,12 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
             const node = this._domainsAndThemes.AddNew(item, 'UNTITLED', {new: true, name: 'UNTITLED'});
             node.editable = true;
             node.Edit();
+        }
+        else if(menuData.name == 'set-current') {
+            const theme = item.tag.data;
+            App.Confirm.Show('#{tools-themes-setcurrenttheme;Установка}', '#{tools-themes-setcurrentthememessage;Вы уверены, что хотите установить тему как текущую?}', '#{app-confirm-ok;Продолжить}').then(() => {
+                Tools.SetThemeAsCurrent(theme.id);
+            });
         }
 
     }

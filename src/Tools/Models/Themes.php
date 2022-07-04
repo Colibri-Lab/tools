@@ -70,6 +70,11 @@ class Themes extends BaseModelDataTable {
         return self::LoadByFilter($page, $pagesize, null, null, [], $calculateAffected);
     }
 
+    static function LoadByDomain(string $domain): ?Themes
+    {
+        return self::LoadByFilter(1, 1000, '{domain}=[[domain:string]]', null, ['domain' => $domain], false);
+    }
+
     /**
      * Возвращает модель по ID
      * @param int $id ID строки
@@ -78,6 +83,17 @@ class Themes extends BaseModelDataTable {
     static function LoadById(int $id) : Theme|null 
     {
         $table = self::LoadByFilter(1, 1, '{id}=[[id:integer]]', null, ['id' => $id], false);
+        return $table && $table->Count() > 0 ? $table->First() : null;
+    }
+
+    /**
+     * Возвращает текущую тему
+     * @param string $domain
+     * @return Theme|null
+     */
+    static function LoadCurrent(string $domain) : Theme|null 
+    {
+        $table = self::LoadByFilter(1, 1, '{domain}=[[domain:string]] and {current}=1', null, ['domain' => $domain], false);
         return $table && $table->Count() > 0 ? $table->First() : null;
     }
 

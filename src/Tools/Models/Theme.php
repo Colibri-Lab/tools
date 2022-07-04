@@ -7,6 +7,8 @@ use Colibri\Data\Storages\Fields\DateTimeField;
 use Colibri\Data\Storages\Fields\ArrayField;
 # endregion Uses;
 use Colibri\Data\Storages\Models\DataRow as BaseModelDataRow;
+use Colibri\App;
+use Colibri\IO\FileSystem\File;
 
 /**
  * Представление строки в таблице в хранилище #{tools-storages-themes-desc;Темы}
@@ -29,5 +31,27 @@ class Theme extends BaseModelDataRow {
     
     # endregion Consts;
 
+    public function Generate(): string
+    {
+        $cachePath = App::$config->Query('cache')->GetValue();
+        $cacheName = md5($this->name).'.scss';
+
+        $fileData = [];
+        foreach($this->mixins as $mixin) {
+            $params = [];
+            foreach($mixin->params as $param) {
+                $params[] = $param->name;
+            }
+            $fileData[] = '@mixin '.$mixin->name.(!empty($params) ? '('.implode(', ', $params).')' : '').'{'."\n".$mixin->value."\n".'}';
+        }
+
+        foreach($this->vars as $var) {
+            $fileData[] = '$'.$var->name.': '.$var->value.';';
+        }
+
+        File::Write(App::$webRoot . $cachePath . $cacheName, implode("\n", $fileData));
+
+        return App::$webRoot . $cachePath . $cacheName;
+    }
 
 }

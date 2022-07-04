@@ -539,4 +539,14 @@ tools-themes-deletemixinmessage:
   ru: Вы уверены, что хотите удалить Mixin?
 tools-themes-mixins-grid-params:
   ru: Параметры
+tools-themes-contextmenu-setcurrent:
+  ru: Установить как текущую
+tools-themes-setcurrenttheme:
+  ru: Установка
+tools-themes-setcurrentthememessage:
+  ru: Вы уверены, что хотите установить тему как текущую?
+tools-storages-themes-fields-current-desc:
+  ru: Текущая
+tools-storages-themes-fields-current-note:
+  ru: Укажите да, если тема должна быть текущей для домена
 ...

@@ -19,6 +19,7 @@ use Colibri\Utils\Logs\Logger;
 use App\Modules\Tools\Models\Notices;
 use App\Modules\Tools\Models\Settings;
 use App\Modules\Tools\Models\Backups;
+use App\Modules\Tools\Models\Themes;
 
 /**
  * Описание модуля
@@ -114,6 +115,12 @@ class Module extends BaseModule
         $table = Backups::LoadAll();
         $table->ExportJson($modulePath . 'backups.json');
 
+    }
+
+    public function Theme(string $domain): ?string
+    {
+        $theme = Themes::LoadCurrent($domain);
+        return $theme ? $theme->Generate() : null;        
     }
 
 }

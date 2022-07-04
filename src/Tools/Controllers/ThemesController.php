@@ -103,6 +103,45 @@ class ThemesController extends WebController
 
     }
 
+    public function SetAsCurrent(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
+    {
+        if(!SecurityModule::$instance->current) {
+            return $this->Finish(403, 'Permission denied');
+        }
+
+        $id = $post->id;
+        if(!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
+            return $this->Finish(403, 'Permission denied');
+        }
+
+        $theme = Themes::LoadById((int)$id);
+        if(!$theme) {
+            return $this->Finish(400, 'Bad request');
+        }
+
+
+        $domainThemes = Themes::LoadByDomain($theme->domain);
+        foreach($domainThemes as $dtheme) {
+            $dtheme->current = false;
+            $dtheme->Save();
+        }
+
+        $theme->current = true;
+        if(!$theme->Save()) {
+            return $this->Finish(400, 'Bad request');
+        }
+        
+        $themeArray = $theme->ToArray(true);
+        if(App::$moduleManager->lang) {
+            $themeArray = App::$moduleManager->lang->ParseArray($themeArray);
+        }
+        else {
+            $themeArray = NoLangHelper::ParseArray($themeArray);
+        }
+
+        return $this->Finish(200, 'ok', $themeArray);
+    }
+
     public function SaveVar(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if(!SecurityModule::$instance->current) {
