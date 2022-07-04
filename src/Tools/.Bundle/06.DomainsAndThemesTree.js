@@ -71,7 +71,7 @@ App.Modules.Tools.DomainsAndThemesTree = class extends Colibri.UI.Tree {
                 if(!newNode) {
                     newNode = domainNode.nodes.Add('theme' + theme.id);
                 }
-                newNode.text = theme.name;
+                newNode.text = theme.desc ? theme.desc : theme.name;
                 newNode.isLeaf = true;
                 newNode.icon = theme.current ? App.Modules.Tools.Icons.ThemesCurrentIcon : App.Modules.Tools.Icons.ThemesIcon;
                 newNode.tag = {type: 'theme', data: theme};

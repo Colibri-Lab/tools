@@ -31,15 +31,9 @@ class ThemesController extends WebController
         $themes = Themes::LoadAll();
         $themesArray = [];
         foreach($themes as $theme) {
-            $themeArray = $theme->ToArray(true);
-            if(App::$moduleManager->lang) {
-                $themeArray = App::$moduleManager->lang->ParseArray($themeArray);
-            }
-            else {
-                $themeArray = NoLangHelper::ParseArray($themeArray);
-            }
-            $themesArray[] = $themeArray;
+            $themesArray[] = $theme->ToArray(true);
         }
+
         return $this->Finish(200, 'ok', $themesArray);
     }
 
@@ -86,20 +80,16 @@ class ThemesController extends WebController
 
         $theme->name = $post->name;
         $theme->domain = $post->domain;
+        $theme->desc = $post->desc;
+        $theme->current = $post->current;
+        $theme->vars = $post->vars;
+        $theme->mixins = $post->mixins;
         if(!$theme->Save()) {
             return $this->Finish(400, 'Bad request');
         }
         
         $themeArray = $theme->ToArray(true);
-        if(App::$moduleManager->lang) {
-            $themeArray = App::$moduleManager->lang->ParseArray($themeArray);
-        }
-        else {
-            $themeArray = NoLangHelper::ParseArray($themeArray);
-        }
-
         return $this->Finish(200, 'ok', $themeArray);
-
 
     }
 
@@ -132,13 +122,6 @@ class ThemesController extends WebController
         }
         
         $themeArray = $theme->ToArray(true);
-        if(App::$moduleManager->lang) {
-            $themeArray = App::$moduleManager->lang->ParseArray($themeArray);
-        }
-        else {
-            $themeArray = NoLangHelper::ParseArray($themeArray);
-        }
-
         return $this->Finish(200, 'ok', $themeArray);
     }
 
@@ -188,13 +171,6 @@ class ThemesController extends WebController
         }
         
         $themeArray = $theme->ToArray(true);
-        if(App::$moduleManager->lang) {
-            $themeArray = App::$moduleManager->lang->ParseArray($themeArray);
-        }
-        else {
-            $themeArray = NoLangHelper::ParseArray($themeArray);
-        }
-
         return $this->Finish(200, 'ok', $themeArray);
     }   
 
@@ -236,13 +212,6 @@ class ThemesController extends WebController
         }
         
         $themeArray = $theme->ToArray(true);
-        if(App::$moduleManager->lang) {
-            $themeArray = App::$moduleManager->lang->ParseArray($themeArray);
-        }
-        else {
-            $themeArray = NoLangHelper::ParseArray($themeArray);
-        }
-
         return $this->Finish(200, 'ok', $themeArray);
     }  
 
@@ -292,13 +261,6 @@ class ThemesController extends WebController
         }
         
         $themeArray = $theme->ToArray(true);
-        if(App::$moduleManager->lang) {
-            $themeArray = App::$moduleManager->lang->ParseArray($themeArray);
-        }
-        else {
-            $themeArray = NoLangHelper::ParseArray($themeArray);
-        }
-
         return $this->Finish(200, 'ok', $themeArray);
     }   
 
@@ -340,13 +302,6 @@ class ThemesController extends WebController
         }
         
         $themeArray = $theme->ToArray(true);
-        if(App::$moduleManager->lang) {
-            $themeArray = App::$moduleManager->lang->ParseArray($themeArray);
-        }
-        else {
-            $themeArray = NoLangHelper::ParseArray($themeArray);
-        }
-
         return $this->Finish(200, 'ok', $themeArray);
     }
 

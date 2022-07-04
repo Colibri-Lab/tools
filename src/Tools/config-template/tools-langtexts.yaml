@@ -639,4 +639,10 @@ tools-storages-themes-fields-current-desc:
   ru: Текущая
 tools-storages-themes-fields-current-note:
   ru: Укажите да, если тема должна быть текущей для домена
+tools-themes-contextmenu-dublicatetheme:
+  ru: Дублировать тему
+tools-themes-windowtitle-edittheme:
+  ru: Редактировать тему
+tools-storages-themes-fields-desc-desc:
+  ru: Описание темы
 ...

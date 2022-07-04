@@ -117,6 +117,9 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
             contextmenu.push({name: 'remove-theme', title: '#{tools-themes-contextmenu-deletetheme;Удалить тему}', icon: Colibri.UI.ContextMenuRemoveIcon});
         }
 
+        contextmenu.push({name: 'separator'});
+        contextmenu.push({name: 'dublicate-theme', title: '#{tools-themes-contextmenu-dublicatetheme;Дублировать тему}', icon: Colibri.UI.ContextMenuDublicateIcon});
+
         if(itemData.data.current == 0) {
             contextmenu.push({name: 'separator'});
             contextmenu.push({name: 'set-current', title: '#{tools-themes-contextmenu-setcurrent;Установить как текущую}', icon: Colibri.UI.SelectCheckIcon});
@@ -136,7 +139,22 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
 
         if(menuData.name == 'edit-theme') {
             const theme = item.tag;
-            
+            Manage.Store.AsyncQuery('manage.storages(themes)').then(storage => {
+                storage = Object.cloneRecursive(storage);
+                delete storage.fields.vars;
+                delete storage.fields.mixins;
+                delete storage.fields.current;
+                delete storage.fields.domain;
+
+                const fields = storage.fields;
+
+                Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme;Редактировать тему}', 450, storage, theme.data)
+                    .then((data) => {
+                        Tools.CreateTheme(data);
+                    })
+                    .catch(() => {});
+
+            });
         }
         else if(menuData.name == 'remove-theme') {
             const theme = item.tag.data;
@@ -156,12 +174,32 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                 Tools.SetThemeAsCurrent(theme.id);
             });
         }
+        else if(menuData.name == 'dublicate-theme') {
+            const theme = item.tag;
+            let data = Object.cloneRecursive(theme.data);
+            data.name = 'dublicated-theme';
+            data.current = 0;
+            delete data.id;
+            Manage.Store.AsyncQuery('manage.storages(themes)').then(storage => {
+                storage = Object.cloneRecursive(storage);
+                storage.fields.vars.component = 'Hidden';
+                storage.fields.mixins.component = 'Hidden';
+                storage.fields.current.component = 'Hidden';
+                storage.fields.domain.component = 'Hidden';
+                Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme;Редактировать тему}', 450, storage, data)
+                    .then((data) => {
+                        Tools.CreateTheme(data);
+                    })
+                    .catch(() => {});
+
+            });
+        }
 
     }
 
     _showVarsAndMixins(selectedTheme) {
-        this._varsGrid.binding = selectedTheme.vars;
-        this._mixinsGrid.binding = selectedTheme.mixins;
+        this._varsGrid.binding = selectedTheme.vars ?? [];
+        this._mixinsGrid.binding = selectedTheme.mixins ?? [];
     }
 
     _getValueField(fields, value) {

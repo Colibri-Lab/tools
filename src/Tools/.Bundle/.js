@@ -257,8 +257,13 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
     CreateTheme(theme) {
         this.Call('Themes', 'Save', theme)
             .then((response) => {
-                const themes = this._store.Query('tools.themes');
-                themes.push(response.result);
+                let themes = this._store.Query('tools.themes');
+                if(theme.id) {
+                    themes = themes.map(theme => theme.id == response.result.id ? response.result : theme);
+                }
+                else {
+                    themes.push(response.result);
+                }
                 this._store.Set('tools.themes', themes);
             }).catch((response) => {
                 App.Notices.Add(new Colibri.UI.Notice(response.result));

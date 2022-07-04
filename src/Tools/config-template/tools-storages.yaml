@@ -676,6 +676,24 @@ themes:
         vertical: false
         viewer: ~
         mask: ""
+    desc:
+      desc: '#{tools-storages-themes-fields-desc-desc;Описание темы}'
+      type: varchar
+      length: "255"
+      component: Text
+      class: string
+      attrs: []
+      params:
+        required: false
+        enabled: true
+        readonly: false
+        visual: false
+        code: ""
+        list: true
+        greed: ""
+        vertical: false
+        viewer: ~
+        mask: ""
     domain:
       group: window
       desc: '#{tools-storages-themes-fields-domain-desc;Ключ домена}'
