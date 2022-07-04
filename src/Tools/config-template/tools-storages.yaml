@@ -647,4 +647,237 @@ backups:
         viewer: ~
         mask: ""
       default: backup_[[date]]_[[index]].backup
+themes:
+  desc: '#{tools-storages-themes-desc;Темы}'
+  access-point: tools
+  models:
+    table: Models\Themes
+    row: Models\Theme
+  params:
+    visible: true
+    maybepublished: true
+  module: Tools
+  fields:
+    name:
+      desc: '#{tools-storages-themes-fields-name-desc;Наименование}'
+      type: varchar
+      length: "255"
+      component: Text
+      class: string
+      attrs: []
+      params:
+        required: false
+        enabled: true
+        readonly: false
+        visual: false
+        code: ""
+        list: true
+        greed: ""
+        vertical: false
+        viewer: ~
+        mask: ""
+    domain:
+      group: window
+      desc: '#{tools-storages-themes-fields-domain-desc;Ключ домена}'
+      note: '#{tools-storages-themes-fields-domain-note;Выберите ключ домена}'
+      type: varchar
+      length: "255"
+      component: Select
+      class: string
+      attrs: []
+      params:
+        required: false
+        enabled: true
+        readonly: true
+        visual: false
+        code: ""
+        list: true
+        greed: ""
+        vertical: false
+        viewer: ~
+        mask: ""
+      lookup:
+        binding: app.sites.domainkeys
+    vars:
+      group: window
+      desc: '#{tools-storages-themes-fields-vars-desc;Переменные}'
+      type: json
+      component: Array
+      class: ArrayField
+      default: json_array()
+      attrs: []
+      params:
+        required: false
+        enabled: true
+        readonly: false
+        visual: false
+        code: ""
+        list: true
+        greed: ""
+        vertical: false
+        viewer: ~
+        mask: ""
+      fields:
+        name:
+          desc: '#{tools-storages-themes-fields-vars-name-desc;Название переменной}'
+          type: varchar
+          length: "255"
+          component: Text
+          class: string
+          attrs: []
+          params:
+            required: false
+            enabled: true
+            readonly: false
+            visual: false
+            code: ""
+            list: false
+            greed: ""
+            vertical: false
+            viewer: ~
+            mask: ""
+        type:
+          desc: '#{tools-storages-themes-fields-vars-type-desc;Тип переменной}'
+          type: varchar
+          length: "255"
+          component: Select
+          class: string
+          attrs: []
+          params:
+            required: false
+            enabled: true
+            readonly: true
+            visual: false
+            code: ""
+            list: false
+            greed: ""
+            vertical: false
+            viewer: ~
+            mask: ""
+          values:
+          - value: color
+            title: '#{tools-storages-themes-fields-vars-type-values-color;Цвет}'
+          - value: font-family
+            title: '#{tools-storages-themes-fields-vars-type-values-font-family;Название
+              шрифта}'
+          - value: size
+            title: '#{tools-storages-themes-fields-vars-type-values-size;Размер}'
+          - value: image
+            title: '#{tools-storages-themes-fields-vars-type-values-image;Изoбражение}'
+          - value: border
+            title: '#{tools-storages-themes-fields-vars-type-values-border;Рамка}'
+          - value: shadow
+            title: '#{tools-storages-themes-fields-vars-type-values-shadow;Тень}'
+        value:
+          desc: '#{tools-storages-themes-fields-vars-value-desc;Значение}'
+          type: varchar
+          length: "255"
+          component: Text
+          class: string
+          attrs: []
+          params:
+            required: false
+            enabled: true
+            readonly: false
+            visual: false
+            code: ""
+            list: false
+            greed: ""
+            vertical: false
+            viewer: ~
+            mask: ""
+    mixins:
+      group: window
+      desc: '#{tools-storages-themes-fields-mixins-desc;Mixin-ы}'
+      type: json
+      component: Array
+      class: ArrayField
+      default: json_array()
+      attrs: []
+      params:
+        required: false
+        enabled: true
+        readonly: false
+        visual: false
+        code: ""
+        list: true
+        greed: ""
+        vertical: true
+        viewer: ~
+        mask: ""
+      fields:
+        name:
+          desc: '#{tools-storages-themes-fields-mixins-name-desc;Наименование}'
+          type: varchar
+          length: "255"
+          component: Text
+          class: string
+          attrs: []
+          params:
+            required: false
+            enabled: true
+            readonly: false
+            visual: false
+            code: ""
+            list: false
+            greed: ""
+            vertical: false
+            viewer: ~
+            mask: ""
+        params:
+          desc: '#{tools-storages-themes-fields-mixins-params-desc;Параметры}'
+          type: json
+          component: Array
+          class: ArrayField
+          attrs: []
+          params:
+            required: false
+            enabled: true
+            readonly: false
+            visual: false
+            code: ""
+            list: false
+            greed: ""
+            vertical: false
+            viewer: ~
+            mask: ""
+          fields:
+            name:
+              desc: '#{tools-storages-themes-fields-mixins-params-name-desc;Название
+                параметра}'
+              type: varchar
+              length: "255"
+              component: Text
+              class: string
+              attrs: []
+              params:
+                required: false
+                enabled: true
+                readonly: false
+                visual: false
+                code: ""
+                list: false
+                greed: ""
+                vertical: false
+                viewer: ~
+                mask: ""
+        value:
+          desc: '#{tools-storages-themes-fields-mixins-value-desc;Тело}'
+          type: varchar
+          length: "1024"
+          component: App.Modules.Manage.UI.TinyMCETextArea
+          class: string
+          attrs: 
+            height: 250
+          params:
+            required: false
+            enabled: true
+            readonly: false
+            visual: false
+            code: scss
+            list: false
+            greed: ""
+            vertical: false
+            viewer: ~
+            mask: ""
 ...

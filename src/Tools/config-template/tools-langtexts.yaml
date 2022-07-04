@@ -426,4 +426,117 @@ tools-execute-killed-success:
   hy: Կատարումը կանգնացվաց է
 tools-backups-points-file:
   ru: Шаблон названия файла
+tools-thtmes-themes-title:
+  ru: Сообщения
+tools-themes-vars-title:
+  ru: Переменные
+tools-themes-vars-search-placeholder:
+  ru: Поиск
+tools-themes-varsempty:
+  ru: Переменных не найдено
+tools-themes-vars-grid-name:
+  ru: Переменная
+tools-themes-vars-grid-value:
+  ru: Значение
+tools-themes-vars-buttons-adddata:
+  ru: Добавить
+tools-themes-vars-buttons-editdata:
+  ru: Редактировать
+tools-themes-vars-buttons-deletedata:
+  ru: Удалить
+tools-themes-mixins-title:
+  ru: Mixin-ы
+tools-themes-mixins-search-placeholder:
+  ru: Поиск
+tools-themes-mixinsempty:
+  ru: Mixin-ов не найдено
+tools-themes-mixins-grid-name:
+  ru: Переменная
+tools-themes-mixins-grid-value:
+  ru: Значение
+tools-themes-mixins-buttons-adddata:
+  ru: Добавить
+tools-themes-mixins-buttons-editdata:
+  ru: Редактировать
+tools-themes-mixins-buttons-deletedata:
+  ru: Удалить
+tools-storages-themes-desc:
+  ru: Темы
+tools-storages-themes-fields-name-desc:
+  ru: Наименование
+tools-storages-themes-fields-domain-desc:
+  ru: Ключ домена
+tools-storages-themes-fields-domain-note:
+  ru: Выберите ключ домена
+tools-storages-themes-fields-vars-desc:
+  ru: Переменные
+tools-storages-themes-fields-vars-name-desc:
+  ru: Название переменной
+tools-storages-themes-fields-vars-type-desc:
+  ru: Тип переменной
+tools-storages-themes-fields-vars-type-values-color:
+  ru: Цвет
+tools-storages-themes-fields-vars-type-values-font-face:
+  ru: Название шрифта
+tools-storages-themes-fields-vars-type-values-size:
+  ru: Размер
+tools-storages-themes-fields-vars-type-values-image:
+  ru: Изoбражение
+tools-storages-themes-fields-vars-type-values-border:
+  ru: Рамка
+tools-storages-themes-fields-vars-type-values-shadow:
+  ru: Тень
+tools-storages-themes-fields-vars-value-desc:
+  ru: Значение
+tools-storages-themes-fields-mixins-desc:
+  ru: Mixin-ы
+tools-storages-themes-fields-mixins-name-desc:
+  ru: Наименование
+tools-storages-themes-fields-mixins-params-desc:
+  ru: Параметры
+tools-storages-themes-fields-mixins-params-name-desc:
+  ru: Название параметра
+tools-storages-themes-fields-mixins-value-desc:
+  ru: Тело
+tools-themes-contextmenu-newtheme:
+  ru: Создать тему
+tools-themes-contextmenu-deletenotice:
+  ru: Удалить шаблон
+tools-themes-contextmenu-deletetheme:
+  ru: Удалить тему
+tools-themes-contextmenu-edittheme:
+  ru: Редактировать тему
+tools-themes-deletetheme:
+  ru: Удаление темы
+tools-themes-deletethememessage:
+  ru: Вы уверены, что хотите удалить тему? На сайтах привязанных к этой теме могут
+    возникнуть артефакты
+tools-storages-themes-fields-vars-type-values-font-family:
+  ru: Название шрифта
+tools-themes-windowtitle-addvartitle:
+  ru: Добавить переменную
+tools-themes-deletevar:
+  ru: Удаление переменной
+tools-themes-deletevarmessage:
+  ru: Вы уверены, что хотите удалить переменную?
+tools-themes-deletevars:
+  ru: Удаление переменных
+tools-themes-deletevarsmessage:
+  ru: Вы уверены, что хотите удалить переменные?
+tools-themes-windowtitle-editvartitle:
+  ru: Редактировать переменную
+tools-themes-windowtitle-addmixintitle:
+  ru: Добавить Mixin
+tools-themes-windowtitle-editmixintitle:
+  ru: Редактировать Mixin
+tools-themes-deletemixins:
+  ru: Удаление Mixin-ов
+tools-themes-deletemixinsmessage:
+  ru: Вы уверены, что хотите удалить Mixin-ы?
+tools-themes-deletemixin:
+  ru: Удаление Mixin-а
+tools-themes-deletemixinmessage:
+  ru: Вы уверены, что хотите удалить Mixin?
+tools-themes-mixins-grid-params:
+  ru: Параметры
 ...

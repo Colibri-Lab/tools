@@ -31,21 +31,20 @@ class BackupWorker extends BaseWorker
         try {
             
             $backup->Run($this->_log);
+
             
         }
         catch(Throwable $e) { 
             $this->_log->emergency('Exception: '.$e->getMessage().' '.$e->getFile().' '.$e->getLine());
         }
-        finally {
 
-            $backup->running = false;
-            $backup->Save();
-            
-            $this->_log->info("--complete--");
-            $comet->SendToUser($user, 'message', (object)['text' => 'Backup complete! Job: '.$worker->key.', backup: '.$backup->id, 'exec' => '() => App.Router.Navigate(\'/mainframe/more/backup/\', {}, true, true)']);
+        $backup->running = 0;
+        $backup->Save();
+
+        $this->_log->info("--complete--");
+        $comet->SendToUser($user, 'message', (object)['text' => 'Backup complete! Job: '.$worker->key.', backup: '.$backup->id, 'exec' => '() => App.Router.Navigate(\'/mainframe/more/backup/\', {}, true, true)']);    
+
     
-        } 
-        
 
     }
 }

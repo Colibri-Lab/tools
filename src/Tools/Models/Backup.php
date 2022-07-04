@@ -34,7 +34,7 @@ use PhpOffice\PhpWord\Shared\ZipArchive;
  * @property ObjectField|null $cron #{tools-storages-backups-fields-cron-desc;Запись в CRON}
  * @property string|null $file #{tools-storages-backups-fields-file-desc;Шаблон названия файла}
  * endregion Properties;
- * @property-read string $command команда для выполнения
+ * @property-read string $controller вызов контроллера
  */
 class Backup extends BaseModelDataRow {
 	
@@ -45,16 +45,14 @@ class Backup extends BaseModelDataRow {
 	public const StatusStarted = 'started';
 	# endregion Consts;
 
-	public function getPropertyCommand(): string
+
+	public function getPropertyController(): string
 	{
 		$currentUser = SecurityModule::$instance->current;
         $userGUID = $currentUser ? md5($currentUser->id) : null;
-
-		$worker = new BackupWorker(0, 0, 'backup-'.$this->id);
-		$process = new Process($worker);
-		$process->params = ['backup' => $this->id, 'user' => $userGUID];
-		return $process->command;
+		return '/usr/bin/sh '.App::$appRoot . 'bin/tools-backup.sh '.$this->id.' '.$userGUID;
 	}
+
 
 	public function Run(Logger $logger): void 
 	{
@@ -89,7 +87,7 @@ class Backup extends BaseModelDataRow {
 
 	public function Save(): bool
 	{
-		$cronCommand = $this->cron->minute->value.' '.$this->cron->hour->value.' '.$this->cron->day->value.' '.$this->cron->month->value.' '.$this->cron->dayofweek->value.' root '.$this->command;
+		$cronCommand = $this->cron->minute->value.' '.$this->cron->hour->value.' '.$this->cron->day->value.' '.$this->cron->month->value.' '.$this->cron->dayofweek->value.' root '.$this->controller;
 		$enabledCrons = $this->_readCronFile();
 	
 		if($this->status->value === self::StatusStarted) {
@@ -115,7 +113,7 @@ class Backup extends BaseModelDataRow {
 		$lines = $lines ? explode("\n", $lines) : [];
 
 		$ret = [];
-		for($i=0; $i<count($lines); $i+=2) {
+		for($i=0; $i<count($lines) - 1; $i+=2) {
 			$ret[(string)trim($lines[$i], '# ')] = $lines[$i+1];
 		}
 
@@ -125,14 +123,17 @@ class Backup extends BaseModelDataRow {
 
 	private function _saveCronFile($commands): void
 	{
+
 		$lines = [];
 		$path = App::$appRoot . 'bin/cron';
+		shell_exec('sudo chmod 777 '.$path);
 		foreach($commands as $id => $command) {
 			$lines[] = '# '.$id;
 			$lines[] = $command;
 		}
 
-		File::Write($path, implode("\n", $lines));
+		File::Write($path, implode("\n", $lines)."\n");
+		shell_exec('sudo chmod 655 '.$path);
 
 	}
 

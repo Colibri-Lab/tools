@@ -11,6 +11,8 @@ use Colibri\App;
 use Colibri\Common\NoLangHelper;
 use App\Modules\Tools\Cron\Manager;
 use App\Modules\Tools\Models\Backup;
+use App\Modules\Tools\Threading\BackupWorker;
+use Colibri\Threading\Process;
 
 class BackupController extends WebController
 {
@@ -102,5 +104,25 @@ class BackupController extends WebController
 
 
     }
+
+    public function Cron(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
+    {
+        $backup = $get->backup;
+        $user = $get->user;
+
+        $backup = Backups::LoadById($backup);
+        if(!$backup) {
+            return $this->Finish(404, 'Not Found');
+        }
+
+		$worker = new BackupWorker(0, 0, 'backup-'.$backup->id);
+		$process = new Process($worker);
+		$process->params = ['backup' => $backup->id, 'user' => $user];
+        $process->Run();
+
+        exit;
+
+    }
+    
 
 }

@@ -1,4 +1,4 @@
-App.Modules.Tools.BackupsGrid = class extends Colibri.UI.Grid {
+App.Modules.Tools.MixinsGrid = class extends Colibri.UI.Grid {
 
     constructor(name, container) {
         super(name, container);
@@ -17,16 +17,8 @@ App.Modules.Tools.BackupsGrid = class extends Colibri.UI.Grid {
         this.ClearAllRows();
         this.rows.title = '';
         
-        let found = [];
         data.forEach((d) => {
-            found.push('data' + d.id);
-            let row = this.FindRow('data' + d.id);
-            if(!row) {
-                this.rows.Add('data' + d.id, d);
-            }
-            else {
-                row.value = d;
-            }
+            this.rows.Add('data' + d.name, d);
         });
     }
 

@@ -19,6 +19,7 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         this._store.AddPathLoader('tools.settings', () => this.Settings(true));
         this._store.AddPathLoader('tools.notices', () => this.Notices(true));
         this._store.AddPathLoader('tools.backups', () => this.Backups(true));
+        this._store.AddPathLoader('tools.themes', () => this.Themes(true));
 
         console.log('Initializing module Tools');
 
@@ -241,6 +242,89 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
             });
     }
 
+    Themes(returnPromise = false) {
+        const promise = this.Call('Themes', 'List')
+        if(returnPromise) {
+            return promise;
+        }
+        promise.then((response) => {
+            this._store.Set('tools.themes', response.result);
+        }).catch((response) => {
+            App.Notices.Add(new Colibri.UI.Notice(response.result));
+        });
+    }
+
+    CreateTheme(theme) {
+        this.Call('Themes', 'Save', theme)
+            .then((response) => {
+                const themes = this._store.Query('tools.themes');
+                themes.push(response.result);
+                this._store.Set('tools.themes', themes);
+            }).catch((response) => {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            });
+    }
+    
+    DeleteTheme(themeId) {
+        this.Call('Themes', 'Delete', {theme: themeId})
+            .then((response) => {
+                let themes = this._store.Query('tools.themes');
+                let newThemes = [];
+                themes.forEach((t) => {
+                    if(t.id != themeId) {
+                        newThemes.push(t);
+                    }
+                })
+                this._store.Set('tools.themes', newThemes);
+            }).catch((response) => {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            });
+    }
+
+    SaveThemeVar(themeId, varData) {
+        this.Call('Themes', 'SaveVar', {id: themeId, var: varData})
+            .then((response) => {
+                let themes = this._store.Query('tools.themes');
+                themes = themes.map(theme => theme.id == response.result.id ? response.result : theme);
+                this._store.Set('tools.themes', themes);
+            }).catch((response) => {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            });
+    }
+
+    DeleteThemeVars(themeId, varNames) {
+        this.Call('Themes', 'DeleteVars', {id: themeId, vars: varNames})
+            .then((response) => {
+                let themes = this._store.Query('tools.themes');
+                themes = themes.map(theme => theme.id == response.result.id ? response.result : theme);
+                this._store.Set('tools.themes', themes);
+            }).catch((response) => {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            });
+    }
+
+    SaveThemeMixin(themeId, mixinData) {
+        this.Call('Themes', 'SaveMixin', {id: themeId, mixin: mixinData})
+            .then((response) => {
+                let themes = this._store.Query('tools.themes');
+                themes = themes.map(theme => theme.id == response.result.id ? response.result : theme);
+                this._store.Set('tools.themes', themes);
+            }).catch((response) => {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            });
+    }
+
+    DeleteThemeMixins(themeId, mixinNames) {
+        this.Call('Themes', 'DeleteMixins', {id: themeId, mixins: mixinNames})
+            .then((response) => {
+                let themes = this._store.Query('tools.themes');
+                themes = themes.map(theme => theme.id == response.result.id ? response.result : theme);
+                this._store.Set('tools.themes', themes);
+            }).catch((response) => {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            });
+    }
+
     
     _cometEventReceived(event, args) {
         if(args.event.action.substring(0, 7) == 'backup-') {
@@ -249,6 +333,17 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
             }
             this._backuplog.shown = true;
             this._backuplog.Add(args.event.message);
+            if(args.event.message.message === '--complete--') {
+                const id = parseInt(args.event.action.replaceAll('backup-', ''));
+                this._store.AsyncQuery('tools.backups').then((backups) => {
+                    backups.forEach(b => {
+                        if(b.id == id) {
+                            b.running = false;
+                        }
+                    });
+                    this._store.Set('tools.backups', backups);
+                });
+            }
         }
     }
 

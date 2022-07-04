@@ -1,0 +1,65 @@
+<div ComponentName="App.Modules.Tools.ThemesPage">
+
+
+    <Split name="split" shown="true" hasHandle="true">
+        <Pane name="themes-pane" shown="true">
+            <H2 name="ttl" shown="true">#{tools-thtmes-themes-title;Домены и темы}</H2>
+            <App.Modules.Tools.DomainsAndThemesTree name="themes" shown="true" hasContextMenu="true" binding="app.sites.domainkeys;app.tools.themes" />
+        </Pane>
+        <Tabs name="vars-pane" shown="true">
+            <component-header>
+                <component Component="Colibri.UI.Button" shown="true" name="vars-button" value="Переменные" />
+                <component Component="Colibri.UI.Button" shown="true" name="mixins-button" value="Mixin-ы" />
+            </component-header>     
+            <component-container>
+                <Pane name="vars" shonw="true">
+
+                    <H2 name="ttl" shown="true">#{tools-themes-vars-title;Переменные}</H2>
+                    <Pane name="search-pane" shown="true">
+                        <Input name="search-input" enabled="false" shown="true" placeholder="#{tools-themes-vars-search-placeholder;Поиск}" />
+                    </Pane>
+                    <App.Modules.Tools.VarsGrid name="vars" shown="true" enabled="false" hasContextMenu="true" selectionMode="fullrow" showCheckboxes="true" binding="app.sites.pubs" emptyMessage="#{tools-themes-varsempty;Переменных не найдено}">
+                        <component-header>
+                            <component-columns>
+                                <Grid.Column name="name" shown="true" value="#{tools-themes-vars-grid-name;Переменная}" width="30%" resizable="true" />
+                                <Grid.Column name="value" shown="true" value="#{tools-themes-vars-grid-value;Значение}" width="70%" resizable="true"/>
+                            </component-columns>
+                        </component-header>
+                    </App.Modules.Tools.VarsGrid>
+        
+                    <FlexBox name="buttons-pane" shown="true">
+                        <SuccessButton name="add-data" shown="true" enabled="false" icon="Colibri.UI.ContextMenuAddIcon">#{tools-themes-vars-buttons-adddata;Добавить}</SuccessButton>
+                        <SuccessButton name="edit-data" shown="true" enabled="false" icon="Colibri.UI.ContextMenuEditIcon">#{tools-themes-vars-buttons-editdata;Редактировать}</SuccessButton>
+                        <SuccessButton name="delete-data" shown="true" enabled="false" icon="Colibri.UI.ContextMenuRemoveIcon">#{tools-themes-vars-buttons-deletedata;Удалить}</SuccessButton>
+                    </FlexBox>
+        
+                </Pane>
+                <Pane name="mixins" shonw="true">
+
+                    <H2 name="ttl" shown="true">#{tools-themes-mixins-title;Mixin-ы}</H2>
+                    <Pane name="search-pane" shown="true">
+                        <Input name="search-input" enabled="false" shown="true" placeholder="#{tools-themes-mixins-search-placeholder;Поиск}" />
+                    </Pane>
+                    <App.Modules.Tools.MixinsGrid name="mixins" shown="true" enabled="false" hasContextMenu="true" selectionMode="fullrow" showCheckboxes="true" binding="app.sites.pubs" emptyMessage="#{tools-themes-mixinsempty;Mixin-ов не найдено}">
+                        <component-header>
+                            <component-columns>
+                                <Grid.Column name="name" shown="true" value="#{tools-themes-mixins-grid-name;Переменная}" width="30%" resizable="true" />
+                                <Grid.Column name="params" shown="true" value="#{tools-themes-mixins-grid-params;Параметры}" width="30%" resizable="true" viewer="Colibri.UI.ArrayViewer" />
+                                <Grid.Column name="value" shown="true" value="#{tools-themes-mixins-grid-value;Значение}" width="40%" resizable="true"/>
+                            </component-columns>
+                        </component-header>
+                    </App.Modules.Tools.MixinsGrid>
+        
+                    <FlexBox name="buttons-pane" shown="true">
+                        <SuccessButton name="add-data" shown="true" enabled="false" icon="Colibri.UI.ContextMenuAddIcon">#{tools-themes-mixins-buttons-adddata;Добавить}</SuccessButton>
+                        <SuccessButton name="edit-data" shown="true" enabled="false" icon="Colibri.UI.ContextMenuEditIcon">#{tools-themes-mixins-buttons-editdata;Редактировать}</SuccessButton>
+                        <SuccessButton name="delete-data" shown="true" enabled="false" icon="Colibri.UI.ContextMenuRemoveIcon">#{tools-themes-mixins-buttons-deletedata;Удалить}</SuccessButton>
+                    </FlexBox>
+        
+                </Pane>
+            </component-container>
+        </Tabs>
+    </Split>    
+    
+
+</div>
