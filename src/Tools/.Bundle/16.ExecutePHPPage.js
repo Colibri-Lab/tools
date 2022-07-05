@@ -43,7 +43,7 @@ App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component
         this._button.AddHandler('Clicked', (event, args) => this.__runClicked(event, args));
         this._kill.AddHandler('Clicked', (event, args) => this.__killClicked(event, args));
 
-        App.Comet.AddHandler('EventReceived', (event, args) => this._cometEventReceived(event, args));
+        App.Comet && App.Comet.AddHandler('EventReceived', (event, args) => this._cometEventReceived(event, args));
 
     }
 

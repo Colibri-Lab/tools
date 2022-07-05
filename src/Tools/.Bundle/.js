@@ -25,7 +25,7 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
 
         App.AddHandler('ApplicationReady', (event, args) => {
             this.Render(document.body);
-            App.Comet.AddHandler('EventReceived', (event, args) => this._cometEventReceived(event, args));
+            App.Comet && App.Comet.AddHandler('EventReceived', (event, args) => this._cometEventReceived(event, args));
         });
 
         this.AddHandler('CallProgress', (event, args) => {
