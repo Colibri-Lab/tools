@@ -14,18 +14,14 @@ App.Modules.Tools.VarsGrid = class extends Colibri.UI.Grid {
             return;
         }
         
-        this.ClearAllRows();
         this.rows.title = '';
         
         let found = [];
         data.forEach((d) => {
-            found.push('data' + d.id);
+            found.push('data' + d.name);
             let row = this.FindRow('data' + d.name);
             if(!row) {
-                row = this.rows.Add('data' + d.name, d);
-            }
-            else {
-                row.value = d;
+                row = this.rows.Add('data' + d.name, {});
             }
 
             let viewer = null;
@@ -52,6 +48,13 @@ App.Modules.Tools.VarsGrid = class extends Colibri.UI.Grid {
             row.value = d;
 
         });
+
+        this.ForEveryRow((name, row) => {
+            if(found.indexOf(name) === -1) {
+                row.Dispose();
+            }
+        })
+
     }
 
 }

@@ -119,7 +119,7 @@ class Module extends BaseModule
 
     public function Theme(string $domain): ?string
     {
-        $theme = Themes::LoadCurrent($domain);
+        $theme = Themes::LoadCurrent($domain, true);
         return $theme ? $theme->Generate() : null;        
     }
 

@@ -9,6 +9,7 @@ use Colibri\Data\Storages\Storage;
 use Colibri\Utils\Logs\Logger;
 use Colibri\Data\Storages\Models\DataTable as BaseModelDataTable;
 use App\Modules\Tools\Models\Theme;
+use Colibri\App;
 
 /**
  * Таблица, представление данных в хранилище #{tools-storages-themes-desc;Темы}
@@ -91,9 +92,13 @@ class Themes extends BaseModelDataTable {
      * @param string $domain
      * @return Theme|null
      */
-    static function LoadCurrent(string $domain) : Theme|null 
+    static function LoadCurrent(string $domain, bool $useCookie = false) : Theme|null 
     {
-        $table = self::LoadByFilter(1, 1, '{domain}=[[domain:string]] and {current}=1', null, ['domain' => $domain], false);
+        $selectedTheme = null;
+        if($useCookie) {
+            $selectedTheme = App::$request->cookie->theme ?? null;
+        }
+        $table = self::LoadByFilter(1, 1, '{domain}=[[domain:string]]'.(!$selectedTheme ? ' and {current}=1' : ' and {name}=\''.$selectedTheme.'\''), null, ['domain' => $domain], false);
         return $table && $table->Count() > 0 ? $table->First() : null;
     }
 

@@ -33,10 +33,16 @@ class Theme extends BaseModelDataRow {
 
     public function Generate(): string
     {
-        $cachePath = App::$config->Query('cache')->GetValue();
-        $cacheName = md5($this->name).'.scss';
+        $cachePath = 'res/themes/';
+        $cacheName = $this->domain . '.' . $this->name . '.scss';
+
+        $file = new File(App::$webRoot . $cachePath . $cacheName);
+        if(File::Exists(App::$webRoot . $cachePath . $cacheName) && $file->attributes->modified >= $this->datemodified->getTimestamp()) {
+            return App::$webRoot . $cachePath . $cacheName;
+        }
 
         $fileData = [];
+        $fileData[] = '$theme: "'.$this->name.'";';
         foreach($this->mixins as $mixin) {
             $params = [];
             foreach($mixin->params as $param) {
@@ -50,7 +56,6 @@ class Theme extends BaseModelDataRow {
         }
 
         File::Write(App::$webRoot . $cachePath . $cacheName, implode("\n", $fileData));
-
         return App::$webRoot . $cachePath . $cacheName;
     }
 
