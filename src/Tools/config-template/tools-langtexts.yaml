@@ -605,44 +605,86 @@ tools-storages-themes-fields-vars-type-values-font-family:
   hy: Տառատեսակի անվանումը
 tools-themes-windowtitle-addvartitle:
   ru: Добавить переменную
+  en: Add a variable
+  hy: Ավելացնել փոփոխական
 tools-themes-deletevar:
   ru: Удаление переменной
+  en: Deleting a variable
+  hy: Փոփոխական հեռացում
 tools-themes-deletevarmessage:
   ru: Вы уверены, что хотите удалить переменную?
+  en: Are you sure you want to delete the variable?
+  hy: Վստահ եք, որ ցանկանում եք հեռացնել փոփոխական?
 tools-themes-deletevars:
   ru: Удаление переменных
+  en: Deleting variables
+  hy: Փոփոխականների հեռացում
 tools-themes-deletevarsmessage:
   ru: Вы уверены, что хотите удалить переменные?
+  en: Are you sure you want to delete variables?
+  hy: 'Համոզված եք, որ ցանկանում եք հեռացնել փոփոխականները:'
 tools-themes-windowtitle-editvartitle:
   ru: Редактировать переменную
+  en: Edit a variable
+  hy: Խմբագրել փոփոխական
 tools-themes-windowtitle-addmixintitle:
   ru: Добавить Mixin
+  en: Add Mixin
+  hy: Ավելացնել Mixin
 tools-themes-windowtitle-editmixintitle:
   ru: Редактировать Mixin
+  en: Edit Mixin
+  hy: Խմբագրել Mixin
 tools-themes-deletemixins:
   ru: Удаление Mixin-ов
+  en: Removing Mixins
+  hy: Mixin-երի հեռացում
 tools-themes-deletemixinsmessage:
   ru: Вы уверены, что хотите удалить Mixin-ы?
+  en: Are you sure you want to delete Mixins?
+  hy: 'Համոզված եք, որ ցանկանում եք ջնջել Mixin-ները:'
 tools-themes-deletemixin:
   ru: Удаление Mixin-а
+  en: Deleting a Mixin
+  hy: Հեռացում Mixin-a
 tools-themes-deletemixinmessage:
   ru: Вы уверены, что хотите удалить Mixin?
+  en: Are you sure you want to delete Mixin?
+  hy: 'Համոզված եք, որ ցանկանում եք ջնջել Mixin-ը:'
 tools-themes-mixins-grid-params:
   ru: Параметры
+  en: Parameters
+  hy: Պարամետրեր
 tools-themes-contextmenu-setcurrent:
   ru: Установить как текущую
+  en: Set as current
+  hy: Սահմանել որպես ընթացիկ
 tools-themes-setcurrenttheme:
   ru: Установка
+  en: Installation
+  hy: Տեղադրում
 tools-themes-setcurrentthememessage:
   ru: Вы уверены, что хотите установить тему как текущую?
+  en: Are you sure you want to set the theme as the current one?
+  hy: Դուք համոզված եք, որ ցանկանում եք սահմանել այն թեման է ինչպես ընթացիկ?
 tools-storages-themes-fields-current-desc:
   ru: Текущая
+  en: Current
+  hy: Ընթացիկ
 tools-storages-themes-fields-current-note:
   ru: Укажите да, если тема должна быть текущей для домена
+  en: Specify yes if the topic should be the current one for the domain
+  hy: Նշեք Այո, եթե թեման պետք է լինի ընթացիկ տիրույթում
 tools-themes-contextmenu-dublicatetheme:
   ru: Дублировать тему
+  en: Duplicate a topic
+  hy: Կրկնօրինակել թեման
 tools-themes-windowtitle-edittheme:
   ru: Редактировать тему
+  en: Edit a topic
+  hy: Խմբագրել թեման
 tools-storages-themes-fields-desc-desc:
   ru: Описание темы
+  en: Topic description
+  hy: Թեմայի նկարագրությունը
 ...
