@@ -6,8 +6,6 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         this.AddClass('app-themes-page-component');
 
         this._domainsAndThemes = this.Children('split/themes-pane/themes');
-        this._varsSearchInput = this.Children('split/vars-pane/vars/search-pane/search-input');
-        this._mixinsSearchInput = this.Children('split/vars-pane/mixins/search-pane/search-input');
         this._varsGrid = this.Children('split/vars-pane/vars/vars');
         this._mixinsGrid = this.Children('split/vars-pane/mixins/mixins');
         
@@ -24,6 +22,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
 
         this._domainsAndThemes.AddHandler(['SelectionChanged', 'NodesLoaded'], (event, args) => this.__themesSelectionChanged(event, args));
         this._domainsAndThemes.AddHandler('NodeEditCompleted', (event, args) => this.__themesNodeEditCompleted(event, args));
+        this._domainsAndThemes.AddHandler('DoubleClicked', (event, args) => this.__themesNodeDoubleClicked(event, args));
 
         this._varsGrid.AddHandler(['SelectionChanged', 'CheckChanged'], (event, args) => this.__varsSelectionChagned(event, args));
         this._mixinsGrid.AddHandler(['SelectionChanged', 'CheckChanged'], (event, args) => this.__mixinsSelectionChagned(event, args));
@@ -49,8 +48,6 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         const selectedMixin = this._mixinsGrid.selected;
         const checkedMixins = this._mixinsGrid.checked;
         
-        this._varsSearchInput.enabled = selected && selected.tag.type == 'theme';
-        this._mixinsSearchInput.enabled = selected && selected.tag.type == 'theme';
         this._varsGrid.enabled = selected && selected.tag.type == 'theme';
         this._mixinsGrid.enabled = selected && selected.tag.type == 'theme';
         
@@ -115,14 +112,12 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         else {
             contextmenu.push({name: 'edit-theme', title: '#{tools-themes-contextmenu-edittheme;Редактировать тему}', icon: Colibri.UI.ContextMenuEditIcon});
             contextmenu.push({name: 'remove-theme', title: '#{tools-themes-contextmenu-deletetheme;Удалить тему}', icon: Colibri.UI.ContextMenuRemoveIcon});
-        }
-
-        contextmenu.push({name: 'separator'});
-        contextmenu.push({name: 'dublicate-theme', title: '#{tools-themes-contextmenu-dublicatetheme;Дублировать тему}', icon: Colibri.UI.ContextMenuDublicateIcon});
-
-        if(itemData.data.current == 0) {
             contextmenu.push({name: 'separator'});
-            contextmenu.push({name: 'set-current', title: '#{tools-themes-contextmenu-setcurrent;Установить как текущую}', icon: Colibri.UI.SelectCheckIcon});
+            contextmenu.push({name: 'dublicate-theme', title: '#{tools-themes-contextmenu-dublicatetheme;Дублировать тему}', icon: Colibri.UI.ContextMenuDublicateIcon});
+            if(itemData.data.current == 0) {
+                contextmenu.push({name: 'separator'});
+                contextmenu.push({name: 'set-current', title: '#{tools-themes-contextmenu-setcurrent;Установить как текущую}', icon: Colibri.UI.SelectCheckIcon});
+            }
         }
 
         args.item.contextmenu = contextmenu;
@@ -187,6 +182,37 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                 storage.fields.current.component = 'Hidden';
                 storage.fields.domain.component = 'Hidden';
                 Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme;Редактировать тему}', 450, storage, data)
+                    .then((data) => {
+                        Tools.CreateTheme(data);
+                    })
+                    .catch(() => {});
+
+            });
+        }
+
+    }
+
+    __themesNodeDoubleClicked(event, args) {
+        const theme = this._domainsAndThemes.selected?.tag;
+        if(!theme) {
+            return;
+        }
+        
+        if(theme.type == 'domain') {
+            const node = this._domainsAndThemes.AddNew(this._domainsAndThemes.selected, 'UNTITLED', {new: true, name: 'UNTITLED'});
+            node.editable = true;
+            node.Edit();
+            
+        }
+        else {
+            Manage.Store.AsyncQuery('manage.storages(themes)').then(storage => {
+                storage = Object.cloneRecursive(storage);
+                delete storage.fields.vars;
+                delete storage.fields.mixins;
+                delete storage.fields.current;
+                delete storage.fields.domain;
+
+                Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme;Редактировать тему}', 450, storage, theme.data)
                     .then((data) => {
                         Tools.CreateTheme(data);
                     })

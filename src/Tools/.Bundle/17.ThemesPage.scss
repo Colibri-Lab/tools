@@ -14,7 +14,7 @@
             &.app-component-shown {
                 display: grid;
             }
-            grid-template-rows: 40px 50px calc(100% - 140px) 50px;
+            grid-template-rows: 40px calc(100% - 90px) 50px;
         }
         
         [data-object-name="buttons-pane"] {
