@@ -42,7 +42,7 @@ class Theme extends BaseModelDataRow {
         }
 
         $fileData = [];
-        $fileData[] = '$theme: "'.$this->name.'";';
+        $fileData[] = '$theme: "'.$this->domain . '-' . $this->name.'";';
         foreach($this->mixins as $mixin) {
             $params = [];
             foreach($mixin->params as $param) {
