@@ -90,7 +90,7 @@ class Notices extends BaseModelDataTable {
      */
     static function LoadByName(string $name) : Notice|null 
     {
-        $table = self::LoadByFilter(1, 1, '{name}=[[name:integer]]', null, ['name' => $name], false);
+        $table = self::LoadByFilter(1, 1, '{name}=[[name:string]]', null, ['name' => $name], false);
         return $table && $table->Count() > 0 ? $table->First() : null;
     }
 
