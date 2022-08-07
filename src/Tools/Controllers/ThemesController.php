@@ -5,14 +5,6 @@ namespace App\Modules\Tools\Controllers;
 use Colibri\Web\RequestCollection;
 use Colibri\Web\Controller as WebController;
 use App\Modules\Security\Module as SecurityModule;
-use App\Modules\Tools\Models\Settings;
-use App\Modules\Tools\Models\Backups;
-use Colibri\App;
-use Colibri\Common\NoLangHelper;
-use App\Modules\Tools\Cron\Manager;
-use App\Modules\Tools\Models\Backup;
-use App\Modules\Tools\Threading\BackupWorker;
-use Colibri\Threading\Process;
 use App\Modules\Tools\Models\Themes;
 
 class ThemesController extends WebController

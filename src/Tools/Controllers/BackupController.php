@@ -5,12 +5,8 @@ namespace App\Modules\Tools\Controllers;
 use Colibri\Web\RequestCollection;
 use Colibri\Web\Controller as WebController;
 use App\Modules\Security\Module as SecurityModule;
-use App\Modules\Tools\Models\Settings;
 use App\Modules\Tools\Models\Backups;
 use Colibri\App;
-use Colibri\Common\NoLangHelper;
-use App\Modules\Tools\Cron\Manager;
-use App\Modules\Tools\Models\Backup;
 use App\Modules\Tools\Threading\BackupWorker;
 use Colibri\Threading\Process;
 
@@ -30,14 +26,7 @@ class BackupController extends WebController
         $backups = Backups::LoadAll();
         $backupsArray = [];
         foreach($backups as $backup) {
-            $backupArray = $backup->ToArray(true);
-            if(App::$moduleManager->lang) {
-                $backupArray = App::$moduleManager->lang->ParseArray($backupArray);
-            }
-            else {
-                $backupArray = NoLangHelper::ParseArray($backupArray);
-            }
-            $backupsArray[] = $backupArray;
+            $backupsArray[] = $backup->ToArray(true);
         }
         return $this->Finish(200, 'ok', $backupsArray);
     }
@@ -91,16 +80,8 @@ class BackupController extends WebController
         if(!$backup->Save()) {
             return $this->Finish(400, 'Bad request');
         }
-        
-        $backupArray = $backup->ToArray(true);
-        if(App::$moduleManager->lang) {
-            $backupArray = App::$moduleManager->lang->ParseArray($backupArray);
-        }
-        else {
-            $backupArray = NoLangHelper::ParseArray($backupArray);
-        }
 
-        return $this->Finish(200, 'ok', $backupArray);
+        return $this->Finish(200, 'ok', $backup->ToArray(true));
 
 
     }
