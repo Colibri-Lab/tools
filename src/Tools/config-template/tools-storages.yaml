@@ -14,7 +14,7 @@ settings:
       type: varchar
       length: 255
       class: string
-      component: Text
+      component: Colibri.UI.Forms.Text
       desc: Наименование настройки
       note: Введите название настройки, которое будете использовать в дальнейшем.
         Латинские буквы, подчеркивание.
@@ -25,7 +25,7 @@ settings:
       class: ValueField
       desc: Тип настройки
       note: Выберите тип настройки
-      component: Select
+      component: Colibri.UI.Forms.Select
       default: text
       values:
       - value: integer
@@ -64,7 +64,7 @@ settings:
       type: varchar
       length: 1024
       class: string
-      component: TextArea
+      component: Colibri.UI.Forms.TextArea
       desc: Описание настройки
       note: Опишите настройку, для чего она нужна, где используется
       required: false
@@ -74,7 +74,7 @@ settings:
     value:
       type: varchar
       length: 1024
-      component: TextArea
+      component: Colibri.UI.Forms.TextArea
       class: string
       params:
         required: false
@@ -104,7 +104,7 @@ notices:
       type: varchar
       length: 255
       class: string
-      component: Text
+      component: Colibri.UI.Forms.Text
       desc: Наименование шаблона
       note: Введите название шаблона, которое будете использовать в дальнейшем. Латинские
         буквы, подчеркивание.
@@ -114,7 +114,7 @@ notices:
       type: varchar
       length: 255
       class: string
-      component: Select
+      component: Colibri.UI.Forms.Select
       desc: Тема письма
       note: Введите тему письма
       params:
@@ -129,7 +129,7 @@ notices:
       type: varchar
       length: 1024
       class: string
-      component: TextArea
+      component: Colibri.UI.Forms.TextArea
       desc: Тело письма
       note: Введите тело письма
       required: false
@@ -158,7 +158,7 @@ backups:
       desc: '#{tools-storages-backups-fields-status-desc;Статус}'
       type: varchar
       length: "255"
-      component: Select
+      component: Colibri.UI.Forms.Select
       class: ValueField
       attrs: []
       params:
@@ -183,7 +183,7 @@ backups:
       desc: '#{tools-storages-backups-fields-running-desc;Запущено}'
       type: tinyint
       length: 1
-      component: Hidden
+      component: Colibri.UI.Forms.Hidden
       class: bool
       attrs: []
       params:
@@ -205,7 +205,7 @@ backups:
         создание точки восстановления}'
       type: varchar
       length: "255"
-      component: Text
+      component: Colibri.UI.Forms.Text
       class: string
       attrs: []
       params:
@@ -225,7 +225,7 @@ backups:
       note: '#{tools-storages-backups-fields-cron-note;Введите запись, которую нужно
         будет внести в CRON}'
       type: json
-      component: Object
+      component: Colibri.UI.Forms.Object
       class: ObjectField
       default: json_object()
       attrs: []
@@ -246,7 +246,7 @@ backups:
           note: '#{tools-storages-backups-fields-cron-minute-note;Выберите минуту}'
           type: varchar
           length: "2"
-          component: Select
+          component: Colibri.UI.Forms.Select
           class: ValueField
           attrs: []
           params:
@@ -387,7 +387,7 @@ backups:
           note: '#{tools-storages-backups-fields-cron-hour-note;Выберите час}'
           type: varchar
           length: "2"
-          component: Select
+          component: Colibri.UI.Forms.Select
           class: ValueField
           attrs: []
           params:
@@ -456,7 +456,7 @@ backups:
           note: '#{tools-storages-backups-fields-cron-day-note;Выберите день}'
           type: varchar
           length: "2"
-          component: Select
+          component: Colibri.UI.Forms.Select
           class: ValueField
           attrs: []
           params:
@@ -543,7 +543,7 @@ backups:
           note: '#{tools-storages-backups-fields-cron-month-note;Выберите месяц}'
           type: varchar
           length: "2"
-          component: Select
+          component: Colibri.UI.Forms.Select
           class: ValueField
           attrs: []
           params:
@@ -593,7 +593,7 @@ backups:
             недели}'
           type: varchar
           length: "1"
-          component: Select
+          component: Colibri.UI.Forms.Select
           class: ValueField
           attrs: []
           params:
@@ -632,7 +632,7 @@ backups:
         backup_[[date]]_[[index]].backup}'
       type: varchar
       length: "255"
-      component: Text
+      component: Colibri.UI.Forms.Text
       class: string
       attrs: []
       params:
@@ -662,7 +662,7 @@ themes:
       desc: '#{tools-storages-themes-fields-name-desc;Наименование}'
       type: varchar
       length: "255"
-      component: Text
+      component: Colibri.UI.Forms.Text
       class: string
       attrs: []
       params:
@@ -680,7 +680,7 @@ themes:
       desc: '#{tools-storages-themes-fields-desc-desc;Описание темы}'
       type: varchar
       length: "255"
-      component: Text
+      component: Colibri.UI.Forms.Text
       class: string
       attrs: []
       params:
@@ -700,7 +700,7 @@ themes:
       note: '#{tools-storages-themes-fields-domain-note;Выберите ключ домена}'
       type: varchar
       length: "255"
-      component: Select
+      component: Colibri.UI.Forms.Select
       class: string
       attrs: []
       params:
@@ -722,7 +722,7 @@ themes:
       note: '#{tools-storages-themes-fields-current-note;Укажите да, если тема должна быть текущей для домена}'
       type: tinyint
       length: "1"
-      component: Checkbox
+      component: Colibri.UI.Forms.Checkbox
       class: bool
       attrs: []
       params:
@@ -740,7 +740,7 @@ themes:
       group: window
       desc: '#{tools-storages-themes-fields-vars-desc;Переменные}'
       type: json
-      component: Array
+      component: Colibri.UI.Forms.Array
       class: ArrayField
       default: json_array()
       attrs: []
@@ -760,7 +760,7 @@ themes:
           desc: '#{tools-storages-themes-fields-vars-name-desc;Название переменной}'
           type: varchar
           length: "255"
-          component: Text
+          component: Colibri.UI.Forms.Text
           class: string
           attrs: []
           params:
@@ -778,7 +778,7 @@ themes:
           desc: '#{tools-storages-themes-fields-vars-type-desc;Тип переменной}'
           type: varchar
           length: "255"
-          component: Select
+          component: Colibri.UI.Forms.Select
           class: string
           attrs: []
           params:
@@ -810,7 +810,7 @@ themes:
           desc: '#{tools-storages-themes-fields-vars-value-desc;Значение}'
           type: varchar
           length: "255"
-          component: Text
+          component: Colibri.UI.Forms.Text
           class: string
           attrs: []
           params:
@@ -828,7 +828,7 @@ themes:
       group: window
       desc: '#{tools-storages-themes-fields-mixins-desc;Mixin-ы}'
       type: json
-      component: Array
+      component: Colibri.UI.Forms.Array
       class: ArrayField
       default: json_array()
       attrs: []
@@ -848,7 +848,7 @@ themes:
           desc: '#{tools-storages-themes-fields-mixins-name-desc;Наименование}'
           type: varchar
           length: "255"
-          component: Text
+          component: Colibri.UI.Forms.Text
           class: string
           attrs: []
           params:
@@ -865,7 +865,7 @@ themes:
         params:
           desc: '#{tools-storages-themes-fields-mixins-params-desc;Параметры}'
           type: json
-          component: Array
+          component: Colibri.UI.Forms.Array
           class: ArrayField
           attrs: []
           params:
@@ -885,7 +885,7 @@ themes:
                 параметра}'
               type: varchar
               length: "255"
-              component: Text
+              component: Colibri.UI.Forms.Text
               class: string
               attrs: []
               params:
