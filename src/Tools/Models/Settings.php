@@ -41,7 +41,7 @@ class Settings extends BaseModelDataTable {
      */
     static function Cache(): void
     {
-        if(!self::$_allSettings) {
+        if(self::$_allSettings) {
             return;
         }
         $allSettings = self::LoadAll();
