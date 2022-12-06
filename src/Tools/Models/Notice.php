@@ -16,12 +16,33 @@ use Colibri\Data\Storages\Models\DataRow as BaseModelDataRow;
  * @property-read DateTimeField $datecreated Дата создания строки
  * @property-read DateTimeField $datemodified Дата последнего обновления строки
  * @property string|null $name Наименование шаблона
- * @property string $subject Тема письма
+ * @property string|null $subject Тема письма
  * @property string|null $body Тело письма
- * @property string|null $value Значение
  * endregion Properties;
  */
 class Notice extends BaseModelDataRow {
+
+    public const JsonSchema = [
+        'type' => 'object',
+        'required' => [
+            'id',
+            'datecreated',
+            'datemodified',
+            # region SchemaRequired:
+
+			# endregion SchemaRequired;
+        ],
+        'properties' => [
+            'id' => ['type' => 'integer'],
+            'datecreated' => ['type' => 'string', 'format' => 'db-date-time'],
+            'datemodified' => ['type' => 'string', 'format' => 'db-date-time'],
+            # region SchemaProperties:
+			'name' => ['type' => ['string', 'null'], 'maxLength' => 255],
+			'subject' => ['type' => ['string', 'null'], 'maxLength' => 255],
+			'body' => ['type' => ['string', 'null'], 'maxLength' => 1024],
+			# endregion SchemaProperties;
+        ]
+    ];
 
     /**
      * Обрабатывает вставки

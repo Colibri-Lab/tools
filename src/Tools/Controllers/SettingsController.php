@@ -4,6 +4,7 @@ namespace App\Modules\Tools\Controllers;
 
 
 use Colibri\App;
+use Colibri\Data\SqlClient\QueryInfo;
 use Colibri\Events\EventsContainer;
 use Colibri\IO\FileSystem\File;
 use Colibri\Utils\Cache\Bundle;
@@ -93,8 +94,16 @@ class SettingsController extends WebController
         $setting->desc = $post->desc;
         $setting->type = $type;
         $setting->value = $post->value;
-        if(!$setting->Save()) {
-            return $this->Finish(400, 'Bad request');
+
+        try {
+            $setting->Validate(true);
+        } catch (\Throwable $e) {
+            return $this->Finish(500, $e->getMessage());
+        }
+
+        $result = $setting->Save();
+        if ($result instanceof QueryInfo) {
+            return $this->Finish(500, $result->error);
         }
 
         return $this->Finish(200, 'ok', $setting->ToArray(true));

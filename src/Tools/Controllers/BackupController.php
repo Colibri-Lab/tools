@@ -2,6 +2,7 @@
 
 namespace App\Modules\Tools\Controllers;
 
+use Colibri\Data\SqlClient\QueryInfo;
 use Colibri\Web\RequestCollection;
 use Colibri\Web\Controller as WebController;
 use App\Modules\Security\Module as SecurityModule;
@@ -77,8 +78,16 @@ class BackupController extends WebController
         $backup->file = $post->file;
         $backup->status = $post->status;
         $backup->running = $post->running;
-        if(!$backup->Save()) {
-            return $this->Finish(400, 'Bad request');
+
+        try {
+            $backup->Validate(true);
+        } catch (\Throwable $e) {
+            return $this->Finish(500, $e->getMessage());
+        }
+
+        $result = $backup->Save();
+        if ($result instanceof QueryInfo) {
+            return $this->Finish(500, $result->error);
         }
 
         return $this->Finish(200, 'ok', $backup->ToArray(true));

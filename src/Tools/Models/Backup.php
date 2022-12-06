@@ -38,6 +38,30 @@ use PhpOffice\PhpWord\Shared\ZipArchive;
  */
 class Backup extends BaseModelDataRow {
 	
+	public const JsonSchema = [
+        'type' => 'object',
+        'required' => [
+            'id',
+            'datecreated',
+            'datemodified',
+            # region SchemaRequired:
+
+			# endregion SchemaRequired;
+        ],
+        'properties' => [
+            'id' => ['type' => 'integer'],
+            'datecreated' => ['type' => 'string', 'format' => 'db-date-time'],
+            'datemodified' => ['type' => 'string', 'format' => 'db-date-time'],
+            # region SchemaProperties:
+			'status' => ['type' => 'string', 'enum' => ['paused', 'started']],
+			'running' => ['type' => ['boolean', 'null'], ],
+			'name' => ['type' => ['string', 'null'], 'maxLength' => 255],
+			'cron' => ['type' => 'object', 'required' => [], 'properties' => ['minute' => ['type' => 'string', 'enum' => ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59']],'hour' => ['type' => 'string', 'enum' => ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23']],'day' => ['type' => 'string', 'enum' => ['*', '00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31']],'month' => ['type' => 'string', 'enum' => ['*', '00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']],'dayofweek' => ['type' => 'string', 'enum' => ['*', '0', '1', '2', '3', '4', '5', '6']],]],
+			'file' => ['type' => ['string', 'null'], 'maxLength' => 255],
+			# endregion SchemaProperties;
+        ]
+    ];
+
 	# region Consts:
 	/** #{tools-storages-backups-fields-status-values-paused;Остановлено} */
 	public const StatusPaused = 'paused';

@@ -24,6 +24,28 @@ use Colibri\Data\Storages\Fields\ValueField;
  */
 class Setting extends BaseModelDataRow {
 
+    public const JsonSchema = [
+        'type' => 'object',
+        'required' => [
+            'id',
+            'datecreated',
+            'datemodified',
+            # region SchemaRequired:
+
+			# endregion SchemaRequired;
+        ],
+        'properties' => [
+            'id' => ['type' => 'integer'],
+            'datecreated' => ['type' => 'string', 'format' => 'db-date-time'],
+            'datemodified' => ['type' => 'string', 'format' => 'db-date-time'],
+            # region SchemaProperties:
+			'name' => ['type' => ['string', 'null'], 'maxLength' => 255],
+			'subject' => ['type' => ['string', 'null'], 'maxLength' => 255],
+			'body' => ['type' => ['string', 'null'], 'maxLength' => 1024],
+			# endregion SchemaProperties;
+        ]
+    ];
+    
     const TypeInteger = 'integer';
 
     const TypeDouble = 'double';

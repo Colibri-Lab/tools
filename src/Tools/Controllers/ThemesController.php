@@ -2,6 +2,7 @@
 
 namespace App\Modules\Tools\Controllers;
 
+use Colibri\Data\SqlClient\QueryInfo;
 use Colibri\Web\RequestCollection;
 use Colibri\Web\Controller as WebController;
 use App\Modules\Security\Module as SecurityModule;
@@ -76,8 +77,16 @@ class ThemesController extends WebController
         $theme->current = $post->current;
         $theme->vars = $post->vars;
         $theme->mixins = $post->mixins;
-        if(!$theme->Save()) {
-            return $this->Finish(400, 'Bad request');
+
+        try {
+            $theme->Validate(true);
+        } catch (\Throwable $e) {
+            return $this->Finish(500, $e->getMessage());
+        }
+
+        $result = $theme->Save();
+        if ($result instanceof QueryInfo) {
+            return $this->Finish(500, $result->error);
         }
         
         $themeArray = $theme->ToArray(true);
