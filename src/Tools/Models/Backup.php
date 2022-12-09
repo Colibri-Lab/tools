@@ -109,7 +109,7 @@ class Backup extends BaseModelDataRow {
 
 	}
 
-	public function Save(): bool
+	public function Save(bool $performValidationBeforeSave = false): bool
 	{
 		$cronCommand = $this->cron->minute->value.' '.$this->cron->hour->value.' '.$this->cron->day->value.' '.$this->cron->month->value.' '.$this->cron->dayofweek->value.' root '.$this->controller;
 		$enabledCrons = $this->_readCronFile();
@@ -123,7 +123,7 @@ class Backup extends BaseModelDataRow {
 
 		$this->_saveCronFile($enabledCrons);
 
-		return parent::Save();
+		return parent::Save($performValidationBeforeSave);
 	}
 
 	private function _readCronFile(): array
