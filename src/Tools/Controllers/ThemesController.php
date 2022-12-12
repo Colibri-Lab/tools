@@ -3,10 +3,12 @@
 namespace App\Modules\Tools\Controllers;
 
 use Colibri\Data\SqlClient\QueryInfo;
+use Colibri\Exceptions\ValidationException;
 use Colibri\Web\RequestCollection;
 use Colibri\Web\Controller as WebController;
 use App\Modules\Security\Module as SecurityModule;
 use App\Modules\Tools\Models\Themes;
+use InvalidArgumentException;
 
 class ThemesController extends WebController
 {
@@ -71,24 +73,35 @@ class ThemesController extends WebController
             $theme = Themes::LoadEmpty();
         }
 
-        $theme->name = $post->name;
-        $theme->domain = $post->domain;
-        $theme->desc = $post->desc;
-        $theme->current = $post->current;
-        $theme->vars = $post->vars;
-        $theme->mixins = $post->mixins;
+        $accessPoint = $theme->Storage()->accessPoint;
+        $accessPoint->Begin();
 
         try {
-            $theme->Validate(true);
+                    
+            $theme->name = $post->name;
+            $theme->domain = $post->domain;
+            $theme->desc = $post->desc;
+            $theme->current = $post->current;
+            $theme->vars = $post->vars;
+            $theme->mixins = $post->mixins;
+    
+            if ( ($res = $theme->Save(true)) !== true ) {
+                throw new InvalidArgumentException($res->error, 400);
+            }
+    
+        } catch (InvalidArgumentException $e) {
+            $accessPoint->Rollback();
+            return $this->Finish(400, 'Bad request', ['message' => $e->getMessage(), 'code' => 400]);
+        } catch (ValidationException $e) {
+            $accessPoint->Rollback();
+            return $this->Finish(500, 'Application validation error', ['message' => $e->getMessage(), 'code' => 400, 'data' => $e->getExceptionDataAsArray()]);
         } catch (\Throwable $e) {
-            return $this->Finish(500, $e->getMessage());
-        }
+            $accessPoint->Rollback();
+            return $this->Finish(500, 'Application error', ['message' => $e->getMessage(), 'code' => 500]);
+        } 
 
-        $result = $theme->Save();
-        if ($result instanceof QueryInfo) {
-            return $this->Finish(500, $result->error);
-        }
-        
+        $accessPoint->Commit();
+
         $themeArray = $theme->ToArray(true);
         return $this->Finish(200, 'ok', $themeArray);
 

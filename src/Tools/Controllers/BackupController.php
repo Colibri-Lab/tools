@@ -10,6 +10,7 @@ use App\Modules\Tools\Models\Backups;
 use Colibri\App;
 use App\Modules\Tools\Threading\BackupWorker;
 use Colibri\Threading\Process;
+use InvalidArgumentException;
 
 class BackupController extends WebController
 {
@@ -73,22 +74,36 @@ class BackupController extends WebController
             $backup = Backups::LoadEmpty();
         }
 
-        $backup->name = $post->name;
-        $backup->cron = $post->cron;
-        $backup->file = $post->file;
-        $backup->status = $post->status;
-        $backup->running = $post->running;
+
+        $accessPoint = $backup->Storage()->accessPoint;
+        $accessPoint->Begin();
 
         try {
-            $backup->Validate(true);
-        } catch (\Throwable $e) {
-            return $this->Finish(500, $e->getMessage());
-        }
+                
+            $backup->name = $post->name;
+            $backup->cron = $post->cron;
+            $backup->file = $post->file;
+            $backup->status = $post->status;
+            $backup->running = $post->running;
 
-        $result = $backup->Save();
-        if ($result instanceof QueryInfo) {
-            return $this->Finish(500, $result->error);
-        }
+            if ( ($res = $backup->Save(true)) !== true ) {
+                throw new InvalidArgumentException($res->error, 400); 
+            }
+    
+        } catch (InvalidArgumentException $e) {
+            $accessPoint->Rollback();
+            return $this->Finish(400, 'Bad request', ['message' => $e->getMessage(), 'code' => 400]);
+        } catch (ValidationException $e) {
+            $accessPoint->Rollback();
+            return $this->Finish(500, 'Application validation error', ['message' => $e->getMessage(), 'code' => 400, 'data' => $e->getExceptionDataAsArray()]);
+        } catch (\Throwable $e) {
+            $accessPoint->Rollback();
+            return $this->Finish(500, 'Application error', ['message' => $e->getMessage(), 'code' => 500]);
+        } 
+
+        $accessPoint->Commit();
+
+        
 
         return $this->Finish(200, 'ok', $backup->ToArray(true));
 

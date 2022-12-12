@@ -3,6 +3,7 @@
 namespace App\Modules\Tools\Models;
 
 # region Uses:
+use Colibri\Data\SqlClient\QueryInfo;
 use Colibri\Data\Storages\Fields\DateTimeField;
 use Colibri\Data\Storages\Fields\ValueField;
 use Colibri\Data\Storages\Fields\ObjectField;
@@ -53,11 +54,11 @@ class Backup extends BaseModelDataRow {
             'datecreated' => ['type' => 'string', 'format' => 'db-date-time'],
             'datemodified' => ['type' => 'string', 'format' => 'db-date-time'],
             # region SchemaProperties:
-			'status' => ['type' => 'string', 'enum' => ['paused', 'started']],
-			'running' => ['type' => ['boolean', 'null'], ],
-			'name' => ['type' => ['string', 'null'], 'maxLength' => 255],
-			'cron' => ['type' => 'object', 'required' => [], 'properties' => ['minute' => ['type' => 'string', 'enum' => ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59']],'hour' => ['type' => 'string', 'enum' => ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23']],'day' => ['type' => 'string', 'enum' => ['*', '00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31']],'month' => ['type' => 'string', 'enum' => ['*', '00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']],'dayofweek' => ['type' => 'string', 'enum' => ['*', '0', '1', '2', '3', '4', '5', '6']],]],
-			'file' => ['type' => ['string', 'null'], 'maxLength' => 255],
+			'status' => [  'oneOf' => [ [ 'type' => 'null' ], ['type' => 'string', 'enum' => ['paused', 'started']] ] ],
+			'running' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'boolean', ] ] ],
+			'name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255] ] ],
+			'cron' => ['type' => 'object', 'required' => [], 'properties' => ['minute' => [  'oneOf' => [ [ 'type' => 'null' ], ['type' => 'string', 'enum' => ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59']] ] ],'hour' => [  'oneOf' => [ [ 'type' => 'null' ], ['type' => 'string', 'enum' => ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23']] ] ],'day' => [  'oneOf' => [ [ 'type' => 'null' ], ['type' => 'string', 'enum' => ['*', '00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31']] ] ],'month' => [  'oneOf' => [ [ 'type' => 'null' ], ['type' => 'string', 'enum' => ['*', '00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']] ] ],'dayofweek' => [  'oneOf' => [ [ 'type' => 'null' ], ['type' => 'string', 'enum' => ['*', '0', '1', '2', '3', '4', '5', '6']] ] ],]],
+			'file' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255] ] ],
 			# endregion SchemaProperties;
         ]
     ];
@@ -109,7 +110,7 @@ class Backup extends BaseModelDataRow {
 
 	}
 
-	public function Save(bool $performValidationBeforeSave = false): bool
+	public function Save(bool $performValidationBeforeSave = false): bool|QueryInfo 
 	{
 		$cronCommand = $this->cron->minute->value.' '.$this->cron->hour->value.' '.$this->cron->day->value.' '.$this->cron->month->value.' '.$this->cron->dayofweek->value.' root '.$this->controller;
 		$enabledCrons = $this->_readCronFile();

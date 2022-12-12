@@ -6,6 +6,7 @@ namespace App\Modules\Tools\Controllers;
 use Colibri\App;
 use Colibri\Data\SqlClient\QueryInfo;
 use Colibri\Events\EventsContainer;
+use Colibri\Exceptions\ValidationException;
 use Colibri\IO\FileSystem\File;
 use Colibri\Utils\Cache\Bundle;
 use Colibri\Utils\Debug;
@@ -14,6 +15,7 @@ use Colibri\Web\RequestCollection;
 use Colibri\Web\Controller as WebController;
 use Colibri\Web\Templates\PhpTemplate;
 use Colibri\Web\View;
+use InvalidArgumentException;
 use ScssPhp\ScssPhp\Compiler;
 use ScssPhp\ScssPhp\OutputStyle;
 use App\Modules\Sites\Models\Pages;
@@ -58,8 +60,30 @@ class NoticesController extends WebController
         $name = $post->name;
 
         $notice = Notices::LoadEmpty();
-        $notice->name = $name;
-        $notice->Save();
+        
+        $accessPoint = $notice->Storage()->accessPoint;
+        $accessPoint->Begin();
+
+        try {
+                
+            $notice->name = $name;
+
+            if ( ($res = $notice->Save(true)) !== true ) {
+                throw new InvalidArgumentException($res->error, 400);
+            }
+    
+        } catch (InvalidArgumentException $e) {
+            $accessPoint->Rollback();
+            return $this->Finish(400, 'Bad request', ['message' => $e->getMessage(), 'code' => 400]);
+        } catch (ValidationException $e) {
+            $accessPoint->Rollback();
+            return $this->Finish(500, 'Application validation error', ['message' => $e->getMessage(), 'code' => 400, 'data' => $e->getExceptionDataAsArray()]);
+        } catch (\Throwable $e) {
+            $accessPoint->Rollback();
+            return $this->Finish(500, 'Application error', ['message' => $e->getMessage(), 'code' => 500]);
+        } 
+
+        $accessPoint->Commit();
 
         $notices = Notices::LoadAll();
         $noticesArray = [];
@@ -110,20 +134,32 @@ class NoticesController extends WebController
         }
 
         $notice = Notices::LoadById((int)$id);
-        $notice->name = $post->name;
-        $notice->subject = $post->subject;
-        $notice->body = $post->body;
+
+        $accessPoint = $notice->Storage()->accessPoint;
+        $accessPoint->Begin();
 
         try {
-            $notice->Validate(true);
+                
+            $notice->name = $post->name;
+            $notice->subject = $post->subject;
+            $notice->body = $post->body;
+    
+            if ( ($res = $notice->Save(true)) !== true ) {
+                throw new InvalidArgumentException($res->error, 400);
+            }
+    
+        } catch (InvalidArgumentException $e) {
+            $accessPoint->Rollback();
+            return $this->Finish(400, 'Bad request', ['message' => $e->getMessage(), 'code' => 400]);
+        } catch (ValidationException $e) {
+            $accessPoint->Rollback();
+            return $this->Finish(500, 'Application validation error', ['message' => $e->getMessage(), 'code' => 400, 'data' => $e->getExceptionDataAsArray()]);
         } catch (\Throwable $e) {
-            return $this->Finish(500, $e->getMessage());
-        }
+            $accessPoint->Rollback();
+            return $this->Finish(500, 'Application error', ['message' => $e->getMessage(), 'code' => 500]);
+        } 
 
-        $result = $notice->Save();
-        if ($result instanceof QueryInfo) {
-            return $this->Finish(500, $result->error);
-        }
+        $accessPoint->Commit();
 
         return $this->Finish(200, 'ok', $notice->ToArray(true));
 

@@ -44,12 +44,12 @@ class Theme extends BaseModelDataRow {
             'datecreated' => ['type' => 'string', 'format' => 'db-date-time'],
             'datemodified' => ['type' => 'string', 'format' => 'db-date-time'],
             # region SchemaProperties:
-			'name' => ['type' => ['string', 'null'], 'maxLength' => 255],
-			'desc' => ['type' => ['string', 'null'], 'maxLength' => 255],
-			'domain' => ['type' => ['string', 'null'], 'maxLength' => 255],
-			'current' => ['type' => ['boolean', 'null'], ],
-			'vars' => ['type' => 'array', 'items' => ['type' => 'object', 'required' => [], 'properties' => ['name' => ['type' => ['string', 'null'], 'maxLength' => 255],'type' => ['type' => ['string', 'null'], 'enum' => ['color', 'font-family', 'size', 'image', 'border', 'shadow'],'maxLength' => 255],'value' => ['type' => ['string', 'null'], 'maxLength' => 255],]]],
-			'mixins' => ['type' => 'array', 'items' => ['type' => 'object', 'required' => [], 'properties' => ['name' => ['type' => ['string', 'null'], 'maxLength' => 255],'params' => ['type' => 'array', 'items' => ['type' => 'object', 'required' => [], 'properties' => ['name' => ['type' => ['string', 'null'], 'maxLength' => 255],]]],'value' => ['type' => ['string', 'null'], 'maxLength' => 1024],]]],
+			'name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255] ] ],
+			'desc' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255] ] ],
+			'domain' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255] ] ],
+			'current' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'boolean', ] ] ],
+			'vars' => ['type' => 'array', 'items' => ['type' => 'object', 'required' => [], 'properties' => ['name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255] ] ],'type' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'enum' => ['color', 'font-family', 'size', 'image', 'border', 'shadow'],'maxLength' => 255] ] ],'value' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255] ] ],]]],
+			'mixins' => ['type' => 'array', 'items' => ['type' => 'object', 'required' => [], 'properties' => ['name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255] ] ],'params' => ['type' => 'array', 'items' => ['type' => 'object', 'required' => [], 'properties' => ['name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255] ] ],]]],'value' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 1024] ] ],]]],
 			# endregion SchemaProperties;
         ]
     ];
