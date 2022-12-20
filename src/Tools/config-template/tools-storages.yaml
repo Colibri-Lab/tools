@@ -778,7 +778,7 @@ themes:
           type: varchar
           length: "255"
           component: Colibri.UI.Forms.Select
-          class: string
+          class: ValueField
           attrs: []
           params:
             required: false
@@ -795,8 +795,7 @@ themes:
           - value: color
             title: '#{tools-storages-themes-fields-vars-type-values-color;Цвет}'
           - value: font-family
-            title: '#{tools-storages-themes-fields-vars-type-values-font-family;Название
-              шрифта}'
+            title: '#{tools-storages-themes-fields-vars-type-values-font-family;Название шрифта}'
           - value: size
             title: '#{tools-storages-themes-fields-vars-type-values-size;Размер}'
           - value: image

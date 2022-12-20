@@ -6,7 +6,6 @@ App.Modules.Tools.VarsGrid = class extends Colibri.UI.Grid {
     }
 
     __renderBoundedValues(data) {
-
         if(!data) {
             return;
         }
@@ -25,22 +24,22 @@ App.Modules.Tools.VarsGrid = class extends Colibri.UI.Grid {
             }
 
             let viewer = null;
-            if(d.type === 'color') {
+            if((d.type.value || d.type) === 'color') {
                 viewer = Colibri.UI.ColorViewer;
             }
-            else if(d.type === 'border') {
+            else if((d.type.value || d.type) === 'border') {
                 viewer = Colibri.UI.BorderViewer;
             }
-            else if(d.type === 'font-family') {
+            else if((d.type.value || d.type) === 'font-family') {
                 viewer = Colibri.UI.FontFamilyViewer;
             }
-            else if(d.type === 'size') {
+            else if((d.type.value || d.type) === 'size') {
                 viewer = null;
             }
-            else if(d.type === 'image') {
+            else if((d.type.value || d.type) === 'image') {
                 viewer = Colibri.UI.ImageViewer;
             }
-            else if(d.type === 'shadow') {
+            else if((d.type.value || d.type) === 'shadow') {
                 viewer = Colibri.UI.ShadowViewer;
             }
 

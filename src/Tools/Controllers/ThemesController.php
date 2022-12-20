@@ -161,25 +161,22 @@ class ThemesController extends WebController
             return $this->Finish(400, 'Bad request');
         }
 
+        $varObject->value = isset($varObject->value['value']) ? $varObject->value['value'] : $varObject->value;
+
         $found = false;
-        $vars = $theme->vars->ToArray();
-        foreach($vars as $var) {
+        foreach($theme->vars as $index => $var) {
             if($var->name == $varObject->name) {
                 // есть надо обновить
-                $var->type = $varObject->type;
-                $var->value = isset($varObject->value['value']) ? $varObject->value['value'] : $varObject->value;
+                $theme->vars->Set($index, $varObject);
                 $found = true;
                 break;
             }
         }
 
         if(!$found) {
-            $vars[] = $varObject;
+            $theme->vars->Add($varObject);
         }
-
-        $theme->vars->Clear();
-        $theme->vars->Append($vars);
-
+        
         if(!$theme->Save()) {
             return $this->Finish(400, 'Bad request');
         }
