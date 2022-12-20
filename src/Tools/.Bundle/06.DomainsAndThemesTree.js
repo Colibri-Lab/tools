@@ -66,6 +66,9 @@ App.Modules.Tools.DomainsAndThemesTree = class extends Colibri.UI.Tree {
                 theme.value = theme.id;
 
                 const domainNode = this.FindNode('domainkey' + theme.domain);
+                if(!domainNode) {
+                    continue;
+                }
     
                 let newNode = this.FindNode('theme' + theme.id);
                 if(!newNode) {
