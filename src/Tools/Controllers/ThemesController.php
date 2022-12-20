@@ -207,16 +207,14 @@ class ThemesController extends WebController
             return $this->Finish(400, 'Bad request');
         }
 
-        $newVars = [];
-        $vars = $theme->vars->ToArray();
-        foreach($vars as $var) {
-            if(!in_array($var->name, $varNames)) {
-                $newVars[] = $var;
-            }
+        foreach($varNames as $varName) {
+            foreach($theme->vars as $index => $var) {
+                if($var->name == $varName) {
+                    $theme->vars->DeleteAt($index);
+                }
+            }    
         }
 
-        $theme->vars->Clear();
-        $theme->vars->Append($newVars);
 
         if(!$theme->Save()) {
             return $this->Finish(400, 'Bad request');
@@ -249,23 +247,17 @@ class ThemesController extends WebController
         }
 
         $found = false;
-        $mixins = $theme->mixins->ToArray();
-        foreach($mixins as $mixin) {
+        foreach($theme->mixins as $index => $mixin) {
             if($mixin->name == $mixinObject->name) {
-                // есть надо обновить
-                $mixin->params = $mixinObject->params;
-                $mixin->value = $mixinObject->value;
+                $theme->mixins->Set($index, $mixinObject);
                 $found = true;
                 break;
             }
         }
 
         if(!$found) {
-            $mixins[] = $mixinObject;
+            $theme->mixins->Add($mixinObject);
         }
-
-        $theme->mixins->Clear();
-        $theme->mixins->Append($mixins);
 
         if(!$theme->Save()) {
             return $this->Finish(400, 'Bad request');
@@ -297,16 +289,13 @@ class ThemesController extends WebController
             return $this->Finish(400, 'Bad request');
         }
 
-        $newMixins = [];
-        $mixins = $theme->mixins->ToArray();
-        foreach($mixins as $mixin) {
-            if(!in_array($mixin->name, $mixinNames)) {
-                $newMixins[] = $mixin;
-            }
+        foreach($mixinNames as $mixinName) {
+            foreach($theme->mixins as $index => $mixin) {
+                if($mixin->name == $mixinName) {
+                    $theme->mixins->DeleteAt($index);
+                }
+            }    
         }
-
-        $theme->mixins->Clear();
-        $theme->mixins->Append($newMixins);
 
         if(!$theme->Save()) {
             return $this->Finish(400, 'Bad request');
