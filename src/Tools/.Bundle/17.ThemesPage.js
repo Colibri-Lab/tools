@@ -317,10 +317,10 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                     }
                 }
             })
-                .then((data) => {
-                    Tools.SaveThemeVar(theme.id, data);
-                })
-                .catch(() => {});
+            .then((data) => {
+                Tools.SaveThemeVar(theme.id, data);
+            })
+            .catch(() => {});
 
         });
     }

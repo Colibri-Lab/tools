@@ -1,0 +1,45 @@
+tools-themes-contextmenu-newtheme:
+  ru: Создать тему
+tools-themes-contextmenu-edittheme:
+  ru: Редактировать тему
+tools-themes-contextmenu-deletetheme:
+  ru: Удалить тему
+tools-themes-contextmenu-dublicatetheme:
+  ru: Дублировать тему
+tools-themes-contextmenu-setcurrent:
+  ru: Установить как текущую
+tools-themes-windowtitle-edittheme:
+  ru: Редактировать тему
+tools-themes-deletetheme:
+  ru: Удаление темы
+tools-themes-deletethememessage:
+  ru: Вы уверены, что хотите удалить тему? На сайтах привязанных к этой теме могут
+    возникнуть артефакты
+tools-themes-setcurrenttheme:
+  ru: Установка
+tools-themes-setcurrentthememessage:
+  ru: Вы уверены, что хотите установить тему как текущую?
+tools-themes-windowtitle-addvartitle:
+  ru: Добавить переменную
+tools-themes-windowtitle-editvartitle:
+  ru: Редактировать переменную
+tools-themes-deletevars:
+  ru: Удаление переменных
+tools-themes-deletevarsmessage:
+  ru: Вы уверены, что хотите удалить переменные?
+tools-themes-deletevar:
+  ru: Удаление переменной
+tools-themes-deletevarmessage:
+  ru: Вы уверены, что хотите удалить переменную?
+tools-themes-windowtitle-addmixintitle:
+  ru: Добавить Mixin
+tools-themes-windowtitle-editmixintitle:
+  ru: Редактировать Mixin
+tools-themes-deletemixins:
+  ru: Удаление Mixin-ов
+tools-themes-deletemixinsmessage:
+  ru: Вы уверены, что хотите удалить Mixin-ы?
+tools-themes-deletemixin:
+  ru: Удаление Mixin-а
+tools-themes-deletemixinmessage:
+  ru: Вы уверены, что хотите удалить Mixin?
