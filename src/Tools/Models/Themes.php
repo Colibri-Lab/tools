@@ -12,7 +12,7 @@ use App\Modules\Tools\Models\Theme;
 use Colibri\App;
 
 /**
- * Таблица, представление данных в хранилище #{tools-storages-themes-desc;Темы}
+ * Таблица, представление данных в хранилище Темы
  * @author <author name and email>
  * @package App\Modules\Tools\Models
  * 

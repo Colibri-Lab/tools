@@ -11,7 +11,7 @@ use Colibri\App;
 use Colibri\IO\FileSystem\File;
 
 /**
- * Представление строки в таблице в хранилище #{tools-storages-themes-desc;Темы}
+ * Представление строки в таблице в хранилище Темы
  * @author <author name and email>
  * @package App\Modules\Tools\Models
  * 
@@ -19,12 +19,12 @@ use Colibri\IO\FileSystem\File;
  * @property-read int $id ID строки
  * @property-read DateTimeField $datecreated Дата создания строки
  * @property-read DateTimeField $datemodified Дата последнего обновления строки
- * @property string|null $name #{tools-storages-themes-fields-name-desc;Наименование}
- * @property string|null $desc #{tools-storages-themes-fields-desc-desc;Описание темы}
- * @property string|null $domain #{tools-storages-themes-fields-domain-desc;Ключ домена}
- * @property bool|null $current #{tools-storages-themes-fields-current-desc;Текущая}
- * @property ArrayField|null $vars #{tools-storages-themes-fields-vars-desc;Переменные}
- * @property ArrayField|null $mixins #{tools-storages-themes-fields-mixins-desc;Mixin-ы}
+ * @property string|null $name Наименование
+ * @property string|null $desc Описание темы
+ * @property string|null $domain Ключ домена
+ * @property bool|null $current Текущая
+ * @property ArrayField|null $vars Переменные
+ * @property ArrayField|null $mixins Mixin-ы
  * endregion Properties;
  */
 class Theme extends BaseModelDataRow {
@@ -44,12 +44,12 @@ class Theme extends BaseModelDataRow {
             'datecreated' => ['type' => 'string', 'format' => 'db-date-time'],
             'datemodified' => ['type' => 'string', 'format' => 'db-date-time'],
             # region SchemaProperties:
-			'name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255] ] ],
-			'desc' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255] ] ],
-			'domain' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255] ] ],
-			'current' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'boolean', ] ] ],
-			'vars' => ['type' => 'array', 'items' => ['type' => 'object', 'required' => [], 'properties' => ['name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255] ] ],'type' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'enum' => ['color', 'font-family', 'size', 'image', 'border', 'shadow'],'maxLength' => 255] ] ],'value' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255] ] ],]]],
-			'mixins' => ['type' => 'array', 'items' => ['type' => 'object', 'required' => [], 'properties' => ['name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255] ] ],'params' => ['type' => 'array', 'items' => ['type' => 'object', 'required' => [], 'properties' => ['name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255] ] ],]]],'value' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 1024] ] ],]]],
+			'name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
+			'desc' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
+			'domain' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
+			'current' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => ['boolean','number'], 'enum' => [true, false, 0, 1],] ] ],
+			'vars' => ['type' => 'array', 'items' => ['type' => 'object', 'required' => [], 'properties' => ['name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],'type' => [  'oneOf' => [ [ 'type' => 'null' ], ['type' => 'string', 'enum' => ['color', 'font-family', 'size', 'image', 'border', 'shadow']] ] ],'value' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],]]],
+			'mixins' => ['type' => 'array', 'items' => ['type' => 'object', 'required' => [], 'properties' => ['name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],'params' => ['type' => 'array', 'items' => ['type' => 'object', 'required' => [], 'properties' => ['name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],]]],'value' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 1024, ] ] ],]]],
 			# endregion SchemaProperties;
         ]
     ];

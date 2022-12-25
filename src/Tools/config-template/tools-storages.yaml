@@ -3,146 +3,474 @@ settings:
   access-point: tools
   module: Tools
   models:
-    row: Models\Setting
     table: Models\Settings
-  desc: Настройки
+    row: Models\Setting
+  desc:
+    ru: Настройки
+    en: Settings
+    hy: Կարգավորումներ
   params:
     visible: false
     maybepublished: false
   fields:
     name:
       type: varchar
-      length: 255
+      length: "255"
       class: string
       component: Colibri.UI.Forms.Text
-      desc: Наименование настройки
-      note: Введите название настройки, которое будете использовать в дальнейшем.
-        Латинские буквы, подчеркивание.
+      desc:
+        ru: Наименование настройки
+        en: Setting name
+        hy: Կարգավորման անունը
+      note:
+        ru: Введите название настройки, которое будете использовать в дальнейшем.
+          Латинские буквы, подчеркивание.
+        en: Введите название настройки, которое будете использовать в дальнейшем.
+          Латинские буквы, подчеркивание.
+        hy: Введите название настройки, которое будете использовать в дальнейшем.
+          Латинские буквы, подчеркивание.
       attrs:
         width: 100%
+      placeholder:
+        ru: ""
+        en: ""
+        hy: ""
+      params:
+        required: false
+        enabled: true
+        canbeempty: true
+        readonly: false
+        list: false
+        multiple: false
+        greed: ""
+        viewer: ~
+        vertical: false
+        visual: false
+        code: ""
+        mask: ""
+        fieldgenerator: ""
+        generator: ""
+        noteClass: ""
+        simplearraywidth: ""
+        simplearrayheight: ""
+        addlink:
+          ru: ""
+          en: ""
+          hy: ""
+        removelink: true
+        updownlink: true
+        initempty: true
+        maxadd: ""
+        title: ""
+        removedesc: true
+        allow: ""
+        size: ""
+        validate: []
+      group: window
     type:
       type: enum
       class: ValueField
-      desc: Тип настройки
-      note: Выберите тип настройки
+      desc:
+        ru: Тип настройки
+        en: Setting type
+        hy: Կարգավորման տեսակը
+      note:
+        ru: Выберите тип настройки
+        en: Choose a setting type
+        hy: Ընտրեք կարգաբերման տեսակը
       component: Colibri.UI.Forms.Select
       default: text
       values:
-      - value: integer
-        title: Целое число
-        icon: Colibri.UI.FieldIcons['Number']
-      - value: double
-        title: Число с плавающей запятой
-        icon: Colibri.UI.FieldIcons['Number']
-      - value: text
-        title: Текст
-        icon: Colibri.UI.FieldIcons['Text']
-      - value: textarea
-        title: Большой текст
-        icon: Colibri.UI.FieldIcons['TextArea']
-      - value: html
-        title: Редактор HTML
-        icon: Colibri.UI.FieldIcons['App.Modules.Manage.UI.TinyMCETextArea']
-      - value: htmlcode
-        title: Kod HTML
-        icon: Colibri.UI.FieldIcons['App.Modules.Manage.UI.TinyMCETextArea']
-      - value: file
-        title: Файл
-        icon: Colibri.UI.FieldIcons['File']
-      - value: files
-        title: Файлы
-        icon: Colibri.UI.FieldIcons['Files']
+      - title:
+          ru: Целое число
+          en: Целое число
+          hy: Целое число
+        type: text
+        value: integer
+      - title:
+          ru: Число с плавающей запятой
+          en: Число с плавающей запятой
+          hy: Число с плавающей запятой
+        type: text
+        value: double
+      - title:
+          ru: Текст
+          en: Текст
+          hy: Текст
+        type: text
+        value: text
+      - title:
+          ru: Большой текст
+          en: Большой текст
+          hy: Большой текст
+        type: text
+        value: textarea
+      - title:
+          ru: Редактор HTML
+          en: Редактор HTML
+          hy: Редактор HTML
+        type: text
+        value: html
+      - title:
+          ru: Kod HTML
+          en: Kod HTML
+          hy: Kod HTML
+        type: text
+        value: htmlcode
+      - title:
+          ru: Файл
+          en: Файл
+          hy: Файл
+        type: text
+        value: file
+      - title:
+          ru: Файлы
+          en: Файлы
+          hy: Файлы
+        type: text
+        value: files
       selector:
         value: value
         title: title
+        group: ""
       attrs:
         width: 100%
       params:
         required: true
+        enabled: true
+        canbeempty: true
         readonly: false
+        list: false
+        multiple: false
+        greed: ""
+        viewer: ~
+        vertical: false
+        visual: false
+        code: ""
+        mask: ""
+        fieldgenerator: ""
+        generator: ""
+        noteClass: ""
+        simplearraywidth: ""
+        simplearrayheight: ""
+        addlink:
+          ru: ""
+          en: ""
+          hy: ""
+        removelink: true
+        updownlink: true
+        initempty: true
+        maxadd: ""
+        title: ""
+        removedesc: true
+        allow: ""
+        size: ""
+        validate: []
+      placeholder:
+        ru: ""
+        en: ""
+        hy: ""
+      group: window
     desc:
       type: varchar
-      length: 1024
+      length: "1024"
       class: string
       component: Colibri.UI.Forms.TextArea
-      desc: Описание настройки
-      note: Опишите настройку, для чего она нужна, где используется
+      desc:
+        ru: Описание настройки
+        en: Setting description
+        hy: Կարգավորման նկարագրություն
+      note:
+        ru: Опишите настройку, для чего она нужна, где используется
+        en: Describe the setting, what it is for, where it is used
+        hy: Նկարագրեք պարամետրը, ինչի համար է այն, որտեղ է այն օգտագործվում
       required: false
       reqdonly: true
       attrs:
         width: 100%
+      placeholder:
+        ru: ""
+        en: ""
+        hy: ""
+      params:
+        required: false
+        enabled: true
+        canbeempty: true
+        readonly: false
+        list: false
+        multiple: false
+        greed: ""
+        viewer: ~
+        vertical: false
+        visual: false
+        code: ""
+        mask: ""
+        fieldgenerator: ""
+        generator: ""
+        noteClass: ""
+        simplearraywidth: ""
+        simplearrayheight: ""
+        addlink:
+          ru: ""
+          en: ""
+          hy: ""
+        removelink: true
+        updownlink: true
+        initempty: true
+        maxadd: ""
+        title: ""
+        removedesc: true
+        allow: ""
+        size: ""
+        validate: []
+      group: window
     value:
       type: longtext
       component: Colibri.UI.Forms.TextArea
       class: string
       params:
         required: false
+        enabled: true
+        canbeempty: true
         readonly: false
-      desc: Значение
-      note: Введите значение настройки
+        list: false
+        multiple: false
+        greed: ""
+        viewer: ~
+        vertical: false
+        visual: false
+        code: ""
+        mask: ""
+        fieldgenerator: ""
+        generator: ""
+        noteClass: ""
+        simplearraywidth: ""
+        simplearrayheight: ""
+        addlink:
+          ru: ""
+          en: ""
+          hy: ""
+        removelink: true
+        updownlink: true
+        initempty: true
+        maxadd: ""
+        title: ""
+        removedesc: true
+        allow: ""
+        size: ""
+        validate: []
+      desc:
+        ru: Значение
+        en: Value
+        hy: Արժեք
+      note:
+        ru: Введите значение настройки
+        en: Enter setting value
+        hy: Մուտքագրեք պարամետրերի արժեքը
       attrs:
         width: 100%
+      placeholder:
+        ru: ""
+        en: ""
+        hy: ""
+      group: window
   indices:
     settings_name_idx:
       fields:
       - name
       type: UNIQUE
       method: BTREE
+      name: settings_name_idx
+  group: ~
 notices:
   access-point: tools
   module: Tools
   models:
-    row: Models\Notice
     table: Models\Notices
-  desc: Шаблоны писем
+    row: Models\Notice
+  desc:
+    ru: Шаблоны писем
+    en: Notices templates
+    hy: Նամակների կաղապարներ
   params:
     visible: false
     maybepublished: false
   fields:
     name:
       type: varchar
-      length: 255
+      length: "255"
       class: string
       component: Colibri.UI.Forms.Text
-      desc: Наименование шаблона
-      note: Введите название шаблона, которое будете использовать в дальнейшем. Латинские
-        буквы, подчеркивание.
+      desc:
+        ru: Наименование шаблона
+        en: Template name
+        hy: Կաղապարի անվանումը
+      note:
+        ru: Введите название шаблона, которое будете использовать в дальнейшем. Латинские
+          буквы, подчеркивание.
+        en: Enter the name of the template that you will use in the future. Latin
+          letters, underscores.
+        hy: 'Մուտքագրեք կաղապարի անունը, որը դուք կօգտագործեք հետագայում: Լատինական
+          տառեր, ընդգծում:'
       attrs:
         width: 100%
-    subject:
-      type: varchar
-      length: 255
-      class: string
-      component: Colibri.UI.Forms.Select
-      desc: Тема письма
-      note: Введите тему письма
+      placeholder:
+        ru: ""
+        en: ""
+        hy: ""
       params:
         required: false
+        enabled: true
+        canbeempty: true
         readonly: false
+        list: false
+        multiple: false
+        greed: ""
+        viewer: ~
+        vertical: false
+        visual: false
+        code: ""
+        mask: ""
+        fieldgenerator: ""
+        generator: ""
+        noteClass: ""
+        simplearraywidth: ""
+        simplearrayheight: ""
+        addlink:
+          ru: ""
+          en: ""
+          hy: ""
+        removelink: true
+        updownlink: true
+        initempty: true
+        maxadd: ""
+        title: ""
+        removedesc: true
+        allow: ""
+        size: ""
+        validate: []
+      group: window
+    subject:
+      type: varchar
+      length: "255"
+      class: string
+      component: Colibri.UI.Forms.Select
+      desc:
+        ru: Тема письма
+        en: Subject of the letter
+        hy: Նամակի թեման
+      note:
+        ru: Введите тему письма
+        en: Enter the subject of the email
+        hy: Մուտքագրեք էլփոստի թեման
+      params:
+        required: false
+        enabled: true
+        canbeempty: true
+        readonly: false
+        list: false
+        multiple: false
+        greed: ""
+        viewer: ~
+        vertical: false
+        visual: false
+        code: ""
+        mask: ""
+        fieldgenerator: ""
+        generator: ""
+        noteClass: ""
+        simplearraywidth: ""
+        simplearrayheight: ""
+        addlink:
+          ru: ""
+          en: ""
+          hy: ""
+        removelink: true
+        updownlink: true
+        initempty: true
+        maxadd: ""
+        title: ""
+        removedesc: true
+        allow: ""
+        size: ""
+        validate: []
       selector:
         value: value
         title: title
+        group: ""
       attrs:
         width: 100%
+      placeholder:
+        ru: ""
+        en: ""
+        hy: ""
+      group: window
     body:
       type: varchar
-      length: 1024
+      length: "1024"
       class: string
       component: Colibri.UI.Forms.TextArea
-      desc: Тело письма
-      note: Введите тело письма
+      desc:
+        ru: Тело письма
+        en: The body of the letter
+        hy: Նամակի մարմինը
+      note:
+        ru: Введите тело письма
+        en: Enter the message body
+        hy: Մուտքագրեք էլփոստի մարմինը
       required: false
       reqdonly: true
       attrs:
         width: 100%
+      placeholder:
+        ru: ""
+        en: ""
+        hy: ""
+      params:
+        required: false
+        enabled: true
+        canbeempty: true
+        readonly: false
+        list: false
+        multiple: false
+        greed: ""
+        viewer: ~
+        vertical: false
+        visual: false
+        code: ""
+        mask: ""
+        fieldgenerator: ""
+        generator: ""
+        noteClass: ""
+        simplearraywidth: ""
+        simplearrayheight: ""
+        addlink:
+          ru: ""
+          en: ""
+          hy: ""
+        removelink: true
+        updownlink: true
+        initempty: true
+        maxadd: ""
+        title: ""
+        removedesc: true
+        allow: ""
+        size: ""
+        validate: []
+      group: window
   indices:
     notices_name_idx:
       fields:
       - name
       type: UNIQUE
       method: BTREE
+      name: notices_name_idx
+  group: ~
 backups:
-  desc: '#{tools-storages-backups-desc;Точки восстановления}'
+  desc:
+    ru: Точки восстановления
+    en: Recovery Points
+    hy: Վերականգնման կետերը
   access-point: tools
   models:
     table: Models\Backups
@@ -154,7 +482,10 @@ backups:
   fields:
     status:
       group: window
-      desc: '#{tools-storages-backups-fields-status-desc;Статус}'
+      desc:
+        ru: Статус
+        en: Status
+        hy: Կարգավիճակ
       type: varchar
       length: "255"
       component: Colibri.UI.Forms.Select
@@ -163,23 +494,62 @@ backups:
       params:
         required: false
         enabled: true
+        canbeempty: true
         readonly: true
+        list: true
+        multiple: false
+        greed: ""
+        viewer: Colibri.UI.SelectViewer
+        vertical: false
         visual: false
         code: ""
-        list: true
-        greed: ""
-        vertical: false
-        viewer: Colibri.UI.SelectViewer
         mask: ""
+        fieldgenerator: ""
+        generator: ""
+        noteClass: ""
+        simplearraywidth: ""
+        simplearrayheight: ""
+        addlink:
+          ru: ""
+          en: ""
+          hy: ""
+        removelink: true
+        updownlink: true
+        initempty: true
+        maxadd: ""
+        title: ""
+        removedesc: true
+        allow: ""
+        size: ""
+        validate: []
       values:
-      - value: paused
-        title: '#{tools-storages-backups-fields-status-values-paused;Остановлено}'
-      - value: started
-        title: '#{tools-storages-backups-fields-status-values-started;Включено}'
+      - title:
+          ru: Остановлено
+          en: Stopped
+          hy: Դադարեցված է
+        type: text
+        value: paused
+      - title:
+          ru: Включено
+          en: Enabled
+          hy: Ներառված
+        type: text
+        value: started
       default: paused
+      placeholder:
+        ru: ""
+        en: ""
+        hy: ""
+      note:
+        ru: ""
+        en: ""
+        hy: ""
     running:
       group: window
-      desc: '#{tools-storages-backups-fields-running-desc;Запущено}'
+      desc:
+        ru: Запущено
+        en: Launched
+        hy: Մեկնարկել է
       type: tinyint
       length: 1
       component: Colibri.UI.Forms.Hidden
@@ -199,9 +569,14 @@ backups:
       default: "0"
     name:
       group: window
-      desc: '#{tools-storages-backups-fields-name-desc;Наименование}'
-      note: '#{tools-storages-backups-fields-name-note;Введите название задание на
-        создание точки восстановления}'
+      desc:
+        ru: Наименование
+        en: Name
+        hy: Անվանում
+      note:
+        ru: Введите название задание на создание точки восстановления
+        en: Enter the name of the task to create a recovery point
+        hy: Մուտքագրեք կոչում խնդիրն է ստեղծել վերականգնման կետ
       type: varchar
       length: "255"
       component: Colibri.UI.Forms.Text
@@ -220,9 +595,14 @@ backups:
         mask: ""
     cron:
       group: window
-      desc: '#{tools-storages-backups-fields-cron-desc;Запись в CRON}'
-      note: '#{tools-storages-backups-fields-cron-note;Введите запись, которую нужно
-        будет внести в CRON}'
+      desc:
+        ru: Запись в CRON
+        en: Writing to CRON
+        hy: Գրառումը CRON-ում
+      note:
+        ru: Введите запись, которую нужно будет внести в CRON
+        en: Enter the entry that you will need to make in CRON
+        hy: Մուտքագրեք գրառումը, որը պետք է կատարվի CRON-ում
       type: json
       component: Colibri.UI.Forms.Object
       class: ObjectField
@@ -241,8 +621,14 @@ backups:
         mask: ""
       fields:
         minute:
-          desc: '#{tools-storages-backups-fields-cron-minute-desc;Минута}'
-          note: '#{tools-storages-backups-fields-cron-minute-note;Выберите минуту}'
+          desc:
+            ru: Минута
+            en: Minute
+            hy: Րոպե
+          note:
+            ru: Выберите минуту
+            en: Choose a minute
+            hy: Ընտրեք րոպե
           type: varchar
           length: "2"
           component: Colibri.UI.Forms.Select
@@ -262,128 +648,194 @@ backups:
           values:
           - value: "00"
             title: "00"
+            type: text
           - value: "01"
             title: "01"
+            type: text
           - value: "02"
             title: "02"
+            type: text
           - value: "03"
             title: "03"
+            type: text
           - value: "04"
             title: "04"
+            type: text
           - value: "05"
             title: "05"
+            type: text
           - value: "06"
             title: "06"
+            type: text
           - value: "07"
             title: "07"
+            type: text
           - value: 08
             title: 08
+            type: text
           - value: 09
             title: 09
+            type: text
           - value: "10"
             title: "10"
+            type: text
           - value: "11"
             title: "11"
+            type: text
           - value: "12"
             title: "12"
+            type: text
           - value: "13"
             title: "13"
+            type: text
           - value: "14"
             title: "14"
+            type: text
           - value: "15"
             title: "15"
+            type: text
           - value: "16"
             title: "16"
+            type: text
           - value: "17"
             title: "17"
+            type: text
           - value: "18"
             title: "18"
+            type: text
           - value: "19"
             title: "19"
+            type: text
           - value: "20"
             title: "20"
+            type: text
           - value: "21"
             title: "21"
+            type: text
           - value: "22"
             title: "22"
+            type: text
           - value: "23"
             title: "23"
+            type: text
           - value: "24"
             title: "24"
+            type: text
           - value: "25"
             title: "25"
+            type: text
           - value: "26"
             title: "26"
+            type: text
           - value: "27"
             title: "27"
+            type: text
           - value: "28"
             title: "28"
+            type: text
           - value: "29"
             title: "29"
+            type: text
           - value: "30"
             title: "30"
+            type: text
           - value: "31"
             title: "31"
+            type: text
           - value: "32"
             title: "32"
+            type: text
           - value: "33"
             title: "33"
+            type: text
           - value: "34"
             title: "34"
+            type: text
           - value: "35"
             title: "35"
+            type: text
           - value: "36"
             title: "36"
+            type: text
           - value: "37"
             title: "37"
+            type: text
           - value: "38"
             title: "38"
+            type: text
           - value: "39"
             title: "39"
+            type: text
           - value: "40"
             title: "40"
+            type: text
           - value: "41"
             title: "41"
+            type: text
           - value: "42"
             title: "42"
+            type: text
           - value: "43"
             title: "43"
+            type: text
           - value: "44"
             title: "44"
+            type: text
           - value: "45"
             title: "45"
+            type: text
           - value: "46"
             title: "46"
+            type: text
           - value: "47"
             title: "47"
+            type: text
           - value: "48"
             title: "48"
+            type: text
           - value: "49"
             title: "49"
+            type: text
           - value: "50"
             title: "50"
+            type: text
           - value: "51"
             title: "51"
+            type: text
           - value: "52"
             title: "52"
+            type: text
           - value: "53"
             title: "53"
+            type: text
           - value: "54"
             title: "54"
+            type: text
           - value: "55"
             title: "55"
+            type: text
           - value: "56"
             title: "56"
+            type: text
           - value: "57"
             title: "57"
+            type: text
           - value: "58"
             title: "58"
+            type: text
           - value: "59"
             title: "59"
+            type: text
           default: "00"
         hour:
-          desc: '#{tools-storages-backups-fields-cron-hour-desc;Час}'
-          note: '#{tools-storages-backups-fields-cron-hour-note;Выберите час}'
+          desc:
+            ru: Час
+            en: Hour
+            hy: Ժամ
+          note:
+            ru: Выберите час
+            en: Choose an hour
+            hy: Ընտրեք ժամ
           type: varchar
           length: "2"
           component: Colibri.UI.Forms.Select
@@ -403,56 +855,86 @@ backups:
           values:
           - value: "00"
             title: "00"
+            type: text
           - value: "01"
             title: "01"
+            type: text
           - value: "02"
             title: "02"
+            type: text
           - value: "03"
             title: "03"
+            type: text
           - value: "04"
             title: "04"
+            type: text
           - value: "05"
             title: "05"
+            type: text
           - value: "06"
             title: "06"
+            type: text
           - value: "07"
             title: "07"
+            type: text
           - value: 08
             title: 08
+            type: text
           - value: 09
             title: 09
+            type: text
           - value: "10"
             title: "10"
+            type: text
           - value: "11"
             title: "11"
+            type: text
           - value: "12"
             title: "12"
+            type: text
           - value: "13"
             title: "13"
+            type: text
           - value: "14"
             title: "14"
+            type: text
           - value: "15"
             title: "15"
+            type: text
           - value: "16"
             title: "16"
+            type: text
           - value: "17"
             title: "17"
+            type: text
           - value: "18"
             title: "18"
+            type: text
           - value: "19"
             title: "19"
+            type: text
           - value: "20"
             title: "20"
+            type: text
           - value: "21"
             title: "21"
+            type: text
           - value: "22"
             title: "22"
+            type: text
           - value: "23"
             title: "23"
+            type: text
           default: "00"
         day:
-          desc: '#{tools-storages-backups-fields-cron-day-desc;День}'
-          note: '#{tools-storages-backups-fields-cron-day-note;Выберите день}'
+          desc:
+            ru: День
+            en: Day
+            hy: Օր
+          note:
+            ru: Выберите день
+            en: Choose a day
+            hy: Ընտրեք օրը
           type: varchar
           length: "2"
           component: Colibri.UI.Forms.Select
@@ -472,74 +954,113 @@ backups:
           values:
           - value: '*'
             title: '*'
+            type: text
           - value: "00"
             title: "00"
+            type: text
           - value: "01"
             title: "01"
+            type: text
           - value: "02"
             title: "02"
+            type: text
           - value: "03"
             title: "03"
+            type: text
           - value: "04"
             title: "04"
+            type: text
           - value: "05"
             title: "05"
+            type: text
           - value: "06"
             title: "06"
+            type: text
           - value: "07"
             title: "07"
+            type: text
           - value: 08
             title: 08
+            type: text
           - value: 09
             title: 09
+            type: text
           - value: "10"
             title: "10"
+            type: text
           - value: "11"
             title: "11"
+            type: text
           - value: "12"
             title: "12"
+            type: text
           - value: "13"
             title: "13"
+            type: text
           - value: "14"
             title: "14"
+            type: text
           - value: "15"
             title: "15"
+            type: text
           - value: "16"
             title: "16"
+            type: text
           - value: "17"
             title: "17"
+            type: text
           - value: "18"
             title: "18"
+            type: text
           - value: "19"
             title: "19"
+            type: text
           - value: "20"
             title: "20"
+            type: text
           - value: "21"
             title: "21"
+            type: text
           - value: "22"
             title: "22"
+            type: text
           - value: "23"
             title: "23"
+            type: text
           - value: "24"
             title: "24"
+            type: text
           - value: "25"
             title: "25"
+            type: text
           - value: "26"
             title: "26"
+            type: text
           - value: "27"
             title: "27"
+            type: text
           - value: "28"
             title: "28"
+            type: text
           - value: "29"
             title: "29"
+            type: text
           - value: "30"
             title: "30"
+            type: text
           - value: "31"
             title: "31"
+            type: text
           default: '*'
         month:
-          desc: '#{tools-storages-backups-fields-cron-month-desc;Месяц}'
-          note: '#{tools-storages-backups-fields-cron-month-note;Выберите месяц}'
+          desc:
+            ru: Месяц
+            en: Month
+            hy: Ամիս
+          note:
+            ru: Выберите месяц
+            en: Choose a month
+            hy: Ընտրել ամիս
           type: varchar
           length: "2"
           component: Colibri.UI.Forms.Select
@@ -559,37 +1080,56 @@ backups:
           values:
           - value: '*'
             title: '*'
+            type: text
           - value: "00"
             title: "00"
+            type: text
           - value: "01"
             title: "01"
+            type: text
           - value: "02"
             title: "02"
+            type: text
           - value: "03"
             title: "03"
+            type: text
           - value: "04"
             title: "04"
+            type: text
           - value: "05"
             title: "05"
+            type: text
           - value: "06"
             title: "06"
+            type: text
           - value: "07"
             title: "07"
+            type: text
           - value: 08
             title: 08
+            type: text
           - value: 09
             title: 09
+            type: text
           - value: "10"
             title: "10"
+            type: text
           - value: "11"
             title: "11"
+            type: text
           - value: "12"
             title: "12"
+            type: text
           default: '*'
         dayofweek:
-          desc: '#{tools-storages-backups-fields-cron-dayofweek-desc;День недели}'
-          note: '#{tools-storages-backups-fields-cron-dayofweek-note;Выберите день
-            недели}'
+          desc:
+            ru: День недели
+            en: Day of the week
+            hy: Շաբաթվա օր
+          note:
+            ru: Выберите день недели
+            en: Choose a day of the week
+            hy: Ընտրեք օրը շաբաթվա
           type: varchar
           length: "1"
           component: Colibri.UI.Forms.Select
@@ -609,26 +1149,60 @@ backups:
           values:
           - value: '*'
             title: '*'
+            type: text
           - value: "0"
-            title: '#{tools-storages-backups-fields-cron-dayofweek-values-0;Воскресенье}'
+            title:
+              ru: Воскресенье
+              en: Sunday
+              hy: Կիրակի
+            type: text
           - value: "1"
-            title: '#{tools-storages-backups-fields-cron-dayofweek-values-1;Понедельник}'
+            title:
+              ru: Понедельник
+              en: Monday
+              hy: Երկուշաբթի
+            type: text
           - value: "2"
-            title: '#{tools-storages-backups-fields-cron-dayofweek-values-2;Вторник}'
+            title:
+              ru: Вторник
+              en: Tuesday
+              hy: Երեքշաբթի
+            type: text
           - value: "3"
-            title: '#{tools-storages-backups-fields-cron-dayofweek-values-3;Среда}'
+            title:
+              ru: Среда
+              en: Wednesday
+              hy: Չորեքշաբթի
+            type: text
           - value: "4"
-            title: '#{tools-storages-backups-fields-cron-dayofweek-values-4;Четверг}'
+            title:
+              ru: Четверг
+              en: Thursday
+              hy: Հինգշաբթի
+            type: text
           - value: "5"
-            title: '#{tools-storages-backups-fields-cron-dayofweek-values-5;Пятница}'
+            title:
+              ru: Пятница
+              en: Friday
+              hy: Ուրբաթ
+            type: text
           - value: "6"
-            title: '#{tools-storages-backups-fields-cron-dayofweek-values-6;Суббота}'
+            title:
+              ru: Суббота
+              en: Saturday
+              hy: Շաբաթ
+            type: text
           default: '*'
     file:
       group: window
-      desc: '#{tools-storages-backups-fields-file-desc;Шаблон названия файла}'
-      note: '#{tools-storages-backups-fields-file-note;Введите шаблон названия файла,например
-        backup_[[date]]_[[index]].backup}'
+      desc:
+        ru: Шаблон названия файла
+        en: File name template
+        hy: Ֆայլի անվանումը Կաղապար
+      note:
+        ru: Введите шаблон названия файла, например backup_{date}_{index}.backup
+        en: Enter a template for the file name, for example backup_{date}_{index}.backup
+        hy: Մուտքագրեք ֆայլի անունը Կաղապար, օրինակ backup_ {date}_{index}.backup
       type: varchar
       length: "255"
       component: Colibri.UI.Forms.Text
@@ -646,8 +1220,12 @@ backups:
         viewer: ~
         mask: ""
       default: backup_[[date]]_[[index]].backup
+  group: ~
 themes:
-  desc: '#{tools-storages-themes-desc;Темы}'
+  desc:
+    ru: Темы
+    en: Themes
+    hy: Թեմաներ
   access-point: tools
   models:
     table: Models\Themes
@@ -658,7 +1236,10 @@ themes:
   module: Tools
   fields:
     name:
-      desc: '#{tools-storages-themes-fields-name-desc;Наименование}'
+      desc:
+        ru: Наименование
+        en: Name
+        hy: Անվանում
       type: varchar
       length: "255"
       component: Colibri.UI.Forms.Text
@@ -676,7 +1257,10 @@ themes:
         viewer: ~
         mask: ""
     desc:
-      desc: '#{tools-storages-themes-fields-desc-desc;Описание темы}'
+      desc:
+        ru: Описание темы
+        en: Topic description
+        hy: Թեմայի նկարագրությունը
       type: varchar
       length: "255"
       component: Colibri.UI.Forms.Text
@@ -695,8 +1279,14 @@ themes:
         mask: ""
     domain:
       group: window
-      desc: '#{tools-storages-themes-fields-domain-desc;Ключ домена}'
-      note: '#{tools-storages-themes-fields-domain-note;Выберите ключ домена}'
+      desc:
+        ru: Ключ домена
+        en: Domain Key
+        hy: Դոմեյն բանալին
+      note:
+        ru: Выберите ключ домена
+        en: Select the domain key
+        hy: Ընտրեք դոմեյն բանալին
       type: varchar
       length: "255"
       component: Colibri.UI.Forms.Select
@@ -717,8 +1307,14 @@ themes:
         binding: app.sites.domainkeys
     current:
       group: window
-      desc: '#{tools-storages-themes-fields-current-desc;Текущая}'
-      note: '#{tools-storages-themes-fields-current-note;Укажите да, если тема должна быть текущей для домена}'
+      desc:
+        ru: Текущая
+        en: Current
+        hy: Ընթացիկ
+      note:
+        ru: Укажите да, если тема должна быть текущей для домена
+        en: Specify yes if the topic should be the current one for the domain
+        hy: Նշեք Այո, եթե թեման պետք է լինի ընթացիկ տիրույթում
       type: tinyint
       length: "1"
       component: Colibri.UI.Forms.Checkbox
@@ -737,7 +1333,10 @@ themes:
         mask: ""
     vars:
       group: window
-      desc: '#{tools-storages-themes-fields-vars-desc;Переменные}'
+      desc:
+        ru: Переменные
+        en: Variables
+        hy: Փոփոխականներ
       type: json
       component: Colibri.UI.Forms.Array
       class: ArrayField
@@ -756,7 +1355,10 @@ themes:
         mask: ""
       fields:
         name:
-          desc: '#{tools-storages-themes-fields-vars-name-desc;Название переменной}'
+          desc:
+            ru: Название переменной
+            en: Variable name
+            hy: Փոփոխական անունը
           type: varchar
           length: "255"
           component: Colibri.UI.Forms.Text
@@ -774,7 +1376,10 @@ themes:
             viewer: ~
             mask: ""
         type:
-          desc: '#{tools-storages-themes-fields-vars-type-desc;Тип переменной}'
+          desc:
+            ru: Тип переменной
+            en: Type of variable
+            hy: Փոփոխական տեսակը
           type: varchar
           length: "255"
           component: Colibri.UI.Forms.Select
@@ -793,19 +1398,46 @@ themes:
             mask: ""
           values:
           - value: color
-            title: '#{tools-storages-themes-fields-vars-type-values-color;Цвет}'
+            title:
+              ru: Цвет
+              en: Colour
+              hy: Գույն
+            type: text
           - value: font-family
-            title: '#{tools-storages-themes-fields-vars-type-values-font-family;Название шрифта}'
+            title:
+              ru: Название шрифта
+              en: Font name
+              hy: Տառատեսակի անվանումը
+            type: text
           - value: size
-            title: '#{tools-storages-themes-fields-vars-type-values-size;Размер}'
+            title:
+              ru: Размер
+              en: Size
+              hy: Չափ
+            type: text
           - value: image
-            title: '#{tools-storages-themes-fields-vars-type-values-image;Изoбражение}'
+            title:
+              ru: Изoбражение
+              en: Image
+              hy: Նկար
+            type: text
           - value: border
-            title: '#{tools-storages-themes-fields-vars-type-values-border;Рамка}'
+            title:
+              ru: Рамка
+              en: Frame
+              hy: Շրջանակ
+            type: text
           - value: shadow
-            title: '#{tools-storages-themes-fields-vars-type-values-shadow;Тень}'
+            title:
+              ru: Тень
+              en: Shadow
+              hy: Ստվեր
+            type: text
         value:
-          desc: '#{tools-storages-themes-fields-vars-value-desc;Значение}'
+          desc:
+            ru: Значение
+            en: Meaning
+            hy: Արժեք
           type: varchar
           length: "255"
           component: Colibri.UI.Forms.Text
@@ -824,7 +1456,10 @@ themes:
             mask: ""
     mixins:
       group: window
-      desc: '#{tools-storages-themes-fields-mixins-desc;Mixin-ы}'
+      desc:
+        ru: Mixin-ы
+        en: Mixins
+        hy: Mixin-ներ
       type: json
       component: Colibri.UI.Forms.Array
       class: ArrayField
@@ -843,7 +1478,10 @@ themes:
         mask: ""
       fields:
         name:
-          desc: '#{tools-storages-themes-fields-mixins-name-desc;Наименование}'
+          desc:
+            ru: Наименование
+            en: Name
+            hy: Անվանում
           type: varchar
           length: "255"
           component: Colibri.UI.Forms.Text
@@ -861,7 +1499,10 @@ themes:
             viewer: ~
             mask: ""
         params:
-          desc: '#{tools-storages-themes-fields-mixins-params-desc;Параметры}'
+          desc:
+            ru: Параметры
+            en: Parameters
+            hy: Պարամետրեր
           type: json
           component: Colibri.UI.Forms.Array
           class: ArrayField
@@ -879,8 +1520,10 @@ themes:
             mask: ""
           fields:
             name:
-              desc: '#{tools-storages-themes-fields-mixins-params-name-desc;Название
-                параметра}'
+              desc:
+                ru: Название параметра
+                en: Name of the parameter
+                hy: Պարամետր անունը
               type: varchar
               length: "255"
               component: Colibri.UI.Forms.Text
@@ -898,12 +1541,15 @@ themes:
                 viewer: ~
                 mask: ""
         value:
-          desc: '#{tools-storages-themes-fields-mixins-value-desc;Тело}'
+          desc:
+            ru: Тело
+            en: Body
+            hy: Մարմին
           type: varchar
           length: "1024"
           component: App.Modules.Manage.UI.TinyMCETextArea
           class: string
-          attrs: 
+          attrs:
             height: 250
           params:
             required: false
@@ -916,4 +1562,5 @@ themes:
             vertical: false
             viewer: ~
             mask: ""
+  group: ~
 ...

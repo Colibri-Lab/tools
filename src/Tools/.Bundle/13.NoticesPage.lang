@@ -1,0 +1,38 @@
+tools-notices-notices-title:
+  ru: Сообщения
+  en: Notices
+tools-notices-date-title:
+  ru: Редактор
+  en: Editor
+tools-notices-buttons-save:
+  ru: Сохранить
+  en: Save
+tools-notices-fields-nodesc:
+  ru: Без темы
+  en: No subject
+tools-notices-fields-desc:
+  ru: Наименование
+  en: Name
+tools-notices-fields-desc-note:
+  ru: Введите наименование сообщения. Латинские буквы без спец-символов
+  en: Enter a title for the message. Latin letters without special characters
+tools-notices-fields-subject:
+  ru: Тема письма
+  en: Subject
+tools-notices-fields-subject-note:
+  ru: Введите тему письма
+  en: Enter the message subject
+tools-notices-fields-body:
+  ru: Тело письма
+  en: Message body
+tools-notices-fields-body-note:
+  ru: Введите тело письма. Допускаются вставки вида [[name]] в качестве переменных
+    шаблона
+  en: Enter the body of the email. Inserts like [[name]] are allowed as template
+    variables
+tools-notices-contextmenu-newnotice:
+  ru: Создать шаблон
+  en: Create notice
+tools-notices-contextmenu-deletenotice:
+  ru: Удалить шаблон
+  en: Delete notice

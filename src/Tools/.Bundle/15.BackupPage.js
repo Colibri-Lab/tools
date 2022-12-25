@@ -17,7 +17,7 @@ App.Modules.Tools.BackupPage = class extends Colibri.UI.Component
 
     _showCreateEditWindow(data = null) {
 
-        const title = data ? '#{tools-backups-windowtitle-editbackup;Редактировать задание}' : '#{tools-backups-windowtitle-newbackup;Новое задание}';
+        const title = data ? '#{tools-backups-windowtitle-editbackup}' : '#{tools-backups-windowtitle-newbackup}';
 
         Manage.FormWindow.Show(title, 1024, 'app.manage.storages(backups)', data ? data : {})
             .then((dta) => {
@@ -34,8 +34,8 @@ App.Modules.Tools.BackupPage = class extends Colibri.UI.Component
     __renderDataContextMenu(event, args) {
         let contextmenu = [];
         
-        contextmenu.push({name: 'edit-backup', title: '#{tools-backups-contextmenu-edit;Редактировать}', icon: Colibri.UI.ContextMenuEditIcon});
-        contextmenu.push({name: 'remove-backup', title: '#{tools-backups-contextmenu-delete;Удалить}', icon: Colibri.UI.ContextMenuRemoveIcon});
+        contextmenu.push({name: 'edit-backup', title: '#{tools-backups-contextmenu-edit}', icon: Colibri.UI.ContextMenuEditIcon});
+        contextmenu.push({name: 'remove-backup', title: '#{tools-backups-contextmenu-delete}', icon: Colibri.UI.ContextMenuRemoveIcon});
 
         args.item.contextmenu = contextmenu;
         args.item.ShowContextMenu(args.isContextMenuEvent ? [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.RB] : [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.LB], '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);
@@ -53,7 +53,7 @@ App.Modules.Tools.BackupPage = class extends Colibri.UI.Component
             this._showCreateEditWindow(item.value);
         }
         else if(menuData.name == 'remove-backup') {
-            App.Confirm.Show('#{tools-backups-deletedata1;Удаление точки восстановления}', '#{tools-backups-deletedata1message;Вы уверены, что хотите удалить выбранную строку?}', '#{app-confirm-buttons-delete;Удалить!}').then(() => {
+            App.Confirm.Show('#{tools-backups-deletedata1}', '#{tools-backups-deletedata1message}', '#{app-confirm-buttons-delete;Удалить!}').then(() => {
                 Tools.DeleteBackup(item.value.id);
             });
         }

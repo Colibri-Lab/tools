@@ -1,0 +1,18 @@
+tools-settings-settings-title:
+  ru: Настройки
+  en: Settings
+tools-settings-data-title:
+  ru: Редактор
+  en: Editor
+tools-settings-buttons-save:
+  ru: Сохранить
+  en: Save
+tools-settings-contextmenu-delete:
+  ru: Удалить настройку
+  en: Remove setting
+tools-settings-description-title:
+  ru: Описание настройки
+  en: Setting description
+tools-settings-value-title:
+  ru: Значение
+  en: Setting value

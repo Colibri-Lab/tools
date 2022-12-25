@@ -1,4 +1,3 @@
----
 tools-settings-tree-root:
   ru: Настройки сайта
   en: Site settings
@@ -70,7 +69,7 @@ tools-notices-fields-desc:
 tools-notices-fields-desc-note:
   ru: Введите наименование темы. Латинские буквы без спец-символов
   en: Enter the name of the topic. Latin letters without special characters
-  hy: 'Մուտքագրեք թեմայի անվանումը: Լատինական տառեր առանց հատուկ նիշերի'
+  hy: "Մուտքագրեք թեմայի անվանումը: Լատինական տառեր առանց հատուկ նիշերի"
 tools-notices-fields-subject:
   ru: Тема письма
   en: Subject of the letter
@@ -86,10 +85,10 @@ tools-notices-fields-body:
 tools-notices-fields-body-note:
   ru: Введите тело письма. Допускаются вставки вида [[name]] в качестве переменных
     шаблона
-  en: Enter the body of the email. Inserts of the form [[name]] as template variables
-    are allowed
-  hy: 'Մուտքագրեք նամակի մարմինը: Թույլատրվում է տեղադրել տեսակի [[name]] որպես Կաղապար
-    փոփոխականների'
+  en: Enter the body of the email. Inserts of the form [[name]] as template
+    variables are allowed
+  hy: "Մուտքագրեք նամակի մարմինը: Թույլատրվում է տեղադրել տեսակի [[name]] որպես
+    Կաղապար փոփոխականների"
 tools-notices-contextmenu-newnotice:
   ru: Создать шаблон
   en: Create a template
@@ -103,10 +102,10 @@ tools-menu-settings-data:
   ru: Настройки
   en: Settings
 tools-menu-settings-data-desc:
-  hy: Կայքի կարգավորումները < br />Այստեղ կարող եք խմբագրել որոշ կարգավորումներ, որոնք
-    նախապես ստեղծվել են մենեջերի կողմից կարգավորումների մենեջերում
-  ru: Настройки сайта<br />Здесь можно отредактировать некоторые настройки, предварительно
-    созданные менеджером в менеджере настроек
+  hy: Կայքի կարգավորումները < br />Այստեղ կարող եք խմբագրել որոշ կարգավորումներ,
+    որոնք նախապես ստեղծվել են մենեջերի կողմից կարգավորումների մենեջերում
+  ru: Настройки сайта<br />Здесь можно отредактировать некоторые настройки,
+    предварительно созданные менеджером в менеджере настроек
   en: Site Settings<br />Here you can edit some settings previously created by the
     manager in the settings manager
 tools-menu-filesondisk:
@@ -114,15 +113,16 @@ tools-menu-filesondisk:
   ru: Файлы на диске
   en: Files on disk
 tools-menu-filesondisk-desc:
-  hy: 'Ֆայլերը գտնվում են ընթացիկ սերվերի վրա, տեղական մեքենայի վրա: Դուք կարող եք
-    ավելացնել կամ ջնջել անցանկալի ֆայլեր. Ուշադրություն! Երբ դուք հեռացնել ֆայլերը,
-    դուք պետք է հաշվի առնել, որ որոշ տողերի պահեստներում կարող է հղում նրանց'
-  ru: Файлы находящиеся на текущем сервере, на локальной машине. Можно добавить или
-    удалить ненужные файлы. Внимание! При удалении файлов, нужно учесть, что некоторые
-    строки в хранилищах могут ссылаться на них
-  en: Files located on the current server, on the local machine. You can add or delete
-    unnecessary files. Attention! When deleting files, you need to take into account
-    that some lines in the repositories may refer to them
+  hy: "Ֆայլերը գտնվում են ընթացիկ սերվերի վրա, տեղական մեքենայի վրա: Դուք կարող եք
+    ավելացնել կամ ջնջել անցանկալի ֆայլեր. Ուշադրություն! Երբ դուք հեռացնել
+    ֆայլերը, դուք պետք է հաշվի առնել, որ որոշ տողերի պահեստներում կարող է հղում
+    նրանց"
+  ru: Файлы находящиеся на текущем сервере, на локальной машине. Можно добавить
+    или удалить ненужные файлы. Внимание! При удалении файлов, нужно учесть, что
+    некоторые строки в хранилищах могут ссылаться на них
+  en: Files located on the current server, on the local machine. You can add or
+    delete unnecessary files. Attention! When deleting files, you need to take
+    into account that some lines in the repositories may refer to them
 tools-menu-filesremote:
   hy: Մեդիա շտեմարան
   ru: Хранилище медиа
@@ -130,60 +130,62 @@ tools-menu-filesremote:
 tools-menu-filesremote-desc:
   hy: Հեռավոր ֆայլի գրադարան. Դուք կարող եք ավելացնել զամբյուղներ (bucket) եւ/կամ
     մաքրել դրանք անհրաժեշտության դեպքում
-  ru: Удаленная библиотека файлов. Можно добавить корзины(bucket) и/или очистить их
-    при необходимости
+  ru: Удаленная библиотека файлов. Можно добавить корзины(bucket) и/или очистить
+    их при необходимости
   en: Remote file library. You can add buckets and/or empty them if necessary
 tools-menu-settings:
   hy: Կայքի կարգավորումները
   ru: Настройки сайта
   en: Site Settings
 tools-menu-settings-desc:
-  hy: Կարգավորումների մենեջեր. Դուք կարող եք ստեղծել մի կարգավորում, որը հետագայում
-    օգտագործվում է նախագծման կամ դուրսբերման տեղեկատվության վրա նախագծի
-  ru: Менеджер настроек. Можно создать настройку, которую в дальнейшем использовать
-    при разработке или выводе информации на проекте
-  en: Settings manager. You can create a setting that can be used later in the development
-    or output of information on the project
+  hy: Կարգավորումների մենեջեր. Դուք կարող եք ստեղծել մի կարգավորում, որը
+    հետագայում օգտագործվում է նախագծման կամ դուրսբերման տեղեկատվության վրա
+    նախագծի
+  ru: Менеджер настроек. Можно создать настройку, которую в дальнейшем
+    использовать при разработке или выводе информации на проекте
+  en: Settings manager. You can create a setting that can be used later in the
+    development or output of information on the project
 tools-menu-notices:
   hy: Հաղորդագրությունների կաղապարներ
   ru: Шаблоны сообщений
   en: Message Templates
 tools-menu-notices-desc:
-  hy: Ստեղծել հաղորդագրությունների կաղապարներ, էլեկտրոնային փոստի միջոցով օգտագործողի
-    հետ հաղորդակցվելու համար
-  ru: Создайте шаблоны сообщений для общения с пользователем посредством электронной
-    почты
+  hy: Ստեղծել հաղորդագրությունների կաղապարներ, էլեկտրոնային փոստի միջոցով
+    օգտագործողի հետ հաղորդակցվելու համար
+  ru: Создайте шаблоны сообщений для общения с пользователем посредством
+    электронной почты
   en: Create message templates for communicating with the user via email
 tools-menu-backups:
   hy: Կույր համակարգ
   ru: Слепки системы
   en: Casts of the system
 tools-menu-backups-desc:
-  hy: 'Ստեղծեք վերականգնման կետ կրիտիկական իրավիճակների դեպքում: Հետագայում հնարավոր
-    կլինի տվյալները վերադարձնել ստացված ֆայլից'
-  ru: Создайте точку восстановления на случай критических ситуаций. В дальнейшем можно
-    будет вернуть данные из полученного файла
-  en: Create a recovery point in case of critical situations. In the future, it will
-    be possible to return data from the received file
+  hy: "Ստեղծեք վերականգնման կետ կրիտիկական իրավիճակների դեպքում: Հետագայում
+    հնարավոր կլինի տվյալները վերադարձնել ստացված ֆայլից"
+  ru: Создайте точку восстановления на случай критических ситуаций. В дальнейшем
+    можно будет вернуть данные из полученного файла
+  en: Create a recovery point in case of critical situations. In the future, it
+    will be possible to return data from the received file
 tools-menu-execute:
   hy: Կատարել
   ru: Выполнить
   en: Execute
 tools-menu-execute-desc:
-  hy: Կատարել կոդը (PHP). Ուշադրություն! Կոդը կատարվում է շրջապատված է ամբողջ նախագծի,
-    հնարավոր անդառնալի վնաս.
-  ru: Выполнить код (PHP). Внимание! Код исполняется в окружении всего проекта, возможны
-    необратимые повреждения!
-  en: Execute the code (PHP). Attention! The code is executed in the environment of
-    the entire project, irreversible damage is possible!
+  hy: Կատարել կոդը (PHP). Ուշադրություն! Կոդը կատարվում է շրջապատված է ամբողջ
+    նախագծի, հնարավոր անդառնալի վնաս.
+  ru: Выполнить код (PHP). Внимание! Код исполняется в окружении всего проекта,
+    возможны необратимые повреждения!
+  en: Execute the code (PHP). Attention! The code is executed in the environment
+    of the entire project, irreversible damage is possible!
 tools-menu-themes:
   hy: Կայքի թեմաներ
   ru: Темы сайта
   en: Site Themes
 tools-menu-themes-desc:
-  hy: Կարգավորել տեսքը կայքում. Դուք կարող եք ստեղծել նոր թեմա, կամ խմբագրել գոյություն
-    ունեցող
-  ru: Настройте внешний вид сайта. Можно создать новую тему, или отредактировать существующую
+  hy: Կարգավորել տեսքը կայքում. Դուք կարող եք ստեղծել նոր թեմա, կամ խմբագրել
+    գոյություն ունեցող
+  ru: Настройте внешний вид сайта. Можно создать новую тему, или отредактировать
+    существующую
   en: Customize the appearance of the site. You can create a new theme, or edit an
     existing one
 tools-backup-create:
@@ -191,11 +193,12 @@ tools-backup-create:
   en: Create an impression
   hy: Ստեղծել կույր
 tools-backup-create-info:
-  ru: Нажмите на кнопку «создать слепок» и дождитесь окончания процесса. После завершения
-    в списке слепкой внизу этой страницы появится новый пункт отмеченный датой
-  en: Click on the "create a cast" button and wait for the process to finish. After
-    completion, a new item marked with a date will appear in the list with a cast
-    at the bottom of this page
+  ru: Нажмите на кнопку «создать слепок» и дождитесь окончания процесса. После
+    завершения в списке слепкой внизу этой страницы появится новый пункт
+    отмеченный датой
+  en: Click on the "create a cast" button and wait for the process to finish.
+    After completion, a new item marked with a date will appear in the list with
+    a cast at the bottom of this page
   hy: 'Սեղմիր "Ստեղծել կույր" կոճակը եւ սպասեք գործընթացի ավարտին: Ցուցակի ավարտից
     հետո այս էջի ներքեւի մասում կույրով կհայտնվի նոր կետ, որը նշված է ամսաթվով'
 tools-backups-dataempty:
@@ -373,7 +376,7 @@ tools-backups-deletedata1:
 tools-backups-deletedata1message:
   ru: Вы уверены, что хотите удалить выбранную строку?
   en: Are you sure you want to delete the selected row?
-  hy: 'Վստահ եք, որ ցանկանում եք ջնջել ընտրված գիծը:'
+  hy: "Վստահ եք, որ ցանկանում եք ջնջել ընտրված գիծը:"
 tools-backups-points-running:
   ru: Работает
   en: Works
@@ -403,15 +406,21 @@ tools-execute-script-title:
   en: Script to execute
   hy: Կատարման սցենար
 tools-execute-create-info:
-  ru: "Внимание! Скрипт исполняется в окружении всего проекта, возможны необратимые
-    последствия, пожалуйста, будьте осторожны. \nДля вывода информации используйте
-    Logger $logger, например: $logger->debug('Тестовое сообщение');"
-  en: "Attention! The script is executed in the environment of the entire project,
-    irreversible consequences are possible, please be careful \nUse Logger $logger
-    for sending information to client, for example: $logger->debug('Test message');"
-  hy: "Ուշադրություն! Script կատարվում շրջապատված է ամբողջ ծրագրի, հնարավոր անդառնալի
-    հետեւանքներ, խնդրում ենք զգույշ լինել: \nՕգտագօրծեք Logger $logger էկրանին ինֆօրմացյա
-    ցույց տալու համար, օրինակ: $logger->debug('Տեստաին նամակ');"
+  ru: >-
+    Внимание! Скрипт исполняется в окружении всего проекта, возможны необратимые
+    последствия, пожалуйста, будьте осторожны. 
+
+    Для вывода информации используйте Logger $logger, например: $logger->debug('Тестовое сообщение');
+  en: >-
+    Attention! The script is executed in the environment of the entire project,
+    irreversible consequences are possible, please be careful 
+
+    Use Logger $logger for sending information to client, for example: $logger->debug('Test message');
+  hy: >-
+    Ուշադրություն! Script կատարվում շրջապատված է ամբողջ ծրագրի, հնարավոր
+    անդառնալի հետեւանքներ, խնդրում ենք զգույշ լինել: 
+
+    Օգտագօրծեք Logger $logger էկրանին ինֆօրմացյա ցույց տալու համար, օրինակ: $logger->debug('Տեստաին նամակ');
 tools-execute-run-success:
   ru: Скрипт запущен успешно
   en: The script was launched successfully
@@ -595,10 +604,10 @@ tools-themes-deletetheme:
 tools-themes-deletethememessage:
   ru: Вы уверены, что хотите удалить тему? На сайтах привязанных к этой теме могут
     возникнуть артефакты
-  en: Are you sure you want to delete the theme? Artifacts may occur on sites linked
-    to this topic
-  hy: 'Համոզված եք, որ ցանկանում եք ջնջել թեման: Այս թեմային առնչվող կայքերում կարող
-    են առաջանալ արտեֆակտներ'
+  en: Are you sure you want to delete the theme? Artifacts may occur on sites
+    linked to this topic
+  hy: "Համոզված եք, որ ցանկանում եք ջնջել թեման: Այս թեմային առնչվող կայքերում
+    կարող են առաջանալ արտեֆակտներ"
 tools-storages-themes-fields-vars-type-values-font-family:
   ru: Название шрифта
   en: Font name
@@ -622,7 +631,7 @@ tools-themes-deletevars:
 tools-themes-deletevarsmessage:
   ru: Вы уверены, что хотите удалить переменные?
   en: Are you sure you want to delete variables?
-  hy: 'Համոզված եք, որ ցանկանում եք հեռացնել փոփոխականները:'
+  hy: "Համոզված եք, որ ցանկանում եք հեռացնել փոփոխականները:"
 tools-themes-windowtitle-editvartitle:
   ru: Редактировать переменную
   en: Edit a variable
@@ -642,7 +651,7 @@ tools-themes-deletemixins:
 tools-themes-deletemixinsmessage:
   ru: Вы уверены, что хотите удалить Mixin-ы?
   en: Are you sure you want to delete Mixins?
-  hy: 'Համոզված եք, որ ցանկանում եք ջնջել Mixin-ները:'
+  hy: "Համոզված եք, որ ցանկանում եք ջնջել Mixin-ները:"
 tools-themes-deletemixin:
   ru: Удаление Mixin-а
   en: Deleting a Mixin
@@ -650,7 +659,7 @@ tools-themes-deletemixin:
 tools-themes-deletemixinmessage:
   ru: Вы уверены, что хотите удалить Mixin?
   en: Are you sure you want to delete Mixin?
-  hy: 'Համոզված եք, որ ցանկանում եք ջնջել Mixin-ը:'
+  hy: "Համոզված եք, որ ցանկանում եք ջնջել Mixin-ը:"
 tools-themes-mixins-grid-params:
   ru: Параметры
   en: Parameters
@@ -687,4 +696,3 @@ tools-storages-themes-fields-desc-desc:
   ru: Описание темы
   en: Topic description
   hy: Թեմայի նկարագրությունը
-...

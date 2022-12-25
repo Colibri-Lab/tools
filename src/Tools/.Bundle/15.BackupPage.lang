@@ -1,0 +1,52 @@
+tools-backups-create-title:
+  ru: Создание слепка системы
+  en: Create a system snapshot
+tools-backup-create:
+  ru: Создать слепок
+  en: Create a snapshot
+tools-backup-create-info:
+  ru: Нажмите на кнопку «создать слепок» и дождитесь окончания процесса. После
+    завершения в списке слепкой внизу этой страницы появится новый пункт
+    отмеченный датой
+  en: Click on the "create impression" button and wait for the process to finish.
+    When completed, a new item marked with the date will appear in the list of
+    impressions at the bottom of this page.
+tools-backups-points-title:
+  ru: Список созданных слепков
+  en: List of created impressions
+tools-backups-dataempty:
+  ru: Слепки не найдены
+  en: Snapshots not found
+tools-backups-points-status:
+  ru: Статус
+  en: Status
+tools-backups-points-running:
+  ru: Работает
+  en: Running
+tools-backups-points-name:
+  ru: Наименование
+  en: Name
+tools-backups-points-cron:
+  ru: Планировщик
+  en: Scheduler
+tools-backups-points-file:
+  ru: Шаблон названия файла
+  en: File name template
+tools-backups-windowtitle-editbackup:
+  ru: Редактировать задание
+  en: Edit task
+tools-backups-windowtitle-newbackup:
+  ru: Новое задание
+  en: New task
+tools-backups-contextmenu-edit:
+  ru: Редактировать
+  en: Edit
+tools-backups-contextmenu-delete:
+  ru: Удалить
+  en: Delete
+tools-backups-deletedata1:
+  ru: Удаление точки восстановления
+  en: Delete the snapshot
+tools-backups-deletedata1message:
+  ru: Вы уверены, что хотите удалить выбранную строку?
+  en: Are you sure you want to delete the selected row?

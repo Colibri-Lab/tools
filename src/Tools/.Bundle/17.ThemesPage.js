@@ -107,16 +107,16 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         }
 
         if(itemData.type == 'domain') {
-            contextmenu.push({name: 'new-theme', title: '#{tools-themes-contextmenu-newtheme;Создать тему}', icon: Colibri.UI.ContextMenuAddIcon});
+            contextmenu.push({name: 'new-theme', title: '#{tools-themes-contextmenu-newtheme}', icon: Colibri.UI.ContextMenuAddIcon});
         }
         else {
-            contextmenu.push({name: 'edit-theme', title: '#{tools-themes-contextmenu-edittheme;Редактировать тему}', icon: Colibri.UI.ContextMenuEditIcon});
-            contextmenu.push({name: 'remove-theme', title: '#{tools-themes-contextmenu-deletetheme;Удалить тему}', icon: Colibri.UI.ContextMenuRemoveIcon});
+            contextmenu.push({name: 'edit-theme', title: '#{tools-themes-contextmenu-edittheme}', icon: Colibri.UI.ContextMenuEditIcon});
+            contextmenu.push({name: 'remove-theme', title: '#{tools-themes-contextmenu-deletetheme}', icon: Colibri.UI.ContextMenuRemoveIcon});
             contextmenu.push({name: 'separator'});
-            contextmenu.push({name: 'dublicate-theme', title: '#{tools-themes-contextmenu-dublicatetheme;Дублировать тему}', icon: Colibri.UI.ContextMenuDublicateIcon});
+            contextmenu.push({name: 'dublicate-theme', title: '#{tools-themes-contextmenu-dublicatetheme}', icon: Colibri.UI.ContextMenuDublicateIcon});
             if(itemData.data.current == 0) {
                 contextmenu.push({name: 'separator'});
-                contextmenu.push({name: 'set-current', title: '#{tools-themes-contextmenu-setcurrent;Установить как текущую}', icon: Colibri.UI.SelectCheckIcon});
+                contextmenu.push({name: 'set-current', title: '#{tools-themes-contextmenu-setcurrent}', icon: Colibri.UI.SelectCheckIcon});
             }
         }
 
@@ -143,7 +143,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
 
                 const fields = storage.fields;
 
-                Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme;Редактировать тему}', 450, storage, theme.data)
+                Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme}', 450, storage, theme.data)
                     .then((data) => {
                         Tools.CreateTheme(data);
                     })
@@ -154,7 +154,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         else if(menuData.name == 'remove-theme') {
             const theme = item.tag.data;
             this._domainsAndThemes.selected = null;
-            App.Confirm.Show('#{tools-themes-deletetheme;Удаление темы}', '#{tools-themes-deletethememessage;Вы уверены, что хотите удалить тему? На сайтах привязанных к этой теме могут возникнуть артефакты}', '#{app-confirm-buttons-delete;Удалить!}').then(() => {
+            App.Confirm.Show('#{tools-themes-deletetheme}', '#{tools-themes-deletethememessage}', '#{app-confirm-buttons-delete;Удалить!}').then(() => {
                 Tools.DeleteTheme(theme.id);
             });
         }
@@ -165,7 +165,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         }
         else if(menuData.name == 'set-current') {
             const theme = item.tag.data;
-            App.Confirm.Show('#{tools-themes-setcurrenttheme;Установка}', '#{tools-themes-setcurrentthememessage;Вы уверены, что хотите установить тему как текущую?}', '#{app-confirm-ok;Продолжить}').then(() => {
+            App.Confirm.Show('#{tools-themes-setcurrenttheme}', '#{tools-themes-setcurrentthememessage}', '#{app-confirm-ok;Продолжить}').then(() => {
                 Tools.SetThemeAsCurrent(theme.id);
             });
         }
@@ -181,7 +181,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                 storage.fields.mixins.component = 'Hidden';
                 storage.fields.current.component = 'Hidden';
                 storage.fields.domain.component = 'Hidden';
-                Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme;Редактировать тему}', 450, storage, data)
+                Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme}', 450, storage, data)
                     .then((data) => {
                         Tools.CreateTheme(data);
                     })
@@ -212,7 +212,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                 delete storage.fields.current;
                 delete storage.fields.domain;
 
-                Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme;Редактировать тему}', 450, storage, theme.data)
+                Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme}', 450, storage, theme.data)
                     .then((data) => {
                         Tools.CreateTheme(data);
                     })
@@ -260,7 +260,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
             let fields = storage.fields.vars;
             fields.fields.name.params.enabled = true;
             fields.fields.value.params.enabled = false;
-            Manage.FormWindow.Show('#{tools-themes-windowtitle-addvartitle;Добавить переменную}', 450, fields, {}, '', {
+            Manage.FormWindow.Show('#{tools-themes-windowtitle-addvartitle}', 450, fields, {}, '', {
                 type: {
                     event: 'Changed',
                     handler: (event, args) => {
@@ -299,7 +299,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
             fields.fields.value.params.enabled = false;
             fields = this._getValueField(fields, values['type']);
             console.log(fields);
-            Manage.FormWindow.Show('#{tools-themes-windowtitle-editvartitle;Редактировать переменную}', 450, fields, values, '', {
+            Manage.FormWindow.Show('#{tools-themes-windowtitle-editvartitle}', 450, fields, values, '', {
                 type: {
                     event: 'Changed',
                     handler: (event, args) => {
@@ -330,7 +330,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         const selectedVar = this._varsGrid.selected;
         const checkedVars = this._varsGrid.checked;
         if(checkedVars.length > 0) {
-            App.Confirm.Show('#{tools-themes-deletevars;Удаление переменных}', '#{tools-themes-deletevarsmessage;Вы уверены, что хотите удалить переменные?}', '#{app-confirm-buttons-delete;Удалить!}').then(() => {
+            App.Confirm.Show('#{tools-themes-deletevars}', '#{tools-themes-deletevarsmessage}', '#{app-confirm-buttons-delete;Удалить!}').then(() => {
                 let names = [];
                 checkedVars.forEach(variable => {
                     names.push(variable.value.name);
@@ -339,7 +339,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
             });    
         }
         else {
-            App.Confirm.Show('#{tools-themes-deletevar;Удаление переменной}', '#{tools-themes-deletevarmessage;Вы уверены, что хотите удалить переменную?}', '#{app-confirm-buttons-delete;Удалить!}').then(() => {
+            App.Confirm.Show('#{tools-themes-deletevar}', '#{tools-themes-deletevarmessage}', '#{app-confirm-buttons-delete;Удалить!}').then(() => {
                 Tools.DeleteThemeVars(theme?.id, [selectedVar.value.name]);
             });    
         }
@@ -354,7 +354,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         Manage.Store.AsyncQuery('manage.storages(themes)').then(storage => {
             let fields = storage.fields.mixins;
             fields.fields.name.params.enabled = true;
-            Manage.FormWindow.Show('#{tools-themes-windowtitle-addmixintitle;Добавить Mixin}', 650, fields, {})
+            Manage.FormWindow.Show('#{tools-themes-windowtitle-addmixintitle}', 650, fields, {})
                 .then((data) => {
                     Tools.SaveThemeMixin(theme.id, data);
                 })
@@ -375,7 +375,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
             const values = selected.value;
             fields.fields.name.params.enabled = false;
 
-            Manage.FormWindow.Show('#{tools-themes-windowtitle-editmixintitle;Редактировать Mixin}', 650, fields, values)
+            Manage.FormWindow.Show('#{tools-themes-windowtitle-editmixintitle}', 650, fields, values)
                 .then((data) => {
                     Tools.SaveThemeMixin(theme.id, data);
                 })
@@ -389,7 +389,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         const selectedMixin = this._mixinsGrid.selected;
         const checkedMixins = this._mixinsGrid.checked;
         if(checkedMixins.length > 0) {
-            App.Confirm.Show('#{tools-themes-deletemixins;Удаление Mixin-ов}', '#{tools-themes-deletemixinsmessage;Вы уверены, что хотите удалить Mixin-ы?}', '#{app-confirm-buttons-delete;Удалить!}').then(() => {
+            App.Confirm.Show('#{tools-themes-deletemixins}', '#{tools-themes-deletemixinsmessage}', '#{app-confirm-buttons-delete;Удалить!}').then(() => {
                 let names = [];
                 checkedMixins.forEach(mixin => {
                     names.push(mixin.value.name);
@@ -398,7 +398,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
             });    
         }
         else {
-            App.Confirm.Show('#{tools-themes-deletemixin;Удаление Mixin-а}', '#{tools-themes-deletemixinmessage;Вы уверены, что хотите удалить Mixin?}', '#{app-confirm-buttons-delete;Удалить!}').then(() => {
+            App.Confirm.Show('#{tools-themes-deletemixin}', '#{tools-themes-deletemixinmessage}', '#{app-confirm-buttons-delete;Удалить!}').then(() => {
                 Tools.DeleteThemeMixins(theme?.id, [selectedMixin.value.name]);
             });    
         }

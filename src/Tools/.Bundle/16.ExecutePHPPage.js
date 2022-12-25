@@ -66,7 +66,7 @@ App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component
     __runClicked(event, args) {
 
         Tools.Call('Execute', 'Run', {script: this._form.value.script}).then((response) => {
-            App.Notices.Add(new Colibri.UI.Notice('#{tools-execute-run-success;Скрипт запущен успешно}', Colibri.UI.Notice.Success));
+            App.Notices.Add(new Colibri.UI.Notice('#{tools-execute-run-success}', Colibri.UI.Notice.Success));
 
             this._resultsGroup.Clear();
             this._runningScriptPid = response.result.pid;
@@ -82,7 +82,7 @@ App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component
 
     __killClicked(event, args) {
         Tools.Call('Execute', 'Kill', {pid: this._runningScriptPid}).then((response) => {
-            App.Notices.Add(new Colibri.UI.Notice('#{tools-execute-killed-success;Скрипт остановлен успешно}', Colibri.UI.Notice.Success));
+            App.Notices.Add(new Colibri.UI.Notice('#{tools-execute-killed-success}', Colibri.UI.Notice.Success));
 
             this._enableControls();
             this._runningScriptPid = null;

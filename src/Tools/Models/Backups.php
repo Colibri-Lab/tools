@@ -11,7 +11,7 @@ use Colibri\Data\Storages\Models\DataTable as BaseModelDataTable;
 use App\Modules\Tools\Models\Backup;
 
 /**
- * Таблица, представление данных в хранилище #{tools-storages-backups-desc;Точки восстановления}
+ * Таблица, представление данных в хранилище Точки восстановления
  * @author <author name and email>
  * @package App\Modules\Tools\Models
  * 

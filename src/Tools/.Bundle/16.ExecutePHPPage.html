@@ -2,16 +2,16 @@
 
 
     <Pane name="top" shown="true">
-        <H1 shown="true">#{tools-execute-run-title;Запуск скрипта}</H1>
+        <H1 shown="true">#{tools-execute-run-title}</H1>
         <FlexBox name="flex" shown="true">
-            <SuccessButton name="run" shown="true" value="#{tools-execute-run;Запустить скрипт}" />
-            <SuccessButton name="kill" shown="true" value="#{tools-execute-kill;Остановить исполнение}" enabled="false" />
+            <SuccessButton name="run" shown="true" value="#{tools-execute-run}" />
+            <SuccessButton name="kill" shown="true" value="#{tools-execute-kill}" enabled="false" />
             <Loading name="running" shown="false" />
         </FlexBox>
-        <TextSpan shown="true" name="info">#{tools-execute-create-info;Внимание! Скрипт исполняется в окружении всего проекта, возможны необратимые последствия, пожалуйста, будьте осторожны}</TextSpan>
+        <TextSpan shown="true" name="info">#{tools-execute-create-info}</TextSpan>
     </Pane>
     <Pane name="bottom" shown="true">
-        <H2 shown="true">#{tools-execute-script-title;Скрипт к исполнению}</H2>
+        <H2 shown="true">#{tools-execute-script-title}</H2>
         <Split name="split" shown="true" hasHandle="true">
             <Forms.Form shown="true" name="form"  />
             <List shown="true" name="results">

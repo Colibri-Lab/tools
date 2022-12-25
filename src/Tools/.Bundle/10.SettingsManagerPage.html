@@ -1,16 +1,16 @@
 <div ComponentName="App.Modules.Tools.SettingsManagerPage">
     <Split name="split" shown="true" hasHandle="true">
         <Pane name="settings-pane" shown="true">
-            <H2 name="ttl" shown="true">#{tools-settings-settings-title;Настройки}</H2>
+            <H2 name="ttl" shown="true">#{tools-settings-settings-title}</H2>
             <App.Modules.Tools.SettingsTree name="settings" shown="true" hasContextMenu="true" binding="app.tools.settings" />
         </Pane>
         <Pane name="data-pane" shown="true">
-            <H2 name="ttl" shown="true">#{tools-settings-data-title;Редактор}</H2>
+            <H2 name="ttl" shown="true">#{tools-settings-data-title}</H2>
             <Pane name="editor-pane" shown="true">
                 <Forms.Form name="editor" shown="true" />
             </Pane>
             <Pane name="buttons-pane" shown="true">
-                <SuccessButton name="save" shown="true" enabled="true" icon="Colibri.UI.SaveIcon">#{tools-settings-buttons-save;Сохранить}</SuccessButton>
+                <SuccessButton name="save" shown="true" enabled="true" icon="Colibri.UI.SaveIcon">#{tools-settings-buttons-save}</SuccessButton>
             </Pane>
         </Pane>
     </Split>     

@@ -1,45 +1,122 @@
 tools-themes-contextmenu-newtheme:
   ru: Создать тему
+  en: Create theme
 tools-themes-contextmenu-edittheme:
   ru: Редактировать тему
+  en: Edit theme
 tools-themes-contextmenu-deletetheme:
   ru: Удалить тему
+  en: Delete theme
 tools-themes-contextmenu-dublicatetheme:
   ru: Дублировать тему
+  en: Dublicate theme
 tools-themes-contextmenu-setcurrent:
   ru: Установить как текущую
+  en: Set as default
 tools-themes-windowtitle-edittheme:
   ru: Редактировать тему
+  en: Edit theme
 tools-themes-deletetheme:
   ru: Удаление темы
+  en: Delete theme
 tools-themes-deletethememessage:
   ru: Вы уверены, что хотите удалить тему? На сайтах привязанных к этой теме могут
     возникнуть артефакты
+  en: Are you sure you want to delete the topic? Artifacts may appear on sites
+    linked to this topic
 tools-themes-setcurrenttheme:
   ru: Установка
+  en: Installing
 tools-themes-setcurrentthememessage:
   ru: Вы уверены, что хотите установить тему как текущую?
+  en: Are you sure you want to set the theme as current?
 tools-themes-windowtitle-addvartitle:
   ru: Добавить переменную
+  en: Add variable
 tools-themes-windowtitle-editvartitle:
   ru: Редактировать переменную
+  en: Edit variable
 tools-themes-deletevars:
   ru: Удаление переменных
+  en: Delete variables
 tools-themes-deletevarsmessage:
   ru: Вы уверены, что хотите удалить переменные?
+  en: Are you sure you want to delete variables?
 tools-themes-deletevar:
   ru: Удаление переменной
+  en: Delete variable
 tools-themes-deletevarmessage:
   ru: Вы уверены, что хотите удалить переменную?
+  en: Are you sure you want to delete the variable?
 tools-themes-windowtitle-addmixintitle:
   ru: Добавить Mixin
+  en: Add mixin
 tools-themes-windowtitle-editmixintitle:
   ru: Редактировать Mixin
+  en: Edit mixin
 tools-themes-deletemixins:
   ru: Удаление Mixin-ов
+  en: Delete mixins
 tools-themes-deletemixinsmessage:
   ru: Вы уверены, что хотите удалить Mixin-ы?
+  en: Are you sure you want to delete Mixins?
 tools-themes-deletemixin:
   ru: Удаление Mixin-а
+  en: Delete mixin
 tools-themes-deletemixinmessage:
   ru: Вы уверены, что хотите удалить Mixin?
+  en: Are you sure you want to delete Mixin?
+tools-thtmes-themes-title:
+  ru: Домены и темы
+  en: Domains and themes
+tools-themes-vars-title:
+  ru: Переменные
+  en: Variables
+tools-themes-varsempty:
+  ru: Переменных не найдено
+  en: Variables not found
+tools-themes-vars-grid-name:
+  ru: Переменная
+  en: Variable
+tools-themes-vars-grid-value:
+  ru: Значение
+  en: Value
+tools-themes-vars-buttons-adddata:
+  ru: Добавить
+  en: Add
+tools-themes-vars-buttons-editdata:
+  ru: Редактировать
+  en: Edit
+tools-themes-vars-buttons-deletedata:
+  ru: Удалить
+  en: Delete
+tools-themes-mixins-title:
+  ru: Mixin-ы
+  en: Mixins
+tools-themes-mixinsempty:
+  ru: Mixin-ов не найдено
+  en: Mixins not found
+tools-themes-mixins-grid-name:
+  ru: Mixin
+  en: Mixin
+tools-themes-mixins-grid-params:
+  ru: Параметры
+  en: Parameters
+tools-themes-mixins-grid-value:
+  ru: Значение
+  en: Value
+tools-themes-mixins-buttons-adddata:
+  ru: Добавить
+  en: Add
+tools-themes-mixins-buttons-editdata:
+  ru: Редактировать
+  en: Edit
+tools-themes-mixins-buttons-deletedata:
+  ru: Удалить
+  en: Delete
+tools-thtmes-themes-vars:
+  ru: Переменные
+  en: Variables
+tools-thtmes-themes-mixins:
+  ru: Mixin-ы
+  en: Mixins

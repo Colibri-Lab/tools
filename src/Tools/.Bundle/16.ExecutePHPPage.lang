@@ -1,0 +1,23 @@
+tools-execute-run-title:
+  ru: Запуск скрипта
+  en: Script execution
+tools-execute-run:
+  ru: Запустить скрипт
+  en: Run the script
+tools-execute-kill:
+  ru: Остановить исполнение
+  en: Stop the script
+tools-execute-create-info:
+  ru: Внимание! Скрипт исполняется в окружении всего проекта, возможны необратимые
+    последствия, пожалуйста, будьте осторожны
+  en: Attention! The script is executed in the environment of the entire project,
+    irreversible consequences are possible, please be careful
+tools-execute-script-title:
+  ru: Скрипт к исполнению
+  en: Script to be executed
+tools-execute-run-success:
+  ru: Скрипт запущен успешно
+  en: Script runned successfuly
+tools-execute-killed-success:
+  ru: Скрипт остановлен успешно
+  en: Script stopped successfuly
