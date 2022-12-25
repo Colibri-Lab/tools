@@ -53,7 +53,7 @@ App.Modules.Tools.BackupPage = class extends Colibri.UI.Component
             this._showCreateEditWindow(item.value);
         }
         else if(menuData.name == 'remove-backup') {
-            App.Confirm.Show('#{tools-backups-deletedata1}', '#{tools-backups-deletedata1message}', '#{app-confirm-buttons-delete;Удалить!}').then(() => {
+            App.Confirm.Show('#{tools-backups-deletedata1}', '#{tools-backups-deletedata1message}', '#{tools-backups-deletedata1message-delete}').then(() => {
                 Tools.DeleteBackup(item.value.id);
             });
         }

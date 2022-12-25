@@ -120,3 +120,21 @@ tools-thtmes-themes-vars:
 tools-thtmes-themes-mixins:
   ru: Mixin-ы
   en: Mixins
+tools-themes-deletethememessage-delete:
+  ru: Удалить!
+  en: Delete
+tools-themes-setcurrentthememessage-ok:
+  ru: Продолжить
+  en: Continue
+tools-themes-deletevarsmessage-delete:
+  ru: Удалить!
+  en: Delete
+tools-themes-deletevarmessage-delete:
+  ru: Удалить!
+  en: Delete
+tools-themes-deletemixinsmessage-delete:
+  ru: Удалить!
+  en: Delete
+tools-themes-deletemixinmessage-delete:
+  ru: Удалить!
+  en: Delete

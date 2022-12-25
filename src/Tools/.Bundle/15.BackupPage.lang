@@ -50,3 +50,6 @@ tools-backups-deletedata1:
 tools-backups-deletedata1message:
   ru: Вы уверены, что хотите удалить выбранную строку?
   en: Are you sure you want to delete the selected row?
+tools-backups-deletedata1message-delete:
+  ru: Удалить!
+  en: Delete
