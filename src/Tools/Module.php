@@ -77,21 +77,21 @@ class Module extends BaseModule
 
         $permissions = parent::GetPermissions();
 
-        $permissions['tools'] = 'Инструменты';
-        $permissions['tools.backup'] = 'Доступ к системе восстановления';
-        $permissions['tools.backup.create'] = 'Создание точки восстановления';
-        $permissions['tools.backup.restore'] = 'Восстановление из точки';
-        $permissions['tools.execute'] = 'Выполнение скриптов';
+        $permissions['tools'] = '#{tools-permissions}';
+        $permissions['tools.backup'] = '#{tools-backup-permissions}';
+        $permissions['tools.backup.create'] = '#{tools-backup-create-permissions}';
+        $permissions['tools.backup.restore'] = '#{tools-backup-restore-permissions}';
+        $permissions['tools.execute'] = '#{tools-execute-permissions}';
 
-        $permissions['tools.settings'] = 'Настройки сайта';
-        $permissions['tools.settings.add'] = 'Добавить настройку';
-        $permissions['tools.settings.edit'] = 'Редактировать настройку';
-        $permissions['tools.settings.remove'] = 'Удалить настройку';
+        $permissions['tools.settings'] = '#{tools-settings-permissions}';
+        $permissions['tools.settings.add'] = '#{tools-settings-add-permissions}';
+        $permissions['tools.settings.edit'] = '#{tools-settings-edit-permissions}';
+        $permissions['tools.settings.remove'] = '#{tools-settings-remove-permissions}';
 
-        $permissions['tools.notices'] = 'Шаблоны сообщений';
-        $permissions['tools.notices.add'] = 'Добавить сообщение';
-        $permissions['tools.notices.edit'] = 'Редактировать сообщение';
-        $permissions['tools.notices.remove'] = 'Удалить сообщение';
+        $permissions['tools.notices'] = '#{tools-notices-permissions}';
+        $permissions['tools.notices.add'] = '#{tools-notices-add-permissions}';
+        $permissions['tools.notices.edit'] = '#{tools-notices-edit-permissions}';
+        $permissions['tools.notices.remove'] = '#{tools-notices-delete-permissions}';
 
         return $permissions;
     }

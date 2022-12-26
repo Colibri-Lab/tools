@@ -696,3 +696,43 @@ tools-storages-themes-fields-desc-desc:
   ru: Описание темы
   en: Topic description
   hy: Թեմայի նկարագրությունը
+tools-permissions:
+  ru: Инструменты
+  en: Tools
+tools-backup-permissions:
+  ru: Доступ к системе восстановления
+  en: Access to the recovery system
+tools-: {}
+tools-backup-create-permissions:
+  ru: Создание точки восстановления
+  en: Create a restore point
+tools-backup-restore-permissions:
+  ru: Восстановление из точки
+  en: Recovery from a point
+tools-execute-permissions:
+  ru: Выполнение скриптов
+  en: Executing scripts
+tools-settings-permissions:
+  ru: Настройки сайта
+  en: Site settings
+tools-settings-add-permissions:
+  ru: Добавить настройку
+  en: Add setting
+tools-settings-edit-permissions:
+  ru: Редактировать настройку
+  en: Edit setting
+tools-settings-remove-permissions:
+  ru: Удалить настройку
+  en: Delete setting
+tools-notices-permissions:
+  ru: Шаблоны сообщений
+  en: Notice templates
+tools-notices-add-permissions:
+  ru: Добавить сообщение
+  en: Add notice
+tools-notices-edit-permissions:
+  ru: Редактировать сообщение
+  en: Edit notice
+tools-notices-delete-permissions:
+  ru: Удалить сообщение
+  en: Delete notice
