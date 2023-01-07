@@ -22,7 +22,8 @@ use Colibri\Data\Storages\Fields\ValueField;
  * @property string|null $value Значение
  * endregion Properties;
  */
-class Setting extends BaseModelDataRow {
+class Setting extends BaseModelDataRow
+{
 
     public const JsonSchema = [
         'type' => 'object',
@@ -31,22 +32,22 @@ class Setting extends BaseModelDataRow {
             'datecreated',
             'datemodified',
             # region SchemaRequired:
-			'type',
-			# endregion SchemaRequired;
+            'type',
+            # endregion SchemaRequired;
         ],
         'properties' => [
             'id' => ['type' => 'integer'],
             'datecreated' => ['type' => 'string', 'format' => 'db-date-time'],
             'datemodified' => ['type' => 'string', 'format' => 'db-date-time'],
             # region SchemaProperties:
-			'name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
-			'type' => ['type' => 'string', 'enum' => ['integer', 'double', 'text', 'textarea', 'html', 'htmlcode', 'file', 'files']],
-			'desc' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 1024, ] ] ],
-			'value' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', ] ] ],
-			# endregion SchemaProperties;
+            'name' => ['oneOf' => [['type' => 'null'], ['type' => 'string', 'maxLength' => 255,]]],
+            'type' => ['type' => 'string', 'enum' => ['integer', 'double', 'text', 'textarea', 'html', 'htmlcode', 'file', 'files']],
+            'desc' => ['oneOf' => [['type' => 'null'], ['type' => 'string', 'maxLength' => 1024,]]],
+            'value' => ['oneOf' => [['type' => 'null'], ['type' => 'string',]]],
+            # endregion SchemaProperties;
         ]
     ];
-    
+
     const TypeInteger = 'integer';
 
     const TypeDouble = 'double';
@@ -60,7 +61,7 @@ class Setting extends BaseModelDataRow {
     public function getPropertyValue(): mixed
     {
         $value = $this->_data['settings_value'];
-        switch($this->type) {
+        switch ($this->type) {
             default:
             case Setting::TypeFile:
             case Setting::TypeFiles:
@@ -70,9 +71,9 @@ class Setting extends BaseModelDataRow {
             case Setting::TypeTextArea:
                 return $value;
             case Setting::TypeInteger:
-                return (int)$value;
+                return (int) $value;
             case Setting::TypeDouble:
-                return (float)$value;
+                return (float) $value;
         }
     }
 

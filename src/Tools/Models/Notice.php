@@ -20,7 +20,8 @@ use Colibri\Data\Storages\Models\DataRow as BaseModelDataRow;
  * @property string|null $body Тело письма
  * endregion Properties;
  */
-class Notice extends BaseModelDataRow {
+class Notice extends BaseModelDataRow
+{
 
     public const JsonSchema = [
         'type' => 'object',
@@ -30,34 +31,34 @@ class Notice extends BaseModelDataRow {
             'datemodified',
             # region SchemaRequired:
 
-			# endregion SchemaRequired;
+            # endregion SchemaRequired;
         ],
         'properties' => [
             'id' => ['type' => 'integer'],
             'datecreated' => ['type' => 'string', 'format' => 'db-date-time'],
             'datemodified' => ['type' => 'string', 'format' => 'db-date-time'],
             # region SchemaProperties:
-			'name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
-			'subject' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
-			'body' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 1024, ] ] ],
-			# endregion SchemaProperties;
+            'name' => ['oneOf' => [['type' => 'null'], ['type' => 'string', 'maxLength' => 255,]]],
+            'subject' => ['oneOf' => [['type' => 'null'], ['type' => 'string', 'maxLength' => 255,]]],
+            'body' => ['oneOf' => [['type' => 'null'], ['type' => 'string', 'maxLength' => 1024,]]],
+            # endregion SchemaProperties;
         ]
     ];
 
     /**
      * Обрабатывает вставки
      */
-    public function Apply(array|object $object): void
+    public function Apply(array |object $object): void
     {
         $body = $this->body;
         $subject = $this->subject;
-        
-        $object = (array)$object;
+
+        $object = (array) $object;
         foreach ($object as $key => $value) {
-            $body = str_replace('[['.$key.']]', $value, $body);
-            $subject = str_replace('[['.$key.']]', $value, $subject);
+            $body = str_replace('[[' . $key . ']]', $value, $body);
+            $subject = str_replace('[[' . $key . ']]', $value, $subject);
         }
-        
+
         $this->body = $body;
         $this->subject = $subject;
     }

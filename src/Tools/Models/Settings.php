@@ -19,9 +19,10 @@ use App\Modules\Tools\Models\Setting;
  * @method Setting _read()
  * 
  */
-class Settings extends BaseModelDataTable {
+class Settings extends BaseModelDataTable
+{
 
-    private static ?array $_allSettings = null; 
+    private static ?array $_allSettings = null;
 
     /**
      * Конструктор
@@ -41,12 +42,12 @@ class Settings extends BaseModelDataTable {
      */
     static function Cache(): void
     {
-        if(self::$_allSettings) {
+        if (self::$_allSettings) {
             return;
         }
         $allSettings = self::LoadAll();
         self::$_allSettings = [];
-        foreach($allSettings as $setting) {
+        foreach ($allSettings as $setting) {
             self::$_allSettings[$setting->name] = $setting->value;
         }
     }
@@ -56,7 +57,7 @@ class Settings extends BaseModelDataTable {
         self::Cache();
         return self::$_allSettings[$name] ?? null;
     }
-    
+
     /**
      * Создание модели по названию хранилища
      * @param int $page страница
@@ -66,16 +67,16 @@ class Settings extends BaseModelDataTable {
      * @param array $params параметры к запросу
      * @return Settings
      */
-    static function LoadByFilter(int $page = -1, int $pagesize = 20, string $filter = null, string $order = null, array $params = [], bool $calculateAffected = true) : ?Settings
+    static function LoadByFilter(int $page = -1, int $pagesize = 20, string $filter = null, string $order = null, array $params = [], bool $calculateAffected = true): ? Settings
     {
         $storage = Storages::Create()->Load('settings');
         $additionalParams = ['page' => $page, 'pagesize' => $pagesize, 'params' => $params];
         $additionalParams['type'] = $calculateAffected ? DataAccessPoint::QueryTypeReader : DataAccessPoint::QueryTypeBigData;
         return self::LoadByQuery(
             $storage,
-            'select * from ' . $storage->name . 
-                ($filter ? ' where ' . $filter : '') . 
-                ($order ? ' order by ' . $order : ''), 
+            'select * from ' . $storage->name .
+            ($filter ? ' where ' . $filter : '') .
+            ($order ? ' order by ' . $order : ''),
             $additionalParams
         );
     }
@@ -86,7 +87,7 @@ class Settings extends BaseModelDataTable {
      * @param int $pagesize размер страницы
      * @return Settings 
      */
-    static function LoadAll(int $page = -1, int $pagesize = 20, bool $calculateAffected = false) : ?Settings
+    static function LoadAll(int $page = -1, int $pagesize = 20, bool $calculateAffected = false): ? Settings
     {
         return self::LoadByFilter($page, $pagesize, null, null, [], false);
     }
@@ -96,7 +97,7 @@ class Settings extends BaseModelDataTable {
      * @param int $id ID строки
      * @return Setting|null
      */
-    static function LoadById(int $id) : Setting|null 
+    static function LoadById(int $id): Setting|null
     {
         $table = self::LoadByFilter(1, 1, '{id}=[[id:integer]]', null, ['id' => $id], false);
         return $table && $table->Count() > 0 ? $table->First() : null;
@@ -107,7 +108,7 @@ class Settings extends BaseModelDataTable {
      * @param string $name наименование строки
      * @return Setting|null
      */
-    static function LoadByName(string $name) : Setting|null 
+    static function LoadByName(string $name): Setting|null
     {
         $table = self::LoadByFilter(1, 1, '{name}=[[name:integer]]', null, ['name' => $name], false);
         return $table && $table->Count() > 0 ? $table->First() : null;
@@ -117,17 +118,17 @@ class Settings extends BaseModelDataTable {
      * Создание модели по названию хранилища
      * @return Setting
      */
-    static function LoadEmpty(?string $name = null, ?string $type = null, mixed $value = null) : Setting
+    static function LoadEmpty(?string $name = null, ?string $type = null, mixed $value = null): Setting
     {
         $settings = self::LoadByFilter(-1, 20, 'false');
         $setting = $settings->CreateEmptyRow();
-        if($name) {
+        if ($name) {
             $setting->name = $name;
         }
-        if($type) {
+        if ($type) {
             $setting->type = $type;
         }
-        if($value) {
+        if ($value) {
             $setting->value = $value;
         }
         return $setting;

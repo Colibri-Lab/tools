@@ -15,17 +15,17 @@ class ThemesController extends WebController
     public function List(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
 
-        if(!SecurityModule::$instance->current) {
+        if (!SecurityModule::$instance->current) {
             return $this->Finish(403, 'Permission denied');
         }
 
-        if(!SecurityModule::$instance->current->IsCommandAllowed('tools.backups')) {
+        if (!SecurityModule::$instance->current->IsCommandAllowed('tools.backups')) {
             return $this->Finish(403, 'Permission denied');
         }
 
         $themes = Themes::LoadAll();
         $themesArray = [];
-        foreach($themes as $theme) {
+        foreach ($themes as $theme) {
             $themesArray[] = $theme->ToArray(true);
         }
 
@@ -34,20 +34,20 @@ class ThemesController extends WebController
 
     public function Delete(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
-        if(!SecurityModule::$instance->current) {
+        if (!SecurityModule::$instance->current) {
             return $this->Finish(403, 'Permission denied');
         }
 
-        if(!SecurityModule::$instance->current->IsCommandAllowed('tools.backups.remove')) {
+        if (!SecurityModule::$instance->current->IsCommandAllowed('tools.backups.remove')) {
             return $this->Finish(403, 'Permission denied');
         }
 
         $id = $post->theme;
-        if(!$id) {
+        if (!$id) {
             return $this->Finish(400, 'Bad request');
         }
 
-        $theme = Themes::LoadById((int)$id);
+        $theme = Themes::LoadById((int) $id);
         $theme->Delete();
 
         return $this->Finish(200, 'ok');
@@ -57,19 +57,18 @@ class ThemesController extends WebController
 
     public function Save(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
-        if(!SecurityModule::$instance->current) {
+        if (!SecurityModule::$instance->current) {
             return $this->Finish(403, 'Permission denied');
         }
 
         $id = $post->id;
-        if(!SecurityModule::$instance->current->IsCommandAllowed('tools.themes' . ($id ? '.edit' : '.add'))) {
+        if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes' . ($id ? '.edit' : '.add'))) {
             return $this->Finish(403, 'Permission denied');
         }
 
-        if($id) {
-            $theme = Themes::LoadById((int)$id);
-        }
-        else {
+        if ($id) {
+            $theme = Themes::LoadById((int) $id);
+        } else {
             $theme = Themes::LoadEmpty();
         }
 
@@ -77,18 +76,18 @@ class ThemesController extends WebController
         $accessPoint->Begin();
 
         try {
-                    
+
             $theme->name = $post->name;
             $theme->domain = $post->domain;
             $theme->desc = $post->desc;
             $theme->current = $post->current;
             $theme->vars = $post->vars;
             $theme->mixins = $post->mixins;
-    
-            if ( ($res = $theme->Save(true)) !== true ) {
+
+            if (($res = $theme->Save(true)) !== true) {
                 throw new InvalidArgumentException($res->error, 400);
             }
-    
+
         } catch (InvalidArgumentException $e) {
             $accessPoint->Rollback();
             return $this->Finish(400, 'Bad request', ['message' => $e->getMessage(), 'code' => 400]);
@@ -98,7 +97,7 @@ class ThemesController extends WebController
         } catch (\Throwable $e) {
             $accessPoint->Rollback();
             return $this->Finish(500, 'Application error', ['message' => $e->getMessage(), 'code' => 500]);
-        } 
+        }
 
         $accessPoint->Commit();
 
@@ -109,63 +108,63 @@ class ThemesController extends WebController
 
     public function SetAsCurrent(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
-        if(!SecurityModule::$instance->current) {
+        if (!SecurityModule::$instance->current) {
             return $this->Finish(403, 'Permission denied');
         }
 
         $id = $post->id;
-        if(!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
+        if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
             return $this->Finish(403, 'Permission denied');
         }
 
-        $theme = Themes::LoadById((int)$id);
-        if(!$theme) {
+        $theme = Themes::LoadById((int) $id);
+        if (!$theme) {
             return $this->Finish(400, 'Bad request');
         }
 
 
         $domainThemes = Themes::LoadByDomain($theme->domain);
-        foreach($domainThemes as $dtheme) {
+        foreach ($domainThemes as $dtheme) {
             $dtheme->current = false;
             $dtheme->Save();
         }
 
         $theme->current = true;
-        if(!$theme->Save()) {
+        if (!$theme->Save()) {
             return $this->Finish(400, 'Bad request');
         }
-        
+
         $themeArray = $theme->ToArray(true);
         return $this->Finish(200, 'ok', $themeArray);
     }
 
     public function SaveVar(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
-        if(!SecurityModule::$instance->current) {
+        if (!SecurityModule::$instance->current) {
             return $this->Finish(403, 'Permission denied');
         }
 
         $id = $post->id;
 
-        if(!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
+        if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
             return $this->Finish(403, 'Permission denied');
         }
 
-        $theme = Themes::LoadById((int)$id);
-        if(!$theme) {
+        $theme = Themes::LoadById((int) $id);
+        if (!$theme) {
             return $this->Finish(400, 'Bad request');
         }
 
-        $varObject = (object)$post->var;
-        if(!$varObject) {
+        $varObject = (object) $post->var;
+        if (!$varObject) {
             return $this->Finish(400, 'Bad request');
         }
 
         $varObject->value = isset($varObject->value['value']) ? $varObject->value['value'] : $varObject->value;
 
         $found = false;
-        foreach($theme->vars as $index => $var) {
-            if($var->name == $varObject->name) {
+        foreach ($theme->vars as $index => $var) {
+            if ($var->name == $varObject->name) {
                 // есть надо обновить
                 $theme->vars->Set($index, $varObject);
                 $found = true;
@@ -173,134 +172,134 @@ class ThemesController extends WebController
             }
         }
 
-        if(!$found) {
+        if (!$found) {
             $theme->vars->Add($varObject);
         }
-        
-        if(!$theme->Save()) {
+
+        if (!$theme->Save()) {
             return $this->Finish(400, 'Bad request');
         }
-        
+
         $themeArray = $theme->ToArray(true);
         return $this->Finish(200, 'ok', $themeArray);
-    }   
+    }
 
     public function DeleteVars(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
-        if(!SecurityModule::$instance->current) {
+        if (!SecurityModule::$instance->current) {
             return $this->Finish(403, 'Permission denied');
         }
 
         $id = $post->id;
 
-        if(!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
+        if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
             return $this->Finish(403, 'Permission denied');
         }
 
-        $theme = Themes::LoadById((int)$id);
-        if(!$theme) {
+        $theme = Themes::LoadById((int) $id);
+        if (!$theme) {
             return $this->Finish(400, 'Bad request');
         }
 
-        $varNames = (array)$post->vars;
-        if(!$varNames || empty($varNames)) {
+        $varNames = (array) $post->vars;
+        if (!$varNames || empty($varNames)) {
             return $this->Finish(400, 'Bad request');
         }
 
-        foreach($varNames as $varName) {
-            foreach($theme->vars as $index => $var) {
-                if($var->name == $varName) {
+        foreach ($varNames as $varName) {
+            foreach ($theme->vars as $index => $var) {
+                if ($var->name == $varName) {
                     $theme->vars->DeleteAt($index);
                 }
-            }    
+            }
         }
 
 
-        if(!$theme->Save()) {
+        if (!$theme->Save()) {
             return $this->Finish(400, 'Bad request');
         }
-        
+
         $themeArray = $theme->ToArray(true);
         return $this->Finish(200, 'ok', $themeArray);
-    }  
+    }
 
     public function SaveMixin(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
-        if(!SecurityModule::$instance->current) {
+        if (!SecurityModule::$instance->current) {
             return $this->Finish(403, 'Permission denied');
         }
 
         $id = $post->id;
 
-        if(!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
+        if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
             return $this->Finish(403, 'Permission denied');
         }
 
-        $theme = Themes::LoadById((int)$id);
-        if(!$theme) {
+        $theme = Themes::LoadById((int) $id);
+        if (!$theme) {
             return $this->Finish(400, 'Bad request');
         }
 
-        $mixinObject = (object)$post->mixin;
-        if(!$mixinObject) {
+        $mixinObject = (object) $post->mixin;
+        if (!$mixinObject) {
             return $this->Finish(400, 'Bad request');
         }
 
         $found = false;
-        foreach($theme->mixins as $index => $mixin) {
-            if($mixin->name == $mixinObject->name) {
+        foreach ($theme->mixins as $index => $mixin) {
+            if ($mixin->name == $mixinObject->name) {
                 $theme->mixins->Set($index, $mixinObject);
                 $found = true;
                 break;
             }
         }
 
-        if(!$found) {
+        if (!$found) {
             $theme->mixins->Add($mixinObject);
         }
 
-        if(!$theme->Save()) {
+        if (!$theme->Save()) {
             return $this->Finish(400, 'Bad request');
         }
-        
+
         $themeArray = $theme->ToArray(true);
         return $this->Finish(200, 'ok', $themeArray);
-    }   
+    }
 
     public function DeleteMixins(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
-        if(!SecurityModule::$instance->current) {
+        if (!SecurityModule::$instance->current) {
             return $this->Finish(403, 'Permission denied');
         }
 
         $id = $post->id;
 
-        if(!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
+        if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
             return $this->Finish(403, 'Permission denied');
         }
 
-        $theme = Themes::LoadById((int)$id);
-        if(!$theme) {
+        $theme = Themes::LoadById((int) $id);
+        if (!$theme) {
             return $this->Finish(400, 'Bad request');
         }
 
-        $mixinNames = (array)$post->mixins;
-        if(!$mixinNames || empty($mixinNames)) {
+        $mixinNames = (array) $post->mixins;
+        if (!$mixinNames || empty($mixinNames)) {
             return $this->Finish(400, 'Bad request');
         }
 
-        foreach($mixinNames as $mixinName) {
-            foreach($theme->mixins as $index => $mixin) {
-                if($mixin->name == $mixinName) {
+        foreach ($mixinNames as $mixinName) {
+            foreach ($theme->mixins as $index => $mixin) {
+                if ($mixin->name == $mixinName) {
                     $theme->mixins->DeleteAt($index);
                 }
-            }    
+            }
         }
 
-        if(!$theme->Save()) {
+        if (!$theme->Save()) {
             return $this->Finish(400, 'Bad request');
         }
-        
+
         $themeArray = $theme->ToArray(true);
         return $this->Finish(200, 'ok', $themeArray);
     }

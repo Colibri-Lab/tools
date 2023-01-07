@@ -702,7 +702,6 @@ tools-permissions:
 tools-backup-permissions:
   ru: Доступ к системе восстановления
   en: Access to the recovery system
-tools-: {}
 tools-backup-create-permissions:
   ru: Создание точки восстановления
   en: Create a restore point

@@ -20,7 +20,8 @@ use App\Modules\Tools\Models\Backup;
  * @method Backup _read()
  * 
  */
-class Backups extends BaseModelDataTable {
+class Backups extends BaseModelDataTable
+{
 
     /**
      * Конструктор
@@ -35,7 +36,7 @@ class Backups extends BaseModelDataTable {
         parent::__construct($point, $reader, $returnAs, $storage);
     }
 
-    
+
     /**
      * Создание модели по названию хранилища
      * @param int $page страница
@@ -45,16 +46,16 @@ class Backups extends BaseModelDataTable {
      * @param array $params параметры к запросу
      * @return Backups
      */
-    static function LoadByFilter(int $page = -1, int $pagesize = 20, string $filter = null, string $order = null, array $params = [], bool $calculateAffected = true) : ?Backups
+    static function LoadByFilter(int $page = -1, int $pagesize = 20, string $filter = null, string $order = null, array $params = [], bool $calculateAffected = true): ? Backups
     {
         $storage = Storages::Create()->Load('backups');
         $additionalParams = ['page' => $page, 'pagesize' => $pagesize, 'params' => $params];
         $additionalParams['type'] = $calculateAffected ? DataAccessPoint::QueryTypeReader : DataAccessPoint::QueryTypeBigData;
         return self::LoadByQuery(
             $storage,
-            'select * from ' . $storage->name . 
-                ($filter ? ' where ' . $filter : '') . 
-                ($order ? ' order by ' . $order : ''), 
+            'select * from ' . $storage->name .
+            ($filter ? ' where ' . $filter : '') .
+            ($order ? ' order by ' . $order : ''),
             $additionalParams
         );
     }
@@ -65,7 +66,7 @@ class Backups extends BaseModelDataTable {
      * @param int $pagesize размер страницы
      * @return Backups 
      */
-    static function LoadAll(int $page = -1, int $pagesize = 20, bool $calculateAffected = false) : ?Backups
+    static function LoadAll(int $page = -1, int $pagesize = 20, bool $calculateAffected = false): ? Backups
     {
         return self::LoadByFilter($page, $pagesize, null, null, [], $calculateAffected);
     }
@@ -75,7 +76,7 @@ class Backups extends BaseModelDataTable {
      * @param int $id ID строки
      * @return Backup|null
      */
-    static function LoadById(int $id) : Backup|null 
+    static function LoadById(int $id): Backup|null
     {
         $table = self::LoadByFilter(1, 1, '{id}=[[id:integer]]', null, ['id' => $id], false);
         return $table && $table->Count() > 0 ? $table->First() : null;
@@ -85,7 +86,7 @@ class Backups extends BaseModelDataTable {
      * Создание модели по названию хранилища
      * @return Backup
      */
-    static function LoadEmpty() : Backup
+    static function LoadEmpty(): Backup
     {
         $table = self::LoadByFilter(-1, 20, 'false', null, [], false);
         return $table->CreateEmptyRow();
@@ -98,7 +99,7 @@ class Backups extends BaseModelDataTable {
      */
     static function DeleteAllByIds(array $ids): bool
     {
-        return self::DeleteAllByFilter('{id} in ('.implode(',', $ids).')');
+        return self::DeleteAllByFilter('{id} in (' . implode(',', $ids) . ')');
     }
 
     /**
@@ -111,7 +112,7 @@ class Backups extends BaseModelDataTable {
         return self::DeleteByFilter('backups', $filter);
     }
 
-    static function DataMigrate(?Logger $logger = null): bool
+    static function DataMigrate(? Logger $logger = null): bool
     {
         // миграция данных
         return true;

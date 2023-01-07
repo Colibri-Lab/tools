@@ -25,8 +25,6 @@ class ExecuteWorker extends BaseWorker
         });
         
         try {
-            /** @var $callback \Closure */
-            $callback = null;
 
             $script = str_replace('<?php', '', $script);
             $script = str_replace('<?', '', $script);
@@ -35,7 +33,9 @@ class ExecuteWorker extends BaseWorker
             $script = '$callback = function(Colibri\Utils\Logs\Logger $logger) {'."\n".$script."\n".' $logger->info("--complete--"); };';
             eval($script);
 
+            /** @var \Closure $callback */
             $callback($this->_log);
+
         }
         catch(Throwable $e) { 
             $this->_log->emergency('Exception: '.$e->getMessage().' '.$e->getFile().' '.$e->getLine());

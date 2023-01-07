@@ -10,10 +10,8 @@
  */
 namespace App\Modules\Tools;
 
-use Colibri\App;
 use Colibri\Modules\Module as BaseModule;
 use Colibri\Utils\Debug;
-use App\Modules\Tools\Controllers\Controller;
 use Colibri\Utils\Menu\Item;
 use Colibri\Utils\Logs\Logger;
 use App\Modules\Tools\Models\Notices;

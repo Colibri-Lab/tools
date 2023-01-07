@@ -21,12 +21,12 @@ class ExecuteController extends WebController
         $script = $post->script;
         $worker = new ExecuteWorker();
         $process = new Process($worker, true);
-        $process->Run((object)['script' => $script, 'user' => $userGUID, 'requester' => App::$request->headers->requester]);
+        $process->Run((object) ['script' => $script, 'user' => $userGUID, 'requester' => App::$request->headers->requester]);
 
-        if($process->IsRunning()) {
+        if ($process->IsRunning()) {
             return $this->Finish(200, 'ok', ['pid' => $process->pid, 'key' => $worker->key]);
         }
-        
+
         return $this->Finish(200, 'ok', []);
 
     }
@@ -36,6 +36,6 @@ class ExecuteController extends WebController
 
         Process::StopProcess($post->pid);
         return $this->Finish(200, 'ok', []);
-        
+
     }
 }
