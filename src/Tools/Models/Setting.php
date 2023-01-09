@@ -32,19 +32,19 @@ class Setting extends BaseModelDataRow
             'datecreated',
             'datemodified',
             # region SchemaRequired:
-            'type',
-            # endregion SchemaRequired;
+			'type',
+			# endregion SchemaRequired;
         ],
         'properties' => [
             'id' => ['type' => 'integer'],
             'datecreated' => ['type' => 'string', 'format' => 'db-date-time'],
             'datemodified' => ['type' => 'string', 'format' => 'db-date-time'],
             # region SchemaProperties:
-            'name' => ['oneOf' => [['type' => 'null'], ['type' => 'string', 'maxLength' => 255,]]],
-            'type' => ['type' => 'string', 'enum' => ['integer', 'double', 'text', 'textarea', 'html', 'htmlcode', 'file', 'files']],
-            'desc' => ['oneOf' => [['type' => 'null'], ['type' => 'string', 'maxLength' => 1024,]]],
-            'value' => ['oneOf' => [['type' => 'null'], ['type' => 'string',]]],
-            # endregion SchemaProperties;
+			'name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
+			'type' => ['type' => 'string', 'enum' => ['integer', 'double', 'text', 'textarea', 'html', 'htmlcode', 'file', 'files']],
+			'desc' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 1024, ] ] ],
+			'value' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', ] ] ],
+			# endregion SchemaProperties;
         ]
     ];
 
