@@ -2,19 +2,27 @@
 
 namespace App\Modules\Tools\Controllers;
 
-use Colibri\Data\SqlClient\QueryInfo;
-use Colibri\Exceptions\ValidationException;
-use Colibri\Web\RequestCollection;
-use Colibri\Web\Controller as WebController;
 use App\Modules\Security\Module as SecurityModule;
 use App\Modules\Tools\Models\Backups;
-use Colibri\App;
 use App\Modules\Tools\Threading\BackupWorker;
+use Colibri\Exceptions\ValidationException;
 use Colibri\Threading\Process;
+use Colibri\Web\Controller as WebController;
+use Colibri\Web\RequestCollection;
 use InvalidArgumentException;
 
+/**
+ * Backups controller
+ */
 class BackupController extends WebController
 {
+    /**
+     * List of backup jobs
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @return object
+     */
     public function List(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
 
@@ -34,6 +42,13 @@ class BackupController extends WebController
         return $this->Finish(200, 'ok', $backupsArray);
     }
 
+    /**
+     * Deletes a backup job
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @return object
+     */
     public function Delete(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
@@ -57,6 +72,14 @@ class BackupController extends WebController
 
     }
 
+    /**
+     * Saves a backup job data
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @throws InvalidArgumentException
+     * @return object
+     */
     public function Save(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
@@ -103,13 +126,18 @@ class BackupController extends WebController
 
         $accessPoint->Commit();
 
-
-
         return $this->Finish(200, 'ok', $backup->ToArray(true));
 
 
     }
 
+    /**
+     * Runs a jobs from crontab
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @return object
+     */
     public function Cron(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         $backup = $get->backup;

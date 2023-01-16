@@ -2,30 +2,25 @@
 
 namespace App\Modules\Tools\Controllers;
 
-
-use Colibri\App;
-use Colibri\Data\SqlClient\QueryInfo;
-use Colibri\Events\EventsContainer;
-use Colibri\Exceptions\ValidationException;
-use Colibri\IO\FileSystem\File;
-use Colibri\Utils\Cache\Bundle;
-use Colibri\Utils\Debug;
-use Colibri\Utils\ExtendedObject;
-use Colibri\Web\RequestCollection;
-use Colibri\Web\Controller as WebController;
-use Colibri\Web\Templates\PhpTemplate;
-use Colibri\Web\View;
-use InvalidArgumentException;
-use ScssPhp\ScssPhp\Compiler;
-use ScssPhp\ScssPhp\OutputStyle;
-use App\Modules\Sites\Models\Pages;
 use App\Modules\Security\Module as SecurityModule;
-use App\Modules\Sites\Module;
-use Colibri\Data\Models\DataModelException;
 use App\Modules\Tools\Models\Settings;
+use Colibri\Exceptions\ValidationException;
+use Colibri\Web\Controller as WebController;
+use Colibri\Web\RequestCollection;
+use InvalidArgumentException;
 
+/**
+ * Site settings controller
+ */
 class SettingsController extends WebController
 {
+    /**
+     * Returns a list of settings
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @return object
+     */
     public function List(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
 
@@ -45,6 +40,13 @@ class SettingsController extends WebController
         return $this->Finish(200, 'ok', $settingsArray);
     }
 
+    /**
+     * Deletes a site settings
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @return object
+     */
     public function Delete(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
@@ -68,6 +70,14 @@ class SettingsController extends WebController
 
     }
 
+    /**
+     * Saves a setting
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @throws InvalidArgumentException
+     * @return object
+     */
     public function Save(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {

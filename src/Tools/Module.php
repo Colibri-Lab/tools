@@ -2,7 +2,7 @@
 
 
 /**
- * Search
+ * Tools module package
  *
  * @author Author Name <author.name@action-media.ru>
  * @copyright 2019 Colibri
@@ -20,7 +20,7 @@ use App\Modules\Tools\Models\Backups;
 use App\Modules\Tools\Models\Themes;
 
 /**
- * Описание модуля
+ * Tools module
  * @package App\Modules\Tools
  * 
  * 
@@ -37,7 +37,7 @@ class Module extends BaseModule
 
 
     /**
-     * Инициализация модуля
+     * Initializes a module
      * @return void
      */
     public function InitializeModule(): void
@@ -46,7 +46,7 @@ class Module extends BaseModule
     }
 
 	/**
-	 * Вызывается для получения Меню болванкой
+	 * Returns a topmost menu for backend
 	 */
     public function GetTopmostMenu(): Item|array|null {
 
@@ -70,6 +70,10 @@ class Module extends BaseModule
 
     }
 
+    /**
+     * Returns a permissions for module
+     * @return array
+     */
 	public function GetPermissions(): array
     {
 
@@ -94,6 +98,12 @@ class Module extends BaseModule
         return $permissions;
     }
 
+    /**
+     * Backups a module data
+     * @param Logger $logger
+     * @param string $path
+     * @return void
+     */
     public function Backup(Logger $logger, string $path) {
         // Do nothing   
         
@@ -115,6 +125,11 @@ class Module extends BaseModule
 
     }
 
+    /**
+     * Generates a theme file for domain and returns a link
+     * @param string $domain
+     * @return string|null
+     */
     public function Theme(string $domain): ?string
     {
         $theme = Themes::LoadCurrent($domain, true);

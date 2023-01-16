@@ -2,16 +2,25 @@
 
 namespace App\Modules\Tools\Controllers;
 
-use Colibri\Data\SqlClient\QueryInfo;
-use Colibri\Exceptions\ValidationException;
-use Colibri\Web\RequestCollection;
-use Colibri\Web\Controller as WebController;
 use App\Modules\Security\Module as SecurityModule;
 use App\Modules\Tools\Models\Themes;
+use Colibri\Exceptions\ValidationException;
+use Colibri\Web\Controller as WebController;
+use Colibri\Web\RequestCollection;
 use InvalidArgumentException;
 
+/**
+ * Themes controller
+ */
 class ThemesController extends WebController
 {
+    /**
+     * Returns a list of themes
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @return object
+     */
     public function List(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
 
@@ -32,6 +41,13 @@ class ThemesController extends WebController
         return $this->Finish(200, 'ok', $themesArray);
     }
 
+    /**
+     * Deletes a theme
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @return object
+     */
     public function Delete(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
@@ -55,6 +71,14 @@ class ThemesController extends WebController
 
     }
 
+    /**
+     * Saves a theme data
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @throws InvalidArgumentException
+     * @return object
+     */
     public function Save(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
@@ -106,6 +130,13 @@ class ThemesController extends WebController
 
     }
 
+    /**
+     * Sets a theme as current
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @return object
+     */
     public function SetAsCurrent(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
@@ -138,6 +169,13 @@ class ThemesController extends WebController
         return $this->Finish(200, 'ok', $themeArray);
     }
 
+    /**
+     * Saves a variable
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @return object
+     */
     public function SaveVar(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
@@ -184,6 +222,13 @@ class ThemesController extends WebController
         return $this->Finish(200, 'ok', $themeArray);
     }
 
+    /**
+     * Deletes a variable
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @return object
+     */
     public function DeleteVars(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
@@ -223,6 +268,13 @@ class ThemesController extends WebController
         return $this->Finish(200, 'ok', $themeArray);
     }
 
+    /**
+     * Saves a mixin
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @return object
+     */
     public function SaveMixin(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
@@ -266,6 +318,13 @@ class ThemesController extends WebController
         return $this->Finish(200, 'ok', $themeArray);
     }
 
+    /**
+     * Deletes a mixin
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @return object
+     */
     public function DeleteMixins(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {

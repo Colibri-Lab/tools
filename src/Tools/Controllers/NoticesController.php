@@ -2,16 +2,25 @@
 
 namespace App\Modules\Tools\Controllers;
 
-
-use Colibri\Exceptions\ValidationException;
-use Colibri\Web\RequestCollection;
-use Colibri\Web\Controller as WebController;
-use InvalidArgumentException;
 use App\Modules\Security\Module as SecurityModule;
 use App\Modules\Tools\Models\Notices;
+use Colibri\Exceptions\ValidationException;
+use Colibri\Web\Controller as WebController;
+use Colibri\Web\RequestCollection;
+use InvalidArgumentException;
 
+/**
+ * Notices controller
+ */
 class NoticesController extends WebController
 {
+    /**
+     * Returns a list of notice templates
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @return object
+     */
     public function List(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
 
@@ -31,6 +40,14 @@ class NoticesController extends WebController
         return $this->Finish(200, 'ok', $noticesArray);
     }
 
+    /**
+     * Creates a notice template
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @throws InvalidArgumentException
+     * @return object
+     */
     public function Create(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
@@ -80,6 +97,13 @@ class NoticesController extends WebController
 
     }
 
+    /**
+     * Deletes a notice template
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @return object
+     */
     public function Delete(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
@@ -103,6 +127,14 @@ class NoticesController extends WebController
 
     }
 
+    /**
+     * Saves a notice template data
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @throws InvalidArgumentException
+     * @return object
+     */
     public function Save(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
