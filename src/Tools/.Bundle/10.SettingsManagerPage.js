@@ -24,7 +24,7 @@ App.Modules.Tools.SettingsManagerPage = class extends Colibri.UI.Component
             Manage.Store.AsyncQuery('manage.storages(settings)').then((settings) => {
                 let contextmenu = [];
                 settings.fields.type.values.forEach((type) => {
-                    contextmenu.push({name: type.value, title: type.title, icon: eval(type.icon)});
+                    contextmenu.push({name: type.value, title: (type.title[Lang.Current] ?? type.title), icon: eval(type.icon)});
                 });
                 this._settings.contextmenu = contextmenu;
                 this._settings.ShowContextMenu(args.isContextMenuEvent ? 'right bottom' : 'left top', '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);

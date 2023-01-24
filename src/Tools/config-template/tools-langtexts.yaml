@@ -158,7 +158,7 @@ tools-menu-notices-desc:
 tools-menu-backups:
   hy: Կույր համակարգ
   ru: Слепки системы
-  en: Casts of the system
+  en: System snapshots
 tools-menu-backups-desc:
   hy: "Ստեղծեք վերականգնման կետ կրիտիկական իրավիճակների դեպքում: Հետագայում
     հնարավոր կլինի տվյալները վերադարձնել ստացված ֆայլից"

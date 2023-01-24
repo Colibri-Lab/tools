@@ -25,10 +25,9 @@ settings:
       note:
         ru: Введите название настройки, которое будете использовать в дальнейшем.
           Латинские буквы, подчеркивание.
-        en: Введите название настройки, которое будете использовать в дальнейшем.
-          Латинские буквы, подчеркивание.
-        hy: Введите название настройки, которое будете использовать в дальнейшем.
-          Латинские буквы, подчеркивание.
+        en: Enter a name for the setting that you will use later.
+           Latin letters, underline.
+        hy: "Մուտքագրեք այն պարամետրի անունը, որը դուք կօգտագործեք ավելի ուշ: Լատինական տառեր, ընդգծված."
       attrs:
         width: 100%
       placeholder:
@@ -83,50 +82,50 @@ settings:
       values:
       - title:
           ru: Целое число
-          en: Целое число
-          hy: Целое число
+          en: Integer
+          hy: Ամբողջ թիվ
         type: text
         value: integer
       - title:
           ru: Число с плавающей запятой
-          en: Число с плавающей запятой
-          hy: Число с плавающей запятой
+          en: Floating point
+          hy: Լողացող կետով թվեր
         type: text
         value: double
       - title:
           ru: Текст
-          en: Текст
-          hy: Текст
+          en: Text
+          hy: Տեքստ
         type: text
         value: text
       - title:
           ru: Большой текст
-          en: Большой текст
-          hy: Большой текст
+          en: Huge text
+          hy: Մեձ տեքստ
         type: text
         value: textarea
       - title:
           ru: Редактор HTML
-          en: Редактор HTML
-          hy: Редактор HTML
+          en: HTML markup
+          hy: HTML նշում
         type: text
         value: html
       - title:
-          ru: Kod HTML
-          en: Kod HTML
-          hy: Kod HTML
+          ru: Код HTML
+          en: HTML code
+          hy: HTML կոդ
         type: text
         value: htmlcode
       - title:
           ru: Файл
-          en: Файл
-          hy: Файл
+          en: File
+          hy: Ֆայլ
         type: text
         value: file
       - title:
           ru: Файлы
-          en: Файлы
-          hy: Файлы
+          en: Files
+          hy: Ֆայլեր
         type: text
         value: files
       selector:
