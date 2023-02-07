@@ -264,7 +264,6 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                 type: {
                     event: 'Changed',
                     handler: (event, args) => {
-                        console.log('changed');
                         const form = event.sender.root;
                         const values = form.value;
                         const typeComponent = args?.component;
@@ -298,7 +297,6 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
             fields.fields.name.params.enabled = false;
             fields.fields.value.params.enabled = false;
             fields = this._getValueField(fields, values['type']);
-            console.log(fields);
             Manage.FormWindow.Show('#{tools-themes-windowtitle-editvartitle}', 450, fields, values, '', {
                 type: {
                     event: 'Changed',
