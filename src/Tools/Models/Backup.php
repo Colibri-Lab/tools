@@ -3,10 +3,10 @@
 namespace App\Modules\Tools\Models;
 
 # region Uses:
-use Colibri\Data\SqlClient\QueryInfo;
+use App\Modules\Tools\Models\Fields\Backups\CronObjectField;
 use Colibri\Data\Storages\Fields\DateTimeField;
-use Colibri\Data\Storages\Fields\ValueField;
 use Colibri\Data\Storages\Fields\ObjectField;
+use Colibri\Data\Storages\Fields\ValueField;
 # endregion Uses;
 use Colibri\Data\Storages\Models\DataRow as BaseModelDataRow;
 use Colibri\Threading\Process;
@@ -26,13 +26,13 @@ use PhpOffice\PhpWord\Shared\ZipArchive;
  * @package App\Modules\Tools\Models
  * 
  * region Properties:
- * @property-read int $id ID строки
- * @property-read DateTimeField $datecreated Дата создания строки
- * @property-read DateTimeField $datemodified Дата последнего обновления строки
- * @property ValueField|null $status Статус
+ * @property int $id ID строки
+ * @property DateTimeField $datecreated Дата создания строки
+ * @property DateTimeField $datemodified Дата последнего обновления строки
+ * @property ValueField|string|null $status Статус
  * @property bool|null $running Запущено
  * @property string|null $name Наименование
- * @property ObjectField|null $cron Запись в CRON
+ * @property CronObjectField|null $cron Запись в CRON
  * @property string|null $file Шаблон названия файла
  * endregion Properties;
  * @property-read string $controller вызов контроллера
@@ -55,11 +55,11 @@ class Backup extends BaseModelDataRow
 			'datecreated' => ['type' => 'string', 'format' => 'db-date-time'],
 			'datemodified' => ['type' => 'string', 'format' => 'db-date-time'],
 			# region SchemaProperties:
-			'status' => ['oneOf' => [['type' => 'null'], ['type' => 'string', 'enum' => ['paused', 'started']]]],
-			'running' => ['oneOf' => [['type' => 'null'], ['type' => ['boolean', 'number'], 'enum' => [true, false, 0, 1],]]],
-			'name' => ['oneOf' => [['type' => 'null'], ['type' => 'string', 'maxLength' => 255,]]],
-			'cron' => ['type' => 'object', 'required' => [], 'properties' => ['minute' => ['oneOf' => [['type' => 'null'], ['type' => 'string', 'enum' => ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]]]], 'hour' => ['oneOf' => [['type' => 'null'], ['type' => 'string', 'enum' => ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]]]], 'day' => ['oneOf' => [['type' => 'null'], ['type' => 'string', 'enum' => ['*', '00', '01', '02', '03', '04', '05', '06', '07', '08', '09', 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]]]], 'month' => ['oneOf' => [['type' => 'null'], ['type' => 'string', 'enum' => ['*', '00', '01', '02', '03', '04', '05', '06', '07', '08', '09', 10, 11, 12]]]], 'dayofweek' => ['oneOf' => [['type' => 'null'], ['type' => 'string', 'enum' => ['*', 0, 1, 2, 3, 4, 5, 6]]]],]],
-			'file' => ['oneOf' => [['type' => 'null'], ['type' => 'string', 'maxLength' => 255,]]],
+			'status' => [  'oneOf' => [ [ 'type' => 'null' ], ['type' => 'string', 'enum' => ['paused', 'started']] ] ],
+			'running' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => ['boolean','number'], 'enum' => [true, false, 0, 1],] ] ],
+			'name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
+			'cron' => [  'oneOf' => [ CronObjectField::JsonSchema, [ 'type' => 'null'] ] ],
+			'file' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
 			# endregion SchemaProperties;
 		]
 	];

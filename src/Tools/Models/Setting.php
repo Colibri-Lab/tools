@@ -13,11 +13,11 @@ use Colibri\Data\Storages\Fields\ValueField;
  * @package App\Modules\Tools\Models
  * 
  * region Properties:
- * @property-read int $id ID строки
- * @property-read DateTimeField $datecreated Дата создания строки
- * @property-read DateTimeField $datemodified Дата последнего обновления строки
+ * @property int $id ID строки
+ * @property DateTimeField $datecreated Дата создания строки
+ * @property DateTimeField $datemodified Дата последнего обновления строки
  * @property string|null $name Наименование настройки
- * @property ValueField $type Тип настройки
+ * @property ValueField|string|ValueField $type Тип настройки
  * @property string|null $desc Описание настройки
  * @property string|null $value Значение
  * endregion Properties;
