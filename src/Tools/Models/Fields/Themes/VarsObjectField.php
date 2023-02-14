@@ -26,14 +26,14 @@ class VarsObjectField extends ObjectField
         'required' => [
             # region SchemaRequired:
 
-            # endregion SchemaRequired;
+			# endregion SchemaRequired;
         ],
         'properties' => [
             # region SchemaProperties:
 			'name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
 			'type' => [  'oneOf' => [ [ 'type' => 'null' ], ['type' => 'string', 'enum' => ['color', 'font-family', 'size', 'image', 'border', 'shadow']] ] ],
 			'value' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
-            # endregion SchemaProperties;
+			# endregion SchemaProperties;
         ]
     ];
 }
