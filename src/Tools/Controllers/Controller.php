@@ -32,7 +32,7 @@ class Controller extends WebController
     public function Index(RequestCollection $get, RequestCollection $post, mixed $payload = null)
     {
 
-        $module = App::$moduleManager->tools;
+        $module = App::$moduleManager->Get('tools');
 
         // создаем обьект View
         $view = View::Create();
@@ -113,10 +113,10 @@ class Controller extends WebController
         });
 
         $jsBundle = Bundle::Automate(App::$domainKey, 'assets.bundle.js', 'js', [
-            ['path' => App::$moduleManager->Tools->modulePath . '.Bundle/', 'exts' => ['js', 'html']],
+            ['path' => App::$moduleManager->Get('tools')->modulePath . '.Bundle/', 'exts' => ['js', 'html']],
         ]);
         $cssBundle = Bundle::Automate(App::$domainKey, 'assets.bundle.css', 'scss', array(
-            ['path' => App::$moduleManager->Tools->modulePath . '.Bundle/'],
+            ['path' => App::$moduleManager->Get('tools')->modulePath . '.Bundle/'],
         ));
 
         return $this->Finish(

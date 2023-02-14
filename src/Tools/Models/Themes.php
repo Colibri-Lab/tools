@@ -19,6 +19,7 @@ use Colibri\App;
  * @method Theme[] getIterator()
  * @method Theme _createDataRowObject()
  * @method Theme _read()
+ * @method Theme offsetGet(mixed $offset)
  * 
  */
 class Themes extends BaseModelDataTable

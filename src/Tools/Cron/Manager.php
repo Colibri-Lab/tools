@@ -61,37 +61,39 @@ class Manager
 
     public function AddJob(Backup $job)
     {
-        $newJob = (object) [];
-        $newJob->minute = $job->cron->minute->value;
-        $newJob->hour = $job->cron->hour->value;
-        $newJob->day = $job->cron->day->value;
-        $newJob->month = $job->cron->month->value;
-        $newJob->dayofweek = $job->cron->dayofweek->value;
-        $newJob->user = 'root';
-        $newJob->command = $job->command;
-        $this->_lines[] = $newJob;
-        $this->_saveLines();
+        // TODO проверить что за хрень вообще
+        // $newJob = (object) [];
+        // $newJob->minute = $job->cron->minute->value;
+        // $newJob->hour = $job->cron->hour->value;
+        // $newJob->day = $job->cron->day->value;
+        // $newJob->month = $job->cron->month->value;
+        // $newJob->dayofweek = $job->cron->dayofweek->value;
+        // $newJob->user = 'root';
+        // $newJob->command = $job->command;
+        // $this->_lines[] = $newJob;
+        // $this->_saveLines();
     }
 
     public function RemoveJob(Backup $job)
     {
-        foreach ($this->_lines as $index => $object) {
+        // TODO проверить
+        // foreach ($this->_lines as $index => $object) {
 
-            if (
-                $object->minute == $job->cron->minute->value &&
-                $object->hour == $job->cron->hour->value &&
-                $object->day == $job->cron->day->value &&
-                $object->month == $job->cron->month->value &&
-                $object->dayofweek == $job->cron->dayofweek->value &&
-                $object->command == $job->command
-            ) {
-                unset($this->_lines[$index]);
-                break;
-            }
+        //     if (
+        //         $object->minute == $job->cron->minute->value &&
+        //         $object->hour == $job->cron->hour->value &&
+        //         $object->day == $job->cron->day->value &&
+        //         $object->month == $job->cron->month->value &&
+        //         $object->dayofweek == $job->cron->dayofweek->value &&
+        //         $object->command == $job->command
+        //     ) {
+        //         unset($this->_lines[$index]);
+        //         break;
+        //     }
 
-        }
+        // }
 
-        $this->_saveLines();
+        // $this->_saveLines();
     }
 
 }

@@ -17,6 +17,7 @@ use App\Modules\Tools\Models\Setting;
  * @method Setting[] getIterator()
  * @method Setting _createDataRowObject()
  * @method Setting _read()
+ * @method Setting offsetGet(mixed $offset)
  * 
  */
 class Settings extends BaseModelDataTable
