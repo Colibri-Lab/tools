@@ -49,7 +49,6 @@ class ExecuteController extends WebController
      */
     public function Kill(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
-
         Process::StopProcess($post->pid);
         return $this->Finish(200, 'ok', []);
 
