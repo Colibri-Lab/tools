@@ -59,7 +59,7 @@ class BackupController extends WebController
             return $this->Finish(403, 'Permission denied');
         }
 
-        $id = $post->backup;
+        $id = $post->{'backup'};
         if (!$id) {
             return $this->Finish(400, 'Bad request');
         }
@@ -86,7 +86,7 @@ class BackupController extends WebController
             return $this->Finish(403, 'Permission denied');
         }
 
-        $id = $post->id;
+        $id = $post->{'id'};
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.backups' . ($id ? '.edit' : '.add'))) {
             return $this->Finish(403, 'Permission denied');
         }
@@ -103,11 +103,11 @@ class BackupController extends WebController
 
         try {
 
-            $backup->name = $post->name;
-            $backup->cron = $post->cron;
-            $backup->file = $post->file;
-            $backup->status = $post->status;
-            $backup->running = $post->running;
+            $backup->name = $post->{'name'};
+            $backup->cron = $post->{'cron'};
+            $backup->file = $post->{'file'};
+            $backup->status = $post->{'status'};
+            $backup->running = $post->{'running'};
 
             if (($res = $backup->Save(true)) !== true) {
                 throw new InvalidArgumentException($res->error, 400);
@@ -140,8 +140,8 @@ class BackupController extends WebController
      */
     public function Cron(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
-        $backup = $get->backup;
-        $user = $get->user;
+        $backup = $get->{'backup'};
+        $user = $get->{'user'};
 
         $backup = Backups::LoadById($backup);
         if (!$backup) {

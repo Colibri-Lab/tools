@@ -59,7 +59,7 @@ class NoticesController extends WebController
         }
 
 
-        $name = $post->name;
+        $name = $post->{'name'};
 
         $notice = Notices::LoadEmpty();
 
@@ -114,7 +114,7 @@ class NoticesController extends WebController
             return $this->Finish(403, 'Permission denied');
         }
 
-        $id = $post->notice;
+        $id = $post->{'notice'};
         if (!$id) {
             return $this->Finish(400, 'Bad request');
         }
@@ -145,7 +145,7 @@ class NoticesController extends WebController
             return $this->Finish(403, 'Permission denied');
         }
 
-        $id = $post->id;
+        $id = $post->{'id'};
         if (!$id) {
             return $this->Finish(400, 'Bad request');
         }
@@ -157,9 +157,9 @@ class NoticesController extends WebController
 
         try {
 
-            $notice->name = $post->name;
-            $notice->subject = $post->subject;
-            $notice->body = $post->body;
+            $notice->name = $post->{'name'};
+            $notice->subject = $post->{'subject'};
+            $notice->body = $post->{'body'};
 
             if (($res = $notice->Save(true)) !== true) {
                 throw new InvalidArgumentException($res->error, 400);

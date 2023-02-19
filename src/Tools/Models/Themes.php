@@ -98,7 +98,7 @@ class Themes extends BaseModelDataTable
     {
         $selectedTheme = null;
         if ($useCookie) {
-            $selectedTheme = App::$request->cookie->theme ?? null;
+            $selectedTheme = App::$request->cookie->{'theme'} ?? null;
         }
         $table = self::LoadByFilter(1, 1, '{domain}=[[domain:string]]' . (!$selectedTheme ? ' and {current}=1' : ' and {name}=\'' . $selectedTheme . '\''), null, ['domain' => $domain], false);
         return $table && $table->Count() > 0 ? $table->First() : null;

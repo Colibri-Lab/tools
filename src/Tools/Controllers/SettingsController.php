@@ -57,7 +57,7 @@ class SettingsController extends WebController
             return $this->Finish(403, 'Permission denied');
         }
 
-        $id = $post->setting;
+        $id = $post->{'setting'};
         if (!$id) {
             return $this->Finish(400, 'Bad request');
         }
@@ -84,7 +84,7 @@ class SettingsController extends WebController
             return $this->Finish(403, 'Permission denied');
         }
 
-        $id = $post->id;
+        $id = $post->{'id'};
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.settings' . ($id ? '.edit' : '.add'))) {
             return $this->Finish(403, 'Permission denied');
         }
@@ -95,7 +95,7 @@ class SettingsController extends WebController
             $setting = Settings::LoadEmpty();
         }
 
-        $type = $post->type;
+        $type = $post->{'type'};
         if (is_array($type) || is_object($type)) {
             $type = (object) $type;
             $type = $type->value;
@@ -106,10 +106,10 @@ class SettingsController extends WebController
 
         try {
 
-            $setting->name = $post->name;
-            $setting->desc = $post->desc;
+            $setting->name = $post->{'name'};
+            $setting->desc = $post->{'desc'};
             $setting->type = $type;
-            $setting->value = $post->value;
+            $setting->value = $post->{'value'};
 
             if (($res = $setting->Save(true)) !== true) {
                 throw new InvalidArgumentException($res->error, 400);

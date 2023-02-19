@@ -27,10 +27,10 @@ class ExecuteController extends WebController
         $currentUser = Module::$instance->current;
         $userGUID = md5($currentUser->id);
 
-        $script = $post->script;
+        $script = $post->{'script'};
         $worker = new ExecuteWorker();
         $process = new Process($worker, true);
-        $process->Run((object) ['script' => $script, 'user' => $userGUID, 'requester' => App::$request->headers->requester]);
+        $process->Run((object) ['script' => $script, 'user' => $userGUID, 'requester' => App::$request->headers->{'requester'}]);
 
         if ($process->IsRunning()) {
             return $this->Finish(200, 'ok', ['pid' => $process->pid, 'key' => $worker->key]);
@@ -49,7 +49,7 @@ class ExecuteController extends WebController
      */
     public function Kill(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
-        Process::StopProcess($post->pid);
+        Process::StopProcess($post->{'pid'});
         return $this->Finish(200, 'ok', []);
 
     }

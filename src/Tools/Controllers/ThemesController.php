@@ -58,7 +58,7 @@ class ThemesController extends WebController
             return $this->Finish(403, 'Permission denied');
         }
 
-        $id = $post->theme;
+        $id = $post->{'theme'};
         if (!$id) {
             return $this->Finish(400, 'Bad request');
         }
@@ -85,7 +85,7 @@ class ThemesController extends WebController
             return $this->Finish(403, 'Permission denied');
         }
 
-        $id = $post->id;
+        $id = $post->{'id'};
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes' . ($id ? '.edit' : '.add'))) {
             return $this->Finish(403, 'Permission denied');
         }
@@ -101,12 +101,12 @@ class ThemesController extends WebController
 
         try {
 
-            $theme->name = $post->name;
-            $theme->domain = $post->domain;
-            $theme->desc = $post->desc;
-            $theme->current = $post->current;
-            $theme->vars = $post->vars;
-            $theme->mixins = $post->mixins;
+            $theme->name = $post->{'name'};
+            $theme->domain = $post->{'domain'};
+            $theme->desc = $post->{'desc'};
+            $theme->current = $post->{'current'};
+            $theme->vars = $post->{'vars'};
+            $theme->mixins = $post->{'mixins'};
 
             if (($res = $theme->Save(true)) !== true) {
                 throw new InvalidArgumentException($res->error, 400);
@@ -143,7 +143,7 @@ class ThemesController extends WebController
             return $this->Finish(403, 'Permission denied');
         }
 
-        $id = $post->id;
+        $id = $post->{'id'};
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
             return $this->Finish(403, 'Permission denied');
         }
@@ -182,7 +182,7 @@ class ThemesController extends WebController
             return $this->Finish(403, 'Permission denied');
         }
 
-        $id = $post->id;
+        $id = $post->{'id'};
 
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
             return $this->Finish(403, 'Permission denied');
@@ -193,7 +193,7 @@ class ThemesController extends WebController
             return $this->Finish(400, 'Bad request');
         }
 
-        $varObject = (object) $post->var;
+        $varObject = (object) $post->{'var'};
         if (!$varObject) {
             return $this->Finish(400, 'Bad request');
         }
@@ -235,7 +235,7 @@ class ThemesController extends WebController
             return $this->Finish(403, 'Permission denied');
         }
 
-        $id = $post->id;
+        $id = $post->{'id'};
 
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
             return $this->Finish(403, 'Permission denied');
@@ -246,7 +246,7 @@ class ThemesController extends WebController
             return $this->Finish(400, 'Bad request');
         }
 
-        $varNames = (array) $post->vars;
+        $varNames = (array) $post->{'vars'};
         if (!$varNames || empty($varNames)) {
             return $this->Finish(400, 'Bad request');
         }
@@ -281,7 +281,7 @@ class ThemesController extends WebController
             return $this->Finish(403, 'Permission denied');
         }
 
-        $id = $post->id;
+        $id = $post->{'id'};
 
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
             return $this->Finish(403, 'Permission denied');
@@ -292,7 +292,7 @@ class ThemesController extends WebController
             return $this->Finish(400, 'Bad request');
         }
 
-        $mixinObject = (object) $post->mixin;
+        $mixinObject = (object) $post->{'mixin'};
         if (!$mixinObject) {
             return $this->Finish(400, 'Bad request');
         }
@@ -331,7 +331,7 @@ class ThemesController extends WebController
             return $this->Finish(403, 'Permission denied');
         }
 
-        $id = $post->id;
+        $id = $post->{'id'};
 
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
             return $this->Finish(403, 'Permission denied');
@@ -342,7 +342,7 @@ class ThemesController extends WebController
             return $this->Finish(400, 'Bad request');
         }
 
-        $mixinNames = (array) $post->mixins;
+        $mixinNames = (array) $post->{'mixins'};
         if (!$mixinNames || empty($mixinNames)) {
             return $this->Finish(400, 'Bad request');
         }
