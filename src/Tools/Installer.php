@@ -3,6 +3,9 @@
 
 namespace App\Modules\Tools;
 
+/**
+ * @suppress PHP0419
+ */
 class Installer
 {
     private static function _loadConfig($file): ?array
