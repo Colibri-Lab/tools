@@ -48,7 +48,7 @@ class Notice extends BaseModelDataRow
     /**
      * Обрабатывает вставки
      */
-    public function Apply(array |object $object): void
+    public function Apply(array |object $object, array $attachments = []): void
     {
         $body = $this->body;
         $subject = $this->subject;
@@ -61,6 +61,8 @@ class Notice extends BaseModelDataRow
 
         $this->body = $body;
         $this->subject = $subject;
+        $this->{'attachments'} = $attachments;
+
     }
 
 }

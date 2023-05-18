@@ -105,11 +105,11 @@ class Notices extends BaseModelDataTable
         return $table->CreateEmptyRow();
     }
 
-    static function Send(string $recipient, Notice $notice): bool
+    static function Send(string $recipient, Notice $notice, ?array $configArray = null): bool
     {
         try {
-            $configArray = Module::$instance->Config()->Query('config.smtp')->AsArray();
-            SmtpHelper::Send($configArray, $recipient, $notice->subject, $notice->body);
+            $configArray = $configArray ?: Module::$instance->Config()->Query('config.smtp')->AsArray();
+            SmtpHelper::Send($configArray, $recipient, $notice->subject, $notice->body, $notice->{'attachments'});
             return true;
         } catch (\Throwable $e) {
             App::$log->debug($e->getMessage() . ' ' . $e->getFile() . ' ' . $e->getLine());
