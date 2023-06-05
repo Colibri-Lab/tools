@@ -4,6 +4,8 @@ namespace App\Modules\Tools\Controllers;
 
 use App\Modules\Security\Module as SecurityModule;
 use App\Modules\Tools\Models\Themes;
+use Colibri\AppException;
+use Colibri\Common\VariableHelper;
 use Colibri\Exceptions\ValidationException;
 use Colibri\Web\Controller as WebController;
 use Colibri\Web\RequestCollection;
@@ -110,6 +112,68 @@ class ThemesController extends WebController
 
             if (($res = $theme->Save(true)) !== true) {
                 throw new InvalidArgumentException($res->error, 400);
+            }
+
+        } catch (InvalidArgumentException $e) {
+            $accessPoint->Rollback();
+            return $this->Finish(400, 'Bad request', ['message' => $e->getMessage(), 'code' => 400]);
+        } catch (ValidationException $e) {
+            $accessPoint->Rollback();
+            return $this->Finish(500, 'Application validation error', ['message' => $e->getMessage(), 'code' => 400, 'data' => $e->getExceptionDataAsArray()]);
+        } catch (\Throwable $e) {
+            $accessPoint->Rollback();
+            return $this->Finish(500, 'Application error', ['message' => $e->getMessage(), 'code' => 500]);
+        }
+
+        $accessPoint->Commit();
+
+        $themeArray = $theme->ToArray(true);
+        return $this->Finish(200, 'ok', $themeArray);
+
+    }
+
+    /**
+     * Imports theme data from json
+     * @param RequestCollection $get
+     * @param RequestCollection $post
+     * @param mixed|null $payload
+     * @throws InvalidArgumentException
+     * @return object
+     */
+    public function Import(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
+    {
+        if (!SecurityModule::$instance->current) {
+            return $this->Finish(403, 'Permission denied');
+        }
+
+        $id = $post->{'id'};
+        if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
+            return $this->Finish(403, 'Permission denied');
+        }
+
+        if (!$id) {
+            return $this->Finish(404, 'Not found');
+        }
+        
+        $theme = Themes::LoadById((int) $id);
+
+        $accessPoint = $theme->Storage()->accessPoint;
+        $accessPoint->Begin();
+
+        try {
+
+            $json_data = $post->{'json_data'};
+            $json_data = json_decode($json_data);
+            if(!$json_data) {
+                throw new InvalidArgumentException('Invalid json data in request');
+            }
+
+            if(!$theme->Import($json_data)) {
+                throw new AppException('Error importing theme data from JSON');
+            }
+
+            if (($res = $theme->Save(true)) !== true) {
+                throw new AppException($res->error, 400);
             }
 
         } catch (InvalidArgumentException $e) {

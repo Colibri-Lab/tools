@@ -138,3 +138,16 @@ tools-themes-deletemixinsmessage-delete:
 tools-themes-deletemixinmessage-delete:
   ru: Удалить!
   en: Delete
+tools-themes-contextmenu-importtheme:
+  ru: Импортировать
+  en: Import
+  hy: Ներմուծում
+tools-themes-windowtitle-importtheme:
+  ru: Импортировать тему
+  en: Import theme
+  hy: Ներմուծման թեմա
+tools-themes-windowtitle-importtheme-fields-: {}
+tools-themes-windowtitle-importtheme-fields-json_data:
+  ru: Данные темы
+  en: Theme data
+  hy: Թեմայի տվյալներ

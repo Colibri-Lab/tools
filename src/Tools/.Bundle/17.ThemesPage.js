@@ -114,6 +114,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
             contextmenu.push({name: 'remove-theme', title: '#{tools-themes-contextmenu-deletetheme}', icon: Colibri.UI.ContextMenuRemoveIcon});
             contextmenu.push({name: 'separator'});
             contextmenu.push({name: 'dublicate-theme', title: '#{tools-themes-contextmenu-dublicatetheme}', icon: Colibri.UI.ContextMenuDublicateIcon});
+            contextmenu.push({name: 'import-theme', title: '#{tools-themes-contextmenu-importtheme}', icon: Colibri.UI.ImportIcon});
             if(itemData.data.current == 0) {
                 contextmenu.push({name: 'separator'});
                 contextmenu.push({name: 'set-current', title: '#{tools-themes-contextmenu-setcurrent}', icon: Colibri.UI.SelectCheckIcon});
@@ -188,6 +189,22 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                     .catch(() => {});
 
             });
+        } 
+        else if(menuData.name == 'import-theme') {
+            const theme = item.tag;
+            Manage.FormWindow.Show('#{tools-themes-windowtitle-importtheme}', 750, {
+                name: 'import',
+                fields: {
+                    json_data: {
+                        component: 'TextArea',
+                        desc: '#{tools-themes-windowtitle-importtheme-fields-json_data}',
+                    }
+                }
+            }, {id: theme.data.id})
+                .then((data) => {
+                    Tools.ImportTheme(data);
+                })
+                .catch(() => {});
         }
 
     }

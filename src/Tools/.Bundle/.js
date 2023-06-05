@@ -269,6 +269,17 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
                 App.Notices.Add(new Colibri.UI.Notice(response.result));
             });
     }
+
+    ImportTheme(theme) {
+        this.Call('Themes', 'Import', theme)
+            .then((response) => {
+                let themes = this._store.Query('tools.themes');
+                themes = themes.map(theme => theme.id == response.result.id ? response.result : theme);
+                this._store.Set('tools.themes', themes);
+            }).catch((response) => {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            });
+    }
     
     DeleteTheme(themeId) {
         this.Call('Themes', 'Delete', {theme: themeId})
