@@ -117,8 +117,6 @@ class Installer
         self::_injectIntoModuleConfig($configDir . 'modules.yaml');
 
         print_r('Установка скриптов' . "\n");
-        self::_copyOrSymlink($mode, $path . '/src/Tools/bin/', './bin/', 'tools-migrate.sh', 'tools-migrate.sh');
-        self::_copyOrSymlink($mode, $path . '/src/Tools/bin/', './bin/', 'tools-models-generate.sh', 'tools-models-generate.sh');
         self::_copyOrSymlink($mode, $path . '/src/Tools/bin/', './bin/', 'tools-backup.sh', 'tools-backup.sh');
 
         print_r('Установка завершена' . "\n");
