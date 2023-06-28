@@ -38,7 +38,7 @@ databases:
     points:
       tools: 
         connection: tools
-        database: products
+        database: productivity
 
   storages: include(tools-storages.yaml)
       
