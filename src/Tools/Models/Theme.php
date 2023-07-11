@@ -94,7 +94,7 @@ class Theme extends BaseModelDataRow {
         
         $vars = [];
         foreach($themeData as $key => $data) {
-            if($key === 'mixin') {
+            if($key === 'mixins') {
                 $mixins = [];
                 foreach($data as $mixinName => $mixinData) {
                     $mixins[] = (object)['name' => $mixinName, 'value' => VariableHelper::ToString($mixinData, ';'."\n", ': ', false), 'params' => []];
@@ -102,17 +102,7 @@ class Theme extends BaseModelDataRow {
                 $this->mixins = $mixins;
             } else if($key === 'vars') {
                 foreach($data as $varKey => $var) {
-                    if($varKey === 'color') {
-                        $var = VariableHelper::ToPlane($var);
-                        foreach($var as $varName => $value) {
-                            $vars[] = (object)['name' => str_replace('.', '_', $varName), 'type' => 'color', 'value' => $value];
-                        }
-                    } else if($varKey === 'shadow') {
-                        $var = VariableHelper::ToPlane($var);
-                        foreach($var as $varName => $value) {
-                            $vars[] = (object)['name' => str_replace('.', '_', $varName), 'type' => 'shadow', 'value' => $value];
-                        }
-                    }
+                    $vars[] = (object)['name' => $varKey, 'type' => 'color', 'value' => $var];
                 }
             }
         }
