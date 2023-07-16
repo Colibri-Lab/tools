@@ -139,6 +139,7 @@ settings:
         enabled: true
         canbeempty: true
         readonly: false
+        searchable: true
         list: false
         multiple: false
         greed: ""
@@ -367,6 +368,7 @@ notices:
         enabled: true
         canbeempty: true
         readonly: false
+        searchable: true
         list: false
         multiple: false
         greed: ""
@@ -494,7 +496,8 @@ backups:
         required: false
         enabled: true
         canbeempty: true
-        readonly: true
+        readonly: false
+        searchable: false
         list: true
         multiple: false
         greed: ""
@@ -636,7 +639,8 @@ backups:
           params:
             required: false
             enabled: true
-            readonly: true
+            readonly: false
+            searchable: false
             visual: false
             code: ""
             list: false
@@ -843,7 +847,8 @@ backups:
           params:
             required: false
             enabled: true
-            readonly: true
+            readonly: false
+            searchable: false
             visual: false
             code: ""
             list: false
@@ -942,7 +947,8 @@ backups:
           params:
             required: false
             enabled: true
-            readonly: true
+            readonly: false
+            earchable: false
             visual: false
             code: ""
             list: false
@@ -1068,7 +1074,8 @@ backups:
           params:
             required: false
             enabled: true
-            readonly: true
+            readonly: false
+            searchable: false
             visual: false
             code: ""
             list: false
@@ -1137,7 +1144,8 @@ backups:
           params:
             required: false
             enabled: true
-            readonly: true
+            readonly: false
+            searchable: false
             visual: false
             code: ""
             list: false
@@ -1294,7 +1302,8 @@ themes:
       params:
         required: false
         enabled: true
-        readonly: true
+        readonly: false
+        searchable: false
         visual: false
         code: ""
         list: true
@@ -1387,7 +1396,8 @@ themes:
           params:
             required: false
             enabled: true
-            readonly: true
+            readonly: false
+            searchable: false
             visual: false
             code: ""
             list: false
