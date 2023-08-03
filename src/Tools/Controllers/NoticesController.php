@@ -4,6 +4,9 @@ namespace App\Modules\Tools\Controllers;
 
 use App\Modules\Security\Module as SecurityModule;
 use App\Modules\Tools\Models\Notices;
+use Colibri\Exceptions\ApplicationErrorException;
+use Colibri\Exceptions\BadRequestException;
+use Colibri\Exceptions\PermissionDeniedException;
 use Colibri\Exceptions\ValidationException;
 use Colibri\Web\Controller as WebController;
 use Colibri\Web\RequestCollection;
@@ -25,11 +28,11 @@ class NoticesController extends WebController
     {
 
         if (!SecurityModule::$instance->current) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.notices')) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $notices = Notices::LoadAll();
@@ -51,11 +54,11 @@ class NoticesController extends WebController
     public function Create(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.notices.add')) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
 
@@ -76,13 +79,13 @@ class NoticesController extends WebController
 
         } catch (InvalidArgumentException $e) {
             $accessPoint->Rollback();
-            return $this->Finish(400, 'Bad request', ['message' => $e->getMessage(), 'code' => 400]);
+            throw new BadRequestException($e->getMessage(), 400, $e);
         } catch (ValidationException $e) {
             $accessPoint->Rollback();
-            return $this->Finish(500, 'Application validation error', ['message' => $e->getMessage(), 'code' => 400, 'data' => $e->getExceptionDataAsArray()]);
+            throw new ApplicationErrorException($e->getMessage(), 500, $e);
         } catch (\Throwable $e) {
             $accessPoint->Rollback();
-            return $this->Finish(500, 'Application error', ['message' => $e->getMessage(), 'code' => 500]);
+            throw new ApplicationErrorException($e->getMessage(), 500, $e);
         }
 
         $accessPoint->Commit();
@@ -107,16 +110,16 @@ class NoticesController extends WebController
     public function Delete(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.notices.remove')) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $id = $post->{'notice'};
         if (!$id) {
-            return $this->Finish(400, 'Bad request');
+            throw new BadRequestException('Bad request', 400);
         }
 
         $setting = Notices::LoadById((int) $id);
@@ -138,16 +141,16 @@ class NoticesController extends WebController
     public function Save(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.notices.edit')) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $id = $post->{'id'};
         if (!$id) {
-            return $this->Finish(400, 'Bad request');
+            throw new BadRequestException('Bad request', 400);
         }
 
         $notice = Notices::LoadById((int) $id);
@@ -167,13 +170,13 @@ class NoticesController extends WebController
 
         } catch (InvalidArgumentException $e) {
             $accessPoint->Rollback();
-            return $this->Finish(400, 'Bad request', ['message' => $e->getMessage(), 'code' => 400]);
+            throw new BadRequestException($e->getMessage(), 400, $e);
         } catch (ValidationException $e) {
             $accessPoint->Rollback();
-            return $this->Finish(500, 'Application validation error', ['message' => $e->getMessage(), 'code' => 400, 'data' => $e->getExceptionDataAsArray()]);
+            throw new ApplicationErrorException($e->getMessage(), 500, $e);
         } catch (\Throwable $e) {
             $accessPoint->Rollback();
-            return $this->Finish(500, 'Application error', ['message' => $e->getMessage(), 'code' => 500]);
+            throw new ApplicationErrorException($e->getMessage(), 500, $e);
         }
 
         $accessPoint->Commit();

@@ -48,7 +48,12 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
             }
         });
 
-        
+        this.AddHandler('CallError', (event, args) => {
+            if(args.status === 403) {
+                location.reload();
+            }
+        });
+
 
     }
 

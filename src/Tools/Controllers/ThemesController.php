@@ -6,6 +6,9 @@ use App\Modules\Security\Module as SecurityModule;
 use App\Modules\Tools\Models\Themes;
 use Colibri\AppException;
 use Colibri\Common\VariableHelper;
+use Colibri\Exceptions\ApplicationErrorException;
+use Colibri\Exceptions\BadRequestException;
+use Colibri\Exceptions\PermissionDeniedException;
 use Colibri\Exceptions\ValidationException;
 use Colibri\Web\Controller as WebController;
 use Colibri\Web\RequestCollection;
@@ -27,11 +30,11 @@ class ThemesController extends WebController
     {
 
         if (!SecurityModule::$instance->current) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.backups')) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $themes = Themes::LoadAll();
@@ -53,16 +56,16 @@ class ThemesController extends WebController
     public function Delete(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.backups.remove')) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $id = $post->{'theme'};
         if (!$id) {
-            return $this->Finish(400, 'Bad request');
+            throw new BadRequestException('Bad request', 400);
         }
 
         $theme = Themes::LoadById((int) $id);
@@ -84,12 +87,12 @@ class ThemesController extends WebController
     public function Save(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $id = $post->{'id'};
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes' . ($id ? '.edit' : '.add'))) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         if ($id) {
@@ -116,13 +119,13 @@ class ThemesController extends WebController
 
         } catch (InvalidArgumentException $e) {
             $accessPoint->Rollback();
-            return $this->Finish(400, 'Bad request', ['message' => $e->getMessage(), 'code' => 400]);
+            throw new BadRequestException($e->getMessage(), 400, $e);
         } catch (ValidationException $e) {
             $accessPoint->Rollback();
-            return $this->Finish(500, 'Application validation error', ['message' => $e->getMessage(), 'code' => 400, 'data' => $e->getExceptionDataAsArray()]);
+            throw new ApplicationErrorException($e->getMessage(), 500, $e);
         } catch (\Throwable $e) {
             $accessPoint->Rollback();
-            return $this->Finish(500, 'Application error', ['message' => $e->getMessage(), 'code' => 500]);
+            throw new ApplicationErrorException($e->getMessage(), 500, $e);
         }
 
         $accessPoint->Commit();
@@ -143,12 +146,12 @@ class ThemesController extends WebController
     public function Import(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $id = $post->{'id'};
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         if (!$id) {
@@ -178,13 +181,13 @@ class ThemesController extends WebController
 
         } catch (InvalidArgumentException $e) {
             $accessPoint->Rollback();
-            return $this->Finish(400, 'Bad request', ['message' => $e->getMessage(), 'code' => 400]);
+            throw new BadRequestException($e->getMessage(), 400, $e);
         } catch (ValidationException $e) {
             $accessPoint->Rollback();
-            return $this->Finish(500, 'Application validation error', ['message' => $e->getMessage(), 'code' => 400, 'data' => $e->getExceptionDataAsArray()]);
+            throw new ApplicationErrorException($e->getMessage(), 500, $e);
         } catch (\Throwable $e) {
             $accessPoint->Rollback();
-            return $this->Finish(500, 'Application error', ['message' => $e->getMessage(), 'code' => 500]);
+            throw new ApplicationErrorException($e->getMessage(), 500, $e);
         }
 
         $accessPoint->Commit();
@@ -204,17 +207,17 @@ class ThemesController extends WebController
     public function SetAsCurrent(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $id = $post->{'id'};
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $theme = Themes::LoadById((int) $id);
         if (!$theme) {
-            return $this->Finish(400, 'Bad request');
+            throw new BadRequestException('Bad request', 400);
         }
 
 
@@ -226,7 +229,7 @@ class ThemesController extends WebController
 
         $theme->current = true;
         if (!$theme->Save()) {
-            return $this->Finish(400, 'Bad request');
+            throw new BadRequestException('Bad request', 400);
         }
 
         $themeArray = $theme->ToArray(true);
@@ -243,23 +246,23 @@ class ThemesController extends WebController
     public function SaveVar(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $id = $post->{'id'};
 
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $theme = Themes::LoadById((int) $id);
         if (!$theme) {
-            return $this->Finish(400, 'Bad request');
+            throw new BadRequestException('Bad request', 400);
         }
 
         $varObject = (object) $post->{'var'};
         if (!$varObject) {
-            return $this->Finish(400, 'Bad request');
+            throw new BadRequestException('Bad request', 400);
         }
 
         $varObject->value = isset($varObject->value['value']) ? $varObject->value['value'] : $varObject->value;
@@ -279,7 +282,7 @@ class ThemesController extends WebController
         }
 
         if (!$theme->Save()) {
-            return $this->Finish(400, 'Bad request');
+            throw new BadRequestException('Bad request', 400);
         }
 
         $themeArray = $theme->ToArray(true);
@@ -296,23 +299,23 @@ class ThemesController extends WebController
     public function DeleteVars(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $id = $post->{'id'};
 
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $theme = Themes::LoadById((int) $id);
         if (!$theme) {
-            return $this->Finish(400, 'Bad request');
+            throw new BadRequestException('Bad request', 400);
         }
 
         $varNames = (array) $post->{'vars'};
         if (!$varNames || empty($varNames)) {
-            return $this->Finish(400, 'Bad request');
+            throw new BadRequestException('Bad request', 400);
         }
 
         foreach ($varNames as $varName) {
@@ -325,7 +328,7 @@ class ThemesController extends WebController
 
 
         if (!$theme->Save()) {
-            return $this->Finish(400, 'Bad request');
+            throw new BadRequestException('Bad request', 400);
         }
 
         $themeArray = $theme->ToArray(true);
@@ -342,23 +345,23 @@ class ThemesController extends WebController
     public function SaveMixin(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $id = $post->{'id'};
 
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $theme = Themes::LoadById((int) $id);
         if (!$theme) {
-            return $this->Finish(400, 'Bad request');
+            throw new BadRequestException('Bad request', 400);
         }
 
         $mixinObject = (object) $post->{'mixin'};
         if (!$mixinObject) {
-            return $this->Finish(400, 'Bad request');
+            throw new BadRequestException('Bad request', 400);
         }
 
         $found = false;
@@ -375,7 +378,7 @@ class ThemesController extends WebController
         }
 
         if (!$theme->Save()) {
-            return $this->Finish(400, 'Bad request');
+            throw new BadRequestException('Bad request', 400);
         }
 
         $themeArray = $theme->ToArray(true);
@@ -392,23 +395,23 @@ class ThemesController extends WebController
     public function DeleteMixins(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
         if (!SecurityModule::$instance->current) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $id = $post->{'id'};
 
         if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
-            return $this->Finish(403, 'Permission denied');
+            throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $theme = Themes::LoadById((int) $id);
         if (!$theme) {
-            return $this->Finish(400, 'Bad request');
+            throw new BadRequestException('Bad request', 400);
         }
 
         $mixinNames = (array) $post->{'mixins'};
         if (!$mixinNames || empty($mixinNames)) {
-            return $this->Finish(400, 'Bad request');
+            throw new BadRequestException('Bad request', 400);
         }
 
         foreach ($mixinNames as $mixinName) {
@@ -420,7 +423,7 @@ class ThemesController extends WebController
         }
 
         if (!$theme->Save()) {
-            return $this->Finish(400, 'Bad request');
+            throw new BadRequestException('Bad request', 400);
         }
 
         $themeArray = $theme->ToArray(true);
