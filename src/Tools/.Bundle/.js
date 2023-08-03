@@ -15,7 +15,7 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         this._pages = {};
         
 
-        this._store = App.Store.AddChild('app.tools', {});
+        this._store = App.Store.AddChild('app.tools', {}, this);
         this._store.AddPathLoader('tools.settings', () => this.Settings(true));
         this._store.AddPathLoader('tools.notices', () => this.Notices(true));
         this._store.AddPathLoader('tools.backups', () => this.Backups(true));
@@ -47,7 +47,11 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
                 }    
             }
         });
-
+        this._store.AddHandler('StoreLoaderCrushed', (event, args) => {
+            if(args.status === 403) {
+                location.reload();
+            }
+        });
         this.AddHandler('CallError', (event, args) => {
             if(args.status === 403) {
                 location.reload();
