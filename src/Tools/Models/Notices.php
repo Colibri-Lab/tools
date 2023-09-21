@@ -16,25 +16,28 @@ use Colibri\App;
  * Таблица, представление данных в хранилище Шаблоны писем
  * @author <author name and email>
  * @package App\Modules\Tools\Models
- * 
+ *
  * @method Notice[] getIterator()
  * @method Notice _createDataRowObject()
  * @method Notice _read()
- * 
+ *
  */
 class Notices extends BaseModelDataTable
 {
-
     /**
      * Конструктор
      * @param DataAccessPoint $point точка доступа
      * @param IDataReader|null $reader ридер
      * @param string|\Closure $returnAs возвращать в виде класса
      * @param Storage|null $storage хранилище
-     * @return void 
+     * @return void
      */
-    public function __construct(DataAccessPoint $point, IDataReader $reader = null, string $returnAs = 'Notice', Storage|null $storage = null)
-    {
+    public function __construct(
+        DataAccessPoint $point,
+        IDataReader $reader = null,
+        string $returnAs = 'Notice',
+        Storage|null $storage = null
+    ) {
         parent::__construct($point, $reader, $returnAs, $storage);
     }
 
@@ -48,8 +51,14 @@ class Notices extends BaseModelDataTable
      * @param array $params параметры к запросу
      * @return Notices
      */
-    static function LoadByFilter(int $page = -1, int $pagesize = 20, string $filter = null, string $order = null, array $params = [], bool $calculateAffected = true): ? Notices
-    {
+    public static function LoadByFilter(
+        int $page = -1,
+        int $pagesize = 20,
+        string $filter = null,
+        string $order = null,
+        array $params = [],
+        bool $calculateAffected = true
+    ): ?Notices {
         $storage = Storages::Create()->Load('notices');
         return parent::_loadByFilter($storage, $page, $pagesize, $filter, $order, $params, $calculateAffected);
     }
@@ -58,10 +67,13 @@ class Notices extends BaseModelDataTable
      * Загружает без фильтра
      * @param int $page страница
      * @param int $pagesize размер страницы
-     * @return Notices 
+     * @return Notices
      */
-    static function LoadAll(int $page = -1, int $pagesize = 20, bool $calculateAffected = false): ? Notices
-    {
+    public static function LoadAll(
+        int $page = -1,
+        int $pagesize = 20,
+        bool $calculateAffected = false
+    ): ?Notices {
         return self::LoadByFilter($page, $pagesize, null, null, [], $calculateAffected);
     }
 
@@ -70,7 +82,7 @@ class Notices extends BaseModelDataTable
      * @param int $id ID строки
      * @return Notice|null
      */
-    static function LoadById(int $id): Notice|null
+    public static function LoadById(int $id): Notice|null
     {
         $table = self::LoadByFilter(1, 1, '{id}=[[id:integer]]', null, ['id' => $id], false);
         return $table && $table->Count() > 0 ? $table->First() : null;
@@ -81,7 +93,7 @@ class Notices extends BaseModelDataTable
      * @param string $name наименование строки
      * @return Notice|null
      */
-    static function LoadByName(string $name): Notice|null
+    public static function LoadByName(string $name): Notice|null
     {
         $table = self::LoadByFilter(1, 1, '{name}=[[name:string]]', null, ['name' => $name], false);
         return $table && $table->Count() > 0 ? $table->First() : null;
@@ -91,13 +103,13 @@ class Notices extends BaseModelDataTable
      * Создание модели по названию хранилища
      * @return Notice
      */
-    static function LoadEmpty(): Notice
+    public static function LoadEmpty(): Notice
     {
         $table = self::LoadByFilter(-1, 20, 'false', null, [], false);
         return $table->CreateEmptyRow();
     }
 
-    static function Send(string $recipient, Notice $notice, ?array $configArray = null): bool
+    public static function Send(string $recipient, Notice $notice, ?array $configArray = null): bool
     {
         try {
             $configArray = $configArray ?: Module::$instance->Config()->Query('config.smtp')->AsArray();
