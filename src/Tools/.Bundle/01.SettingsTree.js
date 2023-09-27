@@ -12,7 +12,7 @@ App.Modules.Tools.SettingsTree = class extends Colibri.UI.Tree {
             return;
         }
 
-        if(!Array.isArray(data) && data instanceof Object) {
+        if(Object.isObject(data)) {
             data = Object.values(data);
         }
 

@@ -9,7 +9,7 @@ App.Modules.Tools.VarsGrid = class extends Colibri.UI.Grid {
         if(!data) {
             return;
         }
-        else if(!Array.isArray(data) && data instanceof Object) {
+        else if(Object.isObject(data)) {
             return;
         }
         

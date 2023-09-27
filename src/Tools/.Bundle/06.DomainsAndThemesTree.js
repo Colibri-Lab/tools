@@ -15,7 +15,7 @@ App.Modules.Tools.DomainsAndThemesTree = class extends Colibri.UI.Tree {
                 this.nodes.Clear();
             }
 
-            if(!Array.isArray(data) && data instanceof Object) {
+            if(Object.isObject(data)) {
                 data = Object.values(data);
             }
 
@@ -50,7 +50,7 @@ App.Modules.Tools.DomainsAndThemesTree = class extends Colibri.UI.Tree {
                 }
             }
 
-            if(!Array.isArray(data) && data instanceof Object) {
+            if(Object.isObject(data)) {
                 data = Object.values(data);
             }
 
