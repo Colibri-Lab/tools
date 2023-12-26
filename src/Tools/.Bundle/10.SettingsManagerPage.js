@@ -148,6 +148,14 @@ App.Modules.Tools.SettingsManagerPage = class extends Colibri.UI.Component
                 }
                 break;
             }
+            case 'date': { 
+                component = 'Date';
+                break;
+            }
+            case 'datetime': { 
+                component = 'DateTime';
+                break;
+            }
             case 'file': { 
                 component = 'File';
                 params = {

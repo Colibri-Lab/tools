@@ -117,6 +117,18 @@ settings:
         type: text
         value: htmlcode
       - title:
+          ru: Дата
+          en: Date
+          hy: Ամսաթիվ
+        type: text
+        value: date
+      - title:
+          ru: Дата и время
+          en: Date and time
+          hy: Ամսաթիվ և ժամ
+        type: text
+        value: datetime
+      - title:
           ru: Файл
           en: File
           hy: Ֆայլ

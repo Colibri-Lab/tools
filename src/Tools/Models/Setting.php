@@ -2,6 +2,7 @@
 
 namespace App\Modules\Tools\Models;
 
+use Colibri\Data\Storages\Fields\DateField;
 use Colibri\Data\Storages\Fields\DateTimeField;
 use Colibri\Data\Storages\Models\DataRow as BaseModelDataRow;
 use Colibri\Data\Storages\Fields\TextArea;
@@ -16,8 +17,9 @@ use Colibri\Data\Storages\Fields\ValueField;
  * @property int $id ID строки
  * @property DateTimeField $datecreated Дата создания строки
  * @property DateTimeField $datemodified Дата последнего обновления строки
+ * @property DateTimeField $datedeleted Дата удаления строки (если включно мягкое удаление)
  * @property string|null $name Наименование настройки
- * @property ValueField|string|ValueField $type Тип настройки
+ * @property ValueField|string $type Тип настройки
  * @property string|null $desc Описание настройки
  * @property string|null $value Значение
  * endregion Properties;
@@ -41,22 +43,25 @@ class Setting extends BaseModelDataRow
             'datemodified' => ['type' => 'string', 'format' => 'db-date-time'],
             # region SchemaProperties:
 			'name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
-			'type' => ['type' => 'string', 'enum' => ['integer', 'double', 'text', 'textarea', 'html', 'htmlcode', 'file', 'files']],
+			'type' => ['type' => 'string', 'enum' => ['integer', 'double', 'text', 'textarea', 'html', 'htmlcode', 'date', 'datetime', 'file', 'files']],
 			'desc' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 1024, ] ] ],
 			'value' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', ] ] ],
 			# endregion SchemaProperties;
         ]
     ];
 
+    # region Consts:
     const TypeInteger = 'integer';
-
     const TypeDouble = 'double';
     const TypeText = 'text';
     const TypeTextArea = 'textarea';
     const TypeHtml = 'html';
     const TypeCode = 'htmlcode';
+    const TypeDate = 'date';
+    const TypeDateTime = 'datetime';
     const TypeFile = 'file';
     const TypeFiles = 'files';
+    # endregion Consts;
 
     public function getPropertyValue(): mixed
     {
@@ -74,6 +79,10 @@ class Setting extends BaseModelDataRow
                 return (int) $value;
             case Setting::TypeDouble:
                 return (float) $value;
+            case Setting::TypeDate:
+                return new DateField($value);
+            case Setting::TypeDateTime:
+                return new DateTimeField($value);
         }
     }
 

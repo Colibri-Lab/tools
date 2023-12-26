@@ -45,6 +45,14 @@ App.Modules.Tools.SettingsDataPage = class extends Colibri.UI.Component
                 }
                 break;
             }
+            case 'date': { 
+                component = 'Date';
+                break;
+            }
+            case 'datetime': { 
+                component = 'DateTime';
+                break;
+            }
             default:
             case 'text': { 
                 component = 'Text';
