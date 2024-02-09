@@ -178,10 +178,10 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
             delete data.id;
             Manage.Store.AsyncQuery('manage.storages(themes)').then(storage => {
                 storage = Object.cloneRecursive(storage);
-                storage.fields.vars.component = 'Hidden';
-                storage.fields.mixins.component = 'Hidden';
-                storage.fields.current.component = 'Hidden';
-                storage.fields.domain.component = 'Hidden';
+                storage.fields.vars.component = 'Colibri.UI.Forms.Hidden';
+                storage.fields.mixins.component = 'Colibri.UI.Forms.Hidden';
+                storage.fields.current.component = 'Colibri.UI.Forms.Hidden';
+                storage.fields.domain.component = 'Colibri.UI.Forms.Hidden';
                 Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme}', 450, storage, data)
                     .then((data) => {
                         Tools.CreateTheme(data);
