@@ -135,5 +135,16 @@ class Module extends BaseModule
         $theme = Themes::LoadCurrent($domain, true);
         return $theme ? $theme->Generate() : null;        
     }
+    
+    /**
+     * Generates a theme file for domain and returns a link
+     * @param string $domain
+     * @return string|null
+     */
+    public function ThemeName(string $domain): ?string
+    {
+        $theme = Themes::LoadCurrent($domain, true);
+        return $theme ? $theme->name : null;        
+    }
 
 }
