@@ -13,16 +13,15 @@ use App\Modules\Tools\Models\Setting;
  * Таблица, представление данных в хранилище Настройки
  * @author <author name and email>
  * @package App\Modules\Tools\Models
- * 
+ *
  * @method Setting[] getIterator()
  * @method Setting _createDataRowObject()
  * @method Setting _read()
  * @method Setting offsetGet(mixed $offset)
- * 
+ *
  */
 class Settings extends BaseModelDataTable
 {
-
     private static ?array $_allSettings = null;
 
     /**
@@ -31,17 +30,21 @@ class Settings extends BaseModelDataTable
      * @param IDataReader|null $reader ридер
      * @param string|\Closure $returnAs возвращать в виде класса
      * @param Storage|null $storage хранилище
-     * @return void 
+     * @return void
      */
-    public function __construct(DataAccessPoint $point, IDataReader $reader = null, string $returnAs = 'Setting', Storage|null $storage = null)
-    {
+    public function __construct(
+        DataAccessPoint $point,
+        IDataReader $reader = null,
+        string $returnAs = 'Setting',
+        Storage|null $storage = null
+    ) {
         parent::__construct($point, $reader, $returnAs, $storage);
     }
 
     /**
      * Кэширует настройки
      */
-    static function Cache(): void
+    public static function Cache(): void
     {
         if (self::$_allSettings) {
             return;
@@ -53,7 +56,7 @@ class Settings extends BaseModelDataTable
         }
     }
 
-    static function Get($name): mixed
+    public static function Get($name): mixed
     {
         self::Cache();
         return self::$_allSettings[$name] ?? null;
@@ -68,8 +71,14 @@ class Settings extends BaseModelDataTable
      * @param array $params параметры к запросу
      * @return Settings
      */
-    static function LoadByFilter(int $page = -1, int $pagesize = 20, string $filter = null, string $order = null, array $params = [], bool $calculateAffected = true): ? Settings
-    {
+    public static function LoadByFilter(
+        int $page = -1,
+        int $pagesize = 20,
+        string $filter = null,
+        string $order = null,
+        array $params = [],
+        bool $calculateAffected = true
+    ): ?Settings {
         $storage = Storages::Create()->Load('settings');
         return parent::_loadByFilter($storage, $page, $pagesize, $filter, $order, $params, $calculateAffected);
     }
@@ -78,9 +87,9 @@ class Settings extends BaseModelDataTable
      * Загружает без фильтра
      * @param int $page страница
      * @param int $pagesize размер страницы
-     * @return Settings 
+     * @return Settings
      */
-    static function LoadAll(int $page = -1, int $pagesize = 20, bool $calculateAffected = false): ? Settings
+    public static function LoadAll(int $page = -1, int $pagesize = 20, bool $calculateAffected = false): ?Settings
     {
         return self::LoadByFilter($page, $pagesize, null, null, [], false);
     }
@@ -90,7 +99,7 @@ class Settings extends BaseModelDataTable
      * @param int $id ID строки
      * @return Setting|null
      */
-    static function LoadById(int $id): Setting|null
+    public static function LoadById(int $id): Setting|null
     {
         $table = self::LoadByFilter(1, 1, '{id}=[[id:integer]]', null, ['id' => $id], false);
         return $table && $table->Count() > 0 ? $table->First() : null;
@@ -101,7 +110,7 @@ class Settings extends BaseModelDataTable
      * @param string $name наименование строки
      * @return Setting|null
      */
-    static function LoadByName(string $name): Setting|null
+    public static function LoadByName(string $name): Setting|null
     {
         $table = self::LoadByFilter(1, 1, '{name}=[[name:integer]]', null, ['name' => $name], false);
         return $table && $table->Count() > 0 ? $table->First() : null;
@@ -111,7 +120,7 @@ class Settings extends BaseModelDataTable
      * Создание модели по названию хранилища
      * @return Setting
      */
-    static function LoadEmpty(?string $name = null, ?string $type = null, mixed $value = null): Setting
+    public static function LoadEmpty(?string $name = null, ?string $type = null, mixed $value = null): Setting
     {
         $settings = self::LoadByFilter(-1, 20, 'false');
         $setting = $settings->CreateEmptyRow();
