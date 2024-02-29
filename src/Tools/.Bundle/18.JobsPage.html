@@ -1,0 +1,63 @@
+<div ComponentName="App.Modules.Tools.JobsPage">
+
+
+    <Split shown="true" name="split-vr" orientation="vertical">
+        <Pane shown="true" name="top">
+
+            <H2 shown="true" name="ttl" value="#{tools-jobs-active-jobs-title}" />
+
+            <Grid shown="true" name="active-pipelines" selectionMode="fullrow">
+                <component-header>
+                    <component-columns>
+                        <Grid.Column shown="true" name="id" value="#" halign="right" width="50" />
+                        <Grid.Column shown="true" name="datecreated" value="#{tools-jobs-active-jobs-datecreated}" halign="left" width="120" viewer="Colibri.UI.DateTimeViewer" />
+                        <Grid.Column shown="true" name="datereserved" value="#{tools-jobs-active-jobs-datereserved}" halign="left" width="120" viewer="Colibri.UI.DateTimeViewer"  />
+                        <Grid.Column shown="true" name="reservation_key" value="#{tools-jobs-active-jobs-reservation_key}" halign="left"  />
+                        <Grid.Column shown="true" name="queue" value="#{tools-jobs-active-jobs-queue}" halign="left"  />
+                        <Grid.Column shown="true" name="class" value="#{tools-jobs-active-jobs-class}" halign="left"  />
+                        <Grid.Column shown="true" name="payload_class" value="#{tools-jobs-active-jobs-payload_class}" halign="left"  />
+                        <Grid.Column shown="true" name="attempts" value="#{tools-jobs-active-jobs-attempts}" halign="left"  />
+                        <Grid.Column shown="true" name="parallel" value="#{tools-jobs-active-jobs-parallel}" halign="left"  />
+                    </component-columns>
+                </component-header>
+            </Grid>
+
+        </Pane>
+        <Pane shown="true" name="bottom">
+
+            <Split shown="true" name="split-hr" orientation="horizontal">
+                <Pane shown="true" name="left">
+                    <H2 shown="true" name="ttl" value="#{tools-jobs-successed-title}" />
+                    <Grid shown="true" name="successed-pipelines" selectionMode="fullrow"  >
+                        <component-header>
+                            <component-columns>
+                                <Grid.Column shown="true" name="id" value="#" halign="right" width="50" />
+                                <Grid.Column shown="true" name="datecreated" value="#{tools-jobs-active-jobs-datecreated}" halign="left" width="120" viewer="Colibri.UI.DateTimeViewer" />
+                                <Grid.Column shown="true" name="queue" value="#{tools-jobs-active-jobs-queue}" halign="left"  />
+                                <Grid.Column shown="true" name="class" value="#{tools-jobs-active-jobs-class}" halign="left"  />
+                                <Grid.Column shown="true" name="payload_class" value="#{tools-jobs-active-jobs-payload_class}" halign="left"  />
+                            </component-columns>
+                        </component-header>
+                    </Grid>
+                </Pane>
+                <Pane shown="true" name="right">
+                    <H2 shown="true" name="ttl" value="#{tools-jobs-errors-title}" />
+                    <Grid shown="true" name="error-pipelines" selectionMode="fullrow">
+                        <component-header>
+                            <component-columns>
+                                <Grid.Column shown="true" name="id" value="#" halign="right" width="50" />
+                                <Grid.Column shown="true" name="datecreated" value="#{tools-jobs-active-jobs-datecreated}" halign="left" width="120" viewer="Colibri.UI.DateTimeViewer" />
+                                <Grid.Column shown="true" name="queue" value="#{tools-jobs-active-jobs-queue}" halign="left"  />
+                                <Grid.Column shown="true" name="class" value="#{tools-jobs-active-jobs-class}" halign="left"  />
+                                <Grid.Column shown="true" name="payload_class" value="#{tools-jobs-active-jobs-payload_class}" halign="left"  />
+                            </component-columns>
+                        </component-header>
+                    </Grid>
+                </Pane>
+            </Split>
+
+        </Pane>
+    </Split>
+    
+
+</div>

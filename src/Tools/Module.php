@@ -8,8 +8,10 @@
  * @copyright 2019 Colibri
  * @package App\Modules\Tools
  */
+
 namespace App\Modules\Tools;
 
+use Colibri\App;
 use Colibri\Modules\Module as BaseModule;
 use Colibri\Utils\Debug;
 use Colibri\Utils\Menu\Item;
@@ -18,16 +20,16 @@ use App\Modules\Tools\Models\Notices;
 use App\Modules\Tools\Models\Settings;
 use App\Modules\Tools\Models\Backups;
 use App\Modules\Tools\Models\Themes;
+use CometApiClient\Client as CometClient;
 
 /**
  * Tools module
  * @package App\Modules\Tools
- * 
- * 
+ *
+ *
  */
 class Module extends BaseModule
 {
-
     /**
      * Синглтон
      *
@@ -43,18 +45,20 @@ class Module extends BaseModule
     public function InitializeModule(): void
     {
         self::$instance = $this;
+
     }
 
-	/**
-	 * Returns a topmost menu for backend
-	 */
-    public function GetTopmostMenu(): Item|array|null {
+    /**
+     * Returns a topmost menu for backend
+     */
+    public function GetTopmostMenu(): Item|array|null
+    {
 
         return [
             Item::Create('struct', '#{mainframe-menu-struct}', '', 'App.Modules.MainFrame.Icons.StructureIcon', '')
                 ->Add([
                     Item::Create('settings', '#{tools-menu-settings-data}', '#{tools-menu-settings-data-desc}', 'App.Modules.Tools.Icons.SettingsIcon', 'App.Modules.Tools.SettingsDataPage'),
-                    Item::Create('disk', '#{tools-menu-filesondisk}', '#{tools-menu-filesondisk-desc}', 'App.Modules.Tools.Icons.FilesIcon', 'App.Modules.Tools.FilesPage'), 
+                    Item::Create('disk', '#{tools-menu-filesondisk}', '#{tools-menu-filesondisk-desc}', 'App.Modules.Tools.Icons.FilesIcon', 'App.Modules.Tools.FilesPage'),
                     Item::Create('remote', '#{tools-menu-filesremote}', '#{tools-menu-filesremote-desc}', 'App.Modules.Tools.Icons.RemoteFilesIcon', 'App.Modules.Tools.RemoteFilesSettingsPage')
                 ]),
             Item::Create('dev', '#{mainframe-menu-dev}', '', 'App.Modules.MainFrame.Icons.DevIcon', '')->Add([
@@ -65,6 +69,7 @@ class Module extends BaseModule
                 Item::Create('backup', '#{tools-menu-backups}', '#{tools-menu-backups-desc}', 'App.Modules.Tools.Icons.BackupIcon', 'App.Modules.Tools.BackupPage'),
                 Item::Create('execute', '#{tools-menu-execute}', '#{tools-menu-execute-desc}', 'App.Modules.Tools.Icons.ExecuteIcon', 'App.Modules.Tools.ExecutePHPPage'),
                 Item::Create('themes', '#{tools-menu-themes}', '#{tools-menu-themes-desc}', 'App.Modules.Tools.Icons.ThemesIcon', 'App.Modules.Tools.ThemesPage'),
+                Item::Create('jobs', '#{tools-menu-jobs}', '#{tools-menu-jobs-desc}', 'App.Modules.Tools.Icons.JobsIcon', 'App.Modules.Tools.JobsPage'),
             ])
         ];
 
@@ -74,7 +79,7 @@ class Module extends BaseModule
      * Returns a permissions for module
      * @return array
      */
-	public function GetPermissions(): array
+    public function GetPermissions(): array
     {
 
         $permissions = parent::GetPermissions();
@@ -104,9 +109,10 @@ class Module extends BaseModule
      * @param string $path
      * @return void
      */
-    public function Backup(Logger $logger, string $path) {
-        // Do nothing   
-        
+    public function Backup(Logger $logger, string $path)
+    {
+        // Do nothing
+
         $logger->debug('Exporting data...');
 
         $modulePath = $path . 'modules/Tools/';
@@ -133,9 +139,9 @@ class Module extends BaseModule
     public function Theme(string $domain): ?string
     {
         $theme = Themes::LoadCurrent($domain, true);
-        return $theme ? $theme->Generate() : null;        
+        return $theme ? $theme->Generate() : null;
     }
-    
+
     /**
      * Generates a theme file for domain and returns a link
      * @param string $domain
@@ -144,7 +150,7 @@ class Module extends BaseModule
     public function ThemeName(string $domain): ?string
     {
         $theme = Themes::LoadCurrent($domain, true);
-        return $theme ? $theme->name : null;        
+        return $theme ? $theme->name : null;
     }
 
 }

@@ -735,3 +735,9 @@ tools-notices-edit-permissions:
 tools-notices-delete-permissions:
   ru: Удалить сообщение
   en: Delete notice
+tools-menu-jobs:
+  ru: Задания
+  en: Jobs & Pipelines
+tools-menu-jobs-desc:
+  ru: Отображает список поставленных задач и обновляет в режиме онлайн
+  en: Displays a list of assigned tasks and updates online
