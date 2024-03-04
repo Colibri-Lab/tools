@@ -6,6 +6,10 @@ App.Modules.Tools.SettingsManagerPage = class extends Colibri.UI.Component
 
         this.AddClass('app-tools-settings-manager-page-component');
 
+        this._split = this.Children('split');
+        this._settingsCanchange = this.Children('settings-canchange');
+        
+        
         this._settings = this.Children('split/settings-pane/settings');
         this._form = this.Children('split/data-pane/editor-pane/editor');
         this._save = this.Children('split/data-pane/buttons-pane/save');
@@ -15,6 +19,18 @@ App.Modules.Tools.SettingsManagerPage = class extends Colibri.UI.Component
         this._settings.AddHandler('SelectionChanged', (event, args) => this.__settingsSelectionChanged(event, args));      
         this._settings.AddHandler('NodeEditCompleted', (event, args) => this.__settingsNodeEditCompleted(event, args));
         this._save.AddHandler('Clicked', (event, args) => this.__saveClicked(event, args));
+
+        App.Store.AsyncQuery('app.settings').then((settings) => {
+            if(settings.mode != 'local') {
+                this._split.shown = false;
+                this._settingsCanchange.shown = true;
+            } else {
+                this._split.shown = true;
+                this._settingsCanchange.shown = false;
+                this._settings.binding = 'app.tools.settings';
+            }
+        });
+
     }
 
     __renderSettingsContextMenu(event, args) {

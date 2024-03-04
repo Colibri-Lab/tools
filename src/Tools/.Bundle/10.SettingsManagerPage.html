@@ -2,7 +2,7 @@
     <Split name="split" shown="true" hasHandle="true">
         <Pane name="settings-pane" shown="true">
             <H2 name="ttl" shown="true">#{tools-settings-settings-title}</H2>
-            <App.Modules.Tools.SettingsTree name="settings" shown="true" hasContextMenu="true" binding="app.tools.settings" />
+            <App.Modules.Tools.SettingsTree name="settings" shown="true" hasContextMenu="true" />
         </Pane>
         <Pane name="data-pane" shown="true">
             <H2 name="ttl" shown="true">#{tools-settings-data-title}</H2>
@@ -14,5 +14,7 @@
             </Pane>
         </Pane>
     </Split>     
-
+    <Pane shown="false" name="settings-canchange">
+        <H2 name="ttl" shown="true">#{tools-settings-settings-canchange}</H2>
+    </Pane>
 </div>
