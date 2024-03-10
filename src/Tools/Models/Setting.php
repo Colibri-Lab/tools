@@ -18,9 +18,9 @@ use Colibri\Data\Storages\Fields\ValueField;
  * @property DateTimeField $datecreated Дата создания строки
  * @property DateTimeField $datemodified Дата последнего обновления строки
  * @property DateTimeField $datedeleted Дата удаления строки (если включно мягкое удаление)
- * @property string|null $name Наименование настройки
- * @property ValueField|string $type Тип настройки
- * @property string|null $desc Описание настройки
+ * @property string|string|null $name Наименование настройки
+ * @property ValueField|string|string|int|float $type Тип настройки
+ * @property string|string|null $desc Описание настройки
  * @property string|null $value Значение
  * endregion Properties;
  */
@@ -51,17 +51,27 @@ class Setting extends BaseModelDataRow
     ];
 
     # region Consts:
-    const TypeInteger = 'integer';
-    const TypeDouble = 'double';
-    const TypeText = 'text';
-    const TypeTextArea = 'textarea';
-    const TypeHtml = 'html';
-    const TypeCode = 'htmlcode';
-    const TypeDate = 'date';
-    const TypeDateTime = 'datetime';
-    const TypeFile = 'file';
-    const TypeFiles = 'files';
-    # endregion Consts;
+	/** Целое число */
+	public const TypeInteger = 'integer';
+	/** Число с плавающей запятой */
+	public const TypeDouble = 'double';
+	/** Текст */
+	public const TypeText = 'text';
+	/** Большой текст */
+	public const TypeTextarea = 'textarea';
+	/** Редактор HTML */
+	public const TypeHtml = 'html';
+	/** Код HTML */
+	public const TypeHtmlcode = 'htmlcode';
+	/** Дата */
+	public const TypeDate = 'date';
+	/** Дата и время */
+	public const TypeDatetime = 'datetime';
+	/** Файл */
+	public const TypeFile = 'file';
+	/** Файлы */
+	public const TypeFiles = 'files';
+	# endregion Consts;
 
     public function getPropertyValue(): mixed
     {
