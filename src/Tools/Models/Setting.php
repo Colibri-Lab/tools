@@ -82,8 +82,8 @@ class Setting extends BaseModelDataRow
             case Setting::TypeFiles:
             case Setting::TypeText:
             case Setting::TypeHtml:
-            case Setting::TypeCode:
-            case Setting::TypeTextArea:
+            case Setting::TypeHtmlcode:
+            case Setting::TypeTextarea:
                 return $value;
             case Setting::TypeInteger:
                 return (int) $value;
