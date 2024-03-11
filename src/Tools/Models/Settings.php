@@ -112,7 +112,7 @@ class Settings extends BaseModelDataTable
      */
     public static function LoadByName(string $name): Setting|null
     {
-        $table = self::LoadByFilter(1, 1, '{name}=[[name:integer]]', null, ['name' => $name], false);
+        $table = self::LoadByFilter(1, 1, '{name}=[[name:string]]', null, ['name' => $name], false);
         return $table && $table->Count() > 0 ? $table->First() : null;
     }
 
