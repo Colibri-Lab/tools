@@ -27,10 +27,20 @@ App.Modules.Tools.BackupPage = class extends Colibri.UI.Component
 
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __createButtonClicked(event, args) {
         this._showCreateEditWindow();
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __renderDataContextMenu(event, args) {
         let contextmenu = [];
         
@@ -42,6 +52,11 @@ App.Modules.Tools.BackupPage = class extends Colibri.UI.Component
         
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __clickOnDataContextMenu(event, args) {
         const item = args?.item;
         const menuData = args.menuData;
@@ -59,6 +74,11 @@ App.Modules.Tools.BackupPage = class extends Colibri.UI.Component
         }
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __doubleClickedOnData(event, args) {
         const data = this._backups.selected?.value;
         this._showCreateEditWindow(data);

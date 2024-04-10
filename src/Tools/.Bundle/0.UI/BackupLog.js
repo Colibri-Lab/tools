@@ -35,6 +35,11 @@ App.Modules.Tools.UI.BackupLog = class extends Colibri.UI.Component
         this._group.AddItem(message);
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __closeClicked(event, args) {
         this._group.Clear();
         this.Hide();

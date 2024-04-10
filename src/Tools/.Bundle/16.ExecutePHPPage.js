@@ -63,6 +63,11 @@ App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component
         this._running.shown = false;
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __runClicked(event, args) {
 
         Tools.Call('Execute', 'Run', {script: this._form.value.script}).then((response) => {
@@ -80,6 +85,11 @@ App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component
 
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __killClicked(event, args) {
         Tools.Call('Execute', 'Kill', {pid: this._runningScriptPid}).then((response) => {
             App.Notices.Add(new Colibri.UI.Notice('#{tools-execute-killed-success}', Colibri.UI.Notice.Success));

@@ -21,6 +21,11 @@ App.Modules.Tools.JobsPage = class extends Colibri.UI.Component
 
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __thisShown(event, args) {
         Tools.Store.Reload('tools.pipelines', false);
         Colibri.Common.StartTimer('pipelines', 5000, () => {
@@ -28,6 +33,11 @@ App.Modules.Tools.JobsPage = class extends Colibri.UI.Component
         });
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __thisHidden(event, args) {
         Colibri.Common.StopTimer('pipelines');
     }

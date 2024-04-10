@@ -21,6 +21,11 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
     }
 
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __noticesSelectionChanged(event, args) {
 
         const selection = this._notices.selected;
@@ -65,6 +70,11 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
     }
 
     
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __noticesNodeEditCompleted(event, args) {
 
         const node = args.node;
@@ -83,6 +93,11 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
     }
 
     
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __renderNoticesContextMenu(event, args) {
         let contextmenu = [];
 
@@ -100,6 +115,11 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
 
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __clickOnNoticesContextMenu(event, args) {
         const item = args?.item;
         const menuData = args.menuData;
@@ -120,6 +140,11 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
 
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __saveClicked(event, args) {
 
         const selection = this._notices.selected;

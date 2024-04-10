@@ -33,6 +33,11 @@ App.Modules.Tools.SettingsManagerPage = class extends Colibri.UI.Component
 
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __renderSettingsContextMenu(event, args) {
 
         const itemData = args.item?.tag;
@@ -56,6 +61,11 @@ App.Modules.Tools.SettingsManagerPage = class extends Colibri.UI.Component
         
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __clickOnSettingsContextMenu(event, args) {
         const item = args?.item;
         const menuData = args.menuData;
@@ -89,6 +99,11 @@ App.Modules.Tools.SettingsManagerPage = class extends Colibri.UI.Component
 
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __settingsNodeEditCompleted(event, args) {
 
         const node = args.node;
@@ -111,6 +126,11 @@ App.Modules.Tools.SettingsManagerPage = class extends Colibri.UI.Component
 
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __settingsSelectionChanged(event, args) {
 
         const selection = this._settings.selected;
@@ -211,6 +231,11 @@ App.Modules.Tools.SettingsManagerPage = class extends Colibri.UI.Component
 
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __saveClicked(event, args) {
 
         const selection = this._settings.selected;

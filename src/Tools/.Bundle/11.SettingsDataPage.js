@@ -15,6 +15,11 @@ App.Modules.Tools.SettingsDataPage = class extends Colibri.UI.Component
         this._save.AddHandler('Clicked', (event, args) => this.__saveClicked(event, args));
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __settingsSelectionChanged(event, args) {
 
         const selection = this._settings.selected;
@@ -109,6 +114,11 @@ App.Modules.Tools.SettingsDataPage = class extends Colibri.UI.Component
 
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __saveClicked(event, args) {
 
         const selection = this._settings.selected;

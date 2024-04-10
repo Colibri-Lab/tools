@@ -60,6 +60,11 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         this._deleteMixinButton.enabled = selected && selected.tag.type == 'theme' && (!!selectedMixin || checkedMixins.length > 0);
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __themesSelectionChanged(event, args) {
         const selected = this._domainsAndThemes?.selected;
         if(selected && selected.tag.type == 'theme') {
@@ -75,14 +80,29 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
     }   
 
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __varsSelectionChagned(event, args) {
         this._enableControls();
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __mixinsSelectionChagned(event, args) {
         this._enableControls();
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __themesNodeEditCompleted(event, args) {
         const node = args.node;
         const mode = args.mode;
@@ -98,6 +118,11 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         }
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __renderThemesContextMenu(event, args) {
         let contextmenu = [];
 
@@ -126,6 +151,11 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
 
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __clickOnThemesContextMenu(event, args) {
         const item = args?.item;
         const menuData = args.menuData;
@@ -209,6 +239,11 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
 
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __themesNodeDoubleClicked(event, args) {
         const theme = this._domainsAndThemes.selected?.tag;
         if(!theme) {
@@ -271,6 +306,11 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         return fields;
     }
     
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __addVarButtonClicked(event, args) {
         const theme = this._domainsAndThemes.selected?.tag?.data;
         Manage.Store.AsyncQuery('manage.storages(themes)').then(storage => {
@@ -301,6 +341,11 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         });
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __editVarButtonClicked(event, args) {
         let selected = this._varsGrid.selected;
         if(!selected) {
@@ -340,6 +385,11 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         });
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __deleteVarButtonClicked(event, args) {
         const theme = this._domainsAndThemes.selected?.tag?.data;
         const selectedVar = this._varsGrid.selected;
@@ -360,10 +410,20 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         }
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __varsDoubleClicked(event, args) {
         this.__editVarButtonClicked(event, args);
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __addMixinButtonClicked(event, args) {
         const theme = this._domainsAndThemes.selected?.tag?.data;
         Manage.Store.AsyncQuery('manage.storages(themes)').then(storage => {
@@ -378,6 +438,11 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         });
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __editMixinButtonClicked(event, args) {
         let selected = this._mixinsGrid.selected;
         if(!selected) {
@@ -399,6 +464,11 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         });
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __deleteMixinButtonClicked(event, args) {
         const theme = this._domainsAndThemes.selected?.tag?.data;
         const selectedMixin = this._mixinsGrid.selected;
@@ -420,6 +490,11 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
     }
 
     
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     */ 
     __mixinsDoubleClicked(event, args) {
         this.__editMixinButtonClicked(event, args);
     }
