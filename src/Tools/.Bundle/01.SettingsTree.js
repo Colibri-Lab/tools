@@ -4,9 +4,15 @@ App.Modules.Tools.SettingsTree = class extends Colibri.UI.Tree {
         super(name, container);
         this.AddClass('app-settings-tree-component');
     }
+ 
 
-
-    __renderBoundedValues(data) {
+    /**
+     * Render bounded to component data
+     * @protected
+     * @param {*} data 
+     * @param {String} path 
+     */
+    __renderBoundedValues(data, path) {
         if(!data) {
             this.nodes.Clear();
             return;

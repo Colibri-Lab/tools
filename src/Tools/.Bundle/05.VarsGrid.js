@@ -3,9 +3,15 @@ App.Modules.Tools.VarsGrid = class extends Colibri.UI.Grid {
     constructor(name, container) {
         super(name, container);
         this.AddClass('app-backups-grid-component');
-    }
+    } 
 
-    __renderBoundedValues(data) {
+    /**
+     * Render bounded to component data
+     * @protected
+     * @param {*} data 
+     * @param {String} path 
+     */
+    __renderBoundedValues(data, path) {
         if(!data) {
             return;
         }
