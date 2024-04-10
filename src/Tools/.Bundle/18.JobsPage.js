@@ -45,6 +45,11 @@ App.Modules.Tools.JobsPage = class extends Colibri.UI.Component
     /**
      * Обработка binding
      */
+    /**
+     * @protected
+     * @param {Array<Operation>} data 
+     * @param {String} path 
+     */
     __renderBoundedValues(data, path) {
         if(!data) {
             return;
