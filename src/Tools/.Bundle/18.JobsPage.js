@@ -42,9 +42,7 @@ App.Modules.Tools.JobsPage = class extends Colibri.UI.Component
         Colibri.Common.StopTimer('pipelines');
     }
 
-    /**
-     * Обработка binding
-     */
+    
     /**
      * Render bounded to component data
      * @protected
