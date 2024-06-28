@@ -699,42 +699,55 @@ tools-storages-themes-fields-desc-desc:
 tools-permissions:
   ru: Инструменты
   en: Tools
+  hy: Գործիքներ
 tools-backup-permissions:
   ru: Доступ к системе восстановления
   en: Access to the recovery system
+  hy: Մուտք դեպի վերականգնման համակարգ
 tools-backup-create-permissions:
   ru: Создание точки восстановления
   en: Create a restore point
+  hy: Ստեղծեք վերականգնման կետ
 tools-backup-restore-permissions:
   ru: Восстановление из точки
   en: Recovery from a point
+  hy: Վերականգնում մի կետից
 tools-execute-permissions:
   ru: Выполнение скриптов
   en: Executing scripts
+  hy: Սցենարների կատարում
 tools-settings-permissions:
   ru: Настройки сайта
   en: Site settings
+  hy: Կայքի կարգավորումներ
 tools-settings-add-permissions:
   ru: Добавить настройку
   en: Add setting
+  hy: Ավելացնել կարգավորում
 tools-settings-edit-permissions:
   ru: Редактировать настройку
   en: Edit setting
+  hy: Խմբագրել կարգավորումը
 tools-settings-remove-permissions:
   ru: Удалить настройку
   en: Delete setting
+  hy: Ջնջել կարգավորումը
 tools-notices-permissions:
   ru: Шаблоны сообщений
   en: Notice templates
+  hy: Ծանուցումների ձևանմուշներ
 tools-notices-add-permissions:
   ru: Добавить сообщение
   en: Add notice
+  hy: Ավելացնել ծանուցում
 tools-notices-edit-permissions:
   ru: Редактировать сообщение
   en: Edit notice
+  hy: Խմբագրել ծանուցումը
 tools-notices-delete-permissions:
   ru: Удалить сообщение
   en: Delete notice
+  hy: Ջնջել ծանուցումը
 tools-menu-jobs:
   ru: Задания
   en: Jobs & Pipelines

@@ -1,12 +1,15 @@
 tools-notices-notices-title:
   ru: Сообщения
   en: Notices
+  hy: Ծանուցումներ
 tools-notices-date-title:
   ru: Редактор
   en: Editor
+  hy: Խմբագիր
 tools-notices-buttons-save:
   ru: Сохранить
   en: Save
+  hy: Պահպանել
 tools-notices-fields-nodesc:
   ru: Без темы
   en: No subject

@@ -1,9 +1,11 @@
 tools-backups-create-title:
   ru: Создание слепка системы
   en: Create a system snapshot
+  hy: Ստեղծեք համակարգի պատկեր
 tools-backup-create:
   ru: Создать слепок
   en: Create a snapshot
+  hy: Ստեղծեք լուսանկար
 tools-backup-create-info:
   ru: Нажмите на кнопку «создать слепок» и дождитесь окончания процесса. После
     завершения в списке слепкой внизу этой страницы появится новый пункт
@@ -11,45 +13,62 @@ tools-backup-create-info:
   en: Click on the "create impression" button and wait for the process to finish.
     When completed, a new item marked with the date will appear in the list of
     impressions at the bottom of this page.
+  hy: "Կտտացրեք «ստեղծել տպավորություն» կոճակը և սպասեք գործընթացի ավարտին:
+    Ավարտելուց հետո ամսաթվով նշված նոր տարրը կհայտնվի այս էջի ներքևում գտնվող
+    տպավորությունների ցանկում:"
 tools-backups-points-title:
   ru: Список созданных слепков
   en: List of created impressions
+  hy: Ստեղծված տպավորությունների ցանկ
 tools-backups-dataempty:
   ru: Слепки не найдены
   en: Snapshots not found
+  hy: Պատկերները չեն գտնվել
 tools-backups-points-status:
   ru: Статус
   en: Status
+  hy: Կարգավիճակ
 tools-backups-points-running:
   ru: Работает
   en: Running
+  hy: Վազում
 tools-backups-points-name:
   ru: Наименование
   en: Name
+  hy: Անուն
 tools-backups-points-cron:
   ru: Планировщик
   en: Scheduler
+  hy: Ժամանակացույց
 tools-backups-points-file:
   ru: Шаблон названия файла
   en: File name template
+  hy: Ֆայլի անվան ձևանմուշ
 tools-backups-windowtitle-editbackup:
   ru: Редактировать задание
   en: Edit task
+  hy: Խմբագրել առաջադրանքը
 tools-backups-windowtitle-newbackup:
   ru: Новое задание
   en: New task
+  hy: Նոր առաջադրանք
 tools-backups-contextmenu-edit:
   ru: Редактировать
   en: Edit
+  hy: Խմբագրել
 tools-backups-contextmenu-delete:
   ru: Удалить
   en: Delete
+  hy: Ջնջել
 tools-backups-deletedata1:
   ru: Удаление точки восстановления
   en: Delete the snapshot
+  hy: Ջնջել նկարը
 tools-backups-deletedata1message:
   ru: Вы уверены, что хотите удалить выбранную строку?
   en: Are you sure you want to delete the selected row?
+  hy: "Իսկապե՞ս ուզում եք ջնջել ընտրված տողը:"
 tools-backups-deletedata1message-delete:
   ru: Удалить!
   en: Delete
+  hy: Ջնջել

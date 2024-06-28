@@ -64,26 +64,31 @@ tools-themes-deletevar:
 tools-themes-deletevarmessage:
   ru: Вы уверены, что хотите удалить переменную?
   en: Are you sure you want to delete the variable?
-  it: "Վստա՞հ եք, որ ցանկանում եք ջնջել փոփոխականը:"
   hy: "Վստա՞հ եք, որ ցանկանում եք ջնջել փոփոխականը:"
 tools-themes-windowtitle-addmixintitle:
   ru: Добавить Mixin
   en: Add mixin
+  hy: Ավելացնել միքսին
 tools-themes-windowtitle-editmixintitle:
   ru: Редактировать Mixin
   en: Edit mixin
+  hy: Խմբագրել mixin
 tools-themes-deletemixins:
   ru: Удаление Mixin-ов
   en: Delete mixins
+  hy: Ջնջել միքսները
 tools-themes-deletemixinsmessage:
   ru: Вы уверены, что хотите удалить Mixin-ы?
   en: Are you sure you want to delete Mixins?
+  hy: "Իսկապե՞ս ուզում եք ջնջել Mixins-ը:"
 tools-themes-deletemixin:
   ru: Удаление Mixin-а
   en: Delete mixin
+  hy: Ջնջել mixin
 tools-themes-deletemixinmessage:
   ru: Вы уверены, что хотите удалить Mixin?
   en: Are you sure you want to delete Mixin?
+  hy: "Իսկապե՞ս ուզում եք ջնջել Mixin-ը:"
 tools-thtmes-themes-title:
   ru: Домены и темы
   en: Domains and themes
@@ -95,6 +100,7 @@ tools-themes-vars-title:
 tools-themes-varsempty:
   ru: Переменных не найдено
   en: Variables not found
+  hy: Փոփոխականները չեն գտնվել
 tools-themes-vars-grid-name:
   ru: Переменная
   en: Variable
@@ -102,7 +108,7 @@ tools-themes-vars-grid-name:
 tools-themes-vars-grid-value:
   ru: Значение
   en: Value
-  hy: Իմաստը
+  hy: Արժեք
 tools-themes-vars-buttons-adddata:
   ru: Добавить
   en: Add
@@ -126,15 +132,15 @@ tools-themes-mixinsempty:
 tools-themes-mixins-grid-name:
   ru: Mixin
   en: Mixin
-  hy: Mixin
+  hy: խառնել
 tools-themes-mixins-grid-params:
   ru: Параметры
   en: Parameters
-  hy: Ընտրանքներ
+  hy: Պարամետրեր
 tools-themes-mixins-grid-value:
   ru: Значение
   en: Value
-  hy: Իմաստը
+  hy: Արժեք
 tools-themes-mixins-buttons-adddata:
   ru: Добавить
   en: Add
@@ -174,9 +180,11 @@ tools-themes-deletevarmessage-delete:
 tools-themes-deletemixinsmessage-delete:
   ru: Удалить!
   en: Delete
+  hy: Ջնջել
 tools-themes-deletemixinmessage-delete:
   ru: Удалить!
   en: Delete
+  hy: Ջնջել
 tools-themes-contextmenu-importtheme:
   ru: Импортировать
   en: Import

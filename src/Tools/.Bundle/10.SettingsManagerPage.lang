@@ -1,21 +1,27 @@
 tools-settings-settings-title:
   ru: Настройки
   en: Settings
+  hy: Կարգավորումներ
 tools-settings-data-title:
   ru: Редактор
   en: Editor
+  hy: Խմբագիր
 tools-settings-buttons-save:
   ru: Сохранить
   en: Save
+  hy: Պահպանել
 tools-settings-contextmenu-delete:
   ru: Удалить настройку
   en: Remove setting
+  hy: Հեռացնել կարգավորումը
 tools-settings-description-title:
   ru: Описание настройки
   en: Setting description
+  hy: Կարգավորման նկարագրություն
 tools-settings-value-title:
   ru: Значение
   en: Setting value
+  hy: Արժեքի կարգավորում
 tools-settings-settings-canchange:
   ru: Список настроек может быть изменен только в локальном режиме, пожалуйста,
     обратитесь к администратору
