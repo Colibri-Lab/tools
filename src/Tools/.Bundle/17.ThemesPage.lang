@@ -2,30 +2,37 @@ tools-themes-contextmenu-newtheme:
   ru: Создать тему
   en: Create theme
   hy: Ստեղծեք թեմա
+  it: Crea un argomento
 tools-themes-contextmenu-edittheme:
   ru: Редактировать тему
   en: Edit theme
   hy: Խմբագրել թեման
+  it: Modifica argomento
 tools-themes-contextmenu-deletetheme:
   ru: Удалить тему
   en: Delete theme
   hy: Ջնջել թեման
+  it: Elimina argomento
 tools-themes-contextmenu-dublicatetheme:
   ru: Дублировать тему
   en: Dublicate theme
   hy: Կրկնվող թեմա
+  it: Argomento duplicato
 tools-themes-contextmenu-setcurrent:
   ru: Установить как текущую
   en: Set as default
   hy: Սահմանել որպես ընթացիկ
+  it: Imposta come corrente
 tools-themes-windowtitle-edittheme:
   ru: Редактировать тему
   en: Edit theme
   hy: Խմբագրել թեման
+  it: Modifica argomento
 tools-themes-deletetheme:
   ru: Удаление темы
   en: Delete theme
   hy: Ջնջել թեմա
+  it: Eliminazione di un argomento
 tools-themes-deletethememessage:
   ru: Вы уверены, что хотите удалить тему? На сайтах привязанных к этой теме могут
     возникнуть артефакты
@@ -33,42 +40,53 @@ tools-themes-deletethememessage:
     linked to this topic
   hy: "Իսկապե՞ս ուզում եք ջնջել թեման: Արտեֆակտները կարող են հայտնվել այս թեմայի
     հետ կապված կայքերում:"
+  it: Sei sicuro di voler eliminare l'argomento? Gli artefatti potrebbero essere
+    visualizzati sui siti associati a questo argomento.
 tools-themes-setcurrenttheme:
   ru: Установка
   en: Installing
   hy: Տեղադրում
+  it: Installazione
 tools-themes-setcurrentthememessage:
   ru: Вы уверены, что хотите установить тему как текущую?
   en: Are you sure you want to set the theme as current?
   hy: "Վստա՞հ եք, որ ցանկանում եք թեման դնել որպես ընթացիկ:"
+  it: Sei sicuro di voler impostare il tema come attuale?
 tools-themes-windowtitle-addvartitle:
   ru: Добавить переменную
   en: Add variable
   hy: Ավելացնել փոփոխական
+  it: Aggiungi una variabile
 tools-themes-windowtitle-editvartitle:
   ru: Редактировать переменную
   en: Edit variable
   hy: Խմբագրել փոփոխականը
+  it: Modifica variabile
 tools-themes-deletevars:
   ru: Удаление переменных
   en: Delete variables
   hy: Փոփոխականների հեռացում
+  it: Rimozione di variabili
 tools-themes-deletevarsmessage:
   ru: Вы уверены, что хотите удалить переменные?
   en: Are you sure you want to delete variables?
   hy: "Վստա՞հ եք, որ ցանկանում եք հեռացնել փոփոխականները:"
+  it: Sei sicuro di voler rimuovere le variabili?
 tools-themes-deletevar:
   ru: Удаление переменной
   en: Delete variable
   hy: Փոփոխականի ջնջում
+  it: Eliminazione di una variabile
 tools-themes-deletevarmessage:
   ru: Вы уверены, что хотите удалить переменную?
   en: Are you sure you want to delete the variable?
   hy: "Վստա՞հ եք, որ ցանկանում եք ջնջել փոփոխականը:"
+  it: Sei sicuro di voler eliminare la variabile?
 tools-themes-windowtitle-addmixintitle:
   ru: Добавить Mixin
   en: Add mixin
   hy: Ավելացնել միքսին
+  it: Aggiungi Mixin
 tools-themes-windowtitle-editmixintitle:
   ru: Редактировать Mixin
   en: Edit mixin
@@ -93,10 +111,12 @@ tools-thtmes-themes-title:
   ru: Домены и темы
   en: Domains and themes
   hy: Դոմեններ և թեմաներ
+  it: Domini e temi
 tools-themes-vars-title:
   ru: Переменные
   en: Variables
   hy: Փոփոխականներ
+  it: Variabili
 tools-themes-varsempty:
   ru: Переменных не найдено
   en: Variables not found
@@ -105,26 +125,32 @@ tools-themes-vars-grid-name:
   ru: Переменная
   en: Variable
   hy: Փոփոխական
+  it: Variabile
 tools-themes-vars-grid-value:
   ru: Значение
   en: Value
   hy: Արժեք
+  it: Senso
 tools-themes-vars-buttons-adddata:
   ru: Добавить
   en: Add
   hy: Ավելացնել
+  it: Aggiungere
 tools-themes-vars-buttons-editdata:
   ru: Редактировать
   en: Edit
   hy: Խմբագրել
+  it: Modificare
 tools-themes-vars-buttons-deletedata:
   ru: Удалить
   en: Delete
   hy: Ջնջել
+  it: Eliminare
 tools-themes-mixins-title:
   ru: Mixin-ы
   en: Mixins
   hy: Միքսիններ
+  it: Mixin
 tools-themes-mixinsempty:
   ru: Mixin-ов не найдено
   en: Mixins not found
@@ -133,50 +159,62 @@ tools-themes-mixins-grid-name:
   ru: Mixin
   en: Mixin
   hy: խառնել
+  it: mescolare
 tools-themes-mixins-grid-params:
   ru: Параметры
   en: Parameters
   hy: Պարամետրեր
+  it: Opzioni
 tools-themes-mixins-grid-value:
   ru: Значение
   en: Value
   hy: Արժեք
+  it: Senso
 tools-themes-mixins-buttons-adddata:
   ru: Добавить
   en: Add
   hy: Ավելացնել
+  it: Aggiungere
 tools-themes-mixins-buttons-editdata:
   ru: Редактировать
   en: Edit
   hy: Խմբագրել
+  it: Modificare
 tools-themes-mixins-buttons-deletedata:
   ru: Удалить
   en: Delete
   hy: Ջնջել
+  it: Eliminare
 tools-thtmes-themes-vars:
   ru: Переменные
   en: Variables
   hy: Փոփոխականներ
+  it: Variabili
 tools-thtmes-themes-mixins:
   ru: Mixin-ы
   en: Mixins
   hy: Միքսիններ
+  it: Mixin
 tools-themes-deletethememessage-delete:
   ru: Удалить!
   en: Delete
   hy: Ջնջել!
+  it: Eliminare!
 tools-themes-setcurrentthememessage-ok:
   ru: Продолжить
   en: Continue
   hy: Շարունակել
+  it: Continua
 tools-themes-deletevarsmessage-delete:
   ru: Удалить!
   en: Delete
   hy: Ջնջել!
+  it: Eliminare!
 tools-themes-deletevarmessage-delete:
   ru: Удалить!
   en: Delete
   hy: Ջնջել!
+  it: Eliminare!
 tools-themes-deletemixinsmessage-delete:
   ru: Удалить!
   en: Delete
@@ -189,11 +227,14 @@ tools-themes-contextmenu-importtheme:
   ru: Импортировать
   en: Import
   hy: Ներմուծում
+  it: Importare
 tools-themes-windowtitle-importtheme:
   ru: Импортировать тему
   en: Import theme
   hy: Ներմուծման թեմա
+  it: Importa tema
 tools-themes-windowtitle-importtheme-fields-json_data:
   ru: Данные темы
   en: Theme data
   hy: Թեմայի տվյալներ
+  it: Dati sull'argomento

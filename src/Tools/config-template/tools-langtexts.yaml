@@ -581,22 +581,6 @@ tools-storages-themes-fields-mixins-value-desc:
   ru: Тело
   en: Body
   hy: Մարմին
-tools-themes-contextmenu-newtheme:
-  ru: Создать тему
-  en: Create a theme
-  hy: Ստեղծել թեման
-tools-themes-contextmenu-deletenotice:
-  ru: Удалить шаблон
-  en: Delete a template
-  hy: Հեռացնել Կաղապար
-tools-themes-contextmenu-deletetheme:
-  ru: Удалить тему
-  en: Delete a topic
-  hy: Հեռացնել թեման
-tools-themes-contextmenu-edittheme:
-  ru: Редактировать тему
-  en: Edit a topic
-  hy: Խմբագրել թեման
 tools-themes-deletetheme:
   ru: Удаление темы
   en: Deleting a topic

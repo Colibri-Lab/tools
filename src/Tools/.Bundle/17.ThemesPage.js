@@ -185,7 +185,11 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         else if(menuData.name == 'remove-theme') {
             const theme = item.tag.data;
             this._domainsAndThemes.selected = null;
-            App.Confirm.Show('#{tools-themes-deletetheme}', '#{tools-themes-deletethememessage}', '#{tools-themes-deletethememessage-delete}').then(() => {
+            App.Confirm.Show(
+                '#{tools-themes-deletetheme}',
+                '#{tools-themes-deletethememessage}',
+                '#{tools-themes-deletethememessage-delete}'
+            ).then(() => {
                 Tools.DeleteTheme(theme.id);
             });
         }
@@ -196,7 +200,11 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         }
         else if(menuData.name == 'set-current') {
             const theme = item.tag.data;
-            App.Confirm.Show('#{tools-themes-setcurrenttheme}', '#{tools-themes-setcurrentthememessage}', '#{tools-themes-setcurrentthememessage-ok}').then(() => {
+            App.Confirm.Show(
+                '#{tools-themes-setcurrenttheme}',
+                '#{tools-themes-setcurrentthememessage}',
+                '#{tools-themes-setcurrentthememessage-ok}'
+            ).then(() => {
                 Tools.SetThemeAsCurrent(theme.id);
             });
         }
@@ -395,7 +403,11 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         const selectedVar = this._varsGrid.selected;
         const checkedVars = this._varsGrid.checked;
         if(checkedVars.length > 0) {
-            App.Confirm.Show('#{tools-themes-deletevars}', '#{tools-themes-deletevarsmessage}', '#{tools-themes-deletevarsmessage-delete}').then(() => {
+            App.Confirm.Show(
+                '#{tools-themes-deletevars}',
+                '#{tools-themes-deletevarsmessage}',
+                '#{tools-themes-deletevarsmessage-delete}'
+            ).then(() => {
                 let names = [];
                 checkedVars.forEach(variable => {
                     names.push(variable.value.name);
@@ -404,7 +416,11 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
             });    
         }
         else {
-            App.Confirm.Show('#{tools-themes-deletevar}', '#{tools-themes-deletevarmessage}', '#{tools-themes-deletevarmessage-delete}').then(() => {
+            App.Confirm.Show(
+                '#{tools-themes-deletevar}',
+                '#{tools-themes-deletevarmessage}',
+                '#{tools-themes-deletevarmessage-delete}'
+            ).then(() => {
                 Tools.DeleteThemeVars(theme?.id, [selectedVar.value.name]);
             });    
         }
