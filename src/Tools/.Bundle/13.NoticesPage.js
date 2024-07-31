@@ -105,7 +105,7 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
         if(!itemData) {
             contextmenu.push({name: 'new-notice', title: '#{tools-notices-contextmenu-newnotice}', icon: Colibri.UI.ContextMenuAddIcon});
             this._notices.contextmenu = contextmenu;
-            this._notices.ShowContextMenu(args.isContextMenuEvent ? [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.RB] : [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.LB], '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);
+            this._notices.ShowContextMenu(args.isContextMenuEvent ? [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.RT] : [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.LB], '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);
         }
         else {
             contextmenu.push({name: 'remove-notice', title: '#{tools-notices-contextmenu-deletenotice}', icon: Colibri.UI.ContextMenuRemoveIcon});
