@@ -3,13 +3,13 @@ texts: include(tools-langtexts.yaml)
 
 smtp:
   enabled: true
-  host: "smtp.yandex.ru"
-  port: 465
-  secure: 'ssl'
-  user: 'connect@buhsoft.ru'
-  password: 'KtUdNYHkjkt56pA'
-  from: 'connect@buhsoft.ru'
-  fromname: 'БухСофт'
+  host: "smtp.office365.com"
+  port: 587
+  secure: tls
+  user: 'vahangrigoryan1977@outlook.com'
+  password: 'cimauuoswlklacfk'
+  from: 'vahangrigoryan1977@outlook.com'
+  fromname: 'Vahan Grigoryan'
   
 databases:
 
