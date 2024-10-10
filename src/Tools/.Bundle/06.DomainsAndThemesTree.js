@@ -8,22 +8,14 @@ App.Modules.Tools.DomainsAndThemesTree = class extends Colibri.UI.Tree {
 
 
     __renderBoundedValues(data, binded) {
-
+        
         if(binded.indexOf('domainkeys') !== -1) {
 
-            if(!data) {
-                this.nodes.Clear();
-            }
-
+            this.nodes.Clear();  
             if(Object.isObject(data)) {
                 data = Object.values(data);
             }
 
-            if(data.length == 0) {
-                this.nodes.Clear();
-            }
-
-            let found = [];
             for(const domainkey of data) {
     
                 let newNode = this.FindNode('domainkey' + domainkey.value);
@@ -35,19 +27,16 @@ App.Modules.Tools.DomainsAndThemesTree = class extends Colibri.UI.Tree {
                 newNode.icon = App.Modules.Sites.Icons.FolderIconPublished;
                 newNode.tag = {type: 'domain', data: domainkey};
     
-                found.push('domainkey' + domainkey.value);
-    
             }
-
-            this._removeUnexistent(found, 'domainkey');
 
         }
         else if(binded.indexOf('themes') !== -1) {
-            
             if(!data) {
-                for(const node of this.nodes.Children()) {
-                    node.nodes.Clear();
-                }
+                this.nodes.ForEach((name, node) => {
+                    for(const n of node.nodes.Children()) {
+                        n.nodes.Clear();
+                    }                        
+                });
             }
 
             if(Object.isObject(data)) {
@@ -55,12 +44,13 @@ App.Modules.Tools.DomainsAndThemesTree = class extends Colibri.UI.Tree {
             }
 
             if(data.length == 0) {
-                for(const node of this.nodes.Children()) {
-                    node.nodes.Clear();
-                }
+                this.nodes.ForEach((name, node) => {
+                    for(const n of node.nodes.Children()) {
+                        n.nodes.Clear();
+                    }                        
+                });
             }
 
-            let found = [];
             for(const theme of data) {
 
                 theme.value = theme.id;
@@ -79,12 +69,7 @@ App.Modules.Tools.DomainsAndThemesTree = class extends Colibri.UI.Tree {
                 newNode.icon = theme.current ? App.Modules.Tools.Icons.ThemesCurrentIcon : App.Modules.Tools.Icons.ThemesIcon;
                 newNode.tag = {type: 'theme', data: theme};
     
-                found.push('theme' + theme.id);
-    
             }
-
-            this._removeUnexistent(found, 'theme');
-
 
         }
 
