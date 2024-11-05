@@ -56,10 +56,25 @@ class Settings extends BaseModelDataTable
         }
     }
 
-    public static function Get($name): mixed
+    public static function Get(string $name): mixed
     {
         self::Cache();
         return self::$_allSettings[$name] ?? null;
+    }
+
+    public static function List(?string $like = null): array
+    {
+        self::Cache();
+        if(!$like) {
+            return self::$_allSettings;
+        }
+        $r = [];
+        foreach(self::$_allSettings as $k=>$v) {
+            if(strstr($k, $like) !== false) {
+                $r[str_replace($like, '', $k)] = $v;
+            }
+        }
+        return $r;
     }
 
     /**
