@@ -48,8 +48,31 @@ class Backups extends BaseModelDataTable
      */
     static function LoadByFilter(int $page = -1, int $pagesize = 20, string $filter = null, string $order = null, array $params = [], bool $calculateAffected = true): ? Backups
     {
-        $storage = Storages::Create()->Load('backups');
+        $storage = Storages::Create()->Load('backups', 'tools');
         return parent::_loadByFilter($storage, $page, $pagesize, $filter, $order, $params, $calculateAffected);
+    }
+
+    /**
+     * Create table by any filters
+     * @param int $page page
+     * @param int $pagesize page size
+     * @param ?array $filtersArray filters array|object
+     * @param string $sortField sort field
+     * @param string $sortOrder sort order, default asc
+     * @return ?Backups
+     */
+    public static function LoadBy(
+        int $page = -1, 
+        int $pagesize = 20, 
+        ?string $searchTerm = null,
+        ?array $filtersArray = null,
+        ?string $sortField = null,
+        string $sortOrder = 'asc'
+    ) : ?Backups
+    {
+        $storage = Storages::Create()->Load('backups', 'tools');
+        [$filter, $order, $params] = $storage->accessPoint->ProcessFilters($storage, $searchTerm, $filtersArray, $sortField, $sortOrder);
+        return parent::_loadByFilter($storage, $page, $pagesize, $filter, $order, $params);
     }
 
     /**
