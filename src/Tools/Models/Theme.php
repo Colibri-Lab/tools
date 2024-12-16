@@ -5,12 +5,12 @@ namespace App\Modules\Tools\Models;
 # region Uses:
 use App\Modules\Tools\Models\Fields\Themes\MixinsArrayField;
 use App\Modules\Tools\Models\Fields\Themes\VarsArrayField;
-use Colibri\Common\VariableHelper;
 use Colibri\Data\Storages\Fields\ArrayField;
 use Colibri\Data\Storages\Fields\DateTimeField;
 # endregion Uses;
 use Colibri\Data\Storages\Models\DataRow as BaseModelDataRow;
 use Colibri\App;
+use Colibri\Common\VariableHelper;
 use Colibri\IO\FileSystem\File;
 
 /**
@@ -22,6 +22,7 @@ use Colibri\IO\FileSystem\File;
  * @property int $id ID строки
  * @property DateTimeField $datecreated Дата создания строки
  * @property DateTimeField $datemodified Дата последнего обновления строки
+ * @property DateTimeField $datedeleted Дата удаления строки (если включно мягкое удаление)
  * @property string|null $name Наименование
  * @property string|null $desc Описание темы
  * @property string|null $domain Ключ домена
@@ -40,26 +41,26 @@ class Theme extends BaseModelDataRow
             'datemodified',
             # region SchemaRequired:
 
-            # endregion SchemaRequired;
+			# endregion SchemaRequired;
         ],
         'properties' => [
             'id' => ['type' => 'integer'],
             'datecreated' => ['type' => 'string', 'format' => 'db-date-time'],
             'datemodified' => ['type' => 'string', 'format' => 'db-date-time'],
             # region SchemaProperties:
-            'name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
-            'desc' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
-            'domain' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
-            'current' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => ['boolean','number'], 'enum' => [true, false, 0, 1],] ] ],
-            'vars' => [  'oneOf' => [ VarsArrayField::JsonSchema, [ 'type' => 'null'] ] ],
-            'mixins' => [  'oneOf' => [ MixinsArrayField::JsonSchema, [ 'type' => 'null'] ] ],
-            # endregion SchemaProperties;
+			'name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
+			'desc' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
+			'domain' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
+			'current' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => ['boolean','number'], 'enum' => [true, false, 0, 1],] ] ],
+			'vars' => [  'oneOf' => [ VarsArrayField::JsonSchema, [ 'type' => 'null'] ] ],
+			'mixins' => [  'oneOf' => [ MixinsArrayField::JsonSchema, [ 'type' => 'null'] ] ],
+			# endregion SchemaProperties;
         ]
     ];
 
     # region Consts:
 
-    # endregion Consts;
+	# endregion Consts;
 
     public function Generate(): string
     {
@@ -105,7 +106,11 @@ class Theme extends BaseModelDataRow
                 $this->mixins = $mixins;
             } elseif($key === 'vars') {
                 foreach($data as $varKey => $var) {
-                    $vars[] = (object)['name' => $varKey, 'type' => 'color', 'value' => $var];
+                    if(strstr($var, '#') !== false || strstr($var, 'rgb') !== false) {
+                        $vars[] = (object)['name' => $varKey, 'type' => 'color', 'value' => $var];
+                    } else {
+                        $vars[] = (object)['name' => $varKey, 'type' => 'value', 'value' => $var];
+                    }
                 }
             }
         }

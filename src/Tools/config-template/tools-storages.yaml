@@ -1454,6 +1454,12 @@ themes:
               en: Shadow
               hy: Ստվեր
             type: text
+          - value: value
+            title:
+              ru: Значение
+              en: Value
+              hy: Առժեք
+            type: text
         value:
           desc:
             ru: Значение

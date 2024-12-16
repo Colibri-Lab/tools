@@ -15,7 +15,7 @@ use Colibri\Data\Storages\Fields\ValueField;
  * 
  * region Properties:
  * @property string|null $name Название переменной
- * @property ValueField|string|null $type Тип переменной
+ * @property ValueField|string|string|null $type Тип переменной
  * @property string|null $value Значение
  * endregion Properties;
  */
@@ -31,7 +31,7 @@ class VarsObjectField extends ObjectField
         'properties' => [
             # region SchemaProperties:
 			'name' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
-			'type' => [  'oneOf' => [ [ 'type' => 'null' ], ['type' => 'string', 'enum' => ['color', 'font-family', 'size', 'image', 'border', 'shadow']] ] ],
+			'type' => [  'oneOf' => [ [ 'type' => 'null' ], ['type' => 'string', 'enum' => ['color', 'font-family', 'size', 'image', 'border', 'shadow', 'value']] ] ],
 			'value' => [ 'oneOf' => [ [ 'type' => 'null'], ['type' => 'string', 'maxLength' => 255, ] ] ],
 			# endregion SchemaProperties;
         ]
