@@ -20,6 +20,8 @@ use App\Modules\Tools\Models\Notices;
 use App\Modules\Tools\Models\Settings;
 use App\Modules\Tools\Models\Backups;
 use App\Modules\Tools\Models\Themes;
+use Colibri\Events\EventsContainer;
+use Colibri\Utils\ExtendedObject;
 use CometApiClient\Client as CometClient;
 
 /**
@@ -138,7 +140,11 @@ class Module extends BaseModule
      */
     public function Theme(string $domain): ?string
     {
-        $theme = Themes::LoadCurrent($domain, true);
+        
+        $args = new ExtendedObject(['domain' => $domain, 'choosed' => null]);
+        $this->DispatchEvent(EventsContainer::ThemeChoosing, $args);
+
+        $theme = Themes::LoadCurrent($domain, $args?->choosed ?? null, true);
         return $theme ? $theme->Generate() : null;
     }
 
@@ -149,7 +155,11 @@ class Module extends BaseModule
      */
     public function ThemeName(string $domain): ?string
     {
-        $theme = Themes::LoadCurrent($domain, true);
+        
+        $args = new ExtendedObject(['domain' => $domain, 'choosed' => null]);
+        $this->DispatchEvent(EventsContainer::ThemeChoosing, $args);
+
+        $theme = Themes::LoadCurrent($domain, $args?->choosed, true);
         return $theme ? $theme->name : null;
     }
 

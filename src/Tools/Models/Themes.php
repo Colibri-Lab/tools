@@ -109,11 +109,10 @@ class Themes extends BaseModelDataTable
      * @param string $domain
      * @return Theme|null
      */
-    static function LoadCurrent(string $domain, bool $useCookie = false): Theme|null
+    static function LoadCurrent(string $domain, ?string $selectedTheme = null, bool $useCookie = false): Theme|null
     {
-        $selectedTheme = null;
         if ($useCookie) {
-            $selectedTheme = App::$request->cookie->{'theme'} ?? null;
+            $selectedTheme = App::$request->cookie->{'theme'} ?? $selectedTheme;
         }
         $table = self::LoadByFilter(1, 1, '{domain}=[[domain:string]]' . (!$selectedTheme ? ' and {current}=1' : ' and {name}=\'' . $selectedTheme . '\''), null, ['domain' => $domain], false);
         return $table && $table->Count() > 0 ? $table->First() : null;
