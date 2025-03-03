@@ -9,6 +9,8 @@ settings:
     ru: Настройки
     en: Settings
     hy: Կարգավորումներ
+    it: Impostazioni
+    es: Ajustes
   params:
     visible: false
     maybepublished: false
@@ -22,12 +24,17 @@ settings:
         ru: Наименование настройки
         en: Setting name
         hy: Կարգավորման անունը
+        it: Nome dell'impostazione
+        es: Nombre de la configuración
       note:
         ru: Введите название настройки, которое будете использовать в дальнейшем.
           Латинские буквы, подчеркивание.
         en: Enter a name for the setting that you will use later.
            Latin letters, underline.
         hy: "Մուտքագրեք այն պարամետրի անունը, որը դուք կօգտագործեք ավելի ուշ: Լատինական տառեր, ընդգծված."
+        it: Inserisci un nome per l'impostazione che userai in seguito.
+           Lettere latine, sottolineatura.
+        es: Ingrese un nombre para la configuración que usará más tarde. Letras latinas, subrayado.
       attrs:
         width: 100%
       placeholder:
@@ -73,10 +80,14 @@ settings:
         ru: Тип настройки
         en: Setting type
         hy: Կարգավորման տեսակը
+        it: Tipo di impostazione
+        es: Tipo de configuración
       note:
         ru: Выберите тип настройки
         en: Choose a setting type
         hy: Ընտրեք կարգաբերման տեսակը
+        it: Scegli un tipo di impostazione
+        es: Elija un tipo de configuración
       component: Colibri.UI.Forms.Select
       default: text
       values:
@@ -84,60 +95,80 @@ settings:
           ru: Целое число
           en: Integer
           hy: Ամբողջ թիվ
+          it: Intero
+          es: Entero
         type: text
         value: integer
       - title:
           ru: Число с плавающей запятой
           en: Floating point
           hy: Լողացող կետով թվեր
+          it: Virgola mobile
+          es: Punto flotante
         type: text
         value: double
       - title:
           ru: Текст
           en: Text
           hy: Տեքստ
+          it: Testo
+          es: Texto
         type: text
         value: text
       - title:
           ru: Большой текст
           en: Huge text
           hy: Մեձ տեքստ
+          it: Testo enorme
+          es: Texto enorme
         type: text
         value: textarea
       - title:
           ru: Редактор HTML
           en: HTML markup
           hy: HTML նշում
+          it: Markup HTML
+          es: Marcado HTML
         type: text
         value: html
       - title:
           ru: Код HTML
           en: HTML code
           hy: HTML կոդ
+          it: Codice HTML
+          es: Código HTML
         type: text
         value: htmlcode
       - title:
           ru: Дата
           en: Date
           hy: Ամսաթիվ
+          it: Data
+          es: Fecha
         type: text
         value: date
       - title:
           ru: Дата и время
           en: Date and time
           hy: Ամսաթիվ և ժամ
+          it: Data e ora
+          es: Fecha y hora
         type: text
         value: datetime
       - title:
           ru: Файл
           en: File
           hy: Ֆայլ
+          it: File
+          es: Archivo
         type: text
         value: file
       - title:
           ru: Файлы
           en: Files
           hy: Ֆայլեր
+          it: File
+          es: Archivo
         type: text
         value: files
       selector:
@@ -192,10 +223,14 @@ settings:
         ru: Описание настройки
         en: Setting description
         hy: Կարգավորման նկարագրություն
+        it: Descrizione dell'impostazione
+        es: Descripción de la configuración
       note:
         ru: Опишите настройку, для чего она нужна, где используется
         en: Describe the setting, what it is for, where it is used
         hy: Նկարագրեք պարամետրը, ինչի համար է այն, որտեղ է այն օգտագործվում
+        it: Descrivi l'impostazione, a cosa serve, dove viene utilizzata
+        es: Describa la configuración, para qué sirve, dónde se utiliza
       required: false
       reqdonly: true
       attrs:
@@ -275,10 +310,14 @@ settings:
         ru: Значение
         en: Value
         hy: Արժեք
+        it: Valore
+        es: Valor
       note:
         ru: Введите значение настройки
         en: Enter setting value
         hy: Մուտքագրեք պարամետրերի արժեքը
+        it: Inserisci il valore dell'impostazione
+        es: Ingrese el valor de la configuración
       attrs:
         width: 100%
       placeholder:
@@ -304,6 +343,8 @@ notices:
     ru: Шаблоны писем
     en: Notices templates
     hy: Նամակների կաղապարներ
+    it: Modelli di avvisi
+    es: Plantillas de avisos
   params:
     visible: false
     maybepublished: false
@@ -317,6 +358,8 @@ notices:
         ru: Наименование шаблона
         en: Template name
         hy: Կաղապարի անվանումը
+        it: Nome del modello
+        es: Nombre de la plantilla
       note:
         ru: Введите название шаблона, которое будете использовать в дальнейшем. Латинские
           буквы, подчеркивание.
@@ -324,6 +367,9 @@ notices:
           letters, underscores.
         hy: 'Մուտքագրեք կաղապարի անունը, որը դուք կօգտագործեք հետագայում: Լատինական
           տառեր, ընդգծում:'
+        it: Inserisci il nome del modello che userai in futuro. Lettere latine, sottolineatura.
+        es: Ingrese el nombre de la plantilla que utilizará en el futuro. Letras latinas,
+          subrayado.
       attrs:
         width: 100%
       placeholder:
@@ -371,10 +417,14 @@ notices:
         ru: Тема письма
         en: Subject of the letter
         hy: Նամակի թեման
+        it: Oggetto della lettera
+        es: Asunto de la carta
       note:
         ru: Введите тему письма
         en: Enter the subject of the email
         hy: Մուտքագրեք էլփոստի թեման
+        it: Inserisci l'oggetto dell'email
+        es: Ingrese el asunto del correo electrónico
       params:
         required: false
         enabled: true
@@ -427,10 +477,14 @@ notices:
         ru: Тело письма
         en: The body of the letter
         hy: Նամակի մարմինը
+        it: Il corpo della lettera
+        es: El cuerpo de la carta
       note:
         ru: Введите тело письма
         en: Enter the message body
         hy: Մուտքագրեք էլփոստի մարմինը
+        it: Inserisci il corpo del messaggio
+        es: Ingrese el cuerpo del mensaje
       required: false
       reqdonly: true
       attrs:
@@ -484,6 +538,8 @@ backups:
     ru: Точки восстановления
     en: Recovery Points
     hy: Վերականգնման կետերը
+    it: Punti di ripristino
+    es: Puntos de recuperación
   access-point: tools
   models:
     table: Models\Backups
@@ -499,6 +555,8 @@ backups:
         ru: Статус
         en: Status
         hy: Կարգավիճակ
+        it: Stato
+        es: Estado
       type: varchar
       length: "255"
       component: Colibri.UI.Forms.Select
@@ -541,12 +599,16 @@ backups:
           ru: Остановлено
           en: Stopped
           hy: Դադարեցված է
+          it: Fermato
+          es: Detenido
         type: text
         value: paused
       - title:
           ru: Включено
           en: Enabled
           hy: Ներառված
+          it: Abilitato
+          es: Habilitado
         type: text
         value: started
       default: paused
@@ -564,6 +626,8 @@ backups:
         ru: Запущено
         en: Launched
         hy: Մեկնարկել է
+        it: Avviato
+        es: Lanzado
       type: tinyint
       length: 1
       component: Colibri.UI.Forms.Hidden
@@ -587,10 +651,14 @@ backups:
         ru: Наименование
         en: Name
         hy: Անվանում
+        it: Nome
+        es: Nombre
       note:
         ru: Введите название задание на создание точки восстановления
         en: Enter the name of the task to create a recovery point
         hy: Մուտքագրեք կոչում խնդիրն է ստեղծել վերականգնման կետ
+        it: Inserisci il nome del compito per creare un punto di ripristino
+        es: Ingrese el nombre de la tarea para crear un punto de recuperación
       type: varchar
       length: "255"
       component: Colibri.UI.Forms.Text
@@ -613,10 +681,14 @@ backups:
         ru: Запись в CRON
         en: Writing to CRON
         hy: Գրառումը CRON-ում
+        it: Scrittura in CRON
+        es: Escribir en CRON
       note:
         ru: Введите запись, которую нужно будет внести в CRON
         en: Enter the entry that you will need to make in CRON
         hy: Մուտքագրեք գրառումը, որը պետք է կատարվի CRON-ում
+        it: Inserisci l'ingresso che dovrai fare in CRON
+        es: Ingrese la entrada que necesitará hacer en CRON
       type: json
       component: Colibri.UI.Forms.Object
       class: ObjectField
@@ -639,10 +711,14 @@ backups:
             ru: Минута
             en: Minute
             hy: Րոպե
+            it: Minuto
+            es: Minuto
           note:
             ru: Выберите минуту
             en: Choose a minute
             hy: Ընտրեք րոպե
+            it: Scegli un minuto
+            es: Elija un minuto
           type: varchar
           length: "2"
           component: Colibri.UI.Forms.Select
@@ -847,10 +923,14 @@ backups:
             ru: Час
             en: Hour
             hy: Ժամ
+            it: Ora
+            es: Hora
           note:
             ru: Выберите час
             en: Choose an hour
             hy: Ընտրեք ժամ
+            it: Scegli un'ora
+            es: Elija una hora
           type: varchar
           length: "2"
           component: Colibri.UI.Forms.Select
@@ -947,10 +1027,14 @@ backups:
             ru: День
             en: Day
             hy: Օր
+            it: Giorno
+            es: Día
           note:
             ru: Выберите день
             en: Choose a day
             hy: Ընտրեք օրը
+            it: Scegli un giorno
+            es: Elija un día
           type: varchar
           length: "2"
           component: Colibri.UI.Forms.Select
@@ -1074,10 +1158,14 @@ backups:
             ru: Месяц
             en: Month
             hy: Ամիս
+            it: Mese
+            es: Mes
           note:
             ru: Выберите месяц
             en: Choose a month
             hy: Ընտրել ամիս
+            it: Scegli un mese
+            es: Elija un mes
           type: varchar
           length: "2"
           component: Colibri.UI.Forms.Select
@@ -1144,10 +1232,14 @@ backups:
             ru: День недели
             en: Day of the week
             hy: Շաբաթվա օր
+            it: Giorno della settimana
+            es: Día de la semana
           note:
             ru: Выберите день недели
             en: Choose a day of the week
             hy: Ընտրեք օրը շաբաթվա
+            it: Scegli un giorno della settimana
+            es: Elija un día de la semana
           type: varchar
           length: "1"
           component: Colibri.UI.Forms.Select
@@ -1174,42 +1266,56 @@ backups:
               ru: Воскресенье
               en: Sunday
               hy: Կիրակի
+              it: Domenica
+              es: Domingo
             type: text
           - value: "1"
             title:
               ru: Понедельник
               en: Monday
               hy: Երկուշաբթի
+              it: Lunedì
+              es: Lunes
             type: text
           - value: "2"
             title:
               ru: Вторник
               en: Tuesday
               hy: Երեքշաբթի
+              it: Martedì
+              es: Martes
             type: text
           - value: "3"
             title:
               ru: Среда
               en: Wednesday
               hy: Չորեքշաբթի
+              it: Mercoledì
+              es: Miércoles
             type: text
           - value: "4"
             title:
               ru: Четверг
               en: Thursday
               hy: Հինգշաբթի
+              it: Giovedì
+              es: Jueves
             type: text
           - value: "5"
             title:
               ru: Пятница
               en: Friday
               hy: Ուրբաթ
+              it: Venerdì
+              es: Viernes
             type: text
           - value: "6"
             title:
               ru: Суббота
               en: Saturday
               hy: Շաբաթ
+              it: Sabato
+              es: Sábado
             type: text
           default: '*'
     file:
@@ -1218,10 +1324,14 @@ backups:
         ru: Шаблон названия файла
         en: File name template
         hy: Ֆայլի անվանումը Կաղապար
+        it: Modello di nome file
+        es: Plantilla de nombre de archivo
       note:
         ru: Введите шаблон названия файла, например backup_{date}_{index}.backup
         en: Enter a template for the file name, for example backup_{date}_{index}.backup
         hy: Մուտքագրեք ֆայլի անունը Կաղապար, օրինակ backup_ {date}_{index}.backup
+        it: Inserisci un modello per il nome del file, ad esempio backup_{date}_{index}.backup
+        es: Ingrese una plantilla para el nombre del archivo, por ejemplo backup_{date}_{index}.backup
       type: varchar
       length: "255"
       component: Colibri.UI.Forms.Text
@@ -1245,6 +1355,8 @@ themes:
     ru: Темы
     en: Themes
     hy: Թեմաներ
+    it: Temi
+    es: Temas
   access-point: tools
   models:
     table: Models\Themes
@@ -1259,6 +1371,8 @@ themes:
         ru: Наименование
         en: Name
         hy: Անվանում
+        it: Nome
+        es: Nombre
       type: varchar
       length: "255"
       component: Colibri.UI.Forms.Text
@@ -1280,6 +1394,8 @@ themes:
         ru: Описание темы
         en: Topic description
         hy: Թեմայի նկարագրությունը
+        it: Descrizione dell'argomento
+        es: Descripción del tema
       type: varchar
       length: "255"
       component: Colibri.UI.Forms.Text
@@ -1302,10 +1418,14 @@ themes:
         ru: Ключ домена
         en: Domain Key
         hy: Դոմեյն բանալին
+        it: Chiave di dominio
+        es: Clave de dominio
       note:
         ru: Выберите ключ домена
         en: Select the domain key
         hy: Ընտրեք դոմեյն բանալին
+        it: Seleziona la chiave di dominio
+        es: Seleccione la clave de dominio
       type: varchar
       length: "255"
       component: Colibri.UI.Forms.Select
@@ -1331,10 +1451,14 @@ themes:
         ru: Текущая
         en: Current
         hy: Ընթացիկ
+        it: Corrente
+        es: Actual
       note:
         ru: Укажите да, если тема должна быть текущей для домена
         en: Specify yes if the topic should be the current one for the domain
         hy: Նշեք Այո, եթե թեման պետք է լինի ընթացիկ տիրույթում
+        it: Specificare sì se l'argomento dovrebbe essere quello attuale per il dominio
+        es: Especifique sí si el tema debe ser el actual para el dominio
       type: tinyint
       length: "1"
       component: Colibri.UI.Forms.Checkbox
@@ -1357,6 +1481,8 @@ themes:
         ru: Переменные
         en: Variables
         hy: Փոփոխականներ
+        it: Variabili
+        es: Variables
       type: json
       component: Colibri.UI.Forms.Array
       class: ArrayField
@@ -1379,6 +1505,8 @@ themes:
             ru: Название переменной
             en: Variable name
             hy: Փոփոխական անունը
+            it: Nome della variabile
+            es: Nombre de la variable
           type: varchar
           length: "255"
           component: Colibri.UI.Forms.Text
@@ -1400,6 +1528,8 @@ themes:
             ru: Тип переменной
             en: Type of variable
             hy: Փոփոխական տեսակը
+            it: Tipo di variabile
+            es: Tipo de variable
           type: varchar
           length: "255"
           component: Colibri.UI.Forms.Select
@@ -1423,48 +1553,64 @@ themes:
               ru: Цвет
               en: Colour
               hy: Գույն
+              it: Colore
+              es: Color
             type: text
           - value: font-family
             title:
               ru: Название шрифта
               en: Font name
               hy: Տառատեսակի անվանումը
+              it: Nome del carattere
+              es: Nombre de la fuente
             type: text
           - value: size
             title:
               ru: Размер
               en: Size
               hy: Չափ
+              it: Dimensione
+              es: Tamaño
             type: text
           - value: image
             title:
               ru: Изoбражение
               en: Image
               hy: Նկար
+              it: Immagine
+              es: Imagen
             type: text
           - value: border
             title:
               ru: Рамка
               en: Frame
               hy: Շրջանակ
+              it: Cornice
+              es: Marco
             type: text
           - value: shadow
             title:
               ru: Тень
               en: Shadow
               hy: Ստվեր
+              it: Ombra
+              es: Sombra
             type: text
           - value: value
             title:
               ru: Значение
               en: Value
               hy: Առժեք
+              it: Valore
+              es: Valor
             type: text
         value:
           desc:
             ru: Значение
             en: Meaning
             hy: Արժեք
+            it: Valore
+            es: Valor
           type: varchar
           length: "255"
           component: Colibri.UI.Forms.Text
@@ -1487,6 +1633,8 @@ themes:
         ru: Mixin-ы
         en: Mixins
         hy: Mixin-ներ
+        it: Mixin
+        es: Mixins
       type: json
       component: Colibri.UI.Forms.Array
       class: ArrayField
@@ -1509,6 +1657,8 @@ themes:
             ru: Наименование
             en: Name
             hy: Անվանում
+            it: Nome
+            es: Nombre
           type: varchar
           length: "255"
           component: Colibri.UI.Forms.Text
@@ -1530,6 +1680,8 @@ themes:
             ru: Параметры
             en: Parameters
             hy: Պարամետրեր
+            it: Parametri
+            es: Parámetros
           type: json
           component: Colibri.UI.Forms.Array
           class: ArrayField
@@ -1551,6 +1703,8 @@ themes:
                 ru: Название параметра
                 en: Name of the parameter
                 hy: Պարամետր անունը
+                it: Nome del parametro
+                es: Nombre del parámetro
               type: varchar
               length: "255"
               component: Colibri.UI.Forms.Text
@@ -1572,6 +1726,8 @@ themes:
             ru: Тело
             en: Body
             hy: Մարմին
+            it: Corpo
+            es: Cuerpo
           type: varchar
           length: "1024"
           component: App.Modules.Manage.UI.TinyMCETextArea

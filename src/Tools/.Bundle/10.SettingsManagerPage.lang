@@ -2,26 +2,38 @@ tools-settings-settings-title:
   ru: Настройки
   en: Settings
   hy: Կարգավորումներ
+  it: Impostazioni
+  es: Ajustes
 tools-settings-data-title:
   ru: Редактор
   en: Editor
   hy: Խմբագիր
+  it: Editor
+  es: Editor
 tools-settings-buttons-save:
   ru: Сохранить
   en: Save
   hy: Պահպանել
+  it: Salva
+  es: Guardar
 tools-settings-contextmenu-delete:
   ru: Удалить настройку
   en: Remove setting
   hy: Հեռացնել կարգավորումը
+  it: Rimuovi impostazione
+  es: Eliminar ajuste
 tools-settings-description-title:
   ru: Описание настройки
   en: Setting description
   hy: Կարգավորման նկարագրություն
+  it: Descrizione dell'impostazione
+  es: Descripción del ajuste
 tools-settings-value-title:
   ru: Значение
   en: Setting value
   hy: Արժեքի կարգավորում
+  it: Valore dell'impostazione
+  es: Valor del ajuste
 tools-settings-settings-canchange:
   ru: Список настроек может быть изменен только в локальном режиме, пожалуйста,
     обратитесь к администратору
@@ -29,3 +41,7 @@ tools-settings-settings-canchange:
     administrator
   hy: Կարգավորումների ցանկը կարող է փոխվել միայն տեղական ռեժիմում, խնդրում ենք
     դիմել ձեր ադմինիստրատորին
+  it: L'elenco delle impostazioni può essere modificato solo in modalità locale,
+    contattare l'amministratore
+  es: La lista de ajustes solo se puede cambiar en modo local, por favor contacte
+    con su administrador

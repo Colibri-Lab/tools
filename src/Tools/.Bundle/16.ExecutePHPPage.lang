@@ -2,14 +2,20 @@ tools-execute-run-title:
   ru: Запуск скрипта
   en: Script execution
   hy: Սցենարի կատարում
+  it: Esecuzione script
+  es: Ejecución de script
 tools-execute-run:
   ru: Запустить скрипт
   en: Run the script
   hy: Գործարկեք սցենարը
+  it: Esegui lo script
+  es: Ejecutar script
 tools-execute-kill:
   ru: Остановить исполнение
   en: Stop the script
   hy: Դադարեցրեք սցենարը
+  it: Arresta lo script
+  es: Detener script
 tools-execute-create-info:
   ru: Внимание! Скрипт исполняется в окружении всего проекта, возможны необратимые
     последствия, пожалуйста, будьте осторожны
@@ -17,15 +23,25 @@ tools-execute-create-info:
     irreversible consequences are possible, please be careful
   hy: Ուշադրություն. Սցենարը կատարվում է ողջ նախագծի միջավայրում, հնարավոր են
     անդառնալի հետևանքներ, խնդրում եմ զգույշ լինել
+  it: Attenzione! Lo script viene eseguito nell'ambiente dell'intero progetto, sono
+    possibili conseguenze irreversibili, si prega di fare attenzione
+  es: ¡Atención! El script se ejecuta en el entorno de todo el proyecto, son posibles
+    consecuencias irreversibles, por favor tenga cuidado
 tools-execute-script-title:
   ru: Скрипт к исполнению
   en: Script to be executed
   hy: Սցենար, որը պետք է կատարվի
+  it: Script da eseguire
+  es: Script a ejecutar
 tools-execute-run-success:
   ru: Скрипт запущен успешно
   en: Script runned successfuly
   hy: Սցենարը հաջողությամբ գործարկվեց
+  it: Script eseguito con successo
+  es: Script ejecutado con éxito
 tools-execute-killed-success:
   ru: Скрипт остановлен успешно
   en: Script stopped successfuly
   hy: Սցենարը հաջողությամբ դադարեցվեց
+  it: Script arrestato con successo
+  es: Script detenido con éxito

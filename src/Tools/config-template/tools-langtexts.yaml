@@ -2,86 +2,128 @@ tools-settings-tree-root:
   ru: Настройки сайта
   en: Site settings
   hy: Կայքի կարգավորումները
+  it: Impostazioni del sito
+  es: Configuración del sitio
 tools-settings-settings-title:
   ru: Настройки
   en: Settings
   hy: Կարգավորումներ
+  it: Impostazioni
+  es: Ajustes
 tools-settings-data-title:
   ru: Редактор
   en: Editor
   hy: Խմբագիր
+  it: Editore
+  es: Editor
 tools-settings-buttons-save:
   ru: Сохранить
   en: Save
   hy: Պահպանել
+  it: Salva
+  es: Guardar
 tools-settings-contextmenu-delete:
   ru: Удалить настройку
   en: Delete a setting
   hy: Ջնջել կարգավորումը
+  it: Elimina l'impostazione
+  es: Eliminar la configuración
 tools-settings-description-title:
   ru: Описание настройки
   en: Description of the setting
   hy: Customization Նկարագրություն
+  it: Descrizione dell'impostazione
+  es: Descripción de la configuración
 tools-settings-value-title:
   ru: Значение
   en: Meaning
   hy: Արժեք
+  it: Significato
+  es: Significado
 tools-settingsdata-settings-title:
   ru: Настройки
   en: Settings
   hy: Կարգավորումներ
+  it: Impostazioni
+  es: Ajustes
 tools-settingsdata-data-title:
   ru: Редактор
   en: Editor
   hy: Խմբագիր
+  it: Editore
+  es: Editor
 tools-settingsdata-buttons-save:
   ru: Сохранить
   en: Save
   hy: Պահպանել
+  it: Salva
+  es: Guardar
 tools-settingsdata-title-nodesc:
   ru: Без описания
   en: Without description
   hy: Առանց նկարագրության
+  it: Senza descrizione
+  es: Sin descripción
 tools-settingsdata-value-title:
   ru: Значение
   en: Meaning
   hy: Արժեք
+  it: Significato
+  es: Significado
 tools-notices-notices-title:
   ru: Сообщения
   en: Messages
   hy: Գրառումներ
+  it: Messaggi
+  es: Mensajes
 tools-notices-date-title:
   ru: Редактор
   en: Editor
   hy: Խմբագիր
+  it: Editore
+  es: Editor
 tools-notices-buttons-save:
   ru: Сохранить
   en: Save
   hy: Պահպանել
+  it: Salva
+  es: Guardar
 tools-notices-fields-nodesc:
   ru: Без темы
   en: Without a topic
   hy: Առանց թեմայի
+  it: Senza argomento
+  es: Sin tema
 tools-notices-fields-desc:
   ru: Наименование
   en: Name
   hy: Անվանում
+  it: Nome
+  es: Nombre
 tools-notices-fields-desc-note:
   ru: Введите наименование темы. Латинские буквы без спец-символов
   en: Enter the name of the topic. Latin letters without special characters
   hy: "Մուտքագրեք թեմայի անվանումը: Լատինական տառեր առանց հատուկ նիշերի"
+  it: Inserisci il nome dell'argomento. Lettere latine senza caratteri speciali
+  es: Ingrese el nombre del tema. Letras latinas sin caracteres especiales
 tools-notices-fields-subject:
   ru: Тема письма
   en: Subject of the letter
   hy: Նամակի թեման
+  it: Argomento della lettera
+  es: Tema de la carta
 tools-notices-fields-subject-note:
   ru: Введите тему письма
   en: Enter the subject of the email
   hy: Մուտքագրեք նամակի թեման
+  it: Inserisci l'argomento della lettera
+  es: Ingrese el tema del correo
 tools-notices-fields-body:
   ru: Тело письма
   en: The body of the letter
   hy: Նամակի մարմինը
+  it: Il corpo della lettera
+  es: El cuerpo de la carta
 tools-notices-fields-body-note:
   ru: Введите тело письма. Допускаются вставки вида [[name]] в качестве переменных
     шаблона
@@ -89,18 +131,28 @@ tools-notices-fields-body-note:
     variables are allowed
   hy: "Մուտքագրեք նամակի մարմինը: Թույլատրվում է տեղադրել տեսակի [[name]] որպես
     Կաղապար փոփոխականների"
+  it: Inserisci il corpo della lettera. Sono ammessi inserimenti del tipo [[name]]
+    come variabili di modello
+  es: Ingrese el cuerpo del correo. Se permiten inserciones del tipo [[name]] como
+    variables de plantilla
 tools-notices-contextmenu-newnotice:
   ru: Создать шаблон
   en: Create a template
   hy: Ստեղծել ձեւանմուշ
+  it: Creare un modello
+  es: Crear una plantilla
 tools-notices-contextmenu-deletenotice:
   ru: Удалить шаблон
   en: Delete a template
   hy: Հեռացնել Կաղապար
+  it: Elimina il modello
+  es: Eliminar la plantilla
 tools-menu-settings-data:
   hy: Կարգավորումներ
   ru: Настройки
   en: Settings
+  it: Impostazioni
+  es: Ajustes
 tools-menu-settings-data-desc:
   hy: Կայքի կարգավորումները < br />Այստեղ կարող եք խմբագրել որոշ կարգավորումներ,
     որոնք նախապես ստեղծվել են մենեջերի կողմից կարգավորումների մենեջերում
@@ -108,10 +160,16 @@ tools-menu-settings-data-desc:
     предварительно созданные менеджером в менеджере настроек
   en: Site Settings<br />Here you can edit some settings previously created by the
     manager in the settings manager
+  it: Impostazioni del sito<br />Qui puoi modificare alcune impostazioni precedentemente
+    create dal manager nel gestore delle impostazioni
+  es: Ajustes del sitio<br />Aquí puedes editar algunas configuraciones creadas
+    previamente por el administrador en el administrador de configuraciones
 tools-menu-filesondisk:
   hy: Ֆայլեր սկավառակի վրա
   ru: Файлы на диске
   en: Files on disk
+  it: File sul disco
+  es: Archivos en el disco
 tools-menu-filesondisk-desc:
   hy: "Ֆայլերը գտնվում են ընթացիկ սերվերի վրա, տեղական մեքենայի վրա: Դուք կարող եք
     ավելացնել կամ ջնջել անցանկալի ֆայլեր. Ուշադրություն! Երբ դուք հեռացնել
@@ -123,20 +181,35 @@ tools-menu-filesondisk-desc:
   en: Files located on the current server, on the local machine. You can add or
     delete unnecessary files. Attention! When deleting files, you need to take
     into account that some lines in the repositories may refer to them
+  it: File situati sul server corrente, sulla macchina locale. Puoi aggiungere
+    o eliminare file non necessari. Attenzione! Quando si eliminano i file, è
+    necessario tenere conto che alcune righe nei repository possono fare riferimento
+    ad essi
+  es: Archivos ubicados en el servidor actual, en la máquina local. Puede agregar
+    o eliminar archivos innecesarios. ¡Atención! Al eliminar archivos, es necesario
+    tener en cuenta que algunas líneas en los repositorios pueden hacer referencia
+    a ellos
 tools-menu-filesremote:
   hy: Մեդիա շտեմարան
   ru: Хранилище медиа
   en: Media Storage
+  it: Archivio multimediale
+  es: Almacenamiento de medios
 tools-menu-filesremote-desc:
   hy: Հեռավոր ֆայլի գրադարան. Դուք կարող եք ավելացնել զամբյուղներ (bucket) եւ/կամ
     մաքրել դրանք անհրաժեշտության դեպքում
   ru: Удаленная библиотека файлов. Можно добавить корзины(bucket) и/или очистить
     их при необходимости
   en: Remote file library. You can add buckets and/or empty them if necessary
+  it: Libreria file remota. Puoi aggiungere bucket e/o svuotarli se necessario
+  es: Biblioteca de archivos remotos. Puede agregar buckets y/o vaciarlos si es
+    necesario
 tools-menu-settings:
   hy: Կայքի կարգավորումները
   ru: Настройки сайта
   en: Site Settings
+  it: Impostazioni del sito
+  es: Ajustes del sitio
 tools-menu-settings-desc:
   hy: Կարգավորումների մենեջեր. Դուք կարող եք ստեղծել մի կարգավորում, որը
     հետագայում օգտագործվում է նախագծման կամ դուրսբերման տեղեկատվության վրա
@@ -145,20 +218,30 @@ tools-menu-settings-desc:
     использовать при разработке или выводе информации на проекте
   en: Settings manager. You can create a setting that can be used later in the
     development or output of information on the project
+  it: Gestore delle impostazioni. Puoi creare un'impostazione che può essere utilizzata
+    successivamente nello sviluppo o nell'output di informazioni sul progetto
+  es: Administrador de configuraciones. Puede crear una configuración que se puede
+    utilizar más tarde en el desarrollo o en la salida de información en el proyecto
 tools-menu-notices:
   hy: Հաղորդագրությունների կաղապարներ
   ru: Шаблоны сообщений
   en: Message Templates
+  it: Modelli di messaggi
+  es: Plantillas de mensajes
 tools-menu-notices-desc:
   hy: Ստեղծել հաղորդագրությունների կաղապարներ, էլեկտրոնային փոստի միջոցով
     օգտագործողի հետ հաղորդակցվելու համար
   ru: Создайте шаблоны сообщений для общения с пользователем посредством
     электронной почты
   en: Create message templates for communicating with the user via email
+  it: Crea modelli di messaggi per comunicare con l'utente tramite e-mail
+  es: Cree plantillas de mensajes para comunicarse con el usuario por correo electrónico
 tools-menu-backups:
   hy: Կույր համակարգ
   ru: Слепки системы
   en: System snapshots
+  it: Snapshot di sistema
+  es: Instantáneas del sistema
 tools-menu-backups-desc:
   hy: "Ստեղծեք վերականգնման կետ կրիտիկական իրավիճակների դեպքում: Հետագայում
     հնարավոր կլինի տվյալները վերադարձնել ստացված ֆայլից"
@@ -166,10 +249,16 @@ tools-menu-backups-desc:
     можно будет вернуть данные из полученного файла
   en: Create a recovery point in case of critical situations. In the future, it
     will be possible to return data from the received file
+  it: Crea un punto di ripristino in caso di situazioni critiche. In futuro sarà
+    possibile restituire i dati dal file ricevuto
+  es: Cree un punto de restauración en caso de situaciones críticas. En el futuro,
+    será posible devolver los datos del archivo recibido
 tools-menu-execute:
   hy: Կատարել
   ru: Выполнить
   en: Execute
+  it: Eseguire
+  es: Ejecutar
 tools-menu-execute-desc:
   hy: Կատարել կոդը (PHP). Ուշադրություն! Կոդը կատարվում է շրջապատված է ամբողջ
     նախագծի, հնարավոր անդառնալի վնաս.
@@ -177,10 +266,16 @@ tools-menu-execute-desc:
     возможны необратимые повреждения!
   en: Execute the code (PHP). Attention! The code is executed in the environment
     of the entire project, irreversible damage is possible!
+  it: Esegui il codice (PHP). Attenzione! Il codice viene eseguito nell'ambiente
+    dell'intero progetto, danni irreversibili sono possibili!
+  es: Ejecute el código (PHP). ¡Atención! El código se ejecuta en el entorno de
+    todo el proyecto, es posible un daño irreversible!
 tools-menu-themes:
   hy: Կայքի թեմաներ
   ru: Темы сайта
   en: Site Themes
+  it: Temi del sito
+  es: Temas del sitio
 tools-menu-themes-desc:
   hy: Կարգավորել տեսքը կայքում. Դուք կարող եք ստեղծել նոր թեմա, կամ խմբագրել
     գոյություն ունեցող
@@ -188,10 +283,15 @@ tools-menu-themes-desc:
     существующую
   en: Customize the appearance of the site. You can create a new theme, or edit an
     existing one
+  it: Personalizza l'aspetto del sito. Puoi creare un nuovo tema o modificare uno
+    esistente
+  es: Personalice la apariencia del sitio. Puede crear un nuevo tema o editar uno
+    existente
 tools-backup-create:
   ru: Создать слепок
   en: Create an impression
   hy: Ստեղծել կույր
+  it: Creare un'immagine
 tools-backup-create-info:
   ru: Нажмите на кнопку «создать слепок» и дождитесь окончания процесса. После
     завершения в списке слепкой внизу этой страницы появится новый пункт
@@ -201,210 +301,320 @@ tools-backup-create-info:
     a cast at the bottom of this page
   hy: 'Սեղմիր "Ստեղծել կույր" կոճակը եւ սպասեք գործընթացի ավարտին: Ցուցակի ավարտից
     հետո այս էջի ներքեւի մասում կույրով կհայտնվի նոր կետ, որը նշված է ամսաթվով'
+  it: Fare clic sul pulsante "crea un cast" e attendere il completamento del processo.
+    Dopo il completamento, un nuovo elemento contrassegnato con una data apparirà
+    nell'elenco con un cast in fondo a questa pagina
+  es: Haga clic en el botón "crear una copia" y espere a que termine el proceso.
+    Después de la finalización, aparecerá un nuevo elemento marcado con una fecha
+    en la lista con una copia en la parte inferior de esta página
 tools-backups-dataempty:
   ru: Слепки не найдены
   en: No restore points found
   hy: Վերականգնման կետեր չեն գտնվել
+  it: Nessun punto di ripristino trovato
+  es: No se encontraron puntos de restauración
 tools-backups-points-name:
   ru: Наименование
   en: Name
   hy: Անունը
+  it: Nome
+  es: Nombre
 tools-backups-points-created:
   ru: Создана
   en: Created
   hy: Ստեղծվել է
+  it: Creato
+  es: Creado
 tools-backups-points-size:
   ru: Размер файла
   en: File Size
   hy: Ֆայլի չափը
+  it: Dimensione del file
+  es: Tamaño del archivo
 tools-backups-create-title:
   ru: Создание слепка системы
   en: Creating an impression of the system
   hy: Ստեղծելով համակարգի փորձը
+  it: Creare un'impressione del sistema
+  es: Creando una impresión del sistema
 tools-backups-points-title:
   ru: Список созданных слепков/заданий
   en: List of created casts/tasks
   hy: Ստեղծված կաղապարների/խնդիրների ցանկ
+  it: Elenco dei cast/compiti creati
+  es: Lista de copias/tareas creadas
 tools-backups-points-status:
   ru: Статус
   en: Status
   hy: Կարգավիճակ
+  it: Stato
+  es: Estado
 tools-backup-create-schedule:
   ru: Создать/Изменить задание
   en: To create/Edit a task
   hy: Ստեղծել / փոխել խնդիրը
+  it: Creare/Modificare un'attività
+  es: Crear/Editar una tarea
 tools-storages-backups-desc:
   ru: Точки восстановления
   en: Recovery Points
   hy: Վերականգնման կետերը
+  it: Punti di ripristino
+  es: Puntos de recuperación
 tools-storages-backups-fields-name-desc:
   ru: Наименование
   en: Name
   hy: Անվանում
+  it: Nome
+  es: Nombre
 tools-storages-backups-fields-name-note:
   ru: Введите название задание на создание точки восстановления
   en: Enter the name of the task to create a recovery point
   hy: Մուտքագրեք կոչում խնդիրն է ստեղծել վերականգնման կետ
+  it: Inserisci il nome dell'attività per creare un punto di ripristino
+  es: Ingrese el nombre de la tarea para crear un punto de recuperación
 tools-storages-backups-fields-cron-desc:
   ru: Запись в CRON
   en: Writing to CRON
   hy: Գրառումը CRON-ում
+  it: Scrittura in CRON
+  es: Escribir en CRON
 tools-storages-backups-fields-cron-note:
   ru: Введите запись, которую нужно будет внести в CRON
   en: Enter the entry that you will need to make in CRON
   hy: Մուտքագրեք գրառումը, որը պետք է կատարվի CRON-ում
+  it: Inserisci la voce che dovrai inserire in CRON
+  es: Ingrese la entrada que deberá hacer en CRON
 tools-storages-backups-fields-cron-minute-desc:
   ru: Минута
   en: Minute
   hy: Րոպե
+  it: Minuto
+  es: Minuto
 tools-storages-backups-fields-cron-minute-note:
   ru: Выберите минуту
   en: Choose a minute
   hy: Ընտրեք րոպե
+  it: Scegli un minuto
+  es: Elija un minuto
 tools-storages-backups-fields-cron-hour-desc:
   ru: Час
   en: Hour
   hy: Ժամ
+  it: Ora
+  es: Hora
 tools-storages-backups-fields-cron-hour-note:
   ru: Выберите час
   en: Choose an hour
   hy: Ընտրեք ժամ
+  it: Scegli un'ora
+  es: Elija una hora
 tools-storages-backups-fields-cron-day-desc:
   ru: День
   en: Day
   hy: Օր
+  it: Giorno
+  es: Día
 tools-storages-backups-fields-cron-day-note:
   ru: Выберите день
   en: Choose a day
   hy: Ընտրեք օրը
+  it: Scegli un giorno
+  es: Elija un día
 tools-storages-backups-fields-cron-month-desc:
   ru: Месяц
   en: Month
   hy: Ամիս
+  it: Mese
+  es: Mes
 tools-storages-backups-fields-cron-month-note:
   ru: Выберите месяц
   en: Choose a month
   hy: Ընտրել ամիս
+  it: Scegli un mese
+  es: Elija un mes
 tools-storages-backups-fields-cron-dayofweek-desc:
   ru: День недели
   en: Day of the week
   hy: Շաբաթվա օր
+  it: Giorno della settimana
+  es: Día de la semana
 tools-storages-backups-fields-cron-dayofweek-note:
   ru: Выберите день недели
   en: Choose a day of the week
   hy: Ընտրեք օրը շաբաթվա
+  it: Scegli un giorno della settimana
+  es: Elija un día de la semana
 tools-storages-backups-fields-file-desc:
   ru: Шаблон названия файла
   en: File name template
   hy: Ֆայլի անվանումը Կաղապար
+  it: Modello di nome file
+  es: Plantilla de nombre de archivo
 tools-storages-backups-fields-file-note:
   ru: Введите шаблон названия файла, например backup_{date}_{index}.backup
   en: Enter a template for the file name, for example backup_{date}_{index}.backup
   hy: Մուտքագրեք ֆայլի անունը Կաղապար, օրինակ backup_ {date}_{index}.backup
+  it: Inserisci un modello per il nome del file, ad esempio backup_{date}_{index}.backup
+  es: Ingrese una plantilla para el nombre del archivo, por ejemplo backup_{date}_{index}.backup
 tools-backups-windowtitle-editbackup:
   ru: Редактировать задание
   en: Edit a task
   hy: Խմբագրել առաջադրանքը
+  it: Modificare un'attività
+  es: Editar una tarea
 tools-backups-windowtitle-newbackup:
   ru: Новое задание
   en: New task
   hy: Նոր առաջադրանք
+  it: Nuova attività
+  es: Nueva tarea
 tools-backups-points-cron:
   ru: Планировщик
   en: Scheduler
   hy: Պլանավորող
+  it: Pianificatore
+  es: Programador
 tools-backups-contextmenu-edit:
   ru: Редактировать
   en: Edit
   hy: Խմբագրել
+  it: Modificare
+  es: Editar
 tools-backups-contextmenu-delete:
   ru: Удалить
   en: Remove
   hy: Ջնջել
+  it: Rimuovere
+  es: Eliminar
 tools-storages-backups-fields-status-desc:
   ru: Статус
   en: Status
   hy: Կարգավիճակ
+  it: Stato
+  es: Estado
 tools-storages-backups-fields-status-values-created:
   ru: Создано/Не выполнялось
   en: Created/Was not executed
   hy: Ստեղծվել/չի կատարվել
+  it: Creato/Non eseguito
+  es: Creado/No ejecutado
 tools-storages-backups-fields-status-values-complete:
   ru: Выполнилось
   en: Completed
   hy: Կատարվել է
+  it: Completato
+  es: Completado
 tools-storages-backups-fields-status-values-working:
   ru: Выполняется
   en: In progress
   hy: Կատարվում է
+  it: In corso
+  es: En progreso
 tools-storages-backups-fields-status-values-error:
   ru: Ошибка
   en: Mistake
   hy: Սխալ
+  it: Errore
+  es: Error
 tools-storages-backups-fields-cron-dayofweek-values-0:
   ru: Воскресенье
   en: Sunday
   hy: Կիրակի
+  it: Domenica
+  es: Domingo
 tools-storages-backups-fields-cron-dayofweek-values-1:
   ru: Понедельник
   en: Monday
   hy: Երկուշաբթի
+  it: Lunedì
+  es: Lunes
 tools-storages-backups-fields-cron-dayofweek-values-2:
   ru: Вторник
   en: Tuesday
   hy: Երեքշաբթի
+  it: Martedì
+  es: Martes
 tools-storages-backups-fields-cron-dayofweek-values-3:
   ru: Среда
   en: Wednesday
   hy: Չորեքշաբթի
+  it: Mercoledì
+  es: Miércoles
 tools-storages-backups-fields-cron-dayofweek-values-4:
   ru: Четверг
   en: Thursday
   hy: Հինգշաբթի
+  it: Giovedì
+  es: Jueves
 tools-storages-backups-fields-cron-dayofweek-values-5:
   ru: Пятница
   en: Friday
   hy: Ուրբաթ
+  it: Venerdì
+  es: Viernes
 tools-storages-backups-fields-cron-dayofweek-values-6:
   ru: Суббота
   en: Saturday
   hy: Շաբաթ
+  it: Sabato
+  es: Sábado
 tools-backups-deletedata1:
   ru: Удаление точки восстановления
   en: Deleting a Restore Point
   hy: Ջնջեք վերականգնման կետը
+  it: Eliminazione di un punto di ripristino
+  es: Eliminación de un punto de restauración
 tools-backups-deletedata1message:
   ru: Вы уверены, что хотите удалить выбранную строку?
   en: Are you sure you want to delete the selected row?
   hy: "Վստահ եք, որ ցանկանում եք ջնջել ընտրված գիծը:"
+  it: Sei sicuro di voler eliminare la riga selezionata?
+  es: ¿Está seguro de que desea eliminar la fila seleccionada?
 tools-backups-points-running:
   ru: Работает
   en: Works
   hy: Աշխատում է
+  it: Funziona
+  es: Funciona
 tools-storages-backups-fields-status-values-paused:
   ru: Остановлено
   en: Stopped
   hy: Դադարեցված է
+  it: Fermato
+  es: Detenido
 tools-storages-backups-fields-status-values-started:
   ru: Включено
   en: Enabled
   hy: Ներառված
+  it: Abilitato
+  es: Habilitado
 tools-storages-backups-fields-running-desc:
   ru: Запущено
   en: Launched
   hy: Մեկնարկել է
+  it: Lanciato
+  es: Lanzado
 tools-execute-run-title:
   ru: Запуск скрипта
   en: Running the script
   hy: Սցենարի մեկնարկը
+  it: Esecuzione dello script
+  es: Ejecutando el script
 tools-execute-run:
   ru: Запустить скрипт
   en: Run the script
   hy: Գործարկել սցենար
+  it: Esegui lo script
+  es: Ejecutar el script
 tools-execute-script-title:
   ru: Скрипт к исполнению
   en: Script to execute
   hy: Կատարման սցենար
+  it: Script da eseguire
+  es: Script para ejecutar
+
+
 tools-execute-create-info:
   ru: >-
     Внимание! Скрипт исполняется в окружении всего проекта, возможны необратимые
@@ -420,171 +630,263 @@ tools-execute-create-info:
     Ուշադրություն! Script կատարվում շրջապատված է ամբողջ ծրագրի, հնարավոր
     անդառնալի հետեւանքներ, խնդրում ենք զգույշ լինել: 
 
-    Օգտագօրծեք Logger $logger էկրանին ինֆօրմացյա ցույց տալու համար, օրինակ: $logger->debug('Տեստաին նամակ');
+    Օգտագօրծեք Logger $logger էկրանին ինֆօրմացյա ցույց տալու համար, օրինակ: $logger->debug('Տեստաին նամակ');\
+  it: >-
+    Attenzione! Lo script viene eseguito nell'ambiente dell'intero progetto, sono
+    possibili conseguenze irreversibili, si prega di fare attenzione 
+
+    Utilizzare Logger $logger per inviare informazioni al client, ad esempio: $logger->debug('Messaggio di prova');
+  es: >-
+    ¡Atención! El script se ejecuta en el entorno de todo el proyecto, son posibles
+    consecuencias irreversibles, por favor tenga cuidado 
+
+    Utilice Logger $logger para enviar información al cliente, por ejemplo: $logger->debug('Mensaje de prueba');
 tools-execute-run-success:
   ru: Скрипт запущен успешно
   en: The script was launched successfully
   hy: Սցենարը հաջողությամբ գործարկվեց
+  it: Lo script è stato lanciato con successo
+  es: El script se lanzó con éxito
 tools-execute-kill:
   ru: Остановить исполнение
   en: Stop execution
   hy: Դադարեցնել կատարումը
+  it: Interrompi l'esecuzione
+  es: Detener la ejecución
 tools-execute-killed-success:
   ru: Скрипт остановлен успешно
-  en: Execution is stopped successfuly
+  en: Execution is stopped successfully
   hy: Կատարումը կանգնացվաց է
+  it: L'esecuzione è stata interrotta con successo
+  es: La ejecución se detuvo con éxito
 tools-backups-points-file:
   ru: Шаблон названия файла
   en: File name template
   hy: Ֆայլի անվանումը Կաղապար
+  it: Modello di nome file
+  es: Plantilla de nombre de archivo
 tools-thtmes-themes-title:
   ru: Сообщения
   en: Messages
   hy: Գրառումներ
+  it: Messaggi
+  es: Mensajes
 tools-themes-vars-title:
   ru: Переменные
   en: Variables
   hy: Փոփոխականներ
+  it: Variabili
+  es: Variables
 tools-themes-vars-search-placeholder:
   ru: Поиск
   en: Search
   hy: '"ՍԻՍ" ՍՊԸ'
+  it: Cerca
+  es: Buscar
 tools-themes-varsempty:
   ru: Переменных не найдено
   en: No variables found
   hy: Փոփոխականներ չեն գտնվել
+  it: Nessuna variabile trovata
+  es: No se encontraron variables
 tools-themes-vars-grid-name:
   ru: Переменная
   en: Variable
   hy: Փոփոխական
+  it: Variabile
+  es: Variable
 tools-themes-vars-grid-value:
   ru: Значение
   en: Meaning
   hy: Արժեք
+  it: Significato
+  es: Significado
 tools-themes-vars-buttons-adddata:
   ru: Добавить
   en: Add
   hy: Ավելացնել
+  it: Aggiungi
+  es: Añadir
 tools-themes-vars-buttons-editdata:
   ru: Редактировать
   en: Edit
   hy: Խմբագրել
+  it: Modifica
+  es: Editar
 tools-themes-vars-buttons-deletedata:
   ru: Удалить
   en: Remove
   hy: Ջնջել
+  it: Rimuovi
+  es: Eliminar
 tools-themes-mixins-title:
   ru: Mixin-ы
   en: Mixins
   hy: Mixin-ներ
+  it: Mixins
+  es: Mixins
 tools-themes-mixins-search-placeholder:
   ru: Поиск
   en: Search
   hy: '"ՍԻՍ" ՍՊԸ'
+  it: Cerca
+  es: Buscar
 tools-themes-mixinsempty:
   ru: Mixin-ов не найдено
   en: Mixins not found
   hy: Mixin-ներ չեն գտնվել
+  it: Nessun mixin trovato
+  es: No se encontraron mixins
 tools-themes-mixins-grid-name:
   ru: Переменная
   en: Variable
   hy: Փոփոխական
+  it: Variabile
+  es: Variable
 tools-themes-mixins-grid-value:
   ru: Значение
   en: Meaning
   hy: Արժեք
+  it: Significato
+  es: Significado
 tools-themes-mixins-buttons-adddata:
   ru: Добавить
   en: Add
   hy: Ավելացնել
+  it: Aggiungi
+  es: Añadir
 tools-themes-mixins-buttons-editdata:
   ru: Редактировать
   en: Edit
   hy: Խմբագրել
+  it: Modifica
+  es: Editar
 tools-themes-mixins-buttons-deletedata:
   ru: Удалить
   en: Remove
   hy: Ջնջել
+  it: Rimuovi
+  es: Eliminar
 tools-storages-themes-desc:
   ru: Темы
   en: Themes
   hy: Թեմաներ
+  it: Temi
+  es: Temas
 tools-storages-themes-fields-name-desc:
   ru: Наименование
   en: Name
   hy: Անվանում
+  it: Nome
+  es: Nombre
 tools-storages-themes-fields-domain-desc:
   ru: Ключ домена
   en: Domain Key
   hy: Դոմեյն բանալին
+  it: Chiave del dominio
+  es: Clave del dominio
 tools-storages-themes-fields-domain-note:
   ru: Выберите ключ домена
   en: Select the domain key
   hy: Ընտրեք դոմեյն բանալին
+  it: Seleziona la chiave del dominio
+  es: Seleccione la clave del dominio
 tools-storages-themes-fields-vars-desc:
   ru: Переменные
   en: Variables
   hy: Փոփոխականներ
+  it: Variabili
+  es: Variables
 tools-storages-themes-fields-vars-name-desc:
   ru: Название переменной
   en: Variable name
   hy: Փոփոխական անունը
+  it: Nome della variabile
+  es: Nombre de la variable
 tools-storages-themes-fields-vars-type-desc:
   ru: Тип переменной
   en: Type of variable
   hy: Փոփոխական տեսակը
+  it: Tipo di variabile
+  es: Tipo de variable
 tools-storages-themes-fields-vars-type-values-color:
   ru: Цвет
   en: Colour
   hy: Գույն
+  it: Colore
+  es: Color
 tools-storages-themes-fields-vars-type-values-font-face:
   ru: Название шрифта
   en: Font name
   hy: Տառատեսակի անվանումը
+  it: Nome del carattere
+  es: Nombre de la fuente
 tools-storages-themes-fields-vars-type-values-size:
   ru: Размер
   en: Size
   hy: Չափ
+  it: Dimensione
+  es: Tamaño
 tools-storages-themes-fields-vars-type-values-image:
   ru: Изoбражение
   en: Image
   hy: Նկար
+  it: Immagine
+  es: Imagen
 tools-storages-themes-fields-vars-type-values-border:
   ru: Рамка
   en: Frame
   hy: Շրջանակ
+  it: Cornice
+  es: Marco
 tools-storages-themes-fields-vars-type-values-shadow:
   ru: Тень
   en: Shadow
   hy: Ստվեր
+  it: Ombra
+  es: Sombra
 tools-storages-themes-fields-vars-value-desc:
   ru: Значение
   en: Meaning
   hy: Արժեք
+  it: Significato
+  es: Significado
 tools-storages-themes-fields-mixins-desc:
   ru: Mixin-ы
   en: Mixins
   hy: Mixin-ներ
+  it: Mixins
+  es: Mixins
 tools-storages-themes-fields-mixins-name-desc:
   ru: Наименование
   en: Name
   hy: Անվանում
+  it: Nome
+  es: Nombre
 tools-storages-themes-fields-mixins-params-desc:
   ru: Параметры
   en: Parameters
   hy: Պարամետրեր
+  it: Parametri
+  es: Parámetros
 tools-storages-themes-fields-mixins-params-name-desc:
   ru: Название параметра
   en: Name of the parameter
   hy: Պարամետր անունը
+  it: Nome del parametro
+  es: Nombre del parámetro
 tools-storages-themes-fields-mixins-value-desc:
   ru: Тело
   en: Body
   hy: Մարմին
+  it: Corpo
+  es: Cuerpo
 tools-themes-deletetheme:
   ru: Удаление темы
   en: Deleting a topic
   hy: Թեմայի հեռացում
+  it: Eliminazione di un tema
+  es: Eliminación de un tema
 tools-themes-deletethememessage:
   ru: Вы уверены, что хотите удалить тему? На сайтах привязанных к этой теме могут
     возникнуть артефакты
@@ -592,151 +894,230 @@ tools-themes-deletethememessage:
     linked to this topic
   hy: "Համոզված եք, որ ցանկանում եք ջնջել թեման: Այս թեմային առնչվող կայքերում
     կարող են առաջանալ արտեֆակտներ"
+  it: Sei sicuro di voler eliminare il tema? Possono verificarsi artefatti sui siti collegati a questo tema
+  es: ¿Está seguro de que desea eliminar el tema? Pueden ocurrir artefactos en los sitios vinculados a este tema
 tools-storages-themes-fields-vars-type-values-font-family:
   ru: Название шрифта
   en: Font name
   hy: Տառատեսակի անվանումը
+  it: Nome del carattere
+  es: Nombre de la fuente
 tools-themes-windowtitle-addvartitle:
   ru: Добавить переменную
   en: Add a variable
   hy: Ավելացնել փոփոխական
+  it: Aggiungi una variabile
+  es: Añadir una variable
 tools-themes-deletevar:
   ru: Удаление переменной
   en: Deleting a variable
   hy: Փոփոխական հեռացում
+  it: Eliminazione di una variabile
+  es: Eliminación de una variable
 tools-themes-deletevarmessage:
   ru: Вы уверены, что хотите удалить переменную?
   en: Are you sure you want to delete the variable?
   hy: Վստահ եք, որ ցանկանում եք հեռացնել փոփոխական?
+  it: Sei sicuro di voler eliminare la variabile?
+  es: ¿Está seguro de que desea eliminar la variable?
 tools-themes-deletevars:
   ru: Удаление переменных
   en: Deleting variables
   hy: Փոփոխականների հեռացում
+  it: Eliminazione di variabili
+  es: Eliminación de variables
 tools-themes-deletevarsmessage:
   ru: Вы уверены, что хотите удалить переменные?
   en: Are you sure you want to delete variables?
   hy: "Համոզված եք, որ ցանկանում եք հեռացնել փոփոխականները:"
+  it: Sei sicuro di voler eliminare le variabili?
+  es: ¿Está seguro de que desea eliminar las variables?
 tools-themes-windowtitle-editvartitle:
   ru: Редактировать переменную
   en: Edit a variable
   hy: Խմբագրել փոփոխական
+  it: Modifica una variabile
+  es: Editar una variable
 tools-themes-windowtitle-addmixintitle:
   ru: Добавить Mixin
   en: Add Mixin
   hy: Ավելացնել Mixin
+  it: Aggiungi Mixin
+  es: Añadir Mixin
+
+
+
 tools-themes-windowtitle-editmixintitle:
   ru: Редактировать Mixin
   en: Edit Mixin
   hy: Խմբագրել Mixin
+  it: Modifica Mixin
+  es: Editar Mixin
 tools-themes-deletemixins:
   ru: Удаление Mixin-ов
   en: Removing Mixins
   hy: Mixin-երի հեռացում
+  it: Rimozione di Mixins
+  es: Eliminación de Mixins
 tools-themes-deletemixinsmessage:
   ru: Вы уверены, что хотите удалить Mixin-ы?
   en: Are you sure you want to delete Mixins?
   hy: "Համոզված եք, որ ցանկանում եք ջնջել Mixin-ները:"
+  it: Sei sicuro di voler eliminare i Mixins?
+  es: ¿Está seguro de que desea eliminar los Mixins?
 tools-themes-deletemixin:
   ru: Удаление Mixin-а
   en: Deleting a Mixin
   hy: Հեռացում Mixin-a
+  it: Eliminazione di un Mixin
+  es: Eliminación de un Mixin
 tools-themes-deletemixinmessage:
   ru: Вы уверены, что хотите удалить Mixin?
   en: Are you sure you want to delete Mixin?
   hy: "Համոզված եք, որ ցանկանում եք ջնջել Mixin-ը:"
+  it: Sei sicuro di voler eliminare il Mixin?
+  es: ¿Está seguro de que desea eliminar el Mixin?
 tools-themes-mixins-grid-params:
   ru: Параметры
   en: Parameters
   hy: Պարամետրեր
+  it: Parametri
+  es: Parámetros
 tools-themes-contextmenu-setcurrent:
   ru: Установить как текущую
   en: Set as current
   hy: Սահմանել որպես ընթացիկ
+  it: Imposta come corrente
+  es: Establecer como actual
 tools-themes-setcurrenttheme:
   ru: Установка
   en: Installation
   hy: Տեղադրում
+  it: Installazione
+  es: Instalación
 tools-themes-setcurrentthememessage:
   ru: Вы уверены, что хотите установить тему как текущую?
   en: Are you sure you want to set the theme as the current one?
   hy: Դուք համոզված եք, որ ցանկանում եք սահմանել այն թեման է ինչպես ընթացիկ?
+  it: Sei sicuro di voler impostare il tema come corrente?
+  es: ¿Está seguro de que desea establecer el tema como el actual?
 tools-storages-themes-fields-current-desc:
   ru: Текущая
   en: Current
   hy: Ընթացիկ
+  it: Corrente
+  es: Actual
 tools-storages-themes-fields-current-note:
   ru: Укажите да, если тема должна быть текущей для домена
   en: Specify yes if the topic should be the current one for the domain
   hy: Նշեք Այո, եթե թեման պետք է լինի ընթացիկ տիրույթում
+  it: Specifica sì se il tema deve essere quello corrente per il dominio
+  es: Especifique sí si el tema debe ser el actual para el dominio
 tools-themes-contextmenu-dublicatetheme:
   ru: Дублировать тему
   en: Duplicate a topic
   hy: Կրկնօրինակել թեման
+  it: Duplica un tema
+  es: Duplicar un tema
 tools-themes-windowtitle-edittheme:
   ru: Редактировать тему
   en: Edit a topic
   hy: Խմբագրել թեման
+  it: Modifica un tema
+  es: Editar un tema
 tools-storages-themes-fields-desc-desc:
   ru: Описание темы
   en: Topic description
   hy: Թեմայի նկարագրությունը
+  it: Descrizione del tema
+  es: Descripción del tema
 tools-permissions:
   ru: Инструменты
   en: Tools
   hy: Գործիքներ
+  it: Strumenti
+  es: Herramientas
 tools-backup-permissions:
   ru: Доступ к системе восстановления
   en: Access to the recovery system
   hy: Մուտք դեպի վերականգնման համակարգ
+  it: Accesso al sistema di recupero
+  es: Acceso al sistema de recuperación
 tools-backup-create-permissions:
   ru: Создание точки восстановления
   en: Create a restore point
   hy: Ստեղծեք վերականգնման կետ
+  it: Crea un punto di ripristino
+  es: Crear un punto de restauración
 tools-backup-restore-permissions:
   ru: Восстановление из точки
   en: Recovery from a point
   hy: Վերականգնում մի կետից
+  it: Recupero da un punto
+  es: Recuperación desde un punto
 tools-execute-permissions:
   ru: Выполнение скриптов
   en: Executing scripts
   hy: Սցենարների կատարում
+  it: Esecuzione di script
+  es: Ejecución de scripts
 tools-settings-permissions:
   ru: Настройки сайта
   en: Site settings
   hy: Կայքի կարգավորումներ
+  it: Impostazioni del sito
+  es: Configuración del sitio
 tools-settings-add-permissions:
   ru: Добавить настройку
   en: Add setting
   hy: Ավելացնել կարգավորում
+  it: Aggiungi impostazione
+  es: Agregar configuración
 tools-settings-edit-permissions:
   ru: Редактировать настройку
   en: Edit setting
   hy: Խմբագրել կարգավորումը
+  it: Modifica impostazione
+  es: Editar configuración
 tools-settings-remove-permissions:
   ru: Удалить настройку
   en: Delete setting
   hy: Ջնջել կարգավորումը
+  it: Elimina impostazione
+  es: Eliminar configuración
 tools-notices-permissions:
   ru: Шаблоны сообщений
   en: Notice templates
   hy: Ծանուցումների ձևանմուշներ
+  it: Modelli di avviso
+  es: Plantillas de avisos
 tools-notices-add-permissions:
   ru: Добавить сообщение
   en: Add notice
   hy: Ավելացնել ծանուցում
+  it: Aggiungi avviso
+  es: Agregar aviso
 tools-notices-edit-permissions:
   ru: Редактировать сообщение
   en: Edit notice
   hy: Խմբագրել ծանուցումը
+  it: Modifica avviso
+  es: Editar aviso
 tools-notices-delete-permissions:
   ru: Удалить сообщение
   en: Delete notice
   hy: Ջնջել ծանուցումը
+  it: Elimina avviso
+  es: Eliminar aviso
 tools-menu-jobs:
   ru: Задания
   en: Jobs & Pipelines
   hy: Առաջադրանքներ
+  it: Compiti e Pipeline
+  es: Trabajos y Pipelines
 tools-menu-jobs-desc:
   ru: Отображает список поставленных задач и обновляет в режиме онлайн
   en: Displays a list of assigned tasks and updates online
   hy: Ցուցադրում է հանձնարարված առաջադրանքների և թարմացումների ցանկը առցանց
+  it: Visualizza un elenco di attività assegnate e aggiornamenti online
+  es: Muestra una lista de tareas asignadas y actualizaciones en línea

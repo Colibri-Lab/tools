@@ -2,10 +2,14 @@ tools-backups-create-title:
   ru: Создание слепка системы
   en: Create a system snapshot
   hy: Ստեղծեք համակարգի պատկեր
+  it: Crea un'immagine di sistema
+  es: Crear una instantánea del sistema
 tools-backup-create:
   ru: Создать слепок
   en: Create a snapshot
   hy: Ստեղծեք լուսանկար
+  it: Crea un'immagine
+  es: Crear una instantánea
 tools-backup-create-info:
   ru: Нажмите на кнопку «создать слепок» и дождитесь окончания процесса. После
     завершения в списке слепкой внизу этой страницы появится новый пункт
@@ -16,59 +20,93 @@ tools-backup-create-info:
   hy: "Կտտացրեք «ստեղծել տպավորություն» կոճակը և սպասեք գործընթացի ավարտին:
     Ավարտելուց հետո ամսաթվով նշված նոր տարրը կհայտնվի այս էջի ներքևում գտնվող
     տպավորությունների ցանկում:"
+  it: Fare clic sul pulsante "crea immagine" e attendere il completamento del processo.
+    Al termine, verrà visualizzato un nuovo elemento contrassegnato con la data
+    nell'elenco delle immagini in basso a questa pagina.
+  es: Haga clic en el botón "crear instantánea" y espere a que finalice el proceso.
+    Cuando se complete, aparecerá un nuevo elemento marcado con la fecha en la
+    lista de instantáneas en la parte inferior de esta página.
 tools-backups-points-title:
   ru: Список созданных слепков
   en: List of created impressions
   hy: Ստեղծված տպավորությունների ցանկ
+  it: Elenco delle immagini create
+  es: Lista de instantáneas creadas
 tools-backups-dataempty:
   ru: Слепки не найдены
   en: Snapshots not found
   hy: Պատկերները չեն գտնվել
+  it: Immagini non trovate
+  es: Instantáneas no encontradas
 tools-backups-points-status:
   ru: Статус
   en: Status
   hy: Կարգավիճակ
+  it: Stato
+  es: Estado
 tools-backups-points-running:
   ru: Работает
   en: Running
   hy: Վազում
+  it: In esecuzione
+  es: En ejecución
 tools-backups-points-name:
   ru: Наименование
   en: Name
   hy: Անուն
+  it: Nome
+  es: Nombre
 tools-backups-points-cron:
   ru: Планировщик
   en: Scheduler
   hy: Ժամանակացույց
+  it: Pianificatore
+  es: Programador
 tools-backups-points-file:
   ru: Шаблон названия файла
   en: File name template
   hy: Ֆայլի անվան ձևանմուշ
+  it: Modello di nome file
+  es: Plantilla de nombre de archivo
 tools-backups-windowtitle-editbackup:
   ru: Редактировать задание
   en: Edit task
   hy: Խմբագրել առաջադրանքը
+  it: Modifica attività
+  es: Editar tarea
 tools-backups-windowtitle-newbackup:
   ru: Новое задание
   en: New task
   hy: Նոր առաջադրանք
+  it: Nuova attività
+  es: Nueva tarea
 tools-backups-contextmenu-edit:
   ru: Редактировать
   en: Edit
   hy: Խմբագրել
+  it: Modifica
+  es: Editar
 tools-backups-contextmenu-delete:
   ru: Удалить
   en: Delete
   hy: Ջնջել
+  it: Elimina
+  es: Eliminar
 tools-backups-deletedata1:
   ru: Удаление точки восстановления
   en: Delete the snapshot
   hy: Ջնջել նկարը
+  it: Elimina l'immagine
+  es: Eliminar instantánea
 tools-backups-deletedata1message:
   ru: Вы уверены, что хотите удалить выбранную строку?
   en: Are you sure you want to delete the selected row?
   hy: "Իսկապե՞ս ուզում եք ջնջել ընտրված տողը:"
+  it: Sei sicuro di voler eliminare la riga selezionata?
+  es: ¿Está seguro de que desea eliminar la fila seleccionada?
 tools-backups-deletedata1message-delete:
   ru: Удалить!
   en: Delete
   hy: Ջնջել
+  it: Elimina
+  es: Eliminar

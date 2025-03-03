@@ -2,19 +2,29 @@ tools-settingsdata-settings-title:
   ru: Настройки
   en: Settings
   hy: Կարգավորումներ
+  it: Impostazioni
+  es: Ajustes
 tools-settingsdata-data-title:
   ru: Редактор
   en: Editor
   hy: Խմբագիր
+  it: Editor
+  es: Editor
 tools-settingsdata-buttons-save:
   ru: Сохранить
   en: Save
   hy: Պահպանել
+  it: Salva
+  es: Guardar
 tools-settingsdata-title-nodesc:
   ru: Без описания
   en: No description
   hy: Նկարագրություն չկա
+  it: Nessuna descrizione
+  es: Sin descripción
 tools-settingsdata-value-title:
   ru: Значение
   en: Value
   hy: Արժեք
+  it: Valore
+  es: Valor

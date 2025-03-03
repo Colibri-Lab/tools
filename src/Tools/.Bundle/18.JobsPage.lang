@@ -2,43 +2,65 @@ tools-jobs-active-jobs-title:
   ru: Активные задачи
   en: Active pipelines
   hy: Ակտիվ առաջադրանքներ
+  it: Pipeline attivi
+  es: Pipelines activos
 tools-jobs-successed-title:
   ru: Успешные задачи (последние 20)
   en: Successed pipelines (last 20)
   hy: Հաջողված առաջադրանքներ (վերջին 20)
+  it: Pipeline riusciti (ultimi 20)
+  es: Pipelines exitosos (últimos 20)
 tools-jobs-errors-title:
   ru: Ошибки (последние 20)
   en: Errors (last 20)
   hy: Սխալներ (վերջին 20)
+  it: Errori (ultimi 20)
+  es: Errores (últimos 20)
 tools-jobs-active-jobs-datecreated:
   ru: Создано
   en: Created
   hy: Ստեղծվել է
+  it: Creato
+  es: Creado
 tools-jobs-active-jobs-datereserved:
   ru: Зарезервировано
   en: Reserved
   hy: Վերապահված
+  it: Riservato
+  es: Reservado
 tools-jobs-active-jobs-reservation_key:
   ru: Ключ
   en: Key
   hy: Բանալի
+  it: Chiave
+  es: Clave
 tools-jobs-active-jobs-queue:
   ru: Поток
   en: Pipeline
   hy: Հոսք
+  it: Pipeline
+  es: Pipeline
 tools-jobs-active-jobs-class:
   ru: Класс
   en: Class
   hy: Դաս
+  it: Classe
+  es: Clase
 tools-jobs-active-jobs-payload_class:
   ru: Класс данных
   en: Payload class
   hy: Տվյալների դաս
+  it: Classe di dati
+  es: Clase de datos
 tools-jobs-active-jobs-attempts:
   ru: Попытки
   en: Attempts
   hy: Փորձեր
+  it: Tentativi
+  es: Intentos
 tools-jobs-active-jobs-parallel:
   ru: Паралельный
   en: Is parallel
   hy: Զուգահեռ
+  it: È parallelo
+  es: Es paralelo

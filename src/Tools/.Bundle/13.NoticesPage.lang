@@ -2,40 +2,77 @@ tools-notices-notices-title:
   ru: Сообщения
   en: Notices
   hy: Ծանուցումներ
+  it: Avvisi
+  es: Notificaciones
 tools-notices-date-title:
   ru: Редактор
   en: Editor
   hy: Խմբագիր
+  it: Editor
+  es: Editor
 tools-notices-buttons-save:
   ru: Сохранить
   en: Save
   hy: Պահպանել
+  it: Salva
+  es: Guardar
 tools-notices-fields-nodesc:
   ru: Без темы
   en: No subject
+  hy: Թեմա չկա
+  it: Nessun soggetto
+  es: Sin asunto
 tools-notices-fields-desc:
   ru: Наименование
   en: Name
+  hy: Անվանում
+  it: Nome
+  es: Nombre
 tools-notices-fields-desc-note:
   ru: Введите наименование сообщения. Латинские буквы без спец-символов
   en: Enter a title for the message. Latin letters without special characters
+  hy: Մուտքագրեք ծանուցումի անվանումը. Լատինական տառերով առանց
+    հատկանիշների
+  it: Inserisci un titolo per il messaggio. Lettere latine senza caratteri speciali
+  es: Introduzca un título para el mensaje. Letras latinas sin caracteres especiales
 tools-notices-fields-subject:
   ru: Тема письма
   en: Subject
+  hy: Նամակի թեման
+  it: Soggetto
+  es: Asunto
 tools-notices-fields-subject-note:
   ru: Введите тему письма
   en: Enter the message subject
+  hy: Մուտքագրեք նամակի թեման
+  it: Inserisci il soggetto del messaggio
+  es: Introduzca el asunto del mensaje
 tools-notices-fields-body:
   ru: Тело письма
   en: Message body
+  hy: Նամակի մարմինը
+  it: Corpo del messaggio
+  es: Cuerpo del mensaje
 tools-notices-fields-body-note:
   ru: Введите тело письма. Допускаются вставки вида [[name]] в качестве переменных
     шаблона
   en: Enter the body of the email. Inserts like [[name]] are allowed as template
     variables
+  hy: "Մուտքագրեք նամակի մարմինը: Թույլատրվում են [[name]] ներառումները
+    որպես կաղապարներ"
+  it: Inserisci il corpo dell'email. Sono ammessi inserimenti come [[name]] come
+    variabili di modello  
+  es: Introduzca el cuerpo del mensaje. Se permiten inserciones como [[name]] como
+    variables de plantilla
 tools-notices-contextmenu-newnotice:
   ru: Создать шаблон
   en: Create notice
+  hy: Ստեղծել ձևաչափ
+  it: Crea modello
+  es: Crear plantilla
 tools-notices-contextmenu-deletenotice:
   ru: Удалить шаблон
   en: Delete notice
+  hy: Ջնջել ձևաչափը
+  it: Elimina modello
+  es: Eliminar plantilla
