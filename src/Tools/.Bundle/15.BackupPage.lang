@@ -4,12 +4,16 @@ tools-backups-create-title:
   hy: Ստեղծեք համակարգի պատկեր
   it: Crea un'immagine di sistema
   es: Crear una instantánea del sistema
+  kk: Жүйенің суретін жасау
+  uz: Tizim suratini yaratish
 tools-backup-create:
   ru: Создать слепок
   en: Create a snapshot
   hy: Ստեղծեք լուսանկար
   it: Crea un'immagine
   es: Crear una instantánea
+  kk: Сурет жасау
+  uz: Surat yaratish
 tools-backup-create-info:
   ru: Нажмите на кнопку «создать слепок» и дождитесь окончания процесса. После
     завершения в списке слепкой внизу этой страницы появится новый пункт
@@ -26,87 +30,117 @@ tools-backup-create-info:
   es: Haga clic en el botón "crear instantánea" y espere a que finalice el proceso.
     Cuando se complete, aparecerá un nuevo elemento marcado con la fecha en la
     lista de instantáneas en la parte inferior de esta página.
+  kk: "«Сурет жасау» түймесін басып, процестің аяқталуын күтіңіз. Аяқталғаннан кейін, осы беттің төменгі жағындағы суреттер тізімінде күнмен белгіленген жаңа элемент пайда болады."
+  uz: "«Surat yaratish» tugmasini bosing va jarayon tugashini kuting. Tugallangandan so'ng, ushbu sahifaning pastki qismidagi suratlar ro'yxatida sana bilan belgilangan yangi element paydo bo'ladi."
 tools-backups-points-title:
   ru: Список созданных слепков
   en: List of created impressions
   hy: Ստեղծված տպավորությունների ցանկ
   it: Elenco delle immagini create
   es: Lista de instantáneas creadas
+  kk: Жасалған суреттер тізімі
+  uz: Yaratilgan suratlar ro'yxati
 tools-backups-dataempty:
   ru: Слепки не найдены
   en: Snapshots not found
   hy: Պատկերները չեն գտնվել
   it: Immagini non trovate
   es: Instantáneas no encontradas
+  kk: Суреттер табылмады
+  uz: Suratlar topilmadi
 tools-backups-points-status:
   ru: Статус
   en: Status
   hy: Կարգավիճակ
   it: Stato
   es: Estado
+  kk: Статус
+  uz: Holat
 tools-backups-points-running:
   ru: Работает
   en: Running
   hy: Վազում
   it: In esecuzione
   es: En ejecución
+  kk: Жұмыс істеп тұр
+  uz: Ishlayapti
 tools-backups-points-name:
   ru: Наименование
   en: Name
   hy: Անուն
   it: Nome
   es: Nombre
+  kk: Атауы
+  uz: Nomi
 tools-backups-points-cron:
   ru: Планировщик
   en: Scheduler
   hy: Ժամանակացույց
   it: Pianificatore
   es: Programador
+  kk: Жоспарлаушы
+  uz: Rejalashtiruvchi
 tools-backups-points-file:
   ru: Шаблон названия файла
   en: File name template
   hy: Ֆայլի անվան ձևանմուշ
   it: Modello di nome file
   es: Plantilla de nombre de archivo
+  kk: Файл атауының үлгісі
+  uz: Fayl nomi shabloni
 tools-backups-windowtitle-editbackup:
   ru: Редактировать задание
   en: Edit task
   hy: Խմբագրել առաջադրանքը
   it: Modifica attività
   es: Editar tarea
+  kk: Тапсырманы өңдеу
+  uz: Vazifani tahrirlash
 tools-backups-windowtitle-newbackup:
   ru: Новое задание
   en: New task
   hy: Նոր առաջադրանք
   it: Nuova attività
   es: Nueva tarea
+  kk: Жаңа тапсырма
+  uz: Yangi vazifa
 tools-backups-contextmenu-edit:
   ru: Редактировать
   en: Edit
   hy: Խմբագրել
   it: Modifica
   es: Editar
+  kk: Өңдеу
+  uz: Tahrirlash
 tools-backups-contextmenu-delete:
   ru: Удалить
   en: Delete
   hy: Ջնջել
   it: Elimina
   es: Eliminar
+  kk: Жою
+  uz: O'chirish
 tools-backups-deletedata1:
   ru: Удаление точки восстановления
   en: Delete the snapshot
   hy: Ջնջել նկարը
   it: Elimina l'immagine
   es: Eliminar instantánea
+  kk: Суретті жою
+  uz: Suratni o'chirish
 tools-backups-deletedata1message:
   ru: Вы уверены, что хотите удалить выбранную строку?
   en: Are you sure you want to delete the selected row?
   hy: "Իսկապե՞ս ուզում եք ջնջել ընտրված տողը:"
   it: Sei sicuro di voler eliminare la riga selezionata?
   es: ¿Está seguro de que desea eliminar la fila seleccionada?
+  kk: Таңдалған жолды жоюға сенімдісіз бе?
+  uz: Tanlangan qatorni o'chirishga ishonchingiz komilmi?
 tools-backups-deletedata1message-delete:
   ru: Удалить!
   en: Delete
   hy: Ջնջել
   it: Elimina
   es: Eliminar
+  kk: Жою
+  uz: O'chirish

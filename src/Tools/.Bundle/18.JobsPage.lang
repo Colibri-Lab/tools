@@ -4,63 +4,85 @@ tools-jobs-active-jobs-title:
   hy: Ակտիվ առաջադրանքներ
   it: Pipeline attivi
   es: Pipelines activos
+  kk: Белсенді тапсырмалар
+  uz: Faol vazifalar
 tools-jobs-successed-title:
   ru: Успешные задачи (последние 20)
   en: Successed pipelines (last 20)
   hy: Հաջողված առաջադրանքներ (վերջին 20)
   it: Pipeline riusciti (ultimi 20)
   es: Pipelines exitosos (últimos 20)
+  kk: Сәтті тапсырмалар (соңғы 20)
+  uz: Muvaffaqiyatli vazifalar (so'nggi 20)
 tools-jobs-errors-title:
   ru: Ошибки (последние 20)
   en: Errors (last 20)
   hy: Սխալներ (վերջին 20)
   it: Errori (ultimi 20)
   es: Errores (últimos 20)
+  kk: Қателер (соңғы 20)
+  uz: Xatolar (so'nggi 20)
 tools-jobs-active-jobs-datecreated:
   ru: Создано
   en: Created
   hy: Ստեղծվել է
   it: Creato
   es: Creado
+  kk: Жасалған
+  uz: Yaratilgan
 tools-jobs-active-jobs-datereserved:
   ru: Зарезервировано
   en: Reserved
   hy: Վերապահված
   it: Riservato
   es: Reservado
+  kk: Резервтелген
+  uz: Zaxiraga olingan
 tools-jobs-active-jobs-reservation_key:
   ru: Ключ
   en: Key
   hy: Բանալի
   it: Chiave
   es: Clave
+  kk: Кілт
+  uz: Kalit
 tools-jobs-active-jobs-queue:
   ru: Поток
   en: Pipeline
   hy: Հոսք
   it: Pipeline
   es: Pipeline
+  kk: Ағын
+  uz: Oqim
 tools-jobs-active-jobs-class:
   ru: Класс
   en: Class
   hy: Դաս
   it: Classe
   es: Clase
+  kk: Сынып
+  uz: Sinf
 tools-jobs-active-jobs-payload_class:
   ru: Класс данных
   en: Payload class
   hy: Տվյալների դաս
   it: Classe di dati
   es: Clase de datos
+  kk: Деректер сыныбы
+  uz: Ma'lumotlar sinfi
 tools-jobs-active-jobs-attempts:
   ru: Попытки
   en: Attempts
   hy: Փորձեր
   it: Tentativi
   es: Intentos
+  kk: Талпыныстар
+  uz: Urinishlar
 tools-jobs-active-jobs-parallel:
   ru: Паралельный
   en: Is parallel
   hy: Զուգահեռ
   it: È parallelo
   es: Es paralelo
+  kk: Параллель
+  uz: Parallel

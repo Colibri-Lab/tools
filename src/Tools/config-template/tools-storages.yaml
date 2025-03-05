@@ -11,6 +11,8 @@ settings:
     hy: Կարգավորումներ
     it: Impostazioni
     es: Ajustes
+    kk: Параметрлер
+    uz: Sozlamalar
   params:
     visible: false
     maybepublished: false
@@ -26,6 +28,8 @@ settings:
         hy: Կարգավորման անունը
         it: Nome dell'impostazione
         es: Nombre de la configuración
+        kk: Параметр атауы
+        uz: Sozlamalar nomi
       note:
         ru: Введите название настройки, которое будете использовать в дальнейшем.
           Латинские буквы, подчеркивание.
@@ -35,6 +39,8 @@ settings:
         it: Inserisci un nome per l'impostazione che userai in seguito.
            Lettere latine, sottolineatura.
         es: Ingrese un nombre para la configuración que usará más tarde. Letras latinas, subrayado.
+        kk: Кейіпкер атауын енгізіңіз, кейінгіде пайдаланасыз. Латын әріптері, сызықша.
+        uz: Keyinroq foydalanishingiz uchun sozlamani nomini kiriting. Lotin harflar, pastki chiziq.
       attrs:
         width: 100%
       placeholder:
@@ -82,12 +88,16 @@ settings:
         hy: Կարգավորման տեսակը
         it: Tipo di impostazione
         es: Tipo de configuración
+        kk: Параметр түрі
+        uz: Sozlamalar turi
       note:
         ru: Выберите тип настройки
         en: Choose a setting type
         hy: Ընտրեք կարգաբերման տեսակը
         it: Scegli un tipo di impostazione
         es: Elija un tipo de configuración
+        kk: Параметр түрін таңдаңыз
+        uz: Sozlamalar turi tanlang
       component: Colibri.UI.Forms.Select
       default: text
       values:
@@ -97,6 +107,8 @@ settings:
           hy: Ամբողջ թիվ
           it: Intero
           es: Entero
+          kk: Бүтін сан
+          uz: Butun son
         type: text
         value: integer
       - title:
@@ -105,6 +117,8 @@ settings:
           hy: Լողացող կետով թվեր
           it: Virgola mobile
           es: Punto flotante
+          kk: Жиынтық нүкте
+          uz: O'zgarmas nuqta
         type: text
         value: double
       - title:
@@ -113,6 +127,8 @@ settings:
           hy: Տեքստ
           it: Testo
           es: Texto
+          kk: Мәтін
+          uz: Matn
         type: text
         value: text
       - title:
@@ -121,6 +137,8 @@ settings:
           hy: Մեձ տեքստ
           it: Testo enorme
           es: Texto enorme
+          kk: Үлкен мәтін
+          uz: Katta matn
         type: text
         value: textarea
       - title:
@@ -129,6 +147,8 @@ settings:
           hy: HTML նշում
           it: Markup HTML
           es: Marcado HTML
+          kk: HTML белгісі
+          uz: HTML belgisi
         type: text
         value: html
       - title:
@@ -137,6 +157,8 @@ settings:
           hy: HTML կոդ
           it: Codice HTML
           es: Código HTML
+          kk: HTML код
+          uz: HTML kod
         type: text
         value: htmlcode
       - title:
@@ -145,6 +167,8 @@ settings:
           hy: Ամսաթիվ
           it: Data
           es: Fecha
+          kk: Күн
+          uz: Sana
         type: text
         value: date
       - title:
@@ -153,6 +177,8 @@ settings:
           hy: Ամսաթիվ և ժամ
           it: Data e ora
           es: Fecha y hora
+          kk: Күн және уақыт
+          uz: Sana va vaqt
         type: text
         value: datetime
       - title:
@@ -161,6 +187,8 @@ settings:
           hy: Ֆայլ
           it: File
           es: Archivo
+          kk: Файл
+          uz: Fayl
         type: text
         value: file
       - title:
@@ -169,6 +197,8 @@ settings:
           hy: Ֆայլեր
           it: File
           es: Archivo
+          kk: Файлдар
+          uz: Fayllar
         type: text
         value: files
       selector:
@@ -225,12 +255,16 @@ settings:
         hy: Կարգավորման նկարագրություն
         it: Descrizione dell'impostazione
         es: Descripción de la configuración
+        kk: Параметр сипаттамасы
+        uz: Sozlamalar tavsifi
       note:
         ru: Опишите настройку, для чего она нужна, где используется
         en: Describe the setting, what it is for, where it is used
         hy: Նկարագրեք պարամետրը, ինչի համար է այն, որտեղ է այն օգտագործվում
         it: Descrivi l'impostazione, a cosa serve, dove viene utilizzata
         es: Describa la configuración, para qué sirve, dónde se utiliza
+        kk: Параметрді сипаттамаңыз, ол не үшін, қайда қолданылады
+        uz: Sozlamani tavsiflang, nima uchun, qayerda ishlatiladi
       required: false
       reqdonly: true
       attrs:
@@ -312,12 +346,16 @@ settings:
         hy: Արժեք
         it: Valore
         es: Valor
+        kk: Мән
+        uz: Qiymat
       note:
         ru: Введите значение настройки
         en: Enter setting value
         hy: Մուտքագրեք պարամետրերի արժեքը
         it: Inserisci il valore dell'impostazione
         es: Ingrese el valor de la configuración
+        kk: Параметр мәнін енгізіңіз
+        uz: Sozlamalar qiymatini kiriting
       attrs:
         width: 100%
       placeholder:
@@ -345,6 +383,8 @@ notices:
     hy: Նամակների կաղապարներ
     it: Modelli di avvisi
     es: Plantillas de avisos
+    kk: Хабарламалар үлгілері
+    uz: Xabarnomalar qo'shimchalari
   params:
     visible: false
     maybepublished: false
@@ -360,6 +400,8 @@ notices:
         hy: Կաղապարի անվանումը
         it: Nome del modello
         es: Nombre de la plantilla
+        kk: Үлгі атауы
+        uz: Xabar nomi
       note:
         ru: Введите название шаблона, которое будете использовать в дальнейшем. Латинские
           буквы, подчеркивание.
@@ -370,6 +412,8 @@ notices:
         it: Inserisci il nome del modello che userai in futuro. Lettere latine, sottolineatura.
         es: Ingrese el nombre de la plantilla que utilizará en el futuro. Letras latinas,
           subrayado.
+        kk: Кейіпкер атауын енгізіңіз, кейінгіде пайдаланасыз. Латын әріптері, сызықша. 
+        uz: Keyinroq foydalanishingiz uchun xabar nomini kiriting. Lotin harflar, pastki chiziq.
       attrs:
         width: 100%
       placeholder:
@@ -419,12 +463,16 @@ notices:
         hy: Նամակի թեման
         it: Oggetto della lettera
         es: Asunto de la carta
+        kk: Хат тақырыбы
+        uz: Xat mavzusi
       note:
         ru: Введите тему письма
         en: Enter the subject of the email
         hy: Մուտքագրեք էլփոստի թեման
         it: Inserisci l'oggetto dell'email
         es: Ingrese el asunto del correo electrónico
+        kk: Хат тақырыбын енгізіңіз
+        uz: Xat mavzusini kiriting
       params:
         required: false
         enabled: true
@@ -479,12 +527,16 @@ notices:
         hy: Նամակի մարմինը
         it: Il corpo della lettera
         es: El cuerpo de la carta
+        kk: Хат мазмұны
+        uz: Xat matni
       note:
         ru: Введите тело письма
         en: Enter the message body
         hy: Մուտքագրեք էլփոստի մարմինը
         it: Inserisci il corpo del messaggio
         es: Ingrese el cuerpo del mensaje
+        kk: Хат мазмұнын енгізіңіз
+        uz: Xat matnini kiriting
       required: false
       reqdonly: true
       attrs:
@@ -540,6 +592,8 @@ backups:
     hy: Վերականգնման կետերը
     it: Punti di ripristino
     es: Puntos de recuperación
+    kk: Қалпына келтіру нүктелері
+    uz: Qaytarish nuqtalari
   access-point: tools
   models:
     table: Models\Backups
@@ -601,6 +655,8 @@ backups:
           hy: Դադարեցված է
           it: Fermato
           es: Detenido
+          kk: Тоқтатылған
+          uz: To'xtatilgan
         type: text
         value: paused
       - title:
@@ -609,6 +665,8 @@ backups:
           hy: Ներառված
           it: Abilitato
           es: Habilitado
+          kk: Қосылған
+          uz: Yoqilgan
         type: text
         value: started
       default: paused
@@ -628,6 +686,8 @@ backups:
         hy: Մեկնարկել է
         it: Avviato
         es: Lanzado
+        kk: Іске қосылған
+        uz: Boshlandi
       type: tinyint
       length: 1
       component: Colibri.UI.Forms.Hidden
@@ -653,12 +713,16 @@ backups:
         hy: Անվանում
         it: Nome
         es: Nombre
+        kk: Атауы
+        uz: Ismi
       note:
         ru: Введите название задание на создание точки восстановления
         en: Enter the name of the task to create a recovery point
         hy: Մուտքագրեք կոչում խնդիրն է ստեղծել վերականգնման կետ
         it: Inserisci il nome del compito per creare un punto di ripristino
         es: Ingrese el nombre de la tarea para crear un punto de recuperación
+        kk: Қалпына келтіру нүктесін жасау үшін тапсырыс атауын енгізіңіз
+        uz: Qaytarish nuqtasini yaratish uchun vazifaning nomini kiriting
       type: varchar
       length: "255"
       component: Colibri.UI.Forms.Text
@@ -683,12 +747,16 @@ backups:
         hy: Գրառումը CRON-ում
         it: Scrittura in CRON
         es: Escribir en CRON
+        kk: CRON-да жазу
+        uz: CRON-ga yozish
       note:
         ru: Введите запись, которую нужно будет внести в CRON
         en: Enter the entry that you will need to make in CRON
         hy: Մուտքագրեք գրառումը, որը պետք է կատարվի CRON-ում
         it: Inserisci l'ingresso che dovrai fare in CRON
         es: Ingrese la entrada que necesitará hacer en CRON
+        kk: CRON-да жасау керек болатын жазбаны енгізіңіз
+        uz: CRON-ga kirishni kiriting
       type: json
       component: Colibri.UI.Forms.Object
       class: ObjectField
@@ -713,12 +781,16 @@ backups:
             hy: Րոպե
             it: Minuto
             es: Minuto
+            kk: Минут
+            uz: Daqiqa
           note:
             ru: Выберите минуту
             en: Choose a minute
             hy: Ընտրեք րոպե
             it: Scegli un minuto
             es: Elija un minuto
+            kk: Минут таңдаңыз
+            uz: Daqiqani tanlang
           type: varchar
           length: "2"
           component: Colibri.UI.Forms.Select
@@ -925,12 +997,16 @@ backups:
             hy: Ժամ
             it: Ora
             es: Hora
+            kk: Сағат
+            uz: Soat
           note:
             ru: Выберите час
             en: Choose an hour
             hy: Ընտրեք ժամ
             it: Scegli un'ora
             es: Elija una hora
+            kk: Сағат таңдаңыз
+            uz: Soatni tanlang
           type: varchar
           length: "2"
           component: Colibri.UI.Forms.Select
@@ -1029,12 +1105,16 @@ backups:
             hy: Օր
             it: Giorno
             es: Día
+            kk: Күн
+            uz: Kun
           note:
             ru: Выберите день
             en: Choose a day
             hy: Ընտրեք օրը
             it: Scegli un giorno
             es: Elija un día
+            kk: Күнді таңдаңыз
+            uz: Kunni tanlang
           type: varchar
           length: "2"
           component: Colibri.UI.Forms.Select
@@ -1160,12 +1240,16 @@ backups:
             hy: Ամիս
             it: Mese
             es: Mes
+            kk: Ай
+            uz: Oy
           note:
             ru: Выберите месяц
             en: Choose a month
             hy: Ընտրել ամիս
             it: Scegli un mese
             es: Elija un mes
+            kk: Айды таңдаңыз
+            uz: Oy tanlang
           type: varchar
           length: "2"
           component: Colibri.UI.Forms.Select
@@ -1234,12 +1318,16 @@ backups:
             hy: Շաբաթվա օր
             it: Giorno della settimana
             es: Día de la semana
+            kk: Аптаның күні
+            uz: Haftaning kuni
           note:
             ru: Выберите день недели
             en: Choose a day of the week
             hy: Ընտրեք օրը շաբաթվա
             it: Scegli un giorno della settimana
             es: Elija un día de la semana
+            kk: Аптаның күнін таңдаңыз
+            uz: Haftaning kuni tanlang
           type: varchar
           length: "1"
           component: Colibri.UI.Forms.Select
@@ -1268,6 +1356,8 @@ backups:
               hy: Կիրակի
               it: Domenica
               es: Domingo
+              kk: Жексенбі
+              uz: Yakshanba
             type: text
           - value: "1"
             title:
@@ -1276,6 +1366,8 @@ backups:
               hy: Երկուշաբթի
               it: Lunedì
               es: Lunes
+              kk: Дүйсенбі
+              uz: Dushanba
             type: text
           - value: "2"
             title:
@@ -1284,6 +1376,8 @@ backups:
               hy: Երեքշաբթի
               it: Martedì
               es: Martes
+              kk: Сейсенбі
+              uz: Seshanba
             type: text
           - value: "3"
             title:
@@ -1292,6 +1386,8 @@ backups:
               hy: Չորեքշաբթի
               it: Mercoledì
               es: Miércoles
+              kk: Сәрсенбі
+              uz: Chorshanba
             type: text
           - value: "4"
             title:
@@ -1300,6 +1396,8 @@ backups:
               hy: Հինգշաբթի
               it: Giovedì
               es: Jueves
+              kk: Бейсенбі
+              uz: Payshanba
             type: text
           - value: "5"
             title:
@@ -1308,6 +1406,8 @@ backups:
               hy: Ուրբաթ
               it: Venerdì
               es: Viernes
+              kk: Жұма
+              uz: Juma
             type: text
           - value: "6"
             title:
@@ -1316,6 +1416,8 @@ backups:
               hy: Շաբաթ
               it: Sabato
               es: Sábado
+              kk: Сенбі
+              uz: Shanba
             type: text
           default: '*'
     file:
@@ -1326,12 +1428,16 @@ backups:
         hy: Ֆայլի անվանումը Կաղապար
         it: Modello di nome file
         es: Plantilla de nombre de archivo
+        kk: Файл атауының үлгісі
+        uz: Fayl nomi shabloni
       note:
         ru: Введите шаблон названия файла, например backup_{date}_{index}.backup
         en: Enter a template for the file name, for example backup_{date}_{index}.backup
         hy: Մուտքագրեք ֆայլի անունը Կաղապար, օրինակ backup_ {date}_{index}.backup
         it: Inserisci un modello per il nome del file, ad esempio backup_{date}_{index}.backup
         es: Ingrese una plantilla para el nombre del archivo, por ejemplo backup_{date}_{index}.backup
+        kk: Файл атауы үлгісін енгізіңіз, мисалы backup_{date}_{index}.backup
+        uz: Fayl nomi shablonini kiriting, masalan backup_{date}_{index}.backup
       type: varchar
       length: "255"
       component: Colibri.UI.Forms.Text
@@ -1357,6 +1463,8 @@ themes:
     hy: Թեմաներ
     it: Temi
     es: Temas
+    kk: Тақырыптар
+    uz: Mavzular
   access-point: tools
   models:
     table: Models\Themes
@@ -1373,6 +1481,8 @@ themes:
         hy: Անվանում
         it: Nome
         es: Nombre
+        kk: Атауы
+        uz: Ismi
       type: varchar
       length: "255"
       component: Colibri.UI.Forms.Text
@@ -1396,6 +1506,8 @@ themes:
         hy: Թեմայի նկարագրությունը
         it: Descrizione dell'argomento
         es: Descripción del tema
+        kk: Тақырып сипаттамасы
+        uz: Mavzu tavsifi
       type: varchar
       length: "255"
       component: Colibri.UI.Forms.Text
@@ -1420,12 +1532,16 @@ themes:
         hy: Դոմեյն բանալին
         it: Chiave di dominio
         es: Clave de dominio
+        kk: Домен кілті
+        uz: Domen kaliti
       note:
         ru: Выберите ключ домена
         en: Select the domain key
         hy: Ընտրեք դոմեյն բանալին
         it: Seleziona la chiave di dominio
         es: Seleccione la clave de dominio
+        kk: Домен кілтін таңдаңыз
+        uz: Domen kalitini tanlang
       type: varchar
       length: "255"
       component: Colibri.UI.Forms.Select
@@ -1453,12 +1569,16 @@ themes:
         hy: Ընթացիկ
         it: Corrente
         es: Actual
+        kk: Ағымдағы
+        uz: Joriy
       note:
         ru: Укажите да, если тема должна быть текущей для домена
         en: Specify yes if the topic should be the current one for the domain
         hy: Նշեք Այո, եթե թեման պետք է լինի ընթացիկ տիրույթում
         it: Specificare sì se l'argomento dovrebbe essere quello attuale per il dominio
         es: Especifique sí si el tema debe ser el actual para el dominio
+        kk: Домен үшін ағымдағы болуы керек болса, әйе деп айтыңыз
+        uz: Agar mavzu domen uchun joriy bo'lishi kerak bo'lsa, ha deb yozing
       type: tinyint
       length: "1"
       component: Colibri.UI.Forms.Checkbox
@@ -1483,6 +1603,8 @@ themes:
         hy: Փոփոխականներ
         it: Variabili
         es: Variables
+        kk: Өзгермендер
+        uz: O'zgaruvchilar
       type: json
       component: Colibri.UI.Forms.Array
       class: ArrayField
@@ -1507,6 +1629,8 @@ themes:
             hy: Փոփոխական անունը
             it: Nome della variabile
             es: Nombre de la variable
+            kk: Өзгерменің аты
+            uz: O'zgaruvchi nomi
           type: varchar
           length: "255"
           component: Colibri.UI.Forms.Text
@@ -1530,6 +1654,8 @@ themes:
             hy: Փոփոխական տեսակը
             it: Tipo di variabile
             es: Tipo de variable
+            kk: Өзгерменің түрі
+            uz: O'zgaruvchi turi
           type: varchar
           length: "255"
           component: Colibri.UI.Forms.Select
@@ -1555,6 +1681,8 @@ themes:
               hy: Գույն
               it: Colore
               es: Color
+              kk: Түс
+              uz: Rang
             type: text
           - value: font-family
             title:
@@ -1563,6 +1691,8 @@ themes:
               hy: Տառատեսակի անվանումը
               it: Nome del carattere
               es: Nombre de la fuente
+              kk: Қаріп атауы
+              uz: Shrifting nomi
             type: text
           - value: size
             title:
@@ -1571,6 +1701,8 @@ themes:
               hy: Չափ
               it: Dimensione
               es: Tamaño
+              kk: Өлшем
+              uz: O'lcham
             type: text
           - value: image
             title:
@@ -1579,6 +1711,8 @@ themes:
               hy: Նկար
               it: Immagine
               es: Imagen
+              kk: Сурет
+              uz: Rasm
             type: text
           - value: border
             title:
@@ -1587,6 +1721,8 @@ themes:
               hy: Շրջանակ
               it: Cornice
               es: Marco
+              kk: Жиек
+              uz: Qo'rg'i
             type: text
           - value: shadow
             title:
@@ -1595,6 +1731,8 @@ themes:
               hy: Ստվեր
               it: Ombra
               es: Sombra
+              kk: Көлеңке
+              uz: Kuch
             type: text
           - value: value
             title:
@@ -1603,6 +1741,8 @@ themes:
               hy: Առժեք
               it: Valore
               es: Valor
+              kk: Мағына
+              uz: Qiymat
             type: text
         value:
           desc:
@@ -1611,6 +1751,8 @@ themes:
             hy: Արժեք
             it: Valore
             es: Valor
+            kk: Мағына
+            uz: Qiymat
           type: varchar
           length: "255"
           component: Colibri.UI.Forms.Text
@@ -1635,6 +1777,8 @@ themes:
         hy: Mixin-ներ
         it: Mixin
         es: Mixins
+        kk: Mixin-дер
+        uz: Mixinlar
       type: json
       component: Colibri.UI.Forms.Array
       class: ArrayField
@@ -1659,6 +1803,8 @@ themes:
             hy: Անվանում
             it: Nome
             es: Nombre
+            kk: Атауы
+            uz: Ismi
           type: varchar
           length: "255"
           component: Colibri.UI.Forms.Text
@@ -1682,6 +1828,8 @@ themes:
             hy: Պարամետրեր
             it: Parametri
             es: Parámetros
+            kk: Параметрлер
+            uz: Parametrlar
           type: json
           component: Colibri.UI.Forms.Array
           class: ArrayField
@@ -1705,6 +1853,8 @@ themes:
                 hy: Պարամետր անունը
                 it: Nome del parametro
                 es: Nombre del parámetro
+                kk: Параметр аты
+                uz: Parametr nomi
               type: varchar
               length: "255"
               component: Colibri.UI.Forms.Text
@@ -1728,6 +1878,8 @@ themes:
             hy: Մարմին
             it: Corpo
             es: Cuerpo
+            kk: Тіркеме
+            uz: Qism
           type: varchar
           length: "1024"
           component: App.Modules.Manage.UI.TinyMCETextArea

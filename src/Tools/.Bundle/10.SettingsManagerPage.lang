@@ -4,36 +4,48 @@ tools-settings-settings-title:
   hy: Կարգավորումներ
   it: Impostazioni
   es: Ajustes
+  kk: Параметрлер
+  uz: Sozlamalar
 tools-settings-data-title:
   ru: Редактор
   en: Editor
   hy: Խմբագիր
   it: Editor
   es: Editor
+  kk: Редактор
+  uz: Tahrirlovchi
 tools-settings-buttons-save:
   ru: Сохранить
   en: Save
   hy: Պահպանել
   it: Salva
   es: Guardar
+  kk: Сақтау
+  uz: Saqlash
 tools-settings-contextmenu-delete:
   ru: Удалить настройку
   en: Remove setting
   hy: Հեռացնել կարգավորումը
   it: Rimuovi impostazione
   es: Eliminar ajuste
+  kk: Параметрді жою
+  uz: Sozlamani olib tashlash
 tools-settings-description-title:
   ru: Описание настройки
   en: Setting description
   hy: Կարգավորման նկարագրություն
   it: Descrizione dell'impostazione
   es: Descripción del ajuste
+  kk: Параметр сипаттамасы
+  uz: Sozlama tavsifi
 tools-settings-value-title:
   ru: Значение
   en: Setting value
   hy: Արժեքի կարգավորում
   it: Valore dell'impostazione
   es: Valor del ajuste
+  kk: Параметр мәні
+  uz: Sozlama qiymati
 tools-settings-settings-canchange:
   ru: Список настроек может быть изменен только в локальном режиме, пожалуйста,
     обратитесь к администратору
@@ -45,3 +57,5 @@ tools-settings-settings-canchange:
     contattare l'amministratore
   es: La lista de ajustes solo se puede cambiar en modo local, por favor contacte
     con su administrador
+  kk: Параметрлер тізімін тек жергілікті режимде өзгертуге болады, әкімшіге хабарласыңыз
+  uz: Sozlamalar ro'yxatini faqat mahalliy rejimda o'zgartirish mumkin, administratoringizga murojaat qiling

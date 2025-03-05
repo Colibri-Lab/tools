@@ -4,27 +4,37 @@ tools-settingsdata-settings-title:
   hy: Կարգավորումներ
   it: Impostazioni
   es: Ajustes
+  kk: Параметрлер
+  uz: Sozlamalar
 tools-settingsdata-data-title:
   ru: Редактор
   en: Editor
   hy: Խմբագիր
   it: Editor
   es: Editor
+  kk: Редактор
+  uz: Tahrirlovchi
 tools-settingsdata-buttons-save:
   ru: Сохранить
   en: Save
   hy: Պահպանել
   it: Salva
   es: Guardar
+  kk: Сақтау
+  uz: Saqlash
 tools-settingsdata-title-nodesc:
   ru: Без описания
   en: No description
   hy: Նկարագրություն չկա
   it: Nessuna descrizione
   es: Sin descripción
+  kk: Сипаттамасы жоқ
+  uz: Tavsif yo'q
 tools-settingsdata-value-title:
   ru: Значение
   en: Value
   hy: Արժեք
   it: Valore
   es: Valor
+  kk: Мән
+  uz: Qiymat

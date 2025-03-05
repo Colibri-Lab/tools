@@ -4,18 +4,24 @@ tools-execute-run-title:
   hy: Սցենարի կատարում
   it: Esecuzione script
   es: Ejecución de script
+  kk: Скриптті іске қосу
+  uz: Skriptni ishga tushirish
 tools-execute-run:
   ru: Запустить скрипт
   en: Run the script
   hy: Գործարկեք սցենարը
   it: Esegui lo script
   es: Ejecutar script
+  kk: Скриптті іске қосу
+  uz: Skriptni ishga tushirish
 tools-execute-kill:
   ru: Остановить исполнение
   en: Stop the script
   hy: Դադարեցրեք սցենարը
   it: Arresta lo script
   es: Detener script
+  kk: Скриптті тоқтату
+  uz: Skriptni to'xtatish
 tools-execute-create-info:
   ru: Внимание! Скрипт исполняется в окружении всего проекта, возможны необратимые
     последствия, пожалуйста, будьте осторожны
@@ -27,21 +33,29 @@ tools-execute-create-info:
     possibili conseguenze irreversibili, si prega di fare attenzione
   es: ¡Atención! El script se ejecuta en el entorno de todo el proyecto, son posibles
     consecuencias irreversibles, por favor tenga cuidado
+  kk: Назар аударыңыз! Скрипт бүкіл жоба ортасында орындалады, қайтымсыз салдарлар болуы мүмкін, абай болыңыз
+  uz: Diqqat! Skript butun loyiha muhiti doirasida bajariladi, qaytarib bo'lmaydigan oqibatlar bo'lishi mumkin, iltimos ehtiyot bo'ling
 tools-execute-script-title:
   ru: Скрипт к исполнению
   en: Script to be executed
   hy: Սցենար, որը պետք է կատարվի
   it: Script da eseguire
   es: Script a ejecutar
+  kk: Орындауға арналған скрипт
+  uz: Bajarilishi kerak bo'lgan skript
 tools-execute-run-success:
   ru: Скрипт запущен успешно
   en: Script runned successfuly
   hy: Սցենարը հաջողությամբ գործարկվեց
   it: Script eseguito con successo
   es: Script ejecutado con éxito
+  kk: Скрипт сәтті іске қосылды
+  uz: Skript muvaffaqiyatli ishga tushirildi
 tools-execute-killed-success:
   ru: Скрипт остановлен успешно
   en: Script stopped successfuly
   hy: Սցենարը հաջողությամբ դադարեցվեց
   it: Script arrestato con successo
   es: Script detenido con éxito
+  kk: Скрипт сәтті тоқтатылды
+  uz: Skript muvaffaqiyatli to'xtatildi

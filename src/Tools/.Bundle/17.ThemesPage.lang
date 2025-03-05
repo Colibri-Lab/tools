@@ -4,296 +4,389 @@ tools-themes-contextmenu-newtheme:
   hy: Ստեղծեք թեմա
   it: Crea un argomento
   es: Crear tema
+  kk: Тақырыпты жасау
+  uz: Mavzuni yaratish
 tools-themes-contextmenu-edittheme:
   ru: Редактировать тему
   en: Edit theme
   hy: Խմբագրել թեման
   it: Modifica argomento
   es: Editar tema
+  kk: Тақырыпты өңдеу
+  uz: Mavzuni tahrirlash
 tools-themes-contextmenu-deletetheme:
   ru: Удалить тему
   en: Delete theme
   hy: Ջնջել թեման
   it: Elimina argomento
   es: Eliminar tema
+  kk: Тақырыпты жою
+  uz: Mavzuni o'chirish
 tools-themes-contextmenu-dublicatetheme:
   ru: Дублировать тему
   en: Dublicate theme
   hy: Կրկնվող թեմա
   it: Argomento duplicato
   es: Tema duplicado
+  kk: Тақырыпты қайталау
+  uz: Mavzuni nusxalash
 tools-themes-contextmenu-setcurrent:
   ru: Установить как текущую
   en: Set as default
   hy: Սահմանել որպես ընթացիկ
   it: Imposta come corrente
   es: Establecer como predeterminado
+  kk: Әдепкі ретінде орнату
+  uz: Standart sifatida o'rnatish
 tools-themes-windowtitle-edittheme:
   ru: Редактировать тему
   en: Edit theme
   hy: Խմբագրել թեման
   it: Modifica argomento
   es: Editar tema
+  kk: Тақырыпты өңдеу
+  uz: Mavzuni tahrirlash
 tools-themes-deletetheme:
   ru: Удаление темы
   en: Delete theme
   hy: Ջնջել թեմա
   it: Eliminazione di un argomento
   es: Eliminar tema
+  kk: Тақырыпты жою
+  uz: Mavzuni o'chirish
 tools-themes-deletethememessage:
-  ru: Вы уверены, что хотите удалить тему? На сайтах привязанных к этой теме могут
-    возникнуть артефакты
-  en: Are you sure you want to delete the topic? Artifacts may appear on sites
-    linked to this topic
-  hy: "Իսկապե՞ս ուզում եք ջնջել թեման: Արտեֆակտները կարող են հայտնվել այս թեմայի
-    հետ կապված կայքերում:"
-  it: Sei sicuro di voler eliminare l'argomento? Gli artefatti potrebbero essere
-    visualizzati sui siti associati a questo argomento.
-  es: ¿Está seguro de que desea eliminar el tema? Pueden aparecer artefactos en los
-    sitios vinculados a este tema.
+  ru: Вы уверены, что хотите удалить тему? На сайтах привязанных к этой теме могут возникнуть артефакты
+  en: Are you sure you want to delete the topic? Artifacts may appear on sites linked to this topic
+  hy: "Իսկապե՞ս ուզում եք ջնջել թեման: Արտեֆակտները կարող են հայտնվել այս թեմայի հետ կապված կայքերում:"
+  it: Sei sicuro di voler eliminare l'argomento? Gli artefatti potrebbero essere visualizzati sui siti associati a questo argomento.
+  es: ¿Está seguro de que desea eliminar el tema? Pueden aparecer artefactos en los sitios vinculados a este tema.
+  kk: Тақырыпты жоюды қалайсыз ба? Осы тақырыпқа байланысты сайттарда артефактілер пайда болуы мүмкін
+  uz: Mavzuni o'chirishni xohlaysizmi? Ushbu mavzuga bog'langan saytlarda artefaktlar paydo bo'lishi mumkin
 tools-themes-setcurrenttheme:
   ru: Установка
   en: Installing
   hy: Տեղադրում
   it: Installazione
   es: Instalación
+  kk: Орнату
+  uz: O'rnatish
 tools-themes-setcurrentthememessage:
   ru: Вы уверены, что хотите установить тему как текущую?
   en: Are you sure you want to set the theme as current?
   hy: "Վստա՞հ եք, որ ցանկանում եք թեման դնել որպես ընթացիկ:"
   it: Sei sicuro di voler impostare il tema come attuale?
   es: ¿Está seguro de que desea establecer el tema como predeterminado?
+  kk: Тақырыпты ағымдағы ретінде орнатқыңыз келетініне сенімдісіз бе?
+  uz: Mavzuni joriy sifatida o'rnatmoqchimisiz?
 tools-themes-windowtitle-addvartitle:
   ru: Добавить переменную
   en: Add variable
   hy: Ավելացնել փոփոխական
   it: Aggiungi una variabile
   es: Agregar variable
+  kk: Айнымалыны қосу
+  uz: O'zgaruvchini qo'shish
 tools-themes-windowtitle-editvartitle:
   ru: Редактировать переменную
   en: Edit variable
   hy: Խմբագրել փոփոխականը
   it: Modifica variabile
   es: Editar variable
+  kk: Айнымалыны өңдеу
+  uz: O'zgaruvchini tahrirlash
 tools-themes-deletevars:
   ru: Удаление переменных
   en: Delete variables
   hy: Փոփոխականների հեռացում
   it: Rimozione di variabili
   es: Eliminar variables
+  kk: Айнымалыларды жою
+  uz: O'zgaruvchilarni o'chirish
 tools-themes-deletevarsmessage:
   ru: Вы уверены, что хотите удалить переменные?
   en: Are you sure you want to delete variables?
   hy: "Վստա՞հ եք, որ ցանկանում եք հեռացնել փոփոխականները:"
   it: Sei sicuro di voler rimuovere le variabili?
   es: ¿Está seguro de que desea eliminar las variables?
+  kk: Айнымалыларды жоюды қалайсыз ба?
+  uz: O'zgaruvchilarni o'chirishni xohlaysizmi?
 tools-themes-deletevar:
   ru: Удаление переменной
   en: Delete variable
   hy: Փոփոխականի ջնջում
   it: Eliminazione di una variabile
   es: Eliminar variable
+  kk: Айнымалыны жою
+  uz: O'zgaruvchini o'chirish
 tools-themes-deletevarmessage:
   ru: Вы уверены, что хотите удалить переменную?
   en: Are you sure you want to delete the variable?
   hy: "Վստա՞հ եք, որ ցանկանում եք ջնջել փոփոխականը:"
   it: Sei sicuro di voler eliminare la variabile?
   es: ¿Está seguro de que desea eliminar la variable?
+  kk: Айнымалыны жоюды қалайсыз ба?
+  uz: O'zgaruvchini o'chirishni xohlaysizmi?
 tools-themes-windowtitle-addmixintitle:
   ru: Добавить Mixin
   en: Add mixin
   hy: Ավելացնել միքսին
   it: Aggiungi Mixin
   es: Agregar mixin
+  kk: Mixin қосу
+  uz: Mixin qo'shish
 tools-themes-windowtitle-editmixintitle:
   ru: Редактировать Mixin
   en: Edit mixin
   hy: Խմբագրել mixin
   es: Editar mixin
   it: Modifica mixin
+  kk: Mixin өңдеу
+  uz: Mixin tahrirlash
 tools-themes-deletemixins:
   ru: Удаление Mixin-ов
   en: Delete mixins
   hy: Ջնջել միքսները
   it: Elimina mixin
   es: Eliminar mixins
+  kk: Mixin-дерді жою
+  uz: Mixinlarni o'chirish
 tools-themes-deletemixinsmessage:
   ru: Вы уверены, что хотите удалить Mixin-ы?
   en: Are you sure you want to delete Mixins?
   hy: "Իսկապե՞ս ուզում եք ջնջել Mixins-ը:"
   it: Sei sicuro di voler eliminare i Mixins?
   es: ¿Está seguro de que desea eliminar los Mixins?
+  kk: Mixin-дерді жоюды қалайсыз ба?
+  uz: Mixinlarni o'chirishni xohlaysizmi?
 tools-themes-deletemixin:
   ru: Удаление Mixin-а
   en: Delete mixin
   hy: Ջնջել mixin
   it: Elimina mixin
   es: Eliminar mixin
+  kk: Mixin-ді жою
+  uz: Mixinni o'chirish
 tools-themes-deletemixinmessage:
   ru: Вы уверены, что хотите удалить Mixin?
   en: Are you sure you want to delete Mixin?
   hy: "Իսկապե՞ս ուզում եք ջնջել Mixin-ը:"
   it: Sei sicuro di voler eliminare il Mixin?
   es: ¿Está seguro de que desea eliminar el Mixin?
+  kk: Mixin-ді жоюды қалайсыз ба?
+  uz: Mixinni o'chirishni xohlaysizmi?
 tools-thtmes-themes-title:
   ru: Домены и темы
   en: Domains and themes
   hy: Դոմեններ և թեմաներ
   it: Domini e temi
   es: Dominios y temas
+  kk: Домендер мен тақырыптар
+  uz: Domenlar va mavzular
 tools-themes-vars-title:
   ru: Переменные
   en: Variables
   hy: Փոփոխականներ
   it: Variabili
   es: Variables
+  kk: Айнымалылар
+  uz: O'zgaruvchilar
 tools-themes-varsempty:
   ru: Переменных не найдено
   en: Variables not found
   hy: Փոփոխականները չեն գտնվել
   it: Variabili non trovate
   es: Variables no encontradas
+  kk: Айнымалылар табылмады
+  uz: O'zgaruvchilar topilmadi
 tools-themes-vars-grid-name:
   ru: Переменная
   en: Variable
   hy: Փոփոխական
   it: Variabile
   es: Variable
+  kk: Айнымалы
+  uz: O'zgaruvchi
 tools-themes-vars-grid-value:
   ru: Значение
   en: Value
   hy: Արժեք
   it: Senso
   es: Valor
+  kk: Мәні
+  uz: Qiymat
 tools-themes-vars-buttons-adddata:
   ru: Добавить
   en: Add
   hy: Ավելացնել
   it: Aggiungere
   es: Añadir
+  kk: Қосу
+  uz: Qo'shish
 tools-themes-vars-buttons-editdata:
   ru: Редактировать
   en: Edit
   hy: Խմբագրել
   it: Modificare
   es: Editar
+  kk: Өңдеу
+  uz: Tahrirlash
 tools-themes-vars-buttons-deletedata:
   ru: Удалить
   en: Delete
   hy: Ջնջել
   it: Eliminare
   es: Eliminar
+  kk: Жою
+  uz: O'chirish
 tools-themes-mixins-title:
   ru: Mixin-ы
   en: Mixins
   hy: Միքսիններ
   it: Mixin
   es: Mixins
+  kk: Mixin-дер
+  uz: Mixinlar
 tools-themes-mixinsempty:
   ru: Mixin-ов не найдено
   en: Mixins not found
   hy: Միքսներ չեն գտնվել
   es: Mixins no encontrados
   it: Mixin non trovati
+  kk: Mixin-дер табылмады
+  uz: Mixinlar topilmadi
 tools-themes-mixins-grid-name:
   ru: Mixin
   en: Mixin
   hy: խառնել
   it: mescolare
   es: Mezclar
+  kk: Mixin
+  uz: Mixin
 tools-themes-mixins-grid-params:
   ru: Параметры
   en: Parameters
   hy: Պարամետրեր
   it: Opzioni
   es: Parámetros
+  kk: Параметрлер
+  uz: Parametrlar
 tools-themes-mixins-grid-value:
   ru: Значение
   en: Value
   hy: Արժեք
   it: Senso
   es: Valor
+  kk: Мәні
+  uz: Qiymat
 tools-themes-mixins-buttons-adddata:
   ru: Добавить
   en: Add
   hy: Ավելացնել
   it: Aggiungere
   es: Añadir
+  kk: Қосу
+  uz: Qo'shish
 tools-themes-mixins-buttons-editdata:
   ru: Редактировать
   en: Edit
   hy: Խմբագրել
   it: Modificare
   es: Editar
+  kk: Өңдеу
+  uz: Tahrirlash
 tools-themes-mixins-buttons-deletedata:
   ru: Удалить
   en: Delete
   hy: Ջնջել
   it: Eliminare
   es: Eliminar
+  kk: Жою
+  uz: O'chirish
 tools-thtmes-themes-vars:
   ru: Переменные
   en: Variables
   hy: Փոփոխականներ
   it: Variabili
   es: Variables
+  kk: Айнымалылар
+  uz: O'zgaruvchilar
 tools-thtmes-themes-mixins:
   ru: Mixin-ы
   en: Mixins
   hy: Միքսիններ
   it: Mixin
   es: Mixins
+  kk: Mixin-дер
+  uz: Mixinlar
 tools-themes-deletethememessage-delete:
   ru: Удалить!
   en: Delete
   hy: Ջնջել!
   it: Eliminare!
   es: Eliminar
+  kk: Жою!
+  uz: O'chirish!
 tools-themes-setcurrentthememessage-ok:
   ru: Продолжить
   en: Continue
   hy: Շարունակել
   it: Continua
   es: Continuar
+  kk: Жалғастыру
+  uz: Davom etish
 tools-themes-deletevarsmessage-delete:
   ru: Удалить!
   en: Delete
   hy: Ջնջել!
   it: Eliminare!
   es: Eliminar
+  kk: Жою!
+  uz: O'chirish!
 tools-themes-deletevarmessage-delete:
   ru: Удалить!
   en: Delete
   hy: Ջնջել!
   it: Eliminare!
   es: Eliminar
+  kk: Жою!
+  uz: O'chirish!
 tools-themes-deletemixinsmessage-delete:
   ru: Удалить!
   en: Delete
   hy: Ջնջել
   es: Eliminar
   it: Elimina
+  kk: Жою!
+  uz: O'chirish!
 tools-themes-deletemixinmessage-delete:
   ru: Удалить!
   en: Delete
   hy: Ջնջել
   it: Elimina
   es: Eliminar
+  kk: Жою!
+  uz: O'chirish!
 tools-themes-contextmenu-importtheme:
   ru: Импортировать
   en: Import
   hy: Ներմուծում
   it: Importare
   es: Importar
+  kk: Импорттау
+  uz: Import qilish
 tools-themes-windowtitle-importtheme:
   ru: Импортировать тему
   en: Import theme
   hy: Ներմուծման թեմա
   it: Importa tema
   es: Importar tema
+  kk: Тақырыпты импорттау
+  uz: Mavzuni import qilish
 tools-themes-windowtitle-importtheme-fields-json_data:
   ru: Данные темы
   en: Theme data
   hy: Թեմայի տվյալներ
   it: Dati sull'argomento
   es: Datos del tema
+  kk: Тақырып деректері
+  uz: Mavzu ma'lumotlari
