@@ -177,8 +177,10 @@ tools-notices-fields-body-note:
     come variabili di modello
   es: Ingrese el cuerpo del correo. Se permiten inserciones del tipo [[name]] como
     variables de plantilla
-  kk: Хаттың денесін енгізіңіз. [[name]] түріндегі кірістірулер үлгі айнымалылары ретінде рұқсат етіледі
-  uz: Xatning tanasini kiriting. [[name]] shaklidagi kiritmalar shablon o'zgaruvchilari sifatida ruxsat etiladi
+  kk: Хаттың денесін енгізіңіз. [[name]] түріндегі кірістірулер үлгі айнымалылары
+    ретінде рұқсат етіледі
+  uz: Xatning tanasini kiriting. [[name]] shaklidagi kiritmalar shablon
+    o'zgaruvchilari sifatida ruxsat etiladi
 tools-notices-contextmenu-newnotice:
   ru: Создать шаблон
   en: Create a template
@@ -210,11 +212,12 @@ tools-menu-settings-data-desc:
     предварительно созданные менеджером в менеджере настроек
   en: Site Settings<br />Here you can edit some settings previously created by the
     manager in the settings manager
-  it: Impostazioni del sito<br />Qui puoi modificare alcune impostazioni precedentemente
-    create dal manager nel gestore delle impostazioni
+  it: Impostazioni del sito<br />Qui puoi modificare alcune impostazioni
+    precedentemente create dal manager nel gestore delle impostazioni
   es: Ajustes del sitio<br />Aquí puedes editar algunas configuraciones creadas
     previamente por el administrador en el administrador de configuraciones
-  kk: Сайт параметрлері<br />Мұнда сіз параметрлер менеджерінде менеджер бұрын жасаған кейбір параметрлерді өңдей аласыз
+  kk: Сайт параметрлері<br />Мұнда сіз параметрлер менеджерінде менеджер бұрын
+    жасаған кейбір параметрлерді өңдей аласыз
 tools-menu-filesondisk:
   hy: Ֆայլեր սկավառակի վրա
   ru: Файлы на диске
@@ -234,16 +237,21 @@ tools-menu-filesondisk-desc:
   en: Files located on the current server, on the local machine. You can add or
     delete unnecessary files. Attention! When deleting files, you need to take
     into account that some lines in the repositories may refer to them
-  it: File situati sul server corrente, sulla macchina locale. Puoi aggiungere
-    o eliminare file non necessari. Attenzione! Quando si eliminano i file, è
-    necessario tenere conto che alcune righe nei repository possono fare riferimento
-    ad essi
+  it: File situati sul server corrente, sulla macchina locale. Puoi aggiungere o
+    eliminare file non necessari. Attenzione! Quando si eliminano i file, è
+    necessario tenere conto che alcune righe nei repository possono fare
+    riferimento ad essi
   es: Archivos ubicados en el servidor actual, en la máquina local. Puede agregar
-    o eliminar archivos innecesarios. ¡Atención! Al eliminar archivos, es necesario
-    tener en cuenta que algunas líneas en los repositorios pueden hacer referencia
-    a ellos
-  kk: Ағымдағы сервердегі, жергілікті машинадағы файлдар. Қажетсіз файлдарды қосуға немесе жоюға болады. Назар аударыңыз! Файлдарды жойған кезде, репозиторийлердегі кейбір жолдар оларға сілтеме жасай алатынын ескеру қажет
-  uz: Joriy serverda, mahalliy mashinada joylashgan fayllar. Keraksiz fayllarni qo'shishingiz yoki o'chirishingiz mumkin. Diqqat! Fayllarni o'chirishda, ba'zi satrlar omborlarda ularga murojaat qilishi mumkinligini hisobga olish kerak
+    o eliminar archivos innecesarios. ¡Atención! Al eliminar archivos, es
+    necesario tener en cuenta que algunas líneas en los repositorios pueden
+    hacer referencia a ellos
+  kk: Ағымдағы сервердегі, жергілікті машинадағы файлдар. Қажетсіз файлдарды
+    қосуға немесе жоюға болады. Назар аударыңыз! Файлдарды жойған кезде,
+    репозиторийлердегі кейбір жолдар оларға сілтеме жасай алатынын ескеру қажет
+  uz: Joriy serverda, mahalliy mashinada joylashgan fayllar. Keraksiz fayllarni
+    qo'shishingiz yoki o'chirishingiz mumkin. Diqqat! Fayllarni o'chirishda,
+    ba'zi satrlar omborlarda ularga murojaat qilishi mumkinligini hisobga olish
+    kerak
 tools-menu-filesremote:
   hy: Մեդիա շտեմարան
   ru: Хранилище медиа
@@ -261,8 +269,10 @@ tools-menu-filesremote-desc:
   it: Libreria file remota. Puoi aggiungere bucket e/o svuotarli se necessario
   es: Biblioteca de archivos remotos. Puede agregar buckets y/o vaciarlos si es
     necesario
-  kk: Қашықтағы файл кітапханасы. Қажет болса, шелек қосуға және/немесе босатуға болады
-  uz: Uzoq fayl kutubxonasi. Agar kerak bo'lsa, chelaklarni qo'shishingiz va/yoki bo'shatishingiz mumkin
+  kk: Қашықтағы файл кітапханасы. Қажет болса, шелек қосуға және/немесе босатуға
+    болады
+  uz: Uzoq fayl kutubxonasi. Agar kerak bo'lsa, chelaklarni qo'shishingiz va/yoki
+    bo'shatishingiz mumkin
 tools-menu-settings:
   hy: Կայքի կարգավորումները
   ru: Настройки сайта
@@ -279,12 +289,16 @@ tools-menu-settings-desc:
     использовать при разработке или выводе информации на проекте
   en: Settings manager. You can create a setting that can be used later in the
     development or output of information on the project
-  it: Gestore delle impostazioni. Puoi creare un'impostazione che può essere utilizzata
-    successivamente nello sviluppo o nell'output di informazioni sul progetto
+  it: Gestore delle impostazioni. Puoi creare un'impostazione che può essere
+    utilizzata successivamente nello sviluppo o nell'output di informazioni sul
+    progetto
   es: Administrador de configuraciones. Puede crear una configuración que se puede
-    utilizar más tarde en el desarrollo o en la salida de información en el proyecto
-  kk: Параметрлер менеджері. Жобада ақпаратты әзірлеу немесе шығару кезінде кейінірек пайдалануға болатын параметр жасауға болады
-  uz: Sozlamalar menejeri. Loyihada ma'lumotlarni ishlab chiqish yoki chiqarishda keyinchalik foydalanish mumkin bo'lgan sozlamani yaratishingiz mumkin
+    utilizar más tarde en el desarrollo o en la salida de información en el
+    proyecto
+  kk: Параметрлер менеджері. Жобада ақпаратты әзірлеу немесе шығару кезінде
+    кейінірек пайдалануға болатын параметр жасауға болады
+  uz: Sozlamalar menejeri. Loyihada ma'lumotlarni ishlab chiqish yoki chiqarishda
+    keyinchalik foydalanish mumkin bo'lgan sozlamani yaratishingiz mumkin
 tools-menu-notices:
   hy: Հաղորդագրությունների կաղապարներ
   ru: Шаблоны сообщений
@@ -300,9 +314,12 @@ tools-menu-notices-desc:
     электронной почты
   en: Create message templates for communicating with the user via email
   it: Crea modelli di messaggi per comunicare con l'utente tramite e-mail
-  es: Cree plantillas de mensajes para comunicarse con el usuario por correo electrónico
-  kk: Пайдаланушымен электрондық пошта арқылы байланысу үшін хабар шаблондарын жасаңыз
-  uz: Foydalanuvchi bilan elektron pochta orqali muloqot qilish uchun xabar shablonlarini yarating
+  es: Cree plantillas de mensajes para comunicarse con el usuario por correo
+    electrónico
+  kk: Пайдаланушымен электрондық пошта арқылы байланысу үшін хабар шаблондарын
+    жасаңыз
+  uz: Foydalanuvchi bilan elektron pochta orqali muloqot qilish uchun xabar
+    shablonlarini yarating
 tools-menu-backups:
   hy: Կույր համակարգ
   ru: Слепки системы
@@ -322,8 +339,10 @@ tools-menu-backups-desc:
     possibile restituire i dati dal file ricevuto
   es: Cree un punto de restauración en caso de situaciones críticas. En el futuro,
     será posible devolver los datos del archivo recibido
-  kk: Сындарлы жағдайларда қалпына келтіру нүктесін жасаңыз. Болашақта алынған файлдан деректерді қайтаруға болады
-  uz: Tanqidiy vaziyatlarda tiklash nuqtasini yarating. Kelajakda olingan fayldan ma'lumotlarni qaytarish mumkin bo'ladi
+  kk: Сындарлы жағдайларда қалпына келтіру нүктесін жасаңыз. Болашақта алынған
+    файлдан деректерді қайтаруға болады
+  uz: Tanqidiy vaziyatlarda tiklash nuqtasini yarating. Kelajakda olingan fayldan
+    ma'lumotlarni qaytarish mumkin bo'ladi
 tools-menu-execute:
   hy: Կատարել
   ru: Выполнить
@@ -343,8 +362,10 @@ tools-menu-execute-desc:
     dell'intero progetto, danni irreversibili sono possibili!
   es: Ejecute el código (PHP). ¡Atención! El código se ejecuta en el entorno de
     todo el proyecto, es posible un daño irreversible!
-  kk: Кодты орындау (PHP). Назар аударыңыз! Код бүкіл жоба ортасында орындалады, қайтымсыз зақым келуі мүмкін!
-  uz: Kodni bajaring (PHP). Diqqat! Kod butun loyiha muhiti doirasida bajariladi, qaytarib bo'lmaydigan zarar bo'lishi mumkin!
+  kk: Кодты орындау (PHP). Назар аударыңыз! Код бүкіл жоба ортасында орындалады,
+    қайтымсыз зақым келуі мүмкін!
+  uz: Kodni bajaring (PHP). Diqqat! Kod butun loyiha muhiti doirasida bajariladi,
+    qaytarib bo'lmaydigan zarar bo'lishi mumkin!
 tools-menu-themes:
   hy: Կայքի թեմաներ
   ru: Темы сайта
@@ -364,8 +385,10 @@ tools-menu-themes-desc:
     esistente
   es: Personalice la apariencia del sitio. Puede crear un nuevo tema o editar uno
     existente
-  kk: Сайттың көрінісін реттеңіз. Жаңа тақырыпты жасауға немесе бар тақырыпты өңдеуге болады
-  uz: Sayt ko'rinishini sozlang. Yangi mavzu yaratishingiz yoki mavjud mavzuni tahrirlashingiz mumkin
+  kk: Сайттың көрінісін реттеңіз. Жаңа тақырыпты жасауға немесе бар тақырыпты
+    өңдеуге болады
+  uz: Sayt ko'rinishini sozlang. Yangi mavzu yaratishingiz yoki mavjud mavzuni
+    tahrirlashingiz mumkin
 tools-backup-create:
   ru: Создать слепок
   en: Create an impression
@@ -374,10 +397,6 @@ tools-backup-create:
   es: Crear una impresión
   kk: Сурет жасау
   uz: Tasvir yaratish
-
-
-
-
 tools-backup-create-info:
   ru: Нажмите на кнопку «создать слепок» и дождитесь окончания процесса. После
     завершения в списке слепкой внизу этой страницы появится новый пункт
@@ -387,14 +406,18 @@ tools-backup-create-info:
     a cast at the bottom of this page
   hy: 'Սեղմիր "Ստեղծել կույր" կոճակը եւ սպասեք գործընթացի ավարտին: Ցուցակի ավարտից
     հետո այս էջի ներքեւի մասում կույրով կհայտնվի նոր կետ, որը նշված է ամսաթվով'
-  it: Fare clic sul pulsante "crea un cast" e attendere il completamento del processo.
-    Dopo il completamento, un nuovo elemento contrassegnato con una data apparirà
-    nell'elenco con un cast in fondo a questa pagina
+  it: Fare clic sul pulsante "crea un cast" e attendere il completamento del
+    processo. Dopo il completamento, un nuovo elemento contrassegnato con una
+    data apparirà nell'elenco con un cast in fondo a questa pagina
   es: Haga clic en el botón "crear una copia" y espere a que termine el proceso.
-    Después de la finalización, aparecerá un nuevo elemento marcado con una fecha
-    en la lista con una copia en la parte inferior de esta página
-  kk: "\"Құйма жасау\" түймесін басып, процестің аяқталуын күтіңіз. Аяқталғаннан кейін, осы беттің төменгі жағындағы тізімде күнмен белгіленген жаңа элемент пайда болады"
-  uz: "\"Quyma yaratish\" tugmasini bosing va jarayon tugashini kuting. Tugallangandan so'ng, ushbu sahifaning pastki qismidagi ro'yxatda sana bilan belgilangan yangi element paydo bo'ladi"
+    Después de la finalización, aparecerá un nuevo elemento marcado con una
+    fecha en la lista con una copia en la parte inferior de esta página
+  kk: '"Құйма жасау" түймесін басып, процестің аяқталуын күтіңіз. Аяқталғаннан
+    кейін, осы беттің төменгі жағындағы тізімде күнмен белгіленген жаңа элемент
+    пайда болады'
+  uz: "\"Quyma yaratish\" tugmasini bosing va jarayon tugashini kuting.
+    Tugallangandan so'ng, ushbu sahifaning pastki qismidagi ro'yxatda sana bilan
+    belgilangan yangi element paydo bo'ladi"
 tools-backups-dataempty:
   ru: Слепки не найдены
   en: No restore points found
@@ -579,7 +602,6 @@ tools-storages-backups-fields-cron-dayofweek-note:
   es: Elija un día de la semana
   kk: Аптаның күнін таңдаңыз
   uz: Haftaning kunini tanlang
-
 tools-storages-backups-fields-file-desc:
   ru: Шаблон названия файла
   en: File name template
@@ -592,8 +614,10 @@ tools-storages-backups-fields-file-note:
   ru: Введите шаблон названия файла, например backup_{date}_{index}.backup
   en: Enter a template for the file name, for example backup_{date}_{index}.backup
   hy: Մուտքագրեք ֆայլի անունը Կաղապար, օրինակ backup_ {date}_{index}.backup
-  it: Inserisci un modello per il nome del file, ad esempio backup_{date}_{index}.backup
-  es: Ingrese una plantilla para el nombre del archivo, por ejemplo backup_{date}_{index}.backup
+  it: Inserisci un modello per il nome del file, ad esempio
+    backup_{date}_{index}.backup
+  es: Ingrese una plantilla para el nombre del archivo, por ejemplo
+    backup_{date}_{index}.backup
   kk: Файл атауының үлгісін енгізіңіз, мысалы backup_{date}_{index}.backup
   uz: Fayl nomi uchun shablonni kiriting, masalan backup_{date}_{index}.backup
 tools-backups-windowtitle-editbackup:
@@ -804,10 +828,6 @@ tools-execute-script-title:
   es: Script para ejecutar
   kk: Орындауға арналған скрипт
   uz: Bajariladigan skript
-
-
-
-
 tools-execute-create-info:
   ru: >-
     Внимание! Скрипт исполняется в окружении всего проекта, возможны необратимые
@@ -825,21 +845,23 @@ tools-execute-create-info:
 
     Օգտագօրծեք Logger $logger էկրանին ինֆօրմացյա ցույց տալու համար, օրինակ: $logger->debug('Տեստաին նամակ');
   it: >-
-    Attenzione! Lo script viene eseguito nell'ambiente dell'intero progetto, sono
-    possibili conseguenze irreversibili, si prega di fare attenzione 
+    Attenzione! Lo script viene eseguito nell'ambiente dell'intero progetto,
+    sono possibili conseguenze irreversibili, si prega di fare attenzione 
 
     Utilizzare Logger $logger per inviare informazioni al client, ad esempio: $logger->debug('Messaggio di prova');
   es: >-
-    ¡Atención! El script se ejecuta en el entorno de todo el proyecto, son posibles
-    consecuencias irreversibles, por favor tenga cuidado 
+    ¡Atención! El script se ejecuta en el entorno de todo el proyecto, son
+    posibles consecuencias irreversibles, por favor tenga cuidado 
 
     Utilice Logger $logger para enviar información al cliente, por ejemplo: $logger->debug('Mensaje de prueba');
   kk: >-
-    Назар аударыңыз! Скрипт бүкіл жоба ортасында орындалады, қайтымсыз салдарлар болуы мүмкін, абай болыңыз 
+    Назар аударыңыз! Скрипт бүкіл жоба ортасында орындалады, қайтымсыз салдарлар
+    болуы мүмкін, абай болыңыз 
 
     Ақпаратты клиентке жіберу үшін Logger $logger пайдаланыңыз, мысалы: $logger->debug('Тесттік хабарлама');
   uz: >-
-    Diqqat! Skript butun loyiha muhiti doirasida bajariladi, qaytarib bo'lmaydigan oqibatlar bo'lishi mumkin, iltimos ehtiyot bo'ling 
+    Diqqat! Skript butun loyiha muhiti doirasida bajariladi, qaytarib
+    bo'lmaydigan oqibatlar bo'lishi mumkin, iltimos ehtiyot bo'ling 
 
     Ma'lumotni mijozga yuborish uchun Logger $logger dan foydalaning, masalan: $logger->debug('Sinov xabari');
 tools-execute-run-success:
@@ -1018,10 +1040,6 @@ tools-storages-themes-desc:
   es: Temas
   kk: Тақырыптар
   uz: Mavzular
-
-
-
-
 tools-storages-themes-fields-name-desc:
   ru: Наименование
   en: Name
@@ -1181,10 +1199,14 @@ tools-themes-deletethememessage:
     linked to this topic
   hy: "Համոզված եք, որ ցանկանում եք ջնջել թեման: Այս թեմային առնչվող կայքերում
     կարող են առաջանալ արտեֆակտներ"
-  it: Sei sicuro di voler eliminare il tema? Possono verificarsi artefatti sui siti collegati a questo tema
-  es: ¿Está seguro de que desea eliminar el tema? Pueden ocurrir artefactos en los sitios vinculados a este tema
-  kk: Тақырыпты жойғыңыз келетініне сенімдісіз бе? Осы тақырыпқа байланысты сайттарда артефактілер пайда болуы мүмкін
-  uz: Mavzuni o'chirishni xohlaysizmi? Ushbu mavzuga bog'langan saytlarda artefaktlar paydo bo'lishi mumkin
+  it: Sei sicuro di voler eliminare il tema? Possono verificarsi artefatti sui
+    siti collegati a questo tema
+  es: ¿Está seguro de que desea eliminar el tema? Pueden ocurrir artefactos en los
+    sitios vinculados a este tema
+  kk: Тақырыпты жойғыңыз келетініне сенімдісіз бе? Осы тақырыпқа байланысты
+    сайттарда артефактілер пайда болуы мүмкін
+  uz: Mavzuni o'chirishni xohlaysizmi? Ushbu mavzuga bog'langan saytlarda
+    artefaktlar paydo bo'lishi mumkin
 tools-storages-themes-fields-vars-type-values-font-family:
   ru: Название шрифта
   en: Font name
@@ -1249,10 +1271,6 @@ tools-themes-windowtitle-addmixintitle:
   es: Añadir Mixin
   kk: Mixin қосу
   uz: Mixin qo'shish
-
-
-
-
 tools-themes-windowtitle-editmixintitle:
   ru: Редактировать Mixin
   en: Edit Mixin
@@ -1483,5 +1501,7 @@ tools-menu-jobs-desc:
   hy: Ցուցադրում է հանձնարարված առաջադրանքների և թարմացումների ցանկը առցանց
   it: Visualizza un elenco di attività assegnate e aggiornamenti online
   es: Muestra una lista de tareas asignadas y actualizaciones en línea
-  kk: Тағайындалған тапсырмалар тізімін көрсетеді және онлайн жаңартуларды көрсетеді
-  uz: Belgilangan vazifalar ro'yxatini ko'rsatadi va onlayn yangilanishlarni ko'rsatadi
+  kk: Тағайындалған тапсырмалар тізімін көрсетеді және онлайн жаңартуларды
+    көрсетеді
+  uz: Belgilangan vazifalar ro'yxatini ko'rsatadi va onlayn yangilanishlarni
+    ko'rsatadi

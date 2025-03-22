@@ -26,7 +26,7 @@ class BackupWorker extends BaseWorker
 
         $worker = $this;
         $this->_log->HandleEvent(EventsContainer::LogWriten, function ($event, $args) use ($worker, $comet, $user) {
-            $comet->SendToUser(App::$request->headers->{'requester'}, $user, $worker->key, (object) ['level' => $args->type, 'message' => $args->message, 'context' => $args->context]);
+            $comet->SendToUser(App::$request->headers->{'requester'}, $user, $worker->key, (object) ['level' => $args->type, 'message' => $args->message, 'context' => $args->context], false);
         });
 
         try {
@@ -42,7 +42,7 @@ class BackupWorker extends BaseWorker
         $backup->Save();
 
         $this->_log->info("--complete--");
-        $comet->SendToUser(App::$request->headers->{'requester'}, $user, 'message', (object) ['text' => 'Backup complete! Job: ' . $worker->key . ', backup: ' . $backup->id, 'exec' => '() => App.Router.Navigate(\'/mainframe/more/backup/\', {}, true, true)']);
+        $comet->SendToUser(App::$request->headers->{'requester'}, $user, 'message', (object) ['text' => 'Backup complete! Job: ' . $worker->key . ', backup: ' . $backup->id, 'exec' => '() => App.Router.Navigate(\'/mainframe/more/backup/\', {}, true, true)'], false);
 
 
 

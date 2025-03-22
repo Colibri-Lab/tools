@@ -21,7 +21,7 @@ class ExecuteWorker extends BaseWorker
         
         $worker = $this;
         $this->_log->HandleEvent(EventsContainer::LogWriten, function($event, $args) use ($worker, $comet, $user, $requester) {
-            $comet->SendToUser($requester, $user, $worker->key, (object)['level' => $args->type, 'message' => $args->message, 'context' => $args->context]);
+            $comet->SendToUser($requester, $user, $worker->key, (object)['level' => $args->type, 'message' => $args->message, 'context' => $args->context], false);
         });
         
         try {
