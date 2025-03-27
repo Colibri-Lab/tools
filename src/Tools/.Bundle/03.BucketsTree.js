@@ -35,7 +35,7 @@ App.Modules.Tools.BucketsTree = class extends Colibri.UI.Tree {
             }
             newNode.text = bucket.name;
             newNode.isLeaf = true;
-            newNode.icon = App.Modules.Sites.Icons.BucketIcon;
+            newNode.icon = App.Modules.Tools.Icons.BucketIcon;
             newNode.tag = bucket;
 
             found.push(bucket.token);
