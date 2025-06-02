@@ -55,6 +55,9 @@ class Notice extends BaseModelDataRow
 
         $object = (array) $object;
         foreach ($object as $key => $value) {
+            if(!$value) {
+                continue;
+            }
             $body = str_replace('[[' . $key . ']]', $value, $body);
             $subject = str_replace('[[' . $key . ']]', $value, $subject);
         }
