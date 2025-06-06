@@ -58,8 +58,9 @@ class Notice extends BaseModelDataRow
             if(!$value) {
                 continue;
             }
-            $body = str_replace('[[' . $key . ']]', $value, $body);
-            $subject = str_replace('[[' . $key . ']]', $value, $subject);
+
+            try { $body = str_replace('[[' . $key . ']]', $value, $body); } catch(\Throwable $e) { }
+            try {$subject = str_replace('[[' . $key . ']]', $value, $subject); } catch(\Throwable $e) { }
         }
 
         $this->body = $body;
