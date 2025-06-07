@@ -89,12 +89,12 @@ class Settings extends BaseModelDataTable
     public static function LoadByFilter(
         int $page = -1,
         int $pagesize = 20,
-        string $filter = null,
-        string $order = null,
+        ?string $filter = null,
+        ?string $order = null,
         array $params = [],
         bool $calculateAffected = true
     ): ?Settings {
-        $storage = Storages::Create()->Load('settings', 'tools');
+        $storage = Storages::Instance()->Load('settings', 'tools');
         return parent::_loadByFilter($storage, $page, $pagesize, $filter, $order, $params, $calculateAffected);
     }
 
@@ -116,7 +116,7 @@ class Settings extends BaseModelDataTable
         string $sortOrder = 'asc'
     ) : ?Settings
     {
-        $storage = Storages::Create()->Load('settings', 'tools');
+        $storage = Storages::Instance()->Load('settings', 'tools');
         [$filter, $order, $params] = $storage->accessPoint->ProcessFilters($storage, $searchTerm, $filtersArray, $sortField, $sortOrder);
         return parent::_loadByFilter($storage, $page, $pagesize, $filter, $order, $params);
     }

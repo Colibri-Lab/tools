@@ -32,12 +32,6 @@ use CometApiClient\Client as CometClient;
  */
 class Module extends BaseModule
 {
-    /**
-     * Синглтон
-     *
-     * @var Module
-     */
-    public static $instance = null;
 
 
     /**
@@ -46,7 +40,6 @@ class Module extends BaseModule
      */
     public function InitializeModule(): void
     {
-        self::$instance = $this;
 
     }
 

@@ -48,9 +48,9 @@ class Themes extends BaseModelDataTable
      * @param array $params параметры к запросу
      * @return Themes
      */
-    static function LoadByFilter(int $page = -1, int $pagesize = 20, string $filter = null, string $order = null, array $params = [], bool $calculateAffected = true): ? Themes
+    static function LoadByFilter(int $page = -1, int $pagesize = 20, ?string $filter = null, ?string $order = null, array $params = [], bool $calculateAffected = true): ? Themes
     {
-        $storage = Storages::Create()->Load('themes', 'tools');
+        $storage = Storages::Instance()->Load('themes', 'tools');
         return parent::_loadByFilter($storage, $page, $pagesize, $filter, $order, $params, $calculateAffected);
     }
 
@@ -72,7 +72,7 @@ class Themes extends BaseModelDataTable
         string $sortOrder = 'asc'
     ) : ?Themes
     {
-        $storage = Storages::Create()->Load('themes', 'tools');
+        $storage = Storages::Instance()->Load('themes', 'tools');
         [$filter, $order, $params] = $storage->accessPoint->ProcessFilters($storage, $searchTerm, $filtersArray, $sortField, $sortOrder);
         return parent::_loadByFilter($storage, $page, $pagesize, $filter, $order, $params);
     }
@@ -145,7 +145,7 @@ class Themes extends BaseModelDataTable
      */
     static function DeleteAllByFilter(string $filter): bool
     {
-        $storage = Storages::Create()->Load('themes');
+        $storage = Storages::Instance()->Load('themes');
         return self::DeleteByFilter($storage, $filter);
     }
 

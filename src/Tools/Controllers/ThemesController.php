@@ -29,11 +29,11 @@ class ThemesController extends WebController
     public function List(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
 
-        if (!SecurityModule::$instance->current) {
+        if (!SecurityModule::Instance()->current) {
             throw new PermissionDeniedException('Permission denied', 403);
         }
 
-        if (!SecurityModule::$instance->current->IsCommandAllowed('tools.backups')) {
+        if (!SecurityModule::Instance()->current->IsCommandAllowed('tools.backups')) {
             throw new PermissionDeniedException('Permission denied', 403);
         }
 
@@ -55,11 +55,11 @@ class ThemesController extends WebController
      */
     public function Delete(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
-        if (!SecurityModule::$instance->current) {
+        if (!SecurityModule::Instance()->current) {
             throw new PermissionDeniedException('Permission denied', 403);
         }
 
-        if (!SecurityModule::$instance->current->IsCommandAllowed('tools.backups.remove')) {
+        if (!SecurityModule::Instance()->current->IsCommandAllowed('tools.backups.remove')) {
             throw new PermissionDeniedException('Permission denied', 403);
         }
 
@@ -86,12 +86,12 @@ class ThemesController extends WebController
      */
     public function Save(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
-        if (!SecurityModule::$instance->current) {
+        if (!SecurityModule::Instance()->current) {
             throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $id = $post->{'id'};
-        if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes' . ($id ? '.edit' : '.add'))) {
+        if (!SecurityModule::Instance()->current->IsCommandAllowed('tools.themes' . ($id ? '.edit' : '.add'))) {
             throw new PermissionDeniedException('Permission denied', 403);
         }
 
@@ -145,12 +145,12 @@ class ThemesController extends WebController
      */
     public function Import(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
-        if (!SecurityModule::$instance->current) {
+        if (!SecurityModule::Instance()->current) {
             throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $id = $post->{'id'};
-        if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
+        if (!SecurityModule::Instance()->current->IsCommandAllowed('tools.themes.edit')) {
             throw new PermissionDeniedException('Permission denied', 403);
         }
 
@@ -206,12 +206,12 @@ class ThemesController extends WebController
      */
     public function SetAsCurrent(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
-        if (!SecurityModule::$instance->current) {
+        if (!SecurityModule::Instance()->current) {
             throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $id = $post->{'id'};
-        if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
+        if (!SecurityModule::Instance()->current->IsCommandAllowed('tools.themes.edit')) {
             throw new PermissionDeniedException('Permission denied', 403);
         }
 
@@ -245,13 +245,13 @@ class ThemesController extends WebController
      */
     public function SaveVar(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
-        if (!SecurityModule::$instance->current) {
+        if (!SecurityModule::Instance()->current) {
             throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $id = $post->{'id'};
 
-        if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
+        if (!SecurityModule::Instance()->current->IsCommandAllowed('tools.themes.edit')) {
             throw new PermissionDeniedException('Permission denied', 403);
         }
 
@@ -298,13 +298,13 @@ class ThemesController extends WebController
      */
     public function DeleteVars(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
-        if (!SecurityModule::$instance->current) {
+        if (!SecurityModule::Instance()->current) {
             throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $id = $post->{'id'};
 
-        if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
+        if (!SecurityModule::Instance()->current->IsCommandAllowed('tools.themes.edit')) {
             throw new PermissionDeniedException('Permission denied', 403);
         }
 
@@ -344,13 +344,13 @@ class ThemesController extends WebController
      */
     public function SaveMixin(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
-        if (!SecurityModule::$instance->current) {
+        if (!SecurityModule::Instance()->current) {
             throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $id = $post->{'id'};
 
-        if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
+        if (!SecurityModule::Instance()->current->IsCommandAllowed('tools.themes.edit')) {
             throw new PermissionDeniedException('Permission denied', 403);
         }
 
@@ -394,13 +394,13 @@ class ThemesController extends WebController
      */
     public function DeleteMixins(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
-        if (!SecurityModule::$instance->current) {
+        if (!SecurityModule::Instance()->current) {
             throw new PermissionDeniedException('Permission denied', 403);
         }
 
         $id = $post->{'id'};
 
-        if (!SecurityModule::$instance->current->IsCommandAllowed('tools.themes.edit')) {
+        if (!SecurityModule::Instance()->current->IsCommandAllowed('tools.themes.edit')) {
             throw new PermissionDeniedException('Permission denied', 403);
         }
 

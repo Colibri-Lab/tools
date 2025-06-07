@@ -24,7 +24,7 @@ class ExecuteController extends WebController
     public function Run(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
 
-        $currentUser = Module::$instance->current;
+        $currentUser = Module::Instance()->current;
         $userGUID = md5($currentUser->id);
 
         $script = $post->{'script'};

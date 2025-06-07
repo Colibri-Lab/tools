@@ -70,7 +70,7 @@ class Backup extends BaseModelDataRow
 
 	public function getPropertyController(): string
 	{
-		$currentUser = SecurityModule::$instance->current;
+		$currentUser = SecurityModule::Instance()->current;
 		$userGUID = $currentUser ? md5($currentUser->id) : null;
 		return '/usr/bin/sh ' . App::$appRoot . 'bin/tools-backup.sh ' . $this->id . ' ' . $userGUID;
 	}
@@ -90,8 +90,8 @@ class Backup extends BaseModelDataRow
 
 		$logger->debug('Starting backup ...');
 
-		if (method_exists(App::$instance, 'Backup')) {
-			App::$instance->Backup($logger, $runtimePath . $fileName . '/');
+		if (method_exists(App::Instance(), 'Backup')) {
+			App::Instance()->Backup($logger, $runtimePath . $fileName . '/');
 		}
 		foreach (App::$moduleManager->list as $module) {
 			$logger->debug('Backuping module ' . $module->name);

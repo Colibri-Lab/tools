@@ -32,7 +32,7 @@ class JobsController extends WebController
         $message = 'Result message';
         $code = 200;
 
-        $result = QueueManager::Create()->Dashboard();
+        $result = QueueManager::Instance()->Dashboard();
             
         return $this->Finish(
             $code,

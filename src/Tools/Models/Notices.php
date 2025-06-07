@@ -59,7 +59,7 @@ class Notices extends BaseModelDataTable
         array $params = [],
         bool $calculateAffected = true
     ): ?Notices {
-        $storage = Storages::Create()->Load('notices', 'tools');
+        $storage = Storages::Instance()->Load('notices', 'tools');
         return parent::_loadByFilter($storage, $page, $pagesize, $filter, $order, $params, $calculateAffected);
     }
 
@@ -81,7 +81,7 @@ class Notices extends BaseModelDataTable
         string $sortOrder = 'asc'
     ) : ?Notices
     {
-        $storage = Storages::Create()->Load('notices', 'tools');
+        $storage = Storages::Instance()->Load('notices', 'tools');
         [$filter, $order, $params] = $storage->accessPoint->ProcessFilters($storage, $searchTerm, $filtersArray, $sortField, $sortOrder);
         return parent::_loadByFilter($storage, $page, $pagesize, $filter, $order, $params);
     }
@@ -135,7 +135,7 @@ class Notices extends BaseModelDataTable
     public static function Send(string $recipient, Notice $notice, ?array $configArray = null): bool
     {
         try {
-            $configArray = $configArray ?: Module::$instance->Config()->Query('config.smtp')->AsArray();
+            $configArray = $configArray ?: Module::Instance()->Config()->Query('config.smtp')->AsArray();
             SmtpHelper::Send($configArray, $recipient, $notice->subject, $notice->body, $notice->{'attachments'});
             return true;
         } catch (\Throwable $e) {
