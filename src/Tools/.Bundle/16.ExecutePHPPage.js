@@ -43,8 +43,11 @@ App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component
         this._button.AddHandler('Clicked', (event, args) => this.__runClicked(event, args));
         this._kill.AddHandler('Clicked', (event, args) => this.__killClicked(event, args));
 
-        App.Comet && App.Comet.AddHandler('EventReceived', (event, args) => this._cometEventReceived(event, args));
-
+        if(App.Comet) {
+            this.__eventReceived = (event, args) => this.__cometEventReceived(event, args);
+            App.Comet.RemoveHandler('EventReceived', this.__eventReceived);
+            App.Comet.AddHandler('EventReceived', this.__eventReceived);
+        } 
     }
 
     _disableControls() {
@@ -103,7 +106,7 @@ App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component
         });
     }
 
-    _cometEventReceived(event, args) {
+    __cometEventReceived(event, args) {
         if(args.event.action === this._runningChannel) {
             // наше, обрабатываем
             // это дебаг, выводим с список 

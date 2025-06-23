@@ -24,10 +24,16 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
 
         console.log('Initializing module Tools');
 
-        App.AddHandler('ApplicationReady', (event, args) => {
+        this.__appReadyHandler = (event, args) => {
             this.Render(document.body);
-            App.Comet && App.Comet.AddHandler('EventReceived', (event, args) => this._cometEventReceived(event, args));
-        });
+            if(App.Comet) {
+                this.__eventReceived = (event, args) => this.__cometEventReceived(event, args);
+                App.Comet.RemoveHandler('EventReceived', this.__eventReceived);
+                App.Comet.AddHandler('EventReceived', this.__eventReceived);
+            } 
+        };
+        App.RemoveHandler('ApplicationReady', this.__appReadyHandler);
+        App.AddHandler('ApplicationReady', this.__appReadyHandler);
 
         this.AddHandler('CallProgress', (event, args) => {
             if(args.request === 'UploadFiles') {
@@ -373,7 +379,7 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
     }
 
     
-    _cometEventReceived(event, args) {
+    __cometEventReceived(event, args) {
         if(args.event.action.substring(0, 7) == 'backup-') {
             if(!this._backuplog) {
                 this._backuplog = new App.Modules.Tools.UI.BackupLog('backuplog', document.body);

@@ -29,12 +29,14 @@ tools-execute-create-info:
     irreversible consequences are possible, please be careful
   hy: Ուշադրություն. Սցենարը կատարվում է ողջ նախագծի միջավայրում, հնարավոր են
     անդառնալի հետևանքներ, խնդրում եմ զգույշ լինել
-  it: Attenzione! Lo script viene eseguito nell'ambiente dell'intero progetto, sono
-    possibili conseguenze irreversibili, si prega di fare attenzione
-  es: ¡Atención! El script se ejecuta en el entorno de todo el proyecto, son posibles
-    consecuencias irreversibles, por favor tenga cuidado
-  kk: Назар аударыңыз! Скрипт бүкіл жоба ортасында орындалады, қайтымсыз салдарлар болуы мүмкін, абай болыңыз
-  uz: Diqqat! Skript butun loyiha muhiti doirasida bajariladi, qaytarib bo'lmaydigan oqibatlar bo'lishi mumkin, iltimos ehtiyot bo'ling
+  it: Attenzione! Lo script viene eseguito nell'ambiente dell'intero progetto,
+    sono possibili conseguenze irreversibili, si prega di fare attenzione
+  es: ¡Atención! El script se ejecuta en el entorno de todo el proyecto, son
+    posibles consecuencias irreversibles, por favor tenga cuidado
+  kk: Назар аударыңыз! Скрипт бүкіл жоба ортасында орындалады, қайтымсыз салдарлар
+    болуы мүмкін, абай болыңыз
+  uz: Diqqat! Skript butun loyiha muhiti doirasida bajariladi, qaytarib
+    bo'lmaydigan oqibatlar bo'lishi mumkin, iltimos ehtiyot bo'ling
 tools-execute-script-title:
   ru: Скрипт к исполнению
   en: Script to be executed
