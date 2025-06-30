@@ -15,10 +15,10 @@ App.Modules.Tools.SettingsManagerPage = class extends Colibri.UI.Component
         this._save = this.Children('split/data-pane/buttons-pane/save');
 
         this._settings.AddHandler('ContextMenuIconClicked', (event, args) => this.__renderSettingsContextMenu(event, args))
-        this._settings.AddHandler('ContextMenuItemClicked', (event, args) => this.__clickOnSettingsContextMenu(event, args));     
-        this._settings.AddHandler('SelectionChanged', (event, args) => this.__settingsSelectionChanged(event, args));      
-        this._settings.AddHandler('NodeEditCompleted', (event, args) => this.__settingsNodeEditCompleted(event, args));
-        this._save.AddHandler('Clicked', (event, args) => this.__saveClicked(event, args));
+        this._settings.AddHandler('ContextMenuItemClicked', this.__clickOnSettingsContextMenu, false, this);     
+        this._settings.AddHandler('SelectionChanged', this.__settingsSelectionChanged, false, this);      
+        this._settings.AddHandler('NodeEditCompleted', this.__settingsNodeEditCompleted, false, this);
+        this._save.AddHandler('Clicked', this.__saveClicked, false, this);
 
         App.Store.AsyncQuery('app.settings').then((settings) => {
             if(settings.mode != 'local') {

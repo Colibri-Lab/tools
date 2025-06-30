@@ -27,7 +27,7 @@ App.Modules.Tools.UI.BackupLog = class extends Colibri.UI.Component
         };
         this._list.shown = true;
 
-        this._close.AddHandler('Clicked', (event, args) => this.__closeClicked(event, args));
+        this._close.AddHandler('Clicked', this.__closeClicked, false, this);
 
     }
 

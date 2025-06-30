@@ -18,25 +18,25 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         this._deleteMixinButton = this.Children('split/vars-pane/mixins/buttons-pane/delete-data');
 
         this._domainsAndThemes.AddHandler('ContextMenuIconClicked', (event, args) => this.__renderThemesContextMenu(event, args))
-        this._domainsAndThemes.AddHandler('ContextMenuItemClicked', (event, args) => this.__clickOnThemesContextMenu(event, args));     
+        this._domainsAndThemes.AddHandler('ContextMenuItemClicked', this.__clickOnThemesContextMenu, false, this);     
 
-        this._domainsAndThemes.AddHandler(['SelectionChanged', 'NodesLoaded'], (event, args) => this.__themesSelectionChanged(event, args));
-        this._domainsAndThemes.AddHandler('NodeEditCompleted', (event, args) => this.__themesNodeEditCompleted(event, args));
-        this._domainsAndThemes.AddHandler('DoubleClicked', (event, args) => this.__themesNodeDoubleClicked(event, args));
+        this._domainsAndThemes.AddHandler(['SelectionChanged', 'NodesLoaded'], this.__themesSelectionChanged, false, this);
+        this._domainsAndThemes.AddHandler('NodeEditCompleted', this.__themesNodeEditCompleted, false, this);
+        this._domainsAndThemes.AddHandler('DoubleClicked', this.__themesNodeDoubleClicked, false, this);
 
-        this._varsGrid.AddHandler(['SelectionChanged', 'CheckChanged'], (event, args) => this.__varsSelectionChagned(event, args));
-        this._mixinsGrid.AddHandler(['SelectionChanged', 'CheckChanged'], (event, args) => this.__mixinsSelectionChagned(event, args));
+        this._varsGrid.AddHandler(['SelectionChanged', 'CheckChanged'], this.__varsSelectionChagned, false, this);
+        this._mixinsGrid.AddHandler(['SelectionChanged', 'CheckChanged'], this.__mixinsSelectionChagned, false, this);
 
-        this._varsGrid.AddHandler('DoubleClicked', (event, args) => this.__varsDoubleClicked(event, args));
-        this._mixinsGrid.AddHandler('DoubleClicked', (event, args) => this.__mixinsDoubleClicked(event, args));
+        this._varsGrid.AddHandler('DoubleClicked', this.__varsDoubleClicked, false, this);
+        this._mixinsGrid.AddHandler('DoubleClicked', this.__mixinsDoubleClicked, false, this);
 
-        this._addVarButton.AddHandler('Clicked', (event, args) => this.__addVarButtonClicked(event, args));
-        this._editVarButton.AddHandler('Clicked', (event, args) => this.__editVarButtonClicked(event, args));
-        this._deleteVarButton.AddHandler('Clicked', (event, args) => this.__deleteVarButtonClicked(event, args));
+        this._addVarButton.AddHandler('Clicked', this.__addVarButtonClicked, false, this);
+        this._editVarButton.AddHandler('Clicked', this.__editVarButtonClicked, false, this);
+        this._deleteVarButton.AddHandler('Clicked', this.__deleteVarButtonClicked, false, this);
 
-        this._addMixinButton.AddHandler('Clicked', (event, args) => this.__addMixinButtonClicked(event, args));
-        this._editMixinButton.AddHandler('Clicked', (event, args) => this.__editMixinButtonClicked(event, args));
-        this._deleteMixinButton.AddHandler('Clicked', (event, args) => this.__deleteMixinButtonClicked(event, args));
+        this._addMixinButton.AddHandler('Clicked', this.__addMixinButtonClicked, false, this);
+        this._editMixinButton.AddHandler('Clicked', this.__editMixinButtonClicked, false, this);
+        this._deleteMixinButton.AddHandler('Clicked', this.__deleteMixinButtonClicked, false, this);
 
 
     }

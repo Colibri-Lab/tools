@@ -11,12 +11,12 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
         this._form = this.Children('split/data-pane/editor-pane/editor');
         this._save = this.Children('split/data-pane/buttons-pane/save');
 
-        this._notices.AddHandler('SelectionChanged', (event, args) => this.__noticesSelectionChanged(event, args));
+        this._notices.AddHandler('SelectionChanged', this.__noticesSelectionChanged, false, this);
         this._notices.AddHandler('ContextMenuIconClicked', (event, args) => this.__renderNoticesContextMenu(event, args))
-        this._notices.AddHandler('ContextMenuItemClicked', (event, args) => this.__clickOnNoticesContextMenu(event, args));     
-        this._notices.AddHandler('NodeEditCompleted', (event, args) => this.__noticesNodeEditCompleted(event, args));
+        this._notices.AddHandler('ContextMenuItemClicked', this.__clickOnNoticesContextMenu, false, this);     
+        this._notices.AddHandler('NodeEditCompleted', this.__noticesNodeEditCompleted, false, this);
 
-        this._save.AddHandler('Clicked', (event, args) => this.__saveClicked(event, args));
+        this._save.AddHandler('Clicked', this.__saveClicked, false, this);
         
     }
 

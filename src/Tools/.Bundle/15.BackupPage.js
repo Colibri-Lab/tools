@@ -9,10 +9,10 @@ App.Modules.Tools.BackupPage = class extends Colibri.UI.Component
         this._create = this.Children('top/create');
         this._backups = this.Children('bottom/backups');
 
-        this._create.AddHandler('Clicked', (event, args) => this.__createButtonClicked(event, args));
-        this._backups.AddHandler('DoubleClicked', (event, args) => this.__doubleClickedOnData(event, args));
-        this._backups.AddHandler('ContextMenuIconClicked', (event, args) => this.__renderDataContextMenu(event, args));
-        this._backups.AddHandler('ContextMenuItemClicked', (event, args) => this.__clickOnDataContextMenu(event, args));  
+        this._create.AddHandler('Clicked', this.__createButtonClicked, false, this);
+        this._backups.AddHandler('DoubleClicked', this.__doubleClickedOnData, false, this);
+        this._backups.AddHandler('ContextMenuIconClicked', this.__renderDataContextMenu, false, this);
+        this._backups.AddHandler('ContextMenuItemClicked', this.__clickOnDataContextMenu, false, this);  
     }
 
     _showCreateEditWindow(data = null) {

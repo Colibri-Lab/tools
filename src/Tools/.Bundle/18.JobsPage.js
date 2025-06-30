@@ -16,8 +16,8 @@ App.Modules.Tools.JobsPage = class extends Colibri.UI.Component
         this._splitVrBottomSplitHrRightErrorPipelines.rows.title = '';
 
         // Tools.AddHandler('PipelinesChanged', (event, args) => this.__pipelinesChanged(event, args));
-        this.AddHandler('Shown', (event, args) => this.__thisShown(event, args));
-        this.AddHandler('Hidden', (event, args) => this.__thisHidden(event, args));
+        this.AddHandler('Shown', this.__thisShown);
+        this.AddHandler('Hidden', this.__thisHidden);
 
     }
 

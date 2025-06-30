@@ -11,8 +11,8 @@ App.Modules.Tools.SettingsDataPage = class extends Colibri.UI.Component
         this._form = this.Children('split/data-pane/editor-pane/editor');
         this._save = this.Children('split/data-pane/buttons-pane/save');
 
-        this._settings.AddHandler('SelectionChanged', (event, args) => this.__settingsSelectionChanged(event, args));      
-        this._save.AddHandler('Clicked', (event, args) => this.__saveClicked(event, args));
+        this._settings.AddHandler('SelectionChanged', this.__settingsSelectionChanged, false, this);      
+        this._save.AddHandler('Clicked', this.__saveClicked, false, this);
     }
 
     /**
