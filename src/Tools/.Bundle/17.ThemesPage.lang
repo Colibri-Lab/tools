@@ -55,13 +55,20 @@ tools-themes-deletetheme:
   kk: Тақырыпты жою
   uz: Mavzuni o'chirish
 tools-themes-deletethememessage:
-  ru: Вы уверены, что хотите удалить тему? На сайтах привязанных к этой теме могут возникнуть артефакты
-  en: Are you sure you want to delete the topic? Artifacts may appear on sites linked to this topic
-  hy: "Իսկապե՞ս ուզում եք ջնջել թեման: Արտեֆակտները կարող են հայտնվել այս թեմայի հետ կապված կայքերում:"
-  it: Sei sicuro di voler eliminare l'argomento? Gli artefatti potrebbero essere visualizzati sui siti associati a questo argomento.
-  es: ¿Está seguro de que desea eliminar el tema? Pueden aparecer artefactos en los sitios vinculados a este tema.
-  kk: Тақырыпты жоюды қалайсыз ба? Осы тақырыпқа байланысты сайттарда артефактілер пайда болуы мүмкін
-  uz: Mavzuni o'chirishni xohlaysizmi? Ushbu mavzuga bog'langan saytlarda artefaktlar paydo bo'lishi mumkin
+  ru: Вы уверены, что хотите удалить тему? На сайтах привязанных к этой теме могут
+    возникнуть артефакты
+  en: Are you sure you want to delete the topic? Artifacts may appear on sites
+    linked to this topic
+  hy: "Իսկապե՞ս ուզում եք ջնջել թեման: Արտեֆակտները կարող են հայտնվել այս թեմայի
+    հետ կապված կայքերում:"
+  it: Sei sicuro di voler eliminare l'argomento? Gli artefatti potrebbero essere
+    visualizzati sui siti associati a questo argomento.
+  es: ¿Está seguro de que desea eliminar el tema? Pueden aparecer artefactos en
+    los sitios vinculados a este tema.
+  kk: Тақырыпты жоюды қалайсыз ба? Осы тақырыпқа байланысты сайттарда артефактілер
+    пайда болуы мүмкін
+  uz: Mavzuni o'chirishni xohlaysizmi? Ushbu mavzuga bog'langan saytlarda
+    artefaktlar paydo bo'lishi mumkin
 tools-themes-setcurrenttheme:
   ru: Установка
   en: Installing
