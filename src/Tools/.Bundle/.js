@@ -91,26 +91,32 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
     }
 
     Pipelines(returnPromise = false) {
-        const promise = this.Call('Jobs', 'Dashboard')
+        this.Requests('Tools.Pipelines')?.Abort()
+        const promise = this.Call('Jobs', 'Dashboard', {}, {}, true, 'Tools.Pipelines');
         if(returnPromise) {
             return promise;
         }
         promise.then((response) => {
             this._store.Set('tools.pipelines', response.result);
         }).catch((response) => {
-            App.Notices.Add(new Colibri.UI.Notice(response.result));
+            if(response.status > 0) {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            }
         });
     }
 
     Settings(returnPromise = false) {
-        const promise = this.Call('Settings', 'List')
+        this.Requests('Settings.List')?.Abort()
+        const promise = this.Call('Settings', 'List', {}, {}, true, 'Settings.List');
         if(returnPromise) {
             return promise;
         }
         promise.then((response) => {
             this._store.Set('tools.settings', response.result);
         }).catch((response) => {
-            App.Notices.Add(new Colibri.UI.Notice(response.result));
+            if(response.status > 0) {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            }
         });
     }
 
@@ -157,14 +163,17 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
 
     
     Notices(returnPromise = false) {
-        const promise = this.Call('Notices', 'List')
+        this.Requests('Notices.List')?.Abort()
+        const promise = this.Call('Notices', 'List', {}, {}, true, 'Notices.List');
         if(returnPromise) {
             return promise;
         }
         promise.then((response) => {
             this._store.Set('tools.notices', response.result);
         }).catch((response) => {
-            App.Notices.Add(new Colibri.UI.Notice(response.result));
+            if(response.status > 0) {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            }
         });
     }
 
@@ -219,14 +228,17 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
     }
     
     Backups(returnPromise = false) {
-        const promise = this.Call('Backup', 'List')
+        this.Requests('Backup.List')?.Abort()
+        const promise = this.Call('Backup', 'List', {}, {}, true, 'Backup.List');
         if(returnPromise) {
             return promise;
         }
         promise.then((response) => {
             this._store.Set('tools.backups', response.result);
         }).catch((response) => {
-            App.Notices.Add(new Colibri.UI.Notice(response.result));
+            if(response.status > 0) {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            }
         });
     }
 
@@ -271,14 +283,17 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
     }
 
     Themes(returnPromise = false) {
-        const promise = this.Call('Themes', 'List')
+        this.Requests('Themes.List')?.Abort()
+        const promise = this.Call('Themes', 'List', {}, {}, true, 'Themes.List');
         if(returnPromise) {
             return promise;
         }
         promise.then((response) => {
             this._store.Set('tools.themes', response.result);
         }).catch((response) => {
-            App.Notices.Add(new Colibri.UI.Notice(response.result));
+            if(response.status > 0) {
+                App.Notices.Add(new Colibri.UI.Notice(response.result));
+            }
         });
     }
 
