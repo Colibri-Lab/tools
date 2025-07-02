@@ -57,5 +57,7 @@ tools-settings-settings-canchange:
     contattare l'amministratore
   es: La lista de ajustes solo se puede cambiar en modo local, por favor contacte
     con su administrador
-  kk: Параметрлер тізімін тек жергілікті режимде өзгертуге болады, әкімшіге хабарласыңыз
-  uz: Sozlamalar ro'yxatini faqat mahalliy rejimda o'zgartirish mumkin, administratoringizga murojaat qiling
+  kk: Параметрлер тізімін тек жергілікті режимде өзгертуге болады, әкімшіге
+    хабарласыңыз
+  uz: Sozlamalar ro'yxatini faqat mahalliy rejimda o'zgartirish mumkin,
+    administratoringizga murojaat qiling

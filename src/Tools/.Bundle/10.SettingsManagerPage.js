@@ -14,7 +14,7 @@ App.Modules.Tools.SettingsManagerPage = class extends Colibri.UI.Component
         this._form = this.Children('split/data-pane/editor-pane/editor');
         this._save = this.Children('split/data-pane/buttons-pane/save');
 
-        this._settings.AddHandler('ContextMenuIconClicked', (event, args) => this.__renderSettingsContextMenu(event, args))
+        this._settings.AddHandler('ContextMenuIconClicked', this.__renderSettingsContextMenu, false, this)
         this._settings.AddHandler('ContextMenuItemClicked', this.__clickOnSettingsContextMenu, false, this);     
         this._settings.AddHandler('SelectionChanged', this.__settingsSelectionChanged, false, this);      
         this._settings.AddHandler('NodeEditCompleted', this.__settingsNodeEditCompleted, false, this);
@@ -47,17 +47,24 @@ App.Modules.Tools.SettingsManagerPage = class extends Colibri.UI.Component
                 settings.fields.type.values.forEach((type) => {
                     contextmenu.push({name: type.value, title: (type.title[Lang.Current] ?? type.title), icon: eval(type.icon)});
                 });
-                this._settings.contextmenu = contextmenu;
-                this._settings.ShowContextMenu(args.isContextMenuEvent ? 'right bottom' : 'left top', '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);
+                args.item.contextmenu = contextmenu;
+                args.item.ShowContextMenu(
+                    args.isContextMenuEvent ? [Colibri.UI.ContextMenu.LB, Colibri.UI.ContextMenu.LT] : [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.RT], 
+                    '', 
+                    args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null
+                );                
             });
         }
         else {
             let contextmenu = [];
             contextmenu.push({name: 'remove-setting', title: '#{tools-settings-contextmenu-delete}', icon: Colibri.UI.ContextMenuRemoveIcon});
             args.item.contextmenu = contextmenu;
-            args.item.ShowContextMenu(args.isContextMenuEvent ? [Colibri.UI.ContextMenu.LB, Colibri.UI.ContextMenu.LT] : [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.RT], '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);
+            args.item.ShowContextMenu(
+                args.isContextMenuEvent ? [Colibri.UI.ContextMenu.LB, Colibri.UI.ContextMenu.LT] : [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.RT], 
+                '', 
+                args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null
+            );
         }
-
         
     }
 
