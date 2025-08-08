@@ -6,6 +6,7 @@ tools-settings-settings-title:
   es: Ajustes
   kk: Параметрлер
   uz: Sozlamalar
+  cz: Nastavení
 tools-settings-data-title:
   ru: Редактор
   en: Editor
@@ -14,6 +15,7 @@ tools-settings-data-title:
   es: Editor
   kk: Редактор
   uz: Tahrirlovchi
+  cz: Editor
 tools-settings-buttons-save:
   ru: Сохранить
   en: Save
@@ -22,6 +24,7 @@ tools-settings-buttons-save:
   es: Guardar
   kk: Сақтау
   uz: Saqlash
+  cz: Uložit
 tools-settings-contextmenu-delete:
   ru: Удалить настройку
   en: Remove setting
@@ -30,6 +33,7 @@ tools-settings-contextmenu-delete:
   es: Eliminar ajuste
   kk: Параметрді жою
   uz: Sozlamani olib tashlash
+  cz: Odstranit nastavení
 tools-settings-description-title:
   ru: Описание настройки
   en: Setting description
@@ -38,6 +42,7 @@ tools-settings-description-title:
   es: Descripción del ajuste
   kk: Параметр сипаттамасы
   uz: Sozlama tavsifi
+  cz: Popis nastavení
 tools-settings-value-title:
   ru: Значение
   en: Setting value
@@ -46,6 +51,7 @@ tools-settings-value-title:
   es: Valor del ajuste
   kk: Параметр мәні
   uz: Sozlama qiymati
+  cz: Hodnota nastavení
 tools-settings-settings-canchange:
   ru: Список настроек может быть изменен только в локальном режиме, пожалуйста,
     обратитесь к администратору
@@ -61,3 +67,4 @@ tools-settings-settings-canchange:
     хабарласыңыз
   uz: Sozlamalar ro'yxatini faqat mahalliy rejimda o'zgartirish mumkin,
     administratoringizga murojaat qiling
+  cz: Seznam nastavení lze měnit pouze v místním režimu, kontaktujte prosím svého administrátora

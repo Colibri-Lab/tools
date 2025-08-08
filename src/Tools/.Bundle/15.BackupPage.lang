@@ -6,6 +6,7 @@ tools-backups-create-title:
   es: Crear una instantánea del sistema
   kk: Жүйенің суретін жасау
   uz: Tizim suratini yaratish
+  cz: Vytvořit snímek systému
 tools-backup-create:
   ru: Создать слепок
   en: Create a snapshot
@@ -14,6 +15,7 @@ tools-backup-create:
   es: Crear una instantánea
   kk: Сурет жасау
   uz: Surat yaratish
+  cz: Vytvořit snímek
 tools-backup-create-info:
   ru: Нажмите на кнопку «создать слепок» и дождитесь окончания процесса. После
     завершения в списке слепкой внизу этой страницы появится новый пункт
@@ -32,6 +34,7 @@ tools-backup-create-info:
     lista de instantáneas en la parte inferior de esta página.
   kk: "«Сурет жасау» түймесін басып, процестің аяқталуын күтіңіз. Аяқталғаннан кейін, осы беттің төменгі жағындағы суреттер тізімінде күнмен белгіленген жаңа элемент пайда болады."
   uz: "«Surat yaratish» tugmasini bosing va jarayon tugashini kuting. Tugallangandan so'ng, ushbu sahifaning pastki qismidagi suratlar ro'yxatida sana bilan belgilangan yangi element paydo bo'ladi."
+  cz: Klikněte na tlačítko „vytvořit snímek“ a počkejte na dokončení procesu. Po dokončení se v seznamu snímků ve spodní části této stránky objeví nová položka označená datem.
 tools-backups-points-title:
   ru: Список созданных слепков
   en: List of created impressions
@@ -40,6 +43,7 @@ tools-backups-points-title:
   es: Lista de instantáneas creadas
   kk: Жасалған суреттер тізімі
   uz: Yaratilgan suratlar ro'yxati
+  cz: Seznam vytvořených snímků
 tools-backups-dataempty:
   ru: Слепки не найдены
   en: Snapshots not found
@@ -48,6 +52,7 @@ tools-backups-dataempty:
   es: Instantáneas no encontradas
   kk: Суреттер табылмады
   uz: Suratlar topilmadi
+  cz: Snímky nenalezeny
 tools-backups-points-status:
   ru: Статус
   en: Status
@@ -56,6 +61,7 @@ tools-backups-points-status:
   es: Estado
   kk: Статус
   uz: Holat
+  cz: Stav
 tools-backups-points-running:
   ru: Работает
   en: Running
@@ -64,6 +70,7 @@ tools-backups-points-running:
   es: En ejecución
   kk: Жұмыс істеп тұр
   uz: Ishlayapti
+  cz: Probíhá
 tools-backups-points-name:
   ru: Наименование
   en: Name
@@ -72,6 +79,7 @@ tools-backups-points-name:
   es: Nombre
   kk: Атауы
   uz: Nomi
+  cz: Název
 tools-backups-points-cron:
   ru: Планировщик
   en: Scheduler
@@ -80,6 +88,7 @@ tools-backups-points-cron:
   es: Programador
   kk: Жоспарлаушы
   uz: Rejalashtiruvchi
+  cz: Plánovač
 tools-backups-points-file:
   ru: Шаблон названия файла
   en: File name template
@@ -88,6 +97,7 @@ tools-backups-points-file:
   es: Plantilla de nombre de archivo
   kk: Файл атауының үлгісі
   uz: Fayl nomi shabloni
+  cz: Šablona názvu souboru
 tools-backups-windowtitle-editbackup:
   ru: Редактировать задание
   en: Edit task
@@ -96,6 +106,7 @@ tools-backups-windowtitle-editbackup:
   es: Editar tarea
   kk: Тапсырманы өңдеу
   uz: Vazifani tahrirlash
+  cz: Upravit úlohu
 tools-backups-windowtitle-newbackup:
   ru: Новое задание
   en: New task
@@ -104,6 +115,7 @@ tools-backups-windowtitle-newbackup:
   es: Nueva tarea
   kk: Жаңа тапсырма
   uz: Yangi vazifa
+  cz: Nová úloha
 tools-backups-contextmenu-edit:
   ru: Редактировать
   en: Edit
@@ -112,6 +124,7 @@ tools-backups-contextmenu-edit:
   es: Editar
   kk: Өңдеу
   uz: Tahrirlash
+  cz: Upravit
 tools-backups-contextmenu-delete:
   ru: Удалить
   en: Delete
@@ -120,6 +133,7 @@ tools-backups-contextmenu-delete:
   es: Eliminar
   kk: Жою
   uz: O'chirish
+  cz: Smazat
 tools-backups-deletedata1:
   ru: Удаление точки восстановления
   en: Delete the snapshot
@@ -128,6 +142,7 @@ tools-backups-deletedata1:
   es: Eliminar instantánea
   kk: Суретті жою
   uz: Suratni o'chirish
+  cz: Smazat snímek
 tools-backups-deletedata1message:
   ru: Вы уверены, что хотите удалить выбранную строку?
   en: Are you sure you want to delete the selected row?
@@ -136,6 +151,7 @@ tools-backups-deletedata1message:
   es: ¿Está seguro de que desea eliminar la fila seleccionada?
   kk: Таңдалған жолды жоюға сенімдісіз бе?
   uz: Tanlangan qatorni o'chirishga ishonchingiz komilmi?
+  cz: Opravdu chcete smazat vybraný řádek?
 tools-backups-deletedata1message-delete:
   ru: Удалить!
   en: Delete
@@ -144,3 +160,4 @@ tools-backups-deletedata1message-delete:
   es: Eliminar
   kk: Жою
   uz: O'chirish
+  cz: Smazat

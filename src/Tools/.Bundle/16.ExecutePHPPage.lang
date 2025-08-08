@@ -6,6 +6,7 @@ tools-execute-run-title:
   es: Ejecución de script
   kk: Скриптті іске қосу
   uz: Skriptni ishga tushirish
+  cz: Spuštění skriptu
 tools-execute-run:
   ru: Запустить скрипт
   en: Run the script
@@ -14,6 +15,7 @@ tools-execute-run:
   es: Ejecutar script
   kk: Скриптті іске қосу
   uz: Skriptni ishga tushirish
+  cz: Spustit skript
 tools-execute-kill:
   ru: Остановить исполнение
   en: Stop the script
@@ -22,6 +24,7 @@ tools-execute-kill:
   es: Detener script
   kk: Скриптті тоқтату
   uz: Skriptni to'xtatish
+  cz: Zastavit skript
 tools-execute-create-info:
   ru: Внимание! Скрипт исполняется в окружении всего проекта, возможны необратимые
     последствия, пожалуйста, будьте осторожны
@@ -37,6 +40,7 @@ tools-execute-create-info:
     болуы мүмкін, абай болыңыз
   uz: Diqqat! Skript butun loyiha muhiti doirasida bajariladi, qaytarib
     bo'lmaydigan oqibatlar bo'lishi mumkin, iltimos ehtiyot bo'ling
+  cz: Pozor! Skript je spuštěn v prostředí celého projektu, mohou nastat nevratné důsledky, buďte prosím opatrní
 tools-execute-script-title:
   ru: Скрипт к исполнению
   en: Script to be executed
@@ -45,6 +49,7 @@ tools-execute-script-title:
   es: Script a ejecutar
   kk: Орындауға арналған скрипт
   uz: Bajarilishi kerak bo'lgan skript
+  cz: Skript ke spuštění
 tools-execute-run-success:
   ru: Скрипт запущен успешно
   en: Script runned successfuly
@@ -53,6 +58,7 @@ tools-execute-run-success:
   es: Script ejecutado con éxito
   kk: Скрипт сәтті іске қосылды
   uz: Skript muvaffaqiyatli ishga tushirildi
+  cz: Skript byl úspěšně spuštěn
 tools-execute-killed-success:
   ru: Скрипт остановлен успешно
   en: Script stopped successfuly
@@ -61,3 +67,4 @@ tools-execute-killed-success:
   es: Script detenido con éxito
   kk: Скрипт сәтті тоқтатылды
   uz: Skript muvaffaqiyatli to'xtatildi
+  cz: Skript byl úspěšně zastaven

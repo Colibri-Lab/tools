@@ -6,6 +6,7 @@ tools-settingsdata-settings-title:
   es: Ajustes
   kk: Параметрлер
   uz: Sozlamalar
+  cz: Nastavení
 tools-settingsdata-data-title:
   ru: Редактор
   en: Editor
@@ -14,6 +15,7 @@ tools-settingsdata-data-title:
   es: Editor
   kk: Редактор
   uz: Tahrirlovchi
+  cz: Editor
 tools-settingsdata-buttons-save:
   ru: Сохранить
   en: Save
@@ -22,6 +24,7 @@ tools-settingsdata-buttons-save:
   es: Guardar
   kk: Сақтау
   uz: Saqlash
+  cz: Uložit
 tools-settingsdata-title-nodesc:
   ru: Без описания
   en: No description
@@ -30,6 +33,7 @@ tools-settingsdata-title-nodesc:
   es: Sin descripción
   kk: Сипаттамасы жоқ
   uz: Tavsif yo'q
+  cz: Bez popisu
 tools-settingsdata-value-title:
   ru: Значение
   en: Value
@@ -38,3 +42,4 @@ tools-settingsdata-value-title:
   es: Valor
   kk: Мән
   uz: Qiymat
+  cz: Hodnota

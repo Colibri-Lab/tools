@@ -6,6 +6,7 @@ tools-notices-notices-title:
   es: Notificaciones
   kk: Хабарламалар
   uz: Bildirishnomalar
+  cz: Oznámení
 tools-notices-date-title:
   ru: Редактор
   en: Editor
@@ -14,6 +15,7 @@ tools-notices-date-title:
   es: Editor
   kk: Редактор
   uz: Tahrirlovchi
+  cz: Editor
 tools-notices-buttons-save:
   ru: Сохранить
   en: Save
@@ -22,6 +24,7 @@ tools-notices-buttons-save:
   es: Guardar
   kk: Сақтау
   uz: Saqlash
+  cz: Uložit
 tools-notices-fields-nodesc:
   ru: Без темы
   en: No subject
@@ -30,6 +33,7 @@ tools-notices-fields-nodesc:
   es: Sin asunto
   kk: Тақырыпсыз
   uz: Mavzusiz
+  cz: Bez předmětu
 tools-notices-fields-desc:
   ru: Наименование
   en: Name
@@ -38,6 +42,7 @@ tools-notices-fields-desc:
   es: Nombre
   kk: Атауы
   uz: Nomi
+  cz: Název
 tools-notices-fields-desc-note:
   ru: Введите наименование сообщения. Латинские буквы без спец-символов
   en: Enter a title for the message. Latin letters without special characters
@@ -46,6 +51,7 @@ tools-notices-fields-desc-note:
   es: Introduzca un título para el mensaje. Letras latinas sin caracteres especiales
   kk: Хабарлама атауын енгізіңіз. Арнайы таңбаларсыз латын әріптері
   uz: Xabar uchun sarlavha kiriting. Maxsus belgilarisiz lotin harflari
+  cz: Zadejte název zprávy. Pouze latinská písmena bez speciálních znaků
 tools-notices-fields-subject:
   ru: Тема письма
   en: Subject
@@ -54,6 +60,7 @@ tools-notices-fields-subject:
   es: Asunto
   kk: Хат тақырыбы
   uz: Xat mavzusi
+  cz: Předmět
 tools-notices-fields-subject-note:
   ru: Введите тему письма
   en: Enter the message subject
@@ -62,6 +69,7 @@ tools-notices-fields-subject-note:
   es: Introduzca el asunto del mensaje
   kk: Хат тақырыбын енгізіңіз
   uz: Xat mavzusini kiriting
+  cz: Zadejte předmět zprávy
 tools-notices-fields-body:
   ru: Тело письма
   en: Message body
@@ -70,6 +78,7 @@ tools-notices-fields-body:
   es: Cuerpo del mensaje
   kk: Хаттың денесі
   uz: Xat matni
+  cz: Tělo zprávy
 tools-notices-fields-body-note:
   ru: Введите тело письма. Допускаются вставки вида [[name]] в качестве переменных шаблона
   en: Enter the body of the email. Inserts like [[name]] are allowed as template variables
@@ -78,6 +87,7 @@ tools-notices-fields-body-note:
   es: Introduzca el cuerpo del mensaje. Se permiten inserciones como [[name]] como variables de plantilla
   kk: Хаттың денесін енгізіңіз. [[name]] сияқты кірістірулер үлгі айнымалылары ретінде рұқсат етіледі
   uz: Xat matnini kiriting. [[name]] kabi kiritmalar shablon o'zgaruvchilari sifatida ruxsat etiladi
+  cz: Zadejte tělo zprávy. Vložené hodnoty jako [[name]] jsou povoleny jako šablonové proměnné
 tools-notices-contextmenu-newnotice:
   ru: Создать шаблон
   en: Create notice
@@ -86,6 +96,7 @@ tools-notices-contextmenu-newnotice:
   es: Crear plantilla
   kk: Үлгі жасау
   uz: Shablon yaratish
+  cz: Vytvořit oznámení
 tools-notices-contextmenu-deletenotice:
   ru: Удалить шаблон
   en: Delete notice
@@ -94,3 +105,4 @@ tools-notices-contextmenu-deletenotice:
   es: Eliminar plantilla
   kk: Үлгіні жою
   uz: Shablonni o'chirish
+  cz: Smazat oznámení

@@ -6,6 +6,7 @@ tools-jobs-active-jobs-title:
   es: Pipelines activos
   kk: Белсенді тапсырмалар
   uz: Faol vazifalar
+  cz: Aktivní úlohy
 tools-jobs-successed-title:
   ru: Успешные задачи (последние 20)
   en: Successed pipelines (last 20)
@@ -14,6 +15,7 @@ tools-jobs-successed-title:
   es: Pipelines exitosos (últimos 20)
   kk: Сәтті тапсырмалар (соңғы 20)
   uz: Muvaffaqiyatli vazifalar (so'nggi 20)
+  cz: Úspěšné úlohy (posledních 20)
 tools-jobs-errors-title:
   ru: Ошибки (последние 20)
   en: Errors (last 20)
@@ -22,6 +24,7 @@ tools-jobs-errors-title:
   es: Errores (últimos 20)
   kk: Қателер (соңғы 20)
   uz: Xatolar (so'nggi 20)
+  cz: Chyby (posledních 20)
 tools-jobs-active-jobs-datecreated:
   ru: Создано
   en: Created
@@ -30,6 +33,7 @@ tools-jobs-active-jobs-datecreated:
   es: Creado
   kk: Жасалған
   uz: Yaratilgan
+  cz: Vytvořeno
 tools-jobs-active-jobs-datereserved:
   ru: Зарезервировано
   en: Reserved
@@ -38,6 +42,7 @@ tools-jobs-active-jobs-datereserved:
   es: Reservado
   kk: Резервтелген
   uz: Zaxiraga olingan
+  cz: Rezervováno
 tools-jobs-active-jobs-reservation_key:
   ru: Ключ
   en: Key
@@ -46,6 +51,7 @@ tools-jobs-active-jobs-reservation_key:
   es: Clave
   kk: Кілт
   uz: Kalit
+  cz: Klíč
 tools-jobs-active-jobs-queue:
   ru: Поток
   en: Pipeline
@@ -54,6 +60,7 @@ tools-jobs-active-jobs-queue:
   es: Pipeline
   kk: Ағын
   uz: Oqim
+  cz: Fronta
 tools-jobs-active-jobs-class:
   ru: Класс
   en: Class
@@ -62,6 +69,7 @@ tools-jobs-active-jobs-class:
   es: Clase
   kk: Сынып
   uz: Sinf
+  cz: Třída
 tools-jobs-active-jobs-payload_class:
   ru: Класс данных
   en: Payload class
@@ -70,6 +78,7 @@ tools-jobs-active-jobs-payload_class:
   es: Clase de datos
   kk: Деректер сыныбы
   uz: Ma'lumotlar sinfi
+  cz: Třída dat
 tools-jobs-active-jobs-attempts:
   ru: Попытки
   en: Attempts
@@ -78,6 +87,7 @@ tools-jobs-active-jobs-attempts:
   es: Intentos
   kk: Талпыныстар
   uz: Urinishlar
+  cz: Pokusy
 tools-jobs-active-jobs-parallel:
   ru: Паралельный
   en: Is parallel
@@ -86,3 +96,4 @@ tools-jobs-active-jobs-parallel:
   es: Es paralelo
   kk: Параллель
   uz: Parallel
+  cz: Paralelní
