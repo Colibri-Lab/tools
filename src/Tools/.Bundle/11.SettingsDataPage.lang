@@ -9,6 +9,7 @@ tools-settingsdata-settings-title:
   cz: Nastavení
   de: Einstellungen
   tr: Ayarlar
+  zh: 设置
 tools-settingsdata-data-title:
   ru: Редактор
   en: Editor
@@ -20,6 +21,7 @@ tools-settingsdata-data-title:
   cz: Editor
   de: Editor
   tr: Editör
+  zh: 编辑器
 tools-settingsdata-buttons-save:
   ru: Сохранить
   en: Save
@@ -31,6 +33,7 @@ tools-settingsdata-buttons-save:
   cz: Uložit
   de: Speichern
   tr: Kaydet
+  zh: 保存
 tools-settingsdata-title-nodesc:
   ru: Без описания
   en: No description
@@ -42,6 +45,7 @@ tools-settingsdata-title-nodesc:
   cz: Bez popisu
   de: Keine Beschreibung
   tr: Açıklama yok
+  zh: 无描述
 tools-settingsdata-value-title:
   ru: Значение
   en: Value
@@ -53,3 +57,4 @@ tools-settingsdata-value-title:
   cz: Hodnota
   de: Wert
   tr: Değer
+  zh: 值

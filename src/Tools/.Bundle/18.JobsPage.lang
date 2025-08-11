@@ -9,6 +9,7 @@ tools-jobs-active-jobs-title:
   cz: Aktivní úlohy
   de: Aktive Pipelines
   tr: Aktif iş akışları
+  zh: 活跃任务
 tools-jobs-successed-title:
   ru: Успешные задачи (последние 20)
   en: Successed pipelines (last 20)
@@ -20,6 +21,7 @@ tools-jobs-successed-title:
   cz: Úspěšné úlohy (posledních 20)
   de: Erfolgreiche Pipelines (letzte 20)
   tr: Başarılı iş akışları (son 20)
+  zh: 成功任务（最近20条）
 tools-jobs-errors-title:
   ru: Ошибки (последние 20)
   en: Errors (last 20)
@@ -31,6 +33,7 @@ tools-jobs-errors-title:
   cz: Chyby (posledních 20)
   de: Fehler (letzte 20)
   tr: Hatalar (son 20)
+  zh: 错误（最近20条）
 tools-jobs-active-jobs-datecreated:
   ru: Создано
   en: Created
@@ -42,6 +45,7 @@ tools-jobs-active-jobs-datecreated:
   cz: Vytvořeno
   de: Erstellt
   tr: Oluşturuldu
+  zh: 创建时间
 tools-jobs-active-jobs-datereserved:
   ru: Зарезервировано
   en: Reserved
@@ -53,6 +57,7 @@ tools-jobs-active-jobs-datereserved:
   cz: Rezervováno
   de: Reserviert
   tr: Rezerve edildi
+  zh: 预留时间
 tools-jobs-active-jobs-reservation_key:
   ru: Ключ
   en: Key
@@ -64,6 +69,7 @@ tools-jobs-active-jobs-reservation_key:
   cz: Klíč
   de: Schlüssel
   tr: Anahtar
+  zh: 键
 tools-jobs-active-jobs-queue:
   ru: Поток
   en: Pipeline
@@ -75,6 +81,7 @@ tools-jobs-active-jobs-queue:
   cz: Fronta
   de: Pipeline
   tr: İş akışı
+  zh: 队列
 tools-jobs-active-jobs-class:
   ru: Класс
   en: Class
@@ -86,6 +93,7 @@ tools-jobs-active-jobs-class:
   cz: Třída
   de: Klasse
   tr: Sınıf
+  zh: 类
 tools-jobs-active-jobs-payload_class:
   ru: Класс данных
   en: Payload class
@@ -97,6 +105,7 @@ tools-jobs-active-jobs-payload_class:
   cz: Třída dat
   de: Payload-Klasse
   tr: Yük sınıfı
+  zh: 负载类
 tools-jobs-active-jobs-attempts:
   ru: Попытки
   en: Attempts
@@ -108,6 +117,7 @@ tools-jobs-active-jobs-attempts:
   cz: Pokusy
   de: Versuche
   tr: Denemeler
+  zh: 尝试次数
 tools-jobs-active-jobs-parallel:
   ru: Паралельный
   en: Is parallel
@@ -119,3 +129,4 @@ tools-jobs-active-jobs-parallel:
   cz: Paralelní
   de: Ist parallel
   tr: Paralel mi
+  zh: 是否并行
