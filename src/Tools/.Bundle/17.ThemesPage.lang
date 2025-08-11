@@ -7,6 +7,7 @@ tools-themes-contextmenu-newtheme:
   kk: Тақырыпты жасау
   uz: Mavzuni yaratish
   cz: Vytvořit téma
+  de: Thema erstellen
 tools-themes-contextmenu-edittheme:
   ru: Редактировать тему
   en: Edit theme
@@ -16,6 +17,7 @@ tools-themes-contextmenu-edittheme:
   kk: Тақырыпты өңдеу
   uz: Mavzuni tahrirlash
   cz: Upravit téma
+  de: Thema bearbeiten
 tools-themes-contextmenu-deletetheme:
   ru: Удалить тему
   en: Delete theme
@@ -25,6 +27,7 @@ tools-themes-contextmenu-deletetheme:
   kk: Тақырыпты жою
   uz: Mavzuni o'chirish
   cz: Smazat téma
+  de: Thema löschen
 tools-themes-contextmenu-dublicatetheme:
   ru: Дублировать тему
   en: Dublicate theme
@@ -34,6 +37,7 @@ tools-themes-contextmenu-dublicatetheme:
   kk: Тақырыпты қайталау
   uz: Mavzuni nusxalash
   cz: Duplikovat téma
+  de: Thema duplizieren
 tools-themes-contextmenu-setcurrent:
   ru: Установить как текущую
   en: Set as default
@@ -43,6 +47,7 @@ tools-themes-contextmenu-setcurrent:
   kk: Әдепкі ретінде орнату
   uz: Standart sifatida o'rnatish
   cz: Nastavit jako výchozí
+  de: Als Standard festlegen
 tools-themes-windowtitle-edittheme:
   ru: Редактировать тему
   en: Edit theme
@@ -52,6 +57,7 @@ tools-themes-windowtitle-edittheme:
   kk: Тақырыпты өңдеу
   uz: Mavzuni tahrirlash
   cz: Upravit téma
+  de: Thema bearbeiten
 tools-themes-deletetheme:
   ru: Удаление темы
   en: Delete theme
@@ -61,6 +67,7 @@ tools-themes-deletetheme:
   kk: Тақырыпты жою
   uz: Mavzuni o'chirish
   cz: Smazání tématu
+  de: Thema löschen
 tools-themes-deletethememessage:
   ru: Вы уверены, что хотите удалить тему? На сайтах привязанных к этой теме могут
     возникнуть артефакты
@@ -76,7 +83,10 @@ tools-themes-deletethememessage:
     пайда болуы мүмкін
   uz: Mavzuni o'chirishni xohlaysizmi? Ushbu mavzuga bog'langan saytlarda
     artefaktlar paydo bo'lishi mumkin
-  cz: Opravdu chcete smazat téma? Na stránkách propojených s tímto tématem se mohou objevit artefakty
+  cz: Opravdu chcete smazat téma? Na stránkách propojených s tímto tématem se
+    mohou objevit artefakty
+  de: Sind Sie sicher, dass Sie das Thema löschen möchten? Artefakte können auf
+    Seiten erscheinen, die mit diesem Thema verknüpft sind
 tools-themes-setcurrenttheme:
   ru: Установка
   en: Installing
@@ -86,6 +96,7 @@ tools-themes-setcurrenttheme:
   kk: Орнату
   uz: O'rnatish
   cz: Instalace
+  de: Wird installiert
 tools-themes-setcurrentthememessage:
   ru: Вы уверены, что хотите установить тему как текущую?
   en: Are you sure you want to set the theme as current?
@@ -95,6 +106,7 @@ tools-themes-setcurrentthememessage:
   kk: Тақырыпты ағымдағы ретінде орнатқыңыз келетініне сенімдісіз бе?
   uz: Mavzuni joriy sifatida o'rnatmoqchimisiz?
   cz: Opravdu chcete nastavit toto téma jako aktuální?
+  de: Sind Sie sicher, dass Sie das Thema als aktuell festlegen möchten?
 tools-themes-windowtitle-addvartitle:
   ru: Добавить переменную
   en: Add variable
@@ -104,6 +116,7 @@ tools-themes-windowtitle-addvartitle:
   kk: Айнымалыны қосу
   uz: O'zgaruvchini qo'shish
   cz: Přidat proměnnou
+  de: Variable hinzufügen
 tools-themes-windowtitle-editvartitle:
   ru: Редактировать переменную
   en: Edit variable
@@ -113,6 +126,7 @@ tools-themes-windowtitle-editvartitle:
   kk: Айнымалыны өңдеу
   uz: O'zgaruvchini tahrirlash
   cz: Upravit proměnnou
+  de: Variable bearbeiten
 tools-themes-deletevars:
   ru: Удаление переменных
   en: Delete variables
@@ -122,6 +136,7 @@ tools-themes-deletevars:
   kk: Айнымалыларды жою
   uz: O'zgaruvchilarni o'chirish
   cz: Smazání proměnných
+  de: Variablen löschen
 tools-themes-deletevarsmessage:
   ru: Вы уверены, что хотите удалить переменные?
   en: Are you sure you want to delete variables?
@@ -131,6 +146,7 @@ tools-themes-deletevarsmessage:
   kk: Айнымалыларды жоюды қалайсыз ба?
   uz: O'zgaruvchilarni o'chirishni xohlaysizmi?
   cz: Opravdu chcete smazat proměnné?
+  de: Sind Sie sicher, dass Sie die Variablen löschen möchten?
 tools-themes-deletevar:
   ru: Удаление переменной
   en: Delete variable
@@ -140,6 +156,7 @@ tools-themes-deletevar:
   kk: Айнымалыны жою
   uz: O'zgaruvchini o'chirish
   cz: Smazání proměnné
+  de: Variable löschen
 tools-themes-deletevarmessage:
   ru: Вы уверены, что хотите удалить переменную?
   en: Are you sure you want to delete the variable?
@@ -149,6 +166,7 @@ tools-themes-deletevarmessage:
   kk: Айнымалыны жоюды қалайсыз ба?
   uz: O'zgaruvchini o'chirishni xohlaysizmi?
   cz: Opravdu chcete smazat proměnnou?
+  de: Sind Sie sicher, dass Sie die Variable löschen möchten?
 tools-themes-windowtitle-addmixintitle:
   ru: Добавить Mixin
   en: Add mixin
@@ -158,6 +176,7 @@ tools-themes-windowtitle-addmixintitle:
   kk: Mixin қосу
   uz: Mixin qo'shish
   cz: Přidat mixin
+  de: Mixin hinzufügen
 tools-themes-windowtitle-editmixintitle:
   ru: Редактировать Mixin
   en: Edit mixin
@@ -167,6 +186,7 @@ tools-themes-windowtitle-editmixintitle:
   kk: Mixin өңдеу
   uz: Mixin tahrirlash
   cz: Upravit mixin
+  de: Mixin bearbeiten
 tools-themes-deletemixins:
   ru: Удаление Mixin-ов
   en: Delete mixins
@@ -176,6 +196,7 @@ tools-themes-deletemixins:
   kk: Mixin-дерді жою
   uz: Mixinlarni o'chirish
   cz: Smazání mixinů
+  de: Mixins löschen
 tools-themes-deletemixinsmessage:
   ru: Вы уверены, что хотите удалить Mixin-ы?
   en: Are you sure you want to delete Mixins?
@@ -185,6 +206,7 @@ tools-themes-deletemixinsmessage:
   kk: Mixin-дерді жоюды қалайсыз ба?
   uz: Mixinlarni o'chirishni xohlaysizmi?
   cz: Opravdu chcete smazat mixiny?
+  de: Sind Sie sicher, dass Sie die Mixins löschen möchten?
 tools-themes-deletemixin:
   ru: Удаление Mixin-а
   en: Delete mixin
@@ -194,6 +216,7 @@ tools-themes-deletemixin:
   kk: Mixin-ді жою
   uz: Mixinni o'chirish
   cz: Smazání mixinu
+  de: Mixin löschen
 tools-themes-deletemixinmessage:
   ru: Вы уверены, что хотите удалить Mixin?
   en: Are you sure you want to delete Mixin?
@@ -203,6 +226,7 @@ tools-themes-deletemixinmessage:
   kk: Mixin-ді жоюды қалайсыз ба?
   uz: Mixinni o'chirishni xohlaysizmi?
   cz: Opravdu chcete smazat mixin?
+  de: Sind Sie sicher, dass Sie das Mixin löschen möchten?
 tools-thtmes-themes-title:
   ru: Домены и темы
   en: Domains and themes
@@ -212,6 +236,7 @@ tools-thtmes-themes-title:
   kk: Домендер мен тақырыптар
   uz: Domenlar va mavzular
   cz: Domény a témata
+  de: Domains und Themen
 tools-themes-vars-title:
   ru: Переменные
   en: Variables
@@ -221,6 +246,7 @@ tools-themes-vars-title:
   kk: Айнымалылар
   uz: O'zgaruvchilar
   cz: Proměnné
+  de: Variablen
 tools-themes-varsempty:
   ru: Переменных не найдено
   en: Variables not found
@@ -230,6 +256,7 @@ tools-themes-varsempty:
   kk: Айнымалылар табылмады
   uz: O'zgaruvchilar topilmadi
   cz: Proměnné nenalezeny
+  de: Keine Variablen gefunden
 tools-themes-vars-grid-name:
   ru: Переменная
   en: Variable
@@ -239,6 +266,7 @@ tools-themes-vars-grid-name:
   kk: Айнымалы
   uz: O'zgaruvchi
   cz: Proměnná
+  de: Variable
 tools-themes-vars-grid-value:
   ru: Значение
   en: Value
@@ -248,6 +276,7 @@ tools-themes-vars-grid-value:
   kk: Мәні
   uz: Qiymat
   cz: Hodnota
+  de: Wert
 tools-themes-vars-buttons-adddata:
   ru: Добавить
   en: Add
@@ -257,6 +286,7 @@ tools-themes-vars-buttons-adddata:
   kk: Қосу
   uz: Qo'shish
   cz: Přidat
+  de: Hinzufügen
 tools-themes-vars-buttons-editdata:
   ru: Редактировать
   en: Edit
@@ -266,6 +296,7 @@ tools-themes-vars-buttons-editdata:
   kk: Өңдеу
   uz: Tahrirlash
   cz: Upravit
+  de: Bearbeiten
 tools-themes-vars-buttons-deletedata:
   ru: Удалить
   en: Delete
@@ -275,6 +306,7 @@ tools-themes-vars-buttons-deletedata:
   kk: Жою
   uz: O'chirish
   cz: Smazat
+  de: Löschen
 tools-themes-mixins-title:
   ru: Mixin-ы
   en: Mixins
@@ -284,6 +316,7 @@ tools-themes-mixins-title:
   kk: Mixin-дер
   uz: Mixinlar
   cz: Mixiny
+  de: Mixins
 tools-themes-mixinsempty:
   ru: Mixin-ов не найдено
   en: Mixins not found
@@ -293,6 +326,7 @@ tools-themes-mixinsempty:
   kk: Mixin-дер табылмады
   uz: Mixinlar topilmadi
   cz: Mixiny nenalezeny
+  de: Keine Mixins gefunden
 tools-themes-mixins-grid-name:
   ru: Mixin
   en: Mixin
@@ -302,6 +336,7 @@ tools-themes-mixins-grid-name:
   kk: Mixin
   uz: Mixin
   cz: Mixin
+  de: Mixin
 tools-themes-mixins-grid-params:
   ru: Параметры
   en: Parameters
@@ -311,6 +346,7 @@ tools-themes-mixins-grid-params:
   kk: Параметрлер
   uz: Parametrlar
   cz: Parametry
+  de: Parameter
 tools-themes-mixins-grid-value:
   ru: Значение
   en: Value
@@ -320,6 +356,7 @@ tools-themes-mixins-grid-value:
   kk: Мәні
   uz: Qiymat
   cz: Hodnota
+  de: Wert
 tools-themes-mixins-buttons-adddata:
   ru: Добавить
   en: Add
@@ -329,6 +366,7 @@ tools-themes-mixins-buttons-adddata:
   kk: Қосу
   uz: Qo'shish
   cz: Přidat
+  de: Hinzufügen
 tools-themes-mixins-buttons-editdata:
   ru: Редактировать
   en: Edit
@@ -338,6 +376,7 @@ tools-themes-mixins-buttons-editdata:
   kk: Өңдеу
   uz: Tahrirlash
   cz: Upravit
+  de: Bearbeiten
 tools-themes-mixins-buttons-deletedata:
   ru: Удалить
   en: Delete
@@ -347,6 +386,7 @@ tools-themes-mixins-buttons-deletedata:
   kk: Жою
   uz: O'chirish
   cz: Smazat
+  de: Löschen
 tools-thtmes-themes-vars:
   ru: Переменные
   en: Variables
@@ -356,6 +396,7 @@ tools-thtmes-themes-vars:
   kk: Айнымалылар
   uz: O'zgaruvchilar
   cz: Proměnné
+  de: Variablen
 tools-thtmes-themes-mixins:
   ru: Mixin-ы
   en: Mixins
@@ -365,6 +406,7 @@ tools-thtmes-themes-mixins:
   kk: Mixin-дер
   uz: Mixinlar
   cz: Mixiny
+  de: Mixins
 tools-themes-deletethememessage-delete:
   ru: Удалить!
   en: Delete
@@ -374,6 +416,7 @@ tools-themes-deletethememessage-delete:
   kk: Жою!
   uz: O'chirish!
   cz: Smazat!
+  de: Löschen
 tools-themes-setcurrentthememessage-ok:
   ru: Продолжить
   en: Continue
@@ -383,6 +426,7 @@ tools-themes-setcurrentthememessage-ok:
   kk: Жалғастыру
   uz: Davom etish
   cz: Pokračovat
+  de: Fortfahren
 tools-themes-deletevarsmessage-delete:
   ru: Удалить!
   en: Delete
@@ -392,6 +436,7 @@ tools-themes-deletevarsmessage-delete:
   kk: Жою!
   uz: O'chirish!
   cz: Smazat!
+  de: Löschen
 tools-themes-deletevarmessage-delete:
   ru: Удалить!
   en: Delete
@@ -401,6 +446,7 @@ tools-themes-deletevarmessage-delete:
   kk: Жою!
   uz: O'chirish!
   cz: Smazat!
+  de: Löschen
 tools-themes-deletemixinsmessage-delete:
   ru: Удалить!
   en: Delete
@@ -410,6 +456,7 @@ tools-themes-deletemixinsmessage-delete:
   kk: Жою!
   uz: O'chirish!
   cz: Smazat!
+  de: Löschen
 tools-themes-deletemixinmessage-delete:
   ru: Удалить!
   en: Delete
@@ -419,6 +466,7 @@ tools-themes-deletemixinmessage-delete:
   kk: Жою!
   uz: O'chirish!
   cz: Smazat!
+  de: Löschen
 tools-themes-contextmenu-importtheme:
   ru: Импортировать
   en: Import
@@ -428,6 +476,7 @@ tools-themes-contextmenu-importtheme:
   kk: Импорттау
   uz: Import qilish
   cz: Importovat
+  de: Importieren
 tools-themes-windowtitle-importtheme:
   ru: Импортировать тему
   en: Import theme
@@ -437,6 +486,7 @@ tools-themes-windowtitle-importtheme:
   kk: Тақырыпты импорттау
   uz: Mavzuni import qilish
   cz: Importovat téma
+  de: Thema importieren
 tools-themes-windowtitle-importtheme-fields-json_data:
   ru: Данные темы
   en: Theme data
@@ -446,3 +496,4 @@ tools-themes-windowtitle-importtheme-fields-json_data:
   kk: Тақырып деректері
   uz: Mavzu ma'lumotlari
   cz: Data tématu
+  de: Themendaten

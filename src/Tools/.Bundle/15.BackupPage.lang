@@ -7,6 +7,7 @@ tools-backups-create-title:
   kk: Жүйенің суретін жасау
   uz: Tizim suratini yaratish
   cz: Vytvořit snímek systému
+  de: Systemabbild erstellen
 tools-backup-create:
   ru: Создать слепок
   en: Create a snapshot
@@ -16,6 +17,7 @@ tools-backup-create:
   kk: Сурет жасау
   uz: Surat yaratish
   cz: Vytvořit snímek
+  de: Abbild erstellen
 tools-backup-create-info:
   ru: Нажмите на кнопку «создать слепок» и дождитесь окончания процесса. После
     завершения в списке слепкой внизу этой страницы появится новый пункт
@@ -26,15 +28,24 @@ tools-backup-create-info:
   hy: "Կտտացրեք «ստեղծել տպավորություն» կոճակը և սպասեք գործընթացի ավարտին:
     Ավարտելուց հետո ամսաթվով նշված նոր տարրը կհայտնվի այս էջի ներքևում գտնվող
     տպավորությունների ցանկում:"
-  it: Fare clic sul pulsante "crea immagine" e attendere il completamento del processo.
-    Al termine, verrà visualizzato un nuovo elemento contrassegnato con la data
-    nell'elenco delle immagini in basso a questa pagina.
-  es: Haga clic en el botón "crear instantánea" y espere a que finalice el proceso.
-    Cuando se complete, aparecerá un nuevo elemento marcado con la fecha en la
-    lista de instantáneas en la parte inferior de esta página.
-  kk: "«Сурет жасау» түймесін басып, процестің аяқталуын күтіңіз. Аяқталғаннан кейін, осы беттің төменгі жағындағы суреттер тізімінде күнмен белгіленген жаңа элемент пайда болады."
-  uz: "«Surat yaratish» tugmasini bosing va jarayon tugashini kuting. Tugallangandan so'ng, ushbu sahifaning pastki qismidagi suratlar ro'yxatida sana bilan belgilangan yangi element paydo bo'ladi."
-  cz: Klikněte na tlačítko „vytvořit snímek“ a počkejte na dokončení procesu. Po dokončení se v seznamu snímků ve spodní části této stránky objeví nová položka označená datem.
+  it: Fare clic sul pulsante "crea immagine" e attendere il completamento del
+    processo. Al termine, verrà visualizzato un nuovo elemento contrassegnato
+    con la data nell'elenco delle immagini in basso a questa pagina.
+  es: Haga clic en el botón "crear instantánea" y espere a que finalice el
+    proceso. Cuando se complete, aparecerá un nuevo elemento marcado con la
+    fecha en la lista de instantáneas en la parte inferior de esta página.
+  kk: «Сурет жасау» түймесін басып, процестің аяқталуын күтіңіз. Аяқталғаннан
+    кейін, осы беттің төменгі жағындағы суреттер тізімінде күнмен белгіленген
+    жаңа элемент пайда болады.
+  uz: «Surat yaratish» tugmasini bosing va jarayon tugashini kuting.
+    Tugallangandan so'ng, ushbu sahifaning pastki qismidagi suratlar ro'yxatida
+    sana bilan belgilangan yangi element paydo bo'ladi.
+  cz: Klikněte na tlačítko „vytvořit snímek“ a počkejte na dokončení procesu. Po
+    dokončení se v seznamu snímků ve spodní části této stránky objeví nová
+    položka označená datem.
+  de: Klicken Sie auf die Schaltfläche „Abbild erstellen“ und warten Sie, bis der
+    Vorgang abgeschlossen ist. Nach Abschluss erscheint ein neuer Eintrag mit
+    dem Datum in der Liste der Abbilder am unteren Rand dieser Seite.
 tools-backups-points-title:
   ru: Список созданных слепков
   en: List of created impressions
@@ -44,6 +55,7 @@ tools-backups-points-title:
   kk: Жасалған суреттер тізімі
   uz: Yaratilgan suratlar ro'yxati
   cz: Seznam vytvořených snímků
+  de: Liste der erstellten Abbilder
 tools-backups-dataempty:
   ru: Слепки не найдены
   en: Snapshots not found
@@ -53,6 +65,7 @@ tools-backups-dataempty:
   kk: Суреттер табылмады
   uz: Suratlar topilmadi
   cz: Snímky nenalezeny
+  de: Keine Abbilder gefunden
 tools-backups-points-status:
   ru: Статус
   en: Status
@@ -62,6 +75,7 @@ tools-backups-points-status:
   kk: Статус
   uz: Holat
   cz: Stav
+  de: Status
 tools-backups-points-running:
   ru: Работает
   en: Running
@@ -71,6 +85,7 @@ tools-backups-points-running:
   kk: Жұмыс істеп тұр
   uz: Ishlayapti
   cz: Probíhá
+  de: Läuft
 tools-backups-points-name:
   ru: Наименование
   en: Name
@@ -80,6 +95,7 @@ tools-backups-points-name:
   kk: Атауы
   uz: Nomi
   cz: Název
+  de: Name
 tools-backups-points-cron:
   ru: Планировщик
   en: Scheduler
@@ -89,6 +105,7 @@ tools-backups-points-cron:
   kk: Жоспарлаушы
   uz: Rejalashtiruvchi
   cz: Plánovač
+  de: Zeitplan
 tools-backups-points-file:
   ru: Шаблон названия файла
   en: File name template
@@ -98,6 +115,7 @@ tools-backups-points-file:
   kk: Файл атауының үлгісі
   uz: Fayl nomi shabloni
   cz: Šablona názvu souboru
+  de: Dateinamensvorlage
 tools-backups-windowtitle-editbackup:
   ru: Редактировать задание
   en: Edit task
@@ -107,6 +125,7 @@ tools-backups-windowtitle-editbackup:
   kk: Тапсырманы өңдеу
   uz: Vazifani tahrirlash
   cz: Upravit úlohu
+  de: Aufgabe bearbeiten
 tools-backups-windowtitle-newbackup:
   ru: Новое задание
   en: New task
@@ -116,6 +135,7 @@ tools-backups-windowtitle-newbackup:
   kk: Жаңа тапсырма
   uz: Yangi vazifa
   cz: Nová úloha
+  de: Neue Aufgabe
 tools-backups-contextmenu-edit:
   ru: Редактировать
   en: Edit
@@ -125,6 +145,7 @@ tools-backups-contextmenu-edit:
   kk: Өңдеу
   uz: Tahrirlash
   cz: Upravit
+  de: Bearbeiten
 tools-backups-contextmenu-delete:
   ru: Удалить
   en: Delete
@@ -134,6 +155,7 @@ tools-backups-contextmenu-delete:
   kk: Жою
   uz: O'chirish
   cz: Smazat
+  de: Löschen
 tools-backups-deletedata1:
   ru: Удаление точки восстановления
   en: Delete the snapshot
@@ -143,6 +165,7 @@ tools-backups-deletedata1:
   kk: Суретті жою
   uz: Suratni o'chirish
   cz: Smazat snímek
+  de: Abbild löschen
 tools-backups-deletedata1message:
   ru: Вы уверены, что хотите удалить выбранную строку?
   en: Are you sure you want to delete the selected row?
@@ -152,6 +175,7 @@ tools-backups-deletedata1message:
   kk: Таңдалған жолды жоюға сенімдісіз бе?
   uz: Tanlangan qatorni o'chirishga ishonchingiz komilmi?
   cz: Opravdu chcete smazat vybraný řádek?
+  de: Sind Sie sicher, dass Sie die ausgewählte Zeile löschen möchten?
 tools-backups-deletedata1message-delete:
   ru: Удалить!
   en: Delete
@@ -161,3 +185,4 @@ tools-backups-deletedata1message-delete:
   kk: Жою
   uz: O'chirish
   cz: Smazat
+  de: Löschen
