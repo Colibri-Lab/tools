@@ -8,6 +8,7 @@ tools-notices-notices-title:
   uz: Bildirishnomalar
   cz: Oznámení
   de: Mitteilungen
+  tr: Bildirimler
 tools-notices-date-title:
   ru: Редактор
   en: Editor
@@ -18,6 +19,7 @@ tools-notices-date-title:
   uz: Tahrirlovchi
   cz: Editor
   de: Editor
+  tr: Editör
 tools-notices-buttons-save:
   ru: Сохранить
   en: Save
@@ -28,6 +30,7 @@ tools-notices-buttons-save:
   uz: Saqlash
   cz: Uložit
   de: Speichern
+  tr: Kaydet
 tools-notices-fields-nodesc:
   ru: Без темы
   en: No subject
@@ -38,6 +41,7 @@ tools-notices-fields-nodesc:
   uz: Mavzusiz
   cz: Bez předmětu
   de: Kein Betreff
+  tr: Konu yok
 tools-notices-fields-desc:
   ru: Наименование
   en: Name
@@ -48,6 +52,7 @@ tools-notices-fields-desc:
   uz: Nomi
   cz: Název
   de: Name
+  tr: Ad
 tools-notices-fields-desc-note:
   ru: Введите наименование сообщения. Латинские буквы без спец-символов
   en: Enter a title for the message. Latin letters without special characters
@@ -60,6 +65,7 @@ tools-notices-fields-desc-note:
   cz: Zadejte název zprávy. Pouze latinská písmena bez speciálních znaků
   de: Geben Sie einen Titel für die Nachricht ein. Lateinische Buchstaben ohne
     Sonderzeichen
+  tr: Mesaj için bir başlık girin. Özel karakter olmadan Latin harfleri kullanın
 tools-notices-fields-subject:
   ru: Тема письма
   en: Subject
@@ -70,6 +76,7 @@ tools-notices-fields-subject:
   uz: Xat mavzusi
   cz: Předmět
   de: Betreff
+  tr: Konu
 tools-notices-fields-subject-note:
   ru: Введите тему письма
   en: Enter the message subject
@@ -80,6 +87,7 @@ tools-notices-fields-subject-note:
   uz: Xat mavzusini kiriting
   cz: Zadejte předmět zprávy
   de: Geben Sie den Betreff der Nachricht ein
+  tr: Mesaj konusunu girin
 tools-notices-fields-body:
   ru: Тело письма
   en: Message body
@@ -90,6 +98,7 @@ tools-notices-fields-body:
   uz: Xat matni
   cz: Tělo zprávy
   de: Nachrichteninhalt
+  tr: Mesaj gövdesi
 tools-notices-fields-body-note:
   ru: Введите тело письма. Допускаются вставки вида [[name]] в качестве переменных
     шаблона
@@ -109,6 +118,8 @@ tools-notices-fields-body-note:
     šablonové proměnné
   de: Geben Sie den Inhalt der E-Mail ein. Platzhalter wie [[name]] sind als
     Template-Variablen erlaubt
+  tr: E-posta gövdesini girin. [[name]] gibi eklemeler şablon değişkeni olarak
+    kullanılabilir
 tools-notices-contextmenu-newnotice:
   ru: Создать шаблон
   en: Create notice
@@ -119,6 +130,7 @@ tools-notices-contextmenu-newnotice:
   uz: Shablon yaratish
   cz: Vytvořit oznámení
   de: Mitteilung erstellen
+  tr: Bildirim oluştur
 tools-notices-contextmenu-deletenotice:
   ru: Удалить шаблон
   en: Delete notice
@@ -129,3 +141,4 @@ tools-notices-contextmenu-deletenotice:
   uz: Shablonni o'chirish
   cz: Smazat oznámení
   de: Mitteilung löschen
+  tr: Bildirimi sil

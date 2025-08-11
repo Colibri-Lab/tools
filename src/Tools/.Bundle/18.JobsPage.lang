@@ -8,6 +8,7 @@ tools-jobs-active-jobs-title:
   uz: Faol vazifalar
   cz: Aktivní úlohy
   de: Aktive Pipelines
+  tr: Aktif iş akışları
 tools-jobs-successed-title:
   ru: Успешные задачи (последние 20)
   en: Successed pipelines (last 20)
@@ -18,6 +19,7 @@ tools-jobs-successed-title:
   uz: Muvaffaqiyatli vazifalar (so'nggi 20)
   cz: Úspěšné úlohy (posledních 20)
   de: Erfolgreiche Pipelines (letzte 20)
+  tr: Başarılı iş akışları (son 20)
 tools-jobs-errors-title:
   ru: Ошибки (последние 20)
   en: Errors (last 20)
@@ -28,6 +30,7 @@ tools-jobs-errors-title:
   uz: Xatolar (so'nggi 20)
   cz: Chyby (posledních 20)
   de: Fehler (letzte 20)
+  tr: Hatalar (son 20)
 tools-jobs-active-jobs-datecreated:
   ru: Создано
   en: Created
@@ -38,6 +41,7 @@ tools-jobs-active-jobs-datecreated:
   uz: Yaratilgan
   cz: Vytvořeno
   de: Erstellt
+  tr: Oluşturuldu
 tools-jobs-active-jobs-datereserved:
   ru: Зарезервировано
   en: Reserved
@@ -48,6 +52,7 @@ tools-jobs-active-jobs-datereserved:
   uz: Zaxiraga olingan
   cz: Rezervováno
   de: Reserviert
+  tr: Rezerve edildi
 tools-jobs-active-jobs-reservation_key:
   ru: Ключ
   en: Key
@@ -58,6 +63,7 @@ tools-jobs-active-jobs-reservation_key:
   uz: Kalit
   cz: Klíč
   de: Schlüssel
+  tr: Anahtar
 tools-jobs-active-jobs-queue:
   ru: Поток
   en: Pipeline
@@ -68,6 +74,7 @@ tools-jobs-active-jobs-queue:
   uz: Oqim
   cz: Fronta
   de: Pipeline
+  tr: İş akışı
 tools-jobs-active-jobs-class:
   ru: Класс
   en: Class
@@ -78,6 +85,7 @@ tools-jobs-active-jobs-class:
   uz: Sinf
   cz: Třída
   de: Klasse
+  tr: Sınıf
 tools-jobs-active-jobs-payload_class:
   ru: Класс данных
   en: Payload class
@@ -88,6 +96,7 @@ tools-jobs-active-jobs-payload_class:
   uz: Ma'lumotlar sinfi
   cz: Třída dat
   de: Payload-Klasse
+  tr: Yük sınıfı
 tools-jobs-active-jobs-attempts:
   ru: Попытки
   en: Attempts
@@ -98,6 +107,7 @@ tools-jobs-active-jobs-attempts:
   uz: Urinishlar
   cz: Pokusy
   de: Versuche
+  tr: Denemeler
 tools-jobs-active-jobs-parallel:
   ru: Паралельный
   en: Is parallel
@@ -108,3 +118,4 @@ tools-jobs-active-jobs-parallel:
   uz: Parallel
   cz: Paralelní
   de: Ist parallel
+  tr: Paralel mi

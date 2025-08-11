@@ -8,6 +8,7 @@ tools-settings-settings-title:
   uz: Sozlamalar
   cz: Nastavení
   de: Einstellungen
+  tr: Ayarlar
 tools-settings-data-title:
   ru: Редактор
   en: Editor
@@ -18,6 +19,7 @@ tools-settings-data-title:
   uz: Tahrirlovchi
   cz: Editor
   de: Editor
+  tr: Editör
 tools-settings-buttons-save:
   ru: Сохранить
   en: Save
@@ -28,6 +30,7 @@ tools-settings-buttons-save:
   uz: Saqlash
   cz: Uložit
   de: Speichern
+  tr: Kaydet
 tools-settings-contextmenu-delete:
   ru: Удалить настройку
   en: Remove setting
@@ -38,6 +41,7 @@ tools-settings-contextmenu-delete:
   uz: Sozlamani olib tashlash
   cz: Odstranit nastavení
   de: Einstellung entfernen
+  tr: Ayarı kaldır
 tools-settings-description-title:
   ru: Описание настройки
   en: Setting description
@@ -48,6 +52,7 @@ tools-settings-description-title:
   uz: Sozlama tavsifi
   cz: Popis nastavení
   de: Einstellungsbeschreibung
+  tr: Ayar açıklaması
 tools-settings-value-title:
   ru: Значение
   en: Setting value
@@ -58,6 +63,7 @@ tools-settings-value-title:
   uz: Sozlama qiymati
   cz: Hodnota nastavení
   de: Einstellungswert
+  tr: Ayar değeri
 tools-settings-settings-canchange:
   ru: Список настроек может быть изменен только в локальном режиме, пожалуйста,
     обратитесь к администратору
@@ -77,3 +83,5 @@ tools-settings-settings-canchange:
     administrátora
   de: Die Liste der Einstellungen kann nur im lokalen Modus geändert werden, bitte
     wenden Sie sich an Ihren Administrator
+  tr: Ayar listesi yalnızca yerel modda değiştirilebilir, lütfen yöneticinizle
+    iletişime geçin

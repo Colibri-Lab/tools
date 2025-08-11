@@ -8,6 +8,7 @@ tools-backups-create-title:
   uz: Tizim suratini yaratish
   cz: Vytvořit snímek systému
   de: Systemabbild erstellen
+  tr: Sistem anlık görüntüsü oluştur
 tools-backup-create:
   ru: Создать слепок
   en: Create a snapshot
@@ -18,6 +19,7 @@ tools-backup-create:
   uz: Surat yaratish
   cz: Vytvořit snímek
   de: Abbild erstellen
+  tr: Anlık görüntü oluştur
 tools-backup-create-info:
   ru: Нажмите на кнопку «создать слепок» и дождитесь окончания процесса. После
     завершения в списке слепкой внизу этой страницы появится новый пункт
@@ -46,6 +48,9 @@ tools-backup-create-info:
   de: Klicken Sie auf die Schaltfläche „Abbild erstellen“ und warten Sie, bis der
     Vorgang abgeschlossen ist. Nach Abschluss erscheint ein neuer Eintrag mit
     dem Datum in der Liste der Abbilder am unteren Rand dieser Seite.
+  tr: “İzlenim oluştur” butonuna tıklayın ve işlemin bitmesini bekleyin.
+    Tamamlandığında, bu sayfanın altındaki izlenimler listesinde tarih ile
+    işaretlenmiş yeni bir öğe görünecektir.
 tools-backups-points-title:
   ru: Список созданных слепков
   en: List of created impressions
@@ -56,6 +61,7 @@ tools-backups-points-title:
   uz: Yaratilgan suratlar ro'yxati
   cz: Seznam vytvořených snímků
   de: Liste der erstellten Abbilder
+  tr: Oluşturulan izlenimlerin listesi
 tools-backups-dataempty:
   ru: Слепки не найдены
   en: Snapshots not found
@@ -66,6 +72,7 @@ tools-backups-dataempty:
   uz: Suratlar topilmadi
   cz: Snímky nenalezeny
   de: Keine Abbilder gefunden
+  tr: Anlık görüntü bulunamadı
 tools-backups-points-status:
   ru: Статус
   en: Status
@@ -76,6 +83,7 @@ tools-backups-points-status:
   uz: Holat
   cz: Stav
   de: Status
+  tr: Durum
 tools-backups-points-running:
   ru: Работает
   en: Running
@@ -86,6 +94,7 @@ tools-backups-points-running:
   uz: Ishlayapti
   cz: Probíhá
   de: Läuft
+  tr: Çalışıyor
 tools-backups-points-name:
   ru: Наименование
   en: Name
@@ -96,6 +105,7 @@ tools-backups-points-name:
   uz: Nomi
   cz: Název
   de: Name
+  tr: Ad
 tools-backups-points-cron:
   ru: Планировщик
   en: Scheduler
@@ -106,6 +116,7 @@ tools-backups-points-cron:
   uz: Rejalashtiruvchi
   cz: Plánovač
   de: Zeitplan
+  tr: Zamanlayıcı
 tools-backups-points-file:
   ru: Шаблон названия файла
   en: File name template
@@ -116,6 +127,7 @@ tools-backups-points-file:
   uz: Fayl nomi shabloni
   cz: Šablona názvu souboru
   de: Dateinamensvorlage
+  tr: Dosya adı şablonu
 tools-backups-windowtitle-editbackup:
   ru: Редактировать задание
   en: Edit task
@@ -126,6 +138,7 @@ tools-backups-windowtitle-editbackup:
   uz: Vazifani tahrirlash
   cz: Upravit úlohu
   de: Aufgabe bearbeiten
+  tr: Görevi düzenle
 tools-backups-windowtitle-newbackup:
   ru: Новое задание
   en: New task
@@ -136,6 +149,7 @@ tools-backups-windowtitle-newbackup:
   uz: Yangi vazifa
   cz: Nová úloha
   de: Neue Aufgabe
+  tr: Yeni görev
 tools-backups-contextmenu-edit:
   ru: Редактировать
   en: Edit
@@ -146,6 +160,7 @@ tools-backups-contextmenu-edit:
   uz: Tahrirlash
   cz: Upravit
   de: Bearbeiten
+  tr: Düzenle
 tools-backups-contextmenu-delete:
   ru: Удалить
   en: Delete
@@ -156,6 +171,7 @@ tools-backups-contextmenu-delete:
   uz: O'chirish
   cz: Smazat
   de: Löschen
+  tr: Sil
 tools-backups-deletedata1:
   ru: Удаление точки восстановления
   en: Delete the snapshot
@@ -166,6 +182,7 @@ tools-backups-deletedata1:
   uz: Suratni o'chirish
   cz: Smazat snímek
   de: Abbild löschen
+  tr: Anlık görüntüyü sil
 tools-backups-deletedata1message:
   ru: Вы уверены, что хотите удалить выбранную строку?
   en: Are you sure you want to delete the selected row?
@@ -176,6 +193,7 @@ tools-backups-deletedata1message:
   uz: Tanlangan qatorni o'chirishga ishonchingiz komilmi?
   cz: Opravdu chcete smazat vybraný řádek?
   de: Sind Sie sicher, dass Sie die ausgewählte Zeile löschen möchten?
+  tr: Seçili satırı silmek istediğinizden emin misiniz?
 tools-backups-deletedata1message-delete:
   ru: Удалить!
   en: Delete
@@ -186,3 +204,4 @@ tools-backups-deletedata1message-delete:
   uz: O'chirish
   cz: Smazat
   de: Löschen
+  tr: Sil
