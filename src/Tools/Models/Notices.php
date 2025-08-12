@@ -34,9 +34,9 @@ class Notices extends BaseModelDataTable
      */
     public function __construct(
         DataAccessPoint $point,
-        IDataReader $reader = null,
+        ?IDataReader $reader = null,
         string $returnAs = 'Notice',
-        Storage|null $storage = null
+        ?Storage $storage = null
     ) {
         parent::__construct($point, $reader, $returnAs, $storage);
     }
@@ -54,8 +54,8 @@ class Notices extends BaseModelDataTable
     public static function LoadByFilter(
         int $page = -1,
         int $pagesize = 20,
-        string $filter = null,
-        string $order = null,
+        ?string $filter = null,
+        ?string $order = null,
         array $params = [],
         bool $calculateAffected = true
     ): ?Notices {
@@ -97,7 +97,7 @@ class Notices extends BaseModelDataTable
         int $pagesize = 20,
         bool $calculateAffected = false
     ): ?Notices {
-        return self::LoadByFilter($page, $pagesize, null, null, [], $calculateAffected);
+        return self::LoadByFilter($page, $pagesize, null, '{name}', [], $calculateAffected);
     }
 
     /**

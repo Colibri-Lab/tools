@@ -12,7 +12,7 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
         this._save = this.Children('split/data-pane/buttons-pane/save');
 
         this._notices.AddHandler('SelectionChanged', this.__noticesSelectionChanged, false, this);
-        this._notices.AddHandler('ContextMenuIconClicked', (event, args) => this.__renderNoticesContextMenu(event, args))
+        this._notices.AddHandler('ContextMenuIconClicked', this.__renderNoticesContextMenu, false, this)
         this._notices.AddHandler('ContextMenuItemClicked', this.__clickOnNoticesContextMenu, false, this);     
         this._notices.AddHandler('NodeEditCompleted', this.__noticesNodeEditCompleted, false, this);
 
@@ -80,11 +80,12 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
         const node = args.node;
         const mode = args.mode;
         const value = args.value;
+        debugger;
         if(node.tag?.new) {
             // добавляем
             node.Dispose();
             if(mode == 'save') {
-                Tools.CreateNotice({name: value, subject: '', body: ''});
+                Tools.CreateNotice({name: value, subject: node.tag.subject ?? '', body: node.tag.body ?? ''});
             }
             return true;
         }
@@ -108,6 +109,7 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
             this._notices.ShowContextMenu(args.isContextMenuEvent ? [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.RB] : [Colibri.UI.ContextMenu.RT, Colibri.UI.ContextMenu.LT], '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);
         }
         else {
+            contextmenu.push({name: 'dublicate-notice', title: '#{tools-notices-contextmenu-dublicatenotice}', icon: Colibri.UI.ContextMenuRemoveIcon});
             contextmenu.push({name: 'remove-notice', title: '#{tools-notices-contextmenu-deletenotice}', icon: Colibri.UI.ContextMenuRemoveIcon});
             args.item.contextmenu = contextmenu;
             args.item.ShowContextMenu(args.isContextMenuEvent ? [Colibri.UI.ContextMenu.LB, Colibri.UI.ContextMenu.LT] : [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.RT], '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);
@@ -131,6 +133,13 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
             const notice = item.tag;
             this._notices.selected = null;
             Tools.DeleteNotice(notice.id);
+        }
+        else if(menuData.name === 'dublicate-notice') {
+            const notice = Object.cloneRecursive(item.tag);
+            const node = this._notices.AddNew('UNTITLED', Object.assign(notice, {new: true, name: 'UNTITLED'}));
+            node.editable = true;
+            node.Edit();
+
         }
         else if(item instanceof Colibri.UI.Tree) {
             const node = this._notices.AddNew('UNTITLED', {new: true, name: 'UNTITLED'});

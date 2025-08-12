@@ -72,6 +72,8 @@ class NoticesController extends WebController
         try {
 
             $notice->name = $name;
+            $notice->subject = $post->{'subject'} ?? '';
+            $notice->body = $post->{'body'} ?? '';
 
             if (($res = $notice->Save(true)) !== true) {
                 throw new InvalidArgumentException($res->error, 400);

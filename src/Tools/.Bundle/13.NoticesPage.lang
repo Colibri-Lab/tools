@@ -154,3 +154,15 @@ tools-notices-contextmenu-deletenotice:
   de: Mitteilung löschen
   tr: Bildirimi sil
   zh: 删除通知
+tools-notices-contextmenu-dublicatenotice:
+  ru: Скопировать
+  en: Duplicate notice
+  hy: Նմանակել ձևաչափը
+  it: Duplica modello
+  es: Duplicar plantilla
+  kk: Үлгіні көшіру
+  uz: Shablonni ko'chirish
+  cz: Duplikovat oznámení
+  de: Mitteilung duplizieren
+  tr: Bildirimi kopyala
+  zh: 复制通知
