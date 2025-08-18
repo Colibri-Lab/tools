@@ -10,6 +10,7 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
         this._title = this.Children('split/data-pane/ttl');
         this._form = this.Children('split/data-pane/editor-pane/editor');
         this._save = this.Children('split/data-pane/buttons-pane/save');
+        this._buttons = this.Children('split/data-pane/buttons-pane');
 
         this._notices.AddHandler('SelectionChanged', this.__noticesSelectionChanged, false, this);
         this._notices.AddHandler('ContextMenuIconClicked', this.__renderNoticesContextMenu, false, this)
@@ -29,7 +30,10 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
     __noticesSelectionChanged(event, args) {
 
         const selection = this._notices.selected;
-        if(!selection || selection.name === 'root') {
+        if(!selection || selection.name === 'root' || !selection.tag) {
+            this._title.shown = false;
+            this._form.shown = false;
+            this._buttons.shown = false;
             this._form.fields = {};
             this._form.value = {};
             return false;
@@ -39,6 +43,10 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
         if(notice?.new) {
             return false;
         }
+
+        this._title.shown = true;
+        this._form.shown = true;
+        this._buttons.shown = true;
 
         this._title.value = notice.name + ' (' + (notice.subject ? notice.subject : '#{tools-notices-fields-nodesc}') + ')';
         this._form.fields = {
@@ -80,7 +88,6 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
         const node = args.node;
         const mode = args.mode;
         const value = args.value;
-        debugger;
         if(node.tag?.new) {
             // добавляем
             node.Dispose();
@@ -102,17 +109,27 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
     __renderNoticesContextMenu(event, args) {
         let contextmenu = [];
 
-        const itemData = args.item?.tag;
-        if(!itemData) {
+        
+        if(!args.item) {
             contextmenu.push({name: 'new-notice', title: '#{tools-notices-contextmenu-newnotice}', icon: Colibri.UI.ContextMenuAddIcon});
             this._notices.contextmenu = contextmenu;
             this._notices.ShowContextMenu(args.isContextMenuEvent ? [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.RB] : [Colibri.UI.ContextMenu.RT, Colibri.UI.ContextMenu.LT], '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);
         }
         else {
-            contextmenu.push({name: 'dublicate-notice', title: '#{tools-notices-contextmenu-dublicatenotice}', icon: Colibri.UI.ContextMenuRemoveIcon});
-            contextmenu.push({name: 'remove-notice', title: '#{tools-notices-contextmenu-deletenotice}', icon: Colibri.UI.ContextMenuRemoveIcon});
-            args.item.contextmenu = contextmenu;
-            args.item.ShowContextMenu(args.isContextMenuEvent ? [Colibri.UI.ContextMenu.LB, Colibri.UI.ContextMenu.LT] : [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.RT], '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);
+            const itemData = args.item?.tag;
+            if(!itemData) {
+                contextmenu.push({name: 'new-notice', title: '#{tools-notices-contextmenu-newnotice}', icon: Colibri.UI.ContextMenuAddIcon});
+                args.item.contextmenu = contextmenu;
+                args.item.ShowContextMenu(args.isContextMenuEvent ? [Colibri.UI.ContextMenu.LB, Colibri.UI.ContextMenu.LT] : [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.RT], '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);
+                
+            } else {
+
+                contextmenu.push({name: 'dublicate-notice', title: '#{tools-notices-contextmenu-dublicatenotice}', icon: Colibri.UI.ContextMenuRemoveIcon});
+                contextmenu.push({name: 'remove-notice', title: '#{tools-notices-contextmenu-deletenotice}', icon: Colibri.UI.ContextMenuRemoveIcon});
+                args.item.contextmenu = contextmenu;
+                args.item.ShowContextMenu(args.isContextMenuEvent ? [Colibri.UI.ContextMenu.LB, Colibri.UI.ContextMenu.LT] : [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.RT], '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);
+
+            }
         }
 
     }
@@ -134,9 +151,15 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
             this._notices.selected = null;
             Tools.DeleteNotice(notice.id);
         }
+        else if(menuData.name === 'new-notice' && item instanceof Colibri.UI.TreeNode) {
+            const node = this._notices.AddNew(this._notices.GetPath(item, '_') + '_' ?? 'UNTITLED', {new: true, name: 'UNTITLED'}, item);
+            node.editable = true;
+            node.Edit();
+
+        }
         else if(menuData.name === 'dublicate-notice') {
             const notice = Object.cloneRecursive(item.tag);
-            const node = this._notices.AddNew('UNTITLED', Object.assign(notice, {new: true, name: 'UNTITLED'}));
+            const node = this._notices.AddNew(this._notices.GetPath(item.parentNode, '_') + '_' ?? 'UNTITLED', Object.assign(notice, {new: true, name: 'UNTITLED'}), item.parentNode);
             node.editable = true;
             node.Edit();
 
