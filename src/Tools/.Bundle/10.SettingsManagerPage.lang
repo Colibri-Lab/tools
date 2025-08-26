@@ -10,6 +10,7 @@ tools-settings-settings-title:
   de: Einstellungen
   tr: Ayarlar
   zh: 设置
+  fa: تنظیمات
 tools-settings-data-title:
   ru: Редактор
   en: Editor
@@ -22,6 +23,7 @@ tools-settings-data-title:
   de: Editor
   tr: Editör
   zh: 编辑器
+  fa: ویرایشگر
 tools-settings-buttons-save:
   ru: Сохранить
   en: Save
@@ -34,6 +36,7 @@ tools-settings-buttons-save:
   de: Speichern
   tr: Kaydet
   zh: 保存
+  fa: ذخیره
 tools-settings-contextmenu-delete:
   ru: Удалить настройку
   en: Remove setting
@@ -46,6 +49,7 @@ tools-settings-contextmenu-delete:
   de: Einstellung entfernen
   tr: Ayarı kaldır
   zh: 删除设置
+  fa: حذف تنظیم
 tools-settings-description-title:
   ru: Описание настройки
   en: Setting description
@@ -58,6 +62,7 @@ tools-settings-description-title:
   de: Einstellungsbeschreibung
   tr: Ayar açıklaması
   zh: 设置描述
+  fa: توضیحات تنظیم
 tools-settings-value-title:
   ru: Значение
   en: Setting value
@@ -70,6 +75,7 @@ tools-settings-value-title:
   de: Einstellungswert
   tr: Ayar değeri
   zh: 设置值
+  fa: مقدار تنظیم
 tools-settings-settings-canchange:
   ru: Список настроек может быть изменен только в локальном режиме, пожалуйста,
     обратитесь к администратору
@@ -92,3 +98,4 @@ tools-settings-settings-canchange:
   tr: Ayar listesi yalnızca yerel modda değiştirilebilir, lütfen yöneticinizle
     iletişime geçin
   zh: 仅可在本地模式下更改设置列表，请联系您的管理员
+  fa: فهرست تنظیمات فقط در حالت محلی قابل تغییر است، لطفاً با مدیر خود تماس بگیرید

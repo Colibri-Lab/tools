@@ -10,6 +10,7 @@ tools-notices-notices-title:
   de: Mitteilungen
   tr: Bildirimler
   zh: 通知
+  fa: اعلان‌ها
 tools-notices-date-title:
   ru: Редактор
   en: Editor
@@ -22,6 +23,7 @@ tools-notices-date-title:
   de: Editor
   tr: Editör
   zh: 编辑器
+  fa: ویرایشگر
 tools-notices-buttons-save:
   ru: Сохранить
   en: Save
@@ -34,6 +36,7 @@ tools-notices-buttons-save:
   de: Speichern
   tr: Kaydet
   zh: 保存
+  fa: ذخیره
 tools-notices-fields-nodesc:
   ru: Без темы
   en: No subject
@@ -46,6 +49,7 @@ tools-notices-fields-nodesc:
   de: Kein Betreff
   tr: Konu yok
   zh: 无主题
+  fa: بدون موضوع
 tools-notices-fields-desc:
   ru: Наименование
   en: Name
@@ -58,6 +62,7 @@ tools-notices-fields-desc:
   de: Name
   tr: Ad
   zh: 名称
+  fa: نام
 tools-notices-fields-desc-note:
   ru: Введите наименование сообщения. Латинские буквы без спец-символов
   en: Enter a title for the message. Latin letters without special characters
@@ -72,6 +77,7 @@ tools-notices-fields-desc-note:
     Sonderzeichen
   tr: Mesaj için bir başlık girin. Özel karakter olmadan Latin harfleri kullanın
   zh: 输入消息标题。仅限拉丁字母，不含特殊字符
+  fa: عنوان پیام را وارد کنید. فقط حروف لاتین بدون کاراکترهای ویژه
 tools-notices-fields-subject:
   ru: Тема письма
   en: Subject
@@ -84,6 +90,7 @@ tools-notices-fields-subject:
   de: Betreff
   tr: Konu
   zh: 主题
+  fa: موضوع
 tools-notices-fields-subject-note:
   ru: Введите тему письма
   en: Enter the message subject
@@ -96,6 +103,7 @@ tools-notices-fields-subject-note:
   de: Geben Sie den Betreff der Nachricht ein
   tr: Mesaj konusunu girin
   zh: 输入消息主题
+  fa: موضوع پیام را وارد کنید
 tools-notices-fields-body:
   ru: Тело письма
   en: Message body
@@ -108,6 +116,7 @@ tools-notices-fields-body:
   de: Nachrichteninhalt
   tr: Mesaj gövdesi
   zh: 消息正文
+  fa: متن پیام
 tools-notices-fields-body-note:
   ru: Введите тело письма. Допускаются вставки вида [[name]] в качестве переменных
     шаблона
@@ -130,6 +139,7 @@ tools-notices-fields-body-note:
   tr: E-posta gövdesini girin. [[name]] gibi eklemeler şablon değişkeni olarak
     kullanılabilir
   zh: 输入邮件正文。允许使用[[name]]等模板变量
+  fa: متن پیام را وارد کنید. درج‌هایی مانند [[name]] به عنوان متغیر قالب مجاز هستند
 tools-notices-contextmenu-newnotice:
   ru: Создать шаблон
   en: Create notice
@@ -142,6 +152,7 @@ tools-notices-contextmenu-newnotice:
   de: Mitteilung erstellen
   tr: Bildirim oluştur
   zh: 新建通知
+  fa: ایجاد اعلان
 tools-notices-contextmenu-deletenotice:
   ru: Удалить шаблон
   en: Delete notice
@@ -154,6 +165,7 @@ tools-notices-contextmenu-deletenotice:
   de: Mitteilung löschen
   tr: Bildirimi sil
   zh: 删除通知
+  fa: حذف اعلان
 tools-notices-contextmenu-dublicatenotice:
   ru: Скопировать
   en: Duplicate notice
@@ -166,3 +178,4 @@ tools-notices-contextmenu-dublicatenotice:
   de: Mitteilung duplizieren
   tr: Bildirimi kopyala
   zh: 复制通知
+  fa: کپی اعلان
