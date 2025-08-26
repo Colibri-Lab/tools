@@ -10,6 +10,7 @@ tools-jobs-active-jobs-title:
   de: Aktive Pipelines
   tr: Aktif iş akışları
   zh: 活跃任务
+  fa: وظایف فعال
 tools-jobs-successed-title:
   ru: Успешные задачи (последние 20)
   en: Successed pipelines (last 20)
@@ -22,6 +23,7 @@ tools-jobs-successed-title:
   de: Erfolgreiche Pipelines (letzte 20)
   tr: Başarılı iş akışları (son 20)
   zh: 成功任务（最近20条）
+  fa: وظایف موفق (۲۰ مورد آخر)
 tools-jobs-errors-title:
   ru: Ошибки (последние 20)
   en: Errors (last 20)
@@ -34,6 +36,7 @@ tools-jobs-errors-title:
   de: Fehler (letzte 20)
   tr: Hatalar (son 20)
   zh: 错误（最近20条）
+  fa: خطاها (۲۰ مورد آخر)
 tools-jobs-active-jobs-datecreated:
   ru: Создано
   en: Created
@@ -46,6 +49,7 @@ tools-jobs-active-jobs-datecreated:
   de: Erstellt
   tr: Oluşturuldu
   zh: 创建时间
+  fa: ایجاد شده
 tools-jobs-active-jobs-datereserved:
   ru: Зарезервировано
   en: Reserved
@@ -58,6 +62,7 @@ tools-jobs-active-jobs-datereserved:
   de: Reserviert
   tr: Rezerve edildi
   zh: 预留时间
+  fa: رزرو شده
 tools-jobs-active-jobs-reservation_key:
   ru: Ключ
   en: Key
@@ -70,6 +75,7 @@ tools-jobs-active-jobs-reservation_key:
   de: Schlüssel
   tr: Anahtar
   zh: 键
+  fa: کلید
 tools-jobs-active-jobs-queue:
   ru: Поток
   en: Pipeline
@@ -82,6 +88,7 @@ tools-jobs-active-jobs-queue:
   de: Pipeline
   tr: İş akışı
   zh: 队列
+  fa: صف
 tools-jobs-active-jobs-class:
   ru: Класс
   en: Class
@@ -94,6 +101,7 @@ tools-jobs-active-jobs-class:
   de: Klasse
   tr: Sınıf
   zh: 类
+  fa: کلاس
 tools-jobs-active-jobs-payload_class:
   ru: Класс данных
   en: Payload class
@@ -106,6 +114,7 @@ tools-jobs-active-jobs-payload_class:
   de: Payload-Klasse
   tr: Yük sınıfı
   zh: 负载类
+  fa: کلاس داده‌ها
 tools-jobs-active-jobs-attempts:
   ru: Попытки
   en: Attempts
@@ -118,6 +127,7 @@ tools-jobs-active-jobs-attempts:
   de: Versuche
   tr: Denemeler
   zh: 尝试次数
+  fa: تلاش‌ها
 tools-jobs-active-jobs-parallel:
   ru: Паралельный
   en: Is parallel
@@ -130,3 +140,4 @@ tools-jobs-active-jobs-parallel:
   de: Ist parallel
   tr: Paralel mi
   zh: 是否并行
+  fa: موازی است

@@ -10,6 +10,7 @@ tools-execute-run-title:
   de: Skriptausführung
   tr: Script çalıştırma
   zh: 脚本执行
+  fa: اجرای اسکریپت
 tools-execute-run:
   ru: Запустить скрипт
   en: Run the script
@@ -22,6 +23,7 @@ tools-execute-run:
   de: Skript ausführen
   tr: Scripti çalıştır
   zh: 运行脚本
+  fa: اجرای اسکریپت
 tools-execute-kill:
   ru: Остановить исполнение
   en: Stop the script
@@ -34,6 +36,7 @@ tools-execute-kill:
   de: Skript stoppen
   tr: Scripti durdur
   zh: 停止脚本
+  fa: توقف اجرای اسکریپت
 tools-execute-create-info:
   ru: Внимание! Скрипт исполняется в окружении всего проекта, возможны необратимые
     последствия, пожалуйста, будьте осторожны
@@ -56,6 +59,7 @@ tools-execute-create-info:
   tr: Dikkat! Script tüm proje ortamında çalıştırılır, geri döndürülemez sonuçlar
     olabilir, lütfen dikkatli olun
   zh: 注意！脚本将在整个项目环境中执行，可能造成不可逆后果，请谨慎操作
+  fa: توجه! اسکریپت در محیط کل پروژه اجرا می‌شود، پیامدهای غیرقابل بازگشت ممکن است رخ دهد، لطفاً مراقب باشید
 tools-execute-script-title:
   ru: Скрипт к исполнению
   en: Script to be executed
@@ -68,6 +72,7 @@ tools-execute-script-title:
   de: Auszuführendes Skript
   tr: Çalıştırılacak script
   zh: 待执行脚本
+  fa: اسکریپت برای اجرا
 tools-execute-run-success:
   ru: Скрипт запущен успешно
   en: Script runned successfuly
@@ -80,6 +85,7 @@ tools-execute-run-success:
   de: Skript erfolgreich ausgeführt
   tr: Script başarıyla çalıştırıldı
   zh: 脚本运行成功
+  fa: اسکریپت با موفقیت اجرا شد
 tools-execute-killed-success:
   ru: Скрипт остановлен успешно
   en: Script stopped successfuly
@@ -92,3 +98,4 @@ tools-execute-killed-success:
   de: Skript erfolgreich gestoppt
   tr: Script başarıyla durduruldu
   zh: 脚本已成功停止
+  fa: اسکریپت با موفقیت متوقف شد

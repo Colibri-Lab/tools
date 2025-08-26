@@ -10,6 +10,7 @@ tools-backups-create-title:
   de: Systemabbild erstellen
   tr: Sistem anlık görüntüsü oluştur
   zh: 创建系统快照
+  fa: ایجاد تصویر سیستم
 tools-backup-create:
   ru: Создать слепок
   en: Create a snapshot
@@ -22,6 +23,7 @@ tools-backup-create:
   de: Abbild erstellen
   tr: Anlık görüntü oluştur
   zh: 创建快照
+  fa: ایجاد تصویر فوری
 tools-backup-create-info:
   ru: Нажмите на кнопку «создать слепок» и дождитесь окончания процесса. После
     завершения в списке слепкой внизу этой страницы появится новый пункт
@@ -54,6 +56,7 @@ tools-backup-create-info:
     Tamamlandığında, bu sayfanın altındaki izlenimler listesinde tarih ile
     işaretlenmiş yeni bir öğe görünecektir.
   zh: 点击“创建快照”按钮并等待过程完成。完成后，页面底部的快照列表中会出现一个带日期的新项。
+  fa: روی دکمه «ایجاد تصویر فوری» کلیک کنید و منتظر بمانید تا فرآیند به پایان برسد. پس از اتمام، یک مورد جدید با تاریخ در لیست تصاویر فوری در پایین این صفحه ظاهر خواهد شد.
 tools-backups-points-title:
   ru: Список созданных слепков
   en: List of created impressions
@@ -66,6 +69,7 @@ tools-backups-points-title:
   de: Liste der erstellten Abbilder
   tr: Oluşturulan izlenimlerin listesi
   zh: 已创建快照列表
+  fa: لیست تصاویر فوری ایجاد شده
 tools-backups-dataempty:
   ru: Слепки не найдены
   en: Snapshots not found
@@ -78,6 +82,7 @@ tools-backups-dataempty:
   de: Keine Abbilder gefunden
   tr: Anlık görüntü bulunamadı
   zh: 未找到快照
+  fa: تصویر فوری یافت نشد
 tools-backups-points-status:
   ru: Статус
   en: Status
@@ -90,6 +95,7 @@ tools-backups-points-status:
   de: Status
   tr: Durum
   zh: 状态
+  fa: وضعیت
 tools-backups-points-running:
   ru: Работает
   en: Running
@@ -102,6 +108,7 @@ tools-backups-points-running:
   de: Läuft
   tr: Çalışıyor
   zh: 运行中
+  fa: در حال اجرا
 tools-backups-points-name:
   ru: Наименование
   en: Name
@@ -114,6 +121,7 @@ tools-backups-points-name:
   de: Name
   tr: Ad
   zh: 名称
+  fa: نام
 tools-backups-points-cron:
   ru: Планировщик
   en: Scheduler
@@ -126,6 +134,7 @@ tools-backups-points-cron:
   de: Zeitplan
   tr: Zamanlayıcı
   zh: 调度器
+  fa: زمان‌بندی‌کننده
 tools-backups-points-file:
   ru: Шаблон названия файла
   en: File name template
@@ -138,6 +147,7 @@ tools-backups-points-file:
   de: Dateinamensvorlage
   tr: Dosya adı şablonu
   zh: 文件名模板
+  fa: قالب نام فایل
 tools-backups-windowtitle-editbackup:
   ru: Редактировать задание
   en: Edit task
@@ -150,6 +160,7 @@ tools-backups-windowtitle-editbackup:
   de: Aufgabe bearbeiten
   tr: Görevi düzenle
   zh: 编辑任务
+  fa: ویرایش وظیفه
 tools-backups-windowtitle-newbackup:
   ru: Новое задание
   en: New task
@@ -162,6 +173,7 @@ tools-backups-windowtitle-newbackup:
   de: Neue Aufgabe
   tr: Yeni görev
   zh: 新建任务
+  fa: وظیفه جدید
 tools-backups-contextmenu-edit:
   ru: Редактировать
   en: Edit
@@ -174,6 +186,7 @@ tools-backups-contextmenu-edit:
   de: Bearbeiten
   tr: Düzenle
   zh: 编辑
+  fa: ویرایش
 tools-backups-contextmenu-delete:
   ru: Удалить
   en: Delete
@@ -186,6 +199,7 @@ tools-backups-contextmenu-delete:
   de: Löschen
   tr: Sil
   zh: 删除
+  fa: حذف
 tools-backups-deletedata1:
   ru: Удаление точки восстановления
   en: Delete the snapshot
@@ -198,6 +212,7 @@ tools-backups-deletedata1:
   de: Abbild löschen
   tr: Anlık görüntüyü sil
   zh: 删除快照
+  fa: حذف تصویر فوری
 tools-backups-deletedata1message:
   ru: Вы уверены, что хотите удалить выбранную строку?
   en: Are you sure you want to delete the selected row?
@@ -210,6 +225,7 @@ tools-backups-deletedata1message:
   de: Sind Sie sicher, dass Sie die ausgewählte Zeile löschen möchten?
   tr: Seçili satırı silmek istediğinizden emin misiniz?
   zh: 确定要删除所选行吗？
+  fa: آیا مطمئن هستید که می‌خواهید سطر انتخاب شده را حذف کنید؟
 tools-backups-deletedata1message-delete:
   ru: Удалить!
   en: Delete
@@ -222,3 +238,4 @@ tools-backups-deletedata1message-delete:
   de: Löschen
   tr: Sil
   zh: 删除
+  fa: حذف

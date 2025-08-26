@@ -10,6 +10,7 @@ tools-themes-contextmenu-newtheme:
   de: Thema erstellen
   tr: Tema oluştur
   zh: 新建主题
+  fa: ایجاد قالب
 tools-themes-contextmenu-edittheme:
   ru: Редактировать тему
   en: Edit theme
@@ -22,6 +23,7 @@ tools-themes-contextmenu-edittheme:
   de: Thema bearbeiten
   tr: Temayı düzenle
   zh: 编辑主题
+  fa: ویرایش قالب
 tools-themes-contextmenu-deletetheme:
   ru: Удалить тему
   en: Delete theme
@@ -34,6 +36,7 @@ tools-themes-contextmenu-deletetheme:
   de: Thema löschen
   tr: Temayı sil
   zh: 删除主题
+  fa: حذف قالب
 tools-themes-contextmenu-dublicatetheme:
   ru: Дублировать тему
   en: Dublicate theme
@@ -46,6 +49,7 @@ tools-themes-contextmenu-dublicatetheme:
   de: Thema duplizieren
   tr: Temayı çoğalt
   zh: 复制主题
+  fa: کپی قالب
 tools-themes-contextmenu-setcurrent:
   ru: Установить как текущую
   en: Set as default
@@ -58,6 +62,7 @@ tools-themes-contextmenu-setcurrent:
   de: Als Standard festlegen
   tr: Varsayılan yap
   zh: 设为默认
+  fa: تنظیم به عنوان پیش‌فرض
 tools-themes-windowtitle-edittheme:
   ru: Редактировать тему
   en: Edit theme
@@ -70,6 +75,7 @@ tools-themes-windowtitle-edittheme:
   de: Thema bearbeiten
   tr: Temayı düzenle
   zh: 编辑主题
+  fa: ویرایش قالب
 tools-themes-deletetheme:
   ru: Удаление темы
   en: Delete theme
@@ -82,6 +88,7 @@ tools-themes-deletetheme:
   de: Thema löschen
   tr: Temayı sil
   zh: 删除主题
+  fa: حذف قالب
 tools-themes-deletethememessage:
   ru: Вы уверены, что хотите удалить тему? На сайтах привязанных к этой теме могут
     возникнуть артефакты
@@ -104,6 +111,7 @@ tools-themes-deletethememessage:
   tr: Konuyu silmek istediğinizden emin misiniz? Bu konuya bağlı sitelerde hatalar
     oluşabilir
   zh: 确定要删除该主题吗？与此主题关联的网站可能会出现异常
+  fa: آیا مطمئن هستید که می‌خواهید قالب را حذف کنید؟ ممکن است در سایت‌های مرتبط با این قالب مشکلاتی ایجاد شود
 tools-themes-setcurrenttheme:
   ru: Установка
   en: Installing
@@ -116,6 +124,7 @@ tools-themes-setcurrenttheme:
   de: Wird installiert
   tr: Yükleniyor
   zh: 正在安装
+  fa: در حال نصب
 tools-themes-setcurrentthememessage:
   ru: Вы уверены, что хотите установить тему как текущую?
   en: Are you sure you want to set the theme as current?
@@ -128,6 +137,7 @@ tools-themes-setcurrentthememessage:
   de: Sind Sie sicher, dass Sie das Thema als aktuell festlegen möchten?
   tr: Temayı mevcut olarak ayarlamak istediğinizden emin misiniz?
   zh: 确定要将该主题设为当前主题吗？
+  fa: آیا مطمئن هستید که می‌خواهید قالب را به عنوان فعلی تنظیم کنید؟
 tools-themes-windowtitle-addvartitle:
   ru: Добавить переменную
   en: Add variable
@@ -140,6 +150,7 @@ tools-themes-windowtitle-addvartitle:
   de: Variable hinzufügen
   tr: Değişken ekle
   zh: 添加变量
+  fa: افزودن متغیر
 tools-themes-windowtitle-editvartitle:
   ru: Редактировать переменную
   en: Edit variable
@@ -152,6 +163,7 @@ tools-themes-windowtitle-editvartitle:
   de: Variable bearbeiten
   tr: Değişkeni düzenle
   zh: 编辑变量
+  fa: ویرایش متغیر
 tools-themes-deletevars:
   ru: Удаление переменных
   en: Delete variables
@@ -164,6 +176,7 @@ tools-themes-deletevars:
   de: Variablen löschen
   tr: Değişkenleri sil
   zh: 删除变量
+  fa: حذف متغیرها
 tools-themes-deletevarsmessage:
   ru: Вы уверены, что хотите удалить переменные?
   en: Are you sure you want to delete variables?
@@ -176,6 +189,7 @@ tools-themes-deletevarsmessage:
   de: Sind Sie sicher, dass Sie die Variablen löschen möchten?
   tr: Değişkenleri silmek istediğinizden emin misiniz?
   zh: 确定要删除变量吗？
+  fa: آیا مطمئن هستید که می‌خواهید متغیرها را حذف کنید؟
 tools-themes-deletevar:
   ru: Удаление переменной
   en: Delete variable
@@ -188,6 +202,7 @@ tools-themes-deletevar:
   de: Variable löschen
   tr: Değişkeni sil
   zh: 删除变量
+  fa: حذف متغیر
 tools-themes-deletevarmessage:
   ru: Вы уверены, что хотите удалить переменную?
   en: Are you sure you want to delete the variable?
@@ -200,6 +215,7 @@ tools-themes-deletevarmessage:
   de: Sind Sie sicher, dass Sie die Variable löschen möchten?
   tr: Değişkeni silmek istediğinizden emin misiniz?
   zh: 确定要删除该变量吗？
+  fa: آیا مطمئن هستید که می‌خواهید متغیر را حذف کنید؟
 tools-themes-windowtitle-addmixintitle:
   ru: Добавить Mixin
   en: Add mixin
@@ -212,6 +228,7 @@ tools-themes-windowtitle-addmixintitle:
   de: Mixin hinzufügen
   tr: Mixin ekle
   zh: 添加混入
+  fa: افزودن میکسین
 tools-themes-windowtitle-editmixintitle:
   ru: Редактировать Mixin
   en: Edit mixin
@@ -224,6 +241,7 @@ tools-themes-windowtitle-editmixintitle:
   de: Mixin bearbeiten
   tr: Mixin düzenle
   zh: 编辑混入
+  fa: ویرایش میکسین
 tools-themes-deletemixins:
   ru: Удаление Mixin-ов
   en: Delete mixins
@@ -236,6 +254,7 @@ tools-themes-deletemixins:
   de: Mixins löschen
   tr: Mixinleri sil
   zh: 删除混入
+  fa: حذف میکسین‌ها
 tools-themes-deletemixinsmessage:
   ru: Вы уверены, что хотите удалить Mixin-ы?
   en: Are you sure you want to delete Mixins?
@@ -248,6 +267,7 @@ tools-themes-deletemixinsmessage:
   de: Sind Sie sicher, dass Sie die Mixins löschen möchten?
   tr: Mixinleri silmek istediğinizden emin misiniz?
   zh: 确定要删除混入吗？
+  fa: آیا مطمئن هستید که می‌خواهید میکسین‌ها را حذف کنید؟
 tools-themes-deletemixin:
   ru: Удаление Mixin-а
   en: Delete mixin
@@ -260,6 +280,7 @@ tools-themes-deletemixin:
   de: Mixin löschen
   tr: Mixin sil
   zh: 删除混入
+  fa: حذف میکسین
 tools-themes-deletemixinmessage:
   ru: Вы уверены, что хотите удалить Mixin?
   en: Are you sure you want to delete Mixin?
@@ -272,6 +293,7 @@ tools-themes-deletemixinmessage:
   de: Sind Sie sicher, dass Sie das Mixin löschen möchten?
   tr: Mixin silmek istediğinizden emin misiniz?
   zh: 确定要删除该混入吗？
+  fa: آیا مطمئن هستید که می‌خواهید میکسین را حذف کنید؟
 tools-thtmes-themes-title:
   ru: Домены и темы
   en: Domains and themes
@@ -284,6 +306,7 @@ tools-thtmes-themes-title:
   de: Domains und Themen
   tr: Alanlar ve temalar
   zh: 域名与主题
+  fa: دامنه‌ها و قالب‌ها
 tools-themes-vars-title:
   ru: Переменные
   en: Variables
@@ -296,6 +319,7 @@ tools-themes-vars-title:
   de: Variablen
   tr: Değişkenler
   zh: 变量
+  fa: متغیرها
 tools-themes-varsempty:
   ru: Переменных не найдено
   en: Variables not found
@@ -308,6 +332,7 @@ tools-themes-varsempty:
   de: Keine Variablen gefunden
   tr: Değişken bulunamadı
   zh: 未找到变量
+  fa: متغیری یافت نشد
 tools-themes-vars-grid-name:
   ru: Переменная
   en: Variable
@@ -320,6 +345,7 @@ tools-themes-vars-grid-name:
   de: Variable
   tr: Değişken
   zh: 变量
+  fa: متغیر
 tools-themes-vars-grid-value:
   ru: Значение
   en: Value
@@ -332,6 +358,7 @@ tools-themes-vars-grid-value:
   de: Wert
   tr: Değer
   zh: 值
+  fa: مقدار
 tools-themes-vars-buttons-adddata:
   ru: Добавить
   en: Add
@@ -344,6 +371,7 @@ tools-themes-vars-buttons-adddata:
   de: Hinzufügen
   tr: Ekle
   zh: 添加
+  fa: افزودن
 tools-themes-vars-buttons-editdata:
   ru: Редактировать
   en: Edit
@@ -356,6 +384,7 @@ tools-themes-vars-buttons-editdata:
   de: Bearbeiten
   tr: Düzenle
   zh: 编辑
+  fa: ویرایش
 tools-themes-vars-buttons-deletedata:
   ru: Удалить
   en: Delete
@@ -368,6 +397,7 @@ tools-themes-vars-buttons-deletedata:
   de: Löschen
   tr: Sil
   zh: 删除
+  fa: حذف
 tools-themes-mixins-title:
   ru: Mixin-ы
   en: Mixins
@@ -380,6 +410,7 @@ tools-themes-mixins-title:
   de: Mixins
   tr: Mixinler
   zh: 混入
+  fa: میکسین‌ها
 tools-themes-mixinsempty:
   ru: Mixin-ов не найдено
   en: Mixins not found
@@ -392,6 +423,7 @@ tools-themes-mixinsempty:
   de: Keine Mixins gefunden
   tr: Mixin bulunamadı
   zh: 未找到混入
+  fa: میکسینی یافت نشد
 tools-themes-mixins-grid-name:
   ru: Mixin
   en: Mixin
@@ -404,6 +436,7 @@ tools-themes-mixins-grid-name:
   de: Mixin
   tr: Mixin
   zh: 混入
+  fa: میکسین
 tools-themes-mixins-grid-params:
   ru: Параметры
   en: Parameters
@@ -416,6 +449,7 @@ tools-themes-mixins-grid-params:
   de: Parameter
   tr: Parametreler
   zh: 参数
+  fa: پارامترها
 tools-themes-mixins-grid-value:
   ru: Значение
   en: Value
@@ -428,6 +462,7 @@ tools-themes-mixins-grid-value:
   de: Wert
   tr: Değer
   zh: 值
+  fa: مقدار
 tools-themes-mixins-buttons-adddata:
   ru: Добавить
   en: Add
@@ -440,6 +475,7 @@ tools-themes-mixins-buttons-adddata:
   de: Hinzufügen
   tr: Ekle
   zh: 添加
+  fa: افزودن
 tools-themes-mixins-buttons-editdata:
   ru: Редактировать
   en: Edit
@@ -452,6 +488,7 @@ tools-themes-mixins-buttons-editdata:
   de: Bearbeiten
   tr: Düzenle
   zh: 编辑
+  fa: ویرایش
 tools-themes-mixins-buttons-deletedata:
   ru: Удалить
   en: Delete
@@ -464,6 +501,7 @@ tools-themes-mixins-buttons-deletedata:
   de: Löschen
   tr: Sil
   zh: 删除
+  fa: حذف
 tools-thtmes-themes-vars:
   ru: Переменные
   en: Variables
@@ -476,6 +514,7 @@ tools-thtmes-themes-vars:
   de: Variablen
   tr: Değişkenler
   zh: 变量
+  fa: متغیرها
 tools-thtmes-themes-mixins:
   ru: Mixin-ы
   en: Mixins
@@ -488,6 +527,7 @@ tools-thtmes-themes-mixins:
   de: Mixins
   tr: Mixinler
   zh: 混入
+  fa: میکسین‌ها
 tools-themes-deletethememessage-delete:
   ru: Удалить!
   en: Delete
@@ -500,6 +540,7 @@ tools-themes-deletethememessage-delete:
   de: Löschen
   tr: Sil
   zh: 删除
+  fa: حذف!
 tools-themes-setcurrentthememessage-ok:
   ru: Продолжить
   en: Continue
@@ -512,6 +553,7 @@ tools-themes-setcurrentthememessage-ok:
   de: Fortfahren
   tr: Devam et
   zh: 继续
+  fa: ادامه
 tools-themes-deletevarsmessage-delete:
   ru: Удалить!
   en: Delete
@@ -524,6 +566,7 @@ tools-themes-deletevarsmessage-delete:
   de: Löschen
   tr: Sil
   zh: 删除
+  fa: حذف!
 tools-themes-deletevarmessage-delete:
   ru: Удалить!
   en: Delete
@@ -536,6 +579,7 @@ tools-themes-deletevarmessage-delete:
   de: Löschen
   tr: Sil
   zh: 删除
+  fa: حذف!
 tools-themes-deletemixinsmessage-delete:
   ru: Удалить!
   en: Delete
@@ -548,6 +592,7 @@ tools-themes-deletemixinsmessage-delete:
   de: Löschen
   tr: Sil
   zh: 删除
+  fa: حذف!
 tools-themes-deletemixinmessage-delete:
   ru: Удалить!
   en: Delete
@@ -560,6 +605,7 @@ tools-themes-deletemixinmessage-delete:
   de: Löschen
   tr: Sil
   zh: 删除
+  fa: حذف!
 tools-themes-contextmenu-importtheme:
   ru: Импортировать
   en: Import
@@ -572,6 +618,7 @@ tools-themes-contextmenu-importtheme:
   de: Importieren
   tr: İçe aktar
   zh: 导入
+  fa: وارد کردن
 tools-themes-windowtitle-importtheme:
   ru: Импортировать тему
   en: Import theme
@@ -584,6 +631,7 @@ tools-themes-windowtitle-importtheme:
   de: Thema importieren
   tr: Tema içe aktar
   zh: 导入主题
+  fa: وارد کردن قالب
 tools-themes-windowtitle-importtheme-fields-json_data:
   ru: Данные темы
   en: Theme data
@@ -596,3 +644,4 @@ tools-themes-windowtitle-importtheme-fields-json_data:
   de: Themendaten
   tr: Tema verisi
   zh: 主题数据
+  fa: داده‌های قالب
