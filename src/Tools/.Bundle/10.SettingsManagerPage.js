@@ -85,7 +85,7 @@ App.Modules.Tools.SettingsManagerPage = class extends Colibri.UI.Component
             this._settings.selected = null;
             Tools.DeleteSetting(setting.id);
         }
-        else if(item instanceof Colibri.UI.Tree) {
+        else {
             Manage.Store.AsyncQuery('manage.storages(settings)').then((settings) => {
                 let type = null;
                 settings.fields.type.values.forEach(v => {
