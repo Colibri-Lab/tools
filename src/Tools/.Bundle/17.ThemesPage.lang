@@ -111,7 +111,8 @@ tools-themes-deletethememessage:
   tr: Konuyu silmek istediğinizden emin misiniz? Bu konuya bağlı sitelerde hatalar
     oluşabilir
   zh: 确定要删除该主题吗？与此主题关联的网站可能会出现异常
-  fa: آیا مطمئن هستید که می‌خواهید قالب را حذف کنید؟ ممکن است در سایت‌های مرتبط با این قالب مشکلاتی ایجاد شود
+  fa: آیا مطمئن هستید که می‌خواهید قالب را حذف کنید؟ ممکن است در سایت‌های مرتبط با
+    این قالب مشکلاتی ایجاد شود
 tools-themes-setcurrenttheme:
   ru: Установка
   en: Installing

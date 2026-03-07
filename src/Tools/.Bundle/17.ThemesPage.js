@@ -176,9 +176,13 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
 
                 Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme}', 450, storage, theme.data)
                     .then((data) => {
-                        Tools.CreateTheme(data);
+                        Tools.CreateTheme(data).then(() => {
+                            Manage.FormWindow.Hide();
+                        });
                     })
-                    .catch(() => {});
+                    .catch(() => {
+                        Manage.FormWindow.Hide();
+                    });
 
             });
         }
@@ -222,9 +226,13 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                 storage.fields.domain.component = 'Colibri.UI.Forms.Hidden';
                 Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme}', 450, storage, data)
                     .then((data) => {
-                        Tools.CreateTheme(data);
+                        Tools.CreateTheme(data).then(() => {
+                            Manage.FormWindow.Hide();
+                        });
                     })
-                    .catch(() => {});
+                    .catch(() => {
+                        Manage.FormWindow.Hide();
+                    });
 
             });
         } 
@@ -240,9 +248,13 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                 }
             }, {id: theme.data.id})
                 .then((data) => {
-                    Tools.ImportTheme(data);
+                    Tools.ImportTheme(data).then(() => {
+                        Manage.FormWindow.Hide();
+                    });
                 })
-                .catch(() => {});
+                .catch(() => {
+                    Manage.FormWindow.Hide();
+                });
         }
 
     }
@@ -274,9 +286,13 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
 
                 Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme}', 450, storage, theme.data)
                     .then((data) => {
-                        Tools.CreateTheme(data);
+                        Tools.CreateTheme(data).then(() => {
+                            Manage.FormWindow.Hide();
+                        });
                     })
-                    .catch(() => {});
+                    .catch(() => {
+                        Manage.FormWindow.Hide();
+                    });
 
             });
         }
@@ -342,9 +358,13 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                 }
             })
                 .then((data) => {
-                    Tools.SaveThemeVar(theme.id, data);
+                    Tools.SaveThemeVar(theme.id, data).then(() => {
+                        Manage.FormWindow.Hide();
+                    });
                 })
-                .catch(() => {});
+                .catch(() => {
+                    Manage.FormWindow.Hide();
+                });
 
         });
     }
@@ -386,9 +406,13 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                 }
             })
             .then((data) => {
-                Tools.SaveThemeVar(theme.id, data);
+                Tools.SaveThemeVar(theme.id, data).then(() => {
+                    Manage.FormWindow.Hide();
+                });
             })
-            .catch(() => {});
+            .catch(() => {
+                Manage.FormWindow.Hide();
+            });
 
         });
     }
@@ -447,9 +471,13 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
             fields.fields.name.params.enabled = true;
             Manage.FormWindow.Show('#{tools-themes-windowtitle-addmixintitle}', 650, fields, {})
                 .then((data) => {
-                    Tools.SaveThemeMixin(theme.id, data);
+                    Tools.SaveThemeMixin(theme.id, data).then(() => {
+                        Manage.FormWindow.Hide();
+                    });
                 })
-                .catch(() => {});
+                .catch(() => {
+                    Manage.FormWindow.Hide();
+                });
 
         });
     }
@@ -473,9 +501,13 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
 
             Manage.FormWindow.Show('#{tools-themes-windowtitle-editmixintitle}', 650, fields, values)
                 .then((data) => {
-                    Tools.SaveThemeMixin(theme.id, data);
+                    Tools.SaveThemeMixin(theme.id, data).then(() => {
+                        Manage.FormWindow.Hide();
+                    });
                 })
-                .catch(() => {});
+                .catch(() => {
+                    Manage.FormWindow.Hide();
+                });
 
         });
     }

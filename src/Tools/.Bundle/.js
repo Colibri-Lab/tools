@@ -122,43 +122,51 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
 
     
     DeleteSetting(settingId) {
-        this.Call('Settings', 'Delete', {setting: settingId})
-            .then((response) => {
-                let settings = this._store.Query('tools.settings');
-                if(!settings || !Array.isArray(settings)) {
-                    settings = [];
-                }
-                let newSettings = [];
-                settings.forEach((s) => {
-                    if(s.id !== settingId) {
-                        newSettings.push(s);
+        return new Promise((resolve, reject) => {
+            this.Call('Settings', 'Delete', {setting: settingId})
+                .then((response) => {
+                    let settings = this._store.Query('tools.settings');
+                    if(!settings || !Array.isArray(settings)) {
+                        settings = [];
                     }
+                    let newSettings = [];
+                    settings.forEach((s) => {
+                        if(s.id !== settingId) {
+                            newSettings.push(s);
+                        }
+                    });
+                    this._store.Set('tools.settings', newSettings);
+                    resolve(response.result);
+                })
+                .catch((response) => {
+                    App.Notices.Add(new Colibri.UI.Notice(response.result));
+                    reject(response);
                 });
-                this._store.Set('tools.settings', newSettings);
-            })
-            .catch((response) => {
-                App.Notices.Add(new Colibri.UI.Notice(response.result));
-            });
+        });
     }
 
     SaveSetting(setting) {
-        this.Call('Settings', 'Save', setting)
-            .then((response) => {
-                let settings = this._store.Query('tools.settings');
-                if(!settings || !Array.isArray(settings)) {
-                    settings = [];
-                }
-                if(setting?.id) {
-                    settings = settings.map((s) => s.id == response.result.id ? response.result : s);
-                }
-                else {
-                    settings.push(response.result);
-                }
-                this._store.Set('tools.settings', settings);
-            })
-            .catch((response) => {
-                App.Notices.Add(new Colibri.UI.Notice(response.result));
-            });
+        return new Promise((resolve, reject) => {
+            this.Call('Settings', 'Save', setting)
+                .then((response) => {
+                    let settings = this._store.Query('tools.settings');
+                    if(!settings || !Array.isArray(settings)) {
+                        settings = [];
+                    }
+                    if(setting?.id) {
+                        settings = settings.map((s) => s.id == response.result.id ? response.result : s);
+                    }
+                    else {
+                        settings.push(response.result);
+                    }
+                    this._store.Set('tools.settings', settings);
+                    resolve(response.result);
+                })
+                .catch((response) => {
+                    App.Notices.Add(new Colibri.UI.Notice(response.result));
+                    reject(response);
+                });
+        });
     }
 
     
@@ -178,53 +186,65 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
     }
 
     CreateNotice(notice) {
-        this.Call('Notices', 'Create', notice)
-            .then((response) => {
-                this._store.Set('tools.notices', response.result);
-            }).catch((response) => {
-                App.Notices.Add(new Colibri.UI.Notice(response.result));
-            });
+        return new Promise((resolve, reject) => {
+            this.Call('Notices', 'Create', notice)
+                .then((response) => {
+                    this._store.Set('tools.notices', response.result);
+                    resolve(response.result);
+                }).catch((response) => {
+                    App.Notices.Add(new Colibri.UI.Notice(response.result));
+                    reject(response);
+                });
+        });
     }
 
     
     DeleteNotice(noticeId) {
-        this.Call('Notices', 'Delete', {notice: noticeId})
-            .then((response) => {
-                let notices = this._store.Query('tools.notices');
-                if(!notices || !Array.isArray(notices)) {
-                    notices = [];
-                }
-                let newNotices = [];
-                notices.forEach((s) => {
-                    if(s.id !== noticeId) {
-                        newNotices.push(s);
+        return new Promise((resolve, reject) => {
+            this.Call('Notices', 'Delete', {notice: noticeId})
+                .then((response) => {
+                    let notices = this._store.Query('tools.notices');
+                    if(!notices || !Array.isArray(notices)) {
+                        notices = [];
                     }
+                    let newNotices = [];
+                    notices.forEach((s) => {
+                        if(s.id !== noticeId) {
+                            newNotices.push(s);
+                        }
+                    });
+                    this._store.Set('tools.notices', newNotices);
+                    resolve(response.result);
+                })
+                .catch((response) => {
+                    App.Notices.Add(new Colibri.UI.Notice(response.result));
+                    reject(response.result);
                 });
-                this._store.Set('tools.notices', newNotices);
-            })
-            .catch((response) => {
-                App.Notices.Add(new Colibri.UI.Notice(response.result));
-            });
+        });
     }
 
     SaveNotice(notice) {
-        this.Call('Notices', 'Save', notice)
-            .then((response) => {
-                let notices = this._store.Query('tools.notices');
-                if(!notices || !Array.isArray(notices)) {
-                    notices = [];
-                }
-                if(notice?.id) {
-                    notices = notices.map((s) => s.id == response.result.id ? response.result : s);
-                }
-                else {
-                    notices.push(response.result);
-                }
-                this._store.Set('tools.notices', notices);
-            })
-            .catch((response) => {
-                App.Notices.Add(new Colibri.UI.Notice(response.result));
-            });
+        return new Promise((resolve, reject) => {
+            this.Call('Notices', 'Save', notice)
+                .then((response) => {
+                    let notices = this._store.Query('tools.notices');
+                    if(!notices || !Array.isArray(notices)) {
+                        notices = [];
+                    }
+                    if(notice?.id) {
+                        notices = notices.map((s) => s.id == response.result.id ? response.result : s);
+                    }
+                    else {
+                        notices.push(response.result);
+                    }
+                    this._store.Set('tools.notices', notices);
+                    resolve(response.result);
+                })
+                .catch((response) => {
+                    App.Notices.Add(new Colibri.UI.Notice(response.result));
+                    reject(response.result);
+                });
+        });
     }
     
     Backups(returnPromise = false) {
@@ -243,43 +263,51 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
     }
 
     SaveBackup(backupData) {
-        this.Call('Backup', 'Save', backupData)
-            .then((response) => {
-                let backups = this._store.Query('tools.backups');
-                if(!backups || !Array.isArray(backups)) {
-                    backups = [];
-                }
-                if(backupData?.id) {
-                    backups = backups.map((s) => s.id == response.result.id ? response.result : s);
-                }
-                else {
-                    backups.push(response.result);
-                }
-                this._store.Set('tools.backups', backups);
-            })
-            .catch((response) => {
-                App.Notices.Add(new Colibri.UI.Notice(response.result));
-            });
+        return new Promise((resolve, reject) => {
+            this.Call('Backup', 'Save', backupData)
+                .then((response) => {
+                    let backups = this._store.Query('tools.backups');
+                    if(!backups || !Array.isArray(backups)) {
+                        backups = [];
+                    }
+                    if(backupData?.id) {
+                        backups = backups.map((s) => s.id == response.result.id ? response.result : s);
+                    }
+                    else {
+                        backups.push(response.result);
+                    }
+                    this._store.Set('tools.backups', backups);
+                    resolve(response.result);
+                })
+                .catch((response) => {
+                    App.Notices.Add(new Colibri.UI.Notice(response.result));
+                    reject(response.result);
+                });
+        });
     }
 
     DeleteBackup(backupId) {
-        this.Call('Backup', 'Delete', {backup: backupId})
-            .then((response) => {
-                let backups = this._store.Query('tools.backups');
-                if(!backups || !Array.isArray(backups)) {
-                    backups = [];
-                }
-                let newBackups = [];
-                backups.forEach((s) => {
-                    if(s.id !== backupId) {
-                        newBackups.push(s);
+        return new Promise((resolve, reject) => {
+            this.Call('Backup', 'Delete', {backup: backupId})
+                .then((response) => {
+                    let backups = this._store.Query('tools.backups');
+                    if(!backups || !Array.isArray(backups)) {
+                        backups = [];
                     }
+                    let newBackups = [];
+                    backups.forEach((s) => {
+                        if(s.id !== backupId) {
+                            newBackups.push(s);
+                        }
+                    });
+                    this._store.Set('tools.backups', newBackups);
+                    resolve(response.result);
+                })
+                .catch((response) => {
+                    App.Notices.Add(new Colibri.UI.Notice(response.result));
+                    reject(response.result);
                 });
-                this._store.Set('tools.backups', newBackups);
-            })
-            .catch((response) => {
-                App.Notices.Add(new Colibri.UI.Notice(response.result));
-            });
+        });
     }
 
     Themes(returnPromise = false) {
@@ -298,99 +326,131 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
     }
 
     CreateTheme(theme) {
-        this.Call('Themes', 'Save', theme)
-            .then((response) => {
-                let themes = this._store.Query('tools.themes');
-                if(theme.id) {
-                    themes = themes.map(theme => theme.id == response.result.id ? response.result : theme);
-                }
+        return new Promise((resolve, reject) => {
+            this.Call('Themes', 'Save', theme)
+                .then((response) => {
+                    let themes = this._store.Query('tools.themes');
+                    if(theme.id) {
+                        themes = themes.map(theme => theme.id == response.result.id ? response.result : theme);
+                    }
                 else {
                     themes.push(response.result);
                 }
                 this._store.Set('tools.themes', themes);
+                resolve(response.result);
             }).catch((response) => {
                 App.Notices.Add(new Colibri.UI.Notice(response.result));
+                reject(response.result);
             });
+        });
     }
 
     ImportTheme(theme) {
-        this.Call('Themes', 'Import', theme)
-            .then((response) => {
-                let themes = this._store.Query('tools.themes');
-                themes = themes.map(theme => theme.id == response.result.id ? response.result : theme);
-                this._store.Set('tools.themes', themes);
-            }).catch((response) => {
-                App.Notices.Add(new Colibri.UI.Notice(response.result));
-            });
+        return new Promise((resolve, reject) => {
+            this.Call('Themes', 'Import', theme)
+                .then((response) => {
+                    let themes = this._store.Query('tools.themes');
+                    themes = themes.map(theme => theme.id == response.result.id ? response.result : theme);
+                    this._store.Set('tools.themes', themes);
+                    resolve(response.result);
+                }).catch((response) => {
+                    App.Notices.Add(new Colibri.UI.Notice(response.result));
+                    reject(response.result);
+                });
+        });
     }
     
     DeleteTheme(themeId) {
-        this.Call('Themes', 'Delete', {theme: themeId})
-            .then((response) => {
-                let themes = this._store.Query('tools.themes');
-                let newThemes = [];
-                themes.forEach((t) => {
-                    if(t.id != themeId) {
-                        newThemes.push(t);
-                    }
-                })
-                this._store.Set('tools.themes', newThemes);
-            }).catch((response) => {
-                App.Notices.Add(new Colibri.UI.Notice(response.result));
-            });
+        return new Promise((resolve, reject) => {
+            this.Call('Themes', 'Delete', {theme: themeId})
+                .then((response) => {
+                    let themes = this._store.Query('tools.themes');
+                    let newThemes = [];
+                    themes.forEach((t) => {
+                        if(t.id != themeId) {
+                            newThemes.push(t);
+                        }
+                    })
+                    this._store.Set('tools.themes', newThemes);
+                    resolve(response.result);
+                }).catch((response) => {
+                    App.Notices.Add(new Colibri.UI.Notice(response.result));
+                    reject(response.result);
+                });
+        });
     }
 
     SetThemeAsCurrent(themeId) {
-        this.Call('Themes', 'SetAsCurrent', {id: themeId})
-            .then((response) => {
-                Tools.Themes(false);
-            }).catch((response) => {
-                App.Notices.Add(new Colibri.UI.Notice(response.result));
-            });
+        return new Promise((resolve, reject) => {
+            this.Call('Themes', 'SetAsCurrent', {id: themeId})
+                .then((response) => {
+                    Tools.Themes(false);
+                    resolve(response.result);
+                }).catch((response) => {
+                    App.Notices.Add(new Colibri.UI.Notice(response.result));
+                    reject(response.result);
+                });
+        });
     }
 
     SaveThemeVar(themeId, varData) {
-        this.Call('Themes', 'SaveVar', {id: themeId, var: varData})
-            .then((response) => {
-                let themes = this._store.Query('tools.themes');
-                themes = themes.map(theme => theme.id == response.result.id ? response.result : theme);
-                this._store.Set('tools.themes', themes);
-            }).catch((response) => {
-                App.Notices.Add(new Colibri.UI.Notice(response.result));
-            });
+        return new Promise((resolve, reject) => {
+            this.Call('Themes', 'SaveVar', {id: themeId, var: varData})
+                .then((response) => {
+                    let themes = this._store.Query('tools.themes');
+                    themes = themes.map(theme => theme.id == response.result.id ? response.result : theme);
+                    this._store.Set('tools.themes', themes);
+                    resolve(response.result);
+                }).catch((response) => {
+                    App.Notices.Add(new Colibri.UI.Notice(response.result));
+                    reject(response.result);
+                });
+        });
     }
 
     DeleteThemeVars(themeId, varNames) {
-        this.Call('Themes', 'DeleteVars', {id: themeId, vars: varNames})
-            .then((response) => {
-                let themes = this._store.Query('tools.themes');
-                themes = themes.map(theme => theme.id == response.result.id ? response.result : theme);
-                this._store.Set('tools.themes', themes);
-            }).catch((response) => {
-                App.Notices.Add(new Colibri.UI.Notice(response.result));
-            });
+        return new Promise((resolve, reject) => {
+            this.Call('Themes', 'DeleteVars', {id: themeId, vars: varNames})
+                .then((response) => {
+                    let themes = this._store.Query('tools.themes');
+                    themes = themes.map(theme => theme.id == response.result.id ? response.result : theme);
+                    this._store.Set('tools.themes', themes);
+                    resolve(response.result);
+                }).catch((response) => {
+                    App.Notices.Add(new Colibri.UI.Notice(response.result));
+                    reject(response.result);
+                });
+        });
     }
 
     SaveThemeMixin(themeId, mixinData) {
-        this.Call('Themes', 'SaveMixin', {id: themeId, mixin: mixinData})
-            .then((response) => {
-                let themes = this._store.Query('tools.themes');
-                themes = themes.map(theme => theme.id == response.result.id ? response.result : theme);
-                this._store.Set('tools.themes', themes);
-            }).catch((response) => {
-                App.Notices.Add(new Colibri.UI.Notice(response.result));
-            });
+        return new Promise((resolve, reject) => {
+            this.Call('Themes', 'SaveMixin', {id: themeId, mixin: mixinData})
+                .then((response) => {
+                    let themes = this._store.Query('tools.themes');
+                    themes = themes.map(theme => theme.id == response.result.id ? response.result : theme);
+                    this._store.Set('tools.themes', themes);
+                    resolve(response.result);
+                }).catch((response) => {
+                    App.Notices.Add(new Colibri.UI.Notice(response.result));
+                    reject(response.result);
+                });
+        });
     }
 
     DeleteThemeMixins(themeId, mixinNames) {
-        this.Call('Themes', 'DeleteMixins', {id: themeId, mixins: mixinNames})
-            .then((response) => {
-                let themes = this._store.Query('tools.themes');
-                themes = themes.map(theme => theme.id == response.result.id ? response.result : theme);
-                this._store.Set('tools.themes', themes);
-            }).catch((response) => {
-                App.Notices.Add(new Colibri.UI.Notice(response.result));
-            });
+        return new Promise((resolve, reject) => {
+            this.Call('Themes', 'DeleteMixins', {id: themeId, mixins: mixinNames})
+                .then((response) => {
+                    let themes = this._store.Query('tools.themes');
+                    themes = themes.map(theme => theme.id == response.result.id ? response.result : theme);
+                    this._store.Set('tools.themes', themes);
+                    resolve(response.result);
+                }).catch((response) => {
+                    App.Notices.Add(new Colibri.UI.Notice(response.result));
+                    reject(response.result);
+                });
+        });
     }
 
     

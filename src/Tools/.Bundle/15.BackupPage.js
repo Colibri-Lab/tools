@@ -21,9 +21,13 @@ App.Modules.Tools.BackupPage = class extends Colibri.UI.Component
 
         Manage.FormWindow.Show(title, 1024, 'app.manage.storages(backups)', data ? data : {})
             .then((dta) => {
-                Tools.SaveBackup(dta);
+                Tools.SaveBackup(dta).then(() => {
+                    Manage.FormWindow.Hide();
+                });
             })
-            .catch(() => {});
+            .catch(() => {
+                Manage.FormWindow.Hide();
+            });
 
     }
 

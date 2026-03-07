@@ -56,7 +56,9 @@ tools-backup-create-info:
     Tamamlandığında, bu sayfanın altındaki izlenimler listesinde tarih ile
     işaretlenmiş yeni bir öğe görünecektir.
   zh: 点击“创建快照”按钮并等待过程完成。完成后，页面底部的快照列表中会出现一个带日期的新项。
-  fa: روی دکمه «ایجاد تصویر فوری» کلیک کنید و منتظر بمانید تا فرآیند به پایان برسد. پس از اتمام، یک مورد جدید با تاریخ در لیست تصاویر فوری در پایین این صفحه ظاهر خواهد شد.
+  fa: روی دکمه «ایجاد تصویر فوری» کلیک کنید و منتظر بمانید تا فرآیند به پایان
+    برسد. پس از اتمام، یک مورد جدید با تاریخ در لیست تصاویر فوری در پایین این
+    صفحه ظاهر خواهد شد.
 tools-backups-points-title:
   ru: Список созданных слепков
   en: List of created impressions
