@@ -19,7 +19,7 @@ App.Modules.Tools.BackupPage = class extends Colibri.UI.Component
 
         const title = data ? '#{tools-backups-windowtitle-editbackup}' : '#{tools-backups-windowtitle-newbackup}';
 
-        Manage.FormWindow.Show(title, 1024, 'app.manage.storages(backups)', data ? data : {})
+        Manage.FormWindow.Show(title, 1024, 'app.manage.storages(name=backups,module=tools)', data ? data : {})
             .then((dta) => {
                 Tools.SaveBackup(dta).then(() => {
                     Manage.FormWindow.Hide();

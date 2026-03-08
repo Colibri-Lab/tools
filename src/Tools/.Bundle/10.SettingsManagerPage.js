@@ -42,7 +42,7 @@ App.Modules.Tools.SettingsManagerPage = class extends Colibri.UI.Component
 
         const itemData = args.item?.tag;
         if(!itemData) {
-            Manage.Store.AsyncQuery('manage.storages(settings)').then((settings) => {
+            Manage.Store.AsyncQuery('manage.storages(name=settings,module=tools)').then((settings) => {
                 let contextmenu = [];
                 settings.fields.type.values.forEach((type) => {
                     contextmenu.push({name: type.value, title: (type.title[Lang.Current] ?? type.title), icon: eval(type.icon)});
@@ -86,7 +86,7 @@ App.Modules.Tools.SettingsManagerPage = class extends Colibri.UI.Component
             Tools.DeleteSetting(setting.id);
         }
         else {
-            Manage.Store.AsyncQuery('manage.storages(settings)').then((settings) => {
+            Manage.Store.AsyncQuery('manage.storages(name=settings,module=tools)').then((settings) => {
                 let type = null;
                 settings.fields.type.values.forEach(v => {
                     if(v.value == menuData.name) {

@@ -36,7 +36,7 @@ App.Modules.Tools.SettingsTree = class extends Colibri.UI.Tree {
         rootNode.tag = null;
         rootNode.Expand();
 
-        Manage.Store.AsyncQuery('manage.storages(name=settings)').then((settings) => {
+        Manage.Store.AsyncQuery('manage.storages(name=settings,module=tools)').then((settings) => {
 
             let found = [];
             data.forEach((setting) => {

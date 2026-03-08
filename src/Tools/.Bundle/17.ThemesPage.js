@@ -165,7 +165,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
 
         if(menuData.name == 'edit-theme') {
             const theme = item.tag;
-            Manage.Store.AsyncQuery('manage.storages(themes)').then(storage => {
+            Manage.Store.AsyncQuery('manage.storages(name=themes,module=tools)').then(storage => {
                 storage = Object.cloneRecursive(storage);
                 delete storage.fields.vars;
                 delete storage.fields.mixins;
@@ -218,7 +218,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
             data.name = 'dublicated-theme';
             data.current = 0;
             delete data.id;
-            Manage.Store.AsyncQuery('manage.storages(themes)').then(storage => {
+            Manage.Store.AsyncQuery('manage.storages(name=themes,module=tools)').then(storage => {
                 storage = Object.cloneRecursive(storage);
                 storage.fields.vars.component = 'Colibri.UI.Forms.Hidden';
                 storage.fields.mixins.component = 'Colibri.UI.Forms.Hidden';
@@ -277,7 +277,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
             
         }
         else {
-            Manage.Store.AsyncQuery('manage.storages(themes)').then(storage => {
+            Manage.Store.AsyncQuery('manage.storages(name=themes,module=tools)').then(storage => {
                 storage = Object.cloneRecursive(storage);
                 delete storage.fields.vars;
                 delete storage.fields.mixins;
@@ -337,7 +337,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
      */ 
     __addVarButtonClicked(event, args) {
         const theme = this._domainsAndThemes.selected?.tag?.data;
-        Manage.Store.AsyncQuery('manage.storages(themes)').then(storage => {
+        Manage.Store.AsyncQuery('manage.storages(name=themes,module=tools)').then(storage => {
             let fields = storage.fields.vars;
             fields.fields.name.params.enabled = true;
             fields.fields.value.params.enabled = false;
@@ -381,7 +381,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         }
         const theme = this._domainsAndThemes.selected?.tag?.data;
 
-        Manage.Store.AsyncQuery('manage.storages(themes)').then(storage => {
+        Manage.Store.AsyncQuery('manage.storages(name=themes,module=tools)').then(storage => {
             let fields = storage.fields.vars;
             const values = selected.value;
             fields.fields.name.params.enabled = false;
@@ -466,7 +466,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
      */ 
     __addMixinButtonClicked(event, args) {
         const theme = this._domainsAndThemes.selected?.tag?.data;
-        Manage.Store.AsyncQuery('manage.storages(themes)').then(storage => {
+        Manage.Store.AsyncQuery('manage.storages(name=themes,module=tools)').then(storage => {
             let fields = storage.fields.mixins;
             fields.fields.name.params.enabled = true;
             Manage.FormWindow.Show('#{tools-themes-windowtitle-addmixintitle}', 650, fields, {})
@@ -494,7 +494,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         }
         const theme = this._domainsAndThemes.selected?.tag?.data;
 
-        Manage.Store.AsyncQuery('manage.storages(themes)').then(storage => {
+        Manage.Store.AsyncQuery('manage.storages(name=themes,module=tools)').then(storage => {
             let fields = storage.fields.mixins;
             const values = selected.value;
             fields.fields.name.params.enabled = false;
