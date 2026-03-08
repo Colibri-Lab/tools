@@ -145,7 +145,7 @@ class Themes extends BaseModelDataTable
      */
     static function DeleteAllByFilter(string $filter): bool
     {
-        $storage = Storages::Instance()->Load('themes');
+        $storage = Storages::Instance()->Load('themes', 'tools');
         return self::DeleteByFilter($storage, $filter);
     }
 

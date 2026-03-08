@@ -124,7 +124,7 @@ class Backups extends BaseModelDataTable
      */
     static function DeleteAllByFilter(string $filter): bool
     {
-        $storage = Storages::Instance()->Load('backups');
+        $storage = Storages::Instance()->Load('backups', 'sites');
         return self::DeleteByFilter($storage, $filter);
     }
 
