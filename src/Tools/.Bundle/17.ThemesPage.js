@@ -1,5 +1,4 @@
-App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component 
-{
+App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
     constructor(name, container) {
         super(name, container, Colibri.UI.Templates['App.Modules.Tools.ThemesPage']);
 
@@ -8,7 +7,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         this._domainsAndThemes = this.Children('split/themes-pane/themes');
         this._varsGrid = this.Children('split/vars-pane/vars/vars');
         this._mixinsGrid = this.Children('split/vars-pane/mixins/mixins');
-        
+
         this._addVarButton = this.Children('split/vars-pane/vars/buttons-pane/add-data');
         this._editVarButton = this.Children('split/vars-pane/vars/buttons-pane/edit-data');
         this._deleteVarButton = this.Children('split/vars-pane/vars/buttons-pane/delete-data');
@@ -18,7 +17,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         this._deleteMixinButton = this.Children('split/vars-pane/mixins/buttons-pane/delete-data');
 
         this._domainsAndThemes.AddHandler('ContextMenuIconClicked', (event, args) => this.__renderThemesContextMenu(event, args))
-        this._domainsAndThemes.AddHandler('ContextMenuItemClicked', this.__clickOnThemesContextMenu, false, this);     
+        this._domainsAndThemes.AddHandler('ContextMenuItemClicked', this.__clickOnThemesContextMenu, false, this);
 
         this._domainsAndThemes.AddHandler(['SelectionChanged', 'NodesLoaded'], this.__themesSelectionChanged, false, this);
         this._domainsAndThemes.AddHandler('NodeEditCompleted', this.__themesNodeEditCompleted, false, this);
@@ -41,16 +40,16 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
 
     }
 
-    _enableControls() { 
+    _enableControls() {
         const selected = this._domainsAndThemes?.selected;
         const selectedVar = this._varsGrid.selected;
         const checkedVars = this._varsGrid.checked;
         const selectedMixin = this._mixinsGrid.selected;
         const checkedMixins = this._mixinsGrid.checked;
-        
+
         this._varsGrid.enabled = selected && selected.tag.type == 'theme';
         this._mixinsGrid.enabled = selected && selected.tag.type == 'theme';
-        
+
         this._addVarButton.enabled = selected && selected.tag.type == 'theme';
         this._editVarButton.enabled = selected && selected.tag.type == 'theme' && (!!selectedVar || checkedVars.length == 1);
         this._deleteVarButton.enabled = selected && selected.tag.type == 'theme' && (!!selectedVar || checkedVars.length > 0);
@@ -64,10 +63,10 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __themesSelectionChanged(event, args) {
         const selected = this._domainsAndThemes?.selected;
-        if(selected && selected.tag.type == 'theme') {
+        if (selected && selected.tag.type == 'theme') {
             const selectedTheme = selected.tag.data;
             this._showVarsAndMixins(selectedTheme);
         }
@@ -77,14 +76,14 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
         }
 
         this._enableControls();
-    }   
+    }
 
 
     /**
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __varsSelectionChagned(event, args) {
         this._enableControls();
     }
@@ -93,7 +92,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __mixinsSelectionChagned(event, args) {
         this._enableControls();
     }
@@ -102,17 +101,17 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __themesNodeEditCompleted(event, args) {
         const node = args.node;
         const mode = args.mode;
         const value = args.value;
-        if(node.tag?.new) {
+        if (node.tag?.new) {
             const domainNode = node.parentNode;
             // добавляем
             node.Dispose();
-            if(mode == 'save') {
-                Tools.CreateTheme({name: value, domain: domainNode.tag.data.value});
+            if (mode == 'save') {
+                Tools.CreateTheme({ name: value, domain: domainNode.tag.data.value });
             }
             return true;
         }
@@ -122,32 +121,32 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __renderThemesContextMenu(event, args) {
         let contextmenu = [];
 
         const itemData = args.item?.tag;
-        if(!itemData) {
+        if (!itemData) {
             return;
         }
 
-        if(itemData.type == 'domain') {
-            contextmenu.push({name: 'new-theme', title: '#{tools-themes-contextmenu-newtheme}', icon: Colibri.UI.ContextMenuAddIcon});
+        if (itemData.type == 'domain') {
+            contextmenu.push({ name: 'new-theme', title: '#{tools-themes-contextmenu-newtheme}', icon: Colibri.UI.ContextMenuAddIcon });
         }
         else {
-            contextmenu.push({name: 'edit-theme', title: '#{tools-themes-contextmenu-edittheme}', icon: Colibri.UI.ContextMenuEditIcon});
-            contextmenu.push({name: 'remove-theme', title: '#{tools-themes-contextmenu-deletetheme}', icon: Colibri.UI.ContextMenuRemoveIcon});
-            contextmenu.push({name: 'separator'});
-            contextmenu.push({name: 'dublicate-theme', title: '#{tools-themes-contextmenu-dublicatetheme}', icon: Colibri.UI.ContextMenuDublicateIcon});
-            contextmenu.push({name: 'import-theme', title: '#{tools-themes-contextmenu-importtheme}', icon: Colibri.UI.ImportIcon});
-            if(itemData.data.current == 0) {
-                contextmenu.push({name: 'separator'});
-                contextmenu.push({name: 'set-current', title: '#{tools-themes-contextmenu-setcurrent}', icon: Colibri.UI.SelectCheckIcon});
+            contextmenu.push({ name: 'edit-theme', title: '#{tools-themes-contextmenu-edittheme}', icon: Colibri.UI.ContextMenuEditIcon });
+            contextmenu.push({ name: 'remove-theme', title: '#{tools-themes-contextmenu-deletetheme}', icon: Colibri.UI.ContextMenuRemoveIcon });
+            contextmenu.push({ name: 'separator' });
+            contextmenu.push({ name: 'dublicate-theme', title: '#{tools-themes-contextmenu-dublicatetheme}', icon: Colibri.UI.ContextMenuDublicateIcon });
+            contextmenu.push({ name: 'import-theme', title: '#{tools-themes-contextmenu-importtheme}', icon: Colibri.UI.ImportIcon });
+            if (itemData.data.current == 0) {
+                contextmenu.push({ name: 'separator' });
+                contextmenu.push({ name: 'set-current', title: '#{tools-themes-contextmenu-setcurrent}', icon: Colibri.UI.SelectCheckIcon });
             }
         }
 
         args.item.contextmenu = contextmenu;
-        args.item.ShowContextMenu(args.isContextMenuEvent ? [Colibri.UI.ContextMenu.LB, Colibri.UI.ContextMenu.LT] : [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.RT], '', args.isContextMenuEvent ? {left: args.domEvent.clientX, top: args.domEvent.clientY} : null);
+        args.item.ShowContextMenu(args.isContextMenuEvent ? [Colibri.UI.ContextMenu.LB, Colibri.UI.ContextMenu.LT] : [Colibri.UI.ContextMenu.RB, Colibri.UI.ContextMenu.RT], '', args.isContextMenuEvent ? { left: args.domEvent.clientX, top: args.domEvent.clientY } : null);
 
     }
 
@@ -155,15 +154,15 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __clickOnThemesContextMenu(event, args) {
         const item = args?.item;
         const menuData = args.menuData;
-        if(!menuData) {
+        if (!menuData) {
             return false;
         }
 
-        if(menuData.name == 'edit-theme') {
+        if (menuData.name == 'edit-theme') {
             const theme = item.tag;
             Manage.Store.AsyncQuery('manage.storages(name=themes,module=tools)').then(storage => {
                 storage = Object.cloneRecursive(storage);
@@ -174,19 +173,17 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
 
                 const fields = storage.fields;
 
-                Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme}', 450, storage, theme.data)
-                    .then((data) => {
-                        Tools.CreateTheme(data).then(() => {
-                            Manage.FormWindow.Hide();
-                        });
-                    })
-                    .catch(() => {
+                Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme}', 450, storage, theme.data, '', {}, (data) => {
+                    Tools.CreateTheme(data).then(() => {
                         Manage.FormWindow.Hide();
                     });
+                }, () => {
+                    Manage.FormWindow.Hide();
+                });
 
             });
         }
-        else if(menuData.name == 'remove-theme') {
+        else if (menuData.name == 'remove-theme') {
             const theme = item.tag.data;
             this._domainsAndThemes.selected = null;
             App.Confirm.Show(
@@ -197,12 +194,12 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                 Tools.DeleteTheme(theme.id);
             });
         }
-        else if(menuData.name == 'new-theme') {
-            const node = this._domainsAndThemes.AddNew(item, 'UNTITLED', {new: true, name: 'UNTITLED'});
+        else if (menuData.name == 'new-theme') {
+            const node = this._domainsAndThemes.AddNew(item, 'UNTITLED', { new: true, name: 'UNTITLED' });
             node.editable = true;
             node.Edit();
         }
-        else if(menuData.name == 'set-current') {
+        else if (menuData.name == 'set-current') {
             const theme = item.tag.data;
             App.Confirm.Show(
                 '#{tools-themes-setcurrenttheme}',
@@ -212,7 +209,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                 Tools.SetThemeAsCurrent(theme.id);
             });
         }
-        else if(menuData.name == 'dublicate-theme') {
+        else if (menuData.name == 'dublicate-theme') {
             const theme = item.tag;
             let data = Object.cloneRecursive(theme.data);
             data.name = 'dublicated-theme';
@@ -224,19 +221,17 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                 storage.fields.mixins.component = 'Colibri.UI.Forms.Hidden';
                 storage.fields.current.component = 'Colibri.UI.Forms.Hidden';
                 storage.fields.domain.component = 'Colibri.UI.Forms.Hidden';
-                Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme}', 450, storage, data)
-                    .then((data) => {
-                        Tools.CreateTheme(data).then(() => {
-                            Manage.FormWindow.Hide();
-                        });
-                    })
-                    .catch(() => {
+                Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme}', 450, storage, data, '', {}, (data) => {
+                    Tools.CreateTheme(data).then(() => {
                         Manage.FormWindow.Hide();
                     });
+                }, () => {
+                    Manage.FormWindow.Hide();
+                });
 
             });
-        } 
-        else if(menuData.name == 'import-theme') {
+        }
+        else if (menuData.name == 'import-theme') {
             const theme = item.tag;
             Manage.FormWindow.Show('#{tools-themes-windowtitle-importtheme}', 750, {
                 name: 'import',
@@ -246,15 +241,13 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                         desc: '#{tools-themes-windowtitle-importtheme-fields-json_data}',
                     }
                 }
-            }, {id: theme.data.id})
-                .then((data) => {
-                    Tools.ImportTheme(data).then(() => {
-                        Manage.FormWindow.Hide();
-                    });
-                })
-                .catch(() => {
+            }, { id: theme.data.id }, '', {}, (data) => {
+                Tools.ImportTheme(data).then(() => {
                     Manage.FormWindow.Hide();
                 });
+            }, () => {
+                Manage.FormWindow.Hide();
+            });
         }
 
     }
@@ -263,18 +256,18 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __themesNodeDoubleClicked(event, args) {
         const theme = this._domainsAndThemes.selected?.tag;
-        if(!theme) {
+        if (!theme) {
             return;
         }
-        
-        if(theme.type == 'domain') {
-            const node = this._domainsAndThemes.AddNew(this._domainsAndThemes.selected, 'UNTITLED', {new: true, name: 'UNTITLED'});
+
+        if (theme.type == 'domain') {
+            const node = this._domainsAndThemes.AddNew(this._domainsAndThemes.selected, 'UNTITLED', { new: true, name: 'UNTITLED' });
             node.editable = true;
             node.Edit();
-            
+
         }
         else {
             Manage.Store.AsyncQuery('manage.storages(name=themes,module=tools)').then(storage => {
@@ -284,15 +277,13 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                 delete storage.fields.current;
                 delete storage.fields.domain;
 
-                Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme}', 450, storage, theme.data)
-                    .then((data) => {
-                        Tools.CreateTheme(data).then(() => {
-                            Manage.FormWindow.Hide();
-                        });
-                    })
-                    .catch(() => {
+                Manage.FormWindow.Show('#{tools-themes-windowtitle-edittheme}', 450, storage, theme.data, '', {}, (data) => {
+                    Tools.CreateTheme(data).then(() => {
                         Manage.FormWindow.Hide();
                     });
+                }, () => {
+                    Manage.FormWindow.Hide();
+                });
 
             });
         }
@@ -306,35 +297,35 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
 
     _getValueField(fields, value) {
         fields.fields.value.params.readonly = false;
-        if(value === 'color') {
+        if (value === 'color') {
             fields.fields.value.component = 'Color';
         }
-        else if(value === 'border') {
+        else if (value === 'border') {
             fields.fields.value.component = 'Text';
         }
-        else if(value === 'font-family') {
+        else if (value === 'font-family') {
             fields.fields.value.component = 'FontFamily';
             fields.fields.value.params.readonly = true;
         }
-        else if(value === 'size') {
+        else if (value === 'size') {
             fields.fields.value.component = 'Text';
         }
-        else if(value === 'image') {
+        else if (value === 'image') {
             fields.fields.value.component = 'App.Modules.Manage.UI.File';
         }
-        else if(value === 'shadow') {
+        else if (value === 'shadow') {
             fields.fields.value.component = 'Text';
         }
 
         fields.fields.value.params.enabled = true;
         return fields;
     }
-    
+
     /**
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __addVarButtonClicked(event, args) {
         const theme = this._domainsAndThemes.selected?.tag?.data;
         Manage.Store.AsyncQuery('manage.storages(name=themes,module=tools)').then(storage => {
@@ -349,22 +340,20 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                         const values = form.value;
                         const typeComponent = args?.component;
                         const value = typeComponent?.value;
-                        if(value) {
+                        if (value) {
                             fields = this._getValueField(fields, value);
                             Manage.FormWindow.ReCreateForm(fields.fields, values);
                         }
 
                     }
                 }
-            })
-                .then((data) => {
-                    Tools.SaveThemeVar(theme.id, data).then(() => {
-                        Manage.FormWindow.Hide();
-                    });
-                })
-                .catch(() => {
+            }, '', {}, (data) => {
+                Tools.SaveThemeVar(theme.id, data).then(() => {
                     Manage.FormWindow.Hide();
                 });
+            }, () => {
+                Manage.FormWindow.Hide();
+            });
 
         });
     }
@@ -373,10 +362,10 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __editVarButtonClicked(event, args) {
         let selected = this._varsGrid.selected;
-        if(!selected) {
+        if (!selected) {
             selected = this._varsGrid.checked[0];
         }
         const theme = this._domainsAndThemes.selected?.tag?.data;
@@ -395,7 +384,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                         const values = form.value;
                         const typeComponent = args?.component;
                         const value = typeComponent?.value;
-                        if(value) {
+                        if (value) {
                             fields = this._getValueField(fields, value);
                             Colibri.Common.Delay(500).then(() => {
                                 Manage.FormWindow.ReCreateForm(fields.fields, values);
@@ -404,13 +393,11 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
 
                     }
                 }
-            })
-            .then((data) => {
+            }, '', {}, (data) => {
                 Tools.SaveThemeVar(theme.id, data).then(() => {
                     Manage.FormWindow.Hide();
                 });
-            })
-            .catch(() => {
+            }, () => {
                 Manage.FormWindow.Hide();
             });
 
@@ -421,12 +408,12 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __deleteVarButtonClicked(event, args) {
         const theme = this._domainsAndThemes.selected?.tag?.data;
         const selectedVar = this._varsGrid.selected;
         const checkedVars = this._varsGrid.checked;
-        if(checkedVars.length > 0) {
+        if (checkedVars.length > 0) {
             App.Confirm.Show(
                 '#{tools-themes-deletevars}',
                 '#{tools-themes-deletevarsmessage}',
@@ -437,7 +424,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                     names.push(variable.value.name);
                 });
                 Tools.DeleteThemeVars(theme?.id, names);
-            });    
+            });
         }
         else {
             App.Confirm.Show(
@@ -446,7 +433,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
                 '#{tools-themes-deletevarmessage-delete}'
             ).then(() => {
                 Tools.DeleteThemeVars(theme?.id, [selectedVar.value.name]);
-            });    
+            });
         }
     }
 
@@ -454,7 +441,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __varsDoubleClicked(event, args) {
         this.__editVarButtonClicked(event, args);
     }
@@ -463,21 +450,19 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __addMixinButtonClicked(event, args) {
         const theme = this._domainsAndThemes.selected?.tag?.data;
         Manage.Store.AsyncQuery('manage.storages(name=themes,module=tools)').then(storage => {
             let fields = storage.fields.mixins;
             fields.fields.name.params.enabled = true;
-            Manage.FormWindow.Show('#{tools-themes-windowtitle-addmixintitle}', 650, fields, {})
-                .then((data) => {
-                    Tools.SaveThemeMixin(theme.id, data).then(() => {
-                        Manage.FormWindow.Hide();
-                    });
-                })
-                .catch(() => {
+            Manage.FormWindow.Show('#{tools-themes-windowtitle-addmixintitle}', 650, fields, {}, '', {}, (data) => {
+                Tools.SaveThemeMixin(theme.id, data).then(() => {
                     Manage.FormWindow.Hide();
                 });
+            }, () => {
+                Manage.FormWindow.Hide();
+            });
 
         });
     }
@@ -486,10 +471,10 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __editMixinButtonClicked(event, args) {
         let selected = this._mixinsGrid.selected;
-        if(!selected) {
+        if (!selected) {
             selected = this._mixinsGrid.checked[0];
         }
         const theme = this._domainsAndThemes.selected?.tag?.data;
@@ -499,15 +484,13 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
             const values = selected.value;
             fields.fields.name.params.enabled = false;
 
-            Manage.FormWindow.Show('#{tools-themes-windowtitle-editmixintitle}', 650, fields, values)
-                .then((data) => {
-                    Tools.SaveThemeMixin(theme.id, data).then(() => {
-                        Manage.FormWindow.Hide();
-                    });
-                })
-                .catch(() => {
+            Manage.FormWindow.Show('#{tools-themes-windowtitle-editmixintitle}', 650, fields, values, '', {}, (data) => {
+                Tools.SaveThemeMixin(theme.id, data).then(() => {
                     Manage.FormWindow.Hide();
                 });
+            }, () => {
+                Manage.FormWindow.Hide();
+            });
 
         });
     }
@@ -516,33 +499,33 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __deleteMixinButtonClicked(event, args) {
         const theme = this._domainsAndThemes.selected?.tag?.data;
         const selectedMixin = this._mixinsGrid.selected;
         const checkedMixins = this._mixinsGrid.checked;
-        if(checkedMixins.length > 0) {
+        if (checkedMixins.length > 0) {
             App.Confirm.Show('#{tools-themes-deletemixins}', '#{tools-themes-deletemixinsmessage}', '#{tools-themes-deletemixinsmessage-delete}').then(() => {
                 let names = [];
                 checkedMixins.forEach(mixin => {
                     names.push(mixin.value.name);
                 });
                 Tools.DeleteThemeMixins(theme?.id, names);
-            });    
+            });
         }
         else {
             App.Confirm.Show('#{tools-themes-deletemixin}', '#{tools-themes-deletemixinmessage}', '#{tools-themes-deletemixinmessage-delete}').then(() => {
                 Tools.DeleteThemeMixins(theme?.id, [selectedMixin.value.name]);
-            });    
+            });
         }
     }
 
-    
+
     /**
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
-     */ 
+     */
     __mixinsDoubleClicked(event, args) {
         this.__editMixinButtonClicked(event, args);
     }
