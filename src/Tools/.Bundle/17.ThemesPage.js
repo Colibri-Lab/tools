@@ -393,7 +393,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
 
                     }
                 }
-            }, '', {}, (data) => {
+            }, (data) => {
                 Tools.SaveThemeVar(theme.id, data).then(() => {
                     Manage.FormWindow.Hide();
                 });
