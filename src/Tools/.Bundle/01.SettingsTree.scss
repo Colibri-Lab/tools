@@ -1,0 +1,24 @@
+.app-settings-tree-component {
+    .app-modules-tools-settingstree-root-node {
+        .icon {
+            svg {
+                path, rect, circle, ellipse, line, polyline, polygon {
+                    &[fill="black"] {
+                        fill: #daa700;
+                    }
+                }
+            }
+        }
+    }
+    .app-modules-tools-settingstree-setting-node {
+        .icon {
+            svg {
+                path, rect, circle, ellipse, line, polyline, polygon {
+                    &[fill="black"] {
+                        fill: #000000;
+                    }
+                }
+            }
+        }
+    }
+}

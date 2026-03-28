@@ -1,0 +1,39 @@
+.app-tools-domains-themes-tree {
+
+    .app-tools-domains-themes-tree-folder-node {
+        > div > .icon {
+            svg {
+                path, rect, circle, ellipse, line, polyline, polygon {
+                    &[fill="black"] {
+                        fill: #daa700;
+                    }
+                }
+            }
+        }
+    }
+
+    .app-tools-domains-themes-tree-theme-node {
+        > div > .icon {
+            svg {
+                path, rect, circle, ellipse, line, polyline, polygon {
+                    &[fill="black"] {
+                        fill: #474747;
+                    }
+                }
+            }
+        }
+    }
+
+    .app-tools-domains-themes-tree-theme-node-current {
+        > div > .icon {
+            svg {
+                path, rect, circle, ellipse, line, polyline, polygon {
+                    &[fill="black"] {
+                        fill: #007acc;
+                    }
+                }
+            }
+        }
+    }
+
+}

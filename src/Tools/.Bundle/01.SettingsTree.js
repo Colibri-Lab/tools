@@ -33,6 +33,7 @@ App.Modules.Tools.SettingsTree = class extends Colibri.UI.Tree {
         rootNode.text = '#{tools-settings-tree-root}';
         rootNode.isLeaf = false;
         rootNode.icon = App.Modules.Tools.Icons.SettingsRootIcon;
+        rootNode.AddClass('app-modules-tools-settingstree-root-node');
         rootNode.tag = null;
         rootNode.Expand();
 
@@ -48,12 +49,13 @@ App.Modules.Tools.SettingsTree = class extends Colibri.UI.Tree {
                 newNode.text = setting.name;
                 newNode.isLeaf = true;
 
-                const type = Array.find(settings.fields.type.values, 'value', setting.type.value);
-                const icon = eval(type.icon);
+                // const type = Array.find(settings.fields.type.values, 'value', setting.type.value);
+                // const icon = eval(type.icon);
 
-                newNode.icon = icon;
+                newNode.icon = Tools.TypeIcon(setting.type.value);
                 newNode.tag = setting;
                 newNode.editable = true;
+                newNode.AddClass('app-modules-tools-settingstree-setting-node');
 
                 found.push(setting.name);
     

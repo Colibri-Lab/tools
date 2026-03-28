@@ -104,7 +104,7 @@ App.Modules.Tools.SettingsDataPage = class extends Colibri.UI.Component
                 type: 'varchar',
                 component: component,
                 params: params,
-                desc: '#{tools-settingsdata-value-title}'
+                desc: '#{tools-settingsdata-value-title}',
             }
         }
         

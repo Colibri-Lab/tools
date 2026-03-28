@@ -2,6 +2,7 @@ App.Modules.Tools.DomainsAndThemesTree = class extends Colibri.UI.Tree {
     
     constructor(name, container) {
         super(name, container);
+        this.AddClass('app-tools-domains-themes-tree');
 
         this.RegisterEvent('NodesLoaded', false, 'Когда все узлы загружены');
     }
@@ -24,7 +25,8 @@ App.Modules.Tools.DomainsAndThemesTree = class extends Colibri.UI.Tree {
                 }
                 newNode.text = domainkey.title;
                 newNode.isLeaf = true;
-                newNode.icon = App.Modules.Sites.Icons.FolderIconPublished;
+                newNode.icon = App.Modules.Tools.Icons.FolderIcon;
+                newNode.AddClass('app-tools-domains-themes-tree-folder-node');
                 newNode.tag = {type: 'domain', data: domainkey};
     
             }
@@ -68,6 +70,7 @@ App.Modules.Tools.DomainsAndThemesTree = class extends Colibri.UI.Tree {
                 newNode.isLeaf = true;
                 newNode.icon = theme.current ? App.Modules.Tools.Icons.ThemesCurrentIcon : App.Modules.Tools.Icons.ThemesIcon;
                 newNode.tag = {type: 'theme', data: theme};
+                newNode.AddClass('app-tools-domains-themes-tree-theme-node' + (theme.current ? '-current' : ''));
     
             }
 

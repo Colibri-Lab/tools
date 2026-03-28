@@ -1,0 +1,13 @@
+.app-buckets-tree-component {
+    .app-modules-tools-bucketstree-bucket-node {
+        .icon {
+            svg {
+                path, rect, circle, ellipse, line, polyline, polygon {
+                    &[fill="black"] {
+                        fill: #0d3855;
+                    }
+                }
+            }
+        }
+    }
+}

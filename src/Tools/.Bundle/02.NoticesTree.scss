@@ -1,0 +1,27 @@
+.app-notices-tree-component {
+
+    .app-notices-tree-notice-node {
+        > div > .icon {
+            svg {
+                path, rect, circle, ellipse, line, polyline, polygon {
+                    &[fill="black"] {
+                        fill: #1e80c2;
+                    }
+                }
+            }
+        }
+    }
+
+    .app-notices-tree-folder-node {
+        > div > .icon {
+            svg {
+                path, rect, circle, ellipse, line, polyline, polygon {
+                    &[fill="black"] {
+                        fill: #daa700;
+                    }
+                }
+            }
+        }
+    }
+
+}

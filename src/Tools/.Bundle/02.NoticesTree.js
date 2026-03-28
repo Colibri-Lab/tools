@@ -2,6 +2,7 @@ App.Modules.Tools.NoticesTree = class extends Colibri.UI.Tree {
     
     constructor(name, container) {
         super(name, container);
+        this.AddClass('app-notices-tree-component');
 
         this.RegisterEvent('NodesLoaded', false, 'Когда все узлы загружены');
     }
@@ -43,6 +44,7 @@ App.Modules.Tools.NoticesTree = class extends Colibri.UI.Tree {
                         parentNode = parentNode.nodes.Add(part);
                         parentNode.text = part;
                         parentNode.icon = App.Modules.Tools.Icons.FolderIcon;
+                        parentNode.AddClass('app-notices-tree-folder-node');
                         parentNode.tag = null;
                     }
                     found.push(part);
@@ -57,6 +59,7 @@ App.Modules.Tools.NoticesTree = class extends Colibri.UI.Tree {
                 newNode.isLeaf = true;
                 newNode.icon = Colibri.UI.MessageEnvelopeIcon;
                 newNode.tag = notice;
+                newNode.AddClass('app-notices-tree-notice-node');
 
             } else {
                     
@@ -68,7 +71,7 @@ App.Modules.Tools.NoticesTree = class extends Colibri.UI.Tree {
                 newNode.isLeaf = true;
                 newNode.icon = Colibri.UI.MessageEnvelopeIcon;
                 newNode.tag = notice;
-
+                newNode.AddClass('app-notices-tree-notice-node');
 
             }
 
@@ -102,6 +105,7 @@ App.Modules.Tools.NoticesTree = class extends Colibri.UI.Tree {
         node.isLeaf = true;
         node.icon = Colibri.UI.MessageEnvelopeIcon;
         node.tag = tag;
+        node.AddClass('app-notices-tree-notice-node');
     
         return node;
 
