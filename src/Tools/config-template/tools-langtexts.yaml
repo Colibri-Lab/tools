@@ -6,6 +6,11 @@ tools-settings-tree-root:
   es: Configuración del sitio
   kk: Сайт параметрлері
   uz: Sayt sozlamalari
+  de: Seiteneinstellungen
+  fa: تنظیمات سایت
+  cz: Nastavení stránek
+  tr: Site ayarları
+  zh: 网站设置
 tools-settings-settings-title:
   ru: Настройки
   en: Settings
@@ -14,6 +19,11 @@ tools-settings-settings-title:
   es: Ajustes
   kk: Параметрлер
   uz: Sozlamalar
+  de: Einstellungen
+  fa: تنظیمات
+  cz: Nastavení
+  tr: Ayarlar
+  zh: 设置
 tools-settings-data-title:
   ru: Редактор
   en: Editor
@@ -22,6 +32,11 @@ tools-settings-data-title:
   es: Editor
   kk: Редактор
   uz: Tahrirlovchi
+  de: Editor
+  fa: ویرایشگر
+  cz: Editor
+  tr: Editör
+  zh: 编辑器
 tools-settings-buttons-save:
   ru: Сохранить
   en: Save
@@ -30,6 +45,11 @@ tools-settings-buttons-save:
   es: Guardar
   kk: Сақтау
   uz: Saqlash
+  de: Speichern
+  fa: ذخیره
+  cz: Uložit
+  tr: Kaydet
+  zh: 保存
 tools-settings-contextmenu-delete:
   ru: Удалить настройку
   en: Delete a setting
@@ -38,6 +58,11 @@ tools-settings-contextmenu-delete:
   es: Eliminar la configuración
   kk: Параметрді жою
   uz: Sozlamani o'chirish
+  de: Einstellung löschen
+  fa: حذف تنظیمات
+  cz: Nastavení smazat
+  tr: Ayarı sil
+  zh: 删除设置
 tools-settings-description-title:
   ru: Описание настройки
   en: Description of the setting
@@ -46,6 +71,11 @@ tools-settings-description-title:
   es: Descripción de la configuración
   kk: Параметр сипаттамасы
   uz: Sozlamaning tavsifi
+  de: Beschreibung der Einstellung
+  fa: توضیحات تنظیمات
+  cz: Popis nastavení
+  tr: Ayarın açıklaması
+  zh: 设置说明
 tools-settings-value-title:
   ru: Значение
   en: Meaning
@@ -54,6 +84,11 @@ tools-settings-value-title:
   es: Significado
   kk: Мәні
   uz: Ma'no
+  de: Bedeutung
+  fa: معنی
+  cz: Význam
+  tr: Anlam
+  zh: 意义
 tools-settingsdata-settings-title:
   ru: Настройки
   en: Settings
@@ -62,6 +97,11 @@ tools-settingsdata-settings-title:
   es: Ajustes
   kk: Параметрлер
   uz: Sozlamalar
+  de: Einstellungen
+  fa: تنظیمات
+  cz: Nastavení
+  tr: Ayarlar
+  zh: 设置
 tools-settingsdata-data-title:
   ru: Редактор
   en: Editor
@@ -70,6 +110,11 @@ tools-settingsdata-data-title:
   es: Editor
   kk: Редактор
   uz: Tahrirlovchi
+  de: Editor
+  fa: ویرایشگر
+  cz: Editor
+  tr: Editör
+  zh: 编辑器
 tools-settingsdata-buttons-save:
   ru: Сохранить
   en: Save
@@ -78,6 +123,11 @@ tools-settingsdata-buttons-save:
   es: Guardar
   kk: Сақтау
   uz: Saqlash
+  de: Speichern
+  fa: ذخیره
+  cz: Uložit
+  tr: Kaydet
+  zh: 保存
 tools-settingsdata-title-nodesc:
   ru: Без описания
   en: Without description
@@ -86,6 +136,11 @@ tools-settingsdata-title-nodesc:
   es: Sin descripción
   kk: Сипаттамасыз
   uz: Tavsifsiz
+  de: Ohne Beschreibung
+  fa: بدون توضیحات
+  cz: Bez popisu
+  tr: Açıklama yok
+  zh: 无描述
 tools-settingsdata-value-title:
   ru: Значение
   en: Meaning
@@ -94,6 +149,11 @@ tools-settingsdata-value-title:
   es: Significado
   kk: Мәні
   uz: Ma'no
+  de: Bedeutung
+  fa: معنی
+  cz: Význam
+  tr: Anlam
+  zh: 意义
 tools-notices-notices-title:
   ru: Сообщения
   en: Messages
@@ -102,6 +162,11 @@ tools-notices-notices-title:
   es: Mensajes
   kk: Хабарламалар
   uz: Xabarlar
+  de: Nachrichten
+  fa: پیام‌ها
+  cz: Zprávy
+  tr: Mesajlar
+  zh: 消息
 tools-notices-date-title:
   ru: Редактор
   en: Editor
@@ -110,6 +175,11 @@ tools-notices-date-title:
   es: Editor
   kk: Редактор
   uz: Tahrirlovchi
+  de: Editor
+  fa: ویرایشگر
+  cz: Editor
+  tr: Editör
+  zh: 编辑器
 tools-notices-buttons-save:
   ru: Сохранить
   en: Save
@@ -118,6 +188,11 @@ tools-notices-buttons-save:
   es: Guardar
   kk: Сақтау
   uz: Saqlash
+  de: Speichern
+  fa: ذخیره
+  cz: Uložit
+  tr: Kaydet
+  zh: 保存
 tools-notices-fields-nodesc:
   ru: Без темы
   en: Without a topic
@@ -126,6 +201,11 @@ tools-notices-fields-nodesc:
   es: Sin tema
   kk: Тақырыпсыз
   uz: Mavzusiz
+  de: Ohne Thema
+  fa: بدون موضوع
+  cz: Bez tématu
+  tr: Konusuz
+  zh: 无主题
 tools-notices-fields-desc:
   ru: Наименование
   en: Name
@@ -134,6 +214,11 @@ tools-notices-fields-desc:
   es: Nombre
   kk: Атауы
   uz: Nomi
+  de: Name
+  fa: نام
+  cz: Název
+  tr: Ad
+  zh: 名称
 tools-notices-fields-desc-note:
   ru: Введите наименование темы. Латинские буквы без спец-символов
   en: Enter the name of the topic. Latin letters without special characters
@@ -142,6 +227,11 @@ tools-notices-fields-desc-note:
   es: Ingrese el nombre del tema. Letras latinas sin caracteres especiales
   kk: Тақырып атауын енгізіңіз. Арнайы таңбаларсыз латын әріптері
   uz: Mavzu nomini kiriting. Maxsus belgilarisiz lotin harflari
+  de: Geben Sie den Namen des Themas ein. Lateinische Buchstaben ohne Sonderzeichen
+  fa: نام موضوع را وارد کنید. حروف لاتین بدون کاراکترهای خاص
+  cz: Zadejte název tématu. Latinské písmena bez speciálních znaků
+  tr: Konu adını girin. Özel karakterler olmadan Latin harfleri
+  zh: 输入主题名称。拉丁字母，不含特殊字符
 tools-notices-fields-subject:
   ru: Тема письма
   en: Subject of the letter
@@ -150,6 +240,11 @@ tools-notices-fields-subject:
   es: Tema de la carta
   kk: Хат тақырыбы
   uz: Xat mavzusi
+  de: Betreff des Briefes
+  fa: موضوع نامه
+  cz: Předmět dopisu
+  tr: Mektup konusu
+  zh: 信件主题
 tools-notices-fields-subject-note:
   ru: Введите тему письма
   en: Enter the subject of the email
@@ -158,6 +253,11 @@ tools-notices-fields-subject-note:
   es: Ingrese el tema del correo
   kk: Хат тақырыбын енгізіңіз
   uz: Xat mavzusini kiriting
+  de: Geben Sie den Betreff der E-Mail ein
+  fa: موضوع نامه را وارد کنید
+  cz: Zadejte předmět dopisu
+  tr: E-posta konusunu girin
+  zh: 输入电子邮件主题
 tools-notices-fields-body:
   ru: Тело письма
   en: The body of the letter
@@ -166,6 +266,11 @@ tools-notices-fields-body:
   es: El cuerpo de la carta
   kk: Хаттың денесі
   uz: Xatning tanasi
+  de: Der Körper des Briefes
+  fa: متن نامه
+  cz: Tělo dopisu
+  tr: Mektup gövdesi
+  zh: 信件正文
 tools-notices-fields-body-note:
   ru: Введите тело письма. Допускаются вставки вида [[name]] в качестве переменных
     шаблона
@@ -181,6 +286,14 @@ tools-notices-fields-body-note:
     ретінде рұқсат етіледі
   uz: Xatning tanasini kiriting. [[name]] shaklidagi kiritmalar shablon
     o'zgaruvchilari sifatida ruxsat etiladi
+  de: Geben Sie den Körper der E-Mail ein. Einfügungen der Form [[name]] als
+    Template-Variablen sind erlaubt
+  fa: متن ایمیل را وارد کنید. درج‌هایی به شکل [[name]] به عنوان متغیرهای قالب مجاز هستند
+  cz: Zadejte tělo e-mailu. Vkládání ve formátu [[name]] jako proměnné šablony jsou
+    povoleny
+  tr: E-posta gövdesini girin. [[name]] biçimindeki eklemeler şablon değişkenleri
+    olarak izin verilir
+  zh: 输入电子邮件正文。允许以[[name]]形式的插入作为模板变量
 tools-notices-contextmenu-newnotice:
   ru: Создать шаблон
   en: Create a template
@@ -189,6 +302,11 @@ tools-notices-contextmenu-newnotice:
   es: Crear una plantilla
   kk: Үлгі жасау
   uz: Shablon yaratish
+  de: Erstellen Sie eine Vorlage
+  fa: ایجاد یک قالب
+  cz: Vytvořit šablonu
+  tr: Bir şablon oluşturun
+  zh: 创建一个模板
 tools-notices-contextmenu-deletenotice:
   ru: Удалить шаблон
   en: Delete a template
@@ -197,6 +315,11 @@ tools-notices-contextmenu-deletenotice:
   es: Eliminar la plantilla
   kk: Үлгіні жою
   uz: Shablonni o'chirish
+  de: Vorlage löschen
+  fa: حذف یک قالب
+  cz: Smazat šablonu
+  tr: Bir şablonu sil
+  zh: 删除一个模板
 tools-menu-settings-data:
   hy: Կարգավորումներ
   ru: Настройки
@@ -205,6 +328,11 @@ tools-menu-settings-data:
   es: Ajustes
   kk: Параметрлер
   uz: Sozlamalar
+  de: Einstellungen
+  fa: تنظیمات
+  cz: Nastavení
+  tr: Ayarlar
+  zh: 设置
 tools-menu-settings-data-desc:
   hy: Կայքի կարգավորումները < br />Այստեղ կարող եք խմբագրել որոշ կարգավորումներ,
     որոնք նախապես ստեղծվել են մենեջերի կողմից կարգավորումների մենեջերում
@@ -218,6 +346,12 @@ tools-menu-settings-data-desc:
     previamente por el administrador en el administrador de configuraciones
   kk: Сайт параметрлері<br />Мұнда сіз параметрлер менеджерінде менеджер бұрын
     жасаған кейбір параметрлерді өңдей аласыз
+  uz: Sayt sozlamalari<br />Bu yerda siz sozlamalar menejerida menejer tomonidan oldindan yaratılmış bazı ayarları düzenleyebilirsiniz
+  de: Seiteneinstellungen<br />Hier können Sie einige Einstellungen bearbeiten, die zuvor vom Manager im Einstellungsmanager erstellt wurden
+  fa: تنظیمات سایت<br />در اینجا می توانید برخی از تنظیمات را که قبلاً توسط مدیر در مدیر تنظیمات ایجاد شده است ویرایش کنید
+  cz: Nastavení stránek<br />Zde můžete upravit některá nastavení, která dříve vytvořil správce v nastavení správce
+  tr: Site ayarları<br />Burada, yönetici tarafından ayarlar yöneticisinde önceden oluşturulmuş bazı ayarları düzenleyebilirsiniz
+  zh: 网站设置<br />在这里，您可以编辑一些之前由管理员在设置管理器中创建的设置
 tools-menu-filesondisk:
   hy: Ֆայլեր սկավառակի վրա
   ru: Файлы на диске
@@ -226,6 +360,11 @@ tools-menu-filesondisk:
   es: Archivos en el disco
   kk: Дискідегі файлдар
   uz: Diskdagi fayllar
+  de: Dateien auf der Festplatte
+  fa: دیسک上的文件
+  cz: Soubory na disku
+  tr: Diskteki dosyalar
+  zh: 磁盘上的文件
 tools-menu-filesondisk-desc:
   hy: "Ֆայլերը գտնվում են ընթացիկ սերվերի վրա, տեղական մեքենայի վրա: Դուք կարող եք
     ավելացնել կամ ջնջել անցանկալի ֆայլեր. Ուշադրություն! Երբ դուք հեռացնել
@@ -252,6 +391,16 @@ tools-menu-filesondisk-desc:
     qo'shishingiz yoki o'chirishingiz mumkin. Diqqat! Fayllarni o'chirishda,
     ba'zi satrlar omborlarda ularga murojaat qilishi mumkinligini hisobga olish
     kerak
+  de: Dateien auf dem aktuellen Server, auf der lokalen Maschine. Sie können
+    unnötige Dateien hinzufügen oder löschen. Achtung! Beim Löschen von Dateien
+    müssen Sie berücksichtigen, dass einige Zeilen in den Repositories auf sie
+    verweisen können
+  fa: فایل های واقع در سرور فعلی، روی ماشین محلی. شما می توانید فایل های غیر ضروری را اضافه یا حذف کنید. توجه! هنگام حذف فایل ها، باید در نظر داشته باشید که برخی خطوط در مخازن ممکن است به آنها اشاره کنند
+  cz: Soubory umístěné na aktuálním serveru, na místním počítači. Můžete přidat nebo
+    odstranit nepotřebné soubory. Pozor! Při odstraňování souborů je třeba vzít v
+    úvahu, že některé řádky v repozitářích se na ně mohou odkazovat
+  tr: Mevcut sunucuda, yerel makinedeki dosyalar. Gereksiz dosyaları ekleyebilir veya silebilirsiniz. Dikkat! Dosyaları silerken, bazı satırların depolarda onlara referans verebileceğini göz önünde bulundurmanız gerekir
+  zh: 位于当前服务器上的文件，在本地机器上。您可以添加或删除不必要的文件。注意！删除文件时，您需要考虑到存储库中的某些行可能会引用它们
 tools-menu-filesremote:
   hy: Մեդիա շտեմարան
   ru: Хранилище медиа
@@ -260,6 +409,11 @@ tools-menu-filesremote:
   es: Almacenamiento de medios
   kk: Медиа сақтау
   uz: Media saqlash
+  de: Medienspeicher
+  fa: ذخیره رسانه
+  cz: Úložiště médií
+  tr: Medya Depolama
+  zh: 媒体存储
 tools-menu-filesremote-desc:
   hy: Հեռավոր ֆայլի գրադարան. Դուք կարող եք ավելացնել զամբյուղներ (bucket) եւ/կամ
     մաքրել դրանք անհրաժեշտության դեպքում
@@ -273,6 +427,13 @@ tools-menu-filesremote-desc:
     болады
   uz: Uzoq fayl kutubxonasi. Agar kerak bo'lsa, chelaklarni qo'shishingiz va/yoki
     bo'shatishingiz mumkin
+  de: Remote-Dateibibliothek. Sie können Buckets hinzufügen und/oder leeren, wenn
+    dies erforderlich ist
+  fa: کتابخانه فایل از راه دور. شما می توانید سطل ها را اضافه کنید و/یا در صورت لزوم آنها را خالی کنید
+  cz: Vzdálená knihovna souborů. Můžete přidat kbelíky a/ne
+    bo je vyprázdnit, pokud je to nutné
+  tr: Uzak dosya kütüphanesi. Gerekirse kovalar ekleyebilir ve/veya boşaltabilirsiniz
+  zh: 远程文件库。您可以根据需要添加桶和/或清空它们
 tools-menu-settings:
   hy: Կայքի կարգավորումները
   ru: Настройки сайта
@@ -281,6 +442,11 @@ tools-menu-settings:
   es: Ajustes del sitio
   kk: Сайт параметрлері
   uz: Sayt sozlamalari
+  de: Seiteneinstellungen
+  fa: تنظیمات سایت
+  cz: Nastavení stránek
+  tr: Site ayarları
+  zh: 网站设置
 tools-menu-settings-desc:
   hy: Կարգավորումների մենեջեր. Դուք կարող եք ստեղծել մի կարգավորում, որը
     հետագայում օգտագործվում է նախագծման կամ դուրսբերման տեղեկատվության վրա
@@ -299,6 +465,12 @@ tools-menu-settings-desc:
     кейінірек пайдалануға болатын параметр жасауға болады
   uz: Sozlamalar menejeri. Loyihada ma'lumotlarni ishlab chiqish yoki chiqarishda
     keyinchalik foydalanish mumkin bo'lgan sozlamani yaratishingiz mumkin
+  de: Einstellungsmanager. Sie können eine Einstellung erstellen, die später in der
+    Entwicklung oder Ausgabe von Informationen auf dem Projekt verwendet werden kann
+  fa: مدیر تنظیمات. شما می توانید یک تنظیم ایجاد کنید که بعداً در توسعه یا خروجی اطلاعات در پروژه استفاده شود
+  cz: Správce nastavení. Můžete vytvořit nastavení, které lze později použít při vývoji nebo výstupu informací na projektu
+  tr: Ayar yöneticisi. Projede bilgi geliştirme veya çıktı sırasında daha sonra kullanılabilecek bir ayar oluşturabilirsiniz
+  zh: 设置管理器。您可以创建一个设置，以便在项目的信息开发或输出中稍后使用
 tools-menu-notices:
   hy: Հաղորդագրությունների կաղապարներ
   ru: Шаблоны сообщений
@@ -307,6 +479,11 @@ tools-menu-notices:
   es: Plantillas de mensajes
   kk: Хабар шаблондары
   uz: Xabar shablonlari
+  de: Nachrichtenvorlagen
+  fa: قالب های پیام
+  cz: Šablony zpráv
+  tr: Mesaj Şablonları
+  zh: 消息模板  
 tools-menu-notices-desc:
   hy: Ստեղծել հաղորդագրությունների կաղապարներ, էլեկտրոնային փոստի միջոցով
     օգտագործողի հետ հաղորդակցվելու համար
@@ -320,6 +497,11 @@ tools-menu-notices-desc:
     жасаңыз
   uz: Foydalanuvchi bilan elektron pochta orqali muloqot qilish uchun xabar
     shablonlarini yarating
+  de: Erstellen Sie Nachrichtenvorlagen für die Kommunikation mit dem Benutzer per E-Mail
+  fa: قالب های پیام را برای ارتباط با کاربر از طریق ایمیل ایجاد کنید
+  cz: Vytvořte šablony zpráv pro komunikaci s uživatelem prostřednictvím e-mailu
+  tr: E-posta yoluyla kullanıcıyla iletişim kurmak için mesaj şablonları oluşturun
+  zh: 创建消息模板以通过电子邮件与用户进行沟通
 tools-menu-backups:
   hy: Կույր համակարգ
   ru: Слепки системы
@@ -328,6 +510,11 @@ tools-menu-backups:
   es: Instantáneas del sistema
   kk: Жүйе суреттері
   uz: Tizim suratlari
+  de: Systemschnappschüsse
+  fa: عکس های فوری سیستم
+  cz: Snímky systému
+  tr: Sistem anlık görüntüleri
+  zh: 系统快照
 tools-menu-backups-desc:
   hy: "Ստեղծեք վերականգնման կետ կրիտիկական իրավիճակների դեպքում: Հետագայում
     հնարավոր կլինի տվյալները վերադարձնել ստացված ֆայլից"
@@ -343,6 +530,12 @@ tools-menu-backups-desc:
     файлдан деректерді қайтаруға болады
   uz: Tanqidiy vaziyatlarda tiklash nuqtasini yarating. Kelajakda olingan fayldan
     ma'lumotlarni qaytarish mumkin bo'ladi
+  de: Erstellen Sie einen Wiederherstellungspunkt für kritische Situationen. In
+    Zukunft wird es möglich sein, Daten aus der empfangenen Datei zurückzugeben
+  fa: یک نقطه بازیابی در صورت بروز شرایط بحرانی ایجاد کنید. در آینده، امکان بازگرداندن داده ها از فایل دریافت شده وجود خواهد داشت
+  cz: Vytvořte bod obnovení pro kritické situace. V budoucnu bude možné vrátit data ze získaného souboru
+  tr: Kritik durumlarda bir kurtarma noktası oluşturun. Gelecekte, alınan dosyadan veri döndürmek mümkün olacaktır
+  zh: 在发生严重情况时创建恢复点。将来，可以从收到的文件中返回数据
 tools-menu-execute:
   hy: Կատարել
   ru: Выполнить
@@ -351,6 +544,11 @@ tools-menu-execute:
   es: Ejecutar
   kk: Орындау
   uz: Bajaring
+  de: Ausführen
+  fa: اجرا
+  cz: Spustit
+  tr: Yürüt
+  zh: 执行
 tools-menu-execute-desc:
   hy: Կատարել կոդը (PHP). Ուշադրություն! Կոդը կատարվում է շրջապատված է ամբողջ
     նախագծի, հնարավոր անդառնալի վնաս.
@@ -366,6 +564,11 @@ tools-menu-execute-desc:
     қайтымсыз зақым келуі мүмкін!
   uz: Kodni bajaring (PHP). Diqqat! Kod butun loyiha muhiti doirasida bajariladi,
     qaytarib bo'lmaydigan zarar bo'lishi mumkin!
+  de: Führen Sie den Code aus (PHP). Achtung! Der Code wird in der Umgebung des gesamten Projekts ausgeführt, irreversible Schäden sind möglich!
+  fa: کد را اجرا کنید (PHP). توجه! کد در محیط کل پروژه اجرا می شود، آسیب غیرقابل برگشتی ممکن است!
+  cz: Spusťte kód (PHP). Pozor! Kód se spouští v prostředí celého projektu, je možné nevratné poškození!
+  tr: Kodu yürütün (PHP). Dikkat! Kod, tüm proje ortamında yürütülür, geri dönüşü olmayan hasar mümkündür!
+  zh: 执行代码（PHP）。注意！代码在整个项目的环境中执行，可能会造成不可逆转的损害！
 tools-menu-themes:
   hy: Կայքի թեմաներ
   ru: Темы сайта
@@ -374,6 +577,11 @@ tools-menu-themes:
   es: Temas del sitio
   kk: Сайт тақырыптары
   uz: Sayt mavzulari
+  de: Seitenthemen
+  fa: تم های سایت
+  cz: Témata stránek
+  tr: Site Temaları
+  zh: 网站主题
 tools-menu-themes-desc:
   hy: Կարգավորել տեսքը կայքում. Դուք կարող եք ստեղծել նոր թեմա, կամ խմբագրել
     գոյություն ունեցող
@@ -389,6 +597,11 @@ tools-menu-themes-desc:
     өңдеуге болады
   uz: Sayt ko'rinishini sozlang. Yangi mavzu yaratishingiz yoki mavjud mavzuni
     tahrirlashingiz mumkin
+  de: Passen Sie das Erscheinungsbild der Seite an. Sie können ein neues Thema erstellen oder ein vorhandenes bearbeiten
+  fa: ظاهر سایت را سفارشی کنید. شما می توانید یک موضوع جدید ایجاد کنید یا یک موضوع موجود را ویرایش کنید
+  cz: Přizpůsobte vzhled stránky. Můžete vytvořit nové téma nebo upravit existující
+  tr: Sitenin görünümünü özelleştirin. Yeni bir tema oluşturabilir veya mevcut bir temayı düzenleyebilirsiniz
+  zh: 自定义网站的外观。您可以创建一个新主题，或编辑一个现有的主题
 tools-backup-create:
   ru: Создать слепок
   en: Create an impression
@@ -397,6 +610,11 @@ tools-backup-create:
   es: Crear una impresión
   kk: Сурет жасау
   uz: Tasvir yaratish
+  de: Erstellen Sie einen Eindruck
+  fa: ایجاد یک تصویر  
+  cz: Vytvořit dojem
+  tr: Bir izlenim oluşturun 
+  zh: 创建一个印象
 tools-backup-create-info:
   ru: Нажмите на кнопку «создать слепок» и дождитесь окончания процесса. После
     завершения в списке слепкой внизу этой страницы появится новый пункт
@@ -418,6 +636,11 @@ tools-backup-create-info:
   uz: "\"Quyma yaratish\" tugmasini bosing va jarayon tugashini kuting.
     Tugallangandan so'ng, ushbu sahifaning pastki qismidagi ro'yxatda sana bilan
     belgilangan yangi element paydo bo'ladi"
+  de: Klicken Sie auf die Schaltfläche "Erstellen Sie einen Cast" und warten Sie, bis der Prozess abgeschlossen ist. Nach Abschluss wird ein neues Element mit einem Datum in der Liste mit einem Cast am unteren Rand dieser Seite angezeigt
+  fa: روی دکمه "ایجاد یک کست" کلیک کنید و منتظر بمانید تا فرآیند به پایان برسد. پس از اتمام، یک مورد جدید با تاریخ در لیست با یک کست در پایین این صفحه ظاهر می شود
+  cz: Klikněte na tlačítko "Vytvořit cast" a počkejte, až proces dokončí. Po dokončení se v seznamu s castem v dolní části této stránky objeví nová položka označená datem 
+  tr: "\"Bir cast oluştur\" düğmesine tıklayın ve işlemin bitmesini bekleyin. Tamamlandıktan sonra, bu sayfanın altındaki bir cast ile listede tarihle işaretlenmiş yeni bir öğe görünecektir"
+  zh: 点击“创建一个cast”按钮并等待过程完成。完成后，在此页面底部的带有cast的列表中将出现一个标有日期的新项目
 tools-backups-dataempty:
   ru: Слепки не найдены
   en: No restore points found
@@ -426,6 +649,11 @@ tools-backups-dataempty:
   es: No se encontraron puntos de restauración
   kk: Қалпына келтіру нүктелері табылмады
   uz: Tiklash nuqtalari topilmadi
+  de: Keine Wiederherstellungspunkte gefunden
+  fa: هیچ نقطه بازیابی یافت نشد
+  cz: Nenalezen žádný bod obnovení
+  tr: Hiçbir kurtarma noktası bulunamadı
+  zh: 未找到恢复点
 tools-backups-points-name:
   ru: Наименование
   en: Name
@@ -434,6 +662,11 @@ tools-backups-points-name:
   es: Nombre
   kk: Атауы
   uz: Nomi
+  de: Name
+  fa: نام
+  cz: Název
+  tr: İsim
+  zh: 名称
 tools-backups-points-created:
   ru: Создана
   en: Created
@@ -442,6 +675,11 @@ tools-backups-points-created:
   es: Creado
   kk: Жасалған
   uz: Yaratilgan
+  de: Erstellt
+  fa: ایجاد شده
+  cz: Vytvořeno
+  tr: Oluşturuldu
+  zh: 已创建
 tools-backups-points-size:
   ru: Размер файла
   en: File Size
@@ -450,6 +688,11 @@ tools-backups-points-size:
   es: Tamaño del archivo
   kk: Файл өлшемі
   uz: Fayl hajmi
+  de: Dateigröße
+  fa: اندازه فایل
+  cz: Velikost souboru
+  tr: Dosya boyutu
+  zh: 文件大小
 tools-backups-create-title:
   ru: Создание слепка системы
   en: Creating an impression of the system
@@ -458,6 +701,11 @@ tools-backups-create-title:
   es: Creando una impresión del sistema
   kk: Жүйенің әсерін жасау
   uz: Tizimning taassurotini yaratish
+  de: Erstellen eines Eindrucks des Systems
+  fa: ایجاد یک تصویر از سیستم
+  cz: Vytváření dojmu systému
+  tr: Sistemin bir izlenimini oluşturma
+  zh: 创建系统的印象
 tools-backups-points-title:
   ru: Список созданных слепков/заданий
   en: List of created casts/tasks
@@ -466,6 +714,11 @@ tools-backups-points-title:
   es: Lista de copias/tareas creadas
   kk: Жасалған құймалар/тапсырмалар тізімі
   uz: Yaratilgan quyma/topsiriqlar ro'yxati
+  de: Liste der erstellten Casts/Aufgaben
+  fa: لیست کست ها/وظایف ایجاد شده
+  cz: Seznam vytvořených castů/úkolů
+  tr: Oluşturulan castlar/görevler listesi
+  zh: 创建的cast/任务列表
 tools-backups-points-status:
   ru: Статус
   en: Status
@@ -474,6 +727,11 @@ tools-backups-points-status:
   es: Estado
   kk: Күйі
   uz: Holati
+  de: Status
+  fa: وضعیت
+  cz: Stav
+  tr: Durum
+  zh: 状态
 tools-backup-create-schedule:
   ru: Создать/Изменить задание
   en: To create/Edit a task
@@ -482,6 +740,11 @@ tools-backup-create-schedule:
   es: Crear/Editar una tarea
   kk: Тапсырма жасау/Өңдеу
   uz: Vazifa yaratish/tahrirlash
+  de: Erstellen/Bearbeiten einer Aufgabe
+  fa: ایجاد/ویرایش یک وظیفه
+  cz: Vytvořit/Upravit úkol
+  tr: Bir görev oluşturun/düzenleyin
+  zh: 创建/编辑一个任务
 tools-storages-backups-desc:
   ru: Точки восстановления
   en: Recovery Points
@@ -490,6 +753,11 @@ tools-storages-backups-desc:
   es: Puntos de recuperación
   kk: Қалпына келтіру нүктелері
   uz: Tiklash nuqtalari
+  de: Wiederherstellungspunkte
+  fa: نقاط بازیابی
+  cz: Body obnovení
+  tr: Kurtarma Noktaları  
+  zh: 恢复点
 tools-storages-backups-fields-name-desc:
   ru: Наименование
   en: Name
@@ -498,6 +766,11 @@ tools-storages-backups-fields-name-desc:
   es: Nombre
   kk: Атауы
   uz: Nomi
+  de: Name
+  fa: نام
+  cz: Název
+  tr: İsim
+  zh: 名称
 tools-storages-backups-fields-name-note:
   ru: Введите название задание на создание точки восстановления
   en: Enter the name of the task to create a recovery point
@@ -506,6 +779,11 @@ tools-storages-backups-fields-name-note:
   es: Ingrese el nombre de la tarea para crear un punto de recuperación
   kk: Қалпына келтіру нүктесін жасау үшін тапсырманың атауын енгізіңіз
   uz: Tiklash nuqtasini yaratish uchun vazifa nomini kiriting
+  de: Geben Sie den Namen der Aufgabe ein, um einen Wiederherstellungspunkt zu erstellen
+  fa: نام وظیفه را برای ایجاد یک نقطه بازیابی وارد کنید
+  cz: Zadejte název úkolu pro vytvoření bodu obnoven  
+  tr: Bir kurtarma noktası oluşturmak için görev adını girin
+  zh: 输入任务名称以创建恢复点
 tools-storages-backups-fields-cron-desc:
   ru: Запись в CRON
   en: Writing to CRON
@@ -514,6 +792,11 @@ tools-storages-backups-fields-cron-desc:
   es: Escribir en CRON
   kk: CRON-ға жазу
   uz: CRON-ga yozish
+  de: Schreiben in CRON
+  fa: نوشتن در CRON
+  cz: Zápis do CRON
+  tr: CRON'a yazma
+  zh: 写入CRON
 tools-storages-backups-fields-cron-note:
   ru: Введите запись, которую нужно будет внести в CRON
   en: Enter the entry that you will need to make in CRON
@@ -522,6 +805,11 @@ tools-storages-backups-fields-cron-note:
   es: Ingrese la entrada que deberá hacer en CRON
   kk: CRON-ға енгізу қажет жазбаны енгізіңіз
   uz: CRON-ga kiritishingiz kerak bo'lgan yozuvni kiriting
+  de: Geben Sie den Eintrag ein, den Sie in CRON vornehmen müssen
+  fa: ورودی را که باید در CRON انجام دهید وارد کنید
+  cz: Zadejte položku, kterou budete muset zadat do CRON
+  tr: CRON'da yapmanız gereken girişi girin
+  zh: 输入您需要在CRON中进行的条目
 tools-storages-backups-fields-cron-minute-desc:
   ru: Минута
   en: Minute
@@ -530,6 +818,11 @@ tools-storages-backups-fields-cron-minute-desc:
   es: Minuto
   kk: Минут
   uz: Daqiqa
+  de: Minute
+  fa: دقیقه
+  cz: Minuta
+  tr: Dakika
+  zh: 分钟
 tools-storages-backups-fields-cron-minute-note:
   ru: Выберите минуту
   en: Choose a minute
@@ -538,6 +831,11 @@ tools-storages-backups-fields-cron-minute-note:
   es: Elija un minuto
   kk: Минутты таңдаңыз
   uz: Daqiqani tanlang
+  de: Wählen Sie eine Minute
+  fa: یک دقیقه را انتخاب کنید
+  cz: Vyberte minutu
+  tr: Bir dakika seçin
+  zh: 选择一分钟  
 tools-storages-backups-fields-cron-hour-desc:
   ru: Час
   en: Hour
@@ -546,6 +844,11 @@ tools-storages-backups-fields-cron-hour-desc:
   es: Hora
   kk: Сағат
   uz: Soat
+  de: Stunde
+  fa: ساعت
+  cz: Hodina
+  tr: Saat
+  zh: 小时
 tools-storages-backups-fields-cron-hour-note:
   ru: Выберите час
   en: Choose an hour
@@ -554,6 +857,11 @@ tools-storages-backups-fields-cron-hour-note:
   es: Elija una hora
   kk: Сағатты таңдаңыз
   uz: Soatni tanlang
+  de: Wählen Sie eine Stunde
+  fa: یک ساعت را انتخاب کنید
+  cz: Vyberte hodinu
+  tr: Bir saat seçin
+  zh: 选择一个小时
 tools-storages-backups-fields-cron-day-desc:
   ru: День
   en: Day
@@ -562,6 +870,11 @@ tools-storages-backups-fields-cron-day-desc:
   es: Día
   kk: Күн
   uz: Kun
+  de: Tag
+  fa: روز 
+  cz: Den
+  tr: Gün
+  zh: 天
 tools-storages-backups-fields-cron-day-note:
   ru: Выберите день
   en: Choose a day
@@ -570,6 +883,11 @@ tools-storages-backups-fields-cron-day-note:
   es: Elija un día
   kk: Күнді таңдаңыз
   uz: Kunni tanlang
+  de: Wählen Sie einen Tag
+  fa: یک روز را انتخاب کنید
+  cz: Vyberte den
+  tr: Bir gün seçin
+  zh: 选择一天
 tools-storages-backups-fields-cron-month-desc:
   ru: Месяц
   en: Month
@@ -578,6 +896,11 @@ tools-storages-backups-fields-cron-month-desc:
   es: Mes
   kk: Ай
   uz: Oy
+  de: Monat
+  fa: ماه
+  cz: Měsíc
+  tr: Ay
+  zh: 月
 tools-storages-backups-fields-cron-month-note:
   ru: Выберите месяц
   en: Choose a month
@@ -586,6 +909,11 @@ tools-storages-backups-fields-cron-month-note:
   es: Elija un mes
   kk: Айды таңдаңыз
   uz: Oyni tanlang
+  de: Wählen Sie einen Monat
+  fa: یک ماه را انتخاب کنید
+  cz: Vyberte měsíc
+  tr: Bir ay seçin
+  zh: 选择一个月
 tools-storages-backups-fields-cron-dayofweek-desc:
   ru: День недели
   en: Day of the week
@@ -594,6 +922,11 @@ tools-storages-backups-fields-cron-dayofweek-desc:
   es: Día de la semana
   kk: Апта күні
   uz: Haftaning kuni
+  de: Wochentag
+  fa: روز هفته
+  cz: Den v týdnu
+  tr: Haftanın günü
+  zh: 星期几
 tools-storages-backups-fields-cron-dayofweek-note:
   ru: Выберите день недели
   en: Choose a day of the week
@@ -602,6 +935,11 @@ tools-storages-backups-fields-cron-dayofweek-note:
   es: Elija un día de la semana
   kk: Аптаның күнін таңдаңыз
   uz: Haftaning kunini tanlang
+  de: Wählen Sie einen Wochentag
+  fa: یک روز از هفته را انتخاب کنید
+  cz: Vyberte den v týdnu
+  tr: Haftanın bir gününü seçin
+  zh: 选择一个星期几
 tools-storages-backups-fields-file-desc:
   ru: Шаблон названия файла
   en: File name template
@@ -610,6 +948,11 @@ tools-storages-backups-fields-file-desc:
   es: Plantilla de nombre de archivo
   kk: Файл атауының үлгісі
   uz: Fayl nomi shabloni
+  de: Dateinamenvorlage
+  fa: قالب نام فایل
+  cz: Šablona názvu souboru
+  tr: Dosya adı şablonu
+  zh: 文件名模板
 tools-storages-backups-fields-file-note:
   ru: Введите шаблон названия файла, например backup_{date}_{index}.backup
   en: Enter a template for the file name, for example backup_{date}_{index}.backup
@@ -620,6 +963,11 @@ tools-storages-backups-fields-file-note:
     backup_{date}_{index}.backup
   kk: Файл атауының үлгісін енгізіңіз, мысалы backup_{date}_{index}.backup
   uz: Fayl nomi uchun shablonni kiriting, masalan backup_{date}_{index}.backup
+  de: Geben Sie eine Vorlage für den Dateinamen ein, z. B. backup_{date}_{index}.backup
+  fa: یک قالب برای نام فایل وارد کنید، به عنوان مثال backup_{date}_{index}.backup
+  cz: Zadejte šablonu pro název souboru, například backup_{date}_{index}.backup
+  tr: Dosya adı için bir şablon girin, örneğin backup_{date}_{index}.backup
+  zh: 输入文件名的模板，例如 backup_{date}_{index}.backup
 tools-backups-windowtitle-editbackup:
   ru: Редактировать задание
   en: Edit a task
@@ -628,6 +976,11 @@ tools-backups-windowtitle-editbackup:
   es: Editar una tarea
   kk: Тапсырманы өңдеу
   uz: Vazifani tahrirlash
+  de: Bearbeiten Sie eine Aufgabe
+  fa: ویرایش یک وظیفه
+  cz: Upravit úkol
+  tr: Bir görevi düzenleyin
+  zh: 编辑一个任务
 tools-backups-windowtitle-newbackup:
   ru: Новое задание
   en: New task
@@ -636,6 +989,11 @@ tools-backups-windowtitle-newbackup:
   es: Nueva tarea
   kk: Жаңа тапсырма
   uz: Yangi vazifa
+  de: Neue Aufgabe
+  fa: وظیفه جدید
+  cz: Nový úkol
+  tr: Yeni görev
+  zh: 新任务
 tools-backups-points-cron:
   ru: Планировщик
   en: Scheduler
@@ -644,6 +1002,11 @@ tools-backups-points-cron:
   es: Programador
   kk: Жоспарлаушы
   uz: Rejalashtiruvchi
+  de: Zeitplaner
+  fa: برنامه ریز
+  cz: Plánovač
+  tr: Zamanlayıcı
+  zh: 调度程序
 tools-backups-contextmenu-edit:
   ru: Редактировать
   en: Edit
@@ -652,6 +1015,11 @@ tools-backups-contextmenu-edit:
   es: Editar
   kk: Өңдеу
   uz: Tahrirlash
+  de: Bearbeiten
+  fa: ویرایش
+  cz: Upravit
+  tr: Düzenle
+  zh: 编辑
 tools-backups-contextmenu-delete:
   ru: Удалить
   en: Remove
@@ -660,6 +1028,11 @@ tools-backups-contextmenu-delete:
   es: Eliminar
   kk: Жою
   uz: O'chirish
+  de: Entfernen
+  fa: حذف
+  cz: Odstranit
+  tr: Kaldır
+  zh: 删除
 tools-storages-backups-fields-status-desc:
   ru: Статус
   en: Status
@@ -668,6 +1041,11 @@ tools-storages-backups-fields-status-desc:
   es: Estado
   kk: Күйі
   uz: Holati
+  de: Status
+  fa: وضعیت
+  cz: Stav
+  tr: Durum
+  zh: 状态
 tools-storages-backups-fields-status-values-created:
   ru: Создано/Не выполнялось
   en: Created/Was not executed
@@ -676,6 +1054,11 @@ tools-storages-backups-fields-status-values-created:
   es: Creado/No ejecutado
   kk: Жасалған/орындалмаған
   uz: Yaratilgan/Bajarilmagan
+  de: Erstellt/Nicht ausgeführt
+  fa: ایجاد شده/اجرا نشده است
+  cz: Vytvořeno/Nebylo provedeno
+  tr: Oluşturuldu/Çalıştırılmadı
+  zh: 已创建/未执行
 tools-storages-backups-fields-status-values-complete:
   ru: Выполнилось
   en: Completed
@@ -684,6 +1067,11 @@ tools-storages-backups-fields-status-values-complete:
   es: Completado
   kk: Орындалды
   uz: Bajarildi
+  de: Abgeschlossen
+  fa: تکمیل شده است
+  cz: Dokončeno
+  tr: Tamamlandı
+  zh: 已完成
 tools-storages-backups-fields-status-values-working:
   ru: Выполняется
   en: In progress
@@ -692,6 +1080,11 @@ tools-storages-backups-fields-status-values-working:
   es: En progreso
   kk: Орындау үстінде
   uz: Jarayonda
+  de: In Bearbeitung
+  fa: در حال پیشرفت است
+  cz: Probíhá
+  tr: Devam ediyor
+  zh: 进行中
 tools-storages-backups-fields-status-values-error:
   ru: Ошибка
   en: Mistake
@@ -700,6 +1093,11 @@ tools-storages-backups-fields-status-values-error:
   es: Error
   kk: Қате
   uz: Xato
+  de: Fehler
+  fa: اشتباه
+  cz: Chyba
+  tr: Hata
+  zh: 错误
 tools-storages-backups-fields-cron-dayofweek-values-0:
   ru: Воскресенье
   en: Sunday
@@ -708,6 +1106,11 @@ tools-storages-backups-fields-cron-dayofweek-values-0:
   es: Domingo
   kk: Жексенбі
   uz: Yakshanba
+  de: Sonntag
+  fa: یکشنبه
+  cz: Neděle
+  tr: Pazar
+  zh: 星期日
 tools-storages-backups-fields-cron-dayofweek-values-1:
   ru: Понедельник
   en: Monday
@@ -716,6 +1119,11 @@ tools-storages-backups-fields-cron-dayofweek-values-1:
   es: Lunes
   kk: Дүйсенбі
   uz: Dushanba
+  de: Montag
+  fa: دوشنبه
+  cz: Pondělí
+  tr: Pazartesi
+  zh: 星期一
 tools-storages-backups-fields-cron-dayofweek-values-2:
   ru: Вторник
   en: Tuesday
@@ -724,6 +1132,11 @@ tools-storages-backups-fields-cron-dayofweek-values-2:
   es: Martes
   kk: Сейсенбі
   uz: Seshanba
+  de: Dienstag
+  fa: سه‌شنبه
+  cz: Úterý
+  tr: Salı
+  zh: 星期二
 tools-storages-backups-fields-cron-dayofweek-values-3:
   ru: Среда
   en: Wednesday
@@ -732,6 +1145,11 @@ tools-storages-backups-fields-cron-dayofweek-values-3:
   es: Miércoles
   kk: Сәрсенбі
   uz: Chorshanba
+  de: Mittwoch
+  fa: چهارشنبه
+  cz: Středa
+  tr: Çarşamba
+  zh: 星期三
 tools-storages-backups-fields-cron-dayofweek-values-4:
   ru: Четверг
   en: Thursday
@@ -740,6 +1158,11 @@ tools-storages-backups-fields-cron-dayofweek-values-4:
   es: Jueves
   kk: Бейсенбі
   uz: Payshanba
+  de: Donnerstag
+  fa: پنج‌شنبه
+  cz: Čtvrtek
+  tr: Perşembe
+  zh: 星期四
 tools-storages-backups-fields-cron-dayofweek-values-5:
   ru: Пятница
   en: Friday
@@ -748,6 +1171,11 @@ tools-storages-backups-fields-cron-dayofweek-values-5:
   es: Viernes
   kk: Жұма
   uz: Juma
+  de: Freitag
+  fa: جمعه
+  cz: Pátek
+  tr: Cuma
+  zh: 星期五  
 tools-storages-backups-fields-cron-dayofweek-values-6:
   ru: Суббота
   en: Saturday
@@ -756,6 +1184,11 @@ tools-storages-backups-fields-cron-dayofweek-values-6:
   es: Sábado
   kk: Сенбі
   uz: Shanba
+  de: Samstag
+  fa: شنبه
+  cz: Sobota
+  tr: Cumartesi
+  zh: 星期六
 tools-backups-deletedata1:
   ru: Удаление точки восстановления
   en: Deleting a Restore Point
@@ -764,6 +1197,11 @@ tools-backups-deletedata1:
   es: Eliminación de un punto de restauración
   kk: Қалпына келтіру нүктесін жою
   uz: Tiklash nuqtasini o'chirish
+  de: Löschen eines Wiederherstellungspunkts
+  fa: حذف یک نقطه بازیابی
+  cz: Odstranění bodu obnovení
+  tr: Bir Kurtarma Noktası Silme
+  zh: 删除恢复点
 tools-backups-deletedata1message:
   ru: Вы уверены, что хотите удалить выбранную строку?
   en: Are you sure you want to delete the selected row?
@@ -772,6 +1210,11 @@ tools-backups-deletedata1message:
   es: ¿Está seguro de que desea eliminar la fila seleccionada?
   kk: Таңдалған жолды жойғыңыз келетініне сенімдісіз бе?
   uz: Tanlangan qatorni o'chirishni xohlaysizmi?
+  de: Sind Sie sicher, dass Sie die ausgewählte Zeile löschen möchten?
+  fa: آیا مطمئن هستید که می خواهید ردیف انتخاب شده را حذف کنید؟
+  cz: Opravdu chcete odstranit vybraný řádek?
+  tr: Seçilen satırı silmek istediğinizden emin misiniz?
+  zh: 您确定要删除所选行吗？
 tools-backups-points-running:
   ru: Работает
   en: Works
@@ -780,6 +1223,12 @@ tools-backups-points-running:
   es: Funciona
   kk: Жұмыс істейді
   uz: Ishlaydi
+  de: Funktioniert
+  fa: کار می کند
+  cz: Funguje
+  tr: Çalışıyor
+  zh: 工作中
+
 tools-storages-backups-fields-status-values-paused:
   ru: Остановлено
   en: Stopped
@@ -788,6 +1237,12 @@ tools-storages-backups-fields-status-values-paused:
   es: Detenido
   kk: Тоқтатылды
   uz: To'xtatildi
+  de: Gestoppt
+  fa: متوقف شد
+  cz: Zastaveno
+  tr: Durduruldu
+  zh: 已停止
+
 tools-storages-backups-fields-status-values-started:
   ru: Включено
   en: Enabled
@@ -796,6 +1251,12 @@ tools-storages-backups-fields-status-values-started:
   es: Habilitado
   kk: Қосылған
   uz: Yoqilgan
+  de: Aktiviert
+  fa: فعال شد
+  cz: Povolen
+  tr: Etkinleştirildi
+  zh: 已启用
+
 tools-storages-backups-fields-running-desc:
   ru: Запущено
   en: Launched
@@ -804,6 +1265,11 @@ tools-storages-backups-fields-running-desc:
   es: Lanzado
   kk: Іске қосылды
   uz: Ishga tushirilgan
+  de: Gestartet
+  fa: راه اندازی شده است
+  cz: Spuštěno
+  tr: Başlatıldı
+  zh: 已启动
 tools-execute-run-title:
   ru: Запуск скрипта
   en: Running the script
@@ -812,6 +1278,12 @@ tools-execute-run-title:
   es: Ejecutando el script
   kk: Скриптті іске қосу
   uz: Skriptni ishga tushirish
+  de: Skript ausführen
+  fa: اجرای اسکریپت
+  cz: Spustit skript
+  tr: Skripti çalıştır
+  zh: 运行脚本
+
 tools-execute-run:
   ru: Запустить скрипт
   en: Run the script
@@ -820,6 +1292,11 @@ tools-execute-run:
   es: Ejecutar el script
   kk: Скриптті іске қосу
   uz: Skriptni ishga tushirish
+  de: Skript ausführen
+  fa: اجرای اسکریپت
+  cz: Spustit skript
+  tr: Skripti çalıştır
+  zh: 运行脚本
 tools-execute-script-title:
   ru: Скрипт к исполнению
   en: Script to execute
@@ -828,6 +1305,11 @@ tools-execute-script-title:
   es: Script para ejecutar
   kk: Орындауға арналған скрипт
   uz: Bajariladigan skript
+  de: Skript zum Ausführen
+  fa: اسکریپت برای اجرا
+  cz: Skript k vykonání
+  tr: Çalıştırılacak skript
+  zh: 要执行的脚本
 tools-execute-create-info:
   ru: >-
     Внимание! Скрипт исполняется в окружении всего проекта, возможны необратимые
@@ -864,6 +1346,23 @@ tools-execute-create-info:
     bo'lmaydigan oqibatlar bo'lishi mumkin, iltimos ehtiyot bo'ling 
 
     Ma'lumotni mijozga yuborish uchun Logger $logger dan foydalaning, masalan: $logger->debug('Sinov xabari');
+  de: >-
+    Achtung! Das Skript wird in der Umgebung des gesamten Projekts ausgeführt, irreversible Folgen sind möglich, bitte seien Sie vorsichtig
+
+    Verwenden Sie Logger $logger, um Informationen an den Client zu senden, zum Beispiel: $logger->debug('Testnachricht');
+  fa: >-
+    توجه! اسکریپت در محیط کل پروژه اجرا می شود، ممکن است پیامدهای غیرقابل برگشت وجود داشته باشد، لطفا مراقب باشید 
+    برای ارسال اطلاعات به مشتری از Logger $logger استفاده کنید، به عنوان مثال: $logger->debug('پیام آزمایشی');
+  cz: >-
+    Pozor! Skript se spouští v prostředí celého projektu, jsou možné nevratné následky, buďte opatrní
+    Pro odesílání informací klientovi použijte Logger $logger, například: $logger->debug('Testovací zpráva');
+  tr: >-
+    Dikkat! Skript tüm projenin ortamında çalıştırılır, geri dönüşü olmayan sonuçlar olabilir, lütfen dikkatli olun
+    Bilgileri müşteriye göndermek için Logger $logger kullanın, örneğin: $logger->debug('Test mesajı'); 
+
+  zh: >-
+    注意！脚本在整个项目的环境中执行，可能会有不可逆转的后果，请小心
+    使用 Logger $logger 向客户端发送信息，例如：$logger->debug('测试消息');
 tools-execute-run-success:
   ru: Скрипт запущен успешно
   en: The script was launched successfully
@@ -872,6 +1371,11 @@ tools-execute-run-success:
   es: El script se lanzó con éxito
   kk: Скрипт сәтті іске қосылды
   uz: Skript muvaffaqiyatli ishga tushirildi
+  de: Das Skript wurde erfolgreich gestartet
+  fa: اسکریپت با موفقیت راه اندازی شد
+  cz: Skript byl úspěšně spuštěn
+  tr: Skript başarıyla başlatıldı
+  zh: 脚本成功启动
 tools-execute-kill:
   ru: Остановить исполнение
   en: Stop execution
@@ -880,6 +1384,11 @@ tools-execute-kill:
   es: Detener la ejecución
   kk: Орындауды тоқтату
   uz: Ijroni to'xtatish
+  de: Ausführung stoppen
+  fa: توقف اجرا
+  cz: Zastavit provádění
+  tr: Çalışmayı durdur
+  zh: 停止执行
 tools-execute-killed-success:
   ru: Скрипт остановлен успешно
   en: Execution is stopped successfully
@@ -888,6 +1397,11 @@ tools-execute-killed-success:
   es: La ejecución se detuvo con éxito
   kk: Скрипт сәтті тоқтатылды
   uz: Ijro muvaffaqiyatli to'xtatildi
+  de: Die Ausführung wurde erfolgreich gestoppt
+  fa: اجرا با موفقیت متوقف شد
+  cz: Provádění bylo úspěšně zastaveno
+  tr: Çalışma başarıyla durduruldu
+  zh: 执行成功停止
 tools-backups-points-file:
   ru: Шаблон названия файла
   en: File name template
@@ -896,6 +1410,14 @@ tools-backups-points-file:
   es: Plantilla de nombre de archivo
   kk: Файл атауының үлгісі
   uz: Fayl nomi shabloni
+  de: Dateinamenvorlage
+  fa: قالب نام فایل
+  cz: Šablona názvu souboru
+  tr: Dosya adı şablonu
+  zh: 文件名模板
+
+
+
 tools-thtmes-themes-title:
   ru: Сообщения
   en: Messages
@@ -904,6 +1426,11 @@ tools-thtmes-themes-title:
   es: Mensajes
   kk: Хабарламалар
   uz: Xabarlar
+  de: Nachrichten
+  fa: پیام‌ها
+  cz: Zprávy
+  tr: Mesajlar
+  zh: 消息
 tools-themes-vars-title:
   ru: Переменные
   en: Variables
@@ -912,14 +1439,24 @@ tools-themes-vars-title:
   es: Variables
   kk: Айнымалылар
   uz: O'zgaruvchilar
+  de: Variablen
+  fa: متغیرها
+  cz: Proměnné
+  tr: Değişkenler
+  zh: 变量
 tools-themes-vars-search-placeholder:
   ru: Поиск
   en: Search
-  hy: '"ՍԻՍ" ՍՊԸ'
+  hy: Որոնել
   it: Cerca
   es: Buscar
   kk: Іздеу
   uz: Qidiruv
+  de: Suchen
+  fa: جستجو
+  cz: Hledat
+  tr: Ara
+  zh: 搜索
 tools-themes-varsempty:
   ru: Переменных не найдено
   en: No variables found
@@ -928,6 +1465,11 @@ tools-themes-varsempty:
   es: No se encontraron variables
   kk: Айнымалылар табылмады
   uz: O'zgaruvchilar topilmadi
+  de: Keine Variablen gefunden
+  fa: هیچ متغیری یافت نشد
+  cz: Nenalezeny žádné proměnné
+  tr: Değişken bulunamadı
+  zh: 未找到变量
 tools-themes-vars-grid-name:
   ru: Переменная
   en: Variable
@@ -936,6 +1478,11 @@ tools-themes-vars-grid-name:
   es: Variable
   kk: Айнымалы
   uz: O'zgaruvchi
+  de: Variable
+  fa: متغیر
+  cz: Proměnná
+  tr: Değişken
+  zh: 变量
 tools-themes-vars-grid-value:
   ru: Значение
   en: Meaning
@@ -944,6 +1491,11 @@ tools-themes-vars-grid-value:
   es: Significado
   kk: Мәні
   uz: Ma'no
+  de: Bedeutung
+  fa: معنی
+  cz: Význam
+  tr: Anlam
+  zh: 意义
 tools-themes-vars-buttons-adddata:
   ru: Добавить
   en: Add
@@ -952,6 +1504,11 @@ tools-themes-vars-buttons-adddata:
   es: Añadir
   kk: Қосу
   uz: Qo'shish
+  de: Hinzufügen
+  fa: اضافه کردن
+  cz: Přidat
+  tr: Ekle
+  zh: 添加
 tools-themes-vars-buttons-editdata:
   ru: Редактировать
   en: Edit
@@ -960,6 +1517,11 @@ tools-themes-vars-buttons-editdata:
   es: Editar
   kk: Өңдеу
   uz: Tahrirlash
+  de: Bearbeiten
+  fa: ویرایش
+  cz: Upravit
+  tr: Düzenle
+  zh: 编辑
 tools-themes-vars-buttons-deletedata:
   ru: Удалить
   en: Remove
@@ -968,6 +1530,11 @@ tools-themes-vars-buttons-deletedata:
   es: Eliminar
   kk: Жою
   uz: O'chirish
+  de: Entfernen
+  fa: حذف
+  cz: Odstranit
+  tr: Kaldır
+  zh: 删除
 tools-themes-mixins-title:
   ru: Mixin-ы
   en: Mixins
@@ -976,14 +1543,24 @@ tools-themes-mixins-title:
   es: Mixins
   kk: Mixin-дер
   uz: Mixin-lar
+  de: Mixins
+  fa: Mixin‌ها
+  cz: Mixins
+  tr: Mixinler
+  zh: Mixin
 tools-themes-mixins-search-placeholder:
   ru: Поиск
   en: Search
-  hy: '"ՍԻՍ" ՍՊԸ'
+  hy: Որոնել
   it: Cerca
   es: Buscar
   kk: Іздеу
   uz: Qidiruv
+  de: Suchen
+  fa: جستجو
+  cz: Hledat
+  tr: Ara
+  zh: 搜索
 tools-themes-mixinsempty:
   ru: Mixin-ов не найдено
   en: Mixins not found
@@ -992,6 +1569,11 @@ tools-themes-mixinsempty:
   es: No se encontraron mixins
   kk: Mixin-дер табылмады
   uz: Mixin-lar topilmadi
+  de: Keine Mixins gefunden
+  fa: هیچ Mixin یافت نشد
+  cz: Nenalezeny žádné Mixins
+  tr: Mixin bulunamadı
+  zh: 未找到 Mixin
 tools-themes-mixins-grid-name:
   ru: Переменная
   en: Variable
@@ -1000,6 +1582,11 @@ tools-themes-mixins-grid-name:
   es: Variable
   kk: Айнымалы
   uz: O'zgaruvchi
+  de: Variable
+  fa: متغیر
+  cz: Proměnná
+  tr: Değişken
+  zh: 变量
 tools-themes-mixins-grid-value:
   ru: Значение
   en: Meaning
@@ -1008,6 +1595,11 @@ tools-themes-mixins-grid-value:
   es: Significado
   kk: Мәні
   uz: Ma'no
+  de: Bedeutung
+  fa: معنی
+  cz: Význam
+  tr: Anlam
+  zh: 意义
 tools-themes-mixins-buttons-adddata:
   ru: Добавить
   en: Add
@@ -1016,6 +1608,11 @@ tools-themes-mixins-buttons-adddata:
   es: Añadir
   kk: Қосу
   uz: Qo'shish
+  de: Hinzufügen
+  fa: اضافه کردن
+  cz: Přidat
+  tr: Ekle
+  zh: 添加
 tools-themes-mixins-buttons-editdata:
   ru: Редактировать
   en: Edit
@@ -1024,6 +1621,11 @@ tools-themes-mixins-buttons-editdata:
   es: Editar
   kk: Өңдеу
   uz: Tahrirlash
+  de: Bearbeiten
+  fa: ویرایش
+  cz: Upravit
+  tr: Düzenle
+  zh: 编辑
 tools-themes-mixins-buttons-deletedata:
   ru: Удалить
   en: Remove
@@ -1032,6 +1634,11 @@ tools-themes-mixins-buttons-deletedata:
   es: Eliminar
   kk: Жою
   uz: O'chirish
+  de: Entfernen
+  fa: حذف
+  cz: Odstranit
+  tr: Kaldır
+  zh: 删除
 tools-storages-themes-desc:
   ru: Темы
   en: Themes
@@ -1040,6 +1647,11 @@ tools-storages-themes-desc:
   es: Temas
   kk: Тақырыптар
   uz: Mavzular
+  de: Themen
+  fa: تم‌ها
+  cz: Témata
+  tr: Temalar
+  zh: 主题
 tools-storages-themes-fields-name-desc:
   ru: Наименование
   en: Name
@@ -1048,6 +1660,11 @@ tools-storages-themes-fields-name-desc:
   es: Nombre
   kk: Атауы
   uz: Nomi
+  de: Name
+  fa: نام
+  cz: Název
+  tr: Ad
+  zh: 名称
 tools-storages-themes-fields-domain-desc:
   ru: Ключ домена
   en: Domain Key
@@ -1056,6 +1673,13 @@ tools-storages-themes-fields-domain-desc:
   es: Clave del dominio
   kk: Домен кілті
   uz: Domen kaliti
+  de: Domainschlüssel
+  fa: کلید دامنه
+  cz: Klíč domény
+  tr: Alan Anahtarı
+  zh: 域名密钥
+
+
 tools-storages-themes-fields-domain-note:
   ru: Выберите ключ домена
   en: Select the domain key
@@ -1064,6 +1688,11 @@ tools-storages-themes-fields-domain-note:
   es: Seleccione la clave del dominio
   kk: Домен кілтін таңдаңыз
   uz: Domen kalitini tanlang
+  de: Wählen Sie den Domainschlüssel
+  fa: کلید دامنه را انتخاب کنید
+  cz: Vyberte klíč domény
+  tr: Alan anahtarını seçin
+  zh: 选择域名密钥
 tools-storages-themes-fields-vars-desc:
   ru: Переменные
   en: Variables
@@ -1072,6 +1701,11 @@ tools-storages-themes-fields-vars-desc:
   es: Variables
   kk: Айнымалылар
   uz: O'zgaruvchilar
+  de: Variablen
+  fa: متغیرها
+  cz: Proměnné
+  tr: Değişkenler
+  zh: 变量
 tools-storages-themes-fields-vars-name-desc:
   ru: Название переменной
   en: Variable name
@@ -1080,6 +1714,11 @@ tools-storages-themes-fields-vars-name-desc:
   es: Nombre de la variable
   kk: Айнымалы атауы
   uz: O'zgaruvchi nomi
+  de: Variablenname
+  fa: نام متغیر
+  cz: Název proměnné
+  tr: Değişken adı
+  zh: 变量名称
 tools-storages-themes-fields-vars-type-desc:
   ru: Тип переменной
   en: Type of variable
@@ -1088,6 +1727,11 @@ tools-storages-themes-fields-vars-type-desc:
   es: Tipo de variable
   kk: Айнымалы түрі
   uz: O'zgaruvchi turi
+  de: Variablentyp
+  fa: نوع متغیر
+  cz: Typ proměnné
+  tr: Değişken türü
+  zh: 变量类型
 tools-storages-themes-fields-vars-type-values-color:
   ru: Цвет
   en: Colour
@@ -1096,6 +1740,11 @@ tools-storages-themes-fields-vars-type-values-color:
   es: Color
   kk: Түс
   uz: Rang
+  de: Farbe
+  fa: رنگ
+  cz: Barva
+  tr: Renk
+  zh: 颜色
 tools-storages-themes-fields-vars-type-values-font-face:
   ru: Название шрифта
   en: Font name
@@ -1104,6 +1753,11 @@ tools-storages-themes-fields-vars-type-values-font-face:
   es: Nombre de la fuente
   kk: Қаріп атауы
   uz: Shrift nomi
+  de: Schriftname
+  fa: نام فونت
+  cz: Název písma
+  tr: Yazı tipi adı
+  zh: 字体名称
 tools-storages-themes-fields-vars-type-values-size:
   ru: Размер
   en: Size
@@ -1112,6 +1766,11 @@ tools-storages-themes-fields-vars-type-values-size:
   es: Tamaño
   kk: Өлшемі
   uz: Hajmi
+  de: Größe
+  fa: اندازه
+  cz: Velikost
+  tr: Boyut
+  zh: 大小
 tools-storages-themes-fields-vars-type-values-image:
   ru: Изoбражение
   en: Image
@@ -1120,6 +1779,11 @@ tools-storages-themes-fields-vars-type-values-image:
   es: Imagen
   kk: Сурет
   uz: Rasm
+  de: Bild
+  fa: تصویر
+  cz: Obrázek
+  tr: Görüntü
+  zh: 图像
 tools-storages-themes-fields-vars-type-values-border:
   ru: Рамка
   en: Frame
@@ -1128,6 +1792,11 @@ tools-storages-themes-fields-vars-type-values-border:
   es: Marco
   kk: Жақтау
   uz: Ramka
+  de: Rahmen
+  fa: قاب
+  cz: Rám
+  tr: Çerçeve
+  zh: 边框
 tools-storages-themes-fields-vars-type-values-shadow:
   ru: Тень
   en: Shadow
@@ -1136,6 +1805,11 @@ tools-storages-themes-fields-vars-type-values-shadow:
   es: Sombra
   kk: Көлеңке
   uz: So'ya
+  de: Schatten
+  fa: سایه
+  cz: Stín
+  tr: Gölge
+  zh: 阴影
 tools-storages-themes-fields-vars-value-desc:
   ru: Значение
   en: Meaning
@@ -1144,6 +1818,11 @@ tools-storages-themes-fields-vars-value-desc:
   es: Significado
   kk: Мәні
   uz: Ma'no
+  de: Bedeutung
+  fa: معنی
+  cz: Významem
+  tr: Anlam
+  zh: 意义
 tools-storages-themes-fields-mixins-desc:
   ru: Mixin-ы
   en: Mixins
@@ -1152,6 +1831,11 @@ tools-storages-themes-fields-mixins-desc:
   es: Mixins
   kk: Mixin-дер
   uz: Mixin-lar
+  de: Mixins
+  fa: Mixin‌ها
+  cz: Mixins
+  tr: Mixinler
+  zh: Mixin
 tools-storages-themes-fields-mixins-name-desc:
   ru: Наименование
   en: Name
@@ -1160,6 +1844,11 @@ tools-storages-themes-fields-mixins-name-desc:
   es: Nombre
   kk: Атауы
   uz: Nomi
+  de: Name
+  fa: نام
+  cz: Název
+  tr: Ad
+  zh: 名称
 tools-storages-themes-fields-mixins-params-desc:
   ru: Параметры
   en: Parameters
@@ -1168,6 +1857,11 @@ tools-storages-themes-fields-mixins-params-desc:
   es: Parámetros
   kk: Параметрлер
   uz: Parametrlar
+  de: Parameter
+  fa: پارامترها
+  cz: Parametry
+  tr: Parametreler
+  zh: 参数
 tools-storages-themes-fields-mixins-params-name-desc:
   ru: Название параметра
   en: Name of the parameter
@@ -1176,6 +1870,11 @@ tools-storages-themes-fields-mixins-params-name-desc:
   es: Nombre del parámetro
   kk: Параметр атауы
   uz: Parametr nomi
+  de: Parametername
+  fa: نام پارامتر
+  cz: Název parametru
+  tr: Parametre adı
+  zh: 参数名称
 tools-storages-themes-fields-mixins-value-desc:
   ru: Тело
   en: Body
@@ -1184,6 +1883,11 @@ tools-storages-themes-fields-mixins-value-desc:
   es: Cuerpo
   kk: Дене
   uz: Tana
+  de: Textkörper
+  fa: متن
+  cz: Tělo
+  tr: Gövde
+  zh: 正文
 tools-themes-deletetheme:
   ru: Удаление темы
   en: Deleting a topic
@@ -1192,6 +1896,11 @@ tools-themes-deletetheme:
   es: Eliminación de un tema
   kk: Тақырыпты жою
   uz: Mavzuni o'chirish
+  de: Löschen eines Themas
+  fa: حذف یک موضوع
+  cz: Odstranění tématu
+  tr: Bir konuyu silme
+  zh: 删除主题
 tools-themes-deletethememessage:
   ru: Вы уверены, что хотите удалить тему? На сайтах привязанных к этой теме могут
     возникнуть артефакты
@@ -1207,6 +1916,11 @@ tools-themes-deletethememessage:
     сайттарда артефактілер пайда болуы мүмкін
   uz: Mavzuni o'chirishni xohlaysizmi? Ushbu mavzuga bog'langan saytlarda
     artefaktlar paydo bo'lishi mumkin
+  de: Sind Sie sicher, dass Sie das Thema löschen möchten? Auf mit diesem Thema verknüpften Websites können Artefakte auftreten
+  fa: آیا مطمئن هستید که می خواهید موضوع را حذف کنید؟ ممکن است در سایت های مرتبط با این موضوع آثار ظاهر شود
+  cz: Jste si jisti, že chcete odstranit téma? Na webech propojených s tímto tématem se mohou objevit artefakty
+  tr: Konuyu silmek istediğinizden emin misiniz? Bu konuya bağlı sitelerde yapıtlar oluşabilir
+  zh: 您确定要删除主题吗？与此主题关联的网站上可能会出现伪影
 tools-storages-themes-fields-vars-type-values-font-family:
   ru: Название шрифта
   en: Font name
@@ -1215,6 +1929,11 @@ tools-storages-themes-fields-vars-type-values-font-family:
   es: Nombre de la fuente
   kk: Қаріп атауы
   uz: Shrift nomi
+  de: Schriftname
+  fa: نام فونت
+  cz: Název písma
+  tr: Yazı tipi adı
+  zh: 字体名称
 tools-themes-windowtitle-addvartitle:
   ru: Добавить переменную
   en: Add a variable
@@ -1223,6 +1942,11 @@ tools-themes-windowtitle-addvartitle:
   es: Añadir una variable
   kk: Айнымалы қосу
   uz: O'zgaruvchi qo'shish
+  de: Eine Variable hinzufügen
+  fa: اضافه کردن یک متغیر
+  cz: Přidat proměnnou
+  tr: Değişken ekle
+  zh: 添加变量
 tools-themes-deletevar:
   ru: Удаление переменной
   en: Deleting a variable
@@ -1231,6 +1955,11 @@ tools-themes-deletevar:
   es: Eliminación de una variable
   kk: Айнымалыны жою
   uz: O'zgaruvchini o'chirish
+  de: Löschen einer Variablen
+  fa: حذف یک متغیر
+  cz: Smazání proměnné
+  tr: Değişkeni silme
+  zh: 删除变量
 tools-themes-deletevarmessage:
   ru: Вы уверены, что хотите удалить переменную?
   en: Are you sure you want to delete the variable?
@@ -1239,6 +1968,11 @@ tools-themes-deletevarmessage:
   es: ¿Está seguro de que desea eliminar la variable?
   kk: Айнымалыны жойғыңыз келетініне сенімдісіз бе?
   uz: O'zgaruvchini o'chirishni xohlaysizmi?
+  de: Sind Sie sicher, dass Sie die Variable löschen möchten?
+  fa: آیا مطمئن هستید که می خواهید متغیر را حذف کنید؟
+  cz: Jste si jisti, že chcete smazat proměnnou?
+  tr: Değişkeni silmek istediğinizden emin misiniz?
+  zh: 您确定要删除该变量吗？
 tools-themes-deletevars:
   ru: Удаление переменных
   en: Deleting variables
@@ -1247,6 +1981,11 @@ tools-themes-deletevars:
   es: Eliminación de variables
   kk: Айнымалыларды жою
   uz: O'zgaruvchilarni o'chirish
+  de: Variablen löschen
+  fa: حذف متغیرها
+  cz: Odstranění proměnných
+  tr: Değişkenleri silme
+  zh: 删除变量
 tools-themes-deletevarsmessage:
   ru: Вы уверены, что хотите удалить переменные?
   en: Are you sure you want to delete variables?
@@ -1255,6 +1994,11 @@ tools-themes-deletevarsmessage:
   es: ¿Está seguro de que desea eliminar las variables?
   kk: Айнымалыларды жойғыңыз келетініне сенімдісіз бе?
   uz: O'zgaruvchilarni o'chirishni xohlaysizmi?
+  de: Sind Sie sicher, dass Sie die Variablen löschen möchten?
+  fa: آیا مطمئن هستید که می خواهید متغیرها را حذف کنید؟
+  cz: Jste si jisti, že chcete smazat proměnné?
+  tr: Değişkenleri silmek istediğinizden emin misiniz?
+  zh: 您确定要删除这些变量吗？
 tools-themes-windowtitle-editvartitle:
   ru: Редактировать переменную
   en: Edit a variable
@@ -1263,6 +2007,11 @@ tools-themes-windowtitle-editvartitle:
   es: Editar una variable
   kk: Айнымалыны өңдеу
   uz: O'zgaruvchini tahrirlash
+  de: Eine Variable bearbeiten
+  fa: ویرایش متغیر
+  cz: Upravit proměnnou
+  tr: Değişkeni düzenle
+  zh: 编辑变量
 tools-themes-windowtitle-addmixintitle:
   ru: Добавить Mixin
   en: Add Mixin
@@ -1271,6 +2020,11 @@ tools-themes-windowtitle-addmixintitle:
   es: Añadir Mixin
   kk: Mixin қосу
   uz: Mixin qo'shish
+  de: Mixin hinzufügen
+  fa: اضافه کردن Mixin
+  cz: Přidat Mixin
+  tr: Mixin ekle
+  zh: 添加Mixin
 tools-themes-windowtitle-editmixintitle:
   ru: Редактировать Mixin
   en: Edit Mixin
@@ -1279,6 +2033,11 @@ tools-themes-windowtitle-editmixintitle:
   es: Editar Mixin
   kk: Mixin-ді өңдеу
   uz: Mixin-ni tahrirlash
+  de: Mixin bearbeiten
+  fa: ویرایش Mixin
+  cz: Upravit Mixin
+  tr: Mixin düzenle
+  zh: 编辑Mixin
 tools-themes-deletemixins:
   ru: Удаление Mixin-ов
   en: Removing Mixins
@@ -1287,6 +2046,11 @@ tools-themes-deletemixins:
   es: Eliminación de Mixins
   kk: Mixin-дерді жою
   uz: Mixin-larni o'chirish
+  de: Entfernen von Mixins
+  fa: حذف Mixin‌ها
+  cz: Odebrání Mixinů
+  tr: Mixinleri kaldırma
+  zh: 删除Mixin
 tools-themes-deletemixinsmessage:
   ru: Вы уверены, что хотите удалить Mixin-ы?
   en: Are you sure you want to delete Mixins?
@@ -1295,6 +2059,11 @@ tools-themes-deletemixinsmessage:
   es: ¿Está seguro de que desea eliminar los Mixins?
   kk: Mixin-дерді жойғыңыз келетініне сенімдісіз бе?
   uz: Mixin-larni o'chirishni xohlaysizmi?
+  de: Sind Sie sicher, dass Sie die Mixins löschen möchten?
+  fa: آیا مطمئن هستید که می خواهید Mixin‌ها را حذف کنید؟
+  cz: Jste si jisti, že chcete smazat Mixiny?
+  tr: Mixinleri silmek istediğinizden emin misiniz?
+  zh: 您确定要删除Mixin吗？
 tools-themes-deletemixin:
   ru: Удаление Mixin-а
   en: Deleting a Mixin
@@ -1303,6 +2072,11 @@ tools-themes-deletemixin:
   es: Eliminación de un Mixin
   kk: Mixin-ді жою
   uz: Mixin-ni o'chirish
+  de: Löschen eines Mixin
+  fa: حذف یک Mixin
+  cz: Smazání Mixinu
+  tr: Mixin silme
+  zh: 删除Mixin
 tools-themes-deletemixinmessage:
   ru: Вы уверены, что хотите удалить Mixin?
   en: Are you sure you want to delete Mixin?
@@ -1311,6 +2085,11 @@ tools-themes-deletemixinmessage:
   es: ¿Está seguro de que desea eliminar el Mixin?
   kk: Mixin-ді жойғыңыз келетініне сенімдісіз бе?
   uz: Mixin-ni o'chirishni xohlaysizmi?
+  de: Sind Sie sicher, dass Sie das Mixin löschen möchten?
+  fa: آیا مطمئن هستید که می خواهید Mixin را حذف کنید؟
+  cz: Jste si jisti, že chcete smazat Mixin?
+  tr: Mixin'i silmek istediğinizden emin misiniz?
+  zh: 您确定要删除此Mixin吗？
 tools-themes-mixins-grid-params:
   ru: Параметры
   en: Parameters
@@ -1319,6 +2098,11 @@ tools-themes-mixins-grid-params:
   es: Parámetros
   kk: Параметрлер
   uz: Parametrlar
+  de: Parameter
+  fa: پارامترها
+  cz: Parametry
+  tr: Parametreler
+  zh: 参数
 tools-themes-contextmenu-setcurrent:
   ru: Установить как текущую
   en: Set as current
@@ -1327,6 +2111,11 @@ tools-themes-contextmenu-setcurrent:
   es: Establecer como actual
   kk: Ағымдағы ретінде орнату
   uz: Joriy sifatida o'rnatish
+  de: Als aktuell festlegen
+  fa: تنظیم به عنوان جاری
+  cz: Nastavit jako aktuální
+  tr: Geçerli olarak ayarla
+  zh: 设置为当前
 tools-themes-setcurrenttheme:
   ru: Установка
   en: Installation
@@ -1335,6 +2124,11 @@ tools-themes-setcurrenttheme:
   es: Instalación
   kk: Орнату
   uz: O'rnatish
+  de: Installation
+  fa: نصب
+  cz: Instalace
+  tr: Kurulum
+  zh: 安装
 tools-themes-setcurrentthememessage:
   ru: Вы уверены, что хотите установить тему как текущую?
   en: Are you sure you want to set the theme as the current one?
@@ -1343,6 +2137,11 @@ tools-themes-setcurrentthememessage:
   es: ¿Está seguro de que desea establecer el tema como el actual?
   kk: Тақырыпты ағымдағы ретінде орнатқыңыз келетініне сенімдісіз бе?
   uz: Mavzuni joriy sifatida o'rnatishni xohlaysizmi?
+  de: Sind Sie sicher, dass Sie das Thema als aktuelles festlegen möchten?
+  fa: آیا مطمئن هستید که می خواهید موضوع را به عنوان جاری تنظیم کنید؟
+  cz: Jste si jisti, že chcete nastavit téma jako aktuální?
+  tr: Temayı geçerli olarak ayarlamak istediğinizden emin misiniz?
+  zh: 您确定要将主题设置为当前主题吗？
 tools-storages-themes-fields-current-desc:
   ru: Текущая
   en: Current
@@ -1351,6 +2150,11 @@ tools-storages-themes-fields-current-desc:
   es: Actual
   kk: Ағымдағы
   uz: Joriy
+  de: Aktuell
+  fa: جاری
+  cz: Aktuální
+  tr: Mevcut
+  zh: 当前的
 tools-storages-themes-fields-current-note:
   ru: Укажите да, если тема должна быть текущей для домена
   en: Specify yes if the topic should be the current one for the domain
@@ -1359,6 +2163,11 @@ tools-storages-themes-fields-current-note:
   es: Especifique sí si el tema debe ser el actual para el dominio
   kk: Егер тақырып домен үшін ағымдағы болуы керек болса, иә деп көрсетіңіз
   uz: Agar mavzu domen uchun joriy bo'lishi kerak bo'lsa, ha deb ko'rsating
+  de: Geben Sie ja an, wenn das Thema für die Domäne aktuell sein soll
+  fa: بله را مشخص کنید اگر موضوع باید موضوع جاری برای دامنه باشد
+  cz: Zadejte ano, pokud by mělo být téma aktuální pro doménu
+  tr: Konu alan adı için geçerli olmalıysa evet belirtin
+  zh: 如果主题应该是该域的当前主题，请指定是
 tools-themes-contextmenu-dublicatetheme:
   ru: Дублировать тему
   en: Duplicate a topic
@@ -1367,6 +2176,11 @@ tools-themes-contextmenu-dublicatetheme:
   es: Duplicar un tema
   kk: Тақырыпты қайталау
   uz: Mavzuni nusxalash
+  de: Ein Thema duplizieren
+  fa: تکراری یک موضوع
+  cz: Duplikování tématu
+  tr: Konuyu çoğalt
+  zh: 复制主题
 tools-themes-windowtitle-edittheme:
   ru: Редактировать тему
   en: Edit a topic
@@ -1375,6 +2189,11 @@ tools-themes-windowtitle-edittheme:
   es: Editar un tema
   kk: Тақырыпты өңдеу
   uz: Mavzuni tahrirlash
+  de: Ein Thema bearbeiten
+  fa: ویرایش موضوع
+  cz: Upravit téma
+  tr: Konuyu düzenle
+  zh: 编辑主题
 tools-storages-themes-fields-desc-desc:
   ru: Описание темы
   en: Topic description
@@ -1383,6 +2202,11 @@ tools-storages-themes-fields-desc-desc:
   es: Descripción del tema
   kk: Тақырыптың сипаттамасы
   uz: Mavzu tavsifi
+  de: Themenbeschreibung
+  fa: توضیح موضوع
+  cz: Popis tématu
+  tr: Konu açıklaması
+  zh: 主题描述
 tools-permissions:
   ru: Инструменты
   en: Tools
@@ -1391,6 +2215,11 @@ tools-permissions:
   es: Herramientas
   kk: Құралдар
   uz: Asboblar
+  de: Werkzeuge
+  fa: ابزارها
+  cz: Nástroje
+  tr: Araçlar
+  zh: 工具
 tools-backup-permissions:
   ru: Доступ к системе восстановления
   en: Access to the recovery system
@@ -1399,6 +2228,11 @@ tools-backup-permissions:
   es: Acceso al sistema de recuperación
   kk: Қалпына келтіру жүйесіне қол жеткізу
   uz: Tiklash tizimiga kirish
+  de: Zugriff auf das Wiederherstellungssystem
+  fa: دسترسی به سیستم بازیابی
+  cz: Přístup k systému obnovení
+  tr: Kurtarma sistemine erişim
+  zh: 恢复系统访问权限
 tools-backup-create-permissions:
   ru: Создание точки восстановления
   en: Create a restore point
@@ -1407,6 +2241,11 @@ tools-backup-create-permissions:
   es: Crear un punto de restauración
   kk: Қалпына келтіру нүктесін жасау
   uz: Tiklash nuqtasini yaratish
+  de: Erstellen Sie einen Wiederherstellungspunkt
+  fa: ایجاد یک نقطه بازیابی
+  cz: Vytvoření bodu obnovení
+  tr: Kurtarma noktası oluştur
+  zh: 创建恢复点
 tools-backup-restore-permissions:
   ru: Восстановление из точки
   en: Recovery from a point
@@ -1415,6 +2254,11 @@ tools-backup-restore-permissions:
   es: Recuperación desde un punto
   kk: Нүктеден қалпына келтіру
   uz: Nuqtadan tiklash
+  de: Wiederherstellung von einem Punkt
+  fa: بازیابی از یک نقطه
+  cz: Obnovení z bodu
+  tr: Bir noktadan kurtarma
+  zh: 从一点恢复
 tools-execute-permissions:
   ru: Выполнение скриптов
   en: Executing scripts
@@ -1423,6 +2267,11 @@ tools-execute-permissions:
   es: Ejecución de scripts
   kk: Скрипттерді орындау
   uz: Skriptlarni bajarish
+  de: Ausführung von Skripten
+  fa: اجرای اسکریپت ها
+  cz: Provádění skriptů
+  tr: Komut dosyaları yürütme
+  zh: 执行脚本
 tools-settings-permissions:
   ru: Настройки сайта
   en: Site settings
@@ -1431,6 +2280,11 @@ tools-settings-permissions:
   es: Configuración del sitio
   kk: Сайт параметрлері
   uz: Sayt sozlamalari
+  de: Seiteneinstellungen
+  fa: تنظیمات سایت
+  cz: Nastavení webu
+  tr: Site ayarları
+  zh: 网站设置
 tools-settings-add-permissions:
   ru: Добавить настройку
   en: Add setting
@@ -1439,6 +2293,11 @@ tools-settings-add-permissions:
   es: Agregar configuración
   kk: Параметр қосу
   uz: Sozlama qo'shish
+  de: Einstellung hinzufügen
+  fa: اضافه کردن تنظیم
+  cz: Přidat nastavení
+  tr: Ayar ekle
+  zh: 添加设置
 tools-settings-edit-permissions:
   ru: Редактировать настройку
   en: Edit setting
@@ -1447,6 +2306,11 @@ tools-settings-edit-permissions:
   es: Editar configuración
   kk: Параметрді өңдеу
   uz: Sozlamani tahrirlash
+  de: Einstellung bearbeiten
+  fa: ویرایش تنظیم
+  cz: Upravit nastavení
+  tr: Ayarı düzenle
+  zh: 编辑设置
 tools-settings-remove-permissions:
   ru: Удалить настройку
   en: Delete setting
@@ -1455,6 +2319,11 @@ tools-settings-remove-permissions:
   es: Eliminar configuración
   kk: Параметрді жою
   uz: Sozlamani o'chirish
+  de: Einstellung löschen
+  fa: حذف تنظیم
+  cz: Smazat nastavení
+  tr: Ayarı sil
+  zh: 删除设置
 tools-notices-permissions:
   ru: Шаблоны сообщений
   en: Notice templates
@@ -1463,6 +2332,11 @@ tools-notices-permissions:
   es: Plantillas de avisos
   kk: Хабар шаблондары
   uz: Xabar shablonlari
+  de: Benachrichtigungsvorlagen
+  fa: قالب های اعلان
+  cz: Šablony oznámení
+  tr: Bildirim şablonları
+  zh: 通知模板
 tools-notices-add-permissions:
   ru: Добавить сообщение
   en: Add notice
@@ -1471,6 +2345,11 @@ tools-notices-add-permissions:
   es: Agregar aviso
   kk: Хабар қосу
   uz: Xabar qo'shish
+  de: Benachrichtigung hinzufügen
+  fa: اضافه کردن اعلان
+  cz: Přidat oznámení
+  tr: Bildirim ekle
+  zh: 添加通知
 tools-notices-edit-permissions:
   ru: Редактировать сообщение
   en: Edit notice
@@ -1479,6 +2358,11 @@ tools-notices-edit-permissions:
   es: Editar aviso
   kk: Хабарды өңдеу
   uz: Xabarni tahrirlash
+  de: Benachrichtigung bearbeiten
+  fa: ویرایش اعلان
+  cz: Upravit oznámení
+  tr: Bildirimi düzenle
+  zh: 编辑通知
 tools-notices-delete-permissions:
   ru: Удалить сообщение
   en: Delete notice
@@ -1487,6 +2371,11 @@ tools-notices-delete-permissions:
   es: Eliminar aviso
   kk: Хабарды жою
   uz: Xabarni o'chirish
+  de: Benachrichtigung löschen
+  fa: حذف اعلان
+  cz: Smazat oznámení
+  tr: Bildirimi sil
+  zh: 删除通知
 tools-menu-jobs:
   ru: Задания
   en: Jobs & Pipelines
@@ -1495,6 +2384,11 @@ tools-menu-jobs:
   es: Trabajos y Pipelines
   kk: Тапсырмалар және құбырлар
   uz: Ishlar va quvurlar
+  de: Aufträge und Pipelines
+  fa: شغل ها و خطوط لوله
+  cz: Úlohy a kanály
+  tr: İşler ve Boru Hatları
+  zh: 作业和管道
 tools-menu-jobs-desc:
   ru: Отображает список поставленных задач и обновляет в режиме онлайн
   en: Displays a list of assigned tasks and updates online
@@ -1505,3 +2399,8 @@ tools-menu-jobs-desc:
     көрсетеді
   uz: Belgilangan vazifalar ro'yxatini ko'rsatadi va onlayn yangilanishlarni
     ko'rsatadi
+  de: Zeigt eine Liste zugewiesener Aufgaben und Online-Updates an
+  fa: فهرستی از وظایف اختصاص داده شده و بروزرسانی های آنلاین را نمایش می دهد
+  cz: Zobrazuje seznam přiřazených úkolů a online aktualizace
+  tr: Atanan görevlerin listesini ve çevrimiçi güncellemeleri görüntüler
+  zh: 显示分配任务的列表和在线更新
