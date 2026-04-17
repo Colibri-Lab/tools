@@ -4,6 +4,8 @@ App.Modules.Tools.DomainsAndThemesTree = class extends Colibri.UI.Tree {
         super(name, container);
         this.AddClass('app-tools-domains-themes-tree');
 
+        this.expandOnClick = true;
+
         this.RegisterEvent('NodesLoaded', false, 'Когда все узлы загружены');
     }
 
