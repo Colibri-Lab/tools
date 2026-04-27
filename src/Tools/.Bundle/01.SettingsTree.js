@@ -3,6 +3,12 @@ App.Modules.Tools.SettingsTree = class extends Colibri.UI.Tree {
     constructor(name, container) {
         super(name, container);
         this.AddClass('app-settings-tree-component');
+
+        this.hasSearchBox = true;
+        this.searchFilterCallback = (node, term) => {
+            return node.text.toLowerCase().indexOf(term.toLowerCase()) !== -1;
+        };
+        
     }
  
 

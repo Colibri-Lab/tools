@@ -3,7 +3,11 @@ App.Modules.Tools.NoticesTree = class extends Colibri.UI.Tree {
     constructor(name, container) {
         super(name, container);
         this.AddClass('app-notices-tree-component');
-
+        this.hasSearchBox = true;
+        this.expandOnClick = true;
+        this.searchFilterCallback = (node, term) => {
+            return node.text.toLowerCase().indexOf(term.toLowerCase()) !== -1;
+        };
         this.RegisterEvent('NodesLoaded', false, 'Когда все узлы загружены');
     }
  
