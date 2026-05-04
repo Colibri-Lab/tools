@@ -288,9 +288,10 @@ tools-notices-fields-body-note:
     o'zgaruvchilari sifatida ruxsat etiladi
   de: Geben Sie den Körper der E-Mail ein. Einfügungen der Form [[name]] als
     Template-Variablen sind erlaubt
-  fa: متن ایمیل را وارد کنید. درج‌هایی به شکل [[name]] به عنوان متغیرهای قالب مجاز هستند
-  cz: Zadejte tělo e-mailu. Vkládání ve formátu [[name]] jako proměnné šablony jsou
-    povoleny
+  fa: متن ایمیل را وارد کنید. درج‌هایی به شکل [[name]] به عنوان متغیرهای قالب مجاز
+    هستند
+  cz: Zadejte tělo e-mailu. Vkládání ve formátu [[name]] jako proměnné šablony
+    jsou povoleny
   tr: E-posta gövdesini girin. [[name]] biçimindeki eklemeler şablon değişkenleri
     olarak izin verilir
   zh: 输入电子邮件正文。允许以[[name]]形式的插入作为模板变量
@@ -346,11 +347,16 @@ tools-menu-settings-data-desc:
     previamente por el administrador en el administrador de configuraciones
   kk: Сайт параметрлері<br />Мұнда сіз параметрлер менеджерінде менеджер бұрын
     жасаған кейбір параметрлерді өңдей аласыз
-  uz: Sayt sozlamalari<br />Bu yerda siz sozlamalar menejerida menejer tomonidan oldindan yaratılmış bazı ayarları düzenleyebilirsiniz
-  de: Seiteneinstellungen<br />Hier können Sie einige Einstellungen bearbeiten, die zuvor vom Manager im Einstellungsmanager erstellt wurden
-  fa: تنظیمات سایت<br />در اینجا می توانید برخی از تنظیمات را که قبلاً توسط مدیر در مدیر تنظیمات ایجاد شده است ویرایش کنید
-  cz: Nastavení stránek<br />Zde můžete upravit některá nastavení, která dříve vytvořil správce v nastavení správce
-  tr: Site ayarları<br />Burada, yönetici tarafından ayarlar yöneticisinde önceden oluşturulmuş bazı ayarları düzenleyebilirsiniz
+  uz: Sayt sozlamalari<br />Bu yerda siz sozlamalar menejerida menejer tomonidan
+    oldindan yaratılmış bazı ayarları düzenleyebilirsiniz
+  de: Seiteneinstellungen<br />Hier können Sie einige Einstellungen bearbeiten,
+    die zuvor vom Manager im Einstellungsmanager erstellt wurden
+  fa: تنظیمات سایت<br />در اینجا می توانید برخی از تنظیمات را که قبلاً توسط مدیر
+    در مدیر تنظیمات ایجاد شده است ویرایش کنید
+  cz: Nastavení stránek<br />Zde můžete upravit některá nastavení, která dříve
+    vytvořil správce v nastavení správce
+  tr: Site ayarları<br />Burada, yönetici tarafından ayarlar yöneticisinde önceden
+    oluşturulmuş bazı ayarları düzenleyebilirsiniz
   zh: 网站设置<br />在这里，您可以编辑一些之前由管理员在设置管理器中创建的设置
 tools-menu-filesondisk:
   hy: Ֆայլեր սկավառակի վրա
@@ -395,11 +401,15 @@ tools-menu-filesondisk-desc:
     unnötige Dateien hinzufügen oder löschen. Achtung! Beim Löschen von Dateien
     müssen Sie berücksichtigen, dass einige Zeilen in den Repositories auf sie
     verweisen können
-  fa: فایل های واقع در سرور فعلی، روی ماشین محلی. شما می توانید فایل های غیر ضروری را اضافه یا حذف کنید. توجه! هنگام حذف فایل ها، باید در نظر داشته باشید که برخی خطوط در مخازن ممکن است به آنها اشاره کنند
-  cz: Soubory umístěné na aktuálním serveru, na místním počítači. Můžete přidat nebo
-    odstranit nepotřebné soubory. Pozor! Při odstraňování souborů je třeba vzít v
-    úvahu, že některé řádky v repozitářích se na ně mohou odkazovat
-  tr: Mevcut sunucuda, yerel makinedeki dosyalar. Gereksiz dosyaları ekleyebilir veya silebilirsiniz. Dikkat! Dosyaları silerken, bazı satırların depolarda onlara referans verebileceğini göz önünde bulundurmanız gerekir
+  fa: فایل های واقع در سرور فعلی، روی ماشین محلی. شما می توانید فایل های غیر ضروری
+    را اضافه یا حذف کنید. توجه! هنگام حذف فایل ها، باید در نظر داشته باشید که
+    برخی خطوط در مخازن ممکن است به آنها اشاره کنند
+  cz: Soubory umístěné na aktuálním serveru, na místním počítači. Můžete přidat
+    nebo odstranit nepotřebné soubory. Pozor! Při odstraňování souborů je třeba
+    vzít v úvahu, že některé řádky v repozitářích se na ně mohou odkazovat
+  tr: Mevcut sunucuda, yerel makinedeki dosyalar. Gereksiz dosyaları ekleyebilir
+    veya silebilirsiniz. Dikkat! Dosyaları silerken, bazı satırların depolarda
+    onlara referans verebileceğini göz önünde bulundurmanız gerekir
   zh: 位于当前服务器上的文件，在本地机器上。您可以添加或删除不必要的文件。注意！删除文件时，您需要考虑到存储库中的某些行可能会引用它们
 tools-menu-filesremote:
   hy: Մեդիա շտեմարան
@@ -429,10 +439,12 @@ tools-menu-filesremote-desc:
     bo'shatishingiz mumkin
   de: Remote-Dateibibliothek. Sie können Buckets hinzufügen und/oder leeren, wenn
     dies erforderlich ist
-  fa: کتابخانه فایل از راه دور. شما می توانید سطل ها را اضافه کنید و/یا در صورت لزوم آنها را خالی کنید
-  cz: Vzdálená knihovna souborů. Můžete přidat kbelíky a/ne
-    bo je vyprázdnit, pokud je to nutné
-  tr: Uzak dosya kütüphanesi. Gerekirse kovalar ekleyebilir ve/veya boşaltabilirsiniz
+  fa: کتابخانه فایل از راه دور. شما می توانید سطل ها را اضافه کنید و/یا در صورت
+    لزوم آنها را خالی کنید
+  cz: Vzdálená knihovna souborů. Můžete přidat kbelíky a/ne bo je vyprázdnit,
+    pokud je to nutné
+  tr: Uzak dosya kütüphanesi. Gerekirse kovalar ekleyebilir ve/veya
+    boşaltabilirsiniz
   zh: 远程文件库。您可以根据需要添加桶和/或清空它们
 tools-menu-settings:
   hy: Կայքի կարգավորումները
@@ -465,11 +477,15 @@ tools-menu-settings-desc:
     кейінірек пайдалануға болатын параметр жасауға болады
   uz: Sozlamalar menejeri. Loyihada ma'lumotlarni ishlab chiqish yoki chiqarishda
     keyinchalik foydalanish mumkin bo'lgan sozlamani yaratishingiz mumkin
-  de: Einstellungsmanager. Sie können eine Einstellung erstellen, die später in der
-    Entwicklung oder Ausgabe von Informationen auf dem Projekt verwendet werden kann
-  fa: مدیر تنظیمات. شما می توانید یک تنظیم ایجاد کنید که بعداً در توسعه یا خروجی اطلاعات در پروژه استفاده شود
-  cz: Správce nastavení. Můžete vytvořit nastavení, které lze později použít při vývoji nebo výstupu informací na projektu
-  tr: Ayar yöneticisi. Projede bilgi geliştirme veya çıktı sırasında daha sonra kullanılabilecek bir ayar oluşturabilirsiniz
+  de: Einstellungsmanager. Sie können eine Einstellung erstellen, die später in
+    der Entwicklung oder Ausgabe von Informationen auf dem Projekt verwendet
+    werden kann
+  fa: مدیر تنظیمات. شما می توانید یک تنظیم ایجاد کنید که بعداً در توسعه یا خروجی
+    اطلاعات در پروژه استفاده شود
+  cz: Správce nastavení. Můžete vytvořit nastavení, které lze později použít při
+    vývoji nebo výstupu informací na projektu
+  tr: Ayar yöneticisi. Projede bilgi geliştirme veya çıktı sırasında daha sonra
+    kullanılabilecek bir ayar oluşturabilirsiniz
   zh: 设置管理器。您可以创建一个设置，以便在项目的信息开发或输出中稍后使用
 tools-menu-notices:
   hy: Հաղորդագրությունների կաղապարներ
@@ -483,7 +499,7 @@ tools-menu-notices:
   fa: قالب های پیام
   cz: Šablony zpráv
   tr: Mesaj Şablonları
-  zh: 消息模板  
+  zh: 消息模板
 tools-menu-notices-desc:
   hy: Ստեղծել հաղորդագրությունների կաղապարներ, էլեկտրոնային փոստի միջոցով
     օգտագործողի հետ հաղորդակցվելու համար
@@ -497,7 +513,8 @@ tools-menu-notices-desc:
     жасаңыз
   uz: Foydalanuvchi bilan elektron pochta orqali muloqot qilish uchun xabar
     shablonlarini yarating
-  de: Erstellen Sie Nachrichtenvorlagen für die Kommunikation mit dem Benutzer per E-Mail
+  de: Erstellen Sie Nachrichtenvorlagen für die Kommunikation mit dem Benutzer per
+    E-Mail
   fa: قالب های پیام را برای ارتباط با کاربر از طریق ایمیل ایجاد کنید
   cz: Vytvořte šablony zpráv pro komunikaci s uživatelem prostřednictvím e-mailu
   tr: E-posta yoluyla kullanıcıyla iletişim kurmak için mesaj şablonları oluşturun
@@ -532,9 +549,12 @@ tools-menu-backups-desc:
     ma'lumotlarni qaytarish mumkin bo'ladi
   de: Erstellen Sie einen Wiederherstellungspunkt für kritische Situationen. In
     Zukunft wird es möglich sein, Daten aus der empfangenen Datei zurückzugeben
-  fa: یک نقطه بازیابی در صورت بروز شرایط بحرانی ایجاد کنید. در آینده، امکان بازگرداندن داده ها از فایل دریافت شده وجود خواهد داشت
-  cz: Vytvořte bod obnovení pro kritické situace. V budoucnu bude možné vrátit data ze získaného souboru
-  tr: Kritik durumlarda bir kurtarma noktası oluşturun. Gelecekte, alınan dosyadan veri döndürmek mümkün olacaktır
+  fa: یک نقطه بازیابی در صورت بروز شرایط بحرانی ایجاد کنید. در آینده، امکان
+    بازگرداندن داده ها از فایل دریافت شده وجود خواهد داشت
+  cz: Vytvořte bod obnovení pro kritické situace. V budoucnu bude možné vrátit
+    data ze získaného souboru
+  tr: Kritik durumlarda bir kurtarma noktası oluşturun. Gelecekte, alınan dosyadan
+    veri döndürmek mümkün olacaktır
   zh: 在发生严重情况时创建恢复点。将来，可以从收到的文件中返回数据
 tools-menu-execute:
   hy: Կատարել
@@ -564,10 +584,14 @@ tools-menu-execute-desc:
     қайтымсыз зақым келуі мүмкін!
   uz: Kodni bajaring (PHP). Diqqat! Kod butun loyiha muhiti doirasida bajariladi,
     qaytarib bo'lmaydigan zarar bo'lishi mumkin!
-  de: Führen Sie den Code aus (PHP). Achtung! Der Code wird in der Umgebung des gesamten Projekts ausgeführt, irreversible Schäden sind möglich!
-  fa: کد را اجرا کنید (PHP). توجه! کد در محیط کل پروژه اجرا می شود، آسیب غیرقابل برگشتی ممکن است!
-  cz: Spusťte kód (PHP). Pozor! Kód se spouští v prostředí celého projektu, je možné nevratné poškození!
-  tr: Kodu yürütün (PHP). Dikkat! Kod, tüm proje ortamında yürütülür, geri dönüşü olmayan hasar mümkündür!
+  de: Führen Sie den Code aus (PHP). Achtung! Der Code wird in der Umgebung des
+    gesamten Projekts ausgeführt, irreversible Schäden sind möglich!
+  fa: کد را اجرا کنید (PHP). توجه! کد در محیط کل پروژه اجرا می شود، آسیب غیرقابل
+    برگشتی ممکن است!
+  cz: Spusťte kód (PHP). Pozor! Kód se spouští v prostředí celého projektu, je
+    možné nevratné poškození!
+  tr: Kodu yürütün (PHP). Dikkat! Kod, tüm proje ortamında yürütülür, geri dönüşü
+    olmayan hasar mümkündür!
   zh: 执行代码（PHP）。注意！代码在整个项目的环境中执行，可能会造成不可逆转的损害！
 tools-menu-themes:
   hy: Կայքի թեմաներ
@@ -597,10 +621,13 @@ tools-menu-themes-desc:
     өңдеуге болады
   uz: Sayt ko'rinishini sozlang. Yangi mavzu yaratishingiz yoki mavjud mavzuni
     tahrirlashingiz mumkin
-  de: Passen Sie das Erscheinungsbild der Seite an. Sie können ein neues Thema erstellen oder ein vorhandenes bearbeiten
-  fa: ظاهر سایت را سفارشی کنید. شما می توانید یک موضوع جدید ایجاد کنید یا یک موضوع موجود را ویرایش کنید
+  de: Passen Sie das Erscheinungsbild der Seite an. Sie können ein neues Thema
+    erstellen oder ein vorhandenes bearbeiten
+  fa: ظاهر سایت را سفارشی کنید. شما می توانید یک موضوع جدید ایجاد کنید یا یک موضوع
+    موجود را ویرایش کنید
   cz: Přizpůsobte vzhled stránky. Můžete vytvořit nové téma nebo upravit existující
-  tr: Sitenin görünümünü özelleştirin. Yeni bir tema oluşturabilir veya mevcut bir temayı düzenleyebilirsiniz
+  tr: Sitenin görünümünü özelleştirin. Yeni bir tema oluşturabilir veya mevcut bir
+    temayı düzenleyebilirsiniz
   zh: 自定义网站的外观。您可以创建一个新主题，或编辑一个现有的主题
 tools-backup-create:
   ru: Создать слепок
@@ -611,9 +638,9 @@ tools-backup-create:
   kk: Сурет жасау
   uz: Tasvir yaratish
   de: Erstellen Sie einen Eindruck
-  fa: ایجاد یک تصویر  
+  fa: ایجاد یک تصویر
   cz: Vytvořit dojem
-  tr: Bir izlenim oluşturun 
+  tr: Bir izlenim oluşturun
   zh: 创建一个印象
 tools-backup-create-info:
   ru: Нажмите на кнопку «создать слепок» и дождитесь окончания процесса. После
@@ -636,10 +663,19 @@ tools-backup-create-info:
   uz: "\"Quyma yaratish\" tugmasini bosing va jarayon tugashini kuting.
     Tugallangandan so'ng, ushbu sahifaning pastki qismidagi ro'yxatda sana bilan
     belgilangan yangi element paydo bo'ladi"
-  de: Klicken Sie auf die Schaltfläche "Erstellen Sie einen Cast" und warten Sie, bis der Prozess abgeschlossen ist. Nach Abschluss wird ein neues Element mit einem Datum in der Liste mit einem Cast am unteren Rand dieser Seite angezeigt
-  fa: روی دکمه "ایجاد یک کست" کلیک کنید و منتظر بمانید تا فرآیند به پایان برسد. پس از اتمام، یک مورد جدید با تاریخ در لیست با یک کست در پایین این صفحه ظاهر می شود
-  cz: Klikněte na tlačítko "Vytvořit cast" a počkejte, až proces dokončí. Po dokončení se v seznamu s castem v dolní části této stránky objeví nová položka označená datem 
-  tr: "\"Bir cast oluştur\" düğmesine tıklayın ve işlemin bitmesini bekleyin. Tamamlandıktan sonra, bu sayfanın altındaki bir cast ile listede tarihle işaretlenmiş yeni bir öğe görünecektir"
+  de: Klicken Sie auf die Schaltfläche "Erstellen Sie einen Cast" und warten Sie,
+    bis der Prozess abgeschlossen ist. Nach Abschluss wird ein neues Element mit
+    einem Datum in der Liste mit einem Cast am unteren Rand dieser Seite
+    angezeigt
+  fa: روی دکمه "ایجاد یک کست" کلیک کنید و منتظر بمانید تا فرآیند به پایان برسد. پس
+    از اتمام، یک مورد جدید با تاریخ در لیست با یک کست در پایین این صفحه ظاهر می
+    شود
+  cz: Klikněte na tlačítko "Vytvořit cast" a počkejte, až proces dokončí. Po
+    dokončení se v seznamu s castem v dolní části této stránky objeví nová
+    položka označená datem
+  tr: '"Bir cast oluştur" düğmesine tıklayın ve işlemin bitmesini bekleyin.
+    Tamamlandıktan sonra, bu sayfanın altındaki bir cast ile listede tarihle
+    işaretlenmiş yeni bir öğe görünecektir'
   zh: 点击“创建一个cast”按钮并等待过程完成。完成后，在此页面底部的带有cast的列表中将出现一个标有日期的新项目
 tools-backups-dataempty:
   ru: Слепки не найдены
@@ -756,7 +792,7 @@ tools-storages-backups-desc:
   de: Wiederherstellungspunkte
   fa: نقاط بازیابی
   cz: Body obnovení
-  tr: Kurtarma Noktaları  
+  tr: Kurtarma Noktaları
   zh: 恢复点
 tools-storages-backups-fields-name-desc:
   ru: Наименование
@@ -779,9 +815,10 @@ tools-storages-backups-fields-name-note:
   es: Ingrese el nombre de la tarea para crear un punto de recuperación
   kk: Қалпына келтіру нүктесін жасау үшін тапсырманың атауын енгізіңіз
   uz: Tiklash nuqtasini yaratish uchun vazifa nomini kiriting
-  de: Geben Sie den Namen der Aufgabe ein, um einen Wiederherstellungspunkt zu erstellen
+  de: Geben Sie den Namen der Aufgabe ein, um einen Wiederherstellungspunkt zu
+    erstellen
   fa: نام وظیفه را برای ایجاد یک نقطه بازیابی وارد کنید
-  cz: Zadejte název úkolu pro vytvoření bodu obnoven  
+  cz: Zadejte název úkolu pro vytvoření bodu obnoven
   tr: Bir kurtarma noktası oluşturmak için görev adını girin
   zh: 输入任务名称以创建恢复点
 tools-storages-backups-fields-cron-desc:
@@ -835,7 +872,7 @@ tools-storages-backups-fields-cron-minute-note:
   fa: یک دقیقه را انتخاب کنید
   cz: Vyberte minutu
   tr: Bir dakika seçin
-  zh: 选择一分钟  
+  zh: 选择一分钟
 tools-storages-backups-fields-cron-hour-desc:
   ru: Час
   en: Hour
@@ -871,7 +908,7 @@ tools-storages-backups-fields-cron-day-desc:
   kk: Күн
   uz: Kun
   de: Tag
-  fa: روز 
+  fa: روز
   cz: Den
   tr: Gün
   zh: 天
@@ -963,7 +1000,8 @@ tools-storages-backups-fields-file-note:
     backup_{date}_{index}.backup
   kk: Файл атауының үлгісін енгізіңіз, мысалы backup_{date}_{index}.backup
   uz: Fayl nomi uchun shablonni kiriting, masalan backup_{date}_{index}.backup
-  de: Geben Sie eine Vorlage für den Dateinamen ein, z. B. backup_{date}_{index}.backup
+  de: Geben Sie eine Vorlage für den Dateinamen ein, z. B.
+    backup_{date}_{index}.backup
   fa: یک قالب برای نام فایل وارد کنید، به عنوان مثال backup_{date}_{index}.backup
   cz: Zadejte šablonu pro název souboru, například backup_{date}_{index}.backup
   tr: Dosya adı için bir şablon girin, örneğin backup_{date}_{index}.backup
@@ -1175,7 +1213,7 @@ tools-storages-backups-fields-cron-dayofweek-values-5:
   fa: جمعه
   cz: Pátek
   tr: Cuma
-  zh: 星期五  
+  zh: 星期五
 tools-storages-backups-fields-cron-dayofweek-values-6:
   ru: Суббота
   en: Saturday
@@ -1228,7 +1266,6 @@ tools-backups-points-running:
   cz: Funguje
   tr: Çalışıyor
   zh: 工作中
-
 tools-storages-backups-fields-status-values-paused:
   ru: Остановлено
   en: Stopped
@@ -1242,7 +1279,6 @@ tools-storages-backups-fields-status-values-paused:
   cz: Zastaveno
   tr: Durduruldu
   zh: 已停止
-
 tools-storages-backups-fields-status-values-started:
   ru: Включено
   en: Enabled
@@ -1256,7 +1292,6 @@ tools-storages-backups-fields-status-values-started:
   cz: Povolen
   tr: Etkinleştirildi
   zh: 已启用
-
 tools-storages-backups-fields-running-desc:
   ru: Запущено
   en: Launched
@@ -1283,7 +1318,6 @@ tools-execute-run-title:
   cz: Spustit skript
   tr: Skripti çalıştır
   zh: 运行脚本
-
 tools-execute-run:
   ru: Запустить скрипт
   en: Run the script
@@ -1347,22 +1381,21 @@ tools-execute-create-info:
 
     Ma'lumotni mijozga yuborish uchun Logger $logger dan foydalaning, masalan: $logger->debug('Sinov xabari');
   de: >-
-    Achtung! Das Skript wird in der Umgebung des gesamten Projekts ausgeführt, irreversible Folgen sind möglich, bitte seien Sie vorsichtig
+    Achtung! Das Skript wird in der Umgebung des gesamten Projekts ausgeführt,
+    irreversible Folgen sind möglich, bitte seien Sie vorsichtig
 
     Verwenden Sie Logger $logger, um Informationen an den Client zu senden, zum Beispiel: $logger->debug('Testnachricht');
-  fa: >-
-    توجه! اسکریپت در محیط کل پروژه اجرا می شود، ممکن است پیامدهای غیرقابل برگشت وجود داشته باشد، لطفا مراقب باشید 
-    برای ارسال اطلاعات به مشتری از Logger $logger استفاده کنید، به عنوان مثال: $logger->debug('پیام آزمایشی');
-  cz: >-
-    Pozor! Skript se spouští v prostředí celého projektu, jsou možné nevratné následky, buďte opatrní
-    Pro odesílání informací klientovi použijte Logger $logger, například: $logger->debug('Testovací zpráva');
-  tr: >-
-    Dikkat! Skript tüm projenin ortamında çalıştırılır, geri dönüşü olmayan sonuçlar olabilir, lütfen dikkatli olun
-    Bilgileri müşteriye göndermek için Logger $logger kullanın, örneğin: $logger->debug('Test mesajı'); 
-
-  zh: >-
-    注意！脚本在整个项目的环境中执行，可能会有不可逆转的后果，请小心
-    使用 Logger $logger 向客户端发送信息，例如：$logger->debug('测试消息');
+  fa: "توجه! اسکریپت در محیط کل پروژه اجرا می شود، ممکن است پیامدهای غیرقابل برگشت
+    وجود داشته باشد، لطفا مراقب باشید  برای ارسال اطلاعات به مشتری از Logger
+    $logger استفاده کنید، به عنوان مثال: $logger->debug('پیام آزمایشی');"
+  cz: "Pozor! Skript se spouští v prostředí celého projektu, jsou možné nevratné
+    následky, buďte opatrní Pro odesílání informací klientovi použijte Logger
+    $logger, například: $logger->debug('Testovací zpráva');"
+  tr: "Dikkat! Skript tüm projenin ortamında çalıştırılır, geri dönüşü olmayan
+    sonuçlar olabilir, lütfen dikkatli olun Bilgileri müşteriye göndermek için
+    Logger $logger kullanın, örneğin: $logger->debug('Test mesajı'); "
+  zh: 注意！脚本在整个项目的环境中执行，可能会有不可逆转的后果，请小心 使用 Logger $logger
+    向客户端发送信息，例如：$logger->debug('测试消息');
 tools-execute-run-success:
   ru: Скрипт запущен успешно
   en: The script was launched successfully
@@ -1415,9 +1448,6 @@ tools-backups-points-file:
   cz: Šablona názvu souboru
   tr: Dosya adı şablonu
   zh: 文件名模板
-
-
-
 tools-thtmes-themes-title:
   ru: Сообщения
   en: Messages
@@ -1678,8 +1708,6 @@ tools-storages-themes-fields-domain-desc:
   cz: Klíč domény
   tr: Alan Anahtarı
   zh: 域名密钥
-
-
 tools-storages-themes-fields-domain-note:
   ru: Выберите ключ домена
   en: Select the domain key
@@ -1916,10 +1944,14 @@ tools-themes-deletethememessage:
     сайттарда артефактілер пайда болуы мүмкін
   uz: Mavzuni o'chirishni xohlaysizmi? Ushbu mavzuga bog'langan saytlarda
     artefaktlar paydo bo'lishi mumkin
-  de: Sind Sie sicher, dass Sie das Thema löschen möchten? Auf mit diesem Thema verknüpften Websites können Artefakte auftreten
-  fa: آیا مطمئن هستید که می خواهید موضوع را حذف کنید؟ ممکن است در سایت های مرتبط با این موضوع آثار ظاهر شود
-  cz: Jste si jisti, že chcete odstranit téma? Na webech propojených s tímto tématem se mohou objevit artefakty
-  tr: Konuyu silmek istediğinizden emin misiniz? Bu konuya bağlı sitelerde yapıtlar oluşabilir
+  de: Sind Sie sicher, dass Sie das Thema löschen möchten? Auf mit diesem Thema
+    verknüpften Websites können Artefakte auftreten
+  fa: آیا مطمئن هستید که می خواهید موضوع را حذف کنید؟ ممکن است در سایت های مرتبط
+    با این موضوع آثار ظاهر شود
+  cz: Jste si jisti, že chcete odstranit téma? Na webech propojených s tímto
+    tématem se mohou objevit artefakty
+  tr: Konuyu silmek istediğinizden emin misiniz? Bu konuya bağlı sitelerde
+    yapıtlar oluşabilir
   zh: 您确定要删除主题吗？与此主题关联的网站上可能会出现伪影
 tools-storages-themes-fields-vars-type-values-font-family:
   ru: Название шрифта
