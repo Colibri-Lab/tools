@@ -59,7 +59,8 @@ tools-execute-create-info:
   tr: Dikkat! Script tüm proje ortamında çalıştırılır, geri döndürülemez sonuçlar
     olabilir, lütfen dikkatli olun
   zh: 注意！脚本将在整个项目环境中执行，可能造成不可逆后果，请谨慎操作
-  fa: توجه! اسکریپت در محیط کل پروژه اجرا می‌شود، پیامدهای غیرقابل بازگشت ممکن است رخ دهد، لطفاً مراقب باشید
+  fa: توجه! اسکریپت در محیط کل پروژه اجرا می‌شود، پیامدهای غیرقابل بازگشت ممکن است
+    رخ دهد، لطفاً مراقب باشید
 tools-execute-script-title:
   ru: Скрипт к исполнению
   en: Script to be executed
