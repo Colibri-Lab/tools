@@ -1,5 +1,9 @@
-
-
+/**
+ * Tools module
+ * @class
+ * @extends Colibri.Modules.Module
+ * @memberof App.Modules
+ */
 App.Modules.Tools = class extends Colibri.Modules.Module {
 
     /** @constructor */

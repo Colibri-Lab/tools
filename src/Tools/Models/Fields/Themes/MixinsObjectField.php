@@ -11,8 +11,8 @@ use Colibri\Data\Storages\Fields\ArrayField;
 
 /**
  * Представление поля в таблице в хранилище Mixin-ы
- * @author <author name and email>
- * @package App\Modules\Tools\Models\Fields\Themes\Fields
+ * @class
+ * @extends ObjectField
  * 
  * region Properties:
  * @property string|null $name Наименование

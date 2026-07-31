@@ -1,3 +1,9 @@
+/**
+ * Backups grid component
+ * @class
+ * @extends Colibri.UI.Grid
+ * @memberof App.Modules.Tools
+ */
 App.Modules.Tools.BackupsGrid = class extends Colibri.UI.Grid {
 
     constructor(name, container) {

@@ -15,8 +15,8 @@ use Colibri\IO\FileSystem\File;
 
 /**
  * Представление строки в таблице в хранилище Темы
- * @author <author name and email>
- * @package App\Modules\Tools\Models
+ * @class
+ * @extends BaseModelDataRow
  *
  * region Properties:
  * @property int $id ID строки

@@ -10,8 +10,8 @@ use Colibri\Data\Storages\Fields\ValueField;
 
 /**
  * Представление строки в таблице в хранилище Настройки
- * @author <author name and email>
- * @package App\Modules\Tools\Models
+ * @class
+ * @extends BaseModelDataRow
  * 
  * region Properties:
  * @property int $id ID строки

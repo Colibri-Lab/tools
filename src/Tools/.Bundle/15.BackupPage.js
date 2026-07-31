@@ -1,3 +1,9 @@
+/**
+ * Backup page component
+ * @class
+ * @extends Colibri.UI.Component
+ * @memberof App.Modules.Tools
+ */
 App.Modules.Tools.BackupPage = class extends Colibri.UI.Component {
 
     constructor(name, container) {

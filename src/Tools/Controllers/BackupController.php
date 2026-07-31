@@ -16,6 +16,8 @@ use InvalidArgumentException;
 
 /**
  * Backups controller
+ * @class
+ * @extends WebController
  */
 class BackupController extends WebController
 {

@@ -1,3 +1,9 @@
+/**
+ * Vars grid component
+ * @class
+ * @extends Colibri.UI.Grid
+ * @memberof App.Modules.Tools
+ */
 App.Modules.Tools.VarsGrid = class extends Colibri.UI.Grid {
 
     constructor(name, container) {

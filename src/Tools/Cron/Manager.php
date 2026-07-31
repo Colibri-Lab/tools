@@ -6,7 +6,10 @@ use Colibri\App;
 use Colibri\IO\FileSystem\File;
 use App\Modules\Tools\Models\Backup;
 
-
+/**
+ * Cron manager
+ * @class
+ */
 class Manager
 {
 

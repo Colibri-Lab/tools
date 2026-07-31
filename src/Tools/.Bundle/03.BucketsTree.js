@@ -1,3 +1,9 @@
+/**
+ * Buckets tree component
+ * @class
+ * @extends Colibri.UI.Tree
+ * @memberof App.Modules.Tools
+ */
 App.Modules.Tools.BucketsTree = class extends Colibri.UI.Tree {
     
     constructor(name, container) {

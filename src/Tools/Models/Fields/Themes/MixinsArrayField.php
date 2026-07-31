@@ -10,8 +10,9 @@ use App\Modules\Tools\Models\Fields\Themes\MixinsObjectField;
 
 /**
  * Представление поля в таблице в хранилище Mixin-ы
- * @author <author name and email>
- * @package App\Modules\Tools\Models\Fields\Themes\Fields
+ * @class
+ * @extends ArrayField
+ * 
  * @method MixinsObjectField Item(int $index)
  * @method MixinsObjectField offsetGet(mixed $offset)
  */

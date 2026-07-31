@@ -1,3 +1,9 @@
+/**
+ * Remote files settings page component
+ * @class
+ * @extends Colibri.UI.Component
+ * @memberof App.Modules.Tools
+ */
 App.Modules.Tools.RemoteFilesSettingsPage = class extends Colibri.UI.Component 
 {
 

@@ -1,3 +1,9 @@
+/**
+ * Themes page component
+ * @class
+ * @extends Colibri.UI.Component
+ * @memberof App.Modules.Tools
+ */
 App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
     constructor(name, container) {
         super(name, container, Colibri.UI.Templates['App.Modules.Tools.ThemesPage']);

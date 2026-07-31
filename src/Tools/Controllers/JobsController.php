@@ -12,8 +12,8 @@ use Colibri\Queue\Manager as QueueManager;
 
 /**
  * Work with jobs
- * @author self
- * @package App\Modules\Tools\Controllers
+ * @class
+ * @extends WebController
  */
 class JobsController extends WebController
 {

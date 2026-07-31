@@ -11,6 +11,8 @@ use Colibri\Web\RequestCollection;
 
 /**
  * Execute script controller
+ * @class
+ * @extends WebController
  */
 class ExecuteController extends WebController
 {

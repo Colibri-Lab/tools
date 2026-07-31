@@ -13,8 +13,8 @@ use Colibri\App;
 
 /**
  * Таблица, представление данных в хранилище Темы
- * @author <author name and email>
- * @package App\Modules\Tools\Models
+ * @class
+ * @extends BaseModelDataTable
  * 
  * @method Theme[] getIterator()
  * @method Theme _createDataRowObject()

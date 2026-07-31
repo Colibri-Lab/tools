@@ -10,6 +10,11 @@ use Colibri\App;
 use Throwable;
 use App\Modules\Tools\Models\Backups;
 
+/**
+ * Worker for backup process
+ * @class
+ * @extends BaseWorker
+ */
 class BackupWorker extends BaseWorker
 {
     public function Run(): void

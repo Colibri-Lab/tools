@@ -12,8 +12,8 @@ use App\Modules\Tools\Models\Backup;
 
 /**
  * Таблица, представление данных в хранилище Точки восстановления
- * @author <author name and email>
- * @package App\Modules\Tools\Models
+ * @class
+ * @extends BaseModelDataTable
  * 
  * @method Backup[] getIterator()
  * @method Backup _createDataRowObject()

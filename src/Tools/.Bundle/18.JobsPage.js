@@ -1,3 +1,9 @@
+/**
+ * Jobs page component
+ * @class
+ * @extends Colibri.UI.Component
+ * @memberof App.Modules.Tools
+ */
 App.Modules.Tools.JobsPage = class extends Colibri.UI.Component 
 {
     constructor(name, container) {

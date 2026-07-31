@@ -16,6 +16,8 @@ use InvalidArgumentException;
 
 /**
  * Themes controller
+ * @class
+ * @extends WebController
  */
 class ThemesController extends WebController
 {

@@ -14,6 +14,8 @@ use InvalidArgumentException;
 
 /**
  * Notices controller
+ * @class
+ * @extends WebController
  */
 class NoticesController extends WebController
 {

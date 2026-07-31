@@ -8,6 +8,11 @@ use CometApiClient\Client;
 use Colibri\App;
 use Throwable;
 
+/**
+ * Worker for executing scripts
+ * @class
+ * @extends BaseWorker
+ */
 class ExecuteWorker extends BaseWorker
 {
     public function Run(): void

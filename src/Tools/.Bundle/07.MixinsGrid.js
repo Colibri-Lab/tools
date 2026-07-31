@@ -1,3 +1,9 @@
+/**
+ * Mixins grid component
+ * @class
+ * @extends Colibri.UI.Grid
+ * @memberof App.Modules.Tools
+ */
 App.Modules.Tools.MixinsGrid = class extends Colibri.UI.Grid {
 
     constructor(name, container) {

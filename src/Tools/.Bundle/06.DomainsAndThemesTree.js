@@ -1,3 +1,9 @@
+/**
+ * Domains and themes tree component
+ * @class
+ * @extends Colibri.UI.Tree
+ * @memberof App.Modules.Tools
+ */
 App.Modules.Tools.DomainsAndThemesTree = class extends Colibri.UI.Tree {
     
     constructor(name, container) {

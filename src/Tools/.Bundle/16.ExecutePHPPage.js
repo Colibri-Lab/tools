@@ -1,3 +1,9 @@
+/** 
+ * Execute PHP page component
+ * @class
+ * @extends Colibri.UI.Component
+ * @memberof App.Modules.Tools
+ */
 App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component 
 {
     constructor(name, container) {

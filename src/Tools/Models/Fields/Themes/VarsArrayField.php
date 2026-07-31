@@ -10,8 +10,9 @@ use App\Modules\Tools\Models\Fields\Themes\VarsObjectField;
 
 /**
  * Представление поля в таблице в хранилище Переменные
- * @author <author name and email>
- * @package App\Modules\Tools\Models\Fields\Themes\Fields
+ * @class
+ * @extends ArrayField
+ * 
  * @method VarsObjectField Item(int $index)
  * @method VarsObjectField offsetGet(mixed $offset)
  */

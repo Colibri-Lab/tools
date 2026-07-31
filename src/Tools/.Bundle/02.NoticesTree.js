@@ -1,3 +1,9 @@
+/**
+ * Notices tree component
+ * @class
+ * @extends Colibri.UI.Tree
+ * @memberof App.Modules.Tools
+ */
 App.Modules.Tools.NoticesTree = class extends Colibri.UI.Tree {
     
     constructor(name, container) {

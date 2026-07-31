@@ -14,6 +14,8 @@ use InvalidArgumentException;
 
 /**
  * Site settings controller
+ * @class
+ * @extends WebController
  */
 class SettingsController extends WebController
 {

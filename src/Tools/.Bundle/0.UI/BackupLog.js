@@ -1,3 +1,8 @@
+/**
+ * @class
+ * @extends Colibri.UI.Component
+ * @memberof App.Modules.Tools.UI
+ */
 App.Modules.Tools.UI.BackupLog = class extends Colibri.UI.Component
 {
     constructor(name, container) {

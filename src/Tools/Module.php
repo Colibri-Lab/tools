@@ -26,7 +26,8 @@ use CometApiClient\Client as CometClient;
 
 /**
  * Tools module
- * @package App\Modules\Tools
+ * @class
+ * @extends BaseModule
  *
  *
  */

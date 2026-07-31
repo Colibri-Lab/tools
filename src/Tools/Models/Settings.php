@@ -11,8 +11,8 @@ use App\Modules\Tools\Models\Setting;
 
 /**
  * Таблица, представление данных в хранилище Настройки
- * @author <author name and email>
- * @package App\Modules\Tools\Models
+ * @class
+ * @extends BaseModelDataTable
  *
  * @method Setting[] getIterator()
  * @method Setting _createDataRowObject()

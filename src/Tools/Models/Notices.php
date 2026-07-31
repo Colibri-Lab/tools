@@ -14,8 +14,8 @@ use Colibri\App;
 
 /**
  * Таблица, представление данных в хранилище Шаблоны писем
- * @author <author name and email>
- * @package App\Modules\Tools\Models
+ * @class
+ * @extends BaseModelDataTable
  *
  * @method Notice[] getIterator()
  * @method Notice _createDataRowObject()

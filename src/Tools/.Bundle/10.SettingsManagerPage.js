@@ -1,3 +1,9 @@
+/**
+ * Settings manager page component
+ * @class
+ * @extends Colibri.UI.Component
+ * @memberof App.Modules.Tools
+ */
 App.Modules.Tools.SettingsManagerPage = class extends Colibri.UI.Component 
 {
 

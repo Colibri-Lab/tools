@@ -10,8 +10,8 @@ use Colibri\Data\Storages\Fields\ObjectField;
 
 /**
  * Представление поля в таблице в хранилище Параметры
- * @author <author name and email>
- * @package App\Modules\Tools\Models\Fields\Themes\Fields
+ * @class
+ * @extends ObjectField
  * 
  * region Properties:
  * @property string|null $name Название параметра

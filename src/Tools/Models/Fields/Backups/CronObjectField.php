@@ -10,8 +10,8 @@ use Colibri\Data\Storages\Fields\ValueField;
 
 /**
  * Представление поля в таблице в хранилище Запись в CRON
- * @author <author name and email>
- * @package App\Modules\Tools\Models\Fields\Backups\Fields
+ * @class
+ * @extends ObjectField
  * 
  * region Properties:
  * @property ValueField|string|null $minute Минута
