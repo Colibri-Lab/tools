@@ -14,25 +14,31 @@ use Colibri\Common\VariableHelper;
 use Colibri\IO\FileSystem\File;
 
 /**
- * Представление строки в таблице в хранилище Темы
+ * Representation of a row in the theme storage table
  * @class
  * @extends BaseModelDataRow
  *
  * region Properties:
- * @property int $id ID строки
- * @property DateTimeField $datecreated Дата создания строки
- * @property DateTimeField $datemodified Дата последнего обновления строки
- * @property DateTimeField $datedeleted Дата удаления строки (если включно мягкое удаление)
- * @property string|null $name Наименование
- * @property string|null $desc Описание темы
- * @property string|null $domain Ключ домена
- * @property bool|null $current Текущая
- * @property VarsArrayField|null $vars Переменные
- * @property MixinsArrayField|null $mixins Mixin-ы
+ * @property int $id ID of the row
+ * @property DateTimeField $datecreated Date of row creation
+ * @property DateTimeField $datemodified Date of last row update
+ * @property DateTimeField $datedeleted Date of row deletion (if soft delete is enabled)
+ * @property string|null $name Name
+ * @property string|null $desc Theme description
+ * @property string|null $domain Domain key
+ * @property bool|null $current Current
+ * @property VarsArrayField|null $vars Variables
+ * @property MixinsArrayField|null $mixins Mixins
  * endregion Properties;
  */
 class Theme extends BaseModelDataRow
 {
+    /**
+     * Json schema for the theme object field
+     * @public
+     * @const
+     * @var array
+     */
     public const JsonSchema = [
         'type' => 'object',
         'required' => [
@@ -62,6 +68,11 @@ class Theme extends BaseModelDataRow
 
 	# endregion Consts;
 
+    /**
+     * Generates a SCSS file for the theme, caching it if it already exists and is up to date
+     * @return string path to the generated SCSS file
+     * @public
+     */
     public function Generate(): string
     {
         $cachePath = 'res/themes/';
@@ -93,6 +104,12 @@ class Theme extends BaseModelDataRow
         return App::$webRoot . $cachePath . $cacheName;
     }
 
+    /**
+     * Imports theme data from an object, setting variables and mixins accordingly
+     * @param object $themeData The theme data object containing vars and mixins
+     * @return \Colibri\Data\SqlClient\QueryInfo|bool result of the save operation
+     * @public
+     */
     public function Import(object $themeData): \Colibri\Data\SqlClient\QueryInfo|bool
     {
 

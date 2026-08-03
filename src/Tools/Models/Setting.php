@@ -9,24 +9,30 @@ use Colibri\Data\Storages\Fields\TextArea;
 use Colibri\Data\Storages\Fields\ValueField;
 
 /**
- * Представление строки в таблице в хранилище Настройки
+ * Represents a row in the Settings storage table
  * @class
  * @extends BaseModelDataRow
  * 
  * region Properties:
- * @property int $id ID строки
- * @property DateTimeField $datecreated Дата создания строки
- * @property DateTimeField $datemodified Дата последнего обновления строки
- * @property DateTimeField $datedeleted Дата удаления строки (если включно мягкое удаление)
- * @property string|string|null $name Наименование настройки
- * @property ValueField|string|string|int|float $type Тип настройки
- * @property string|string|null $desc Описание настройки
- * @property string|null $value Значение
+ * @property int $id ID of the row
+ * @property DateTimeField $datecreated Date the row was created
+ * @property DateTimeField $datemodified Date the row was last updated
+ * @property DateTimeField $datedeleted Date the row was deleted (if soft delete is enabled)
+ * @property string|string|null $name Name of the setting
+ * @property ValueField|string|string|int|float $type Type of the setting
+ * @property string|string|null $desc Description of the setting
+ * @property string|null $value Value of the setting
  * endregion Properties;
  */
 class Setting extends BaseModelDataRow
 {
 
+    /**
+     * Json schema for the setting object field
+     * @public
+     * @const
+     * @var array
+     */
     public const JsonSchema = [
         'type' => 'object',
         'required' => [
@@ -51,28 +57,73 @@ class Setting extends BaseModelDataRow
     ];
 
     # region Consts:
-	/** Целое число */
+	/** 
+     * Integer
+     * @const
+     * @public 
+     */
 	public const TypeInteger = 'integer';
-	/** Число с плавающей запятой */
+	/** 
+     * Floating point number
+     * @const
+     * @public
+     */
 	public const TypeDouble = 'double';
-	/** Текст */
+	/** 
+     * Text 
+     * @const
+     * @public
+     */
 	public const TypeText = 'text';
-	/** Большой текст */
+	/** 
+     * Large text
+     * @const
+     * @public 
+     */
 	public const TypeTextarea = 'textarea';
-	/** Редактор HTML */
+	/** 
+     * HTML editor
+     * @const
+     * @public
+     */
 	public const TypeHtml = 'html';
-	/** Код HTML */
+	/** 
+     * HTML code
+     * @const
+     * @public
+     */
 	public const TypeHtmlcode = 'htmlcode';
-	/** Дата */
+	/** 
+     * Date
+     * @const
+     * @public
+     */
 	public const TypeDate = 'date';
-	/** Дата и время */
+	/** 
+     * Date and time
+     * @const
+     * @public
+     */
 	public const TypeDatetime = 'datetime';
-	/** Файл */
+	/** 
+     * File
+     * @const
+     * @public
+     */
 	public const TypeFile = 'file';
-	/** Файлы */
+	/** 
+     * Files
+     * @const
+     * @public
+     */
 	public const TypeFiles = 'files';
 	# endregion Consts;
 
+    /**
+     * Returns the value of the setting based on its type
+     * @return mixed
+     * @public
+     */
     public function getPropertyValue(): mixed
     {
         $value = $this->_data['settings_value'];
@@ -91,7 +142,7 @@ class Setting extends BaseModelDataRow
                 return (float) $value;
             case Setting::TypeDate:
                 return new DateField($value);
-            case Setting::TypeDateTime:
+            case Setting::TypeDatetime:
                 return new DateTimeField($value);
         }
     }

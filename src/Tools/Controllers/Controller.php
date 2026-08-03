@@ -30,6 +30,7 @@ class Controller extends WebController
      * @param RequestCollection $post a request post data
      * @param mixed $payload payload object in POST/PUT request
      * @return object
+     * @public
      */
     public function Index(RequestCollection $get, RequestCollection $post, mixed $payload = null)
     {
@@ -81,6 +82,7 @@ class Controller extends WebController
      * @param \stdClass|null $payload
      * @return \stdClass
      * @throws \App\Modules\Tools\Exception
+     * @public
      */
     public function Bundle(RequestCollection $get, RequestCollection $post, ?\stdClass $payload): \stdClass
     {

@@ -38,6 +38,8 @@ class Module extends BaseModule
     /**
      * Initializes a module
      * @return void
+     * @constructor
+     * @public
      */
     public function InitializeModule(): void
     {
@@ -46,6 +48,8 @@ class Module extends BaseModule
 
     /**
      * Returns a topmost menu for backend
+     * @return Item|array|null
+     * @public
      */
     public function GetTopmostMenu(): Item|array|null
     {
@@ -74,6 +78,7 @@ class Module extends BaseModule
     /**
      * Returns a permissions for module
      * @return array
+     * @public
      */
     public function GetPermissions(): array
     {
@@ -104,6 +109,7 @@ class Module extends BaseModule
      * @param Logger $logger
      * @param string $path
      * @return void
+     * @public
      */
     public function Backup(Logger $logger, string $path)
     {
@@ -131,6 +137,7 @@ class Module extends BaseModule
      * Generates a theme file for domain and returns a link
      * @param string $domain
      * @return string|null
+     * @public
      */
     public function Theme(string $domain): ?string
     {
@@ -146,6 +153,7 @@ class Module extends BaseModule
      * Generates a theme file for domain and returns a link
      * @param string $domain
      * @return string|null
+     * @public
      */
     public function ThemeName(string $domain): ?string
     {

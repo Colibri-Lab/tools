@@ -11,7 +11,7 @@ use Colibri\Data\Storages\Models\DataTable as BaseModelDataTable;
 use App\Modules\Tools\Models\Backup;
 
 /**
- * Таблица, представление данных в хранилище Точки восстановления
+ * Data table for backups
  * @class
  * @extends BaseModelDataTable
  * 
@@ -24,12 +24,13 @@ class Backups extends BaseModelDataTable
 {
 
     /**
-     * Конструктор
-     * @param DataAccessPoint $point точка доступа
-     * @param IDataReader|null $reader ридер
-     * @param string|\Closure $returnAs возвращать в виде класса
-     * @param Storage|null $storage хранилище
-     * @return void 
+     * Creates a new instance of the Backups data table
+     * @param DataAccessPoint $point data access point
+     * @param IDataReader|null $reader data reader
+     * @param string|\Closure $returnAs return as class
+     * @param Storage|null $storage storage
+     * @return void
+     * @public
      */
     public function __construct(DataAccessPoint $point, IDataReader $reader = null, string $returnAs = 'Backup', Storage|null $storage = null)
     {
@@ -38,15 +39,17 @@ class Backups extends BaseModelDataTable
 
 
     /**
-     * Создание модели по названию хранилища
-     * @param int $page страница
-     * @param int $pagesize размер страницы
-     * @param string $filter строка фильтрации
-     * @param string $order сортировка
-     * @param array $params параметры к запросу
+     * Creates a model by storage name
+     * @param int $page page
+     * @param int $pagesize page size
+     * @param string $filter filter string
+     * @param string $order order
+     * @param array $params query parameters
      * @return Backups
+     * @public
+     * @static
      */
-    static function LoadByFilter(int $page = -1, int $pagesize = 20, string $filter = null, string $order = null, array $params = [], bool $calculateAffected = true): ? Backups
+    public static function LoadByFilter(int $page = -1, int $pagesize = 20, string $filter = null, string $order = null, array $params = [], bool $calculateAffected = true): ? Backups
     {
         $storage = Storages::Instance()->Load('backups', 'tools');
         return parent::_loadByFilter($storage, $page, $pagesize, $filter, $order, $params, $calculateAffected);
@@ -60,6 +63,8 @@ class Backups extends BaseModelDataTable
      * @param string $sortField sort field
      * @param string $sortOrder sort order, default asc
      * @return ?Backups
+     * @public
+     * @static
      */
     public static function LoadBy(
         int $page = -1, 
@@ -76,59 +81,76 @@ class Backups extends BaseModelDataTable
     }
 
     /**
-     * Загружает без фильтра
-     * @param int $page страница
-     * @param int $pagesize размер страницы
+     * Creates a model by storage name
+     * @param int $page page
+     * @param int $pagesize page size
      * @return Backups 
+     * @public
+     * @static
      */
-    static function LoadAll(int $page = -1, int $pagesize = 20, bool $calculateAffected = false): ? Backups
+    public static function LoadAll(int $page = -1, int $pagesize = 20, bool $calculateAffected = false): ? Backups
     {
         return self::LoadByFilter($page, $pagesize, null, null, [], $calculateAffected);
     }
 
     /**
-     * Возвращает модель по ID
-     * @param int $id ID строки
+     * Creates a model by ID
+     * @param int $id ID of the row
      * @return Backup|null
+     * @public
+     * @static
      */
-    static function LoadById(int $id): Backup|null
+    public static function LoadById(int $id): Backup|null
     {
         $table = self::LoadByFilter(1, 1, '{id}=[[id:integer]]', null, ['id' => $id], false);
         return $table && $table->Count() > 0 ? $table->First() : null;
     }
 
     /**
-     * Создание модели по названию хранилища
+     * Creates a new empty row
      * @return Backup
+     * @public
+     * @static
      */
-    static function LoadEmpty(): Backup
+    public static function LoadEmpty(): Backup
     {
         $table = self::LoadByFilter(-1, 20, 'false', null, [], false);
         return $table->CreateEmptyRow();
     }
 
     /**
-     * Удаляет все по списку ID
-     * @param int[] $ids ID строки
+     * Deletes all rows by their IDs
+     * @param array $ids array of IDs to delete
      * @return bool
+     * @public
+     * @static
      */
-    static function DeleteAllByIds(array $ids): bool
+    public static function DeleteAllByIds(array $ids): bool
     {
         return self::DeleteAllByFilter('{id} in (' . implode(',', $ids) . ')');
     }
 
     /**
-     * Удаляет все по фильтру
-     * @param string $filter фильтр, допускается использование элементов вида {field}
+     * Deletes all rows by a filter
+     * @param string $filter filter string
      * @return bool
+     * @public
+     * @static
      */
-    static function DeleteAllByFilter(string $filter): bool
+    public static function DeleteAllByFilter(string $filter): bool
     {
-        $storage = Storages::Instance()->Load('backups', 'sites');
+        $storage = Storages::Instance()->Load('backups', 'tools');
         return self::DeleteByFilter($storage, $filter);
     }
 
-    static function DataMigrate(? Logger $logger = null): bool
+    /**
+     * Migrate the data of the module
+     * @param Logger|null $logger Logger for logging
+     * @return bool Returns true if the migration was successful, false otherwise
+     * @public
+     * @static
+     */
+    public static function DataMigrate(? Logger $logger = null): bool
     {
         // миграция данных
         return true;

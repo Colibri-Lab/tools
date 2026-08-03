@@ -27,6 +27,7 @@ class ThemesController extends WebController
      * @param RequestCollection $post
      * @param mixed|null $payload
      * @return object
+     * @public
      */
     public function List(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
@@ -54,6 +55,7 @@ class ThemesController extends WebController
      * @param RequestCollection $post
      * @param mixed|null $payload
      * @return object
+     * @public
      */
     public function Delete(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
@@ -83,8 +85,8 @@ class ThemesController extends WebController
      * @param RequestCollection $get
      * @param RequestCollection $post
      * @param mixed|null $payload
-     * @throws InvalidArgumentException
      * @return object
+     * @public
      */
     public function Save(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
@@ -144,6 +146,7 @@ class ThemesController extends WebController
      * @param mixed|null $payload
      * @throws InvalidArgumentException
      * @return object
+     * @public
      */
     public function Import(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
@@ -205,6 +208,7 @@ class ThemesController extends WebController
      * @param RequestCollection $post
      * @param mixed|null $payload
      * @return object
+     * @public
      */
     public function SetAsCurrent(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
@@ -244,6 +248,7 @@ class ThemesController extends WebController
      * @param RequestCollection $post
      * @param mixed|null $payload
      * @return object
+     * @public
      */
     public function SaveVar(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
@@ -297,6 +302,7 @@ class ThemesController extends WebController
      * @param RequestCollection $post
      * @param mixed|null $payload
      * @return object
+     * @public
      */
     public function DeleteVars(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
@@ -343,6 +349,7 @@ class ThemesController extends WebController
      * @param RequestCollection $post
      * @param mixed|null $payload
      * @return object
+     * @public
      */
     public function SaveMixin(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
@@ -393,6 +400,7 @@ class ThemesController extends WebController
      * @param RequestCollection $post
      * @param mixed|null $payload
      * @return object
+     * @public
      */
     public function DeleteMixins(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {

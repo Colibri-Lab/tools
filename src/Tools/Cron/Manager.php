@@ -13,13 +13,27 @@ use App\Modules\Tools\Models\Backup;
 class Manager
 {
 
+    /**
+     * Cron job lines
+     * @private
+     * @var array
+     */
     private $_lines = [];
 
+    /**
+     * Constructor
+     * @public
+     */
     public function __construct()
     {
         $this->_loadLines();
     }
 
+    /**
+     * Load cron job lines from the cron file
+     * @private
+     * @return void
+     */
     private function _loadLines()
     {
 
@@ -50,6 +64,11 @@ class Manager
 
     }
 
+    /**
+     * Save cron job lines to the cron file
+     * @private
+     * @return void
+     */
     private function _saveLines()
     {
         $path = App::$appRoot . 'bin/';
@@ -62,6 +81,12 @@ class Manager
 
     }
 
+    /**
+     * Adds a new cron job to the cron file
+     * @param Backup $job The backup job to add to the cron file.
+     * @public
+     * @todo Implement this method to add a new cron job to the cron file.
+     */
     public function AddJob(Backup $job)
     {
         // TODO проверить что за хрень вообще
@@ -77,6 +102,12 @@ class Manager
         // $this->_saveLines();
     }
 
+    /**
+     * Removes a cron job from the cron file
+     * @param Backup $job The backup job to remove from the cron file.
+     * @public
+     * @todo Implement this method to remove a cron job from the cron file.
+     */
     public function RemoveJob(Backup $job)
     {
         // TODO проверить

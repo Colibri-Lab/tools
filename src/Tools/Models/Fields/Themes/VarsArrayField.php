@@ -9,7 +9,7 @@ use App\Modules\Tools\Models\Fields\Themes\VarsObjectField;
 # endregion Uses;
 
 /**
- * Представление поля в таблице в хранилище Переменные
+ * Array field for vars
  * @class
  * @extends ArrayField
  * 
@@ -18,6 +18,12 @@ use App\Modules\Tools\Models\Fields\Themes\VarsObjectField;
  */
 class VarsArrayField extends ArrayField
 {
+    /**
+     * Json schema for the vars array field
+     * @public
+     * @const
+     * @var array
+     */
     public const JsonSchema = [
         'type' => 'array',
         'items' => VarsObjectField::JsonSchema

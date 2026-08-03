@@ -7,22 +7,27 @@ use Colibri\Data\Storages\Models\DataRow as BaseModelDataRow;
 
 
 /**
- * Представление строки в таблице в хранилище Шаблоны писем
+ * Model for the notice
  * @class
  * @extends BaseModelDataRow
  * 
  * region Properties:
- * @property int $id ID строки
- * @property DateTimeField $datecreated Дата создания строки
- * @property DateTimeField $datemodified Дата последнего обновления строки
- * @property string|null $name Наименование шаблона
- * @property string|null $subject Тема письма
- * @property string|null $body Тело письма
+ * @property int $id Row ID
+ * @property DateTimeField $datecreated Date of creation of the row
+ * @property DateTimeField $datemodified Date of last modification of the row
+ * @property string|null $name Template name
+ * @property string|null $subject Email subject
+ * @property string|null $body Email body
  * endregion Properties;
  */
 class Notice extends BaseModelDataRow
 {
-
+    /**
+     * Json schema for the notice object field
+     * @public
+     * @const
+     * @var array
+     */
     public const JsonSchema = [
         'type' => 'object',
         'required' => [
@@ -46,7 +51,11 @@ class Notice extends BaseModelDataRow
     ];
 
     /**
-     * Обрабатывает вставки
+     * Applies the given object to the notice template, replacing placeholders with actual values.
+     * @param array|object $object The object containing values to replace in the template.
+     * @param array $attachments Optional array of attachments to include in the notice.
+     * @return void
+     * @public
      */
     public function Apply(array |object $object, array $attachments = []): void
     {

@@ -22,6 +22,7 @@ class ExecuteController extends WebController
      * @param RequestCollection $post
      * @param mixed|null $payload
      * @return object
+     * @public
      */
     public function Run(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
@@ -48,6 +49,7 @@ class ExecuteController extends WebController
      * @param RequestCollection $post
      * @param mixed|null $payload
      * @return object
+     * @public
      */
     public function Kill(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {

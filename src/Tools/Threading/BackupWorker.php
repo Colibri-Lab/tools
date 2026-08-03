@@ -17,6 +17,11 @@ use App\Modules\Tools\Models\Backups;
  */
 class BackupWorker extends BaseWorker
 {
+    /**
+     * Executes the backup process
+     * @return void
+     * @public
+     */
     public function Run(): void
     {
         $backup = $this->_params->backup;
@@ -49,7 +54,6 @@ class BackupWorker extends BaseWorker
         $this->_log->info("--complete--");
         $comet->SendToUser(App::$request->headers->{'requester'}, $user, 'message', (object) ['text' => 'Backup complete! Job: ' . $worker->key . ', backup: ' . $backup->id, 'exec' => '() => App.Router.Navigate(\'/mainframe/more/backup/\', {}, true, true)'], false);
 
-
-
     }
+    
 }

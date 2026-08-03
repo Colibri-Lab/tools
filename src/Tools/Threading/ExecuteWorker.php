@@ -15,6 +15,11 @@ use Throwable;
  */
 class ExecuteWorker extends BaseWorker
 {
+    /**
+     * Executes the script
+     * @return void
+     * @public
+     */
     public function Run(): void
     {
         $script = $this->_params->script;

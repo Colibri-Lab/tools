@@ -9,18 +9,24 @@ use Colibri\Data\Storages\Fields\ValueField;
 # endregion Uses;
 
 /**
- * Представление поля в таблице в хранилище Переменные
+ * Object field for vars
  * @class
  * @extends ObjectField
  * 
  * region Properties:
- * @property string|null $name Название переменной
- * @property ValueField|string|string|null $type Тип переменной
- * @property string|null $value Значение
+ * @property string|null $name Name of the variable
+ * @property ValueField|string|string|null $type Type of the variable
+ * @property string|null $value Value of the variable
  * endregion Properties;
  */
 class VarsObjectField extends ObjectField
 {
+    /**
+     * Json schema for the vars object field
+     * @public
+     * @const
+     * @var array
+     */
     public const JsonSchema = [
         'type' => 'object',
         'required' => [

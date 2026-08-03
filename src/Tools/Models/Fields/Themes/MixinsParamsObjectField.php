@@ -9,16 +9,22 @@ use Colibri\Data\Storages\Fields\ObjectField;
 # endregion Uses;
 
 /**
- * Представление поля в таблице в хранилище Параметры
+ * Object field for mixins parameters
  * @class
  * @extends ObjectField
  * 
  * region Properties:
- * @property string|null $name Название параметра
+ * @property string|null $name Name of the parameter
  * endregion Properties;
  */
 class MixinsParamsObjectField extends ObjectField
 {
+    /**
+     * Json schema for the mixins parameters object field
+     * @public
+     * @const
+     * @var array
+     */
     public const JsonSchema = [
         'type' => 'object',
         'required' => [

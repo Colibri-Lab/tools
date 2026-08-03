@@ -27,6 +27,7 @@ class BackupController extends WebController
      * @param RequestCollection $post
      * @param mixed|null $payload
      * @return object
+     * @public
      */
     public function List(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
@@ -53,6 +54,7 @@ class BackupController extends WebController
      * @param RequestCollection $post
      * @param mixed|null $payload
      * @return object
+     * @public
      */
     public function Delete(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
@@ -84,6 +86,7 @@ class BackupController extends WebController
      * @param mixed|null $payload
      * @throws InvalidArgumentException
      * @return object
+     * @public
      */
     public function Save(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {
@@ -142,6 +145,7 @@ class BackupController extends WebController
      * @param RequestCollection $post
      * @param mixed|null $payload
      * @return object
+     * @public
      */
     public function Cron(RequestCollection $get, RequestCollection $post, mixed $payload = null): object
     {

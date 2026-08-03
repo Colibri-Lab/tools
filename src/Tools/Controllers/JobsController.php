@@ -24,6 +24,7 @@ class JobsController extends WebController
      * @param RequestCollection $post данные POST
      * @param mixed $payload данные payload обьекта переданного через POST/PUT
      * @return object
+     * @public
      */
     public function Dashboard(RequestCollection $get, RequestCollection $post, ? PayloadCopy $payload = null): object
     {

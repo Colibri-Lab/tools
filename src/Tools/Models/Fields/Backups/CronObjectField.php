@@ -9,20 +9,26 @@ use Colibri\Data\Storages\Fields\ValueField;
 # endregion Uses;
 
 /**
- * Представление поля в таблице в хранилище Запись в CRON
+ * Cron job field
  * @class
  * @extends ObjectField
  * 
  * region Properties:
- * @property ValueField|string|null $minute Минута
- * @property ValueField|string|null $hour Час
- * @property ValueField|string|null $day День
- * @property ValueField|string|null $month Месяц
- * @property ValueField|string|null $dayofweek День недели
+ * @property ValueField|string|null $minute Minute
+ * @property ValueField|string|null $hour Hour
+ * @property ValueField|string|null $day Day
+ * @property ValueField|string|null $month Month
+ * @property ValueField|string|null $dayofweek Day of the week
  * endregion Properties;
  */
 class CronObjectField extends ObjectField
 {
+    /**
+     * Json schema for the cron job field
+     * @public
+     * @const
+     * @var array
+     */
     public const JsonSchema = [
         'type' => 'object',
         'required' => [

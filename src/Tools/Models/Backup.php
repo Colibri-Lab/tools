@@ -17,25 +17,31 @@ use Colibri\Data\Storages\Fields\ValueField;
 # endregion Uses;
 
 /**
- * Представление строки в таблице в хранилище Точки восстановления
+ * Representation of a row in the backup storage table
  * @class
  * @extends BaseModelDataRow
  * 
  * region Properties:
- * @property int $id ID строки
- * @property DateTimeField $datecreated Дата создания строки
- * @property DateTimeField $datemodified Дата последнего обновления строки
- * @property ValueField|string|null $status Статус
- * @property bool|null $running Запущено
- * @property string|null $name Наименование
- * @property CronObjectField|null $cron Запись в CRON
- * @property string|null $file Шаблон названия файла
+ * @property int $id ID of the row
+ * @property DateTimeField $datecreated Date of creation of the row
+ * @property DateTimeField $datemodified Date of last modification of the row
+ * @property ValueField|string|null $status Status
+ * @property bool|null $running Running
+ * @property string|null $name Name
+ * @property CronObjectField|null $cron CRON entry
+ * @property string|null $file File name template
  * endregion Properties;
  * @property-read string $controller вызов контроллера
  */
 class Backup extends BaseModelDataRow
 {
 
+	/**
+	 * Json schema for the backup object field
+	 * @public
+	 * @const
+	 * @var array
+	 */
 	public const JsonSchema = [
 		'type' => 'object',
 		'required' => [
@@ -61,13 +67,26 @@ class Backup extends BaseModelDataRow
 	];
 
 	# region Consts:
-	/** Остановлено */
+	/** 
+	 * Paused 
+	 * @const
+	 * @public
+	 */
 	public const StatusPaused = 'paused';
-	/** Включено */
+	/** 
+	 * Started 
+	 * @const
+	 * @public
+	 */
 	public const StatusStarted = 'started';
 	# endregion Consts;
 
 
+	/**
+	 * Returns the controller call for the backup
+	 * @public
+	 * @return string
+	 */
 	public function getPropertyController(): string
 	{
 		$currentUser = SecurityModule::Instance()->current;
@@ -75,7 +94,12 @@ class Backup extends BaseModelDataRow
 		return '/usr/bin/sh ' . App::$appRoot . 'bin/tools-backup.sh ' . $this->id . ' ' . $userGUID;
 	}
 
-
+	/**
+	 * Executes the backup job
+	 * @public
+	 * @param Logger $logger Logger for logging
+	 * @return void
+	 */
 	public function Run(Logger $logger): void
 	{
 		$dt = new DateTimeField('now');
@@ -107,6 +131,12 @@ class Backup extends BaseModelDataRow
 
 	}
 
+	/**
+	 * Saves the backup job and updates the cron file accordingly
+	 * @public
+	 * @param bool $performValidationBeforeSave Whether to perform validation before saving
+	 * @return bool|QueryInfo
+	 */
 	public function Save(bool $performValidationBeforeSave = false): bool|QueryInfo
 	{
 		$cronCommand = $this->cron->minute->value . ' ' . $this->cron->hour->value . ' ' . $this->cron->day->value . ' ' . $this->cron->month->value . ' ' . $this->cron->dayofweek->value . ' root ' . $this->controller;
@@ -123,6 +153,11 @@ class Backup extends BaseModelDataRow
 		return parent::Save($performValidationBeforeSave);
 	}
 
+	/**
+	 * Deletes the backup job and removes it from the cron file
+	 * @public
+	 * @return bool|QueryInfo
+	 */
 	private function _readCronFile(): array
 	{
 		$path = App::$appRoot . 'bin/cron';
@@ -142,6 +177,12 @@ class Backup extends BaseModelDataRow
 
 	}
 
+	/**
+	 * Saves the cron file with the provided commands
+	 * @private
+	 * @param array $commands The commands to save in the cron file
+	 * @return void
+	 */
 	private function _saveCronFile($commands): void
 	{
 

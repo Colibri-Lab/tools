@@ -13,7 +13,7 @@ use App\Modules\Tools\Module;
 use Colibri\App;
 
 /**
- * Таблица, представление данных в хранилище Шаблоны писем
+ * Table representing data in the storage "Email Templates"
  * @class
  * @extends BaseModelDataTable
  *
@@ -25,12 +25,13 @@ use Colibri\App;
 class Notices extends BaseModelDataTable
 {
     /**
-     * Конструктор
-     * @param DataAccessPoint $point точка доступа
-     * @param IDataReader|null $reader ридер
-     * @param string|\Closure $returnAs возвращать в виде класса
-     * @param Storage|null $storage хранилище
+     * Constructor
+     * @param DataAccessPoint $point access point
+     * @param IDataReader|null $reader reader
+     * @param string|\Closure $returnAs return as class
+     * @param Storage|null $storage storage
      * @return void
+     * @public
      */
     public function __construct(
         DataAccessPoint $point,
@@ -43,13 +44,15 @@ class Notices extends BaseModelDataTable
 
 
     /**
-     * Создание модели по названию хранилища
-     * @param int $page страница
-     * @param int $pagesize размер страницы
-     * @param string $filter строка фильтрации
-     * @param string $order сортировка
-     * @param array $params параметры к запросу
+     * Creates a data table by any filters
+     * @param int $page page
+     * @param int $pagesize page size
+     * @param string $filter filter string
+     * @param string $order sort order
+     * @param array $params query parameters
      * @return Notices
+     * @public
+     * @static
      */
     public static function LoadByFilter(
         int $page = -1,
@@ -71,6 +74,8 @@ class Notices extends BaseModelDataTable
      * @param string $sortField sort field
      * @param string $sortOrder sort order, default asc
      * @return ?Notices
+     * @public
+     * @static
      */
     public static function LoadBy(
         int $page = -1, 
@@ -87,10 +92,12 @@ class Notices extends BaseModelDataTable
     }
 
     /**
-     * Загружает без фильтра
-     * @param int $page страница
-     * @param int $pagesize размер страницы
+     * Loads without filter
+     * @param int $page page
+     * @param int $pagesize page size
      * @return Notices
+     * @public
+     * @static
      */
     public static function LoadAll(
         int $page = -1,
@@ -101,9 +108,11 @@ class Notices extends BaseModelDataTable
     }
 
     /**
-     * Возвращает модель по ID
-     * @param int $id ID строки
+     * Creates a model by ID
+     * @param int $id ID of the row
      * @return Notice|null
+     * @public  
+     * @static
      */
     public static function LoadById(int $id): Notice|null
     {
@@ -112,9 +121,11 @@ class Notices extends BaseModelDataTable
     }
 
     /**
-     * Возвращает модель по наименованию
-     * @param string $name наименование строки
+     * Creates a model by name
+     * @param string $name name of the row
      * @return Notice|null
+     * @public
+     * @static
      */
     public static function LoadByName(string $name): Notice|null
     {
@@ -123,8 +134,10 @@ class Notices extends BaseModelDataTable
     }
 
     /**
-     * Создание модели по названию хранилища
+     * Creates a model by the name of the storage
      * @return Notice
+     * @public
+     * @static
      */
     public static function LoadEmpty(): Notice
     {
@@ -132,6 +145,15 @@ class Notices extends BaseModelDataTable
         return $table->CreateEmptyRow();
     }
 
+    /**
+     * Sends a notice to the specified recipient using the provided SMTP configuration.
+     * @param string $recipient The email address of the recipient.
+     * @param Notice $notice The notice object containing subject, body, and attachments.
+     * @param array|null $configArray Optional SMTP configuration array. If not provided, the default configuration will be used.
+     * @return bool Returns true if the email was sent successfully, false otherwise.
+     * @public
+     * @static
+     */
     public static function Send(string $recipient, Notice $notice, ?array $configArray = null): bool
     {
         try {

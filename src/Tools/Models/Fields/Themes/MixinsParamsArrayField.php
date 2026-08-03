@@ -9,7 +9,7 @@ use App\Modules\Tools\Models\Fields\Themes\MixinsParamsObjectField;
 # endregion Uses;
 
 /**
- * Представление поля в таблице в хранилище Параметры
+ * Array field for mixins parameters
  * @class
  * @extends ArrayField
  * 
@@ -18,6 +18,12 @@ use App\Modules\Tools\Models\Fields\Themes\MixinsParamsObjectField;
  */
 class MixinsParamsArrayField extends ArrayField
 {
+    /**
+     * Json schema for the mixins parameters array field
+     * @public
+     * @const
+     * @var array
+     */
     public const JsonSchema = [
         'type' => 'array',
         'items' => MixinsParamsObjectField::JsonSchema

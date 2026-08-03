@@ -10,7 +10,7 @@ use Colibri\Data\Storages\Models\DataTable as BaseModelDataTable;
 use App\Modules\Tools\Models\Setting;
 
 /**
- * Таблица, представление данных в хранилище Настройки
+ * Data table for settings
  * @class
  * @extends BaseModelDataTable
  *
@@ -22,15 +22,22 @@ use App\Modules\Tools\Models\Setting;
  */
 class Settings extends BaseModelDataTable
 {
+    /**
+     * Cached settings
+     * @var array|null
+     * @private
+     * @static
+     */
     private static ?array $_allSettings = null;
 
     /**
-     * Конструктор
-     * @param DataAccessPoint $point точка доступа
-     * @param IDataReader|null $reader ридер
-     * @param string|\Closure $returnAs возвращать в виде класса
-     * @param Storage|null $storage хранилище
+     * Creates a new instance of the Settings data table
+     * @param DataAccessPoint $point data access point
+     * @param IDataReader|null $reader data reader
+     * @param string|\Closure $returnAs return as class
+     * @param Storage|null $storage storage
      * @return void
+     * @public
      */
     public function __construct(
         DataAccessPoint $point,
@@ -42,7 +49,10 @@ class Settings extends BaseModelDataTable
     }
 
     /**
-     * Кэширует настройки
+     * Caches all settings in memory for quick access
+     * @return void
+     * @public
+     * @static
      */
     public static function Cache(): void
     {
@@ -56,12 +66,26 @@ class Settings extends BaseModelDataTable
         }
     }
 
+    /**
+     * Gets a setting value by name
+     * @param string $name name of the setting
+     * @return mixed|null value of the setting or null if not found
+     * @public
+     * @static
+     */
     public static function Get(string $name): mixed
     {
         self::Cache();
         return self::$_allSettings[$name] ?? null;
     }
 
+    /**
+     * Lists all settings, optionally filtered by a prefix
+     * @param string|null $like optional prefix to filter settings
+     * @return array list of settings
+     * @public
+     * @static
+     */
     public static function List(?string $like = null): array
     {
         self::Cache();
@@ -78,13 +102,15 @@ class Settings extends BaseModelDataTable
     }
 
     /**
-     * Создание модели по названию хранилища
-     * @param int $page страница
-     * @param int $pagesize размер страницы
-     * @param string $filter строка фильтрации
-     * @param string $order сортировка
-     * @param array $params параметры к запросу
+     * Creates a data table by any filters
+     * @param int $page page
+     * @param int $pagesize page size
+     * @param string $filter filter string
+     * @param string $order sort order
+     * @param array $params query parameters
      * @return Settings
+     * @public
+     * @static
      */
     public static function LoadByFilter(
         int $page = -1,
@@ -106,6 +132,8 @@ class Settings extends BaseModelDataTable
      * @param string $sortField sort field
      * @param string $sortOrder sort order, default asc
      * @return ?Settings
+     * @public
+     * @static
      */
     public static function LoadBy(
         int $page = -1, 
@@ -122,10 +150,12 @@ class Settings extends BaseModelDataTable
     }
 
     /**
-     * Загружает без фильтра
-     * @param int $page страница
-     * @param int $pagesize размер страницы
+     * Loads all settings without any filter
+     * @param int $page page
+     * @param int $pagesize page size
      * @return Settings
+     * @public
+     * @static
      */
     public static function LoadAll(int $page = -1, int $pagesize = 20, bool $calculateAffected = false): ?Settings
     {
@@ -133,9 +163,11 @@ class Settings extends BaseModelDataTable
     }
 
     /**
-     * Возвращает модель по ID
-     * @param int $id ID строки
+     * Returns the model by ID
+     * @param int $id ID of the row
      * @return Setting|null
+     * @public
+     * @static
      */
     public static function LoadById(int $id): Setting|null
     {
@@ -144,9 +176,11 @@ class Settings extends BaseModelDataTable
     }
 
     /**
-     * Возвращает модель по наименованию
-     * @param string $name наименование строки
+     * Returns the model by name
+     * @param string $name name of the row
      * @return Setting|null
+     * @public
+     * @static
      */
     public static function LoadByName(string $name): Setting|null
     {
@@ -155,7 +189,12 @@ class Settings extends BaseModelDataTable
     }
 
     /**
-     * Создание модели по названию хранилища
+     * Creates an empty setting model with optional name, type, and value
+     * @param string|null $name optional name of the setting
+     * @param string|null $type optional type of the setting
+     * @param mixed|null $value optional value of the setting
+     * @public
+     * @static
      * @return Setting
      */
     public static function LoadEmpty(?string $name = null, ?string $type = null, mixed $value = null): Setting
