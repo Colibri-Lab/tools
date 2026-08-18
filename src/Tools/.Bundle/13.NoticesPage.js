@@ -7,6 +7,12 @@
 App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component 
 {
 
+    /**
+     * Creates an instance of NoticesPage.
+     * @param {string} name - The name of the component
+     * @param {Colibri.UI.Container} container - The container to which the component belongs
+     * @constructor
+     */
     constructor(name, container) {
         super(name, container, Colibri.UI.Templates['App.Modules.Tools.NoticesPage']);
 
@@ -32,6 +38,7 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */ 
     __noticesSelectionChanged(event, args) {
 
@@ -88,6 +95,7 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */ 
     __noticesNodeEditCompleted(event, args) {
 
@@ -111,6 +119,7 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */ 
     __renderNoticesContextMenu(event, args) {
         let contextmenu = [];
@@ -144,6 +153,7 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */ 
     __clickOnNoticesContextMenu(event, args) {
         const item = args?.item;
@@ -182,6 +192,7 @@ App.Modules.Tools.NoticesPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */ 
     __saveClicked(event, args) {
 

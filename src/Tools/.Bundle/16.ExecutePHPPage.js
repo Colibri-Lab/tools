@@ -6,6 +6,12 @@
  */
 App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component 
 {
+    /**
+     * Creates an instance of ExecutePHPPage.
+     * @param {string} name - The name of the component
+     * @param {Colibri.UI.Container} container - The container to which the component belongs
+     * @constructor
+     */
     constructor(name, container) {
         super(name, container, Colibri.UI.Templates['App.Modules.Tools.ExecutePHPPage']);
 
@@ -56,6 +62,10 @@ App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component
         } 
     }
 
+    /**
+     * @private
+     * @ignore
+     */
     _disableControls() {
         this._button.enabled = false;
         this._kill.enabled = true;
@@ -64,6 +74,10 @@ App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component
         this._running.shown = true;
     }
     
+    /**
+     * @private
+     * @ignore
+     */
     _enableControls() {
         this._button.enabled = true;
         this._kill.enabled = false;
@@ -76,6 +90,7 @@ App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */ 
     __runClicked(event, args) {
 
@@ -98,6 +113,7 @@ App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */ 
     __killClicked(event, args) {
         Tools.Call('Execute', 'Kill', {pid: this._runningScriptPid}).then((response) => {
@@ -112,6 +128,12 @@ App.Modules.Tools.ExecutePHPPage = class extends Colibri.UI.Component
         });
     }
 
+    /**
+     * @private
+     * @param {Colibri.Events.Event} event event object
+     * @param {*} args event arguments
+     * @ignore
+     */
     __cometEventReceived(event, args) {
         if(args.event.action === this._runningChannel) {
             // наше, обрабатываем

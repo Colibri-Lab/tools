@@ -6,7 +6,12 @@
  */
 App.Modules.Tools.SettingsDataPage = class extends Colibri.UI.Component 
 {
-
+    /**
+     * Creates an instance of SettingsDataPage.
+     * @param {string} name - The name of the component
+     * @param {Colibri.UI.Container} container - The container to which the component belongs
+     * @constructor
+     */
     constructor(name, container) {
         super(name, container, Colibri.UI.Templates['App.Modules.Tools.SettingsDataPage']);
 
@@ -25,6 +30,7 @@ App.Modules.Tools.SettingsDataPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */ 
     __settingsSelectionChanged(event, args) {
 
@@ -124,6 +130,7 @@ App.Modules.Tools.SettingsDataPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */ 
     __saveClicked(event, args) {
 

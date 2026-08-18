@@ -6,6 +6,12 @@
  */
 App.Modules.Tools.BackupPage = class extends Colibri.UI.Component {
 
+    /**
+     * Creates an instance of BackupPage.
+     * @param {string} name - The name of the component
+     * @param {Colibri.UI.Container} container - The container to which the component belongs
+     * @constructor
+     */
     constructor(name, container) {
         super(name, container, Colibri.UI.Templates['App.Modules.Tools.BackupPage']);
 
@@ -20,6 +26,11 @@ App.Modules.Tools.BackupPage = class extends Colibri.UI.Component {
         this._backups.AddHandler('ContextMenuItemClicked', this.__clickOnDataContextMenu, false, this);
     }
 
+    /**
+     * @param {*} data
+     * @private
+     * @ignore
+     */
     _showCreateEditWindow(data = null) {
 
         const title = data ? '#{tools-backups-windowtitle-editbackup}' : '#{tools-backups-windowtitle-newbackup}';
@@ -38,6 +49,7 @@ App.Modules.Tools.BackupPage = class extends Colibri.UI.Component {
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */
     __createButtonClicked(event, args) {
         this._showCreateEditWindow();
@@ -47,6 +59,7 @@ App.Modules.Tools.BackupPage = class extends Colibri.UI.Component {
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */
     __renderDataContextMenu(event, args) {
         let contextmenu = [];
@@ -63,6 +76,7 @@ App.Modules.Tools.BackupPage = class extends Colibri.UI.Component {
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */
     __clickOnDataContextMenu(event, args) {
         const item = args?.item;
@@ -85,6 +99,7 @@ App.Modules.Tools.BackupPage = class extends Colibri.UI.Component {
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */
     __doubleClickedOnData(event, args) {
         const data = this._backups.selected?.value;

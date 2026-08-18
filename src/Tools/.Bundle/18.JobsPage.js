@@ -6,6 +6,12 @@
  */
 App.Modules.Tools.JobsPage = class extends Colibri.UI.Component 
 {
+    /**
+     * Creates an instance of JobsPage.
+     * @param {string} name - The name of the component
+     * @param {Colibri.UI.Container} container - The container to which the component belongs
+     * @constructor
+     */
     constructor(name, container) {
         super(name, container, Colibri.UI.Templates['App.Modules.Tools.JobsPage']);
 
@@ -31,6 +37,7 @@ App.Modules.Tools.JobsPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */ 
     __thisShown(event, args) {
         Tools.Store.Reload('tools.pipelines', false);
@@ -43,6 +50,7 @@ App.Modules.Tools.JobsPage = class extends Colibri.UI.Component
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */ 
     __thisHidden(event, args) {
         Colibri.Common.StopTimer('pipelines');
@@ -53,7 +61,8 @@ App.Modules.Tools.JobsPage = class extends Colibri.UI.Component
      * Render bounded to component data
      * @protected
      * @param {*} data 
-     * @param {String} path 
+     * @param {String} path
+     * @ignore 
      */
     __renderBoundedValues(data, path) {
         if(!data) {
@@ -77,6 +86,11 @@ App.Modules.Tools.JobsPage = class extends Colibri.UI.Component
         this._value = value;
         this._showValue();
     }
+    
+    /**
+     * @private
+     * @ignore
+     */
     _showValue() {
         
         this._splitVrTopActivePipelines.rows.Update(this._value.active);

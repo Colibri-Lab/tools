@@ -5,6 +5,12 @@
  * @memberof App.Modules.Tools
  */
 App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
+    /**
+     * Creates an instance of ThemesPage.
+     * @param {string} name - The name of the component
+     * @param {Colibri.UI.Container} container - The container to which the component belongs
+     * @constructor
+     */
     constructor(name, container) {
         super(name, container, Colibri.UI.Templates['App.Modules.Tools.ThemesPage']);
 
@@ -46,6 +52,10 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
 
     }
 
+    /**
+     * @private
+     * @ignore
+     */
     _enableControls() {
         const selected = this._domainsAndThemes?.selected;
         const selectedVar = this._varsGrid.selected;
@@ -69,6 +79,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */
     __themesSelectionChanged(event, args) {
         const selected = this._domainsAndThemes?.selected;
@@ -89,6 +100,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */
     __varsSelectionChagned(event, args) {
         this._enableControls();
@@ -98,6 +110,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */
     __mixinsSelectionChagned(event, args) {
         this._enableControls();
@@ -107,6 +120,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */
     __themesNodeEditCompleted(event, args) {
         const node = args.node;
@@ -127,6 +141,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */
     __renderThemesContextMenu(event, args) {
         let contextmenu = [];
@@ -160,6 +175,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */
     __clickOnThemesContextMenu(event, args) {
         const item = args?.item;
@@ -262,6 +278,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */
     __themesNodeDoubleClicked(event, args) {
         const theme = this._domainsAndThemes.selected?.tag;
@@ -296,11 +313,22 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
 
     }
 
+    /**
+     * @param {*} selectedTheme
+     * @private
+     * @ignore
+     */
     _showVarsAndMixins(selectedTheme) {
         this._varsGrid.binding = selectedTheme.vars ?? [];
         this._mixinsGrid.binding = selectedTheme.mixins ?? [];
     }
 
+    /**
+     * @param {*} fields
+     * @param {*} value
+     * @private
+     * @ignore
+     */
     _getValueField(fields, value) {
         fields.fields.value.params.readonly = false;
         if (value === 'color') {
@@ -331,6 +359,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */
     __addVarButtonClicked(event, args) {
         const theme = this._domainsAndThemes.selected?.tag?.data;
@@ -368,6 +397,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */
     __editVarButtonClicked(event, args) {
         let selected = this._varsGrid.selected;
@@ -414,6 +444,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */
     __deleteVarButtonClicked(event, args) {
         const theme = this._domainsAndThemes.selected?.tag?.data;
@@ -447,6 +478,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */
     __varsDoubleClicked(event, args) {
         this.__editVarButtonClicked(event, args);
@@ -477,6 +509,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */
     __editMixinButtonClicked(event, args) {
         let selected = this._mixinsGrid.selected;
@@ -505,6 +538,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */
     __deleteMixinButtonClicked(event, args) {
         const theme = this._domainsAndThemes.selected?.tag?.data;
@@ -531,6 +565,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
+     * @ignore
      */
     __mixinsDoubleClicked(event, args) {
         this.__editMixinButtonClicked(event, args);

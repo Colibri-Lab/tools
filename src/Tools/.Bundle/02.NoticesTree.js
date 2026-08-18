@@ -6,6 +6,12 @@
  */
 App.Modules.Tools.NoticesTree = class extends Colibri.UI.Tree {
     
+    /**
+     * Creates an instance of NoticesTree.
+     * @param {string} name - The name of the component
+     * @param {Colibri.UI.Container} container - The container to which the component belongs
+     * @constructor
+     */
     constructor(name, container) {
         super(name, container);
         this.AddClass('app-notices-tree-component');
@@ -24,6 +30,7 @@ App.Modules.Tools.NoticesTree = class extends Colibri.UI.Tree {
      * @protected
      * @param {*} data 
      * @param {String} path 
+     * @private
      */
     __renderBoundedValues(data, path) {
         if(!data) {
@@ -98,6 +105,12 @@ App.Modules.Tools.NoticesTree = class extends Colibri.UI.Tree {
 
     }
 
+    /**
+     * Removes nodes that do not exist in the provided list of found node names
+     * @private
+     * @param {Array<string>} found - The list of found node names
+     * @ignore
+     */
     _removeUnexistent(found) {
         this.allNodes.forEach((node) => {
             if(node.tag === null) {
@@ -109,6 +122,14 @@ App.Modules.Tools.NoticesTree = class extends Colibri.UI.Tree {
         });
     }
 
+    /**
+     * Adds a new node to the notices tree
+     * @param {string} title - The title of the new node
+     * @param {object} tag - The tag data to associate with the new node
+     * @param {Colibri.UI.TreeNode} [parentNode=null] - The parent node to which the new node will be added (optional)
+     * @returns {Colibri.UI.TreeNode} - The newly added tree node
+     * @public
+     */
     AddNew(title, tag, parentNode = null) {
 
         const node = (parentNode ?? this).nodes.Add('new');

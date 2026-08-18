@@ -6,13 +6,19 @@
  */
 App.Modules.Tools = class extends Colibri.Modules.Module {
 
-    /** @constructor */
+    /** 
+     * Module constructor
+     * @constructor
+     */
     constructor() {
         super('Tools');
     }
 
-    
-
+    /**
+     * Initializes the Tools module
+     * @public
+     * @override
+     */
     InitializeModule() {
         super.InitializeModule();
 
@@ -72,28 +78,51 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
 
     }
 
+    /**
+     * Renders the Tools module
+     * @public
+     */
     Render(container) {
         console.log('Rendering Module Tools');
         
 
     }
 
+    /**
+     * Registers the events for the Tools module
+     * @public
+     */
     RegisterEvents() {
         console.log('Registering module events for Tools');
         this.RegisterEvent('PipelinesChanged', false, 'When pipelines changed');
 
     }
 
+    /**
+     * Registers the event handlers for the Tools module
+     * @public
+     */
     RegisterEventHandlers() {
         console.log('Registering event handlers for Tools');
 
 
     }
     
+    /**
+     * Gets the store for the Tools module
+     * @type {Colibri.Modules.Store}
+     */
     get Store() {
         return this._store;
     }
 
+    /**
+     * Fetches the pipelines data from the server and updates the store
+     * @param {boolean} returnPromise - Whether to return the promise or not
+     * @returns {Promise|undefined} - Returns a promise if returnPromise is true, otherwise undefined
+     * @async
+     * @public
+     */
     Pipelines(returnPromise = false) {
         this.Requests('Tools.Pipelines')?.Abort()
         const promise = this.Call('Jobs', 'Dashboard', {}, {}, true, 'Tools.Pipelines');
@@ -109,6 +138,13 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
 
+    /**
+     * Fetches the settings data from the server and updates the store
+     * @param {boolean} returnPromise - Whether to return the promise or not
+     * @returns {Promise|undefined} - Returns a promise if returnPromise is true, otherwise undefined
+     * @async
+     * @public
+     */
     Settings(returnPromise = false) {
         this.Requests('Settings.List')?.Abort()
         const promise = this.Call('Settings', 'List', {}, {}, true, 'Settings.List');
@@ -124,7 +160,13 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
 
-    
+    /**
+     * Deletes a setting by its ID
+     * @param {string} settingId - The ID of the setting to delete
+     * @returns {Promise} - A promise that resolves with the result of the deletion
+     * @public
+     * @async
+     */
     DeleteSetting(settingId) {
         return new Promise((resolve, reject) => {
             this.Call('Settings', 'Delete', {setting: settingId})
@@ -149,6 +191,13 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
 
+    /**
+     * Saves a setting
+     * @param {object} setting - The setting to save
+     * @returns {Promise} - A promise that resolves with the result of the save operation
+     * @public
+     * @async
+     */
     SaveSetting(setting) {
         return new Promise((resolve, reject) => {
             this.Call('Settings', 'Save', setting)
@@ -173,7 +222,13 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
 
-    
+    /**
+     * Fetches the notices data from the server and updates the store
+     * @param {boolean} returnPromise - Whether to return the promise or not
+     * @returns {Promise|undefined} - Returns a promise if returnPromise is true, otherwise undefined
+     * @async
+     * @public
+     */
     Notices(returnPromise = false) {
         this.Requests('Notices.List')?.Abort()
         const promise = this.Call('Notices', 'List', {}, {}, true, 'Notices.List');
@@ -189,6 +244,13 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
 
+    /**
+     * Creates a new notice
+     * @param {object} notice - The notice to create
+     * @returns {Promise} - A promise that resolves with the result of the creation
+     * @async
+     * @public
+     */
     CreateNotice(notice) {
         return new Promise((resolve, reject) => {
             this.Call('Notices', 'Create', notice)
@@ -202,7 +264,13 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
 
-    
+    /**
+     * Deletes a notice by its ID
+     * @param {string} noticeId - The ID of the notice to delete
+     * @returns {Promise} - A promise that resolves with the result of the deletion
+     * @async
+     * @public
+     */
     DeleteNotice(noticeId) {
         return new Promise((resolve, reject) => {
             this.Call('Notices', 'Delete', {notice: noticeId})
@@ -227,6 +295,13 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
 
+    /**
+     * Saves a notice
+     * @param {object} notice - The notice to save
+     * @returns {Promise} - A promise that resolves with the result of the save operation
+     * @async
+     * @public
+     */
     SaveNotice(notice) {
         return new Promise((resolve, reject) => {
             this.Call('Notices', 'Save', notice)
@@ -251,6 +326,12 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
     
+    /**
+     * Gets the store for the Tools module
+     * @returns {object} - The store object
+     * @public
+     * @async
+     */
     Backups(returnPromise = false) {
         this.Requests('Backup.List')?.Abort()
         const promise = this.Call('Backup', 'List', {}, {}, true, 'Backup.List');
@@ -266,6 +347,13 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
 
+    /**
+     * Saves a backup
+     * @param {object} backupData - The backup data to save
+     * @returns {Promise} - A promise that resolves with the result of the save operation
+     * @async
+     * @public
+     */
     SaveBackup(backupData) {
         return new Promise((resolve, reject) => {
             this.Call('Backup', 'Save', backupData)
@@ -290,6 +378,13 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
 
+    /**
+     * Deletes a backup by its ID
+     * @param {string} backupId - The ID of the backup to delete
+     * @returns {Promise} - A promise that resolves with the result of the deletion
+     * @async
+     * @public
+     */
     DeleteBackup(backupId) {
         return new Promise((resolve, reject) => {
             this.Call('Backup', 'Delete', {backup: backupId})
@@ -314,6 +409,13 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
 
+    /**
+     * Fetches the themes data from the server and updates the store
+     * @param {boolean} returnPromise - Whether to return the promise or not
+     * @returns {Promise|undefined} - Returns a promise if returnPromise is true, otherwise undefined
+     * @async
+     * @public
+     */
     Themes(returnPromise = false) {
         this.Requests('Themes.List')?.Abort()
         const promise = this.Call('Themes', 'List', {}, {}, true, 'Themes.List');
@@ -329,6 +431,13 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
 
+    /**
+     * Creates a new theme
+     * @param {object} theme - The theme data to create
+     * @returns {Promise} - A promise that resolves with the result of the creation
+     * @async
+     * @public
+     */
     CreateTheme(theme) {
         return new Promise((resolve, reject) => {
             this.Call('Themes', 'Save', theme)
@@ -349,6 +458,13 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
 
+    /**
+     * Imports a theme into the system
+     * @param {object} theme - The theme data to import
+     * @returns {Promise} - A promise that resolves with the result of the import
+     * @async
+     * @public
+     */
     ImportTheme(theme) {
         return new Promise((resolve, reject) => {
             this.Call('Themes', 'Import', theme)
@@ -364,6 +480,13 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
     
+    /**
+     * Deletes a theme by its ID
+     * @param {string} themeId - The ID of the theme to delete
+     * @returns {Promise} - A promise that resolves with the result of the deletion
+     * @async
+     * @public
+     */
     DeleteTheme(themeId) {
         return new Promise((resolve, reject) => {
             this.Call('Themes', 'Delete', {theme: themeId})
@@ -384,6 +507,13 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
 
+    /**
+     * Sets a theme as the current theme
+     * @param {string} themeId - The ID of the theme to set as current
+     * @returns {Promise} - A promise that resolves with the result of the operation
+     * @async
+     * @public
+     */
     SetThemeAsCurrent(themeId) {
         return new Promise((resolve, reject) => {
             this.Call('Themes', 'SetAsCurrent', {id: themeId})
@@ -397,6 +527,14 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
 
+    /**
+     * Saves a theme variable for a specific theme
+     * @param {string} themeId - The ID of the theme
+     * @param {object} varData - The variable data to save
+     * @returns {Promise} - A promise that resolves with the result of the operation
+     * @async
+     * @public
+     */
     SaveThemeVar(themeId, varData) {
         return new Promise((resolve, reject) => {
             this.Call('Themes', 'SaveVar', {id: themeId, var: varData})
@@ -412,6 +550,14 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
 
+    /**
+     * Deletes theme variables for a specific theme
+     * @param {string} themeId - The ID of the theme
+     * @param {Array<string>} varNames - The names of the variables to delete
+     * @returns {Promise} - A promise that resolves with the result of the operation
+     * @async
+     * @public
+     */
     DeleteThemeVars(themeId, varNames) {
         return new Promise((resolve, reject) => {
             this.Call('Themes', 'DeleteVars', {id: themeId, vars: varNames})
@@ -427,6 +573,14 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
 
+    /**
+     * Saves a theme mixin for a specific theme
+     * @param {string} themeId - The ID of the theme
+     * @param {object} mixinData - The mixin data to save
+     * @returns {Promise} - A promise that resolves with the result of the operation
+     * @async
+     * @public
+     */
     SaveThemeMixin(themeId, mixinData) {
         return new Promise((resolve, reject) => {
             this.Call('Themes', 'SaveMixin', {id: themeId, mixin: mixinData})
@@ -442,6 +596,14 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
 
+    /**
+     * Deletes theme mixins for a specific theme
+     * @param {string} themeId - The ID of the theme
+     * @param {Array<string>} mixinNames - The names of the mixins to delete
+     * @returns {Promise} - A promise that resolves with the result of the operation
+     * @async
+     * @public
+     */
     DeleteThemeMixins(themeId, mixinNames) {
         return new Promise((resolve, reject) => {
             this.Call('Themes', 'DeleteMixins', {id: themeId, mixins: mixinNames})
@@ -457,7 +619,12 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         });
     }
 
-    
+    /**
+     * @param {Colibri.UI.Event} event - The event object
+     * @param {Object} args - The arguments of the event
+     * @private
+     * @ignore
+     */    
     __cometEventReceived(event, args) {
         if(args.event.action.substring(0, 7) == 'backup-') {
             if(!this._backuplog) {
@@ -481,6 +648,12 @@ App.Modules.Tools = class extends Colibri.Modules.Module {
         }
     }
 
+    /**
+     * Returns the icon for a given type
+     * @param {string} type - The type for which to get the icon
+     * @returns {string} - The SVG icon as a string
+     * @public
+     */
     TypeIcon(type) {
         return {
             double:  App.Modules.Tools.Icons.ContextMenuDoubleIcon,

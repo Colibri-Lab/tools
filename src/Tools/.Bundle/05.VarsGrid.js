@@ -6,9 +6,15 @@
  */
 App.Modules.Tools.VarsGrid = class extends Colibri.UI.Grid {
 
+    /**
+     * Creates an instance of VarsGrid.
+     * @param {string} name - The name of the component
+     * @param {Colibri.UI.Container} container - The container to which the component belongs
+     * @constructor
+     */
     constructor(name, container) {
         super(name, container);
-        this.AddClass('app-backups-grid-component');
+        this.AddClass('app-vars-grid-component');
     } 
 
     /**
@@ -16,6 +22,7 @@ App.Modules.Tools.VarsGrid = class extends Colibri.UI.Grid {
      * @protected
      * @param {*} data 
      * @param {String} path 
+     * @private
      */
     __renderBoundedValues(data, path) {
         if(!data) {

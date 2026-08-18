@@ -6,6 +6,12 @@
  */
 App.Modules.Tools.DomainsAndThemesTree = class extends Colibri.UI.Tree {
     
+    /**
+     * Creates an instance of DomainsAndThemesTree.
+     * @param {string} name - The name of the component
+     * @param {Colibri.UI.Container} container - The container to which the component belongs
+     * @constructor
+     */
     constructor(name, container) {
         super(name, container);
         this.AddClass('app-tools-domains-themes-tree');
@@ -15,7 +21,13 @@ App.Modules.Tools.DomainsAndThemesTree = class extends Colibri.UI.Tree {
         this.RegisterEvent('NodesLoaded', false, 'Когда все узлы загружены');
     }
 
-
+    /**
+     * Render bounded to component data
+     * @protected
+     * @param {*} data 
+     * @param {String} binded 
+     * @ignore
+     */
     __renderBoundedValues(data, binded) {
         
         if(binded.indexOf('domainkeys') !== -1) {
@@ -90,6 +102,13 @@ App.Modules.Tools.DomainsAndThemesTree = class extends Colibri.UI.Tree {
 
     }
 
+    /**
+     * Removes nodes that do not exist in the provided list of found node names
+     * @private
+     * @param {Array<string>} found - The list of found node names
+     * @param {string} type - The type of nodes to check for removal
+     * @ignore
+     */
     _removeUnexistent(found, type) {
         this.allNodes.forEach((node) => {
             if(node.name.indexOf(type) === 0 && found.indexOf(type + node.tag.data.value) === -1) {
@@ -98,6 +117,14 @@ App.Modules.Tools.DomainsAndThemesTree = class extends Colibri.UI.Tree {
         });
     }
 
+    /**
+     * Adds a new node to the domains and themes tree
+     * @param {Colibri.UI.TreeNode} domainNode - The parent domain node to which the new node will be added
+     * @param {string} title - The title of the new node
+     * @param {object} tag - The tag data to associate with the new node
+     * @returns {Colibri.UI.TreeNode} - The newly added tree node
+     * @public
+     */
     AddNew(domainNode, title, tag) {
 
         domainNode.Expand();
