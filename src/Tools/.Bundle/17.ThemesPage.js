@@ -485,6 +485,7 @@ App.Modules.Tools.ThemesPage = class extends Colibri.UI.Component {
     }
 
     /**
+     * @ignore
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
