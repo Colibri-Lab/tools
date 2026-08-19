@@ -5,6 +5,11 @@
  */
 App.Modules.Tools.UI.BackupLog = class extends Colibri.UI.Component
 {
+    /**
+     * @param {string} name component name
+     * @param {Colibri.UI.Container} container component container
+     * @constructor
+     */
     constructor(name, container) {
         super(name, container);
 
@@ -36,11 +41,17 @@ App.Modules.Tools.UI.BackupLog = class extends Colibri.UI.Component
 
     }
 
+    /**
+     * Adds a message to the log
+     * @param {string} message message to add
+     * @public
+     */
     Add(message) {
         this._group.AddItem(message);
     }
 
     /**
+     * @ignore
      * @private
      * @param {Colibri.Events.Event} event event object
      * @param {*} args event arguments
